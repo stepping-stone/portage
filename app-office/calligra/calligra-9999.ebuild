@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.35 2013/03/17 15:55:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.38 2013/06/13 12:08:18 xmw Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -44,21 +44,22 @@ KEYWORDS="~amd64 ~arm ~x86"
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +okular opengtl openexr
-+pdf postgres +semantic-desktop spacenav +ssl sybase test tiff +threads +truetype
-word-perfect xbase +xml +xslt"
++pdf postgres spacenav +ssl sybase test tiff +threads +truetype word-perfect xbase
++xml +xslt"
 
 # please do not sort here, order is same as in CMakeLists.txt
-CAL_FTS="kexi words flow plan stage sheets krita karbon braindump"
+CAL_FTS="author kexi words flow plan stage sheets krita karbon braindump"
 for cal_ft in ${CAL_FTS}; do
 	IUSE+=" calligra_features_${cal_ft}"
 done
 unset cal_ft
 
 REQUIRED_USE="
+	calligra_features_author? ( calligra_features_words )
 	calligra_features_kexi? ( calligra_features_sheets )
 	calligra_features_words? ( calligra_features_sheets )
 	calligra_features_krita? ( eigen exif lcms )
-	calligra_features_plan? ( kdepim semantic-desktop )
+	calligra_features_plan? ( kdepim )
 	calligra_features_sheets? ( eigen )
 	test? ( calligra_features_karbon )
 "
@@ -75,9 +76,11 @@ RDEPEND="
 	!app-office/krita
 	!app-office/kspread
 	!app-office/kword
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)')
 	dev-lang/perl
 	dev-libs/boost
 	dev-libs/libxml2
+	dev-libs/soprano
 	$(add_kdebase_dep knewstuff)
 	media-libs/libpng
 	sys-libs/zlib
@@ -96,9 +99,9 @@ RDEPEND="
 	gsf? ( gnome-extra/libgsf )
 	gsl? ( sci-libs/gsl )
 	jpeg? ( virtual/jpeg )
-	jpeg2k? ( media-libs/openjpeg )
+	jpeg2k? ( media-libs/openjpeg:0 )
 	kdcraw? ( $(add_kdebase_dep libkdcraw) )
-	kdepim? ( $(add_kdebase_dep kdepimlibs 'semantic-desktop') )
+	kdepim? ( $(add_kdebase_dep kdepimlibs 'semantic-desktop(+)') )
 	lcms? ( media-libs/lcms:2 )
 	marble? ( $(add_kdebase_dep marble) )
 	mysql? ( virtual/mysql )
@@ -114,7 +117,6 @@ RDEPEND="
 		dev-db/postgresql-base
 		dev-libs/libpqxx
 	)
-	semantic-desktop? ( dev-libs/soprano $(add_kdebase_dep kdelibs semantic-desktop) )
 	spacenav? ( dev-libs/libspnav  )
 	ssl? ( dev-libs/openssl )
 	sybase? ( dev-db/freetds )
@@ -200,8 +202,6 @@ src_configure() {
 		$(cmake-utils_use_with pdf Pstoedit)
 		$(cmake-utils_use_with postgres PostgreSQL)
 		$(cmake-utils_use_build postgres pqxx)
-		$(cmake-utils_use_with semantic-desktop Soprano)
-		$(cmake-utils_use semantic-desktop NEPOMUK)
 		$(cmake-utils_use_with spacenav Spnav)
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with sybase FreeTDS)

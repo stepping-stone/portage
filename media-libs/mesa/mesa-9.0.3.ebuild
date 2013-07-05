@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.0.3.ebuild,v 1.3 2013/03/10 21:54:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.0.3.ebuild,v 1.6 2013/06/01 04:47:05 chithanh Exp $
 
 EAPI=4
 
@@ -58,6 +58,7 @@ REQUIRED_USE="
 	g3dvl? ( || ( vdpau xvmc ) )
 	vdpau? ( g3dvl )
 	r600-llvm-compiler? ( gallium llvm || ( video_cards_r600 video_cards_radeon ) )
+	wayland? ( egl )
 	xa?  ( gallium )
 	xorg?  ( gallium )
 	xvmc?  ( g3dvl )
@@ -114,6 +115,7 @@ done
 DEPEND="${RDEPEND}
 	llvm? (
 		>=sys-devel/llvm-2.9
+		<sys-devel/llvm-3.3_rc
 		r600-llvm-compiler? ( =sys-devel/llvm-3.1* )
 		video_cards_radeonsi? ( =sys-devel/llvm-3.1* )
 	)

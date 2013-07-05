@@ -1,6 +1,125 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.457 2013/04/04 11:41:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.486 2013/06/30 21:12:02 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-4.0.4.2.ebuild:
+  Stable for ppc, wrt bug #474066
+
+  30 Jun 2013; Justin Lecher <jlec@gentoo.org> libreoffice-3.6.6.2.ebuild,
+  libreoffice-3.6.9999.ebuild, libreoffice-4.0.4.2.ebuild,
+  libreoffice-4.0.9999.ebuild, libreoffice-4.1.0.1.ebuild,
+  libreoffice-4.1.9999.ebuild, libreoffice-9999-r2.ebuild, metadata.xml:
+  Fix usage of python-r1.eclass
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-4.0.4.2.ebuild:
+  Stable for x86, wrt bug #474066
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-4.0.4.2.ebuild:
+  Stable for amd64, wrt bug #474066
+
+  26 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.1.0.1.ebuild,
+  libreoffice-4.1.9999.ebuild:
+  Restrict the mdds version to 0.8 series as 0.9 broke it. Wrt bug#474710.
+
+  24 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Depend on mdds-0.9.0.
+
+  23 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.1.0.1.ebuild,
+  libreoffice-4.1.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Depend on harfbuzz with icu (when useflag is around).
+
+*libreoffice-4.1.0.1 (23 Jun 2013)
+
+  23 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libreoffice-4.1.0.1.ebuild:
+  Bump to 4.1 rc1 for testing.
+
+  23 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.4.2.ebuild,
+  libreoffice-4.0.9999.ebuild, libreoffice-4.1.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Fix +telepathy -gtk build. Don't have the time to fix configure upstream. Wrt
+  bug#461514.
+
+*libreoffice-4.0.4.2 (20 Jun 2013)
+
+  20 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libreoffice-4.0.4.2.ebuild,
+  -libreoffice-4.0.3.3.ebuild, libreoffice-4.0.9999.ebuild,
+  libreoffice-4.1.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Version bump to 4.0.4.2. Fixes bug#473806 and bug#473848. Drop 4.0.3.
+
+  04 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Raise dependency over doxygen package.
+
+  30 May 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/libreoffice-3.6.4.3-boost-1.53.0.patch, -libreoffice-3.6.4.3.ebuild:
+  Drop old libreoffice keep only one 3.6 version.
+
+  27 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.1.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Fix typo.
+
+*libreoffice-4.1.9999 (22 May 2013)
+
+  22 May 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libreoffice-4.1.9999.ebuild:
+  Add live ebuild for 4.1 branch.
+
+  21 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Few obvious cleanups before branching, removed options/updated deps, etc.
+
+  19 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  files/generate_libreoffice_package.sh:
+  Update script
+
+  11 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.6.4.3.ebuild,
+  libreoffice-3.6.6.2.ebuild, libreoffice-3.6.9999.ebuild,
+  libreoffice-4.0.3.3.ebuild, libreoffice-4.0.9999.ebuild:
+  Older versions require old mdds due to incompatible api change. Wrt
+  bug#469318.
+
+  09 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Require latest mdds.
+
+  08 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Drop removed option. It defaults to what we want now.
+
+*libreoffice-4.0.3.3 (06 May 2013)
+
+  06 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libreoffice-4.0.3.3.ebuild,
+  -libreoffice-4.0.2.2.ebuild:
+  Version bump to 4.0.3.
+
+  06 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Depend on libodfgen.
+
+  03 May 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-3.6.6.2.ebuild:
+  Stable for ppc, wrt bug #467460
+
+  01 May 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-3.6.6.2.ebuild:
+  Stable for x86, wrt bug #467460
+
+  29 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-3.6.4.3.ebuild,
+  libreoffice-3.6.6.2.ebuild, libreoffice-3.6.9999.ebuild,
+  libreoffice-4.0.2.2.ebuild, libreoffice-4.0.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Move KEYWORDS on another line to avoid ekeyword failure
+
+  29 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-3.6.6.2.ebuild:
+  Stable for amd64, wrt bug #467460
+
+  26 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.9999.ebuild:
+  Remove gtk3 useflag from 4.0 build so people do not fill bugs about it.
+
+  24 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Enable harfbuzz build instead of using ICU LE, without switch.
+
+  19 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.2.2.ebuild,
+  libreoffice-4.0.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Update orcus deps to reflect reality.
+
+*libreoffice-3.6.6.2 (09 Apr 2013)
+
+  09 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libreoffice-3.6.6.2.ebuild:
+  Version bump to 3.6.6 release.
 
   04 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.2.2.ebuild,
   libreoffice-4.0.9999.ebuild:

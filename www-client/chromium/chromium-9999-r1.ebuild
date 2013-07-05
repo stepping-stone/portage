@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.186 2013/04/05 21:44:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.201 2013/06/27 15:05:23 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -9,7 +9,7 @@ CHROMIUM_LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he
 	hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt_BR pt_PT ro ru sk sl sr
 	sv sw ta te th tr uk vi zh_CN zh_TW"
 
-inherit chromium eutils flag-o-matic multilib \
+inherit chromium eutils flag-o-matic multilib multiprocessing \
 	pax-utils portability python-any-r1 subversion toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
@@ -19,19 +19,25 @@ ESVN_REPO_URI="http://src.chromium.org/svn/trunk/src"
 LICENSE="BSD"
 SLOT="live"
 KEYWORDS=""
-IUSE="cups gnome gnome-keyring gps kerberos pulseaudio selinux system-sqlite tcmalloc"
+IUSE="bindist cups gnome gnome-keyring gps kerberos pulseaudio selinux +system-ffmpeg system-sqlite tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
 
+# Native Client binaries may be stripped by the build system, which uses the
+# right tools for it, bug #469144 .
+QA_PRESTRIPPED=".*\.nexe"
+
 RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	app-arch/bzip2:=
+	app-arch/snappy:=
 	system-sqlite? ( dev-db/sqlite:3 )
 	cups? (
 		dev-libs/libgcrypt:=
 		>=net-print/cups-1.3.11:=
 	)
-	>=dev-lang/v8-3.17.6:=
+	>=dev-lang/v8-3.19.17:=
+	=dev-lang/v8-3.19*
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat:=
 	>=dev-libs/icu-49.1.1-r1:=
@@ -48,7 +54,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	gps? ( >=sci-geosciences/gpsd-3.7:=[shm] )
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/flac:=
-	media-libs/harfbuzz:=
+	media-libs/harfbuzz:=[icu(+)]
 	>=media-libs/libjpeg-turbo-1.2.0-r1:=
 	media-libs/libpng:0=
 	media-libs/libvpx:=
@@ -57,7 +63,10 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
-	>=media-video/ffmpeg-1.0:=[opus]
+	system-ffmpeg? ( || (
+		>=media-video/ffmpeg-1.0:=[opus]
+		>=media-video/libav-9.5:=[opus]
+	) )
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
 	sys-libs/zlib:=[minizip]
@@ -68,10 +77,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	x11-libs/libXScrnSaver:=
 	x11-libs/libXtst:=
 	kerberos? ( virtual/krb5 )
-	selinux? (
-		sec-policy/selinux-chromium
-		sys-libs/libselinux:=
-	)"
+	selinux? ( sec-policy/selinux-chromium )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	!arm? (
@@ -79,13 +85,15 @@ DEPEND="${RDEPEND}
 		dev-lang/yasm
 	)
 	dev-lang/perl
+	dev-perl/JSON
+	dev-python/jinja
 	dev-python/ply
 	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
+	dev-util/ninja
 	sys-apps/hwids
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
-	>=sys-devel/make-3.81-r2
 	virtual/pkgconfig
 	test? ( dev-python/pyftpdlib )"
 RDEPEND+="
@@ -124,7 +132,15 @@ gclient_runhooks() {
 
 src_unpack() {
 	# First grab depot_tools.
-	ESVN_REVISION= subversion_fetch "http://src.chromium.org/svn/trunk/tools/depot_tools"
+	DEPOT_TOOLS_REPO="https://src.chromium.org/svn/trunk/tools/depot_tools"
+	addwrite "${ESVN_STORE_DIR}"
+	if subversion_wc_info "${DEPOT_TOOLS_REPO}"; then
+		if [ "${ESVN_WC_URL}" != "${DEPOT_TOOLS_REPO}" ]; then
+			einfo "Removing old (http) depot_tools ${ESVN_WC_PATH}"
+			rm -rf "${ESVN_WC_PATH}" || die
+		fi
+	fi
+	ESVN_REVISION= subversion_fetch "${DEPOT_TOOLS_REPO}"
 	mv "${S}" "${WORKDIR}"/depot_tools || die
 
 	cd "${ESVN_STORE_DIR}/${PN}" || die
@@ -140,14 +156,16 @@ src_unpack() {
 
 	subversion_wc_info
 
+	cd src || die
+	${PYTHON} build/util/lastchange.py -o build/util/LASTCHANGE || die
+	${PYTHON} build/util/lastchange.py -s third_party/WebKit \
+		-o build/util/LASTCHANGE.blink || die
+
 	mkdir -p "${S}" || die
 	einfo "Copying source to ${S}"
-	rsync -rlpgo --exclude=".svn/" src/ "${S}" || die
+	rsync -rlpgo --exclude=".svn/" . "${S}" || die
 
-	# Display correct svn revision in about box, and log new version.
-	echo "LASTCHANGE=${ESVN_WC_REVISION}" > "${S}"/build/util/LASTCHANGE || die
-
-	. src/chrome/VERSION
+	. chrome/VERSION
 	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH} (Developer Build ${ESVN_WC_REVISION})"
 }
 
@@ -166,35 +184,33 @@ pkg_setup() {
 	# Make sure the build system will use the right python, bug #344367.
 	python-any-r1_pkg_setup
 
-	if ! use selinux; then
-		chromium_suid_sandbox_check_kernel_config
-	fi
+	chromium_suid_sandbox_check_kernel_config
 
-	# if use bindist && ! use system-ffmpeg; then
-	#	elog "bindist enabled: H.264 video support will be disabled."
-	# fi
-	# if ! use bindist; then
-	#	elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
-	# fi
+	if use bindist && ! use system-ffmpeg; then
+		elog "bindist enabled: H.264 video support will be disabled."
+	fi
+	if ! use bindist; then
+		elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
+	fi
 }
 
 src_prepare() {
 	if ! use arm; then
-		mkdir -p out/Release/obj/gen/sdk/toolchain || die
+		mkdir -p out/Release/gen/sdk/toolchain || die
 		# Do not preserve SELinux context, bug #460892 .
 		cp -a --no-preserve=context /usr/$(get_libdir)/nacl-toolchain-newlib \
-			out/Release/obj/gen/sdk/toolchain/linux_x86_newlib || die
-		touch out/Release/obj/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
+			out/Release/gen/sdk/toolchain/linux_x86_newlib || die
+		touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	fi
 
-	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
+	epatch "${FILESDIR}/${PN}-system-ffmpeg-r7.patch"
 
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
-		\! -path 'third_party/angle/*' \
+		\! -path 'third_party/angle_dx11/*' \
 		\! -path 'third_party/cacheinvalidation/*' \
 		\! -path 'third_party/cld/*' \
 		\! -path 'third_party/cros_system_api/*' \
@@ -213,6 +229,7 @@ src_prepare() {
 		\! -path 'third_party/libXNVCtrl/*' \
 		\! -path 'third_party/libyuv/*' \
 		\! -path 'third_party/lss/*' \
+		\! -path 'third_party/lzma_sdk/*' \
 		\! -path 'third_party/mesa/*' \
 		\! -path 'third_party/modp_b64/*' \
 		\! -path 'third_party/mongoose/*' \
@@ -230,11 +247,13 @@ src_prepare() {
 		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/trace-viewer/*' \
 		\! -path 'third_party/undoview/*' \
+		\! -path 'third_party/usrsctp/*' \
 		\! -path 'third_party/v8-i18n/*' \
 		\! -path 'third_party/webdriver/*' \
 		\! -path 'third_party/webrtc/*' \
 		\! -path 'third_party/widevine/*' \
 		\! -path 'third_party/x86inc/*' \
+		\! -path 'third_party/zlib/google/*' \
 		-delete || die
 
 	local v8_bundled="$(chromium_bundled_v8_version)"
@@ -278,7 +297,6 @@ src_configure() {
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
-		-Duse_system_ffmpeg=1
 		-Duse_system_harfbuzz=1
 		-Duse_system_icu=1
 		-Duse_system_jsoncpp=1
@@ -289,15 +307,18 @@ src_configure() {
 		-Duse_system_libvpx=1
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
+		-Duse_system_libxslt=1
 		-Duse_system_minizip=1
 		-Duse_system_nspr=1
 		-Duse_system_opus=1
 		-Duse_system_protobuf=1
 		-Duse_system_re2=1
+		-Duse_system_snappy=1
 		-Duse_system_speex=1
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
-		-Duse_system_zlib=1"
+		-Duse_system_zlib=1
+		$(gyp_use system-ffmpeg use_system_ffmpeg)"
 
 	# TODO: Use system mesa on x86, bug #457130 .
 	if ! use x86 && ! use arm; then
@@ -325,8 +346,7 @@ src_configure() {
 		$(gyp_use gps linux_use_libgps)
 		$(gyp_use gps linux_link_libgps)
 		$(gyp_use kerberos)
-		$(gyp_use pulseaudio)
-		$(gyp_use selinux selinux)"
+		$(gyp_use pulseaudio)"
 
 	if use system-sqlite; then
 		elog "Enabling system sqlite. WebSQL - http://www.w3.org/TR/webdatabase/"
@@ -342,18 +362,17 @@ src_configure() {
 	myconf+="
 		-Dlinux_link_gsettings=1
 		-Dlinux_link_libpci=1
-		-Dlinux_link_libspeechd=1"
+		-Dlinux_link_libspeechd=1
+		-Dlibspeechd_h_prefix=speech-dispatcher/"
 
 	# TODO: use the file at run time instead of effectively compiling it in.
 	myconf+="
 		-Dusb_ids_path=/usr/share/misc/usb.ids"
 
-	if ! use selinux; then
-		# Enable SUID sandbox.
-		myconf+="
-			-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
-			-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
-	fi
+	# Enable SUID sandbox.
+	myconf+="
+		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
+		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
 	# Never use bundled gold binary. Disable gold linker flags for now.
 	myconf+="
@@ -363,10 +382,10 @@ src_configure() {
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
 
-	# if ! use bindist && ! use system-ffmpeg; then
-	#	# Enable H.624 support in bundled ffmpeg.
-	#	myconf+=" -Dffmpeg_branding=Chrome"
-	# fi
+	if ! use bindist && ! use system-ffmpeg; then
+		# Enable H.624 support in bundled ffmpeg.
+		myconf+=" -Dffmpeg_branding=Chrome"
+	fi
 
 	# Set up Google API keys, see http://www.chromium.org/developers/how-tos/api-keys .
 	# Note: these are for Gentoo use ONLY. For your own distribution,
@@ -401,6 +420,11 @@ src_configure() {
 	if ! use custom-cflags; then
 		replace-flags "-Os" "-O2"
 		strip-flags
+
+		# Prevent linker from running out of address space, bug #471810 .
+		if use x86; then
+			filter-flags "-g*"
+		fi
 	fi
 
 	# Make sure the build system will use the right tools, bug #340795.
@@ -409,31 +433,32 @@ src_configure() {
 	# Tools for building programs to be executed on the build system, bug #410883.
 	tc-export_build_env BUILD_AR BUILD_CC BUILD_CXX
 
+	# Tools for building programs to be executed on the build system, bug #410883.
+	export AR_host=$(tc-getBUILD_AR)
+	export CC_host=$(tc-getBUILD_CC)
+	export CXX_host=$(tc-getBUILD_CXX)
+	export LD_host=${CXX_host}
+
+	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
 	egyp_chromium ${myconf} || die
 }
 
 src_compile() {
 	# TODO: add media_unittests after fixing compile (bug #462546).
-	local test_targets
-	for x in base cacheinvalidation crypto \
+	local test_targets=""
+	for x in base cacheinvalidation content crypto \
 		googleurl gpu net printing sql; do
 		test_targets+=" ${x}_unittests"
 	done
 
-	local make_targets="chrome chromedriver"
-	if ! use selinux; then
-		make_targets+=" chrome_sandbox"
-	fi
+	local ninja_targets="chrome chrome_sandbox chromedriver"
 	if use test; then
-		make_targets+=$test_targets
+		ninja_targets+=" $test_targets"
 	fi
 
-	# See bug #410883 for more info about the .host mess.
-	emake ${make_targets} BUILDTYPE=Release V=1 \
-		CC.host="${BUILD_CC}" CFLAGS.host="${BUILD_CFLAGS}" \
-		CXX.host="${BUILD_CXX}" CXXFLAGS.host="${BUILD_CXXFLAGS}" \
-		LINK.host="${BUILD_CXX}" LDFLAGS.host="${BUILD_LDFLAGS}" \
-		AR.host="${BUILD_AR}" || die
+	# Even though ninja autodetects number of CPUs, we respect
+	# user's options, for debugging with -j 1 or any other reason.
+	ninja -C out/Release -v -j $(makeopts_jobs) ${ninja_targets} || die
 
 	pax-mark m out/Release/chrome
 	if use test; then
@@ -475,6 +500,12 @@ src_test() {
 	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
 
 	runtest out/Release/cacheinvalidation_unittests
+
+	local excluded_content_unittests=(
+		"RendererDateTimePickerTest.*" # bug #465452
+	)
+	runtest out/Release/content_unittests "${excluded_content_unittests[@]}"
+
 	runtest out/Release/crypto_unittests
 	runtest out/Release/googleurl_unittests
 	runtest out/Release/gpu_unittests
@@ -487,25 +518,29 @@ src_test() {
 		"NetUtilTest.FormatUrl*" # see above
 		"DnsConfigServiceTest.GetSystemConfig" # bug #394883
 		"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
+		"CertDatabaseNSSTest.TrustIntermediateCa*" # http://crbug.com/224612
 		"URLFetcher*" # bug #425764
 		"HTTPSOCSPTest.*" # bug #426630
 		"HTTPSEVCRLSetTest.*" # see above
 		"HTTPSCRLSetTest.*" # see above
+		"*SpdyFramerTest.BasicCompression*" # bug #465444
 	)
 	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
 
 	runtest out/Release/printing_unittests
-	runtest out/Release/sql_unittests
+
+	local excluded_sql_unittests=(
+		"SQLiteFeaturesTest.FTS2" # bug #461286
+	)
+	runtest out/Release/sql_unittests "${excluded_sql_unittests[@]}"
 }
 
 src_install() {
 	exeinto "${CHROMIUM_HOME}"
 	doexe out/Release/chrome || die
 
-	if ! use selinux; then
-		doexe out/Release/chrome_sandbox || die
-		fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
-	fi
+	doexe out/Release/chrome_sandbox || die
+	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
 
 	doexe out/Release/chromedriver || die
 
@@ -550,9 +585,9 @@ src_install() {
 	newman out/Release/chrome.1 chromium${CHROMIUM_SUFFIX}.1 || die
 	newman out/Release/chrome.1 chromium-browser${CHROMIUM_SUFFIX}.1 || die
 
-	# if ! use system-ffmpeg; then
-	#	doexe out/Release/libffmpegsumo.so || die
-	# fi
+	if ! use system-ffmpeg; then
+		doexe out/Release/libffmpegsumo.so || die
+	fi
 
 	# Install icons and desktop entry.
 	local branding size

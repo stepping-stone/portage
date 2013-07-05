@@ -1,6 +1,50 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.108 2013/02/02 17:34:50 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.119 2013/06/30 18:04:07 gurligebis Exp $
+
+*strongswan-5.0.4-r1 (30 Jun 2013)
+
+  30 Jun 2013; <gurligebis@gentoo.org> -strongswan-5.0.0.ebuild,
+  strongswan-5.0.4.ebuild, +strongswan-5.0.4-r1.ebuild:
+  Adding support for EAP-TLS, fixing bug #473248.
+  Removing old version.
+
+  30 Jun 2013; <gurligebis@gentoo.org> strongswan-5.0.4.ebuild:
+  Adding support for networkmanager, fixing bug #472436.
+  Bumping to EAPI 5.
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
+
+  11 May 2013; Agostino Sarubbo <ago@gentoo.org> strongswan-5.0.4.ebuild:
+  Stable for ppc, wrt bug #468504
+
+  11 May 2013; Agostino Sarubbo <ago@gentoo.org> strongswan-5.0.4.ebuild:
+  Stable for arm, wrt bug #468504
+
+  10 May 2013; Agostino Sarubbo <ago@gentoo.org> strongswan-5.0.4.ebuild:
+  Stable for x86, wrt bug #468504
+
+  10 May 2013; Agostino Sarubbo <ago@gentoo.org> strongswan-5.0.4.ebuild:
+  Stable for amd64, wrt bug #468504
+
+*strongswan-5.0.4 (04 May 2013)
+
+  04 May 2013; <gurligebis@gentoo.org> -strongswan-5.0.3.ebuild,
+  +strongswan-5.0.4.ebuild:
+  Bumping to 5.0.4 to fix CVE-2013-2944
+
+  28 Apr 2013; <gurligebis@gentoo.org> strongswan-5.0.3.ebuild:
+  Adding epatch_user support, fixing bug #458982
+
+  28 Apr 2013; <gurligebis@gentoo.org> strongswan-5.0.3.ebuild:
+  Fixing info regarding running with non-root flag, fixing bug #461652
+
+*strongswan-5.0.3 (09 Apr 2013)
+
+  09 Apr 2013; <gurligebis@gentoo.org> -strongswan-5.0.2.ebuild,
+  +strongswan-5.0.3.ebuild:
+  Bumping to 5.0.3
 
 *strongswan-5.0.2 (02 Feb 2013)
 

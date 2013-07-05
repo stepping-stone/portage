@@ -1,6 +1,43 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.140 2013/02/18 11:22:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.148 2013/06/18 23:11:35 aballier Exp $
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org> -fbsd/amd64/8.0/deprecated,
+  -fbsd/amd64/8.0/make.defaults, -fbsd/amd64/8.0/parent,
+  -fbsd/sparc/8.0/deprecated, -fbsd/sparc/8.0/make.defaults,
+  -fbsd/sparc/8.0/parent, -fbsd/x86/8.0/deprecated,
+  -fbsd/x86/8.0/make.defaults, -fbsd/x86/8.0/parent:
+  remove 8.0 profiles
+
+  18 Jun 2013; Alexis Ballier <aballier@gentoo.org> -fbsd/amd64/7.2/deprecated,
+  -fbsd/amd64/7.2/make.defaults, -fbsd/amd64/7.2/parent,
+  -fbsd/sparc/7.2/deprecated, -fbsd/sparc/7.2/make.defaults,
+  -fbsd/sparc/7.2/parent, -fbsd/x86/7.2/deprecated,
+  -fbsd/x86/7.2/make.defaults, -fbsd/x86/7.2/parent:
+  Remove 7.2 profiles
+
+  25 May 2013; Alexis Ballier <aballier@gentoo.org>
+  fbsd/amd64/9.1/clang/packages, fbsd/amd64/9.1/clang/packages.build,
+  fbsd/amd64/9.1/clang/profile.bashrc:
+  Make the clang profile use libcxx
+
+  25 May 2013; Alexis Ballier <aballier@gentoo.org>
+  fbsd/amd64/9.1/clang/packages.build, fbsd/packages.build:
+  remove texinfo from packages.build: it is not needed anymore for building
+  stages and causes problems when trying to put it in a stage1. bug #471192
+
+  24 May 2013; Alexis Ballier <aballier@gentoo.org> fbsd/package.use.mask:
+  mask xattr useflag on GNU tar, bug #432410 by Yuta SATOH
+
+  20 May 2013; Alexis Ballier <aballier@gentoo.org> +fbsd/amd64/9.0/deprecated:
+  deprecate 9.0 profile for amd64, bug #464742
+
+  19 May 2013; Alexis Ballier <aballier@gentoo.org> use.mask:
+  mask filecaps useflag, bug #469646
+
+  07 May 2013; Naohiro Aota <naota@gentoo.org> +fbsd/x86/9.0/deprecated,
+  fbsd/x86/7.2/deprecated, fbsd/x86/8.0/deprecated, fbsd/x86/8.2/deprecated:
+  Deprecate x86/9.0. #464742
 
   18 Feb 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask ffmpeg[iec61883] as its linux only too

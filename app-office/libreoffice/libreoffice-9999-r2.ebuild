@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.168 2013/03/29 09:41:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.182 2013/06/30 15:25:25 jlec Exp $
 
 EAPI=5
 
@@ -88,7 +88,8 @@ unset lo_xt
 
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
-[[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+[[ ${PV} == *9999* ]] || \
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
@@ -100,6 +101,7 @@ COMMON_DEPEND="
 	app-text/liblangtag
 	app-text/libmspub
 	>=app-text/libmwaw-0.1.7
+	app-text/libodfgen
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
@@ -110,7 +112,7 @@ COMMON_DEPEND="
 	dev-libs/expat
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1:=
-	>=dev-libs/liborcus-0.3
+	>=dev-libs/liborcus-0.5.1:=
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
@@ -119,6 +121,7 @@ COMMON_DEPEND="
 	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
+	>=media-libs/harfbuzz-0.9.10:=[icu(+)]
 	media-libs/lcms:2
 	>=media-libs/libpng-1.4
 	>=media-libs/libcdr-0.0.5
@@ -199,7 +202,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
-	>=dev-util/mdds-0.7.0
+	>=dev-util/mdds-0.9.0:=
 	virtual/pkgconfig
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
@@ -220,7 +223,7 @@ DEPEND="${COMMON_DEPEND}
 		>=virtual/jdk-1.6
 		>=dev-java/ant-core-1.7
 	)
-	odk? ( app-doc/doxygen )
+	odk? ( >=app-doc/doxygen-1.8.4 )
 	test? ( dev-util/cppunit )
 "
 
@@ -230,9 +233,11 @@ PATCHES=(
 )
 
 REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
 	bluetooth? ( dbus )
 	gnome? ( gtk )
 	eds? ( gnome )
+	telepathy? ( gtk )
 	libreoffice_extensions_nlpsolver? ( java )
 	libreoffice_extensions_scripting-beanshell? ( java )
 	libreoffice_extensions_scripting-javascript? ( java )
@@ -256,8 +261,9 @@ pkg_pretend() {
 		fi
 	fi
 
-	# ensure pg version
-	if use postgres; then
+	# Ensure pg version but we have to be sure the pg is installed (first
+	# install on clean system)
+	if use postgres && has_version dev-db/postgresql-base; then
 		 pgslot=$(postgresql-config show)
 		 if [[ ${pgslot//.} < 90 ]] ; then
 			eerror "PostgreSQL slot must be set to 9.0 or higher."
@@ -409,7 +415,6 @@ src_configure() {
 	fi
 
 	# system headers/libs/...: enforce using system packages
-	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
 	# --enable-cairo: ensure that cairo is always required
 	# --enable-graphite: disabling causes build breakages
 	# --enable-*-link: link to the library rather than just dlopen on runtime
@@ -438,7 +443,6 @@ src_configure() {
 		--enable-randr \
 		--enable-randr-link \
 		--enable-release-build \
-		--enable-unix-qstart-libpng \
 		--enable-hardlink-deliver \
 		--disable-ccache \
 		--disable-crashdump \
@@ -463,7 +467,6 @@ src_configure() {
 		--with-lang="" \
 		--with-parallelism=${jbs} \
 		--with-system-ucpp \
-		--with-unix-wrapper=libreoffice \
 		--with-vendor="Gentoo Foundation" \
 		--with-x \
 		--without-afms \

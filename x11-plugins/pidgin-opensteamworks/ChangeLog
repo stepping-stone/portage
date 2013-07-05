@@ -1,6 +1,24 @@
 # ChangeLog for x11-plugins/pidgin-opensteamworks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/ChangeLog,v 1.12 2013/01/29 19:34:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/ChangeLog,v 1.16 2013/06/25 12:53:58 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
+  pidgin-opensteamworks-1.0_p41.ebuild:
+  Stable for amd64, wrt bug #474400
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
+  pidgin-opensteamworks-1.0_p41.ebuild:
+  Stable for x86, wrt bug #474400
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
+  pidgin-opensteamworks-1.0_p41.ebuild:
+  Stable for ppc, wrt bug #474400
+
+*pidgin-opensteamworks-1.0_p41 (27 Apr 2013)
+
+  27 Apr 2013; Julian Ospald <hasufell@gentoo.org>
+  +pidgin-opensteamworks-1.0_p41.ebuild:
+  version bump
 
 *pidgin-opensteamworks-1.0_p38 (29 Jan 2013)
 

@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/socketpool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.5 2013/02/10 15:07:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.8 2013/05/22 06:41:03 patrick Exp $
+
+  22 May 2013; Patrick Lauer <patrick@gentoo.org> socketpool-0.5.2-r1.ebuild:
+  Adding python-3.3 to python_targets
+
+  25 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> socketpool-0.5.2.ebuild,
+  socketpool-0.5.2-r1.ebuild:
+  Fix LICENSE, wrt bug #463346
+
+  24 Apr 2013; Markus Meier <maekke@gentoo.org> socketpool-0.5.2-r1.ebuild:
+  add ~arm, bug #452764
 
   10 Feb 2013; Ian Delaney <idella4@gentoo.org>
   +files/socketpool-0.5.2-pool.patch, socketpool-0.5.2-r1.ebuild:

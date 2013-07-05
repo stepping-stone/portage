@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.3-r2.ebuild,v 1.2 2013/03/20 19:10:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.3-r2.ebuild,v 1.8 2013/05/22 15:56:22 cardoe Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ else
 		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
 		${BACKPORTS:+
 			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 S="${WORKDIR}/${P%_rc*}"
 
@@ -115,11 +115,14 @@ LXC_CONFIG_CHECK="
 	~CGROUPS
 	~CGROUP_FREEZER
 	~CGROUP_DEVICE
-	~CPUSETS
 	~CGROUP_CPUACCT
-	~RESOURCE_COUNTERS
 	~CGROUP_SCHED
+	~CGROUP_PERF
 	~BLK_CGROUP
+	~NET_CLS_CGROUP
+	~NETPRIO_CGROUP
+	~CPUSETS
+	~RESOURCE_COUNTERS
 	~NAMESPACES
 	~UTS_NS
 	~IPC_NS
@@ -138,8 +141,11 @@ LXC_CONFIG_CHECK="
 
 VIRTNET_CONFIG_CHECK="
 	~BRIDGE_NF_EBTABLES
+	~BRIDGE_EBT_MARK_T
 	~NETFILTER_ADVANCED
 	~NETFILTER_XT_TARGET_CHECKSUM
+	~NETFILTER_XT_CONNMARK
+	~NETFILTER_XT_MARK
 "
 
 MACVTAP_CONFIG_CHECK="~MACVTAP"
@@ -160,9 +166,8 @@ pkg_setup() {
 	fi
 
 	# Handle specific kernel versions for different features
-	kernel_is lt 3 5 && LXC_CONFIG_CHECK+=" ~USER_NS"
-	kernel_is lt 3 6 && LXC_CONFIG_CHECK+=" ~CGROUP_MEM_RES_CTLR" || \
-						LXC_CONFIG_CHECK+=" ~MEMCG"
+	kernel_is lt 3 6 && LXC_CONFIG_CHECK+=" ~CGROUP_MEM_RES_CTLR"
+	kernel_is ge 3 6 &&	LXC_CONFIG_CHECK+=" ~MEMCG ~MEMCG_SWAP ~MEMCG_KMEM"
 
 	CONFIG_CHECK=""
 	use fuse && CONFIG_CHECK+=" ~FUSE_FS"

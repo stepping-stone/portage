@@ -1,6 +1,24 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.196 2013/03/19 21:27:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.200 2013/05/18 13:48:37 lxnay Exp $
+
+  18 May 2013; Fabio Erculiani <lxnay@gentoo.org> git-1.8.2.1.ebuild,
+  git-9999.ebuild, +files/git-daemon.socket, +files/git-daemon_at.service:
+  add systemd unit supporting socket activation to 1.8.21 and 9999, fix bug
+  #468846
+
+  19 Apr 2013; Mike Frysinger <vapier@gentoo.org> git-1.8.2.1.ebuild:
+  Add missing pthreads linkage for svn-fe #466178 by Mike Gilbert.
+
+  17 Apr 2013; Robin H. Johnson <robbat2@gentoo.org> git-1.8.2.1.ebuild:
+  Bug #466178: better use of variables to make svn-fe always compile right.
+
+*git-1.8.2.1 (16 Apr 2013)
+
+  16 Apr 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +files/git-1.8.2-optional-cvs.patch, +files/git-1.8.2-texinfo.patch,
+  +git-1.8.2.1.ebuild:
+  Verbump. Bug #464210: fix texinfo 5.1 @anchor handling.
 
   19 Mar 2013; Agostino Sarubbo <ago@gentoo.org> -git-1.7.12-r1.ebuild,
   -git-1.7.12-r2.ebuild, -git-1.7.12.3-r1.ebuild, -git-1.7.12.3.ebuild,

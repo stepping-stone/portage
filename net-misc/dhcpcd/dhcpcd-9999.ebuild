@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.2 2013/02/22 23:34:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.4 2013/06/04 01:30:38 williamh Exp $
 
 EAPI=5
 
@@ -8,11 +8,11 @@ if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://roy.marples.name/${PN}.git"
 	inherit git-2
 else
-	SRC_URI="http://roy.marples.name/downloads/${PN}/${MY_P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 	MY_P="${P/_alpha/-alpha}"
 	MY_P="${MY_P/_beta/-beta}"
 	MY_P="${MY_P/_rc/-rc}"
+	SRC_URI="http://roy.marples.name/downloads/${PN}/${MY_P}.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 	S="${WORKDIR}/${MY_P}"
 fi
 
@@ -22,7 +22,7 @@ DESCRIPTION="A fully featured, yet light weight RFC2131 compliant DHCP client"
 HOMEPAGE="http://roy.marples.name/projects/dhcpcd/"
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="+zeroconf elibc_glibc"
+IUSE="elibc_glibc"
 
 DEPEND=""
 RDEPEND=""
@@ -30,14 +30,6 @@ RDEPEND=""
 src_prepare()
 {
 	epatch_user
-	if ! use zeroconf; then
-		elog "Disabling zeroconf support"
-		{
-			echo
-			echo "# dhcpcd ebuild requested no zeroconf"
-			echo "noipv4ll"
-		} >> dhcpcd.conf
-	fi
 }
 
 src_configure()
@@ -59,11 +51,6 @@ src_install()
 	systemd_dounit "${FILESDIR}"/${PN}.service
 }
 
-pkg_preinst()
-{
-	has_version 'net-misc/dhcpcd[zeroconf]' && prev_zero=true || prev_zero=false
-}
-
 pkg_postinst()
 {
 	# Upgrade the duid file to the new format if needed
@@ -78,12 +65,18 @@ pkg_postinst()
 		cp -p "${old_duid}" "${new_duid}"
 	fi
 
-	if use zeroconf && ! $prev_zero; then
-		elog "You have installed dhcpcd with zeroconf support."
-		elog "This means that it will always obtain an IP address even if no"
-		elog "DHCP server can be contacted, which will break any existing"
-		elog "failover support you may have configured in your net configuration."
-		elog "This behaviour can be controlled with the -L flag."
-		elog "See the dhcpcd man page for more details."
+	elog
+	elog "dhcpcd has zeroconf support active by default."
+	elog "This means it will always obtain an IP address even if no"
+	elog "DHCP server can be contacted, which will break any existing"
+	elog "failover support you may have configured in your net configuration."
+	elog "This behaviour can be controlled with the noipv4ll configuration"
+	elog "file option or the -L command line switch."
+	elog "See the dhcpcd and dhcpcd.conf man pages for more details."
+
+	if ! has_version net-dns/bind-tools; then
+		elog
+		elog "If you activate the lookup-hostname hook to look up your hostname"
+		elog "using the dns, you need to install net-dns/bind-tools."
 	fi
 }

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.184 2013/04/02 13:55:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.188 2013/05/16 19:21:23 ulm Exp $
 
-EAPI="4"
+EAPI="5"
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then
@@ -48,7 +48,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
-	libproxy libsamplerate libtiger linsys libtar lirc live lua +macosx
+	libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opengl optimisememory oss png
@@ -92,7 +92,6 @@ RDEPEND="
 		libass? ( >=media-libs/libass-0.9.8 media-libs/fontconfig )
 		libcaca? ( >=media-libs/libcaca-0.99_beta14 )
 		libnotify? ( x11-libs/libnotify x11-libs/gtk+:2 )
-		libproxy? ( net-libs/libproxy )
 		libsamplerate? ( media-libs/libsamplerate )
 		libtar? ( >=dev-libs/libtar-1.2.11-r3 )
 		libtiger? ( media-libs/libtiger )
@@ -136,7 +135,6 @@ RDEPEND="
 		vaapi? ( x11-libs/libva )
 		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
-		win32codecs? ( media-libs/win32codecs )
 		X? ( x11-libs/libX11 )
 		x264? ( >=media-libs/x264-0.0.20090923 )
 		xcb? ( >=x11-libs/libxcb-1.6 >=x11-libs/xcb-util-0.3.4 )
@@ -145,7 +143,6 @@ RDEPEND="
 		"
 
 DEPEND="${RDEPEND}
-	alsa? ( >=media-sound/alsa-headers-1.0.23 )
 	kde? ( >=kde-base/kdelibs-4 )
 	xcb? ( x11-proto/xproto )
 	app-arch/xz-utils
@@ -197,8 +194,8 @@ src_configure() {
 	if use truetype || use projectm; then
 		local dejavu="/usr/share/fonts/dejavu/"
 		myconf="--with-default-font=${dejavu}/DejaVuSans.ttf \
-			    --with-default-font-family=Sans \
-			    --with-default-monospace-font=${dejavu}/DejaVuSansMono.ttf
+				--with-default-font-family=Sans \
+				--with-default-monospace-font=${dejavu}/DejaVuSansMono.ttf
 				--with-default-monospace-font-family=Monospace"
 	fi
 
@@ -248,7 +245,6 @@ src_configure() {
 		$(use_enable libass) \
 		$(use_enable libcaca caca) \
 		$(use_enable libnotify notify) \
-		$(use_enable libproxy) \
 		$(use_enable libsamplerate samplerate) \
 		$(use_enable libtar) \
 		$(use_enable libtiger tiger) \

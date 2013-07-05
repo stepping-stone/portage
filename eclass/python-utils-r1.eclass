@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.21 2013/04/07 17:02:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.27 2013/06/07 01:11:31 floppym Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -79,10 +79,18 @@ _python_impl_supported() {
 }
 
 # @ECLASS-VARIABLE: PYTHON
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The absolute path to the current Python interpreter.
 #
-# Set and exported only in commands run by python_foreach_impl().
+# This variable is set automatically in the following contexts:
+#
+# python-r1: Set in functions called by python_foreach_impl() or after
+# calling python_export_best().
+#
+# python-single-r1: Set after calling python-single-r1_pkg_setup().
+#
+# distutils-r1: Set within any of the python sub-phase functions.
 #
 # Example value:
 # @CODE
@@ -90,12 +98,18 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: EPYTHON
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The executable name of the current Python interpreter.
 #
-# This variable is used consistently with python.eclass.
+# This variable is set automatically in the following contexts:
 #
-# Set and exported only in commands run by python_foreach_impl().
+# python-r1: Set in functions called by python_foreach_impl() or after
+# calling python_export_best().
+#
+# python-single-r1: Set after calling python-single-r1_pkg_setup().
+#
+# distutils-r1: Set within any of the python sub-phase functions.
 #
 # Example value:
 # @CODE
@@ -103,6 +117,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_SITEDIR
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The path to Python site-packages directory.
 #
@@ -114,6 +129,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_INCLUDEDIR
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The path to Python include directory.
 #
@@ -125,6 +141,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_LIBPATH
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The path to Python library.
 #
@@ -137,6 +154,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_CFLAGS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Proper C compiler flags for building against Python. Obtained from
 # pkg-config or python-config.
@@ -151,6 +169,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_LIBS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Proper C compiler flags for linking against Python. Obtained from
 # pkg-config or python-config.
@@ -165,6 +184,7 @@ _python_impl_supported() {
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_PKG_DEP
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The complete dependency on a particular Python package as a string.
 #
@@ -456,8 +476,8 @@ python_get_LIBS() {
 }
 
 # @FUNCTION: _python_rewrite_shebang
-# @INTERNAL
 # @USAGE: [<EPYTHON>] <path>...
+# @INTERNAL
 # @DESCRIPTION:
 # Replaces 'python' executable in the shebang with the executable name
 # of the specified interpreter. If no EPYTHON value (implementation) is
@@ -493,8 +513,9 @@ _python_rewrite_shebang() {
 
 	local f
 	for f; do
-		local shebang=$(head -n 1 "${f}")
-		local from
+		local from shebang
+		read -r shebang < "${f}"
+		shebang=${shebang%$'\r'}
 		debug-print "${FUNCNAME}: path = ${f}"
 		debug-print "${FUNCNAME}: shebang = ${shebang}"
 
@@ -525,8 +546,8 @@ _python_rewrite_shebang() {
 }
 
 # @FUNCTION: _python_ln_rel
-# @INTERNAL
 # @USAGE: <from> <to>
+# @INTERNAL
 # @DESCRIPTION:
 # Create a relative symlink.
 _python_ln_rel() {
@@ -819,11 +840,11 @@ python_doheader() {
 }
 
 # @FUNCTION: python_wrapper_setup
-# @USAGE: <path> [<impl>]
+# @USAGE: [<path> [<impl>]]
 # @DESCRIPTION:
 # Create proper 'python' executable and pkg-config wrappers
 # (if available) in the directory named by <path>. Set up PATH
-# and PKG_CONFIG_PATH appropriately.
+# and PKG_CONFIG_PATH appropriately. <path> defaults to ${T}/${EPYTHON}.
 #
 # The wrappers will be created for implementation named by <impl>,
 # or for one named by ${EPYTHON} if no <impl> passed.
@@ -835,7 +856,7 @@ python_doheader() {
 python_wrapper_setup() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local workdir=${1}
+	local workdir=${1:-${T}/${EPYTHON}}
 	local impl=${2:-${EPYTHON}}
 
 	[[ ${workdir} ]] || die "${FUNCNAME}: no workdir specified."
@@ -891,7 +912,7 @@ python_wrapper_setup() {
 
 		local x
 		for x in "${nonsupp[@]}"; do
-			echo >"${workdir}"/bin/${x} <<__EOF__ || die
+			cat >"${workdir}"/bin/${x} <<__EOF__
 #!/bin/sh
 echo "${x} is not supported by ${EPYTHON}" >&2
 exit 1

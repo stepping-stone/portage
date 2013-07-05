@@ -1,6 +1,370 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.806 2013/04/07 06:12:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.864 2013/07/04 12:46:16 blueness Exp $
+
+  04 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r171.ebuild, -hardened-sources-2.6.32-r172.ebuild,
+  -hardened-sources-2.6.32-r173.ebuild, -hardened-sources-3.2.47-r1.ebuild,
+  -hardened-sources-3.2.47-r2.ebuild, -hardened-sources-3.2.47-r3.ebuild,
+  -hardened-sources-3.9.7-r1.ebuild, -hardened-sources-3.9.7.ebuild,
+  -hardened-sources-3.9.8.ebuild:
+  Remove older unstable versions
+
+*hardened-sources-3.2.48 (04 Jul 2013)
+
+  04 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.48.ebuild:
+  vanilla-3.2.48 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.48-201306302051
+
+*hardened-sources-3.9.8-r1 (04 Jul 2013)
+
+  04 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.8-r1.ebuild:
+  vanilla-3.9.8 + genpatches-3.9-13 + grsecurity-2.9.1-3.9.8-201306302052
+
+*hardened-sources-2.6.32-r174 (04 Jul 2013)
+
+  04 Jul 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r174.ebuild:
+  vanilla-2.6.32.61 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.61-201306302051
+
+*hardened-sources-3.9.8 (30 Jun 2013)
+
+  30 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.8.ebuild:
+  vanilla-3.9.8 + genpatches-3.9-13 + grsecurity-2.9.1-3.9.8-201306272057
+
+*hardened-sources-3.2.47-r3 (30 Jun 2013)
+
+  30 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.47-r3.ebuild:
+  vanilla-3.2.47 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.47-201306272056
+
+*hardened-sources-2.6.32-r173 (30 Jun 2013)
+
+  30 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r173.ebuild:
+  vanilla-2.6.32.61 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.61-201306272055
+
+  29 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-3.2.42-r1.ebuild:
+  Remove older insecure stable version
+
+  29 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r156.ebuild, -hardened-sources-3.2.40-r1.ebuild,
+  -hardened-sources-3.2.47.ebuild, -hardened-sources-3.8.3.ebuild,
+  -hardened-sources-3.8.6.ebuild, -hardened-sources-3.9.6.ebuild,
+  hardened-sources-3.8.12.ebuild:
+  Remove older versions, stabilize 3.8.12
+
+*hardened-sources-3.9.7-r1 (28 Jun 2013)
+
+  28 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.7-r1.ebuild:
+  vanilla-3.9.7 genpatches-3.9-12 + grsecurity-2.9.1-3.9.7-201306261901
+
+*hardened-sources-3.2.47-r2 (28 Jun 2013)
+
+  28 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.47-r2.ebuild:
+  vanilla-3.2.47 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.47-201306261900
+
+*hardened-sources-2.6.32-r172 (28 Jun 2013)
+
+  28 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r172.ebuild:
+  vanilla-2.6.32.61 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.61-201306261859
+
+*hardened-sources-3.9.7 (25 Jun 2013)
+
+  25 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.7.ebuild:
+  vanilla-3.9.7 genpatches-3.9-12 + grsecurity-2.9.1-3.9.7-201306231443
+
+*hardened-sources-3.2.47-r1 (25 Jun 2013)
+
+  25 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.47-r1.ebuild:
+  vanilla-3.2.47 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.47-201306231441
+
+*hardened-sources-3.8.12 (25 Jun 2013)
+
+  25 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.8.12.ebuild:
+  Reintroduce 3.8.12 because of reports that 3.9 doesn't boot
+
+  24 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r169.ebuild, -hardened-sources-3.2.46.ebuild,
+  -hardened-sources-3.9.4-r2.ebuild, hardened-sources-2.6.32-r170.ebuild,
+  hardened-sources-3.2.46-r1.ebuild, hardened-sources-3.9.5.ebuild:
+  Stable amd64 x86, and remove older unstable
+
+*hardened-sources-3.9.6 (21 Jun 2013)
+
+  21 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.6.ebuild:
+  vanilla-3.9.6 + genpatches-3.9-10 + grsecurity-2.9.1-3.9.6-201306182033
+
+*hardened-sources-3.2.47 (21 Jun 2013)
+
+  21 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.47.ebuild:
+  vanilla-3.2.47 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.47-201306191807
+
+*hardened-sources-2.6.32-r171 (21 Jun 2013)
+
+  21 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r171.ebuild:
+  vanilla-2.6.32.61 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.61-201306171902
+
+  12 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r165.ebuild, -hardened-sources-2.6.32-r167.ebuild,
+  -hardened-sources-2.6.32-r168.ebuild, -hardened-sources-3.2.44-r2.ebuild,
+  -hardened-sources-3.2.45-r1.ebuild, -hardened-sources-3.2.45-r2.ebuild,
+  -hardened-sources-3.8.12.ebuild, -hardened-sources-3.9.4-r1.ebuild,
+  -hardened-sources-3.9.4.ebuild:
+  Remove older unstable.  Next in line for stabilization: 2.6.32-r169, 3.2.46,
+  3.9.4-r2
+
+  12 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r143.ebuild, -hardened-sources-2.6.32-r148.ebuild,
+  -hardened-sources-3.2.35.ebuild, -hardened-sources-3.2.37-r2.ebuild,
+  -hardened-sources-3.7.5-r1.ebuild:
+  Remove older stables
+
+*hardened-sources-3.9.5 (12 Jun 2013)
+
+  12 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.5.ebuild:
+  vanilla-3.9.5 + genpatches-3.9-9 + grsecurity-2.9.1-3.9.5-201306111850
+
+*hardened-sources-3.2.46-r1 (12 Jun 2013)
+
+  12 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.46-r1.ebuild:
+  vanilla-3.2.46 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.46-201306102217
+
+*hardened-sources-2.6.32-r170 (12 Jun 2013)
+
+  12 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r170.ebuild:
+  vanilla-2.6.32.60 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.61-201306102216
+
+*hardened-sources-3.9.4-r2 (09 Jun 2013)
+
+  09 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.4-r2.ebuild:
+  vanilla-3.9.4 + genpatches-3.9-8 + grsecurity-2.9.1-3.9.4-201306041949
+
+*hardened-sources-3.2.46 (09 Jun 2013)
+
+  09 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.46.ebuild:
+  vanilla-3.2.46 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.46-201306041947
+
+*hardened-sources-2.6.32-r169 (09 Jun 2013)
+
+  09 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r169.ebuild:
+  vanilla-2.6.32.60 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.60-201306041946
+
+  31 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r161.ebuild, -hardened-sources-2.6.32-r162.ebuild,
+  -hardened-sources-2.6.32-r163.ebuild, -hardened-sources-2.6.32-r164.ebuild,
+  -hardened-sources-3.2.43-r1.ebuild, -hardened-sources-3.2.43.ebuild,
+  -hardened-sources-3.2.44-r1.ebuild, -hardened-sources-3.2.44.ebuild,
+  -hardened-sources-3.8.10.ebuild, -hardened-sources-3.8.11.ebuild,
+  -hardened-sources-3.8.7.ebuild, -hardened-sources-3.8.8.ebuild:
+  Remove older unstable, CVE-2013-2094
+
+*hardened-sources-3.9.4-r1 (31 May 2013)
+
+  31 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.4-r1.ebuild:
+  vanilla-3.9.4 + genpatches-3.9-8 + grsecurity-2.9.1-3.9.4-201305301927
+
+*hardened-sources-3.2.45-r2 (31 May 2013)
+
+  31 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.45-r2.ebuild:
+  vanilla-3.2.45 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.45-201305301925
+
+*hardened-sources-2.6.32-r168 (31 May 2013)
+
+  31 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r168.ebuild:
+  vanilla-2.6.32.60 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.60-201305301924
+
+  26 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r166.ebuild, -hardened-sources-3.2.45.ebuild,
+  -hardened-sources-3.9.2.ebuild:
+  Remove kernels with possible early boot freeze
+
+*hardened-sources-3.9.4 (26 May 2013)
+
+  26 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.4.ebuild:
+  vanilla-3.9.4 + genpatches-3.9-8 + grsecurity-2.9.1-3.9.4-201305251009
+
+*hardened-sources-3.2.45-r1 (26 May 2013)
+
+  26 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.45-r1.ebuild:
+  vanilla-3.2.45 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.45-201305251007
+
+*hardened-sources-2.6.32-r167 (26 May 2013)
+
+  26 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r167.ebuild:
+  vanilla-2.6.32.60 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.60-201305251007
+
+*hardened-sources-3.9.2 (21 May 2013)
+
+  21 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.9.2.ebuild:
+  vanilla-3.9.2 + genpatches-3.9-5 + grsecurity-2.9.1-3.9.2-201305172333 This
+  kernel has an early boot freeze on x86 with less than 512M.  It should not be
+  stabilized.
+
+*hardened-sources-3.2.45 (21 May 2013)
+
+  21 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.45.ebuild:
+  vanilla-3.2.45 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.45-201305162326
+
+*hardened-sources-2.6.32-r166 (21 May 2013)
+
+  21 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r166.ebuild:
+  vanilla-2.6.32.60 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.60-201305162326
+
+*hardened-sources-3.8.12 (10 May 2013)
+
+  10 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.8.12.ebuild:
+  vanilla-3.8.12 + genpatches-3.8-13 + grsecurity-2.9.1-3.8.12-201305082215
+
+*hardened-sources-3.2.44-r2 (10 May 2013)
+
+  10 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.44-r2.ebuild:
+  vanilla-3.2.44 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.44-201305082214
+
+*hardened-sources-2.6.32-r165 (10 May 2013)
+
+  10 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r165.ebuild:
+  vanilla-2.6.32.60 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.60-201305082213
+
+*hardened-sources-3.8.11 (05 May 2013)
+
+  05 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.8.11.ebuild:
+  vanilla-3.8.11 + genpatches-3.8-13 + grsecurity-2.9.1-3.8.11-201305011917
+
+*hardened-sources-3.2.44-r1 (05 May 2013)
+
+  05 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.44-r1.ebuild:
+  vanilla-3.2.44 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.44-201304292055
+
+*hardened-sources-2.6.32-r164 (05 May 2013)
+
+  05 May 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r164.ebuild:
+  vanilla-2.6.32.60 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.60-201304292054
+
+  29 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  hardened-sources-2.6.32-r160.ebuild, hardened-sources-3.2.42-r1.ebuild,
+  hardened-sources-3.8.6.ebuild:
+  Stable amd64 x86
+
+*hardened-sources-3.8.10 (28 Apr 2013)
+
+  28 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.8.10.ebuild:
+  vanilla-3.8.10 + genpatches-3.8-11 + grsecurity-2.9.1-3.8.10-201304262208
+
+*hardened-sources-3.2.44 (28 Apr 2013)
+
+  28 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.44.ebuild:
+  vanilla-3.2.44 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.44-201304271916
+
+*hardened-sources-2.6.32-r163 (28 Apr 2013)
+
+  28 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r163.ebuild:
+  vanilla-2.6.32.60 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.60-201304262205
+
+  21 Apr 2013; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix gpg signing of Manifest
+
+*hardened-sources-3.8.8 (21 Apr 2013)
+
+  21 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.8.8.ebuild:
+  vanilla-3.8.8 + genpatches-3.8-9 + grsecurity-2.9.1-3.8.8-201304181923
+
+*hardened-sources-3.2.43-r1 (21 Apr 2013)
+
+  21 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.43-r1.ebuild:
+  vanilla-3.2.43 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.43-201304181907
+
+*hardened-sources-2.6.32-r162 (21 Apr 2013)
+
+  21 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r162.ebuild:
+  vanilla-2.6.32.60 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.60-201304181846
+
+  13 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r153.ebuild, -hardened-sources-2.6.32-r154.ebuild,
+  -hardened-sources-2.6.32-r155.ebuild, -hardened-sources-2.6.32-r157.ebuild,
+  -hardened-sources-2.6.32-r158.ebuild, -hardened-sources-2.6.32-r159.ebuild,
+  -hardened-sources-3.2.39-r1.ebuild, -hardened-sources-3.2.39-r2.ebuild,
+  -hardened-sources-3.2.40-r2.ebuild, -hardened-sources-3.2.40.ebuild,
+  -hardened-sources-3.2.41.ebuild, -hardened-sources-3.2.42.ebuild,
+  -hardened-sources-3.8.4-r1.ebuild, -hardened-sources-3.8.4.ebuild,
+  -hardened-sources-3.8.5.ebuild:
+  Remove older unstable
+
+  13 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  hardened-sources-2.6.32-r156.ebuild, hardened-sources-3.2.40-r1.ebuild,
+  hardened-sources-3.8.3.ebuild:
+  Stable amd64 x86
+
+*hardened-sources-3.8.7 (13 Apr 2013)
+
+  13 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.8.7.ebuild:
+  vanilla-3.8.7 + genpatches-3.8-9 + grsecurity-2.9.1-3.8.7-201304122027
+
+*hardened-sources-3.2.43 (13 Apr 2013)
+
+  13 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.43.ebuild:
+  vanilla-3.2.43 + genpatches-3.2-16 + grsecurity-2.9.1-3.2.43-201304122026
+
+*hardened-sources-2.6.32-r161 (13 Apr 2013)
+
+  13 Apr 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r161.ebuild:
+  vanilla-2.6.32.60 + genpatches-2.6.32-48 +
+  grsecurity-2.9.1-2.6.32.60-201304122025
 
 *hardened-sources-3.8.6 (07 Apr 2013)
 

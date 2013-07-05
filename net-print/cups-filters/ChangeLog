@@ -1,6 +1,49 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.54 2013/04/06 10:20:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.63 2013/07/04 14:14:22 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.34-r1.ebuild:
+  Stable for ppc64, wrt bug #442926
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.34-r1.ebuild:
+  Stable for ppc, wrt bug #442926
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.34-r1.ebuild:
+  Stable for x86, wrt bug #442926
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.34-r1.ebuild:
+  Stable for amd64, wrt bug #442926
+
+  26 Jun 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/cups-filters-1.0.29-openrc.patch, -cups-filters-1.0.30-r1.ebuild,
+  -files/cups-filters-1.0.30-noavahi.patch, -cups-filters-1.0.34.ebuild:
+  Clean up
+
+*cups-filters-1.0.34-r1 (15 May 2013)
+
+  15 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cups-filters-1.0.34-r1.ebuild, +cups-filters-9999.ebuild,
+  -cups-filters-9999-r1.ebuild:
+  Make init scripts only depend on avahi if it is really used, bug 469930. In
+  addition, please repeat after me: We do not do revbumps in live ebuilds...
+
+*cups-filters-1.0.34 (11 May 2013)
+
+  11 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/cups-filters-1.0.29-poppler-0.22.patch, -cups-filters-1.0.30.ebuild,
+  +cups-filters-1.0.34.ebuild, cups-filters-9999-r1.ebuild:
+  Version bump; remove old
+
+*cups-filters-1.0.30-r1 (11 May 2013)
+
+  11 May 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cups-filters-1.0.30-r1.ebuild, cups-filters-9999-r1.ebuild,
+  +files/cups-browsed.service, files/cups-browsed.init.d:
+  Bugfixes in ebuild and init script and addition systemd unit file, all from
+  systemd-love overlay thanks to lxnay
+
+  25 Apr 2013; Patrick Lauer <patrick@gentoo.org> cups-filters-1.0.30.ebuild:
+  Apply automake fix #466412
 
   06 Apr 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   cups-filters-1.0.30.ebuild, cups-filters-9999-r1.ebuild:

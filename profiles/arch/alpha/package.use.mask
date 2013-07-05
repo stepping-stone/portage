@@ -1,6 +1,22 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.123 2013/04/01 12:10:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.128 2013/06/22 15:59:49 williamh Exp $
+
+# William Hubbs <williamh@gentoo.org> (22 June 2013)
+# dev-python/cython is not keyworded for alpha
+>=app-accessibility/brltty-4.5 python
+
+# Patrick Lauer <patrick@gentoo.org> (17 June 2013)
+# Fix per-arch mask of phonon[zeitgeist] #460140
+media-libs/phonon zeitgeist
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 May 2013)
+# depends on sys-devel/llvm[video_cards_radeon]
+media-libs/mesa r600-llvm-compiler
+
+# Dirkjan Ochtman <djc@gentoo.org> (3 May 2013)
+# depends on net-libs/polarssl
+>=net-misc/openvpn-2.3.1 polarssl
 
 # Gilles Dartiguelongue <eva@gentoo.org> (1 Apr 2013)
 # missing keyword on media-libs/tremor, bug #453200
@@ -50,7 +66,6 @@ dev-python/PyQt4 webkit
 dev-qt/qtdeclarative webkit
 dev-qt/qthelp webkit
 net-irc/kvirc webkit
-x11-misc/google-gadgets qt4
 
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
 # Needs x11-misc/lightdm(which also requires some other deps)

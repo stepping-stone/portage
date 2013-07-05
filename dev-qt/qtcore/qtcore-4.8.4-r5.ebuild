@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.4-r5.ebuild,v 1.1 2013/03/25 08:32:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.4-r5.ebuild,v 1.3 2013/05/27 09:49:57 pesa Exp $
 
 EAPI=5
 
 inherit qt4-build
 
-DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework"
+DESCRIPTION="Cross-platform application development framework"
 
 SRC_URI+=" http://dev.gentoo.org/~pesa/patches/${P}-update-defaultNumberingSystem.patch.gz"
 
@@ -36,6 +36,7 @@ PATCHES=(
 	"${FILESDIR}/blacklist-mis-issued-Turktrust-certs.patch"
 	"${FILESDIR}/CVE-2013-0254.patch"
 	"${FILESDIR}/fix-call-to-QMetaObject-metaCall-from-updateProperty.patch"
+	"${FILESDIR}/rename-qAbs-function-for-timeval.patch"
 	"${WORKDIR}/${P}-update-defaultNumberingSystem.patch"
 )
 

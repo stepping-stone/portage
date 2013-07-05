@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.35 2013/03/31 18:13:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.38 2013/05/14 21:41:29 eva Exp $
+
+  14 May 2013; Gilles Dartiguelongue <eva@gentoo.org> rygel-0.18.1.ebuild,
+  rygel-0.18.2.ebuild:
+  Fix dependency of transcode USE flag.
+
+*rygel-0.18.2 (13 May 2013)
+
+  13 May 2013; Pacho Ramos <pacho@gentoo.org> +rygel-0.18.2.ebuild,
+  -rygel-0.18.0.ebuild:
+  Version bump, drop old
+
+*rygel-0.18.1 (23 Apr 2013)
+
+  23 Apr 2013; Pacho Ramos <pacho@gentoo.org> +rygel-0.18.1.ebuild:
+  Version bump
 
   31 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> rygel-0.18.0.ebuild:
   QA fixes.

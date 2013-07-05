@@ -1,6 +1,101 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.634 2013/04/04 07:34:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.662 2013/07/02 12:10:52 aballier Exp $
+
+  02 Jul 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  Add missing wavpack dep
+
+  01 Jul 2013; Jeroen Roovers <jer@gentoo.org> ffmpeg-1.0.7.ebuild:
+  Stable for HPPA (bug #473302).
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-1.0.7.ebuild:
+  Stable for arm, wrt bug #473302
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-1.0.7.ebuild:
+  Stable for ppc64, wrt bug #473302
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-1.0.7.ebuild:
+  Stable for ppc, wrt bug #473302
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-1.0.7.ebuild:
+  Stable for x86, wrt bug #473302
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-1.0.7.ebuild:
+  Stable for amd64, wrt bug #473302
+
+  15 Jun 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add amrenc useflag to have a more finegrained control, bug #473284
+
+  14 Jun 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  add wavpack useflag
+
+  13 Jun 2013; Michael Weber <xmw@gentoo.org> ffmpeg-0.10.7.ebuild,
+  ffmpeg-1.0.6.ebuild, ffmpeg-1.0.7.ebuild, ffmpeg-1.2.1.ebuild,
+  ffmpeg-9999.ebuild:
+  Depend on SLOT=0 of media-libs/openjpeg (bug 440086)
+
+  24 May 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  add ffhash tool
+
+  23 May 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add quvi useflag
+
+  23 May 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  disable v4l2 outdev with USE=-v4l
+
+  16 May 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-1.0.7.ebuild:
+  add libavresample to LD_LIBRARY_PATH for tests, bug #470034
+
+*ffmpeg-1.0.7 (14 May 2013)
+
+  14 May 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-1.0.7.ebuild:
+  version bump
+
+  10 May 2013; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.10.6.ebuild,
+  -ffmpeg-1.1.4.ebuild, -ffmpeg-1.2.ebuild:
+  remove old
+
+*ffmpeg-1.2.1 (10 May 2013)
+
+  10 May 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-1.2.1.ebuild:
+  version bump
+
+  21 Apr 2013; Markus Meier <maekke@gentoo.org> ffmpeg-1.0.6.ebuild:
+  add ~arm, bug #458100
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-0.10.7.ebuild:
+  Stable for sparc, wrt bug #465496
+
+  12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-0.10.7.ebuild:
+  Stable for ia64, wrt bug #465496
+
+  12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-0.10.7.ebuild:
+  Stable for arm, wrt bug #465496
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-0.10.7.ebuild:
+  Stable for amd64, wrt bug #465496
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-0.10.7.ebuild:
+  Stable for x86, wrt bug #465496
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-0.10.7.ebuild:
+  Stable for alpha, wrt bug #465496
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-0.10.7.ebuild:
+  Stable for ppc64, wrt bug #465496
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-0.10.7.ebuild:
+  Stable for ppc, wrt bug #465496
+
+  11 Apr 2013; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.10.7.ebuild:
+  Stable for HPPA (bug #465496).
+
+*ffmpeg-0.10.7 (11 Apr 2013)
+
+  11 Apr 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-0.10.7.ebuild:
+  version bump for the 0.10 branch
 
   04 Apr 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-1.0.6.ebuild,
   ffmpeg-1.1.4.ebuild, ffmpeg-1.2.ebuild, ffmpeg-9999.ebuild, metadata.xml:

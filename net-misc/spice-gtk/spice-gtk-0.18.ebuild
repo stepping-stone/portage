@@ -1,12 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.18.ebuild,v 1.1 2013/02/17 19:09:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.18.ebuild,v 1.4 2013/05/12 12:14:10 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
 WANT_AUTOMAKE="1.12"
+VALA_MIN_API_VERSION="0.14"
+VALA_USE_DEPEND="vapigen"
 
-inherit autotools eutils python
+inherit autotools eutils python vala
 
 PYTHON_DEPEND="2"
 
@@ -16,7 +18,7 @@ HOMEPAGE="http://spice-space.org http://gitorious.org/spice-gtk"
 LICENSE="LGPL-2.1"
 SLOT="0"
 SRC_URI="http://spice-space.org/download/gtk/${P}.tar.bz2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="dbus doc gstreamer gtk3 +introspection policykit pulseaudio
 python sasl smartcard static-libs usbredir vala"
 
@@ -60,7 +62,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.0
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
-	vala? ( dev-lang/vala:0.14 )"
+	vala? ( $(vala_depend) )"
 
 # Hard-deps while building from git:
 # dev-lang/vala:0.14
@@ -75,6 +77,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	use vala && vala_src_prepare
 	mkdir ${GTK2_BUILDDIR} || die
 	mkdir ${GTK3_BUILDDIR} || die
 
@@ -114,8 +117,6 @@ src_configure() {
 	cd ${GTK2_BUILDDIR}
 	echo "Running configure in ${GTK2_BUILDDIR}"
 	ECONF_SOURCE="${S}" econf --disable-maintainer-mode \
-		VALAC=$(type -P valac-0.14) \
-		VAPIGEN=$(type -P vapigen-0.14) \
 		--with-gtk=2.0 \
 		${myconf}
 
@@ -123,8 +124,6 @@ src_configure() {
 		cd ${GTK3_BUILDDIR}
 		echo "Running configure in ${GTK3_BUILDDIR}"
 		ECONF_SOURCE="${S}" econf --disable-maintainer-mode \
-			VALAC=$(type -P valac-0.14) \
-			VAPIGEN=$(type -P vapigen-0.14) \
 			--with-gtk=3.0 \
 			${myconf}
 	fi

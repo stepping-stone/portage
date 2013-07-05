@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.12 2013/03/27 17:51:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.16 2013/06/09 11:14:18 johu Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ DEPEND="
 	>=dev-libs/libattica-0.4.0
 	dev-libs/qjson
 	dev-libs/quazip
+	dev-libs/qtkeychain
 	>=dev-qt/qtcore-${QT_MINIMAL}:4
 	>=dev-qt/qtdbus-${QT_MINIMAL}:4
 	>=dev-qt/qtgui-${QT_MINIMAL}:4
@@ -40,7 +41,7 @@ DEPEND="
 	>=dev-qt/qtsvg-${QT_MINIMAL}:4
 	>=dev-qt/qtwebkit-${QT_MINIMAL}:4
 	>=media-libs/liblastfm-1.0.1
-	>=media-libs/libechonest-2.0.2
+	>=media-libs/libechonest-2.1.0
 	>=media-libs/phonon-4.5.0
 	>=media-libs/taglib-1.6.0
 	x11-libs/libX11
@@ -58,6 +59,8 @@ src_configure() {
 		$(cmake-utils_use_with jabber Jreen)
 		$(cmake-utils_use_with twitter QTweetLib)
 	)
+
+	mycmakeargs+=( -DBUILD_WITH_QT4=ON )
 
 	if [[ ${PV} != *9999* ]]; then
 		mycmakeargs+=( -DBUILD_RELEASE=ON )

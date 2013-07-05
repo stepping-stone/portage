@@ -1,6 +1,28 @@
 # ChangeLog for net-p2p/torrentinfo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/torrentinfo/ChangeLog,v 1.6 2010/10/10 19:07:07 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/torrentinfo/ChangeLog,v 1.11 2013/06/25 12:52:59 ago Exp $
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> torrentinfo-1.8.6.ebuild:
+  Stable for amd64, wrt bug #474286
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> torrentinfo-1.8.6.ebuild:
+  Stable for x86, wrt bug #474286
+
+  10 May 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Fix herd name typo.
+
+*torrentinfo-1.8.6 (24 Apr 2013)
+
+  24 Apr 2013; Markos Chandras <hwoarang@gentoo.org> +torrentinfo-1.8.6.ebuild:
+  Version bump
+
+*torrentinfo-1.8.4 (23 Apr 2013)
+
+  23 Apr 2013; Markos Chandras <hwoarang@gentoo.org> +torrentinfo-1.8.4.ebuild,
+  metadata.xml:
+  Version bump. Switch to fork in
+  https://github.com/ShanaTsunTsunLove/torrentinfo since upstream is dead. Bug
+  #466328. Thanks to Nikoli <nikoli@lavabit.com> for the ebuild
 
   10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   torrentinfo-1.0.2.ebuild:
@@ -30,4 +52,3 @@
   Initial commit for torrentinfo. Thanks to Avuton Olrich <avuton@gmail.com>
   for
   the initial ebuild. Fixes bug 253799
-

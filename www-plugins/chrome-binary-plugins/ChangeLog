@@ -1,6 +1,221 @@
 # ChangeLog for www-plugins/chrome-binary-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.7 2013/03/19 23:06:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.34 2013/07/04 03:39:59 floppym Exp $
+
+*chrome-binary-plugins-28.0.1500.71_p209842 (04 Jul 2013)
+
+  04 Jul 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.71_p209842.ebuild,
+  -chrome-binary-plugins-28.0.1500.70_p209565.ebuild:
+  Bump.
+
+*chrome-binary-plugins-28.0.1500.89_beta209621 (03 Jul 2013)
+*chrome-binary-plugins-28.0.1500.70_p209565 (03 Jul 2013)
+
+  03 Jul 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.70_p209565.ebuild,
+  +chrome-binary-plugins-28.0.1500.89_beta209621.ebuild,
+  -chrome-binary-plugins-28.0.1500.63_beta208724.ebuild,
+  -chrome-binary-plugins-28.0.1500.63_p208724.ebuild:
+  Bump.
+
+*chrome-binary-plugins-28.0.1500.63_p208724 (28 Jun 2013)
+*chrome-binary-plugins-28.0.1500.63_beta208724 (28 Jun 2013)
+
+  28 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.63_beta208724.ebuild,
+  +chrome-binary-plugins-28.0.1500.63_p208724.ebuild,
+  -chrome-binary-plugins-28.0.1500.52_beta207119.ebuild,
+  -chrome-binary-plugins-28.0.1500.52_p207119.ebuild:
+  Bump.
+
+*chrome-binary-plugins-29.0.1547.0_alpha208345 (26 Jun 2013)
+
+  26 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-29.0.1547.0_alpha208345.ebuild,
+  -chrome-binary-plugins-29.0.1541.2_alpha207000.ebuild:
+  Bump.
+
+*chrome-binary-plugins-28.0.1500.52_p207119 (19 Jun 2013)
+*chrome-binary-plugins-28.0.1500.52_beta207119 (19 Jun 2013)
+
+  19 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.52_beta207119.ebuild,
+  +chrome-binary-plugins-28.0.1500.52_p207119.ebuild,
+  -chrome-binary-plugins-28.0.1500.45_beta205727.ebuild,
+  -chrome-binary-plugins-28.0.1500.45_p205727.ebuild:
+  Bump.
+
+*chrome-binary-plugins-29.0.1541.2_alpha207000 (19 Jun 2013)
+
+  19 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-29.0.1541.2_alpha207000.ebuild,
+  -chrome-binary-plugins-29.0.1535.3_alpha205561.ebuild:
+  Dev channel bump.
+
+*chrome-binary-plugins-28.0.1500.45_p205727 (17 Jun 2013)
+
+  17 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.45_p205727.ebuild,
+  -chrome-binary-plugins-27.0.1453.110_p202711.ebuild:
+  Stable bump.
+
+*chrome-binary-plugins-28.0.1500.45_beta205727 (13 Jun 2013)
+
+  13 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.45_beta205727.ebuild,
+  -chrome-binary-plugins-28.0.1500.36_beta204086.ebuild:
+  Bump.
+
+*chrome-binary-plugins-29.0.1535.3_alpha205561 (12 Jun 2013)
+
+  12 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-29.0.1535.3_alpha205561.ebuild,
+  -chrome-binary-plugins-29.0.1530.2_alpha204444.ebuild:
+  Bump.
+
+*chrome-binary-plugins-29.0.1530.2_alpha204444 (06 Jun 2013)
+*chrome-binary-plugins-28.0.1500.36_beta204086 (06 Jun 2013)
+
+  06 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.36_beta204086.ebuild,
+  +chrome-binary-plugins-29.0.1530.2_alpha204444.ebuild,
+  -chrome-binary-plugins-28.0.1500.29_beta202781.ebuild,
+  -chrome-binary-plugins-29.0.1521.3_alpha202710.ebuild:
+  Bump.
+
+*chrome-binary-plugins-27.0.1453.110_p202711 (04 Jun 2013)
+
+  04 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-27.0.1453.110_p202711.ebuild,
+  -chrome-binary-plugins-27.0.1453.93_p200836.ebuild:
+  Bump.
+
+*chrome-binary-plugins-28.0.1500.29_beta202781 (31 May 2013)
+
+  31 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.29_beta202781.ebuild,
+  -chrome-binary-plugins-28.0.1500.20_beta201172.ebuild:
+  Bump.
+
+*chrome-binary-plugins-29.0.1521.3_alpha202710 (29 May 2013)
+
+  29 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-29.0.1521.3_alpha202710.ebuild,
+  -chrome-binary-plugins-29.0.1516.3_alpha201887.ebuild:
+  Bump.
+
+*chrome-binary-plugins-28.0.1500.20_beta201172 (24 May 2013)
+*chrome-binary-plugins-29.0.1516.3_alpha201887 (24 May 2013)
+
+  24 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.20_beta201172.ebuild,
+  +chrome-binary-plugins-29.0.1516.3_alpha201887.ebuild,
+  -chrome-binary-plugins-27.0.1453.93_beta200836.ebuild,
+  -chrome-binary-plugins-28.0.1500.20_alpha201172.ebuild:
+  Bump.
+
+*chrome-binary-plugins-27.0.1453.93_p200836 (21 May 2013)
+*chrome-binary-plugins-28.0.1500.20_alpha201172 (21 May 2013)
+
+  21 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-27.0.1453.93_p200836.ebuild,
+  +chrome-binary-plugins-28.0.1500.20_alpha201172.ebuild,
+  -chrome-binary-plugins-26.0.1410.63_p192696.ebuild,
+  -chrome-binary-plugins-28.0.1500.11_alpha199640.ebuild:
+  Bump.
+
+*chrome-binary-plugins-27.0.1453.93_beta200836 (20 May 2013)
+
+  20 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-27.0.1453.93_beta200836.ebuild,
+  -chrome-binary-plugins-27.0.1453.81_beta198567.ebuild:
+  Bump.
+
+*chrome-binary-plugins-28.0.1500.11_alpha199640 (13 May 2013)
+
+  13 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.11_alpha199640.ebuild,
+  -chrome-binary-plugins-28.0.1500.5_alpha199062.ebuild:
+  Bump.
+
+*chrome-binary-plugins-28.0.1500.5_alpha199062 (09 May 2013)
+
+  09 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.5_alpha199062.ebuild,
+  -chrome-binary-plugins-28.0.1500.3_alpha198635.ebuild:
+  Bump.
+
+*chrome-binary-plugins-27.0.1453.81_beta198567 (08 May 2013)
+
+  08 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-27.0.1453.81_beta198567.ebuild,
+  -chrome-binary-plugins-27.0.1453.73_beta197225.ebuild:
+  Beta channel bump.
+
+*chrome-binary-plugins-28.0.1500.3_alpha198635 (08 May 2013)
+
+  08 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1500.3_alpha198635.ebuild,
+  -chrome-binary-plugins-28.0.1496.0_alpha197749.ebuild:
+  Dev channel bump.
+
+*chrome-binary-plugins-28.0.1496.0_alpha197749 (03 May 2013)
+
+  03 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1496.0_alpha197749.ebuild,
+  -chrome-binary-plugins-28.0.1490.2_alpha196983.ebuild,
+  chrome-binary-plugins-9999.ebuild:
+  Dev channel bump.
+
+*chrome-binary-plugins-9999 (02 May 2013)
+
+  02 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-9999.ebuild:
+  Restore the live ebuild since some people prefer it.
+
+*chrome-binary-plugins-28.0.1490.2_alpha196983 (02 May 2013)
+*chrome-binary-plugins-27.0.1453.73_beta197225 (02 May 2013)
+
+  02 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-27.0.1453.73_beta197225.ebuild,
+  +chrome-binary-plugins-28.0.1490.2_alpha196983.ebuild,
+  -chrome-binary-plugins-27.0.1453.65_beta195685.ebuild,
+  -chrome-binary-plugins-28.0.1485.0_alpha195393.ebuild:
+  Bump.
+
+*chrome-binary-plugins-27.0.1453.65_beta195685 (26 Apr 2013)
+
+  26 Apr 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-27.0.1453.65_beta195685.ebuild,
+  -chrome-binary-plugins-27.0.1453.56_beta194414.ebuild:
+  Bump.
+
+*chrome-binary-plugins-28.0.1485.0_alpha195393 (23 Apr 2013)
+
+  23 Apr 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-28.0.1485.0_alpha195393.ebuild,
+  -chrome-binary-plugins-28.0.1478.0_alpha194114.ebuild:
+  Bump.
+
+*chrome-binary-plugins-27.0.1453.56_beta194414 (17 Apr 2013)
+
+  17 Apr 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-27.0.1453.56_beta194414.ebuild,
+  -chrome-binary-plugins-27.0.1453.47_beta193194.ebuild:
+  Bump.
+
+*chrome-binary-plugins-26.0.1410.63_p192696 (16 Apr 2013)
+*chrome-binary-plugins-27.0.1453.47_beta193194 (16 Apr 2013)
+*chrome-binary-plugins-28.0.1478.0_alpha194114 (16 Apr 2013)
+
+  16 Apr 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-26.0.1410.63_p192696.ebuild,
+  +chrome-binary-plugins-27.0.1453.47_beta193194.ebuild,
+  +chrome-binary-plugins-28.0.1478.0_alpha194114.ebuild,
+  -chrome-binary-plugins-9997.ebuild, -chrome-binary-plugins-9998.ebuild,
+  -chrome-binary-plugins-9999.ebuild:
+  Convert live ebuilds into normal ones, bug 457638.
 
 *chrome-binary-plugins-9997 (19 Mar 2013)
 *chrome-binary-plugins-9998 (19 Mar 2013)

@@ -1,6 +1,18 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.212 2013/03/15 13:29:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.214 2013/06/25 19:00:29 radhermit Exp $
+
+*zsh-5.0.2-r2 (25 Jun 2013)
+
+  25 Jun 2013; Tim Harder <radhermit@gentoo.org> +zsh-5.0.2-r2.ebuild,
+  files/prompt_gentoo_setup-1, +files/zshenv-1:
+  Revbump, install system zshenv file instead of zprofile (bug #19924) and use
+  local variables for gentoo prompt script (bug #453584, patch by Marckus J).
+
+  29 May 2013; Tim Harder <radhermit@gentoo.org> zsh-5.0.2-r1.ebuild,
+  +files/zsh-5.0.2-texinfo-5.1.patch:
+  Fix build with texinfo-5.1 (bug #464122) and only show elog info on new
+  installs.
 
   15 Mar 2013; Agostino Sarubbo <ago@gentoo.org> zsh-5.0.2.ebuild:
   Stable for sh, wrt bug #436348

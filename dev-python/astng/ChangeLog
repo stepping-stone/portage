@@ -1,6 +1,22 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.67 2013/04/02 08:06:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.71 2013/06/26 01:36:50 chutzpah Exp $
+
+  26 Jun 2013; Patrick McLean <chutz@gentoo.org> astng-0.24.3.ebuild:
+  Restore ~arm keyword dropped in last version bump, clean out test
+  conditionals for python3.3
+
+  25 Jun 2013; Mike Gilbert <floppym@gentoo.org> astng-0.24.3.ebuild:
+  Drop python3.3 support due to bug 449276.
+
+  22 Jun 2013; Ian Delaney <idella4@gentoo.org> astng-0.24.3.ebuild:
+  add new tracker site with bug to test phase
+
+*astng-0.24.3 (19 Jun 2013)
+
+  19 Jun 2013; Ian Delaney <idella4@gentoo.org> +astng-0.24.3.ebuild,
+  +files/pypy-test.patch, astng-0.24.2.ebuild:
+  bump, add py3.3 support, upgrade testphase, patch to help pypy in tests
 
   02 Apr 2013; Justin Lecher <jlec@gentoo.org> astng-0.24.2.ebuild,
   metadata.xml:

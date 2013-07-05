@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.501 2013/03/21 14:22:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.504 2013/06/16 10:13:41 pacho Exp $
 
 # Keep them sorted
 
@@ -283,6 +283,7 @@ python - Adds optional support/bindings for the Python language
 qdbm - Adds support for the qdbm (Quick Database Manager) library
 qmail-spp - Adds support for qmail SMTP plugins
 qt4 - Adds support for the Qt GUI/Application Toolkit version 4.x
+qt5 - Adds support for the Qt 5 application and UI framework
 quicktime - Adds support for OpenQuickTime
 radius - Adds support for RADIUS authentication
 raw - Add support for raw image formats
@@ -358,6 +359,7 @@ upnp - Enable UPnP port mapping support
 upnp-av - Enable UPnP audio/video streaming support
 usb - Adds USB support to applications that have optional USB support (e.g. cups)
 v4l - Enable support for video4linux (using linux-headers or userspace libv4l libraries)
+vala - Enable bindings for dev-lang/vala
 vanilla - Do not add extra patches which change default behaviour; DO NOT USE THIS ON A GLOBAL SCALE as the severity of the meaning changes drastically
 vcd - Video CD support
 vdpau - Enable the Video Decode and Presentation API for Unix acceleration interface
@@ -371,7 +373,6 @@ wavpack - Add support for wavpack audio compression tools
 wddx - Adds support for Web Distributed Data eXchange
 webkit - Add support for the WebKit HTML rendering/layout engine
 wifi - Enable wireless network functions
-win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
 wmf - Adds support for the Windows Metafile vector image format
 wxwidgets - Adds support for wxWidgets/wxGTK GUI toolkit
 x264 - Enable h264 encoding using x264

@@ -1,6 +1,38 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.37 2013/04/08 00:24:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.42 2013/06/26 17:09:41 blueness Exp $
+
+*bfgminer-3.1.1 (26 Jun 2013)
+*bfgminer-3.0.4 (26 Jun 2013)
+*bfgminer-2.10.10 (26 Jun 2013)
+
+  26 Jun 2013; Anthony G. Basile <blueness@gentoo.org> +bfgminer-2.10.10.ebuild,
+  +bfgminer-3.0.4.ebuild, +bfgminer-3.1.1.ebuild, bfgminer-3.0.0.ebuild,
+  bfgminer-3.0.3.ebuild, bfgminer-3.1.0-r1.ebuild:
+  Version bump, restore arm ppc ppc64 keywords
+
+*bfgminer-3.1.0-r1 (18 Jun 2013)
+
+  18 Jun 2013; Anthony G. Basile <blueness@gentoo.org>
+  +bfgminer-3.1.0-r1.ebuild,
+  +files/3.1.0-Bugfix-opencl-Add-missing-include-for-fpgautils.h-ne.patch,
+  +files/3.1.0-Bugfix-opencl-Build-fpgautils-even-if-OpenCL-is-the-.patch,
+  -bfgminer-3.1.0.ebuild:
+  Fix bug #473316
+
+*bfgminer-3.0.3 (14 Jun 2013)
+*bfgminer-3.1.0 (14 Jun 2013)
+*bfgminer-2.10.9 (14 Jun 2013)
+
+  14 Jun 2013; Anthony G. Basile <blueness@gentoo.org> +bfgminer-2.10.9.ebuild,
+  +bfgminer-3.0.3.ebuild, +bfgminer-3.1.0.ebuild:
+  Version bumps
+
+  14 Apr 2013; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix Manifest signing
+
+  14 Apr 2013; Anthony G. Basile <blueness@gentoo.org> bfgminer-2.5.0.ebuild:
+  Fix HOMEPAGE
 
 *bfgminer-3.0.0 (08 Apr 2013)
 *bfgminer-2.10.6 (08 Apr 2013)

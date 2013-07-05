@@ -1,6 +1,38 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.836 2013/04/02 13:55:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.844 2013/06/14 09:37:10 lu_zero Exp $
+
+*vlc-2.0.7 (14 Jun 2013)
+
+  14 Jun 2013; Luca Barbato <lu_zero@gentoo.org> +vlc-2.0.7.ebuild:
+  Version Bump
+
+  16 May 2013; Ulrich Müller <ulm@gentoo.org> vlc-2.0.5.ebuild,
+  vlc-2.0.6.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  Remove win32codecs USE flag, bug 468406.
+
+  06 May 2013; Samuli Suominen <ssuominen@gentoo.org> vlc-2.0.5.ebuild,
+  vlc-2.0.6.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  Remove unnecessary media-sound/alsa-headers DEPEND wrt #468712#c4
+
+  04 May 2013; Vicente Olivert Riera <vincent@gentoo.org> vlc-2.0.5.ebuild,
+  vlc-2.0.6.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  EAPI5 bump and some minor fixes. Details on bug #448578
+
+  27 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> -vlc-2.0.3.ebuild,
+  vlc-9999.ebuild:
+  Libproxy switch is gone from configure. Drop old overshadowed version.
+
+  24 Apr 2013; Luca Barbato <lu_zero@gentoo.org> vlc-2.0.6.ebuild:
+  Reinstate the freetype patch
+
+  12 Apr 2013; Luca Barbato <lu_zero@gentoo.org> vlc-2.0.9999.ebuild:
+  Drop patches, they should be all upstreamed now
+
+*vlc-2.0.6 (12 Apr 2013)
+
+  12 Apr 2013; Luca Barbato <lu_zero@gentoo.org> +vlc-2.0.6.ebuild:
+  New version
 
   02 Apr 2013; Luca Barbato <lu_zero@gentoo.org> vlc-9999.ebuild:
   Update to match upstream

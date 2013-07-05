@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.141 2013/03/21 07:08:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.144 2013/06/13 12:44:31 xmw Exp $
 
 EAPI=4
 
@@ -18,8 +18,7 @@ ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 +network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr
 radio +rar +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
 tga +theora tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
-+vorbis win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc
-zoran"
++vorbis +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc zoran"
 
 VIDEO_CARDS="s3virge mga tdfx"
 for x in ${VIDEO_CARDS}; do
@@ -61,12 +60,7 @@ RDEPEND+="
 	sys-libs/ncurses
 	app-arch/bzip2
 	sys-libs/zlib
-	|| ( >=media-video/ffmpeg-1.0 >=media-video/libav-9 )
-	!bindist? (
-		x86? (
-			win32codecs? ( media-libs/win32codecs )
-		)
-	)
+	|| ( >=media-video/ffmpeg-1.1 >=media-video/libav-9 )
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
@@ -98,7 +92,7 @@ RDEPEND+="
 	iconv? ( virtual/libiconv )
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( virtual/jpeg )
-	jpeg2k? ( media-libs/openjpeg )
+	jpeg2k? ( media-libs/openjpeg:0 )
 	ladspa? ( media-libs/ladspa-sdk )
 	libass? ( >=media-libs/libass-0.9.10[enca?] )
 	libcaca? ( media-libs/libcaca )
@@ -175,7 +169,7 @@ fi
 # unicode transformations are usefull only with iconv
 # radio requires oss or alsa backend
 # xvmc requires xvideo support
-REQUIRED_USE="bindist? ( !faac !win32codecs )
+REQUIRED_USE="bindist? ( !faac )
 	dvdnav? ( dvd )
 	libass? ( truetype )
 	truetype? ( iconv )
@@ -410,11 +404,7 @@ src_configure() {
 	#################
 	# Binary codecs #
 	#################
-	if use win32codecs ; then
-		myconf+=" --enable-win32dll"
-	else
-		myconf+=" --disable-qtx --disable-real --disable-win32dll"
-	fi
+	myconf+=" --disable-qtx --disable-real --disable-win32dll"
 
 	################
 	# Video Output #
@@ -559,10 +549,6 @@ src_install() {
 	dodoc DOCS/tech/{*.txt,MAINTAINERS,mpsub.sub,playtree,TODO,wishlist}
 	docinto TOOLS/
 	dodoc -r TOOLS
-	if use win32codecs; then
-		docinto tech/realcodecs/
-		dodoc DOCS/tech/realcodecs/*
-	fi
 	docinto tech/mirrors/
 	dodoc DOCS/tech/mirrors/*
 

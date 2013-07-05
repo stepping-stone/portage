@@ -1,6 +1,18 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.164 2013/03/08 23:27:59 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.167 2013/06/20 18:04:50 mpagano Exp $
+
+  20 Jun 2013; Michael Pagano <mpagano@gentoo.org> portpeek-2.1.8.ebuild:
+  Remove 3.3 from supported python versions for 2.1.8
+
+  13 Jun 2013; Michael Pagano <mpagano@gentoo.org> portpeek-2.1.8.ebuild:
+  Update 2.1.8 with eclass bump and new python variable and inherit
+
+*portpeek-2.1.8 (11 Jun 2013)
+
+  11 Jun 2013; Michael Pagano <mpagano@gentoo.org> -portpeek-2.1.6.ebuild,
+  +portpeek-2.1.8.ebuild:
+  Fix pattern match. Bump version
 
   08 Mar 2013; Michael Pagano <mpagano@gentoo.org> portpeek-2.1.7.ebuild:
   Fix dependencies

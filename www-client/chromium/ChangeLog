@@ -1,6 +1,272 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.861 2013/04/05 21:44:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.908 2013/07/04 23:10:18 floppym Exp $
+
+*chromium-28.0.1500.71 (04 Jul 2013)
+
+  04 Jul 2013; Mike Gilbert <floppym@gentoo.org> +chromium-28.0.1500.71.ebuild,
+  -chromium-28.0.1500.52.ebuild, -chromium-28.0.1500.63.ebuild:
+  Bump.
+
+*chromium-28.0.1500.89 (04 Jul 2013)
+
+  04 Jul 2013; Mike Gilbert <floppym@gentoo.org> +chromium-28.0.1500.89.ebuild:
+  Beta channel bump.
+
+  03 Jul 2013; Mike Gilbert <floppym@gentoo.org> chromium-27.0.1453.110.ebuild:
+  Place upper-bound on nss dependency, bug 474982.
+
+*chromium-28.0.1500.63 (29 Jun 2013)
+
+  29 Jun 2013; Mike Gilbert <floppym@gentoo.org> +chromium-28.0.1500.63.ebuild,
+  -chromium-28.0.1500.45.ebuild:
+  Beta channel bump.
+
+  27 Jun 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999-r1.ebuild,
+  files/dot-gclient:
+  Generate LASTCHANGE.blink (bug #474576 by Julien Sanchez). Also switch to
+  https repos.
+
+  27 Jun 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-28.0.1500.52.ebuild, chromium-29.0.1547.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Filter out -g* from CFLAGS on x86, to prevent linker from running out of
+  address space, bug #471810 by hasufell, x86 issue reported by zerochaos.
+
+*chromium-29.0.1547.0 (26 Jun 2013)
+
+  26 Jun 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-29.0.1521.3.ebuild, +chromium-29.0.1547.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Remove old.
+
+  21 Jun 2013; Mike Gilbert <floppym@gentoo.org>
+  -files/chromium-jsoncpp-path-r0.patch, -files/chromium-ppapi-r0.patch,
+  -files/chromium-shim-headers-r0.patch,
+  -files/chromium-speech-dispatcher-0.8-r0.patch,
+  -files/chromium-system-ffmpeg-r2a.patch,
+  -files/chromium-system-ffmpeg-r6.patch, -files/chromium-system-icu-r0.patch,
+  -files/chromium-system-libvpx-r0.patch, -files/chromium-system-v8-r1.patch,
+  -files/chromium-system-zlib-r0.patch:
+  Remove obsolete patches.
+
+*chromium-28.0.1500.52 (21 Jun 2013)
+
+  21 Jun 2013; Mike Gilbert <floppym@gentoo.org> +chromium-28.0.1500.52.ebuild,
+  +files/chromium-nss-3.15.patch, -chromium-28.0.1500.36.ebuild:
+  Beta channel bump. Backport nss-3.15 compatibility patch.
+
+*chromium-29.0.1541.2 (20 Jun 2013)
+
+  20 Jun 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-29.0.1516.3.ebuild, +chromium-29.0.1541.2.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Fix bug #473766 by floppym . Remove old.
+
+  17 Jun 2013; Mike Gilbert <floppym@gentoo.org> chromium-28.0.1500.45.ebuild:
+  Allow speech-dispatcher-0.7* to be used for chromium-28.
+
+*chromium-28.0.1500.45 (13 Jun 2013)
+
+  13 Jun 2013; Mike Gilbert <floppym@gentoo.org> +chromium-28.0.1500.45.ebuild,
+  -chromium-28.0.1500.20.ebuild:
+  Beta channel bump.
+
+  07 Jun 2013; Mike Gilbert <floppym@gentoo.org> -chromium-27.0.1453.93.ebuild,
+  chromium-27.0.1453.110.ebuild:
+  Place upper-bound on harfbuzz dep, bug 472416. Remove old.
+
+*chromium-28.0.1500.36 (07 Jun 2013)
+
+  07 Jun 2013; Mike Gilbert <floppym@gentoo.org> +chromium-28.0.1500.36.ebuild,
+  -chromium-28.0.1500.11.ebuild:
+  Beta channel bump.
+
+  06 Jun 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-harfbuzz-r0.patch, chromium-28.0.1500.20.ebuild,
+  chromium-29.0.1521.3.ebuild, chromium-9999-r1.ebuild:
+  Fix build with system harfbuzz-0.9.18, bug #472416 by Ivan Atienza.
+
+  05 Jun 2013; Agostino Sarubbo <ago@gentoo.org> chromium-27.0.1453.110.ebuild:
+  Stable for x86, wrt bug #472350
+
+  05 Jun 2013; Agostino Sarubbo <ago@gentoo.org> chromium-27.0.1453.110.ebuild:
+  Stable for amd64, wrt bug #472350
+
+*chromium-27.0.1453.110 (05 Jun 2013)
+
+  05 Jun 2013; Mike Gilbert <floppym@gentoo.org> +chromium-27.0.1453.110.ebuild:
+  Stable channel bump.
+
+  02 Jun 2013; Markus Meier <maekke@gentoo.org> chromium-28.0.1500.11.ebuild,
+  chromium-28.0.1500.20.ebuild, chromium-29.0.1516.3.ebuild,
+  chromium-29.0.1521.3.ebuild:
+  readd ~arm, bug #372155
+
+*chromium-29.0.1521.3 (29 May 2013)
+
+  29 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-ffmpeg-r7.patch, +chromium-29.0.1521.3.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Fix bug #471292 by Dan Douglas.
+
+*chromium-29.0.1516.3 (25 May 2013)
+
+  25 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-ffmpeg-r6.patch, +chromium-29.0.1516.3.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Switch from make-based to ninja-based build. Fix bug
+  #469144 by Alphat-PC.
+
+  24 May 2013; Agostino Sarubbo <ago@gentoo.org> -chromium-26.0.1410.43.ebuild,
+  -chromium-26.0.1410.63.ebuild, -chromium-27.0.1453.81.ebuild:
+  Remove old
+
+  24 May 2013; Agostino Sarubbo <ago@gentoo.org> chromium-27.0.1453.93.ebuild:
+  Stable for x86, wrt bug #470920
+
+  24 May 2013; Agostino Sarubbo <ago@gentoo.org> chromium-27.0.1453.93.ebuild:
+  Stable for amd64, wrt bug #470920
+
+  22 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-27.0.1453.93.ebuild:
+  Prepare for security stabilization (bug #470920): only require
+  speech-dispatcher-0.7; also note bug #470934 and bug #463550 .
+
+*chromium-28.0.1500.20 (21 May 2013)
+
+  21 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-28.0.1500.5.ebuild, +chromium-28.0.1500.20.ebuild:
+  Dev channel bump. Remove old.
+
+*chromium-27.0.1453.93 (21 May 2013)
+
+  21 May 2013; Mike Gilbert <floppym@gentoo.org> +chromium-27.0.1453.93.ebuild,
+  -chromium-27.0.1453.73.ebuild:
+  Beta channel bump.
+
+*chromium-28.0.1500.11 (13 May 2013)
+
+  13 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-28.0.1500.3.ebuild, +chromium-28.0.1500.11.ebuild:
+  Dev channel bump. Remove old.
+
+  10 May 2013; Mike Gilbert <floppym@gentoo.org> chromium-28.0.1500.5.ebuild:
+  Pass host toolchain via the environment to gyp.
+
+*chromium-28.0.1500.5 (09 May 2013)
+
+  09 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-ffmpeg-r5.patch, -chromium-28.0.1496.0.ebuild,
+  +chromium-28.0.1500.5.ebuild, chromium-9999-r1.ebuild:
+  Dev channel bump. Make it possible to compile against system libav (bug
+  #464676 by Nikos Chantziaras). Fix build with system ffmpeg (bug #466866 by
+  jlec). Remove old.
+
+  09 May 2013; Mike Gilbert <floppym@gentoo.org>
+  -files/chromium-icu50-tests-r0.patch, -files/chromium-mesa-r0.patch,
+  -files/chromium-mesa-r1.patch, -files/chromium-no-pnacl-r0.patch,
+  -files/chromium-system-ffmpeg-r0.patch,
+  -files/chromium-system-ffmpeg-r1.patch,
+  -files/chromium-system-ffmpeg-r2.patch,
+  -files/chromium-system-ffmpeg-r3.patch,
+  -files/chromium-system-libpng-r0.patch,
+  -files/chromium-system-minizip-r0.patch, -files/chromium-system-opus-r0.patch:
+  Remove obsolete patches.
+
+*chromium-27.0.1453.81 (09 May 2013)
+
+  09 May 2013; Mike Gilbert <floppym@gentoo.org> +chromium-27.0.1453.81.ebuild,
+  -chromium-27.0.1453.65.ebuild:
+  Beta channel bump.
+
+*chromium-28.0.1500.3 (08 May 2013)
+
+  08 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-icu-r0.patch, +files/chromium-system-libvpx-r0.patch,
+  +files/chromium-system-v8-r1.patch, -chromium-28.0.1490.2.ebuild,
+  +files/chromium-system-zlib-r0.patch, +chromium-28.0.1500.3.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Use system snappy. Remove old.
+
+*chromium-28.0.1496.0 (03 May 2013)
+
+  03 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-28.0.1485.0.ebuild, +chromium-28.0.1496.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Temporarily use bundled snappy. Fix bug #460404 by ago.
+  Remove old.
+
+*chromium-27.0.1453.73 (03 May 2013)
+
+  03 May 2013; Mike Gilbert <floppym@gentoo.org> +chromium-27.0.1453.73.ebuild,
+  -chromium-27.0.1453.56.ebuild:
+  Beta channel bump.
+
+  01 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-27.0.1453.65.ebuild, chromium-28.0.1490.2.ebuild,
+  chromium-9999-r1.ebuild:
+  Disable unmaintained upstream SELinux mode, bug #465574 by swift, bug #467954
+  by Dominik Kriegner.
+
+*chromium-28.0.1490.2 (01 May 2013)
+
+  01 May 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-shim-headers-r0.patch, -chromium-28.0.1478.0.ebuild,
+  +chromium-28.0.1490.2.ebuild, chromium-9999-r1.ebuild:
+  Dev channel bump. Remove old.
+
+*chromium-27.0.1453.65 (27 Apr 2013)
+
+  27 Apr 2013; Mike Gilbert <floppym@gentoo.org> +chromium-27.0.1453.65.ebuild,
+  -chromium-27.0.1453.47.ebuild:
+  Beta channel bump.
+
+*chromium-28.0.1485.0 (23 Apr 2013)
+
+  23 Apr 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-28.0.1485.0.ebuild, chromium-9999-r1.ebuild:
+  Dev channel bump. Fixes bug #466010 by cmuelle8 and bug #466180 by floppym
+  (with helpful patches by Ionut Leonte and Paul Zander).
+
+*chromium-27.0.1453.56 (18 Apr 2013)
+
+  18 Apr 2013; Mike Gilbert <floppym@gentoo.org> +chromium-27.0.1453.56.ebuild,
+  -chromium-27.0.1453.12.ebuild, -chromium-27.0.1453.3.ebuild:
+  Beta channel bump.
+
+*chromium-28.0.1478.0 (16 Apr 2013)
+
+  16 Apr 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-minizip-r0.patch, +chromium-28.0.1478.0.ebuild:
+  Dev channel bump.
+
+*chromium-27.0.1453.47 (13 Apr 2013)
+
+  13 Apr 2013; Mike Gilbert <floppym@gentoo.org> +chromium-27.0.1453.47.ebuild:
+  Beta channel bump.
+
+  11 Apr 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-27.0.1453.12.ebuild, chromium-9999-r1.ebuild:
+  Restore system-ffmpeg USE flag, bug #464676 by Nikos Chantziaras .
+
+*chromium-26.0.1410.63 (11 Apr 2013)
+
+  11 Apr 2013; Mike Gilbert <floppym@gentoo.org> +chromium-26.0.1410.63.ebuild:
+  Stable channel bump.
+
+  10 Apr 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-27.0.1453.12.ebuild, chromium-9999-r1.ebuild:
+  Improve src_test: run content_unittests; exclude failing net_unittests
+  (http://crbug.com/224612 , bug #465444); exclude failing sql_unittests (bug
+  #461286 by Alphat-PC).
+
+  10 Apr 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-26.0.1410.43.ebuild, chromium-27.0.1453.12.ebuild:
+  Use stricter v8 dependencies, bug #465302 by mr_bones_ .
+
+  10 Apr 2013; Mike Gilbert <floppym@gentoo.org> chromium-26.0.1410.43.ebuild:
+  Put an upper bound on the speech-dispatcher dependency, bug 465358.
 
   05 Apr 2013; Mike Gilbert <floppym@gentoo.org> chromium-26.0.1410.43.ebuild,
   chromium-27.0.1453.12.ebuild, chromium-27.0.1453.3.ebuild,

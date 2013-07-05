@@ -1,0 +1,28 @@
+# ChangeLog for media-video/mpv
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.7 2013/06/15 08:17:57 scarabeus Exp $
+
+  15 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
+  Raise dep on libxbcommon. Thanks to Nikoli for patch.
+
+  21 May 2013; Tim Harder <radhermit@gentoo.org> mpv-9999.ebuild:
+  Update DOCS with new readme filename (patch by Nikoli).
+
+  16 May 2013; Tim Harder <radhermit@gentoo.org> mpv-9999.ebuild, metadata.xml:
+  Add vf-dlopen use flag (patch by Nikoli).
+
+  28 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
+  Update wayland useflag usage a bit. Patch by Nikoli.
+
+  27 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
+  Try to enable wayland stuff via useflag.
+
+  27 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
+  Update bit. Patch by Nikoli.
+
+*mpv-9999 (27 Apr 2013)
+
+  27 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
+  +mpv-9999.ebuild:
+  Add mpv package which is another mplayer fork. Only live for now snapshots to
+  be added after ffmpeg9 virtual is unmasked. Ebuild provided by Nikoli.

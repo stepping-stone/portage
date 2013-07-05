@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.19 2013/03/02 22:44:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.23 2013/05/16 19:21:23 ulm Exp $
 
-EAPI="4"
+EAPI="5"
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then
@@ -21,7 +21,6 @@ MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 
-PATCHLEVEL="101"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
@@ -31,9 +30,6 @@ elif [[ "${MY_P}" == "${P}" ]]; then
 else
 	SRC_URI="http://download.videolan.org/pub/videolan/testing/${MY_P}/${MY_P}.tar.xz"
 fi
-
-SRC_URI="${SRC_URI}
-	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
@@ -55,7 +51,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba schroedinger
 	sdl sdl-image shine shout sid skins speex sqlite sse svg +swscale switcher
 	taglib theora truetype twolame udev upnp vaapi v4l vcdx vlm vorbis waveout
-	win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
+	wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
 		>=sys-libs/zlib-1.2.5.1-r2[minizip]
@@ -138,7 +134,6 @@ RDEPEND="
 		vaapi? ( x11-libs/libva )
 		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
-		win32codecs? ( media-libs/win32codecs )
 		X? ( x11-libs/libX11 )
 		x264? ( >=media-libs/x264-0.0.20090923 )
 		xcb? ( >=x11-libs/libxcb-1.6 >=x11-libs/xcb-util-0.3.4 )
@@ -148,7 +143,6 @@ RDEPEND="
 		"
 
 DEPEND="${RDEPEND}
-	alsa? ( >=media-sound/alsa-headers-1.0.23 )
 	fbosd? ( sys-kernel/linux-headers )
 	kde? ( >=kde-base/kdelibs-4 )
 	xcb? ( x11-proto/xproto )
@@ -183,7 +177,6 @@ REQUIRED_USE="
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
-	unpack ${A}
 	if [ "${PV%9999}" != "${PV}" ] ; then
 		git-2_src_unpack
 	fi
@@ -193,7 +186,6 @@ src_prepare() {
 	# Make it build with libtool 1.5
 	rm -f m4/lt* m4/libtool.m4
 
-	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	eautoreconf
 }
 
@@ -314,7 +306,6 @@ src_configure() {
 		$(use_enable vlm) \
 		$(use_enable vorbis) \
 		$(use_enable waveout) \
-		$(use_enable win32codecs loader) \
 		$(use_enable wingdi) \
 		$(use_enable wma-fixed) \
 		$(use_with X x) \
@@ -324,6 +315,7 @@ src_configure() {
 		$(use_enable xosd) \
 		$(use_enable xv xvideo) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
+		--disable-loader \
 		--disable-optimizations \
 		--without-tuning \
 		--enable-fast-install

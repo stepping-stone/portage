@@ -1,6 +1,45 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.329 2013/03/11 22:46:15 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.338 2013/06/26 16:52:41 lu_zero Exp $
+
+  26 Jun 2013; Luca Barbato <lu_zero@gentoo.org> cairo-9999.ebuild:
+  Drop legacy-driver from the live ebuild
+
+  26 Jun 2013; Luca Barbato <lu_zero@gentoo.org> cairo-9999.ebuild:
+  Update live ebuild
+
+  05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
+
+  27 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> -cairo-1.12.14.ebuild,
+  -cairo-1.12.14-r1.ebuild, -files/cairo-libpng16.patch:
+  old
+
+*cairo-1.12.14-r2 (27 Apr 2013)
+
+  27 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> +cairo-1.12.14-r2.ebuild,
+  +files/cairo-1.12.14-libpng16.patch:
+  Backport upstream compability patch for libpng16 wrt #465658 by Richard
+  Grenville
+
+*cairo-1.12.14-r1 (27 Apr 2013)
+
+  27 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> +cairo-1.12.14-r1.ebuild:
+  Stop applying bogus -libpng16.patch wrt #467426 by Richard Grenville
+
+  11 Apr 2013; Lars Wendler <polynomial-c@gentoo.org> cairo-1.12.14.ebuild:
+  Fixed patch command.
+
+*cairo-1.12.14 (11 Apr 2013)
+
+  11 Apr 2013; Lars Wendler <polynomial-c@gentoo.org>
+  +files/cairo-libpng16.patch, +cairo-1.12.14.ebuild:
+  Non-maintainer commit: Version bump (bug #456818). Added libpng16 patch (bug
+  #465044). Committed with kind permission from yngwin.
+
+  09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> cairo-1.12.10-r2.ebuild,
+  cairo-1.12.12.ebuild, cairo-1.12.12-r1.ebuild, cairo-9999.ebuild:
+  Use subslot operator for the libpng dependency in every eapi5 ebuild.
 
 *cairo-1.12.12-r1 (11 Mar 2013)
 

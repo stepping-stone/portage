@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.41 2013/03/21 09:12:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.44 2013/06/22 22:57:49 voyageur Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ DEPEND="dev-lang/perl
 	>=sys-devel/bison-1.875d
 	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 )
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
+	sys-libs/zlib
 	gold? ( >=sys-devel/binutils-2.22[cxx] )
 	libffi? ( virtual/pkgconfig
 		virtual/libffi )
@@ -99,8 +100,6 @@ src_prepare() {
 		|| die "FileCheck Makefile sed failed"
 
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
-#	Patch fails to apply, bug #462444
-#	epatch "${FILESDIR}"/${PN}-3.0-PPC_macro.patch
 
 	# User patches
 	epatch_user
@@ -117,6 +116,9 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
 	else
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host,cpp"
+		if use video_cards_radeon; then
+			CONF_FLAGS="${CONF_FLAGS},r600"
+		fi
 	fi
 
 	if use amd64; then
@@ -136,10 +138,6 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --with-udis86"
 	fi
 
-	if use video_cards_radeon; then
-		CONF_FLAGS="${CONF_FLAGS} --enable-experimental-targets=R600"
-	fi
-
 	if use libffi; then
 		append-cppflags "$(pkg-config --cflags libffi)"
 	fi
@@ -156,7 +154,11 @@ src_compile() {
 	emake -C docs -f Makefile.sphinx man
 	use doc && emake -C docs -f Makefile.sphinx html
 
-	pax-mark m Release/bin/lli
+	if use debug; then
+		pax-mark m Debug+Asserts+Checks/bin/lli
+	else
+		pax-mark m Release/bin/lli
+	fi
 	if use test; then
 		pax-mark m unittests/ExecutionEngine/JIT/Release/JITTests
 		pax-mark m unittests/ExecutionEngine/MCJIT/Release/MCJITTests

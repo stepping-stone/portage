@@ -1,6 +1,28 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.105 2013/03/30 13:02:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.111 2013/06/30 04:43:41 vapier Exp $
+
+  30 Jun 2013; Mike Frysinger <vapier@gentoo.org> ipython-0.13.2.ebuild:
+  Add ~arm to latest version too.
+
+  06 Jun 2013; Mike Gilbert <floppym@gentoo.org> ipython-0.13.2.ebuild:
+  Add missing colon to PYTHONPATH.
+
+  06 Jun 2013; Ian Delaney <idella4@gentoo.org> ipython-0.13.2.ebuild:
+  Fix to testsuite wrt and fixes Bug #472152
+
+  10 May 2013; Markus Meier <maekke@gentoo.org> ipython-0.13.1-r1.ebuild:
+  add ~arm, bug #452764
+
+  07 May 2013; Mike Gilbert <floppym@gentoo.org> ipython-0.13.1-r1.ebuild,
+  ipython-0.13.2.ebuild:
+  Depend on setuptools, and add some migration code for 0.13.1-r1. Bug 468702 by
+  Coacher.
+
+*ipython-0.13.2 (27 Apr 2013)
+
+  27 Apr 2013; Patrick McLean <chutzpah@gentoo.org> +ipython-0.13.2.ebuild:
+  Version bump.
 
   30 Mar 2013; Mike Gilbert <floppym@gentoo.org> ipython-0.13.1-r1.ebuild:
   Quote patterns for python_gen_usedep.

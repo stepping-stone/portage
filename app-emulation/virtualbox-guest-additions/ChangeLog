@@ -1,6 +1,47 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.118 2013/03/17 15:22:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.125 2013/06/24 10:58:49 polynomial-c Exp $
+
+*virtualbox-guest-additions-4.2.14 (24 Jun 2013)
+
+  24 Jun 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-guest-additions-4.1.24.ebuild,
+  -virtualbox-guest-additions-4.2.10.ebuild,
+  +virtualbox-guest-additions-4.2.14.ebuild:
+  Version bump. Removed old.
+
+  18 Jun 2013; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-guest-additions-4.1.24.ebuild,
+  virtualbox-guest-additions-4.1.26.ebuild,
+  virtualbox-guest-additions-4.2.10.ebuild,
+  virtualbox-guest-additions-4.2.12.ebuild:
+  Changed DESCRIPTION to make clear what purpose this package has (bug
+  #372475).
+
+  23 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  virtualbox-guest-additions-4.1.26.ebuild:
+  Stable for x86, wrt bug #469044
+
+  23 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  virtualbox-guest-additions-4.1.26.ebuild:
+  Stable for amd64, wrt bug #469044
+
+  27 Apr 2013; Fabio Erculiani <lxnay@gentoo.org>
+  virtualbox-guest-additions-4.2.12.ebuild,
+  +files/virtualbox-guest-additions.service:
+  add systemd unit, close bug #466148
+
+*virtualbox-guest-additions-4.2.12 (13 Apr 2013)
+*virtualbox-guest-additions-4.1.26 (13 Apr 2013)
+
+  13 Apr 2013; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-guest-additions-4.1.26.ebuild,
+  -virtualbox-guest-additions-4.2.8.ebuild,
+  +virtualbox-guest-additions-4.2.12.ebuild:
+  Version bump. Removed old.
+
+  09 Apr 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Removing Alessio from metadata
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

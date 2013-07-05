@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.10.2-r300.ebuild,v 1.5 2013/01/29 12:36:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.10.2-r300.ebuild,v 1.9 2013/06/18 06:10:56 tetromino Exp $
 
 EAPI="5"
 
-inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils virtualx
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+
+inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils python-any-r1 virtualx
 
 MY_P="webkitgtk-${PV}"
 DESCRIPTION="Open source web browser engine"
@@ -50,8 +52,8 @@ RDEPEND="
 "
 # paxctl needed for bug #407085
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	dev-lang/perl
-	=dev-lang/python-2*
 	|| ( virtual/rubygems[ruby_targets_ruby19]
 	     virtual/rubygems[ruby_targets_ruby18] )
 	app-accessibility/at-spi2-core
@@ -65,6 +67,8 @@ DEPEND="${RDEPEND}
 
 	introspection? ( jit? ( sys-apps/paxctl ) )
 	test? (
+		dev-lang/python:2.7
+		dev-python/pygobject:3[python_targets_python2_7]
 		x11-themes/hicolor-icon-theme
 		jit? ( sys-apps/paxctl ) )
 "
@@ -75,7 +79,7 @@ S="${WORKDIR}/${MY_P}"
 CHECKREQS_DISK_BUILD="18G" # and even this might not be enough, bug #417307
 
 pkg_pretend() {
-	if [[ ${MERGE_TYPE} != "binary" ]] && is-flagq "-g*" ; then
+	if [[ ${MERGE_TYPE} != "binary" ]] && is-flagq "-g*" && ! is-flagq "-g*0" ; then
 		einfo "Checking for sufficient disk space to build ${PN} with debugging CFLAGS"
 		check-reqs_pkg_pretend
 	fi
@@ -83,7 +87,7 @@ pkg_pretend() {
 
 pkg_setup() {
 	# Check whether any of the debugging flags is enabled
-	if [[ ${MERGE_TYPE} != "binary" ]] && is-flagq "-g*" ; then
+	if [[ ${MERGE_TYPE} != "binary" ]] && is-flagq "-g*" && ! is-flagq "-g*0" ; then
 		if is-flagq "-ggdb" && [[ ${WEBKIT_GTK_GGDB} != "yes" ]]; then
 			replace-flags -ggdb -g
 			ewarn "Replacing \"-ggdb\" with \"-g\" in your CFLAGS."
@@ -100,6 +104,8 @@ pkg_setup() {
 		einfo "(-ggdb vs -g1) and enabled features."
 		check-reqs_pkg_setup
 	fi
+
+	[[ ${MERGE_TYPE} = "binary" ]] || python-any-r1_pkg_setup
 }
 
 src_prepare() {
@@ -159,8 +165,19 @@ src_prepare() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=449220#c17
 	epatch "${FILESDIR}/${PN}-1.10.2-wifexited.patch"
 
+	# patch for gcc 4.8, to disable COMPILE_ASSERT warnings; fixed in 2.0.x
+	# https://bugs.webkit.org/show_bug.cgi?id=113147
+	epatch "${FILESDIR}/${P}-gcc-4.8.patch"
+
+	# patch for -lrt underlinking issue, bug #458164; fixed in 2.0.x
+	epatch "${FILESDIR}/${P}-librt.patch"
+
 	# Respect CC, otherwise fails on prefix #395875
 	tc-export CC
+
+	# AM_PROG_CC_STDC is obsolete with sys-devel/automake-1.13.1, #467244
+	sed -i -e 's/AM_PROG_CC_STDC/AM_PROG_CC/g' aclocal.m4 || die
+	sed -i -e '/AM_PROG_CC_STDC/d' configure.ac || die
 
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=Source/autotools eautoreconf
@@ -199,7 +216,6 @@ src_configure() {
 		--enable-accelerated-compositing
 		--enable-dependency-tracking
 		--disable-gtk-doc
-		PYTHON=$(type -P python2)
 		"$(usex aqua "--with-font-backend=pango --with-target=quartz" "")
 		# Aqua support in gtk3 is untested
 

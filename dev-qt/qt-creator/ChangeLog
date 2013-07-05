@@ -1,6 +1,29 @@
 # ChangeLog for dev-qt/qt-creator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.6 2013/03/23 07:44:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.12 2013/06/30 23:47:43 pesa Exp $
+
+*qt-creator-2.8.0_rc (30 Jun 2013)
+
+  30 Jun 2013; Davide Pesavento <pesa@gentoo.org> +qt-creator-2.8.0_rc.ebuild:
+  Version bump.
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> qt-creator-2.7.0.ebuild:
+  Stable for ppc, wrt bug #472148
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> qt-creator-2.7.0.ebuild:
+  Stable for amd64, wrt bug #472148
+
+*qt-creator-2.7.1 (03 Jun 2013)
+
+  03 Jun 2013; Davide Pesavento <pesa@gentoo.org> +qt-creator-2.7.1.ebuild,
+  qt-creator-2.7.0.ebuild:
+  Version bump, also fixing bug 449992.
+
+  24 Apr 2013; Agostino Sarubbo <ago@gentoo.org> qt-creator-2.7.0.ebuild:
+  Add ~ppc, wrt bug #460762
+
+  08 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> qt-creator-2.7.0.ebuild:
+  Add ~arm keyword, wrt bug #454916
 
 *qt-creator-2.7.0 (23 Mar 2013)
 

@@ -1,6 +1,102 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.180 2013/03/15 14:24:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.203 2013/06/18 23:44:18 jer Exp $
+
+  18 Jun 2013; Jeroen Roovers <jer@gentoo.org>
+  adobe-flash-11.2.202.291-r1.ebuild:
+  Replace IUSE=sse2check with IUSE=sse2 and add REQUIRED_USE=sse2 by Matt
+  Turner (bug #410547).
+
+  13 Jun 2013; Jeroen Roovers <jer@gentoo.org>
+  adobe-flash-11.2.202.291-r1.ebuild:
+  Return to PV_M.
+
+  13 Jun 2013; Zac Medico <zmedico@gentoo.org>
+  adobe-flash-11.2.202.291-r1.ebuild:
+  Fix SRC_URI more.
+
+  12 Jun 2013; Jeroen Roovers <jer@gentoo.org>
+  adobe-flash-11.2.202.291-r1.ebuild:
+  Fix SRC_URI for i386/non-debug (bug #473138 by Fred Krogh).
+
+*adobe-flash-11.2.202.291-r1 (12 Jun 2013)
+
+  12 Jun 2013; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.291-r1.ebuild:
+  Whitespace cleanup. Add USE=debug for 32-bit (bug #357321 by Fabio Rossi).
+
+  12 Jun 2013; Jeroen Roovers <jer@gentoo.org> -adobe-flash-11.2.202.285.ebuild:
+  Old.
+
+  12 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.291.ebuild:
+  Stable for x86, wrt bug #473038
+
+  12 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.291.ebuild:
+  Stable for amd64, wrt bug #473038
+
+*adobe-flash-11.2.202.291 (12 Jun 2013)
+*adobe-flash-10.3.183.90 (12 Jun 2013)
+
+  12 Jun 2013; Jeroen Roovers <jer@gentoo.org> -adobe-flash-10.3.183.86.ebuild,
+  +adobe-flash-10.3.183.90.ebuild, +adobe-flash-11.2.202.291.ebuild:
+  Version bump (bug #473038).
+
+  01 Jun 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Whitespace.
+
+  01 Jun 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Maintainer.
+
+  01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #144305
+
+  19 May 2013; Jeroen Roovers <jer@gentoo.org> -adobe-flash-11.2.202.280.ebuild:
+  Old.
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.285.ebuild:
+  Stable for x86, wrt bug #469870
+
+  15 May 2013; Sergey Popov <pinkbyte@gentoo.org>
+  adobe-flash-11.2.202.285.ebuild:
+  Stable on amd64, wrt bug #469870
+
+*adobe-flash-11.2.202.285 (14 May 2013)
+*adobe-flash-10.3.183.86 (14 May 2013)
+
+  14 May 2013; Jeroen Roovers <jer@gentoo.org> +adobe-flash-10.3.183.86.ebuild,
+  +adobe-flash-11.2.202.285.ebuild, -adobe-flash-10.3.183.75.ebuild:
+  Version bump (bug #469870).
+
+  21 Apr 2013; Michał Górny <mgorny@gentoo.org> adobe-flash-10.3.183.75.ebuild,
+  adobe-flash-11.2.202.280.ebuild:
+  Support multilib libraries alternatively to emul-linux-x86-xlibs.
+
+  12 Apr 2013; Jeroen Roovers <jer@gentoo.org> -adobe-flash-11.2.202.275.ebuild:
+  Old.
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.280.ebuild:
+  Stable for amd64, wrt bug #465534
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.280.ebuild:
+  Stable for x86, wrt bug #465534
+
+  11 Apr 2013; Jeroen Roovers <jer@gentoo.org> adobe-flash-10.3.183.75.ebuild:
+  Remove pointless elog.
+
+  11 Apr 2013; Jeroen Roovers <jer@gentoo.org> -adobe-flash-10.3.183.68.ebuild:
+  Old.
+
+*adobe-flash-11.2.202.280 (11 Apr 2013)
+*adobe-flash-10.3.183.75 (11 Apr 2013)
+
+  11 Apr 2013; Jeroen Roovers <jer@gentoo.org> +adobe-flash-10.3.183.75.ebuild,
+  +adobe-flash-11.2.202.280.ebuild:
+  Version bump (bug #465534).
 
   15 Mar 2013; Jeroen Roovers <jer@gentoo.org> -adobe-flash-11.2.202.273.ebuild:
   Old.

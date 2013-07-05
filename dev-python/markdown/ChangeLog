@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.37 2013/03/31 10:38:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.40 2013/06/06 03:04:44 floppym Exp $
+
+  06 Jun 2013; Mike Gilbert <floppym@gentoo.org> markdown-2.3.1.ebuild:
+  Remove obsolete comment.
+
+  05 Jun 2013; Rick Farina <zerochaos@gentoo.org> markdown-2.2.1-r1.ebuild,
+  markdown-2.3.1.ebuild, markdown-2.3.ebuild:
+  adding ~arm keyword
+
+  29 May 2013; Ian Delaney <idella4@gentoo.org> markdown-2.3.1.ebuild:
+  add py3.3 support
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> markdown-2.2.1-r1.ebuild:
   Stable for sparc, wrt bug #457328

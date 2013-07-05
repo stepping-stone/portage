@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/dee-1.0.14-r2.ebuild,v 1.2 2013/04/03 17:06:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/dee-1.0.14-r2.ebuild,v 1.5 2013/05/29 15:30:59 jlec Exp $
 
 EAPI=5
 
@@ -19,12 +19,14 @@ LICENSE="GPL-3"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc debug examples +icu introspection static-libs test"
 
+REQUIRED_USE="introspection? ( ${PYTHON_REQUIRED_USE} )"
+
 RDEPEND="
 	dev-libs/glib:2
 	dev-libs/icu:=
 	introspection? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
-	${vala_depend}
+	$(vala_depend)
 	doc? ( dev-util/gtk-doc )
 	test? (
 		dev-libs/gtx
@@ -34,7 +36,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	sed \
 		-e '/GCC_FLAGS/s:-g::' \
-		-e 's:vapigen:vapigen-0.14:g' \
+		-e 's:vapigen:${VAPIGEN}:g' \
 		-i configure.ac || die
 
 	sed \

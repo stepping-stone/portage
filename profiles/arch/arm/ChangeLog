@@ -1,6 +1,72 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.227 2013/04/01 10:22:02 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.248 2013/06/17 06:00:35 patrick Exp $
+
+  17 Jun 2013; Patrick Lauer <patrick@gentoo.org> package.use.mask:
+  Fix per-arch mask of phonon[zeitgeist] #460140
+
+  16 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
+  Unmask networkmanager USE flag - it has been keyworded since February 2013.
+
+  07 Jun 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Remove versions from libidn USE mask.
+
+  31 May 2013; Patrick Lauer <patrick@gentoo.org> package.use.mask:
+  Masking java useflag for tightvnc to avoid stable keyword problems #469540
+
+  28 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
+  Drop unneeded use.mask entry.
+
+  28 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask r600-llvm-compiler flag for mesa.
+
+  27 May 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  Mask firmware loader support of linux-gpib since that is not keyworded yet
+
+  27 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
+  Mask video_cards_ilo.
+
+  12 May 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
+  drop media-libs/gst-plugins-base[ivorbis] mask as media-libs/tremor has ~arm
+
+  12 May 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  Add dev-util/oprofile[java] to the list
+
+  11 May 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask x11-wm/enlightenment[emotion]
+
+  10 May 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask dev-python/ipython[mongodb]
+
+  09 May 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask x11-misc/lightdm[razor]
+
+  05 May 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  Mask dev-libs/libmemcached[tcmalloc] because dev-util/google-perftools is not
+  keyworded for arm
+
+  04 May 2013; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Remove USE=systemd from package.use.mask since the flag is (un)masked
+  globally now.
+
+  04 May 2013; Michał Górny <mgorny@gentoo.org> use.mask:
+  Mask systemd flag globally, unmask on arches on which systemd is keyworded.
+
+  02 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
+  Mask r600-llvm-compiler on arm
+
+  29 Apr 2013; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  masked mkl for media-gfx/povray
+
+  22 Apr 2013; Bernard Cafarelli <voyageur@gentoo.org> use.mask:
+  x11-misc/google-gadgets removed from tree
+
+  21 Apr 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  Remove the version from dev-vcs/subversion
+
+  21 Apr 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  Remove the version from dev-tex/tex4ht
 
   01 Apr 2013; Benda Xu <heroxbd@gentoo.org> package.use.mask:
   mask net-misc/unison[gtk] for bug #445055

@@ -1,6 +1,21 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.203 2013/02/25 23:17:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.206 2013/06/05 00:43:57 vapier Exp $
+
+  05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
+
+*libX11-1.6.0 (04 Jun 2013)
+
+  04 Jun 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libX11-1.6.0.ebuild, -libX11-1.5.99.902.ebuild:
+  Version bump.
+
+*libX11-1.5.99.902 (25 May 2013)
+
+  25 May 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libX11-1.5.99.902.ebuild:
+  Version bump, security bug #471098.
 
 *libX11-1.5.0-r1 (25 Feb 2013)
 

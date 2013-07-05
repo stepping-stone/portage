@@ -1,6 +1,28 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.28 2013/03/18 19:45:29 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.33 2013/06/16 18:06:29 swift Exp $
+
+  16 Jun 2013; Sven Vermeulen <swift@gentoo.org> sepolgen-1.1.9-r2.ebuild:
+  Stabilize
+
+*sepolgen-1.1.9-r2 (18 May 2013)
+
+  18 May 2013; Sven Vermeulen <swift@gentoo.org> sepolgen-1.1.9-r1.ebuild,
+  +sepolgen-1.1.9-r2.ebuild:
+  Fix bugs 467264 (correct Makefile path), 465846 (fix tests)
+
+*sepolgen-1.1.9-r1 (07 May 2013)
+
+  07 May 2013; Sven Vermeulen <swift@gentoo.org> +sepolgen-1.1.9-r1.ebuild:
+  Fix bug 467264 (default Makefile location)
+
+*sepolgen-1.1.9 (25 Apr 2013)
+
+  25 Apr 2013; Sven Vermeulen <swift@gentoo.org> +sepolgen-1.1.9.ebuild:
+  New upstream release
+
+  11 Apr 2013; Sven Vermeulen <swift@gentoo.org> sepolgen-1.1.8-r1.ebuild:
+  Stabilize
 
 *sepolgen-1.1.8-r1 (18 Mar 2013)
 

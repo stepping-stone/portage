@@ -1,6 +1,44 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.93 2013/04/08 11:11:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.104 2013/06/25 14:27:11 jer Exp $
+
+*chrony-1.28_pre1 (25 Jun 2013)
+
+  25 Jun 2013; Jeroen Roovers <jer@gentoo.org> +chrony-1.28_pre1.ebuild:
+  Version bump.
+
+*chrony-1.27-r2 (11 Jun 2013)
+
+  11 Jun 2013; Jeroen Roovers <jer@gentoo.org> +chrony-1.27-r2.ebuild:
+  Fix unneeded sed. Use usex.
+
+  05 Jun 2013; Jeroen Roovers <jer@gentoo.org> -chrony-1.26.ebuild,
+  -chrony-1.27.ebuild:
+  Old.
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> chrony-1.27-r1.ebuild:
+  Stable for sparc, wrt bug #470560
+
+  20 May 2013; Jeroen Roovers <jer@gentoo.org> chrony-1.27-r1.ebuild:
+  Stable for HPPA (bug #470560).
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> chrony-1.27-r1.ebuild:
+  Stable for ppc, wrt bug #470560
+
+  20 May 2013; Chema Alonso <nimiux@gentoo.org> chrony-1.27-r1.ebuild:
+  Stable for amd64 wrt bug #470560
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> chrony-1.27-r1.ebuild:
+  Stable for x86, wrt bug #470560
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> chrony-1.27.ebuild:
+  Stable for sparc, wrt bug #465066
+
+  09 Apr 2013; Jeroen Roovers <jer@gentoo.org> chrony-1.27.ebuild:
+  Stable for HPPA (bug #465066).
+
+  09 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org> chrony-1.27.ebuild:
+  amd64, ppc and x86 stable, wrt bug #465066
 
 *chrony-1.27-r1 (08 Apr 2013)
 

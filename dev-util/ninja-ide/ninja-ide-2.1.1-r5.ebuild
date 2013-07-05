@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ninja-ide-2.1.1-r5.ebuild,v 1.1 2013/03/12 19:38:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ninja-ide-2.1.1-r5.ebuild,v 1.3 2013/05/16 14:53:56 hasufell Exp $
 
 # XXX: tests
 
@@ -16,14 +16,14 @@ SRC_URI="https://github.com/ninja-ide/ninja-ide/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="
 	dev-python/PyQt4[webkit,${PYTHON_USEDEP}]
-	dev-python/simplejson[${PYTHON_USEDEP}]
 	dev-python/pyinotify[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	virtual/python-argparse[${PYTHON_USEDEP}]
+	virtual/python-json[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 PATCHES=(

@@ -1,6 +1,35 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.154 2013/03/22 13:24:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.160 2013/07/04 12:26:32 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.22.ebuild:
+  Stable for x86, wrt bug #473720
+
+  30 Jun 2013; Jeroen Roovers <jer@gentoo.org> puppet-2.7.22.ebuild:
+  Stable for HPPA (bug #473720).
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.22.ebuild:
+  Stable for ppc, wrt bug #473720
+
+  28 Jun 2013; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.22.ebuild:
+  Stable for amd64, wrt bug #473720
+
+*puppet-3.1.1-r3 (18 Jun 2013)
+*puppet-3.2.2 (18 Jun 2013)
+*puppet-2.7.22 (18 Jun 2013)
+*puppet-2.7.21-r1 (18 Jun 2013)
+
+  18 Jun 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +puppet-2.7.21-r1.ebuild, +puppet-2.7.22.ebuild, +puppet-3.1.1-r3.ebuild,
+  +puppet-3.2.2.ebuild, -puppet-3.1.1-r2.ebuild, -puppet-3.1.1.ebuild:
+  puppet CVE-2013-3567 bug 473720 fixes
+
+*puppet-3.1.1-r2 (07 Jun 2013)
+
+  07 Jun 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +files/puppet-openrc-status-fix.patch, +puppet-3.1.1-r2.ebuild,
+  -puppet-3.1.1-r1.ebuild:
+  puppet fix for bug 470998
 
 *puppet-3.1.1-r1 (22 Mar 2013)
 

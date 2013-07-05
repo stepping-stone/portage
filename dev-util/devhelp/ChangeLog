@@ -1,6 +1,40 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.145 2013/03/28 17:00:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.154 2013/06/30 16:41:19 eva Exp $
+
+  30 Jun 2013; Gilles Dartiguelongue <eva@gentoo.org> devhelp-3.8.2.ebuild:
+  Fix gtk+ dependency from libgd and add missing python required USE.
+
+*devhelp-3.8.2 (15 May 2013)
+
+  15 May 2013; Pacho Ramos <pacho@gentoo.org> +devhelp-3.8.2.ebuild,
+  -devhelp-3.4.1.ebuild, -devhelp-3.8.0.ebuild,
+  -files/devhelp-3.4.1-gsettings-fonts.patch:
+  Version bump, drop old
+
+*devhelp-3.8.1 (17 Apr 2013)
+
+  17 Apr 2013; Pacho Ramos <pacho@gentoo.org> +devhelp-3.8.1.ebuild,
+  devhelp-3.6.1-r1.ebuild:
+  Version bump
+
+  14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> devhelp-3.6.1-r1.ebuild:
+  Stable for ppc, wrt bug #463660
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> devhelp-3.6.1-r1.ebuild:
+  Stable for sparc, wrt bug #463660
+
+  12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> devhelp-3.6.1-r1.ebuild:
+  Stable for ia64, wrt bug #463660
+
+  12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> devhelp-3.6.1-r1.ebuild:
+  Stable for alpha, wrt bug #463660
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> devhelp-3.6.1-r1.ebuild:
+  Stable for amd64, wrt bug #463660
+
+  11 Apr 2013; Agostino Sarubbo <ago@gentoo.org> devhelp-3.6.1-r1.ebuild:
+  Stable for x86, wrt bug #463660
 
 *devhelp-3.8.0 (28 Mar 2013)
 

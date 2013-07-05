@@ -1,6 +1,24 @@
 # ChangeLog for kde-misc/networkmanagement
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/ChangeLog,v 1.30 2013/04/08 12:46:39 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/ChangeLog,v 1.34 2013/06/16 11:55:10 johu Exp $
+
+*networkmanagement-0.9.0.9 (16 Jun 2013)
+
+  16 Jun 2013; Johannes Huber <johu@gentoo.org>
+  +networkmanagement-0.9.0.9.ebuild, networkmanagement-0.9.0.8.ebuild:
+  Version bump. Update HOMEPAGE.
+
+  02 May 2013; Johannes Huber <johu@gentoo.org>
+  -networkmanagement-0.9.0.7.ebuild:
+  Remove old.
+
+  30 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  networkmanagement-0.9.0.8.ebuild:
+  Stable for x86, wrt bug #466074
+
+  29 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
+  networkmanagement-0.9.0.8.ebuild:
+  Stable for amd64, wrt bug #466074
 
   08 Apr 2013; Michael Palimaka <kensington@gentoo.org>
   -networkmanagement-0.9.0.6.ebuild:

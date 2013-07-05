@@ -1,6 +1,21 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.37 2013/01/28 00:22:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.41 2013/06/29 04:07:43 tetromino Exp $
+
+  29 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org> -cdemu-1.5.0.ebuild,
+  -files/cdemu-1.5.0-man-paragraph.patch:
+  Remove old.
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cdemu-2.0.0.ebuild:
+  Stable for amd64, wrt bug #473538
+
+  25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> cdemu-2.0.0.ebuild:
+  Stable for x86, wrt bug #473538
+
+*cdemu-2.1.0 (17 Jun 2013)
+
+  17 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org> +cdemu-2.1.0.ebuild:
+  Version bump (bug #472784, thanks to Henrik Stokseth and Rafał Mużyło).
 
 *cdemu-2.0.0 (28 Jan 2013)
 

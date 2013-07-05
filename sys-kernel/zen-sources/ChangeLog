@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.59 2013/03/09 15:32:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.62 2013/06/09 23:14:31 vapier Exp $
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
+
+  21 May 2013; Alex Alexander <wired@gentoo.org> metadata.xml:
+  not maintaining this anymore, removed myself from metadata.xml
+
+*zen-sources-3.9.9999 (18 May 2013)
+
+  18 May 2013; Markos Chandras <hwoarang@gentoo.org>
+  +zen-sources-3.9.9999.ebuild:
+  Version bump
 
 *zen-sources-3.8.9999 (09 Mar 2013)
 

@@ -1,6 +1,48 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.113 2013/03/20 08:29:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.121 2013/06/16 18:18:21 swift Exp $
+
+  16 Jun 2013; Sven Vermeulen <swift@gentoo.org>
+  policycoreutils-2.1.14-r2.ebuild:
+  Stabilization
+
+  10 May 2013; Sven Vermeulen <swift@gentoo.org> metadata.xml:
+  Add in CPE data for policycoreutils, historical CVEs use redhat as
+  application vendor
+
+*policycoreutils-2.1.14-r2 (07 May 2013)
+
+  07 May 2013; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.1.14-r2.ebuild:
+  Fix bugs 467268 (yum bindings), 468832 (key error), 468830 (mls range
+  dependency)
+
+*policycoreutils-2.1.14-r1 (25 Apr 2013)
+
+  25 Apr 2013; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.1.14-r1.ebuild:
+  New upstream release
+
+*policycoreutils-2.1.13-r11 (19 Apr 2013)
+
+  19 Apr 2013; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.1.13-r11.ebuild:
+  Add selocal command to policycoreutils
+
+*policycoreutils-2.1.13-r10 (16 Apr 2013)
+
+  16 Apr 2013; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.1.13-r10.ebuild:
+  Fix bugs #463222 (newrole O_RDWR) and #464808 (hardcoded python3.1 in rlpkg)
+
+  16 Apr 2013; Sven Vermeulen <swift@gentoo.org>
+  -policycoreutils-2.1.10-r1.ebuild, -policycoreutils-2.1.10-r3.ebuild,
+  -policycoreutils-2.1.10-r4.ebuild, -policycoreutils-2.1.10.ebuild:
+  Some cleanup (older release unstables)
+
+  16 Apr 2013; Sven Vermeulen <swift@gentoo.org>
+  policycoreutils-2.1.13-r9.ebuild:
+  Stabilize policycoreutils-2.1.13-r9
 
 *policycoreutils-2.1.13-r9 (19 Mar 2013)
 

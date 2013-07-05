@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.126 2013/04/04 07:34:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.133 2013/07/02 12:10:52 aballier Exp $
 
 EAPI="4"
 
@@ -29,12 +29,12 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
-	aac aacplus alsa amr bindist bluray +bzip2 cdio celt
+	aac aacplus alsa amr amrenc bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k libass
 	libcaca libsoxr libv4l modplug mp3 network openal openssl opus oss pic
-	pulseaudio rtmp schroedinger sdl speex static-libs test theora threads
-	truetype twolame v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
+	pulseaudio quvi rtmp schroedinger sdl speex static-libs test theora threads
+	truetype twolame v4l vaapi vdpau vorbis vpx wavpack X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -45,7 +45,7 @@ for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done
 
-FFTOOLS="aviocat cws2fws ffescape ffeval fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher"
+FFTOOLS="aviocat cws2fws ffescape ffeval ffhash fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher"
 
 for i in ${FFTOOLS}; do
 	IUSE="${IUSE} +fftools_$i"
@@ -61,12 +61,13 @@ RDEPEND="
 	encode? (
 		aac? ( media-libs/vo-aacenc )
 		aacplus? ( media-libs/libaacplus )
-		amr? ( media-libs/vo-amrwbenc )
+		amrenc? ( media-libs/vo-amrwbenc )
 		faac? ( media-libs/faac )
 		fdk? ( media-libs/fdk-aac )
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
 		twolame? ( media-sound/twolame )
+		wavpack? ( media-sound/wavpack )
 		x264? ( >=media-libs/x264-0.0.20111017 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
@@ -79,7 +80,7 @@ RDEPEND="
 	iec61883? ( media-libs/libiec61883 sys-libs/libraw1394 sys-libs/libavc1394 )
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
+	jpeg2k? ( >=media-libs/openjpeg-1.3-r2:0 )
 	libass? ( media-libs/libass )
 	libcaca? ( media-libs/libcaca )
 	libsoxr? ( media-libs/soxr )
@@ -88,6 +89,7 @@ RDEPEND="
 	openal? ( >=media-libs/openal-1.1 )
 	opus? ( media-libs/opus )
 	pulseaudio? ( media-sound/pulseaudio )
+	quvi? ( media-libs/libquvi )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
 	schroedinger? ( media-libs/schroedinger )
@@ -149,13 +151,13 @@ src_configure() {
 	# Encoders
 	if use encode
 	then
-		ffuse="${ffuse} aac:libvo-aacenc amr:libvo-amrwbenc mp3:libmp3lame fdk:libfdk-aac"
-		for i in aacplus faac theora twolame x264 xvid; do
+		ffuse="${ffuse} aac:libvo-aacenc amrenc:libvo-amrwbenc mp3:libmp3lame fdk:libfdk-aac"
+		for i in aacplus faac theora twolame wavpack x264 xvid; do
 			ffuse="${ffuse} ${i}:lib${i}"
 		done
 
 		# Licensing.
-		if use aac || use amr ; then
+		if use aac || use amrenc ; then
 			myconf="${myconf} --enable-version3"
 		fi
 		if use aacplus || use faac || use fdk ; then
@@ -169,7 +171,7 @@ src_configure() {
 	ffuse="${ffuse}	cdio:libcdio iec61883:libiec61883 ieee1394:libdc1394 libcaca openal"
 
 	# Indevs
-	use v4l || myconf="${myconf} --disable-indev=v4l2"
+	use v4l || myconf="${myconf} --disable-indev=v4l2 --disable-outdev=v4l2"
 	for i in alsa oss jack ; do
 		use ${i} || myconf="${myconf} --disable-indev=${i}"
 	done
@@ -192,7 +194,7 @@ src_configure() {
 	# Decoders
 	ffuse="${ffuse} amr:libopencore-amrwb amr:libopencore-amrnb	jpeg2k:libopenjpeg"
 	use amr && myconf="${myconf} --enable-version3"
-	for i in bluray celt gsm modplug opus rtmp schroedinger speex vorbis vpx; do
+	for i in bluray celt gsm modplug opus quvi rtmp schroedinger speex vorbis vpx; do
 		ffuse="${ffuse} ${i}:lib${i}"
 	done
 

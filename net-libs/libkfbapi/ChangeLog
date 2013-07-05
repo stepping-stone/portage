@@ -1,0 +1,15 @@
+# ChangeLog for net-libs/libkfbapi
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkfbapi/ChangeLog,v 1.2 2013/06/26 20:35:31 johu Exp $
+
+*libkfbapi-1.0 (26 Jun 2013)
+
+  26 Jun 2013; Johannes Huber <johu@gentoo.org> +libkfbapi-1.0.ebuild,
+  -libkfbapi-1.0_p20130209.ebuild:
+  Version bump. First proper release. Remove snapshot.
+
+*libkfbapi-1.0_p20130209 (11 Feb 2013)
+
+  11 Feb 2013; Chris Reffett <creffett@gentoo.org>
+  +libkfbapi-1.0_p20130209.ebuild, +metadata.xml:
+  New package, dependency of latest akonadi-facebook snapshot

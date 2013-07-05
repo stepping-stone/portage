@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.66 2013/04/01 09:17:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.71 2013/05/21 01:31:02 floppym Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -98,6 +98,7 @@ if [[ ! ${_DISTUTILS_R1} ]]; then
 if [[ ! ${DISTUTILS_OPTIONAL} ]]; then
 	RDEPEND=${PYTHON_DEPS}
 	DEPEND=${PYTHON_DEPS}
+	REQUIRED_USE=${PYTHON_REQUIRED_USE}
 fi
 
 # @ECLASS-VARIABLE: PATCHES
@@ -223,14 +224,6 @@ esetup.py() {
 
 	local add_args=()
 	if [[ ${BUILD_DIR} ]]; then
-		# if setuptools is used, adjust egg_info path as well
-		# (disabled since it causes build not to install scripts)
-#		if "${PYTHON:-python}" setup.py --help egg_info &>/dev/null; then
-#			add_args+=(
-#				egg_info --egg-base "${BUILD_DIR}"
-#			)
-#		fi
-
 		add_args+=(
 			build
 			--build-base "${BUILD_DIR}"
@@ -248,6 +241,13 @@ esetup.py() {
 			# make the ebuild writer lives easier
 			--build-scripts "${BUILD_DIR}/scripts"
 		)
+
+		# if setuptools is used, adjust egg_info path as well
+		if "${PYTHON:-python}" setup.py --help egg_info &>/dev/null; then
+			add_args+=(
+				egg_info --egg-base "${BUILD_DIR}"
+			)
+		fi
 	elif [[ ! ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
 		die 'Out-of-source build requested, yet BUILD_DIR unset.'
 	fi
@@ -395,9 +395,11 @@ _distutils-r1_rename_scripts() {
 	while IFS= read -r -d '' f; do
 		debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
 
-		if [[ "$(head -n 1 "${f}")" == '#!'*${EPYTHON}* ]]
+		local shebang
+		read -r shebang < "${f}"
+		if [[ ${shebang} == '#!'*${EPYTHON}* ]]
 		then
-			debug-print "${FUNCNAME}: matching shebang: $(head -n 1 "${f}")"
+			debug-print "${FUNCNAME}: matching shebang: ${shebang}"
 
 			local newf=${f}-${EPYTHON}
 			debug-print "${FUNCNAME}: renaming to ${newf#${D}/}"
@@ -533,11 +535,16 @@ distutils-r1_run_phase() {
 _distutils-r1_run_common_phase() {
 	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
 
-	local MULTIBUILD_VARIANTS
-	_python_obtain_impls
+	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
+		local MULTIBUILD_VARIANTS
+		_python_obtain_impls
 
-	multibuild_for_best_variant _python_multibuild_wrapper \
-		distutils-r1_run_phase "${@}"
+		multibuild_for_best_variant _python_multibuild_wrapper \
+			distutils-r1_run_phase "${@}"
+	else
+		# semi-hack, be careful.
+		_distutils-r1_run_foreach_impl "${@}"
+	fi
 }
 
 # @FUNCTION: _distutils-r1_run_foreach_impl

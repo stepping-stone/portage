@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.112 2013/03/20 20:28:16 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.115 2013/06/25 17:19:07 nativemad Exp $
+
+*ardour-3.2 (25 Jun 2013)
+
+  25 Jun 2013; Andreas Schuerch <nativemad@gentoo.org> +ardour-3.2.ebuild,
+  +files/ardour-3.2-syslibs.patch:
+  new ebuild for Ardour 3.2
+
+  09 Apr 2013; Andreas Schuerch <nativemad@gentoo.org> ardour-3.0.ebuild:
+  removed jobs statement and unused tests. Thanks Samuli in Bug 465132
+
+  08 Apr 2013; Andreas Schuerch <nativemad@gentoo.org> ardour-3.0.ebuild:
+  Corrected the makeopts variable output for the jobs flag. See Bug 465132.
 
   20 Mar 2013; Andreas Schuerch <nativemad@gentoo.org> ardour-3.0.ebuild:
   added taglib and doxygens use of dot as deps. See Bug 462342 and 462464.
@@ -519,4 +531,3 @@
 
   27 Jun 2003; robh <robh@gentoo.org> ardour-0.9_beta1.ebuild:
   Initial version.
-

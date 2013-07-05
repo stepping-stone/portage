@@ -1,6 +1,250 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1160 2013/04/06 18:38:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1197 2013/07/03 20:35:25 tomwij Exp $
+
+*vanilla-sources-3.4.52 (03 Jul 2013)
+*vanilla-sources-3.0.85 (03 Jul 2013)
+
+  03 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +vanilla-sources-3.0.85.ebuild,
+  +vanilla-sources-3.4.52.ebuild:
+  Linux 3.0.85 and 3.4.52.
+
+*vanilla-sources-3.9.9 (03 Jul 2013)
+
+  03 Jul 2013; Michael Pagano <mpagano@gentoo.org>
+  +vanilla-sources-3.9.9.ebuild:
+  Version bump
+
+*vanilla-sources-3.10.0 (01 Jul 2013)
+
+  01 Jul 2013; Michael Pagano <mpagano@gentoo.org>
+  +vanilla-sources-3.10.0.ebuild:
+  Version bump
+
+*vanilla-sources-3.2.48 (29 Jun 2013)
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.2.48.ebuild,
+  -vanilla-sources-3.0.83.ebuild, -vanilla-sources-3.2.47.ebuild,
+  -vanilla-sources-3.4.50.ebuild, -vanilla-sources-3.9.7.ebuild:
+  Version bump for the 3.2 series, remove old.
+
+*vanilla-sources-3.4.51 (27 Jun 2013)
+
+  27 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +vanilla-sources-3.4.51.ebuild:
+  3.4.51 kernel released
+
+*vanilla-sources-3.9.8 (27 Jun 2013)
+
+  27 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +vanilla-sources-3.9.8.ebuild:
+  3.9.8 kernel released
+
+*vanilla-sources-3.0.84 (27 Jun 2013)
+
+  27 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +vanilla-sources-3.0.84.ebuild:
+  add 3.0.84 kernel
+
+*vanilla-sources-3.8.13 (21 Jun 2013)
+*vanilla-sources-3.7.10 (21 Jun 2013)
+
+  21 Jun 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.7.10.ebuild,
+  +vanilla-sources-3.8.13.ebuild:
+  Restore the stable versions
+
+  20 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  -vanilla-sources-3.8.13.ebuild:
+  remove 3.8.13 kernel, it's obsolete, end-of-lifed, and shouldn't be used
+  anymore.
+
+  20 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  -vanilla-sources-3.7.10.ebuild:
+  remove 3.7.10 kernel as 3.7-stable is end-of-life from upstream, and obsolete,
+  and probably full of bugs.
+
+*vanilla-sources-3.9.7 (20 Jun 2013)
+
+  20 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +vanilla-sources-3.9.7.ebuild, -vanilla-sources-3.9.6.ebuild:
+  update to 3.9.7 upstream kernel
+
+*vanilla-sources-3.0.83 (20 Jun 2013)
+
+  20 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +vanilla-sources-3.0.83.ebuild, -vanilla-sources-3.0.82.ebuild:
+  update to 3.0.83 upstream kernel
+
+*vanilla-sources-3.4.50 (20 Jun 2013)
+
+  20 Jun 2013; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +vanilla-sources-3.4.50.ebuild, -vanilla-sources-3.4.49.ebuild:
+  update to 3.4.50 upstream kernel
+
+*vanilla-sources-3.2.47 (19 Jun 2013)
+
+  19 Jun 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.2.47.ebuild,
+  -vanilla-sources-3.0.81.ebuild, -vanilla-sources-3.2.45.ebuild,
+  -vanilla-sources-3.4.48.ebuild, -vanilla-sources-3.9.4.ebuild,
+  -vanilla-sources-3.9.5.ebuild:
+  Version bump for the 3.2 series, remove old.
+
+  15 Jun 2013; Tom Wijsman <TomWij@gentoo.org> vanilla-sources-3.7.10.ebuild:
+  Dropped more keywords on 3.7.10.
+
+  15 Jun 2013; Raúl Porcel <armin76@gentoo.org> vanilla-sources-3.8.13.ebuild:
+  alpha/s390/sh/sparc stable wrt #469508
+
+*vanilla-sources-3.9.6 (14 Jun 2013)
+*vanilla-sources-3.4.49 (14 Jun 2013)
+*vanilla-sources-3.0.82 (14 Jun 2013)
+
+  14 Jun 2013; Tom Wijsman <TomWij@gentoo.org> +vanilla-sources-3.0.82.ebuild,
+  +vanilla-sources-3.4.49.ebuild, +vanilla-sources-3.9.6.ebuild,
+  vanilla-sources-3.7.10.ebuild:
+  Linux patches 3.0.82, 3.4.49 and 3.9.6; dropped keywords from 3.7.10 that were
+  stabilized on 3.8.13 due to bug #469854.
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
+
+*vanilla-sources-3.4.48 (09 Jun 2013)
+*vanilla-sources-3.9.5 (09 Jun 2013)
+*vanilla-sources-3.0.81 (09 Jun 2013)
+
+  09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.81.ebuild,
+  +vanilla-sources-3.4.48.ebuild, +vanilla-sources-3.9.5.ebuild,
+  -vanilla-sources-3.0.80.ebuild, -vanilla-sources-3.4.47.ebuild:
+  Version bump for the 3.0 / 3.4 / 3.9 series, remove old.
+
+  09 Jun 2013; Markus Meier <maekke@gentoo.org> vanilla-sources-3.8.13.ebuild:
+  arm stable, bug #469508
+
+*vanilla-sources-3.9.4 (25 May 2013)
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.9.4.ebuild,
+  -vanilla-sources-3.9.3.ebuild:
+  Version bump for the 3.9 series, remove old.
+
+*vanilla-sources-3.4.47 (24 May 2013)
+*vanilla-sources-3.0.80 (24 May 2013)
+
+  24 May 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.80.ebuild,
+  +vanilla-sources-3.4.47.ebuild, -vanilla-sources-3.0.79.ebuild,
+  -vanilla-sources-3.4.46.ebuild:
+  Version bump for the 3.0 / 3.4 series, remove old.
+
+*vanilla-sources-3.0.79 (19 May 2013)
+*vanilla-sources-3.4.46 (19 May 2013)
+*vanilla-sources-3.2.45 (19 May 2013)
+
+  19 May 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.79.ebuild,
+  +vanilla-sources-3.2.45.ebuild, +vanilla-sources-3.4.46.ebuild,
+  -vanilla-sources-3.0.78.ebuild, -vanilla-sources-3.2.44.ebuild,
+  -vanilla-sources-3.4.45.ebuild, -vanilla-sources-3.9.2.ebuild:
+  Version bump for the 3.0 / 3.2 / 3.4 series, remove old.
+
+*vanilla-sources-3.9.3 (19 May 2013)
+
+  19 May 2013; Michael Pagano <mpagano@gentoo.org>
+  +vanilla-sources-3.9.3.ebuild:
+  Version bump
+
+  16 May 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  vanilla-sources-3.8.13.ebuild:
+  ppc stable, bug #469508
+
+  15 May 2013; Jeroen Roovers <jer@gentoo.org> vanilla-sources-3.8.13.ebuild:
+  Stable for HPPA (bug #469508).
+
+  15 May 2013; Agostino Sarubbo <ago@gentoo.org> vanilla-sources-3.8.13.ebuild:
+  Stable for amd64, wrt bug #469508
+
+  15 May 2013; Jeff Horelick <jdhore@gentoo.org> vanilla-sources-3.8.13.ebuild:
+  x86 stable wrt bug 469508 (and security bug 469854)
+
+*vanilla-sources-3.8.13 (14 May 2013)
+*vanilla-sources-3.9.2 (14 May 2013)
+*vanilla-sources-3.4.45 (14 May 2013)
+*vanilla-sources-3.0.78 (14 May 2013)
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.78.ebuild,
+  +vanilla-sources-3.4.45.ebuild, +vanilla-sources-3.8.13.ebuild,
+  +vanilla-sources-3.9.2.ebuild, -vanilla-sources-3.0.77.ebuild,
+  -vanilla-sources-3.4.44.ebuild, -vanilla-sources-3.8.12.ebuild,
+  -vanilla-sources-3.9.1.ebuild:
+  Version bump for the 3.0 / 3.4 / 3.8 / 3.9 series, remove old.
+
+*vanilla-sources-3.8.12 (08 May 2013)
+*vanilla-sources-3.4.44 (08 May 2013)
+*vanilla-sources-3.0.77 (08 May 2013)
+*vanilla-sources-3.9.1 (08 May 2013)
+
+  08 May 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.77.ebuild,
+  +vanilla-sources-3.4.44.ebuild, +vanilla-sources-3.8.12.ebuild,
+  +vanilla-sources-3.9.1.ebuild, -vanilla-sources-3.0.76.ebuild,
+  -vanilla-sources-3.4.43.ebuild, -vanilla-sources-3.8.11.ebuild,
+  -vanilla-sources-3.9.0.ebuild:
+  Version bump for the 3.0 / 3.4 / 3.8 / 3.9 series, remove old.
+
+*vanilla-sources-3.0.76 (02 May 2013)
+*vanilla-sources-3.4.43 (02 May 2013)
+*vanilla-sources-3.8.11 (02 May 2013)
+
+  02 May 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.76.ebuild,
+  +vanilla-sources-3.4.43.ebuild, +vanilla-sources-3.8.11.ebuild,
+  -vanilla-sources-3.0.75.ebuild, -vanilla-sources-3.4.42.ebuild,
+  -vanilla-sources-3.8.10.ebuild:
+  Version bump for the 3.0 / 3.4 / 3.8 series, remove old.
+
+*vanilla-sources-3.9.0 (29 Apr 2013)
+
+  29 Apr 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.9.0.ebuild:
+  Version bump to 3.9.0
+
+*vanilla-sources-3.8.10 (28 Apr 2013)
+
+  28 Apr 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.8.10.ebuild,
+  -vanilla-sources-3.8.8.ebuild, -vanilla-sources-3.8.9.ebuild:
+  Version bump for the 3.8 series, remove old.
+
+*vanilla-sources-3.2.44 (26 Apr 2013)
+*vanilla-sources-3.0.75 (26 Apr 2013)
+*vanilla-sources-3.8.9 (26 Apr 2013)
+*vanilla-sources-3.4.42 (26 Apr 2013)
+
+  26 Apr 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.75.ebuild,
+  +vanilla-sources-3.2.44.ebuild, +vanilla-sources-3.4.42.ebuild,
+  +vanilla-sources-3.8.9.ebuild, -vanilla-sources-2.6.32.60.ebuild,
+  -vanilla-sources-3.0.74.ebuild, -vanilla-sources-3.2.43.ebuild,
+  -vanilla-sources-3.4.41.ebuild, -vanilla-sources-3.8.7.ebuild:
+  Version bump for the 3.0 / 3.2 / 3.4 / 3.8 series, remove old.
+
+*vanilla-sources-3.0.74 (17 Apr 2013)
+*vanilla-sources-3.8.8 (17 Apr 2013)
+*vanilla-sources-3.4.41 (17 Apr 2013)
+
+  17 Apr 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.74.ebuild,
+  +vanilla-sources-3.4.41.ebuild, +vanilla-sources-3.8.8.ebuild,
+  -vanilla-sources-3.0.73.ebuild, -vanilla-sources-3.4.40.ebuild,
+  -vanilla-sources-3.8.6.ebuild:
+  Version bump for the 3.0 / 3.4 / 3.8 series, remove old.
+
+*vanilla-sources-3.8.7 (12 Apr 2013)
+*vanilla-sources-3.0.73 (12 Apr 2013)
+*vanilla-sources-3.4.40 (12 Apr 2013)
+
+  12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.73.ebuild,
+  +vanilla-sources-3.4.40.ebuild, +vanilla-sources-3.8.7.ebuild,
+  -vanilla-sources-3.0.72.ebuild, -vanilla-sources-3.4.39.ebuild,
+  -vanilla-sources-3.8.5.ebuild:
+  Version bump for the 3.0 / 3.4 / 3.8 series, remove old.
+
+*vanilla-sources-3.2.43 (10 Apr 2013)
+
+  10 Apr 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.2.43.ebuild,
+  -vanilla-sources-3.2.42.ebuild:
+  Version bump for the 3.2 series, remove old.
 
 *vanilla-sources-3.0.72 (06 Apr 2013)
 *vanilla-sources-3.8.6 (06 Apr 2013)

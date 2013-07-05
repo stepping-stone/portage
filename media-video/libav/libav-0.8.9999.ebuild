@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.22 2013/01/17 11:29:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.24 2013/06/23 09:01:01 scarabeus Exp $
 
 EAPI=5
 
@@ -70,7 +70,7 @@ RDEPEND="
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
+	jpeg2k? ( >=media-libs/openjpeg-1.3-r2:0 )
 	pulseaudio? ( media-sound/pulseaudio )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	ssl? ( openssl? ( dev-libs/openssl )
@@ -112,6 +112,7 @@ src_prepare() {
 	if [[ ${PV%_p*} != ${PV} ]]; then
 		sed -i -e "s/UNKNOWN/DATE-${PV#*_pre}/" "${S}/version.sh" || die
 	fi
+	epatch "${FILESDIR}/${PN}-0.8.5-support-libcdio-paranoia.patch"
 }
 
 src_configure() {

@@ -1,6 +1,59 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.464 2013/03/29 20:35:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.480 2013/06/09 22:56:38 vapier Exp $
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
+
+  03 Jun 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Remove unused use flag descriptions.
+
+  03 Jun 2013; Mike Gilbert <floppym@gentoo.org> -sqlite-3.7.14.1.ebuild,
+  -sqlite-3.7.15.2.ebuild, -sqlite-3.7.16.1.ebuild, -sqlite-3.7.16.ebuild:
+  Remove old per Arfrever.
+
+*sqlite-3.7.17 (21 May 2013)
+
+  21 May 2013; Mike Gilbert <floppym@gentoo.org> +sqlite-3.7.17.ebuild:
+  Version bump. Ebuild by Arfrever.
+
+  20 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for s390, wrt bug #468218
+
+  14 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for x86, wrt bug #468218
+
+  08 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for sh, wrt bug #468218
+
+  07 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for ppc64, wrt bug #468218
+
+  07 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for sparc, wrt bug #468218
+
+  07 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for ia64, wrt bug #468218
+
+  05 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for alpha, wrt bug #468218
+
+  05 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for arm, wrt bug #468218
+
+  03 May 2013; Jeroen Roovers <jer@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for HPPA (bug #468218).
+
+  03 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for ppc, wrt bug #468218
+
+  02 May 2013; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.16.2.ebuild:
+  Stable for amd64, wrt bug #468218
+
+*sqlite-3.7.16.2 (12 Apr 2013)
+
+  12 Apr 2013; Mike Gilbert <floppym@gentoo.org> +sqlite-3.7.16.2.ebuild:
+  Version bump. Ebuild by Arfrever.
 
 *sqlite-3.7.16.1 (29 Mar 2013)
 

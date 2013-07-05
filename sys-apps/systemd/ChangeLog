@@ -1,6 +1,128 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.113 2013/04/06 01:39:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.141 2013/07/04 13:43:37 ago Exp $
+
+  04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> systemd-201.ebuild:
+  Stable for ppc64, wrt bug #465870
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> systemd-201.ebuild:
+  Stable for x86, wrt bug #465870
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> systemd-201.ebuild:
+  Stable for amd64, wrt bug #465870
+
+  20 Jun 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204.ebuild:
+  Add ~ppc, wrt bug #465870
+
+  25 May 2013; Agostino Sarubbo <ago@gentoo.org> systemd-201.ebuild:
+  Stable for arm, wrt bug #465870
+
+  14 May 2013; Mike Gilbert <floppym@gentoo.org> systemd-201.ebuild,
+  systemd-202.ebuild, systemd-203-r1.ebuild, systemd-204.ebuild,
+  systemd-9999.ebuild:
+  Depend on app-text/docbook-xml-dtd:4.2, bug 469668 by Alexander Tsoy.
+
+*systemd-204 (13 May 2013)
+
+  13 May 2013; Michał Górny <mgorny@gentoo.org> +systemd-204.ebuild:
+  Version bump.
+
+*systemd-203-r1 (08 May 2013)
+
+  08 May 2013; Mike Gilbert <floppym@gentoo.org> +files/203-systemd-sleep.patch,
+  +systemd-203-r1.ebuild, -systemd-203.ebuild:
+  Apply upstream fix for systemd-sleep, bug 468998 by Paul Volkov.
+
+*systemd-203 (07 May 2013)
+
+  07 May 2013; Michał Górny <mgorny@gentoo.org> +systemd-203.ebuild,
+  systemd-9999.ebuild:
+  Version bump. Simplify .la removal. Drop init= compatibility symlinks.
+
+*systemd-202 (27 Apr 2013)
+
+  27 Apr 2013; Michal Gorny <mgorny@gentoo.org> +systemd-202.ebuild,
+  systemd-9999.ebuild:
+  Version bump. Use new --disable-tests option with USE=-test.
+
+  27 Apr 2013; Michal Gorny <mgorny@gentoo.org> systemd-200-r1.ebuild,
+  systemd-201.ebuild, systemd-9999.ebuild:
+  Enforce bash-completion dir to avoid automagic dependency on bash-completion.
+  Fixes bug #467428.
+
+  19 Apr 2013; Mike Gilbert <floppym@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Skip python-single-r1_pkg_setup when python is disabled, bug 466408.
+
+  18 Apr 2013; William Hubbs <williamh@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  revert the check for CONFIG_FW_LOADER_USER_HELPER per mgorny since we force
+  the firmware-loader use flag on.
+
+  18 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Remove CONFIG_ wrt firmware loading, it was unnecessary.
+
+  18 Apr 2013; Michał Górny <mgorny@gentoo.org> -systemd-198-r1.ebuild,
+  metadata.xml:
+  The required udev version has been removed.
+
+  18 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Fix mistyped gcc version number.
+
+  18 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Update the firmware-loader CONFIG_CHECK for 3.9 kernel. Thanks to WilliamH for
+  noticing.
+
+  18 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Add a gcc version check wrt bug #466160.
+
+  17 Apr 2013; Michał Górny <mgorny@gentoo.org> metadata.xml,
+  systemd-201.ebuild, systemd-9999.ebuild:
+  Introduce USE=firmware-loader, as suggested by williamh. Check whether kernel
+  supports loading firmwares and warn properly.
+
+  17 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Fix duplicated --enable-polkit.
+
+  17 Apr 2013; Michał Górny <mgorny@gentoo.org> metadata.xml,
+  systemd-201.ebuild, systemd-9999.ebuild:
+  Add USE=keymap to match udev ebuild.
+
+  16 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Put polkit under a USE flag since people may want to disable the whole policy
+  magic.
+
+  16 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Perform kernel checks in pkg_pretend() to warn the user early. Use MERGE_TYPE
+  as an efficient replacement for pkg_preinst() implications.
+
+  16 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild,
+  systemd-9999.ebuild:
+  Re-enable IMA, my mistake.
+
+  15 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-201.ebuild:
+  Backport quota dep removal and configure cleanup from -9999. No need to
+  revbump since the changes affect build process only.
+
+  15 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Remove redundant configure args. Disable deps which are not supported in
+  Gentoo and therefore can result in automagic deps.
+
+  15 Apr 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Inline paths to quota tools and drop the dep.
+
+*systemd-201 (14 Apr 2013)
+
+  14 Apr 2013; Michał Górny <mgorny@gentoo.org> +systemd-201.ebuild,
+  -systemd-198-r5.ebuild:
+  Version bump. Mostly bugfixes and minor features in the new release.
 
   06 Apr 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml,
   systemd-200-r1.ebuild, systemd-9999.ebuild:

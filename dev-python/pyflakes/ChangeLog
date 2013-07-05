@@ -1,6 +1,24 @@
 # ChangeLog for dev-python/pyflakes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.27 2013/02/21 03:17:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.32 2013/07/03 03:37:06 floppym Exp $
+
+  03 Jul 2013; Mike Gilbert <floppym@gentoo.org> pyflakes-0.6.1.ebuild,
+  pyflakes-0.7.2.ebuild, pyflakes-0.7.3.ebuild:
+  [R]DEPEND on setuptools, thanks Arfrever.
+
+*pyflakes-0.7.3 (02 Jul 2013)
+
+  02 Jul 2013; Tim Harder <radhermit@gentoo.org> +pyflakes-0.7.3.ebuild:
+  Version bump.
+
+  31 May 2013; Ian Delaney <idella4@gentoo.org> pyflakes-0.7.2.ebuild:
+  added apparent support of healthy py2.[5-6], py3.2
+
+*pyflakes-0.7.2 (27 Apr 2013)
+
+  27 Apr 2013; Patrick McLean <chutzpah@gentoo.org> +pyflakes-0.7.2.ebuild,
+  -pyflakes-0.4.0.ebuild:
+  Version bump, port to distutils-r1. Clean out really old version.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> pyflakes-0.6.1.ebuild:
   Add ~arm-linux keyword.

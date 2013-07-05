@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.65 2013/04/05 14:54:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.70 2013/06/29 08:17:06 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -136,22 +136,6 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 # @DESCRIPTION:
 # Specify location of autotools' configure script. By default it uses ${S}.
 
-# @ECLASS-VARIABLE: myeconfargs
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# Optional econf arguments as Bash array. Should be defined before calling src_configure.
-# @CODE
-# src_configure() {
-# 	local myeconfargs=(
-# 		--disable-readline
-# 		--with-confdir="/etc/nasty foo confdir/"
-# 		$(use_enable debug cnddebug)
-# 		$(use_enable threads multithreading)
-# 	)
-# 	autotools-utils_src_configure
-# }
-# @CODE
-
 # @ECLASS-VARIABLE: DOCS
 # @DEFAULT_UNSET
 # @DESCRIPTION:
@@ -200,6 +184,9 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 # If set to 'all', all .la files will be removed unconditionally. This
 # option is discouraged and shall be used only if 'modules' does not
 # remove the files.
+#
+# If set to 'none', no .la files will be pruned ever. Use in corner
+# cases only.
 
 # Determine using IN or OUT source build
 _check_build_dir() {
@@ -424,6 +411,22 @@ autotools-utils_src_prepare() {
 #
 # IUSE="static-libs" passes --enable-shared and either --disable-static/--enable-static
 # to econf respectively.
+
+# @VARIABLE: myeconfargs
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Optional econf arguments as Bash array. Should be defined before calling src_configure.
+# @CODE
+# src_configure() {
+# 	local myeconfargs=(
+# 		--disable-readline
+# 		--with-confdir="/etc/nasty foo confdir/"
+# 		$(use_enable debug cnddebug)
+# 		$(use_enable threads multithreading)
+# 	)
+# 	autotools-utils_src_configure
+# }
+# @CODE
 autotools-utils_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -529,7 +532,9 @@ autotools-utils_src_install() {
 
 	# Remove libtool files and unnecessary static libs
 	local prune_ltfiles=${AUTOTOOLS_PRUNE_LIBTOOL_FILES}
-	prune_libtool_files ${prune_ltfiles:+--${prune_ltfiles}}
+	if [[ ${prune_ltfiles} != none ]]; then
+		prune_libtool_files ${prune_ltfiles:+--${prune_ltfiles}}
+	fi
 }
 
 # @FUNCTION: autotools-utils_src_test
@@ -540,7 +545,12 @@ autotools-utils_src_test() {
 
 	_check_build_dir
 	pushd "${BUILD_DIR}" > /dev/null || die
-	# Run default src_test as defined in ebuild.sh
-	default_src_test
+
+	if make -n check "${@}" &>/dev/null; then
+		emake check "${@}" || die 'emake check failed.'
+	elif make -n test "${@}" &>/dev/null; then
+		emake test "${@}" || die 'emake test failed.'
+	fi
+
 	popd > /dev/null || die
 }

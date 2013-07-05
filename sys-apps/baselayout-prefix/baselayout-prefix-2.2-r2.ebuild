@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r2.ebuild,v 1.1 2013/02/07 20:27:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r2.ebuild,v 1.5 2013/05/08 05:51:28 grobian Exp $
 
 EAPI=3
 
 inherit eutils multilib
 
 MY_P=${P/-prefix/}  # just use "upstream" sources
-EINFO=einfo-1.0.1
+EINFO=einfo-1.0.3
 DESCRIPTION="Minimal baselayout and e-functions for Gentoo Prefix installs"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
@@ -58,8 +58,9 @@ src_install() {
 	popd > /dev/null
 
 	# add the host OS MANPATH
-	[[ -d "${ROOT}"/usr/share/man ]] && \
+	if [[ -d "${ROOT}"/usr/share/man ]] ; then
 		echo 'MANPATH="/usr/share/man"' > "${ED}"/etc/env.d/99basic || die
+	fi
 
 	# rc-scripts version for testing of features that *should* be present
 	echo "Gentoo Prefix Base System release ${PV}" > "${ED}"/etc/gentoo-release
@@ -70,7 +71,7 @@ src_install() {
 	# add a dummy to avoid Portage shebang errors
 	dodir sbin
 	cat > "${ED}"/sbin/runscript <<- EOF
-		#!${BASH}
+		#!/bin/sh
 
 		echo "runscript not supported by Gentoo Prefix Base System release ${PV}" 1>&2
 		exit 1

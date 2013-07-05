@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1018 2013/04/06 10:19:56 hwoarang Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1034 2013/06/30 14:39:17 xarthisius Exp $
 
 -->
 <herds>
@@ -65,10 +65,6 @@
   <maintainer>
     <email>fauli@gentoo.org</email>
     <name>Christian Faulhammer</name>
-  </maintainer>
-  <maintainer>
-    <email>serkan@gentoo.org</email>
-    <name>Serkan Kaba</name>
   </maintainer>
   <maintainer>
     <email>marienz@gentoo.org</email>
@@ -138,10 +134,6 @@
   <maintainer>
     <email>robbat2@gentoo.org</email>
       <name>Robin H. Johnson</name>
-  </maintainer>
-  <maintainer>
-          <email>c1pher@gentoo.org</email>
-          <name>Dane Smith</name>
   </maintainer>
   <maintainer>
     <email>radhermit@gentoo.org</email>
@@ -330,10 +322,6 @@
   <name>gdesklets</name>
   <email>gdesklets@gentoo.org</email>
   <description>GDesklets packages</description>
-  <maintainer>
-    <email>nixphoeni@gentoo.org</email>
-    <name>Joe Sapp</name>
-  </maintainer>
 </herd>
 <herd>
   <name>gpe</name>
@@ -394,9 +382,7 @@
   <name>perl</name>
   <email>perl@gentoo.org</email>
   <description>Perl-related packages</description>
-  <maintainer>
-    <email>tove@gentoo.org</email>
-  </maintainer>
+  <maintainingproject>/proj/en/perl/index.xml</maintainingproject>
 </herd>
 <herd>
   <name>prefix</name>
@@ -600,10 +586,6 @@
    <email>halcy0n@gentoo.org</email>
   </maintainer>
   <maintainer>
-    <email>xarthisius@gentoo.org</email>
-    <name>Kacper Kowalik</name>
-  </maintainer>
-  <maintainer>
     <email>blueness@gentoo.org</email>
     <name>Anthony G. Basile</name>
   </maintainer>
@@ -685,10 +667,6 @@
   <name>vim</name>
   <email>vim@gentoo.org</email>
   <description>vim-core, vim, gvim and app-vim plugins</description>
-  <maintainer>
-    <email>lack@gentoo.org</email>
-    <name>Jim Ramsay</name>
-  </maintainer>
   <maintainer>
     <email>radhermit@gentoo.org</email>
     <name>Tim Harder</name>
@@ -833,10 +811,6 @@
     <name>Andrey Grozin</name>
   </maintainer>
   <maintainer>
-    <email>xarthisius@gentoo.org</email>
-    <name>Kacper Kowalik</name>
-  </maintainer>
-  <maintainer>
     <email>rafaelmartins@gentoo.org</email>
     <name>Rafael G. Martins</name>
   </maintainer>
@@ -852,10 +826,6 @@
   <maintainer>
     <email>bicatali@gentoo.org</email>
     <name>Sébastien Fabbro</name>
-  </maintainer>
-  <maintainer>
-    <email>xarthisius@gentoo.org</email>
-    <name>Kacper Kowalik</name>
   </maintainer>
   <maintainer>
     <email>heroxbd@gentoo.org</email>
@@ -963,6 +933,10 @@
   <maintainer>
     <email>jdhore@gentoo.org</email>
     <name>Jeff Horelick</name>
+  </maintainer>
+  <maintainer>
+    <email>zerochaos@gentoo.org</email>
+    <name>Rick Farina</name>
   </maintainer>
 </herd>
 <herd>
@@ -1095,13 +1069,13 @@
   <email>pgsql-bugs@gentoo.org</email>
   <description>PostgreSQL and related packages</description>
   <maintainer>
-    <email>patrick@gentoo.org</email>
-    <name>Patrick Lauer</name>
+    <email>titanofold@gentoo.org</email>
+    <name>Aaron W. Swenson</name>
     <role>Lead</role>
   </maintainer>
   <maintainer>
-    <email>titanofold@gentoo.org</email>
-    <name>Aaron W. Swenson</name>
+    <email>patrick@gentoo.org</email>
+    <name>Patrick Lauer</name>
   </maintainer>
 </herd>
 <herd>
@@ -1455,10 +1429,6 @@
   <email>desktop-wm@gentoo.org</email>
   <description>Various window managers for X11.</description>
   <maintainer>
-    <email>lack@gentoo.org</email>
-    <name>Jim Ramsay</name>
-  </maintainer>
-  <maintainer>
     <email>xarthisius@gentoo.org</email>
     <name>Kacper Kowalik</name>
   </maintainer>
@@ -1575,10 +1545,6 @@
     <email>jer@gentoo.org</email>
     <name>Jeroen Roovers</name>
   </maintainer>
-  <maintainer>
-    <email>ago@gentoo.org</email>
-    <name>Agostino Sarubbo</name>
-  </maintainer>
 </herd>
 <herd>
   <name>arm</name>
@@ -1615,16 +1581,15 @@
     <email>ago@gentoo.org</email>
     <name>Agostino Sarubbo</name>
   </maintainer>
+  <maintainer>
+    <email>pinkbyte@gentoo.org</email>
+    <name>Sergey Popov</name>
+  </maintainer>
 </herd>
 <herd>
   <name>desktop-dock</name>
   <email>desktop-dock@gentoo.org</email>
   <description>WindowMaker/Blackbox Dockapps</description>
-  <maintainer>
-    <email>lack@gentoo.org</email>
-    <name>Jim Ramsay</name>
-    <role>gkrellm maintainer</role>
-  </maintainer>
   <maintainer>
     <email>voyageur@gentoo.org</email>
     <name>Bernard Cafarelli</name>
@@ -1719,10 +1684,6 @@
   <maintainer>
     <email>vapier@gentoo.org</email>
     <role>netcat and a small handful of packages</role>
-  </maintainer>
-  <maintainer>
-      <email>cedk@gentoo.org</email>
-      <name>Cédric Krier</name>
   </maintainer>
   <maintainer>
     <email>jer@gentoo.org</email>
@@ -2079,6 +2040,10 @@
       <email>halcy0n@gentoo.org</email>
       <name>Mark Loeser</name>
     </maintainer>
+    <maintainer>
+      <email>pinkbyte@gentoo.org</email>
+      <name>Sergey Popov</name>
+    </maintainer>
 </herd>
 <herd>
   <name>ldap</name>
@@ -2115,15 +2080,6 @@
   <description>Software for running Gentoo on the Xbox</description>
   <maintainer>
     <email>vapier@gentoo.org</email>
-  </maintainer>
-</herd>
-<herd>
-  <name>rox</name>
-  <email>rox@gentoo.org</email>
-  <description>ROX Desktop and applications</description>
-  <maintainer>
-    <email>lack@gentoo.org</email>
-    <name>Jim Ramsay</name>
   </maintainer>
 </herd>
 <herd>

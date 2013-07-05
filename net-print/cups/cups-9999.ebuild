@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.28 2013/04/01 22:49:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.35 2013/06/29 10:59:16 dilfridge Exp $
 
 EAPI=5
 
@@ -25,8 +25,8 @@ HOMEPAGE="http://www.cups.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="acl dbus debug +filters gnutls java kerberos pam
-	python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf"
+IUSE="acl dbus debug +filters gnutls java kerberos lprng-compat pam
+	python selinux +ssl static-libs +threads usb X xinetd zeroconf"
 
 LANGS="ca es fr ja ru"
 for X in ${LANGS} ; do
@@ -44,6 +44,7 @@ RDEPEND="
 	dbus? ( sys-apps/dbus )
 	java? ( >=virtual/jre-1.6 )
 	kerberos? ( virtual/krb5 )
+	!lprng-compat? ( !net-print/lprng )
 	pam? ( virtual/pam )
 	selinux? ( sec-policy/selinux-cups )
 	ssl? (
@@ -53,8 +54,7 @@ RDEPEND="
 		)
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	)
-	systemd? ( sys-apps/systemd )
-	usb? ( virtual/libusb:0 )
+	usb? ( virtual/libusb:1 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )
 	zeroconf? ( net-dns/avahi )
@@ -82,7 +82,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.6.0-dont-compress-manpages.patch"
 	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
-	"${FILESDIR}/${PN}-1.5.0-systemd-socket.patch"		# systemd support
+	"${FILESDIR}/${PN}-1.5.0-systemd-socket-2.patch"	# systemd support
 	"${FILESDIR}/${PN}-1.6.2-statedir.patch"
 )
 
@@ -160,11 +160,11 @@ src_configure() {
 	fi
 
 	econf \
-		--libdir=/usr/$(get_libdir) \
-		--localstatedir=/var \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
+		--localstatedir="${EPREFIX}"/var \
 		--with-cups-user=lp \
 		--with-cups-group=lp \
-		--with-docdir=/usr/share/cups/html \
+		--with-docdir="${EPREFIX}"/usr/share/cups/html \
 		--with-languages="${LINGUAS}" \
 		--with-system-groups=lpadmin \
 		$(use_enable acl) \
@@ -184,14 +184,14 @@ src_configure() {
 		$(use_with python) \
 		$(use_with xinetd xinetd /etc/xinetd.d) \
 		--enable-libpaper \
-		$(use_with systemd systemdsystemunitdir "$(systemd_get_unitdir)") \
+		--with-systemdsystemunitdir="$(systemd_get_unitdir)" \
 		${myconf}
 
 	# install in /usr/libexec always, instead of using /usr/lib/cups, as that
 	# makes more sense when facing multilib support.
-	sed -i -e 's:SERVERBIN.*:SERVERBIN = "$(BUILDROOT)"/usr/libexec/cups:' Makedefs || die
-	sed -i -e 's:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN "/usr/libexec/cups":' config.h || die
-	sed -i -e 's:cups_serverbin=.*:cups_serverbin=/usr/libexec/cups:' cups-config || die
+	sed -i -e "s:SERVERBIN.*:SERVERBIN = \"\$\(BUILDROOT\)${EPREFIX}/usr/libexec/cups\":" Makedefs || die
+	sed -i -e "s:#define CUPS_SERVERBIN.*:#define CUPS_SERVERBIN \"${EPREFIX}/usr/libexec/cups\":" config.h || die
+	sed -i -e "s:cups_serverbin=.*:cups_serverbin=\"${EPREFIX}/usr/libexec/cups\":" cups-config || die
 }
 
 src_install() {
@@ -250,6 +250,17 @@ src_install() {
 	# the following files are now provided by cups-filters:
 	rm -r "${ED}"/usr/share/cups/banners || die
 	rm -r "${ED}"/usr/share/cups/data/testprint || die
+
+	# for the special case of running lprng and cups together, bug 467226
+	if use lprng-compat ; then
+		rm -fv "${ED}"/usr/bin/{lp*,cancel}
+		rm -fv "${ED}"/usr/sbin/lp*
+		rm -fv "${ED}"/usr/share/man/man1/{lp*,cancel*}
+		rm -fv "${ED}"/usr/share/man/man8/lp*
+		ewarn "Not installing lp... binaries, since the lprng-compat useflag is set."
+		ewarn "Unless you plan to install an exotic server setup, you most likely"
+		ewarn "do not want this. Disable the useflag then and all will be fine."
+	fi
 }
 
 pkg_preinst() {
@@ -277,12 +288,13 @@ pkg_postinst() {
 		elog "the location manually, or run cups-browsed from net-print/cups-filters"
 		elog "which re-adds that functionality as a separate daemon."
 		echo
-	elif [[ "${REPLACING_VERSIONS}" ]] && [[ "${REPLACING_VERSIONS}" < "1.6.2" ]]; then
-		echo
-		elog "Starting with net-print/cups-filters-1.0.30, that package provides"
-		elog "a daemon cups-browsed which implements printer discovery via the"
-		elog "Cups-1.5 protocol. Not much tested so far though."
-		echo
+	fi
+
+	if [[ "${REPLACING_VERSIONS}" == "1.6.2-r4" ]]; then
+		ewarn
+		ewarn "You are upgrading from the broken version net-print/cups-1.6.2-r4."
+		ewarn "Please rebuild net-print/cups-filters now to make sure everything is OK."
+		ewarn
 	fi
 }
 

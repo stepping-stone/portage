@@ -1,6 +1,38 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.26 2013/03/28 22:19:35 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.32 2013/05/29 02:00:47 ryao Exp $
+
+  29 May 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.1-r1.ebuild:
+  Add blocker against CONFIG_UIDGID_STRICT_TYPE_CHECKS
+
+  29 May 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.1-r1.ebuild:
+  Do not permit builds with CONFIG_USER_NS
+
+*zfs-kmod-0.6.1-r1 (28 May 2013)
+
+  28 May 2013; Richard Yao <ryao@gentoo.org>
+  +files/zfs-kmod-0.6.1-fix-getdents.patch,
+  +files/zfs-kmod-0.6.1-fix-txg_quiesce-deadlock.patch,
+  +files/zfs-kmod-0.6.1-fix-xattr-behavior-1.patch,
+  +files/zfs-kmod-0.6.1-fix-xattr-behavior-2.patch,
+  +files/zfs-kmod-0.6.1-fix-zvol-initialization.patch,
+  +zfs-kmod-0.6.1-r1.ebuild:
+  Backport important fixes from upstream HEAD; also includes important zvol
+  initialization fixes (by me) that were sent upstream
+
+  17 Apr 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-9999.ebuild:
+  Remove /usr/src/zfs symlink from 9999 ebuild; sys-cluster/lustre (science
+  overlay) no longer needs it. It will be removed from versioned ebuilds
+  following future revision bumps.
+
+  17 Apr 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-9999.ebuild:
+  Update /usr/src/zfs link to reflect upstream's new location
+
+  17 Apr 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.0_rc10-r2.ebuild,
+  zfs-kmod-0.6.0_rc11-r3.ebuild, zfs-kmod-0.6.0_rc12-r3.ebuild,
+  zfs-kmod-0.6.0_rc13-r4.ebuild, zfs-kmod-0.6.0_rc14-r5.ebuild,
+  zfs-kmod-0.6.1.ebuild, zfs-kmod-9999.ebuild:
+  Kbuild depends on dev-lang/perl
 
 *zfs-kmod-0.6.1 (28 Mar 2013)
 

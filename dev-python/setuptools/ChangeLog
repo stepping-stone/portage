@@ -1,6 +1,47 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.183 2013/02/21 03:17:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.190 2013/06/18 23:25:49 floppym Exp $
+
+*setuptools-0.7.3 (18 Jun 2013)
+
+  18 Jun 2013; Mike Gilbert <floppym@gentoo.org> +setuptools-0.7.3.ebuild,
+  setuptools-0.7.2-r1.ebuild:
+  Version bump. Restore DISTRIBUTE_DISABLE_VERSIONED_EASY_INSTALL_SCRIPT
+  variable.
+
+*setuptools-0.7.2-r1 (15 Jun 2013)
+
+  15 Jun 2013; Mike Gilbert <floppym@gentoo.org> +setuptools-0.7.2-r1.ebuild,
+  -setuptools-0.7.2.ebuild:
+  Apply no-exes patch.
+
+*setuptools-0.6.45-r1 (15 Jun 2013)
+
+  15 Jun 2013; Mike Gilbert <floppym@gentoo.org> +setuptools-0.6.45-r1.ebuild,
+  -setuptools-0.6.45.ebuild, files/setuptools-0.6.45-no-exes.patch:
+  Fix no-exes patch.
+
+*setuptools-0.7.2 (14 Jun 2013)
+
+  14 Jun 2013; Ian Delaney <idella4@gentoo.org>
+  +files/setuptools-0.7.2-test-easy.patch, +setuptools-0.7.2.ebuild:
+  bump; switch to setuptools proper rather than distribute, fixes Bug #472808
+
+*setuptools-0.6.45 (13 Jun 2013)
+
+  13 Jun 2013; Patrick Lauer <patrick@gentoo.org>
+  +files/setuptools-0.6.45-no-exes.patch, +setuptools-0.6.45.ebuild:
+  Bump
+
+  24 May 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/setuptools-0.6.40-no-exes.patch, setuptools-0.6.40.ebuild,
+  setuptools-9999.ebuild:
+  Use a patch to remove the .exe files.
+
+*setuptools-0.6.40 (22 May 2013)
+
+  22 May 2013; Patrick Lauer <patrick@gentoo.org> +setuptools-0.6.40.ebuild:
+  Bump
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> setuptools-0.6.33.ebuild:
   Add ~arm-linux keyword.

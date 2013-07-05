@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.5 2013/04/05 22:13:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.19 2013/06/01 18:25:55 ulm Exp $
 
 EAPI=5
 
@@ -9,11 +9,12 @@ inherit autotools eutils flag-o-matic multilib multilib-minimal
 DESCRIPTION="The Motif user interface component toolkit"
 HOMEPAGE="http://sourceforge.net/projects/motif/
 	http://motif.ics.com/"
-SRC_URI="mirror://sourceforge/project/motif/Motif%20${PV}%20Source%20Code/${P}-src.tgz"
+SRC_URI="mirror://sourceforge/project/motif/Motif%20${PV}%20Source%20Code/${P}-src.tgz
+	mirror://gentoo/${P}-patches-1.tar.xz"
 
 LICENSE="LGPL-2.1+ MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="examples jpeg +motif22-compatibility png static-libs unicode xft"
 
 RDEPEND="x11-libs/libX11[${MULTILIB_USEDEP}]
@@ -39,14 +40,7 @@ DEPEND="${RDEPEND}
 	x11-misc/xbitmaps"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-solaris.patch"
-	epatch "${FILESDIR}/${PN}-2.3.2-sanitise-paths.patch"
-	epatch "${FILESDIR}/${P}-parallel-make.patch"
-	epatch "${FILESDIR}/${P}-install-dirs.patch"
-	epatch "${FILESDIR}/${P}-fc-config.patch"
-	[[ ${CHOST} == *-solaris2.11 ]] \
-		&& epatch "${FILESDIR}/${PN}-2.3.2-solaris-2.11.patch"
-
+	EPATCH_SUFFIX=patch epatch
 	epatch_user
 
 	# disable compilation of demo binaries
@@ -67,7 +61,8 @@ src_prepare() {
 	append-flags -fno-strict-aliasing
 
 	# For Solaris Xos_r.h :(
-	[[ ${CHOST} == *-solaris2.11 ]] && append-flags -DNEED_XOS_R_H=1
+	[[ ${CHOST} == *-solaris2.11 ]] \
+		&& append-cppflags -DNEED_XOS_R_H -DHAVE_READDIR_R_3
 
 	if use !elibc_glibc && use !elibc_uclibc && use unicode; then
 		# libiconv detection in configure script doesn't always work

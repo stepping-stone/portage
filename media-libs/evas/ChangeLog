@@ -1,6 +1,24 @@
 # ChangeLog for media-libs/evas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/ChangeLog,v 1.21 2013/04/02 08:56:39 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/ChangeLog,v 1.25 2013/05/20 10:19:34 tommy Exp $
+
+*evas-1.7.7 (20 May 2013)
+
+  20 May 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -evas-1.7.6.1.ebuild, +evas-1.7.7.ebuild:
+  Version bump, drop old
+
+  24 Apr 2013; Agostino Sarubbo <ago@gentoo.org> evas-1.7.6.1.ebuild:
+  Add ~ppc, wrt bug #462050
+
+  09 Apr 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> evas-1.7.6.1.ebuild:
+  Fix typos
+
+*evas-1.7.6.1 (08 Apr 2013)
+
+  08 Apr 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +evas-1.7.6.1.ebuild,
+  -evas-1.7.4.ebuild, -evas-1.7.5-r1.ebuild, -evas-1.7.5.ebuild:
+  Version bump, drop old, also fixes bug 458618
 
 *evas-1.7.5-r1 (02 Apr 2013)
 

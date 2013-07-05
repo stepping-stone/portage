@@ -1,6 +1,38 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.144 2013/03/30 13:03:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.152 2013/06/09 17:47:12 floppym Exp $
+
+  09 Jun 2013; Mike Gilbert <floppym@gentoo.org> matplotlib-1.2.0-r2.ebuild,
+  matplotlib-1.2.1.ebuild:
+  Depend on imaging for python3.2+.
+
+  09 Jun 2013; Mike Gilbert <floppym@gentoo.org> matplotlib-1.1.1.ebuild,
+  matplotlib-1.2.0-r2.ebuild, matplotlib-1.2.1.ebuild:
+  Depend on virtual/python-imaging.
+
+  11 May 2013; Mike Gilbert <floppym@gentoo.org> matplotlib-1.2.1.ebuild:
+  Apply the arm keyword to the newest version as well.
+
+  10 May 2013; Markus Meier <maekke@gentoo.org> matplotlib-1.2.0-r2.ebuild:
+  add ~arm, bug #452764
+
+  10 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unused flag description from metadata
+
+*matplotlib-1.2.1 (25 Apr 2013)
+
+  25 Apr 2013; Sébastien Fabbro <bicatali@gentoo.org> +matplotlib-1.2.1.ebuild,
+  -files/matplotlib-1.0.1-libpng15.patch, -files/matplotlib-1.0.1-linux3.patch,
+  -files/matplotlib-1.0.1-sphinx.patch, -matplotlib-1.0.1-r1.ebuild,
+  -matplotlib-1.1.0.ebuild, -matplotlib-1.2.0-r1.ebuild,
+  -matplotlib-1.2.0.ebuild:
+  Version bump
+
+  22 Apr 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Added remote-id for upstream tracking
+
+  12 Apr 2013; Mike Gilbert <floppym@gentoo.org> matplotlib-1.2.0-r2.ebuild:
+  Move gtk3 deps to RDEPEND; we don't care about it at build time.
 
   30 Mar 2013; Mike Gilbert <floppym@gentoo.org> matplotlib-1.2.0-r2.ebuild:
   Quote patterns for python_gen_usedep.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5.ebuild,v 1.1 2013/04/03 18:10:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5.ebuild,v 1.14 2013/06/24 19:48:37 hasufell Exp $
 
 EAPI=5
 
@@ -13,12 +13,13 @@ HOMEPAGE="http://www.hexchat.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux"
 IUSE="dbus fastscroll +gtk ipv6 libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python spell ssl theme-manager"
 REQUIRED_USE="plugin-checksum? ( plugins )
 	plugin-doat? ( plugins )
 	plugin-fishlim? ( plugins )
-	plugin-sysinfo? ( plugins )"
+	plugin-sysinfo? ( plugins )
+	python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="dev-libs/glib:2
 	dbus? ( >=dev-libs/dbus-glib-0.98 )
@@ -31,7 +32,10 @@ RDEPEND="dev-libs/glib:2
 	perl? ( >=dev-lang/perl-5.8.0 )
 	plugin-sysinfo? ( sys-apps/pciutils )
 	python? ( ${PYTHON_DEPS} )
-	spell? ( dev-libs/libxml2 )
+	spell? (
+		app-text/enchant
+		dev-libs/libxml2
+	)
 	ssl? ( >=dev-libs/openssl-0.9.8u )
 	theme-manager? ( dev-lang/mono )"
 DEPEND="${RDEPEND}
@@ -46,16 +50,21 @@ pkg_setup() {
 }
 
 src_prepare() {
+	mkdir m4 || die
+
 	epatch \
 		"${FILESDIR}"/${PN}-2.9.1-input-box.patch \
 		"${FILESDIR}"/${PN}-2.9.5-cflags.patch \
-		"${FILESDIR}"/${PN}-2.9.5-gettextize.patch
+		"${FILESDIR}"/${PN}-2.9.5-gettextize.patch \
+		"${FILESDIR}"/${PN}-2.9.5-gobject.patch
+	epatch -p1 \
+		"${FILESDIR}"/${PN}-2.9.5-autoconf-missing-macros.patch
 
 	cp $(type -p gettextize) "${T}"/ || die
 	sed -i -e 's:read dummy < /dev/tty::' "${T}/gettextize" || die
 	einfo "Running gettextize -f --no-changelog..."
 	"${T}"/gettextize -f --no-changelog > /dev/null || die "gettexize failed"
-	eautoreconf
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_configure() {

@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.381 2013/04/02 23:02:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.385 2013/06/09 23:05:10 vapier Exp $
+
+  09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info) from ChromiumOS.
+
+  14 May 2013; Mike Frysinger <vapier@gentoo.org> linux-headers-3.9.ebuild:
+  Add more known architectures in this release.
+
+*linux-headers-3.9 (04 May 2013)
+
+  04 May 2013; Mike Frysinger <vapier@gentoo.org> +linux-headers-3.9.ebuild:
+  Version bump.
+
+  13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.7.ebuild:
+  Stable for s390, wrt bug #462980
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.7.ebuild:
   Stable for hppa, wrt bug #462980

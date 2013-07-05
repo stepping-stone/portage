@@ -1,6 +1,36 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.406 2013/04/03 06:42:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.412 2013/05/25 21:54:15 eras Exp $
+
+*squid-3.3.5 (25 May 2013)
+
+  25 May 2013; Eray Aslan <eras@gentoo.org> +squid-3.3.5.ebuild:
+  Version bump
+
+*squid-3.2.11 (30 Apr 2013)
+
+  30 Apr 2013; Eray Aslan <eras@gentoo.org> +squid-3.2.11.ebuild:
+  Version bump
+
+*squid-3.2.10 (29 Apr 2013)
+*squid-3.3.4 (29 Apr 2013)
+
+  29 Apr 2013; Eray Aslan <eras@gentoo.org> +files/squid-3.3.4-gentoo.patch,
+  +squid-3.2.10.ebuild, +squid-3.3.4.ebuild:
+  Version bump
+
+  26 Apr 2013; Eray Aslan <eras@gentoo.org> squid-3.3.3-r1.ebuild:
+  Respect AR - bug #461730
+
+  26 Apr 2013; Eray Aslan <eras@gentoo.org> squid-3.3.3-r1.ebuild:
+  Fix and work around build failures with automake-1.13
+
+*squid-3.3.3-r1 (16 Apr 2013)
+*squid-3.2.9-r1 (16 Apr 2013)
+
+  16 Apr 2013; Eray Aslan <eras@gentoo.org> +files/squid-3.3.3-ncsa_auth.patch,
+  +squid-3.2.9-r1.ebuild, +squid-3.3.3-r1.ebuild:
+  Fix ncsa_auth with glibc-2.17 - bug #464406
 
   03 Apr 2013; Eray Aslan <eras@gentoo.org> -files/squid.initd-logrotate-r2,
   -files/squid.initd-r2, -squid-3.1.22.ebuild, -squid-3.2.5.ebuild,

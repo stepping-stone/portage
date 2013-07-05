@@ -1,6 +1,54 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.31 2013/02/27 23:34:03 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.42 2013/06/30 13:28:51 ago Exp $
+
+  30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.12.ebuild:
+  Stable for arm, wrt bug #470762
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.12.ebuild:
+  Stable for ppc64, wrt bug #470762
+
+  29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.12.ebuild:
+  Stable for sparc, wrt bug #470762
+
+  26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.12.ebuild:
+  Stable for ia64, wrt bug #470762
+
+  24 Jun 2013; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.12.ebuild:
+  Stable for ppc, wrt bug #470762
+
+  20 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> harfbuzz-0.9.18-r1.ebuild:
+  Remove double elibtoolize wrt bug#473006.
+
+  19 Jun 2013; Jeroen Roovers <jer@gentoo.org> harfbuzz-0.9.12.ebuild:
+  Stable for HPPA (bug #470762).
+
+*harfbuzz-0.9.18-r1 (06 Jun 2013)
+
+  06 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -harfbuzz-0.9.18.ebuild, +harfbuzz-0.9.18-r1.ebuild, harfbuzz-9999.ebuild:
+  Add a subslot due to ABI change (some symbols moved to libharfbuzz-icu), bug
+  #472416.
+
+*harfbuzz-0.9.18 (05 Jun 2013)
+
+  05 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/harfbuzz-0.9.18-ldadd.patch, +harfbuzz-0.9.18.ebuild,
+  harfbuzz-9999.ebuild, metadata.xml:
+  Version bump to 0.9.18 fixing bug#472346.
+
+*harfbuzz-0.9.17 (21 May 2013)
+
+  21 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> +harfbuzz-0.9.17.ebuild,
+  -harfbuzz-0.9.16.ebuild:
+  Version bump to 0.9.17 remove older testing as it had quite iusses with lo.
+  This could be stable candidate.
+
+*harfbuzz-0.9.16 (24 Apr 2013)
+
+  24 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> +harfbuzz-0.9.16.ebuild,
+  -harfbuzz-0.9.11.ebuild, harfbuzz-9999.ebuild:
+  Version bump to latest, remove oldest release.
 
   27 Feb 2013; Christoph Junghans <ottxor@gentoo.org> harfbuzz-0.9.12.ebuild,
   harfbuzz-9999.ebuild:
