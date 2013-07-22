@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.53.0.ebuild,v 1.3 2013/06/28 21:11:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.53.0.ebuild,v 1.5 2013/07/10 11:54:02 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -23,6 +23,7 @@ RDEPEND="icu? ( >=dev-libs/icu-3.6:= )
 	!icu? ( virtual/libiconv )
 	mpi? ( || ( sys-cluster/openmpi[cxx] sys-cluster/mpich2[cxx,threads] ) )
 	python? ( ${PYTHON_DEPS} )
+	app-arch/bzip2
 	sys-libs/zlib
 	!app-admin/eselect-boost"
 DEPEND="${RDEPEND}

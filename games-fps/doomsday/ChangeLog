@@ -1,6 +1,24 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.51 2013/03/02 21:15:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.56 2013/07/20 09:38:54 hasufell Exp $
+
+  20 Jul 2013; Julian Ospald <hasufell@gentoo.org> doomsday-1.10.2.ebuild:
+  use PYTHON_USEDEP for wxpython and remove python2_5
+
+  20 Jul 2013; Julian Ospald <hasufell@gentoo.org> doomsday-1.10.2.ebuild:
+  fix DEPS
+
+  20 Jul 2013; Julian Ospald <hasufell@gentoo.org> doomsday-1.10.2.ebuild:
+  fix REQUIRED_USE
+
+  19 Jul 2013; Julian Ospald <hasufell@gentoo.org> doomsday-1.10.2.ebuild:
+  simplify REQUIRED_USE
+
+*doomsday-1.10.2 (17 Jul 2013)
+
+  17 Jul 2013; Julian Ospald <hasufell@gentoo.org> +doomsday-1.10.2.ebuild,
+  +files/doomsday-1.10.2-openal-link.patch:
+  version bump wrt #465432
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> doomsday-1.9.8-r1.ebuild,
   doomsday-1.9.8.ebuild:

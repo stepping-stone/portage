@@ -1,6 +1,36 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.212 2013/06/05 00:16:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.222 2013/07/22 08:52:59 ago Exp $
+
+  22 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libpcre-8.33.ebuild:
+  Stable for sparc, wrt bug #453948
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libpcre-8.33.ebuild:
+  Stable for sh, wrt bug #453948
+
+  14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libpcre-8.33.ebuild:
+  Stable for alpha, wrt bug #453948
+
+  13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libpcre-8.33.ebuild:
+  Stable for ppc64, wrt bug #453948
+
+  13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libpcre-8.33.ebuild:
+  Stable for ppc, wrt bug #453948
+
+  07 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libpcre-8.33.ebuild:
+  Stable for ia64, wrt bug #453948
+
+  07 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libpcre-8.33.ebuild:
+  Stable for arm, wrt bug #453948
+
+  07 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libpcre-8.33.ebuild:
+  Stable for x86, wrt bug #453948
+
+  07 Jul 2013; Agostino Sarubbo <ago@gentoo.org> libpcre-8.33.ebuild:
+  Stable for amd64, wrt bug #453948
+
+  06 Jul 2013; Jeroen Roovers <jer@gentoo.org> libpcre-8.33.ebuild:
+  Stable for HPPA (bug #453948).
 
   05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.

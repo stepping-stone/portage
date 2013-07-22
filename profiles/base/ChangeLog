@@ -1,6 +1,37 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.558 2013/07/03 21:21:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.567 2013/07/21 13:38:19 dilfridge Exp $
+
+  21 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  Mask phonon useflag of dev-qt/designer
+
+  19 Jul 2013; Mike Gilbert <floppym@gentoo.org> package.use.force:
+  Revert previous change; pypy-bin was committed prematurely.
+
+  19 Jul 2013; Ian Delaney <idella4@gentoo.org>
+  package.use.force:
+  Add flags for new pypy-bin
+
+  17 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Update dev-libs/weston mask for new x11-libs/cairo revision.
+
+  16 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Remove obsolete introspection masks
+
+  13 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Remove extra =
+
+  13 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask gles2&rpi flag for dev-libs/weston.
+
+  10 Jul 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Remove USE=java mask for =net-dns/libidn-1.27 (bug #472604).
+
+  05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> make.defaults:
+  Bump PHP_TARGETS to php5-4, as it should be always latest stable.
 
   03 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   Mask libcxxrt[libunwind]

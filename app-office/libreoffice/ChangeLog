@@ -1,6 +1,41 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.486 2013/06/30 21:12:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.494 2013/07/16 16:43:48 scarabeus Exp $
+
+  16 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Add dependency over libatomic_ops (firebird dep seems).
+
+  16 Jul 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag descriptions from metadata.xml
+
+  14 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  files/generate_libreoffice_package.sh:
+  Add workaround for bug 473974
+
+  13 Jul 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  files/generate_libreoffice_package.sh:
+  Minor adaptions to build script
+
+*libreoffice-4.1.0.2 (11 Jul 2013)
+
+  11 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libreoffice-4.1.0.2.ebuild,
+  -files/libreoffice-3.6-separate-checks.patch,
+  -files/libreoffice-3.6-system-pyuno.patch,
+  -files/libreoffice-4.0.0.3-boost-1.53.0.patch,
+  -files/libreoffice-4.0.1.2-boost-1.53.0.patch, -libreoffice-3.6.6.2.ebuild,
+  -libreoffice-4.1.0.1.ebuild:
+  Version bump to 4.1.0.2 remove 4.1older and 3.6.x series.
+
+  10 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-3.6.9999.ebuild, libreoffice-4.0.9999.ebuild,
+  libreoffice-4.1.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Use subslot dep over boost and remove live eubild for 3.6 series.
+
+  09 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  disable-rpath is gone.
+
+  08 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Update vigra dependency.
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libreoffice-4.0.4.2.ebuild:
   Stable for ppc, wrt bug #474066

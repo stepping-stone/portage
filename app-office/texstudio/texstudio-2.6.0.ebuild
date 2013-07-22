@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.6.0.ebuild,v 1.1 2013/06/26 13:51:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.6.0.ebuild,v 1.4 2013/07/18 02:09:20 patrick Exp $
 
 EAPI=5
 
 inherit base fdo-mime qt4-r2
 
-DESCRIPTION="Free cross-platform LaTeX editor (former texmakerX)"
+DESCRIPTION="Free cross-platform LaTeX editor (fork from texmakerX)"
 HOMEPAGE="http://texstudio.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}/TeXstudio%20${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="video"
 
 COMMON_DEPEND="
@@ -21,7 +21,7 @@ COMMON_DEPEND="
 	dev-libs/quazip
 	x11-libs/libX11
 	x11-libs/libXext
-	>=dev-qt/qtgui-4.6.1:4
+	|| ( <dev-qt/qtgui-4.8.5:4 ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer ) )
 	>=dev-qt/qtcore-4.6.1:4
 	>=dev-qt/qtscript-4.6.1:4
 	>=dev-qt/qtsvg-4.6.1:4

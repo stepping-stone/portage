@@ -1,6 +1,23 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.248 2013/06/17 06:00:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.253 2013/07/21 17:35:50 ago Exp $
+
+  21 Jul 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  add =dev-libs/cyrus-sasl-2.1.26-r3 and =dev-libs/cyrus-sasl-2.1.23-r7
+  to the existing mask
+
+  16 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Remove obsolete masks from gnome-3.2 era
+
+  13 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
+  Drop wayland mask as wayland is now keyworded.
+
+  13 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask rdp flag for dev-libs/weston.
+
+  07 Jul 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  Remove the version from cups to cover the next stable
 
   17 Jun 2013; Patrick Lauer <patrick@gentoo.org> package.use.mask:
   Fix per-arch mask of phonon[zeitgeist] #460140

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.11 2013/07/03 07:35:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.13 2013/07/12 15:56:18 slyfox Exp $
 
-EAPI=4
+EAPI=5
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://github.com/MidnightCommander/mc.git http://github.com/MidnightCommander/mc.git git://midnight-commander.org/git/mc.git"
@@ -51,7 +51,7 @@ DEPEND="${RDEPEND}
 [[ -n ${LIVE_EBUILD} ]] && DEPEND="${DEPEND} dev-vcs/cvs" # needed only for SCM source tree (autopoint uses cvs)
 
 src_prepare() {
-	epatch ${FILESDIR}/${PN}-4.8.9-unknown-opts.patch
+	epatch "${FILESDIR}/${PN}-4.8.9-unknown-opts.patch"
 
 	[[ -n ${LIVE_EBUILD} ]] && ./autogen.sh
 }
@@ -93,6 +93,11 @@ src_install() {
 	if use kernel_linux && [[ ${EUID} == 0 ]] ; then
 		fowners root:tty /usr/libexec/mc/cons.saver
 		fperms g+s /usr/libexec/mc/cons.saver
+	fi
+
+	if ! use xdg ; then
+		sed 's@MC_XDG_OPEN="xdg-open"@MC_XDG_OPEN="/bin/false"@' \
+			-i "${ED}"/usr/libexec/mc/ext.d/*.sh || die
 	fi
 }
 

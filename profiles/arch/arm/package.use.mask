@@ -1,6 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.151 2013/06/18 20:39:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.156 2013/07/21 17:35:50 ago Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
+# Keywords pending, bug #476710
+>=gnome-base/gnome-extra-apps-3.8 games
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Jul 2013)
+# requires net-misc/freerdp which is not keyworded on arm
+dev-libs/weston rdp
 
 # Patrick Lauer <patrick@gentoo.org> (17 June 2013)
 # Fix per-arch mask of phonon[zeitgeist] #460140
@@ -62,6 +70,8 @@ media-gfx/pstoedit emf
 # Eray Aslan <eras@gentoo.org> (16 Feb 2013)
 # Mask further java flag
 =dev-libs/cyrus-sasl-2.1.25-r4 java
+=dev-libs/cyrus-sasl-2.1.26-r3 java
+=dev-libs/cyrus-sasl-2.1.23-r7 java
 
 # Rick Farina <zerochaos@gentoo.org> (05 Feb 2013)
 # masking all stable packages with java use flag
@@ -81,7 +91,7 @@ dev-vcs/subversion java
 net-dns/libidn java
 =net-misc/tigervnc-1.1.0-r7 java
 =net-misc/tigervnc-1.2.0 java
-=net-print/cups-1.5.2-r4 java
+net-print/cups java
 =sys-devel/gettext-0.18.1.1-r1 java
 =sys-devel/gettext-0.18.1.1-r3 java
 =sys-devel/gettext-0.18.2 java
@@ -203,15 +213,6 @@ net-misc/tinc vde
 # so it's masked in base profile and unmasked here.
 dev-qt/qtscript -jit
 dev-qt/qtwebkit -jit
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
-# Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
-# bug #390345
-app-text/evince xps
->=gnome-base/gdm-3 accessibility fprint gnome-shell smartcard
->=gnome-base/gnome-menus-3.2 test
->=gnome-base/gnome-panel-3 eds
->=gnome-base/nautilus-3 previewer
 
 # Patrick McLean <chutzpah@gentoo.org> (08 Nov 2011)
 # mask conntrack USE flag for dnsmasq as dep is not keyworded

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.0.3.ebuild,v 1.1 2013/06/23 09:50:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.0.3.ebuild,v 1.3 2013/07/16 07:21:56 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
 inherit ruby-ng prefix
 
@@ -22,12 +22,11 @@ RDEPEND="
 	ruby_targets_jruby? ( >=dev-java/jruby-1.5.6-r1 )
 	ruby_targets_ruby19? ( >=dev-lang/ruby-1.9.3_rc1 )"
 
-# index_gem_repository.rb
-PDEPEND="server? ( dev-ruby/builder[ruby_targets_ruby18] )"
+PDEPEND="server? ( >=dev-ruby/builder-2.1 )"
 
 ruby_add_bdepend "
 	test? (
-		dev-ruby/minitest
+		virtual/ruby-minitest
 		virtual/ruby-rdoc
 	)"
 
@@ -65,7 +64,8 @@ each_ruby_prepare() {
 			sed -i -e '/test_install_location_extra_slash/,/^  end/ s:^:#:' test/rubygems/test_gem_package.rb || die
 			;;
 		*jruby)
-			sed -i -e '/test_install_location_extra_slash/,/^  end/ s:^:#:' test			# Remove failing tests. Before we did not run any tests at
+			sed -i -e '/test_install_location_extra_slash/,/^  end/ s:^:#:' test/rubygems/test_gem_package.rb || die
+			# Remove failing tests. Before we did not run any tests at
 			# all so this is actually an improvement. Should be
 			rm test/rubygems/test_gem_security{,_policy}.rb test/rubygems/test_gem_{remote_fetcher,package_tar_reader_entry,package,installer,ext_ext_conf_builder}.rb || die
 			# investigated further.

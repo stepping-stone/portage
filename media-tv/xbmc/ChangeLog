@@ -1,6 +1,28 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.189 2013/06/27 18:08:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.193 2013/07/20 16:10:24 aballier Exp $
+
+  20 Jul 2013; Alexis Ballier <aballier@gentoo.org> xbmc-9999.ebuild:
+  Fix vdpau deps again: It requires either ffmpeg-1.2.1 or a post-libav9
+  release.
+
+  06 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/xbmc-12.0-system-projectm.patch,
+  -files/xbmc-13.0-system-projectm.patch, xbmc-12.1-r1.ebuild,
+  xbmc-12.2-r1.ebuild, xbmc-9999.ebuild:
+  Remove the unbundling of projectM seems like 2.1 again does not work well even
+  after fixed underlinking (now it just crashes the xbmc with pretty trace).
+
+  06 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/xbmc-12.0-system-projectm.patch, files/xbmc-13.0-system-projectm.patch:
+  Ensure libprojectM is linked on projectM extension. Still crashes tho with 2.1
+  more investigation needed. Force due to unsynced cvs.
+
+  05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/xbmc-11.0-libav-r1.patch, -xbmc-11.0-r1.ebuild, -xbmc-12.0.ebuild,
+  -xbmc-12.1.ebuild, -xbmc-12.2.ebuild:
+  Reduce versions a bit, no need to have 6 around. Force due non-updated cvs
+  tree.
 
   27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> xbmc-12.2-r1.ebuild:
   Stable for x86, wrt bug #464552

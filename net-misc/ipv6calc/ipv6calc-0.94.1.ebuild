@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.94.1.ebuild,v 1.1 2013/05/14 07:52:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.94.1.ebuild,v 1.8 2013/07/17 09:11:53 pinkbyte Exp $
 
 EAPI="4"
 inherit fixheadtails
@@ -11,13 +11,16 @@ SRC_URI="ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="geoip"
+KEYWORDS="~alpha amd64 hppa ppc ~sparc x86 ~amd64-linux ~x86-linux"
+IUSE="geoip test"
 
-DEPEND="
-	dev-perl/URI
+RDEPEND="
 	geoip? ( >=dev-libs/geoip-1.4.7 )
 "
+DEPEND="${RDEPEND}
+	test? ( dev-perl/Digest-SHA1 )"
+
+#dev-perl/URI is needed for web interface, that is not installed now
 
 src_prepare() {
 	ht_fix_file configure
@@ -26,8 +29,8 @@ src_prepare() {
 src_configure() {
 	if use geoip; then
 		myconf=$(use_enable geoip)
-		myconf+=" --with-geoip-ipv4-default-file=/usr/share/GeoIP/GeoIP.dat"
-		myconf+=" --with-geoip-ipv6-default-file=/usr/share/GeoIP/GeoIPv6.dat"
+		myconf+=" --with-geoip-ipv4-default-file=${EPREFIX}/usr/share/GeoIP/GeoIP.dat"
+		myconf+=" --with-geoip-ipv6-default-file=${EPREFIX}/usr/share/GeoIP/GeoIPv6.dat"
 	fi
 	econf ${myconf}
 }

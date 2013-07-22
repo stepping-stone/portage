@@ -1,6 +1,59 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.870 2013/07/03 09:22:39 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.886 2013/07/21 19:00:56 mgorny Exp $
+
+  21 Jul 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Replace local+export with "local -x".
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> db.eclass, db-use.eclass:
+  Cleanup due #231248
+
+  19 Jul 2013; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
+  Support different tarball extentions
+
+  18 Jul 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  libffi installation was fixed in 4.8.
+
+  18 Jul 2013; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
+  Wrap lines at 80 char
+
+  15 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  bash-completion-r1.eclass:
+  Support pkg-config and the new upstream completions directory structure wrt
+  #472938 and introduce new get_bashhelpersdir function to obtain the
+  helpersdir="" value.
+
+  15 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> kernel-2.eclass:
+  Deprecate media-sound/alsa-headers by letting sys-kernel/linux-headers
+  install the required sound/ headers wrt #468712#c6
+
+  14 Jul 2013; Julian Ospald <hasufell@gentoo.org> cmake-utils.eclass:
+  add CMAKE_WARN_UNUSED_CLI
+
+  11 Jul 2013; Ulrich Müller <ulm@gentoo.org> bzr.eclass:
+  New variable EBZR_UNPACK_DIR.
+
+  11 Jul 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Add a safety check for using python_optimize() in pkg_*.
+
+  11 Jul 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Fix typo in compileall call.
+
+  11 Jul 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Add multilib_is_native_abi helper.
+
+  10 Jul 2013; Robin H. Johnson <robbat2@gentoo.org> db.eclass:
+  Additional change to run tests successfully on newer versions of db
+
+  09 Jul 2013; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass:
+  Stub-out ez_setup.py and distribute_setup.py to prevent packages from
+  downloading their own copy of setuptools.
+
+  06 Jul 2013; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Update SRC_URI. Drop support for EAPI 3.
+
+  05 Jul 2013; Tom Wijsman <TomWij@gentoo.org> ant-tasks.eclass:
+  Update ant-tasks for 1.9.1 version bump, needs 1.5 as minimal JDK / JRE version.
 
   03 Jul 2013; Michael Palimaka <kensington@gentoo.org> kde4-functions.eclass:
   Deprecate EAPI 3.

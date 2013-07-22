@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5-r1.ebuild,v 1.9 2013/06/29 19:25:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5-r1.ebuild,v 1.11 2013/07/11 20:19:46 hasufell Exp $
 
 EAPI=5
 
@@ -9,11 +9,11 @@ inherit autotools eutils gnome2-utils mono multilib python-single-r1
 
 DESCRIPTION="Graphical IRC client based on XChat"
 SRC_URI="mirror://github/${PN}/${PN}/${P}.tar.xz"
-HOMEPAGE="http://www.hexchat.org/"
+HOMEPAGE="http://hexchat.github.io/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 sparc x86 ~amd64-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux"
 IUSE="dbus fastscroll +gtk ipv6 libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python spell ssl theme-manager"
 REQUIRED_USE="plugin-checksum? ( plugins )
 	plugin-doat? ( plugins )

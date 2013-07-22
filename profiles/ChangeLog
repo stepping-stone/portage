@@ -1,10 +1,212 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8004 2013/07/04 06:04:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8065 2013/07/21 16:35:18 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jul 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  rather mask all sci-geosciences/googleearth versions
+
+  21 Jul 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask broken googleearth versions
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> use.desc:
+  Add connman to global
+  (http://gentoo.2317880.n4.nabble.com/Make-connman-a-global-USE-flag-td46400.h
+  tml)
+
+  21 Jul 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask multilib LLVM and clang meta-package requiring it for testing.
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask packages for removal
+
+  21 Jul 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Clean obsolete entries
+
+  21 Jul 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask ruby18-only packages in dev-ruby for removal.
+
+  21 Jul 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  remove mask entry, because bug is fixed
+
+  20 Jul 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask profile-sync-daemon
+
+  20 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Raise the multilib copy of libpng from 1.6.2-r1 to 1.6.3-r1.
+
+  20 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask ffmpeg 1.2
+
+  20 Jul 2013; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
+  arch/arm/package.use.mask, arch/ia64/package.use.mask,
+  arch/powerpc/package.use.mask, arch/sparc/package.use.mask,
+  arch/x86/package.use.mask:
+  Mask due keywords pending, bug #476710
+
+  20 Jul 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
+  d-feet is now fixed
+
+  19 Jul 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Drop qt 4.8.5 mask
+
+  18 Jul 2013; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Remove =x11-misc/xlockmore-5.42 mask.
+
+  18 Jul 2013; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Update chromium dev channel mask for M30.
+
+  17 Jul 2013; Michael Weber <xmw@gentoo.org> package.mask:
+  Mask Raspberry Pi upstream next versions.
+
+  17 Jul 2013; Justin Lecher <jlec@gentoo.org> package.mask:
+  Mask sci-biology/allpaths to force conversion to sci-biology/allpathslg
+
+  16 Jul 2013; Julian Ospald <hasufell@gentoo.org>
+  hardened/linux/amd64/no-multilib/package.mask:
+  mask games-action/intrusion2 for hardened multilib
+
+  16 Jul 2013; Julian Ospald <hasufell@gentoo.org>
+  hardened/linux/amd64/no-multilib/package.mask:
+  mask games-action/awesomenauts for hardened multilib
+
+  16 Jul 2013; Mikle Kolyada <zlogene@gentoo.org> package.mask:
+  Mask dev-perl/Date-ISO for removal.
+
+  16 Jul 2013; Julian Ospald <hasufell@gentoo.org>
+  hardened/linux/amd64/no-multilib/package.mask:
+  mask games-rpg/dear-esther for hardened multilib
+
+  16 Jul 2013; Julian Ospald <hasufell@gentoo.org>
+  hardened/linux/amd64/no-multilib/package.mask:
+  mask games-misc/little-inferno for hardened multilib
+
+  16 Jul 2013; Julian Ospald <hasufell@gentoo.org> license_groups:
+  add Gameplay-Group-EULA to EULA license group
+
+  16 Jul 2013; Fabio Erculiani <lxnay@gentoo.org> thirdpartymirrors:
+  update sabayon mirrors
+
+  16 Jul 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask dev-ruby/fssm for removal.
+
+  16 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Remove obsolete gdm-2.3* mask, these are gone from the tree
+
+  15 Jul 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask libffi due to multilib conversion
+
+  15 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite media-sound/alsa-headers as part of the process of moving the
+  headers to the sys-kernel/linux-headers package wrt #468712
+
+  14 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  media-sound/line6usb is no more because it was abadoned and broken, remove
+  entry
+
+  13 Jul 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Update Gnome 3.8 mask
+
+  12 Jul 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Add multilib udis86 to the p.mask.
+
+  12 Jul 2013; Ian Delaney <idella4@gentoo.org> package.mask:
+  dev-python/elixir purged, see Bug #472496
+
+  12 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
+  Mask live ebuild for 'app-misc/mc'.
+
+  12 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Remove obsolete mask on dev-util/lafilefixer
+
+  11 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Remove mask on xf86-input-citron which has been dropped.
+
+  11 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  mask pwlib/openh323 for removal, bug #290062 and #290063.
+
+  11 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Adjust masks on xchat-related stuff
+
+  11 Jul 2013; Pacho Ramos <pacho@gentoo.org>
+  targets/desktop/gnome/make.defaults:
+  Enable introspection for gnome profile as discussed with the team via mail
+
+  11 Jul 2013; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Remove mtr-0.83 mask.
+
+  10 Jul 2013; Justin Lecher <jlec@gentoo.org> package.mask:
+  Drop obsolete entries
+
+  10 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Added mask for sys-libs/db-6.0*
+
+  09 Jul 2013; Hans de Graaff <graaff@gentoo.org> base/package.use.force:
+  Make sure ruby20-only virtual get the right USE flags. Thanks to Arfrever for
+  noticing.
+
+  09 Jul 2013; Michael Weber <xmw@gentoo.org> package.mask:
+  Remove dev-scheme/chicken mask
+
+  09 Jul 2013; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Mask Qt 4.8.5
+
+  09 Jul 2013; Hanno Boeck <hanno@gentoo.org> package.mask:
+  Mask deprecated openvas-packages.
+
+  09 Jul 2013; <creffett@gentoo.org> package.mask:
+  Mask tg-widgets-scriptaculous and tg-widgets-lightbox for lastrite, bug
+  284890.
+
+  09 Jul 2013; Michael Weber <xmw@gentoo.org> package.mask:
+  Masked <net-ftp/proftpd-1.3.4c for security bug 450746, CVE-2012-6095
+
+  08 Jul 2013; Michael Weber <xmw@gentoo.org> package.mask:
+  Masked <sys-kernel/openvz-sources-2.6.32.76.8 for security bug 469956,
+  CVE-2013-2094
+
+  08 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Drop boost-1.53 mask, bug #474876.
+
+  08 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Update syslinux mask for new prerelease.
+
+  08 Jul 2013; Michael Weber <xmw@gentoo.org> package.mask:
+  Fix typo/invalid token
+
+  08 Jul 2013; Michael Weber <xmw@gentoo.org> package.mask:
+  Mask dev/scheme/chicken-4.8.0.3-r1 for testing/approval, bugs 467966 469392
+  462458
+
+  08 Jun 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Remove mask on dev-java/pat, USE=doc works after a trivial fix.
+
+  08 Jun 2013: Vicente Olivert Riera <vincent@gentoo.org>
+  package.mask: Fails to install. Maintainer suggested treeclean.
+  Masked for removal in 30 days, bug #440670.
+
+  07 Jun 2013; Rick Farina <zerochaos@gentoo.org>
+  package.mask: removing gnuradio-3.7 and gr-osmosdr-0.1.0/gr-iqbal 
+  masks now that upstream has a working release
+
+  07 Jun 2013; Rick Farina <zerochaos@gentoo.org>
+  package.mask: adding gr-iqbal-0.37.0 and gr-osmosdr-0.1.0, they don't 
+  work together due to upstream issues
+
+  07 Jun 2013; Rick Farina <zerochaos@gentoo.org>
+  package.mask: masking gnuradio-3.7 because basically nothing works 
+  with it
+
+  06 Jul 2013; Ulrich Müller <ulm@gentoo.org> +updates/3Q-2013:
+  Move app-emacs/gentoo-syntax to app-emacs/ebuild-mode.
+  Move app-xemacs/gentoo-syntax to app-xemacs/ebuild-mode.
 
   04 Jul 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
   Unmask telepathy-logger-0.8 as requested by Johu on IRC (thanks also to

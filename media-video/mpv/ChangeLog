@@ -1,6 +1,48 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.7 2013/06/15 08:17:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.17 2013/07/19 08:47:38 tomwij Exp $
+
+  19 Jul 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Clean up of metadata.xml. Do not express assignment in description for normal
+  situations, just list the to be assigned maintainer first as our scripts pick
+  up that one and we don't want to manually correct this every time; herds also
+  maintain a package, so they don't need to be listed twice.
+
+  17 Jul 2013; Tom Wijsman <TomWij@gentoo.org> mpv-0_p20130715.ebuild,
+  mpv-9999.ebuild:
+  Made ffmpeg dependency consistent; that way, it doesn't satisfy and block
+  itself at the same time if the user has a lower version installed. Discovered
+  in topic #964594 on the Gentoo Forums.
+
+*mpv-0_p20130715 (15 Jul 2013)
+
+  15 Jul 2013; Luca Barbato <lu_zero@gentoo.org> +mpv-0_p20130715.ebuild,
+  mpv-9999.ebuild:
+  First snapshot and live ebuild update thanks to Nikoli
+
+  09 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
+  Do not enable debug by default. Patch from Nikoli.
+
+  09 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
+  Few fixes from nikoli. Put ffmpeg deps on top. Use subslot on libav.
+
+  08 Jul 2013; Tom Wijsman <TomWij@gentoo.org> mpv-9999.ebuild:
+  Proxy commit by Nikoli: Explicitly depend on libav-9 and ffmpeg-1.2 instead of
+  virtual/ffmpeg-9, fixes bug #476222. Remove warning about CFLAGS and LDFLAGS,
+  we now append our flags instead of replacing upstream's flags. Removed some
+  configure options which upstream no longer provides, some USE flag behavior
+  was changed as a result. USE flag radio now has correct dependencies, it no
+  longer depends on oss; added threads USE flag.
+
+  08 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Fix repoman warning.
+
+  08 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
+  Remove networking code switches as the code was dropped.
+
+  05 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml,
+  mpv-9999.ebuild:
+  Add few new useflag and enable quvi by default. Thanks to Nikoli for coop.
 
   15 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
   Raise dep on libxbcommon. Thanks to Nikoli for patch.

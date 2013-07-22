@@ -1,10 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.485 2013/07/03 21:21:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.491 2013/07/21 13:38:19 dilfridge Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (21 Jul 2013)
+# designer is pulled in by kdelibs, designer[phonon] blocks kdelibs...
+# Lots of reports on difficulties. Acked by kensington for qt team
+dev-qt/designer phonon
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Jul 2013)
+# GL/GLES support in cairo is mutually exclusive, bug #428770.
+x11-libs/cairo gles2
+dev-libs/weston gles2 rpi
 
 # Alexis Ballier <aballier@gentoo.org> (03 Jul 2013)
 # The idea behind using libunwind there is to avoid needing to link to libgcc_s
@@ -24,10 +34,6 @@ net-libs/cyassl aes-ni
 # Sergey Popov <pinkbyte@gentoo.org> (08 Jun 2013)
 # mask because requires unstable depends not ready for the stabilization
 app-leechcraft/leechcraft-meta unstable
-
-# Jeroen Roovers <jer@gentoo.org> (07 Jun 2013)
-# USE=java fails (bug #472604)
-=net-dns/libidn-1.27 java
 
 # Robin H. Johnson <robbat2@gentoo.org> (02 Jun 2013)
 # PBXT is no longer supported by upstream, and fails testcases.
@@ -337,15 +343,8 @@ dev-libs/glib systemtap
 # Nirbheek Chauhan <nirbheek@gentoo.org> (16 Aug 2011)
 # Mask introspection on ebuilds that went stable before it was unmasked.
 # As these ebuilds are cleaned from the tree, the masks can be removed.
-<dev-libs/glib-2.30.0 introspection
 <app-crypt/seahorse-2.32.0-r1 introspection
-<dev-libs/libunique-1.1.6-r1 introspection
-<gnome-base/gnome-menus-2.30.5-r1 introspection
 <media-libs/babl-0.1.4-r1 introspection
-<media-libs/clutter-gtk-1 introspection
-<media-libs/libchamplain-0.9 introspection
-<net-libs/gssdp-0.8 introspection
-<net-libs/gupnp-0.15 introspection
 <www-client/epiphany-3 introspection
 
 # Robin H. Johnson <robbat2@gentoo.org> (10 Jul 2011)

@@ -1,6 +1,27 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.217 2013/05/16 07:01:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.222 2013/07/18 20:58:17 creffett Exp $
+
+  18 Jul 2013; Chris Reffett <creffett@gentoo.org> avidemux-2.5.6-r2.ebuild,
+  avidemux-2.6.2-r1.ebuild, avidemux-2.6.3.ebuild:
+  Convert base_src_prepare to cmake-utils_src_prepare, bug 475516
+
+*avidemux-9999 (17 Jul 2013)
+
+  17 Jul 2013; Tom Wijsman <TomWij@gentoo.org> +avidemux-9999.ebuild,
+  avidemux-2.6.4.ebuild:
+  Made 9999 ebuild that uses upstream's git, applied various cmake related
+  ebuild fixes to simplify maintenance; thanks to Nikoli for the suggestion.
+
+  12 Jul 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-2.6.4.ebuild:
+  Cleaned up ebuild to make it shorter, use the eclass more and lowercase
+  variables.
+
+  12 Jul 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-2.6.4.ebuild:
+  Loosen avidemux dependencies.
+
+  07 Jul 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-2.5.6-r2.ebuild:
+  Add sub slot operator for media-libs/x264 dependency.
 
 *avidemux-2.6.4 (16 May 2013)
 

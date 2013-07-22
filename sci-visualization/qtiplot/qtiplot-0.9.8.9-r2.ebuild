@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.1 2013/07/04 12:52:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.3 2013/07/12 15:22:16 jlec Exp $
 
 EAPI=5
 
@@ -107,7 +107,6 @@ src_prepare() {
 	EMF_INCLUDEPATH = "${EPREFIX}/usr/include/libEMF
 	SYS_LIBS = -lgl2ps ${mylibs} -lGLU
 
-	PYTHON = ${PYTHON}
 	LUPDATE = lupdate
 	LRELEASE = lrelease
 
@@ -127,16 +126,22 @@ src_prepare() {
 	use bindist && echo "DEFINES         += QTIPLOT_SUPPORT" >> build.conf
 	use bindist || echo "DEFINES         += QTIPLOT_PRO" >> build.conf
 	use python && echo "SCRIPTING_LANGS += Python" >> build.conf
+	use python && echo "PYTHON = ${EPYTHON}" >> build.conf
 	use latex && echo "TEX_ENGINE_LIBS = -lQTeXEngine" >> build.conf
 
 	sed \
 		-e "s:doc/${PN}/manual:doc/${PN}/html:" \
-		-e "s:/usr/local/${PN}:${EPREFIX}$(python_get_sitedir)/qtiplot:" \
 		-e '/INSTALLS.*documentation/d' \
 		-e '/INSTALLS.*manual/d' \
 		-e "/INSTALLBASE/s: /usr: ${EPREFIX}/usr:g" \
 		-e 's:/usr/local/qtiplot:$$INSTALLBASE:g' \
 		-i qtiplot/qtiplot.pro || die
+
+	if use python; then
+		sed \
+			-e "s:/usr/local/${PN}:${EPREFIX}$(python_get_sitedir)/qtiplot:" \
+			-i qtiplot/qtiplot.pro || die
+	fi
 
 	sed \
 		-e "/^target.path/s:/usr:${EPREFIX}/usr:g" \

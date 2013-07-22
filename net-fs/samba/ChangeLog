@@ -1,6 +1,22 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.582 2013/06/20 18:23:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.585 2013/07/20 17:44:20 jer Exp $
+
+  20 Jul 2013; Jeroen Roovers <jer@gentoo.org> samba-4.0.6.ebuild,
+  samba-4.0.7.ebuild:
+  Marked ~hppa too.
+
+  13 Jul 2013; Pacho Ramos <pacho@gentoo.org> +files/nmbd.service,
+  +files/samba.conf, +files/smbd.service, +files/smbd.socket,
+  +files/smbd_at.service, +files/winbindd.service, samba-3.6.16.ebuild,
+  samba-4.0.7.ebuild:
+  Install unit file (#433074)
+
+*samba-4.0.7 (08 Jul 2013)
+
+  08 Jul 2013; Lars Wendler <polynomial-c@gentoo.org> -samba-4.0.5.ebuild,
+  +samba-4.0.7.ebuild:
+  Version bump. Removed old.
 
   20 Jun 2013; Lars Wendler <polynomial-c@gentoo.org> samba-3.6.16.ebuild:
   Added sys-libs/tevent to DEPEND. Thanks to Grzegorz {NineX} Krzystek for
