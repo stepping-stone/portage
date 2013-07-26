@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.8.3.ebuild,v 1.1 2013/06/25 17:16:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.8.3.ebuild,v 1.3 2013/07/25 22:39:30 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes" # plugins are dlopened
-PYTHON_COMPAT=( python3_2 )
+PYTHON_COMPAT=( python3_{2,3} )
 
 inherit gnome2 multilib python-r1 eutils virtualx
 
@@ -22,7 +22,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~
 
 # X libs are not needed for OSX (aqua)
 COMMON_DEPEND="
-	>=x11-libs/libSM-1.0
 	>=dev-libs/libxml2-2.5.0:2
 	>=dev-libs/glib-2.35.4:2
 	>=x11-libs/gtk+-3.7.10:3[introspection?]
@@ -33,8 +32,6 @@ COMMON_DEPEND="
 	gnome-base/gvfs
 
 	x11-libs/libX11
-	x11-libs/libICE
-	x11-libs/libSM
 
 	net-libs/libsoup:2.4
 

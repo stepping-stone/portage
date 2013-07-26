@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.3 2013/07/21 16:09:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.11 2013/07/25 15:09:55 idella4 Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ DOCS=( README docs/README.xen-bugtool )
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="api custom-cflags debug doc flask hvm qemu ocaml pygrub screen static-libs xend"
+IUSE="api custom-cflags debug doc flask hvm qemu ocaml python pygrub screen static-libs xend"
 
 REQUIRED_USE="hvm? ( qemu )"
 
@@ -66,8 +66,10 @@ DEPEND="${CDEPEND}
 		dev-texlive/texlive-pictures
 		dev-texlive/texlive-latexrecommended
 	)
-	hvm? (  x11-proto/xproto
-		!net-libs/libiscsi )"
+	hvm? ( x11-proto/xproto
+		!net-libs/libiscsi )
+	qemu? ( x11-libs/pixman
+		!app-emulation/qemu )"
 
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
@@ -150,7 +152,11 @@ src_prepare() {
 	fi
 
 	if ! use pygrub; then
-		sed -e '/^SUBDIRS-$(PYTHON_TOOLS) += pygrub$/d' -i tools/Makefile || die
+		sed -e '/^SUBDIRS-y += pygrub/d' -i tools/Makefile || die
+	fi
+
+	if ! use python; then
+		sed -e '/^SUBDIRS-y += python$/d' -i tools/Makefile || die
 	fi
 
 	# Disable hvm support on systems that don't support x86_32 binaries.
@@ -208,11 +214,14 @@ src_prepare() {
 	sed -e 's:^BASH_COMPLETION_DIR ?= $(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(SHARE_DIR)/bash-completion:' \
 		-i Config.mk || die
 
+	# Bug 477676
+	epatch "${FILESDIR}"/${PN}-4.3-ar-cc.patch
+
 	epatch_user
 }
 
 src_configure() {
-	econf --prefix=/usr
+	econf --prefix=/usr --disable-werror
 }
 
 src_compile() {
@@ -227,7 +236,7 @@ src_compile() {
 
 	unset LDFLAGS
 	unset CFLAGS
-	emake CC="$(tc-getCC)" LD="$(tc-getLD)" -C tools ${myopt}
+	emake CC="$(tc-getCC)" LD="$(tc-getLD)" AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" -C tools ${myopt}
 
 	use doc && emake -C docs txt html
 	emake -C docs man-pages
@@ -288,9 +297,10 @@ src_install() {
 		keepdir /var/log/xen-consoles
 	fi
 
+	# Move files built with use qemu, Bug #477884
 	if [[ "${ARCH}" == 'amd64' ]] && use qemu; then
 		mkdir -p "${D}"usr/$(get_libdir)/xen/bin || die
-		mv "${D}"usr/lib/xen/bin/{qemu*,vscclient,virtfs-proxy-helper} "${D}"usr/$(get_libdir)/xen/bin/ || die
+		mv "${D}"usr/lib/xen/bin/* "${D}"usr/$(get_libdir)/xen/bin/ || die
 	fi
 
 	# For -static-libs wrt Bug 384355

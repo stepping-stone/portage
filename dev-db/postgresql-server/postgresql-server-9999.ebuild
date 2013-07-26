@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.8 2013/04/04 16:24:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.10 2013/07/25 04:08:54 patrick Exp $
 
 EAPI="5"
 
@@ -11,12 +11,12 @@ inherit autotools eutils flag-o-matic multilib pam prefix python-single-r1 user 
 
 KEYWORDS=""
 
-SLOT="9.3"
+SLOT="9.4"
 
 EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
 
 SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-initscript-2.4.tbz2
-	http://dev.gentoo.org/~titanofold/postgresql-patches-9.2beta2.tbz2"
+	http://dev.gentoo.org/~titanofold/postgresql-patches-9.3-r1.tbz2"
 
 # Comment the following six lines when not a beta or rc.
 #MY_PV="${PV//_}"
@@ -78,6 +78,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# silly version changes
+	sed -i -e 's/2012/2013/' -e 's/9.3beta2/9.4devel/' "${WORKDIR}/autoconf.patch" || die
+
 	epatch "${WORKDIR}/autoconf.patch" \
 		"${WORKDIR}/bool.patch" \
 		"${WORKDIR}/server.patch"
@@ -165,6 +168,8 @@ src_install() {
 		keepdir /run/postgresql
 		fperms 0770 /run/postgresql
 	fi
+	# collides with -base, might be unneeded even in base?
+	rm "${D}/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)/libpgcommon.a"
 }
 
 pkg_postinst() {

@@ -1,6 +1,31 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.886 2013/07/21 19:00:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.894 2013/07/25 13:13:18 pva Exp $
+
+  25 Jul 2013; Peter Volkov <pva@gentoo.org> font.eclass:
+  Droped media-libs/fontconfig dependency, bug 446012.
+
+  25 Jul 2013; Michał Górny <mgorny@gentoo.org> vcs-snapshot.eclass:
+  Add some debug.
+
+  24 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> cmake-utils.eclass:
+  Fix function desc to match reality.
+
+  24 Jul 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Add back LICENSE (bug #477836).
+
+  23 Jul 2013; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
+  Handle dev-qt/desinger split from dev-qt/gui, see bug #477934.
+
+  23 Jul 2013; Michał Górny <mgorny@gentoo.org> bash-completion-r1.eclass:
+  Fix typo.
+
+  22 Jul 2013; Fabian Groffen <grobian@gentoo.org> bash-completion-r1.eclass:
+  Another attempt at fixing bash-completion for Prefix, bug #477692#c9
+
+  22 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
+  bash-completion-r1.eclass:
+  Remove use of EPREFIX wrt #477692 to avoid collision with Portage helpers
 
   21 Jul 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Replace local+export with "local -x".
