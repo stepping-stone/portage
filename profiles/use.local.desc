@@ -219,6 +219,7 @@ app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is curren
 app-arch/cabextract:extra-tools - Install experimental tools: wince_info and wince_rename for examining and processing Windows CE installation cabinet header files; cabinfo for examining the structure of a cab file.
 app-arch/cfv:bittorrent - Enable support for checking .torrent files
 app-arch/dpkg:dselect - Build the dselect package-management frontend
+app-arch/dpkg:update-alternatives - Install update-alternatives
 app-arch/dump:ermt - encrypted rmt support
 app-arch/file-roller:nautilus - Enable file-roller to integrate with gnome-base/nautilus by providing entries in its context menu
 app-arch/file-roller:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
@@ -593,6 +594,7 @@ app-forensics/afflib:s3 - Enable support for Amazon S3
 app-forensics/aide:audit - Enable support for sys-process/audit
 app-forensics/aide:prelink - Enable support for sys-devel/prelink
 app-forensics/chkrootkit:cron - Install cron script for weekly rootkit scans
+app-forensics/libewf:bfio - Enables libbfio for chaining file in file handling
 app-forensics/libewf:ewf - Enables the v1 API
 app-forensics/libewf:fuse - Enable fuse support for ewfmount
 app-forensics/libewf:rawio - Enables raw IO handling
@@ -601,7 +603,6 @@ app-forensics/openscap:nss - Prefer NSS over libgcrypt as the crypto engine
 app-forensics/openscap:rpm - Compiles the RPM probes
 app-forensics/openscap:sql - Build the sql independant probes
 app-forensics/ovaldi:rpm - Enable the RPM probes
-app-forensics/rdd:rawio - Enables raw IO handling
 app-forensics/sleuthkit:aff - Enable extra aff formats
 app-forensics/sleuthkit:ewf - Enable libewf support
 app-i18n/anthy:canna-2ch - Enable support for app-dicts/canna-2ch
@@ -1596,21 +1597,24 @@ dev-libs/totem-pl-parser:introspection - Use dev-libs/gobject-introspection for 
 dev-libs/totem-pl-parser:quvi - Use media-libs/quvi for parsing video links
 dev-libs/ucommon:socks - Build with socks proxy support
 dev-libs/udis86:pic - Force shared libraries to be built as PIC
-dev-libs/weston:clients - Enable support for clients.
-dev-libs/weston:colord - Allow setting color managment.
-dev-libs/weston:drm - Enable drm compositor support.
-dev-libs/weston:egl - Enable egl acceleration.
-dev-libs/weston:fbdev - Enable fbdev compositor support.
-dev-libs/weston:gles2 - Use GLESv2 cairo instead of full GL.
-dev-libs/weston:headless - Headless backend and a noop renderer, mainly for testing purposes.
-dev-libs/weston:rdp - Enable Remote Desktop Protocol compositor support.
-dev-libs/weston:resize-optimization - Increase performance, allocate more RAM. Recommended to disable on Raspberry Pi.
-dev-libs/weston:rpi - Raspberry Pi GPU support.
-dev-libs/weston:simple-clients - Enable simple-clients?.
-dev-libs/weston:tablet - Enable interface for tablets.
-dev-libs/weston:wayland-compositor - Enable Wayland compositor support.
-dev-libs/weston:x11 - Enable X11 compositor support.
-dev-libs/weston:xwayland - Enable ability support native X11 applications.
+dev-libs/weston:clients - Enable support for clients
+dev-libs/weston:colord - Allow setting color managment
+dev-libs/weston:drm - Enable drm compositor support
+dev-libs/weston:editor - Install wayland-editor example application
+dev-libs/weston:egl - Enable egl acceleration
+dev-libs/weston:fbdev - Enable fbdev compositor support
+dev-libs/weston:gles2 - Use GLESv2 cairo instead of full GL
+dev-libs/weston:headless - Headless backend and a noop renderer, mainly for testing purposes
+dev-libs/weston:rdp - Enable Remote Desktop Protocol compositor support
+dev-libs/weston:resize-optimization - Increase performance, allocate more RAM. Recommended to disable on Raspberry Pi
+dev-libs/weston:rpi - Raspberry Pi GPU support
+dev-libs/weston:simple-clients - Enable simple-clients
+dev-libs/weston:tablet - Enable interface for tablets
+dev-libs/weston:unwind - Enable libunwind usage for backtraces
+dev-libs/weston:view - Install wayland-view example application
+dev-libs/weston:wayland-compositor - Enable Wayland compositor support
+dev-libs/weston:x11 - Enable X11 compositor support
+dev-libs/weston:xwayland - Enable ability support native X11 applications
 dev-libs/xapian:brass - Enabled brass backend db support
 dev-libs/xapian:chert - Enabled chert backend db support
 dev-libs/xapian:inmemory - Enabled inmemory backend db support
@@ -1712,6 +1716,7 @@ dev-php/pecl-apcu:lock_semaphore - Enable semaphore locks instead of fcntl
 dev-php/pecl-apcu:lock_spinlock - Enable spin locks (EXPERIMENTAL)
 dev-php/pecl-memcached:igbinary - Enable support for the igbinary serializer
 dev-php/pecl-memcached:json - Enable support for json serialization
+dev-php/pecl-redis:igbinary - Enables igbinary serialisation support
 dev-php/smarty-docs:html - Install the documentation in HTML format
 dev-php/smarty-docs:pdf - Install the documentation in PDF format
 dev-python/PyFoam:extras - Enable optional dependencies
@@ -1796,6 +1801,7 @@ dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pypy:sandbox - Enable sandboxing functionality
 dev-python/pypy:shadowstack - Use a shadow stack for finding GC roots
+dev-python/pypy-bin:shadowstack - Use a shadow stack for finding GC roots
 dev-python/pyquery:beautifulsoup3 - Support BeautifulSoup 3
 dev-python/pyrax:keyring - adds support for the keyring auth backend
 dev-python/pyside:X - Build QtGui, QtDesigner, QtTest and QtUiTools modules
@@ -2332,6 +2338,12 @@ games-rpg/nwn-data:nowin - For those people who cant grab the 1.2 gigs of data f
 games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
 games-rpg/sumwars:tools - Builds editor tools
 games-rpg/valyriatear:editor - Compile the Qt editor along with the game
+games-simulation/corsix-th:ffmpeg - Use ffmpeg for playing in-game cutscenes.
+games-simulation/corsix-th:midi - Use SDL mixer and timidity for in-game music.
+games-simulation/corsix-th:opengl - Use OpenGL for rendering.
+games-simulation/corsix-th:sdl - Use SDL for rendering.
+games-simulation/corsix-th:sound - Use SDL mixer for in-game sound.
+games-simulation/corsix-th:truetype - Use high quality fonts.
 games-simulation/flightgear:fgpanel - Enables standalone lightweight 2D-panel rendering utility
 games-simulation/flightgear:jsbsim - Enables JSBSim Flight Dynamics Model (default)
 games-simulation/flightgear:oldfdm - Enables deprecated Flight Dynamics Models (LaRCsim, UIUC)
@@ -2460,6 +2472,7 @@ gnome-extra/libgda:bindist - Disable support for dev-db/firebird database which 
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
 gnome-extra/libgda:http - Enable embedded net-libs/libsoup based server
 gnome-extra/libgda:json - Enable support for JSON format
+gnome-extra/libgda:libsecret - Enable app-crypt/libsecret support to store login credentials
 gnome-extra/libgda:mdb - Enable support for Microsoft Access database using app-office/mdbtools
 gnome-extra/libgda:reports - Install tools for generating graphical reports
 gnome-extra/libgda:sourceview - Enable support for x11-libs/gtksourceview
@@ -5530,6 +5543,7 @@ sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/fre
 sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
 sci-libs/opencascade:tbb - tEnable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/openfoam:opendx - Install opendx visualisation tool
+sci-libs/openfoam:src - Install source files
 sci-libs/openmm:cuda - enable cuda back-end
 sci-libs/openmm:opencl - enable opencl back-end
 sci-libs/openmm:wrappers - build wrappers for Python, C and Fortran
@@ -5778,7 +5792,6 @@ sys-apps/pciutils:zlib - Support compressed pci.ids database
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
 sys-apps/pcsc-lite:libusb - Use dev-libs/libusb detection to hotplug new smartcard readers. This flag should only be enabled if you're running a non-Linux kernel or you don't want to use sys-fs/udev.
 sys-apps/pcsc-lite:udev - Use sys-fs/udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
-sys-apps/pcsc-lite:usb - Use dev-libs/libusb detection to hotplug new smartcard readers. This flag only makes sense on non-Linux systems, as on Linux, sys-fs/udev is used instead.
 sys-apps/pcsc-tools:network-cron - Monthly cronjob the update-smartcard_list script
 sys-apps/pkgcore:doc - Build and install API docs.
 sys-apps/policycoreutils:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
@@ -6064,7 +6077,6 @@ sys-fs/eudev:hwdb - read vendor/device string database and add it to udev databa
 sys-fs/eudev:introspection - Use dev-libs/gobject-introspection for introspection
 sys-fs/eudev:keymap - map custom hardware's multimedia keys
 sys-fs/eudev:kmod - enable module loading through libkmod (requires modules)
-sys-fs/eudev:legacy-libudev - install libudev.so.0 to help with migration from udev-179 or older
 sys-fs/eudev:modutils - enable module loading support
 sys-fs/eudev:openrc - install the OpenRC init scripts
 sys-fs/eudev:rule-generator - install legacy rule generator rules and support scripts - note that the functionality within was dropped from sys-fs/udev as it is not stable in all cases; use at your own risk

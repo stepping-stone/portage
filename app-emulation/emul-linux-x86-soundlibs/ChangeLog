@@ -1,6 +1,41 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.97 2013/07/15 18:57:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.102 2013/07/30 00:01:12 aballier Exp $
+
+*emul-linux-x86-soundlibs-20130224-r9 (30 Jul 2013)
+
+  30 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-soundlibs-20130224-r8.ebuild,
+  +emul-linux-x86-soundlibs-20130224-r9.ebuild, files/remove-native:
+  new revision featuring portaudio migration
+
+*emul-linux-x86-soundlibs-20130224-r8 (29 Jul 2013)
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-soundlibs-20130224-r7.ebuild,
+  +emul-linux-x86-soundlibs-20130224-r8.ebuild, files/remove-native:
+  new revision featuring jack migration
+
+*emul-linux-x86-soundlibs-20130224-r7 (29 Jul 2013)
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-soundlibs-20130224-r6.ebuild,
+  +emul-linux-x86-soundlibs-20130224-r7.ebuild, files/remove-native:
+  New revision featuring migrated libsndfile, libsamplerate and twolame
+
+*emul-linux-x86-soundlibs-20130224-r6 (28 Jul 2013)
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-soundlibs-20130224-r5.ebuild,
+  +emul-linux-x86-soundlibs-20130224-r6.ebuild, files/remove-native:
+  new revision featuring migrated musepack-tools
+
+*emul-linux-x86-soundlibs-20130224-r5 (28 Jul 2013)
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-soundlibs-20130224-r4.ebuild,
+  +emul-linux-x86-soundlibs-20130224-r5.ebuild, files/remove-native:
+  new revision removing wavpack and cdparanoia
 
   15 Jul 2013; Samuli Suominen <ssuominen@gentoo.org>
   emul-linux-x86-soundlibs-20130224-r4.ebuild:

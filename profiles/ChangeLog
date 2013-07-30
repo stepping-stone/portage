@@ -1,10 +1,55 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8076 2013/07/25 17:17:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8092 2013/07/30 01:28:31 mattst88 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jul 2013; Matt Turner <mattst88@gentoo.org> releases/make.defaults:
+  Drop gpm from default release USE flags, bug 449364.
+
+  30 Jul 2013; Matt Turner <mattst88@gentoo.org> default/linux/packages.build:
+  Drop sys-apps/texinfo from packages.build, bug 471192.
+  default/linux/packages.build
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  remove useless mask on portaudio since its not in tree
+
+  29 Jul 2013; Matt Turner <mattst88@gentoo.org> +desc/abi_mips.desc:
+  Add abi_mips.desc.
+
+  29 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  remove mask on multilib libsamplerate, libsndfile and twolame
+
+  29 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> -desc/misdn_cards.desc:
+  Drop MISDN_CARDS, wrt bug #471796
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask multilib wavpack
+
+  28 Jul 2013; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Mask new grub snapshot for testing.
+
+  28 Jul 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  remove mask for multilib bzip2 and zlib so that I can start fixing packages
+  depending on them
+
+  28 Jul 2013; Justin Lecher <jlec@gentoo.org> package.mask:
+  Second alpha for testing
+
+  28 Jul 2013; Justin Lecher <jlec@gentoo.org> package.mask:
+  First alpha for testing
+
+  27 Jul 2013; Matt Turner <mattst88@gentoo.org> default/linux/packages.build:
+  Add app-arch/xz-utils to stage1.
+
+  26 Jul 2013; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask =sys-devel/bison-3* for testing.
+
+  26 Jul 2013; Marien Zwart <marienz@gentoo.org> package.mask:
+  Mask sys-kernel/gentoo-sources-3.10.3 for unapplied patch (installs 3.10.2)
+  (#478200).
 
   25 Jul 2013; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
   arch/sparc/package.use.mask, arch/x86/package.use.mask:
