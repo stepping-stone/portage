@@ -1,6 +1,52 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.522 2013/07/30 22:26:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.533 2013/08/03 16:17:19 jer Exp $
+
+  03 Aug 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.1-r1.ebuild,
+  metadata.xml:
+  Remove USE=profile since it merely injects C*FLAGS+=-pg (bug #479602).
+
+*wireshark-1.10.1-r1 (03 Aug 2013)
+
+  03 Aug 2013; Jeroen Roovers <jer@gentoo.org> +wireshark-1.10.1-r1.ebuild,
+  metadata.xml:
+  Add USE=gtk3 (bug #479618 by Nikoli).
+
+  01 Aug 2013; Jeroen Roovers <jer@gentoo.org>
+  -files/wireshark-1.6.6-gtk-pcap.patch, -wireshark-1.8.8.ebuild:
+  Old.
+
+  01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.8.9.ebuild:
+  Stable for x86, wrt bug #478694
+
+  01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.8.9.ebuild:
+  Stable for sparc, wrt bug #478694
+
+  01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.8.9.ebuild:
+  Stable for ppc, wrt bug #478694
+
+  01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.8.9.ebuild:
+  Stable for ppc64, wrt bug #478694
+
+  01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.8.9.ebuild:
+  Stable for ia64, wrt bug #478694
+
+  01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.8.9.ebuild:
+  Stable for amd64, wrt bug #478694
+
+  01 Aug 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.1.ebuild,
+  wireshark-1.8.9.ebuild:
+  Stable for alpha, wrt bug #478694
+
+  31 Jul 2013; Jeroen Roovers <jer@gentoo.org>
+  +files/wireshark-1.10.1-pod.patch, wireshark-1.10.1.ebuild:
+  Fix reordercap.pod (bug #479098).
 
   30 Jul 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.1.ebuild:
   Stable for HPPA (bug #478694).

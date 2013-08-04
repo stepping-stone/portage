@@ -1,6 +1,25 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.906 2013/07/31 05:15:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.914 2013/08/03 13:28:22 patrick Exp $
+
+  03 Aug 2013; Patrick Lauer <patrick@gentoo.org> distutils.eclass:
+  Migrate twisted deps in distutils eclass
+
+  02 Aug 2013; Ulrich Müller <ulm@gentoo.org> elisp-common.eclass:
+  Sync from Emacs overlay: Make elisp-emacs-version() more robust.
+
+  02 Aug 2013; Michał Górny <mgorny@gentoo.org> git.eclass:
+  Mark git.eclass @DEAD.
+
+  01 Aug 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Shout QA warnings when _all() phases do not call the default impls.
+  Bug #478804.
+
+  01 Aug 2013; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass:
+  python-any-r1: bail out on invalid PYTHON_COMPAT. Bug #478442.
+
+  31 Jul 2013; Julian Ospald <hasufell@gentoo.org> kernel-2.eclass:
+  reword security-deblob-thing acked by keytoaster
 
   31 Jul 2013; Matt Turner <mattst88@gentoo.org> perl-module.eclass:
   Allow using >=dev-lang/perl-5.16 without 'build' in IUSE.

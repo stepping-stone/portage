@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.5 2013/07/31 06:57:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.9 2013/08/02 12:25:46 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
 
 inherit eutils flag-o-matic multilib multilib-minimal \
-	python-r1 toolchain-funcs pax-utils
+	python-r1 toolchain-funcs pax-utils check-reqs
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
@@ -61,7 +61,45 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 
 S=${WORKDIR}/${P}.src
 
+pkg_pretend() {
+	# in megs
+	# !clang !debug !multitarget -O2       400
+	# !clang !debug  multitarget -O2       550
+	#  clang !debug !multitarget -O2       950
+	#  clang !debug  multitarget -O2      1200
+	# !clang  debug  multitarget -O2      5G
+	#  clang !debug  multitarget -O0 -g  12G
+	#  clang  debug  multitarget -O2     16G
+	#  clang  debug  multitarget -O0 -g  14G
+
+	local build_size=550
+	use clang && build_size=1200
+
+	if use debug; then
+		ewarn "USE=debug is known to increase the size of package considerably"
+		ewarn "and cause the tests to fail."
+		ewarn
+
+		(( build_size *= 14 ))
+	elif is-flagq -g || is-flagq -ggdb; then
+		ewarn "The C++ compiler -g option is known to increase the size of the package"
+		ewarn "considerably. If you run out of space, please consider removing it."
+		ewarn
+
+		(( build_size *= 10 ))
+	fi
+
+	# Multiply by number of ABIs :).
+	local abis=( $(multilib_get_enabled_abis) )
+	(( build_size *= ${#abis[@]} ))
+
+	local CHECKREQS_DISK_BUILD=${build_size}M
+	check-reqs_pkg_pretend
+}
+
 pkg_setup() {
+	pkg_pretend
+
 	# need to check if the active compiler is ok
 
 	broken_gcc=" 3.2.2 3.2.3 3.3.2 4.1.1 "
@@ -211,25 +249,11 @@ multilib_src_configure() {
 }
 
 multilib_src_compile() {
-	local mymakeopts=(
-		VERBOSE=1
-		REQUIRES_RTTI=1
-		GENTOO_LIBDIR="$(get_libdir)"
-	)
-
-	# Tests need all the LLVM built.
-	if multilib_is_native_abi || use test; then
-		emake "${mymakeopts[@]}"
-	else
-		# we need to build libs for llvm, then whole clang,
-		# since libs-only omits clang dir
-		# and clang fails to sub-compile with libs-only.
-		emake "${mymakeopts[@]}" libs-only
-		use clang && emake -C tools/clang "${mymakeopts[@]}"
-	fi
+	emake VERBOSE=1 REQUIRES_RTTI=1 GENTOO_LIBDIR=$(get_libdir)
 
 	if multilib_is_native_abi && use doc; then
-		emake -C "${S}"/docs -f Makefile.sphinx man html
+		emake -C "${S}"/docs -f Makefile.sphinx man
+		emake -C "${S}"/docs -f Makefile.sphinx html
 	fi
 
 	if use debug; then
@@ -269,12 +293,7 @@ src_install() {
 }
 
 multilib_src_install() {
-	local mymakeopts=(
-		DESTDIR="${D}"
-		GENTOO_LIBDIR="$(get_libdir)"
-	)
-
-	emake "${mymakeopts[@]}" install
+	emake DESTDIR="${D}" GENTOO_LIBDIR=$(get_libdir) install
 
 	# Fix rpaths.
 	chrpath -r "${EPREFIX}"/usr/$(get_libdir)/llvm \

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.10.5.ebuild,v 1.4 2013/07/30 10:41:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.10.5.ebuild,v 1.6 2013/08/02 14:29:52 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,8 @@ KDE_HANDBOOK="optional"
 inherit flag-o-matic kde4-base
 
 DESCRIPTION="KDE Desktop Planetarium"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+HOMEPAGE="http://kde.org/applications/education/kstars http://edu.kde.org/kstars"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug fits indi"
 
 DEPEND="

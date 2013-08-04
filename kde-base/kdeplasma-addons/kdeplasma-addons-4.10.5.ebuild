@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.10.5.ebuild,v 1.5 2013/07/30 10:41:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.10.5.ebuild,v 1.7 2013/08/02 14:29:47 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit kde4-base
 
 DESCRIPTION="Extra Plasma applets and engines"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="attica debug desktopglobe exif fcitx ibus json oauth qalculate qwt scim
 semantic-desktop"
 
@@ -50,14 +50,14 @@ src_configure() {
 		$(cmake-utils_use_with attica LibAttica)
 		$(cmake-utils_use_with desktopglobe Marble)
 		$(cmake-utils_use_with exif Kexiv2)
-		$(cmake-utils_use_with ibus)
+		$(cmake-utils_use_build ibus)
 		$(cmake-utils_use_with json QJSON)
 		$(cmake-utils_use_with oauth QtOAuth)
 		$(cmake-utils_use_with qalculate)
 		$(cmake-utils_use_with qwt)
 		$(cmake-utils_use_with semantic-desktop KdepimLibs)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
-		$(cmake-utils_use_with scim)
+		$(cmake-utils_use_build scim)
 	)
 
 	kde4-base_src_configure
