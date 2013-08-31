@@ -1,6 +1,19 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.142 2013/05/15 23:02:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.145 2013/08/09 18:44:12 axs Exp $
+
+  09 Aug 2013; Ian Stakenvicius <axs@gentoo.org> -polkit-0.111.ebuild:
+  dropped polkit-111 in favour of -r1 now that spidermonkey-17 is unmasked, as
+  per ssuominen's approval
+
+  09 Aug 2013; Ian Stakenvicius <axs@gentoo.org> polkit-0.110.ebuild,
+  polkit-0.111-r1.ebuild:
+  Adjusted deps for dev-lang/spidermonkey to ensure SLOT=0
+
+*polkit-0.111-r1 (08 Aug 2013)
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +polkit-0.111-r1.ebuild:
+  Force use of dev-lang/spidermonkey:17 because automagic dependencies are bad.
 
 *polkit-0.111 (15 May 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.8.1.ebuild,v 1.1 2013/07/13 13:44:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.8.1.ebuild,v 1.5 2013/08/31 08:20:33 pinkbyte Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,13 +13,17 @@ HOMEPAGE="https://wiki.gnome.org/GnomeSudoku"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	dev-libs/glib:2
+	dev-python/pycairo[${PYTHON_USEDEP}]
 	>=dev-python/pygobject-2.28.3:3[${PYTHON_USEDEP}]
+	x11-libs/gdk-pixbuf:2[introspection]
+	x11-libs/gtk+:3[introspection]
+	x11-libs/pango[introspection]
 "
 DEPEND="${RDEPEND}
 	app-text/yelp-tools
@@ -44,4 +48,9 @@ src_configure() {
 	gnome-games_src_configure \
 		--prefix="${EPREFIX}/usr" \
 		--bindir="${GAMES_BINDIR}"
+}
+
+src_install() {
+	python_fix_shebang src
+	gnome-games_src_install
 }

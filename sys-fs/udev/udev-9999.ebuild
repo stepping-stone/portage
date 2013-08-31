@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.242 2013/08/07 18:24:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.254 2013/08/16 16:28:40 ssuominen Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc +firmware-loader gudev hwdb introspection +kmod +openrc selinux static-libs"
+IUSE="acl doc +firmware-loader gudev introspection +kmod +openrc selinux static-libs"
 
 RESTRICT="test"
 
@@ -43,7 +43,11 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	kmod? ( >=sys-apps/kmod-14-r1 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
-	!sys-apps/systemd"
+	!sys-apps/systemd
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20130224-r7
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
 	>=sys-devel/make-3.82-r4
@@ -67,8 +71,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25
 	!<sec-policy/selinux-base-2.20120725-r10"
-PDEPEND=">=virtual/udev-206
-	hwdb? ( >=sys-apps/hwids-20130717-r1[udev] )
+PDEPEND=">=virtual/udev-206-r2
+	>=sys-apps/hwids-20130717-r1[udev]
 	openrc? ( >=sys-fs/udev-init-scripts-25 )"
 
 S=${WORKDIR}/systemd-${PV}
@@ -226,7 +230,14 @@ multilib_src_configure() {
 		--disable-polkit
 		--disable-tmpfiles
 		--disable-machined
+		--disable-xattr
 	)
+	# Use pregenerated copies when possible wrt #480924
+	if ! [[ ${PV} = 9999* ]]; then
+		econf_args+=(
+			--disable-manpages
+		)
+	fi
 	if multilib_is_native_abi; then
 		econf_args+=(
 			--with-rootlibdir=/$(get_libdir)
@@ -247,6 +258,7 @@ multilib_src_configure() {
 			--disable-kmod
 			--disable-selinux
 			--disable-static
+			--disable-manpages
 			--enable-introspection=no
 		)
 	fi
@@ -319,8 +331,6 @@ multilib_src_install() {
 			install-dist_udevconfDATA
 			install-dist_udevrulesDATA
 			install-girDATA
-			install-man7
-			install-man8
 			install-pkgconfiglibDATA
 			install-sharepkgconfigDATA
 			install-typelibsDATA
@@ -340,9 +350,6 @@ multilib_src_install() {
 			rootlibexec_PROGRAMS=systemd-udevd
 			rootbin_PROGRAMS=udevadm
 			lib_LTLIBRARIES="${lib_LTLIBRARIES}"
-			MANPAGES="man/udev.7 man/udevadm.8 \
-					man/systemd-udevd.service.8"
-			MANPAGES_ALIAS=""
 			pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 			INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
 					$(sysconfdir)/udev/hwdb.d'
@@ -354,6 +361,14 @@ multilib_src_install() {
 			emake -C docs/libudev DESTDIR="${D}" install
 			use gudev && emake -C docs/gudev DESTDIR="${D}" install
 		fi
+
+		# install udevadm compatibility symlink
+		dosym {../bin,sbin}/udevadm
+
+		# install udevd to /sbin and remove empty and redudant directory
+		# /lib/systemd because systemd is installed to /usr wrt #462750
+		mv "${D}"/{lib/systemd/systemd-,sbin/}udevd || die
+		rm -r "${D}"/lib/systemd
 	else
 		local lib_LTLIBRARIES="libudev.la" \
 			pkgconfiglib_DATA="src/libudev/libudev.pc" \
@@ -382,18 +397,13 @@ multilib_src_install_all() {
 		"${D}"/lib/udev/rules.d/99-systemd.rules \
 		"${D}"/usr/share/doc/${PF}/LICENSE.*
 
+	# install-man7, install-man8 targets are unreliable wrt #480924
+	doman man/{udev.7,udevadm.8,systemd-udevd.service.8}
+
 	# see src_prepare() for content of these files
 	insinto /lib/udev/rules.d
 	doins "${T}"/40-gentoo.rules
 	doman "${T}"/{systemd-,}udevd.8
-
-	# install udevadm compatibility symlink
-	dosym {../bin,sbin}/udevadm
-
-	# install udevd to /sbin and remove empty and redudant directory
-	# /lib/systemd because systemd is installed to /usr wrt #462750
-	mv "${D}"/{lib/systemd/systemd-,sbin/}udevd || die
-	rm -r "${D}"/lib/systemd
 }
 
 pkg_preinst() {
@@ -407,7 +417,6 @@ pkg_preinst() {
 				/usr/share/gtk-doc/html/${htmldir}
 		fi
 	done
-	preserve_old_lib /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 }
 
 pkg_postinst() {
@@ -492,15 +501,17 @@ pkg_postinst() {
 	if has_version sys-apps/biosdevname; then
 		ewarn
 		ewarn "You can replace the functionality of sys-apps/biosdevname which has been"
-		ewaen "detected to be installed with the new predictable network interface names."
+		ewarn "detected to be installed with the new predictable network interface names."
 	fi
 
 	ewarn
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
 	ewarn "into effect."
 	ewarn "The method you use to do this depends on your init system."
-
-	preserve_old_lib_notify /{,usr/}$(get_libdir)/libudev$(get_libname 0)
+	if has_version 'sys-apps/openrc'; then
+		ewarn "For sys-apps/openrc users it is:"
+		ewarn "# /etc/init.d/udev --nodeps restart"
+	fi
 
 	elog
 	elog "For more information on udev on Gentoo, upgrading, writing udev rules, and"
@@ -509,7 +520,15 @@ pkg_postinst() {
 	elog "http://wiki.gentoo.org/wiki/Udev/upgrade"
 
 	# Update hwdb database in case the format is changed by udev version.
-	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
+	if has_version 'sys-apps/hwids[udev]'; then
 		udevadm hwdb --update --root="${ROOT%/}"
+		# Only reload when we are not upgrading to avoid potential race w/ incompatible hwdb.bin and the running udevd
+		if [[ -z ${REPLACING_VERSIONS} ]]; then
+			# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+			if [[ ${ROOT} != "" ]] && [[ ${ROOT} != "/" ]]; then
+				return 0
+			fi
+			udevadm control --reload
+		fi
 	fi
 }

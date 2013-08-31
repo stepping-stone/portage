@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.123 2013/08/05 20:19:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.128 2013/08/16 18:19:03 williamh Exp $
 
 EAPI=5
 
@@ -19,16 +19,15 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="debug elibc_glibc ncurses pam newnet prefix selinux static-libs tools
-	unicode kernel_linux kernel_FreeBSD"
+IUSE="debug elibc_glibc ncurses pam newnet prefix +netifrc selinux static-libs
+	tools unicode kernel_linux kernel_FreeBSD"
 
-COMMON_DEPEND="virtual/init
+COMMON_DEPEND=">=sys-apps/baselayout-2.1-r1
 	kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) )
 	elibc_glibc? ( >=sys-libs/glibc-2.5 )
 	ncurses? ( sys-libs/ncurses )
 	pam? ( sys-auth/pambase )
 	tools? ( dev-lang/perl )
-	>=sys-apps/baselayout-2.1-r1
 	kernel_linux? (
 		sys-process/psmisc
 	)
@@ -38,11 +37,16 @@ COMMON_DEPEND="virtual/init
 DEPEND="${COMMON_DEPEND}
 	virtual/os-headers
 	ncurses? ( virtual/pkgconfig )"
-RDEPEND="${COMMON_DEPEND}"
+RDEPEND="${COMMON_DEPEND}
+	!prefix? (
+		kernel_linux? ( || ( >=sys-apps/sysvinit-2.86-r6 sys-process/runit ) )
+		kernel_FreeBSD? ( sys-freebsd/freebsd-sbin )
+	)"
+
+PDEPEND="netifrc? ( net-misc/netifrc )"
 
 src_prepare() {
 	sed -i 's:0444:0644:' mk/sys.mk || die
-	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile || die #241342
 
 	if [[ ${PV} == "9999" ]] ; then
 		local ver="git-${EGIT_VERSION:0:6}"
@@ -116,9 +120,6 @@ src_install() {
 	cp -PR "${ED}"/etc/runlevels "${ED}"/usr/share/${PN} || die
 	rm -rf "${ED}"/etc/runlevels
 
-	# Install the default net configuration
-	doconfd conf.d/net
-
 	# Setup unicode defaults for silly unicode users
 	set_config_yes_no /etc/rc.conf unicode use unicode
 
@@ -138,9 +139,9 @@ src_install() {
 	newpamd "${FILESDIR}"/start-stop-daemon.pam start-stop-daemon
 
 	# install documentation
-dodoc README.busybox
+	dodoc README.busybox
 	if use newnet; then
-		dodoc README.net
+		dodoc README.newnet
 	fi
 }
 
@@ -175,14 +176,6 @@ add_boot_init_mit_config() {
 pkg_preinst() {
 	local f LIBDIR=$(get_libdir)
 
-	# default net script is just comments, so no point in biting people
-	# in the ass by accident.  we save in preinst so that the package
-	# manager doesnt go throwing etc-update crap at us -- postinst is
-	# too late to prevent that.  this behavior also lets us keep the
-	# file in the CONTENTS for binary packages.
-	[[ -e "${EROOT}"etc/conf.d/net ]] && \
-		cp "${EROOT}"etc/conf.d/net "${ED}"/etc/conf.d/
-
 	# avoid default thrashing in conf.d files when possible #295406
 	if [[ -e "${EROOT}"etc/conf.d/hostname ]] ; then
 		(
@@ -215,6 +208,21 @@ pkg_preinst() {
 	if ! has_version ">=sys-apps/openrc-0.12"; then
 		add_boot_init loopback
 		add_boot_init tmpfiles.dev sysinit
+
+		# ensure existing /etc/conf.d/net is not removed
+		# undoes the hack to get around CONFIG_PROTECT in openrc-0.11.8 and earlier
+		# this needs to stay in openrc ebuilds for a long time. :(
+		# Added in 0.12.
+		if [[ -f "${EROOT}"etc/conf.d/net ]]; then
+			einfo "Modifying conf.d/net to keep it from being removed"
+			cat <<-EOF >>"${EROOT}"etc/conf.d/net
+
+# The network scripts are now part of net-misc/netifrc
+# In order to avoid sys-apps/${P} from removing this file, this comment was
+# added; you can safely remove this comment.  Please see
+# /usr/share/doc/netifrc*/README* for more information.
+EOF
+		fi
 	fi
 }
 
@@ -273,14 +281,18 @@ pkg_postinst() {
 	# update the dependency tree after touching all files #224171
 	[[ "${EROOT}" = "/" ]] && "${EROOT}/${LIBDIR}"/rc/bin/rc-depend -u
 
-	if use newnet; then
-		local netscript=network
-	else
-		local netscript=net.lo
+	if ! use newnet && ! use netifrc; then
+		ewarn "You have emerged OpenRc without network support. This"
+		ewarn "means you need to SET UP a network manager such as"
+		ewarn "	net-misc/netifrc, net-misc/dhcpcd, net-misc/wicd,"
+		ewarn "net-misc/NetworkManager, or net-misc/badvpn."
+		ewarn "Or, you have the option of emerging openrc with the newnet"
+		ewarn "use flag and configuring /etc/conf.d/network and"
+		ewarn "/etc/conf.d/staticroute if you only use static interfaces."
 	fi
 
-	if [ ! -e "${EROOT}"etc/runlevels/boot/${netscript} ]; then
-		ewarn "Please add the $netscript script to your boot runlevel"
+	if use newnet && [ ! -e "${EROOT}"etc/runlevels/boot/network ]; then
+		ewarn "Please add the network service to your boot runlevel"
 		ewarn "as soon as possible. Not doing so could leave you with a system"
 		ewarn "without networking."
 	fi

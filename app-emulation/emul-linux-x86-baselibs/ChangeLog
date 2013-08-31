@@ -1,6 +1,66 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.149 2013/08/07 13:25:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.160 2013/08/24 08:00:08 ssuominen Exp $
+
+  24 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  emul-linux-x86-baselibs-20130224-r13.ebuild:
+  Raise media-libs/tiff dependency to skip non-multilib -r4.
+
+  22 Aug 2013; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Change maintainer to the multilib project.
+
+  21 Aug 2013; Michał Górny <mgorny@gentoo.org> files/remove-native:
+  Add /usr/lib32/terminfo to the removal list.
+
+*emul-linux-x86-baselibs-20130224-r13 (21 Aug 2013)
+
+  21 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-baselibs-20130224-r12.ebuild,
+  +emul-linux-x86-baselibs-20130224-r13.ebuild, files/remove-native:
+  new revision featuring migrated e2fsprogs-libs, ncurses and gpm
+
+*emul-linux-x86-baselibs-20130224-r12 (16 Aug 2013)
+
+  16 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-baselibs-20130224-r11.ebuild,
+  +emul-linux-x86-baselibs-20130224-r12.ebuild, files/remove-native:
+  New revision featuring migrated elfutils/libelf.
+
+*emul-linux-x86-baselibs-20130224-r11 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-baselibs-20130224-r10.ebuild,
+  +emul-linux-x86-baselibs-20130224-r11.ebuild, files/remove-native:
+  new revision featuring lcms:2, libpaper and tiff:3 conversion
+
+*emul-linux-x86-baselibs-20130224-r10 (10 Aug 2013)
+
+  10 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  -emul-linux-x86-baselibs-20130224-r9.ebuild,
+  +emul-linux-x86-baselibs-20130224-r10.ebuild, files/remove-native:
+  New revision featuring migrated glib, attr and tiff4
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -emul-linux-x86-baselibs-20130224-r8.ebuild:
+  old
+
+*emul-linux-x86-baselibs-20130224-r9 (08 Aug 2013)
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +emul-linux-x86-baselibs-20130224-r9.ebuild, files/remove-native:
+  Remove libsystemd-daemon because it's now provided by
+  >=sys-apps/systemd-206-r2 wrt #480274 by "nE0sIghT"
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -emul-linux-x86-baselibs-20130224-r7.ebuild:
+  old
+
+*emul-linux-x86-baselibs-20130224-r8 (08 Aug 2013)
+
+  08 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +emul-linux-x86-baselibs-20130224-r8.ebuild, files/remove-native:
+  libusb, libusbx, libusb-compat and udev were converted to the new multilib
+  format.
 
 *emul-linux-x86-baselibs-20130224-r7 (07 Aug 2013)
 

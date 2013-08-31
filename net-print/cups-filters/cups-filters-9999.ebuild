@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.37 2013/07/07 17:16:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.41 2013/08/27 15:27:57 kensington Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [[ "${PV}" == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://www.openprinting.org/download/${PN}/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~s390 ~x86 ~amd64-fbsd"
 fi
 DESCRIPTION="Cups PDF filters"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE="jpeg perl png static-libs tiff zeroconf"
 
 RDEPEND="
-	app-text/ghostscript-gpl
+	>=app-text/ghostscript-gpl-9.09
 	app-text/poppler:=[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
 	>=app-text/qpdf-3.0.2:=
 	media-libs/fontconfig
@@ -34,7 +34,7 @@ RDEPEND="
 	!<=net-print/cups-1.5.9999
 	sys-devel/bc
 	sys-libs/zlib
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	perl? ( dev-lang/perl )
 	png? ( media-libs/libpng:0= )
 	tiff? ( media-libs/tiff )
@@ -84,6 +84,10 @@ src_install() {
 		fixlocalpod
 		popd > /dev/null
 	fi
+
+	# workaround: some printer drivers still require pstoraster and pstopxl, bug #383831
+	dosym /usr/libexec/cups/filter/gstoraster /usr/libexec/cups/filter/pstoraster
+	dosym /usr/libexec/cups/filter/gstopxl /usr/libexec/cups/filter/pstopxl
 
 	prune_libtool_files --all
 

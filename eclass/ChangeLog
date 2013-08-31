@@ -1,6 +1,92 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.916 2013/08/07 16:37:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.942 2013/08/31 12:29:26 tommy Exp $
+
+  31 Aug 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  enlightenment.eclass:
+  Add git support for live packages using enlightenment.eclass
+
+  28 Aug 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Introduce python_is_python3() to replace the common checks.
+
+  28 Aug 2013; Tom Wijsman <TomWij@gentoo.org> ant-tasks.eclass:
+  Made ant-tasks.eclass support newer versions of the 1.9 branch.
+
+  27 Aug 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Enable EAPI=4 on python-r1.
+
+  27 Aug 2013; Tim Harder <radhermit@gentoo.org> java-utils-2.eclass:
+  Don't add subslots to JAVA_PKG_NAME (bug #482270 by chutzpah).
+
+  26 Aug 2013; <anarchy@gentoo.org> mozcoreconf-2.eclass:
+  Fix bug #415805, unset MOZCONFIG
+
+  25 Aug 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Mark _copy-egg-info as internal.
+
+  25 Aug 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Copy bundled egg-info files for reuse in python_compile(). This solves issues
+  that caused some of the files not to be installed in broken packages.
+
+  25 Aug 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Namespace, clean up and describe _disable_ez_setup.
+
+  25 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> gnome-games.eclass:
+  Fix indentation and trailing whitespaces.
+
+  21 Aug 2013; Michael Palimaka <kensington@gentoo.org> kde4-meta.eclass:
+  Improve automagic dependency reduction, fixing bug #481996.
+
+  16 Aug 2013; Benda Xu <heroxbd@gentoo.org> wxwidgets.eclass:
+  Prefix support for wxwidgets, bug #481093
+
+  15 Aug 2013; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass,
+  kde4-meta.eclass:
+  Fixes for KDE 4.11 and other small improvements.
+
+  15 Aug 2013; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass,
+  kde4-meta.eclass:
+  Remove dependencies and actions that are now handled in individual ebuilds.
+
+  15 Aug 2013; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass,
+  kde4-functions.eclass, kde4-meta.eclass:
+  Remove old, unused code.
+
+  15 Aug 2013; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass,
+  kde4-functions.eclass:
+  Remove EAPI 3 support.
+
+  15 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  alpha not only needs -Wl,--norelax for 4.6 to build itself, but also for it
+  to build other versions. So let's just always enable it (bug #481006).
+
+  13 Aug 2013; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Filter -fgraphite-identity on gcc 4.7 (bug 417105).
+
+  13 Aug 2013; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Remove workarounds for very old and unsupported gcc-3 versions. Warn if
+  trying to use gcc < 4.4 and USE=c++0x.
+
+  11 Aug 2013; Justin Lecher <jlec@gentoo.org> cuda.eclass:
+  Add compatibility to latest cuda compiler; respect LDFLAGS
+
+  11 Aug 2013; Mike Gilbert <floppym@gentoo.org> chromium.eclass:
+  Don't call EXPORT_FUNCTONS if CHROMIUM_EXPORT_PHASES is set to 'no'.
+
+  10 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Clean up gcc_do_filter_flags a bit more. Drop ppc64 workaround for 3.2/3.3
+  as neither is keyworded. Also stop replacing -march=i686 with x86-64 (?!) for
+  those versions.
+
+  10 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Append -Wl,--no-relax to LDFLAGS on alpha for 4.6 (bug #454426 again).
+
+  08 Aug 2013; Michał Górny <mgorny@gentoo.org> +twisted-r1.eclass:
+  Introduce a twisted-r1.eclass to join the python-r1 suite and replace
+  twisted.eclass.
+
+  08 Aug 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Allow wrapping headers that are installed only for some of the ABIs.
 
   07 Aug 2013; Mike Gilbert <floppym@gentoo.org> python-r1.eclass,
   python-single-r1.eclass:

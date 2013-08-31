@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.3.ebuild,v 1.1 2013/06/10 14:08:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.3.ebuild,v 1.3 2013/08/27 20:33:21 aballier Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ if [[ ${PV} == *9999* ]]; then
 	NLS_DEPEND="sys-devel/gettext"
 	NLS_RDEPEND="virtual/libintl"
 else
-	KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
+	KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
 	SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 	NLS_IUSE="nls"
 	NLS_DEPEND="nls? ( sys-devel/gettext )"
@@ -31,7 +31,7 @@ RDEPEND="${NLS_RDEPEND}
 	dev-libs/libxdg-basedir
 	media-libs/libdvdnav
 	sys-libs/zlib
-	|| ( media-video/ffmpeg media-libs/libpostproc <media-video/libav-0.8.2-r1 )
+	|| ( media-video/ffmpeg:0 media-libs/libpostproc <media-video/libav-0.8.2-r1 )
 	virtual/ffmpeg
 	virtual/libiconv
 	a52? ( media-libs/a52dec )

@@ -1,10 +1,33 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.496 2013/08/07 11:45:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.509 2013/08/23 03:03:51 floppym Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Mike Gilbert <floppym@gentoo.org> (23 Aug 2013)
+# Requires hard-masked ffmpeg.
+>=www-client/chromium-30 system-ffmpeg
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
+# Causes build to fail, issue is being discussed with upstream
+>=www-plugins/gnash-0.8.10_p20130822 openvg
+
+# Tim Harder <radhermit@gentoo.org> (13 Aug 2013)
+# Requires dev-lang/luajit which is not keyworded by most arches.
+app-editors/vim luajit
+app-editors/gvim luajit
+
+# Alexis Ballier <aballier@gentoo.org> (11 Aug 2013)
+# Multilib migrated version for binary compatibility.
+# Those useflags have deps that are not migrated yet.
+=media-video/ffmpeg-0.10* libass pulseaudio frei0r openal gnutls rtmp vaapi sdl openssl
+
+# Kacper Kowalik <xarthisius@gentoo.org> (09 Aug 2013)
+# Doesn't work on most profiles. Easier to mask here and 
+# unmask in particular profiles
+sys-apps/hwloc cuda gl opencl
 
 # Samuli Suominen <ssuominen@gentoo.org> (07 Aug 2013)
 # There is no support for recent app-pda/libimobiledevice wrt bug #471920
@@ -36,7 +59,7 @@ sys-libs/libcxxrt libunwind
 
 # Michael Weber <xmw@gentoo.org>  (19 Jun 2013)
 # Not fit for production
-=www-client/netsurf-3.0 fbcon pdf-writer gstreamer
+=www-client/netsurf-3.0* fbcon pdf-writer gstreamer
 
 # Anthony G. Basile <blueness@gentoo.org> (18 Jun 2013)
 # Only work on amd64/x86
@@ -70,7 +93,7 @@ app-doc/doxygen sqlite
 # Lyx is currently not working with subversion 1.7 and needs 1.6.
 app-office/lyx subversion
 
-# Christian Faulhammer <fauli@gentoo.org> (0 May 2013)
+# Christian Faulhammer <fauli@gentoo.org> (08 May 2013)
 # Will not build successfully yet
 mail-client/claws-mail gtk3
 
@@ -501,7 +524,5 @@ media-video/vlc audioqueue ios-vout macosx macosx-audio macosx-dialog-provider m
 media-video/vlc media-library
 
 # Alexis Ballier <aballier@gentoo.org> <28 Apr 2011>
-# Requires masked libcelt
-# Leave it unmasked for live ebuild, people should know what they do if they use
-# it anyway
-<media-video/ffmpeg-9999 celt
+# Requires ~arch libcelt and keywording
+<media-video/ffmpeg-2.0 celt

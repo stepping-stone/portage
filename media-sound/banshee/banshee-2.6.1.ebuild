@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.6.1.ebuild,v 1.2 2013/06/15 20:17:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.6.1.ebuild,v 1.5 2013/08/30 22:46:13 eva Exp $
 
 EAPI=5
 inherit eutils autotools mono gnome2-utils fdo-mime versionator gnome.org
@@ -10,7 +10,7 @@ HOMEPAGE="http://banshee.fm/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+aac +cdda +bpm daap doc +encode ipod karma mtp test udev +web youtube"
 
 RDEPEND="
@@ -58,7 +58,7 @@ RDEPEND="
 	)
 	web? (
 		>=net-libs/webkit-gtk-1.2.2:2
-		|| ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.26:2.4 )
+		>=net-libs/libsoup-gnome-2.26:2.4
 	)
 	youtube? (
 		>=dev-dotnet/google-gdata-sharp-1.4

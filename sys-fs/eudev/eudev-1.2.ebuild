@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2.ebuild,v 1.2 2013/08/02 00:31:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2.ebuild,v 1.5 2013/08/15 03:31:21 patrick Exp $
 
 EAPI="5"
 
@@ -98,6 +98,8 @@ src_prepare()
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' -i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
+
+	epatch "${FILESDIR}"/${PN}-selinux-timespan.patch
 
 	epatch_user
 
@@ -205,6 +207,14 @@ pkg_postinst()
 
 	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
 		udevadm hwdb --update --root="${ROOT%/}"
+
+		# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+		# reload database after it has be rebuilt, but only if we are not upgrading
+		# also pass if we are -9999 since who knows what hwdb related changes there might be
+		if [[ ${REPLACING_VERSIONS%-r*} == ${PV} || -z ${REPLACING_VERSIONS} ]] && \
+		[[ ${ROOT%/} == "" ]] && [[ ${PV} != "9999" ]]; then
+			udevadm control --reload
+		fi
 	fi
 
 	ewarn

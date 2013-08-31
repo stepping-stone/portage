@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2-r1.ebuild,v 1.1 2013/08/07 20:11:25 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.2-r1.ebuild,v 1.6 2013/08/15 03:31:21 patrick Exp $
 
 EAPI="5"
 
@@ -29,7 +29,11 @@ COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	selinux? ( sys-libs/libselinux )
 	>=sys-apps/util-linux-2.20
-	!<sys-libs/glibc-2.11"
+	!<sys-libs/glibc-2.11
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20130224-r7
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )
@@ -56,7 +60,6 @@ PDEPEND=">=virtual/udev-180
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
 REQUIRED_USE="keymap? ( hwdb )"
-DOCS=""
 
 pkg_pretend()
 {
@@ -100,6 +103,8 @@ src_prepare()
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' -i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
 
+	epatch "${FILESDIR}"/${PN}-selinux-timespan.patch
+
 	epatch_user
 
 	if [[ ! -e configure ]]
@@ -128,28 +133,42 @@ multilib_src_configure()
 		--with-html-dir="/usr/share/doc/${PF}/html"
 		--enable-split-usr
 		--exec-prefix=/
+	)
+	# Only build libudev for non-native_abi, and only install it to libdir,
+	# that means all options only apply to native_abi
+	if multilib_is_native_abi; then econf_args+=(
+		--with-rootlibdir=/$(get_libdir)
 		$(use_enable doc gtk-doc)
+		$(use_enable gudev)
+		$(use_enable introspection)
 		$(use_enable keymap)
 		$(use_enable kmod libkmod)
 		$(use_enable modutils modules)
+		$(use_enable static-libs static)
 		$(use_enable selinux)
 		$(use_enable rule-generator)
-	)
-	# only install libs to /lib and build gudev for native abi
-	# also non-native-abi only need dynamic libs, so skip static
-	if multilib_is_native_abi; then econf_args+=(
-		--with-rootlibdir=/$(get_libdir)
-		$(use_enable gudev)
-		$(use_enable introspection)
-		$(use_enable static-libs static)
 		)
 	else econf_args+=(
-		--disable-gudev
-		--disable-introspection
-		--disable-static
+		$(echo --disable-{gtk-doc,gudev,introspection,keymap,libkmod,modules,static,selinux,rule-generator})
 		)
 	fi
 	ECONF_SOURCE="${S}" econf "${econf_args[@]}"
+}
+
+multilib_src_compile()
+{
+	if ! multilib_is_native_abi; then
+		cd src/libudev || die "Could not change directory"
+	fi
+	emake
+}
+
+multilib_src_install()
+{
+	if ! multilib_is_native_abi; then
+		cd src/libudev || die "Could not change directory"
+	fi
+	emake DESTDIR="${D}" install
 }
 
 multilib_src_test()
@@ -224,6 +243,14 @@ pkg_postinst()
 
 	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
 		udevadm hwdb --update --root="${ROOT%/}"
+
+		# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+		# reload database after it has be rebuilt, but only if we are not upgrading
+		# also pass if we are -9999 since who knows what hwdb related changes there might be
+		if [[ ${REPLACING_VERSIONS%-r*} == ${PV} || -z ${REPLACING_VERSIONS} ]] && \
+		[[ ${ROOT%/} == "" ]] && [[ ${PV} != "9999" ]]; then
+			udevadm control --reload
+		fi
 	fi
 
 	ewarn

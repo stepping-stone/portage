@@ -1,6 +1,16 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.208 2013/07/16 02:59:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.211 2013/08/22 21:09:18 chithanh Exp $
+
+  22 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask jemalloc flag for gnash
+
+  22 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
+  Mask opencl flag due to lack of virtual/opencl keywording.
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> +package.mask:
+  move texlive mask from global to arch profiles, bug #475124
 
   16 Jul 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Drop obsolete quvi masks

@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.218 2013/08/02 17:20:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.220 2013/08/21 19:04:02 kensington Exp $
+
+  21 Aug 2013; Michael Palimaka <kensington@gentoo.org>
+  systemsettings-4.10.5.ebuild, systemsettings-4.11.0.ebuild:
+  Add missing dependency.
+
+*systemsettings-4.11.0 (14 Aug 2013)
+
+  14 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +systemsettings-4.11.0.ebuild:
+  Version bump KDE SC 4.11.0
 
   02 Aug 2013; Johannes Huber <johu@gentoo.org> -systemsettings-4.10.4.ebuild:
   Remove KDE SC 4.10.4

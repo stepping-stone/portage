@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.188 2013/07/29 13:26:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.191 2013/08/30 08:34:47 scarabeus Exp $
 
 EAPI=5
 
@@ -107,7 +107,7 @@ COMMON_DEPEND="
 	>=app-text/libwps-0.2.2
 	>=app-text/poppler-0.16:=[xpdf-headers(+),cxx]
 	>=dev-cpp/clucene-2.3.3.4-r2
-	>=dev-cpp/libcmis-0.3.1:0.3
+	dev-cpp/libcmis:0.4
 	dev-db/unixODBC
 	>=dev-libs/boost-1.46:=
 	dev-libs/expat
@@ -131,7 +131,7 @@ COMMON_DEPEND="
 	>=net-misc/curl-7.21.4
 	net-nds/openldap
 	sci-mathematics/lpsolve
-	virtual/jpeg
+	virtual/jpeg:0
 	>=x11-libs/cairo-1.10.0[X]
 	x11-libs/libXinerama
 	x11-libs/libXrandr
@@ -521,8 +521,11 @@ src_compile() {
 		[[ -s "${path}/helpimg.ilst" ]] || ewarn "The help images list is empty, something is fishy, report a bug."
 	)
 
+	local target
+	use test && target="build" || target="build-nocheck"
+
 	# this is not a proper make script
-	make build || die
+	make ${target} || die
 }
 
 src_test() {

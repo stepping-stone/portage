@@ -1,6 +1,24 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.95 2013/08/08 06:08:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.100 2013/08/26 00:27:03 floppym Exp $
+
+  26 Aug 2013; Mike Gilbert <floppym@gentoo.org> virtualenv-1.9.1-r1.ebuild:
+  Convert DOCS to an array, bug 482230.
+
+  25 Aug 2013; Johann Schmitz <ercpe@gentoo.org> virtualenv-1.10-r1.ebuild,
+  virtualenv-1.10.1.ebuild:
+  Fixed DOCS variable wrt #482360
+
+  21 Aug 2013; Justin Lecher <jlec@gentoo.org> virtualenv-1.10-r1.ebuild,
+  virtualenv-1.10.1.ebuild:
+  Add missing call of distutils-r1_python_install_all
+
+  21 Aug 2013; Justin Lecher <jlec@gentoo.org> virtualenv-1.9.1-r1.ebuild,
+  metadata.xml:
+  Add missing call of distutils-r1_python_install_all
+
+  10 Aug 2013; Agostino Sarubbo <ago@gentoo.org> virtualenv-1.9.1-r1.ebuild:
+  Stable for arm, wrt bug #477970
 
 *virtualenv-1.10.1 (08 Aug 2013)
 

@@ -1,6 +1,31 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.75 2013/08/03 15:41:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.80 2013/08/30 08:36:50 heroxbd Exp $
+
+  30 Aug 2013; Benda Xu <heroxbd@gentoo.org> +files/xpra-0.10.1-prefix.patch,
+  xpra-0.10.1.ebuild:
+  patch runtime /etc directory for Prefix. bug 482988. Thanks to Michael for
+  reviewing.
+
+*xpra-0.10.1 (22 Aug 2013)
+
+  22 Aug 2013; Michael Weber <xmw@gentoo.org> +xpra-0.10.1.ebuild,
+  xpra-0.10.0.ebuild:
+  Version bump
+
+  16 Aug 2013; Michael Weber <xmw@gentoo.org> metadata.xml, xpra-0.10.0.ebuild:
+  Required use, add gtk+:2 dep. Building against gtk+:3 or qt4 doesn't work.
+
+*xpra-0.10.0 (15 Aug 2013)
+
+  15 Aug 2013; Michael Weber <xmw@gentoo.org> +xpra-0.10.0.ebuild,
+  -xpra-0.9.5-r2.ebuild, -xpra-0.9.6.ebuild, -xpra-0.9.7.ebuild, metadata.xml:
+  Version bump, drop old version
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> xpra-0.8.8.ebuild,
+  xpra-0.9.5-r2.ebuild, xpra-0.9.6.ebuild, xpra-0.9.7.ebuild,
+  xpra-0.9.8.ebuild:
+  depend on ffmpeg:0
 
 *xpra-0.9.8 (03 Aug 2013)
 

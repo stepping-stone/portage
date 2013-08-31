@@ -1,6 +1,39 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.670 2013/08/07 21:29:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.677 2013/08/27 16:32:30 aballier Exp $
+
+*ffmpeg-1.2.3 (27 Aug 2013)
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-1.2.3.ebuild:
+  version bump
+
+  13 Aug 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.10.8.ebuild:
+  Set empty docs, no need to install those that are outdated and
+  multilib-minimal installs it behind our back. Pointed out by Samuli Suominen
+
+  12 Aug 2013; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.10.7.ebuild,
+  -ffmpeg-1.2.1.ebuild, -ffmpeg-2.0.ebuild:
+  remove old
+
+  12 Aug 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-1.0.7.ebuild,
+  ffmpeg-1.2.1.ebuild, ffmpeg-1.2.2.ebuild, ffmpeg-2.0.ebuild,
+  ffmpeg-2.0.1.ebuild, ffmpeg-9999.ebuild:
+  Add missing openssl dep
+
+*ffmpeg-0.10.8 (11 Aug 2013)
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-0.10.8.ebuild:
+  Add a slotted 0.10 version for binary compatibility and multilib. This is
+  outdated and has known vulnerabilities but much less than the version bundled
+  with emul-libs.
+
+*ffmpeg-2.0.1 (11 Aug 2013)
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-2.0.1.ebuild:
+  version bump
+
+  08 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ffmpeg-1.0.7.ebuild:
+  Stable for sparc, wrt bug #473302
 
 *ffmpeg-1.2.2 (07 Aug 2013)
 

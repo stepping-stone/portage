@@ -1,6 +1,56 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.579 2013/08/07 22:11:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.596 2013/08/27 07:10:20 ulm Exp $
+
+  27 Aug 2013; Ulrich Müller <ulm@gentoo.org> packages:
+  Temporarily add sys-apps/openrc to the system set, until bug 373219 is
+  resolved.
+
+  23 Aug 2013; Sven Vermeulen <swift@gentoo.org> package.mask:
+  Removed selinux-tvtime, see bug #479642 (tvtime package was removed earlier
+  on)
+
+  23 Aug 2013; Ole Markus With <olemarkus@gentoo.org> make.defaults:
+  Changing PHP_TARGETS to php5.5, as it has now been stabilised
+
+  23 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org> make.defaults:
+  Make emerge messages default to English as per Council decision
+
+  23 Aug 2013; Mike Gilbert <floppym@gentoo.org> package.use.mask:
+  Mask >=www-client/chromium-30[system-ffmpeg]
+
+  22 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask openvg flag for recent gnash snapshots
+
+  22 Aug 2013; Michael Weber <xmw@gentoo.org> package.use.mask:
+  Expand mask to revisions.
+
+  22 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask, use.mask:
+  Drop global opencl masks.
+
+  21 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask opencl flag for mesa-9.2.0_rc1
+
+  16 Aug 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Fix date.
+
+  13 Aug 2013; Tim Harder <radhermit@gentoo.org> package.use.mask:
+  Mask luajit USE flag for app-editors/(g)vim.
+
+  12 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  unmask dirac for multilib ffmpeg
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  Mask useflags having unsatisfiable deps for multilib ffmpeg 0.10
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  unmask celt for masked ffmpeg releases
+
+  10 Aug 2013; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Move COLLISION_IGNORE and UNINSTALL_IGNORE from make.globals.
 
   07 Aug 2013; Michał Górny <mgorny@gentoo.org> use.mask:
   Mask Python 2.5, 3.1 and PyPy 1.9. Bug #480070.

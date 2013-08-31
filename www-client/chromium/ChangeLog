@@ -1,6 +1,80 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.926 2013/07/31 22:31:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.939 2013/08/31 03:27:48 phajdan.jr Exp $
+
+*chromium-31.0.1612.0 (31 Aug 2013)
+
+  31 Aug 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-31.0.1612.0.ebuild, chromium-9999-r1.ebuild:
+  Dev channel bump.
+
+  23 Aug 2013; Mike Gilbert <floppym@gentoo.org> -chromium-28.0.1500.95.ebuild,
+  -chromium-29.0.1547.32.ebuild, -chromium-29.0.1547.41.ebuild:
+  Remove old.
+
+*chromium-30.0.1599.15 (23 Aug 2013)
+
+  23 Aug 2013; Mike Gilbert <floppym@gentoo.org> +chromium-30.0.1599.15.ebuild,
+  -chromium-30.0.1588.0.ebuild:
+  Bump.
+
+  21 Aug 2013; Agostino Sarubbo <ago@gentoo.org> chromium-29.0.1547.57.ebuild:
+  Stable for x86, wrt bug #481990
+
+  21 Aug 2013; Agostino Sarubbo <ago@gentoo.org> chromium-29.0.1547.57.ebuild:
+  Stable for amd64, wrt bug #481990
+
+*chromium-29.0.1547.57 (21 Aug 2013)
+
+  21 Aug 2013; Mike Gilbert <floppym@gentoo.org> +chromium-29.0.1547.57.ebuild:
+  Stable channel bump.
+
+  18 Aug 2013; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Apply previous change to the live ebuild.
+
+*chromium-30.0.1599.0-r1 (18 Aug 2013)
+
+  18 Aug 2013; Mike Gilbert <floppym@gentoo.org>
+  +chromium-30.0.1599.0-r1.ebuild, -chromium-30.0.1599.0.ebuild:
+  Install the chrome_sandbox binary as chrome-sandbox due to change in code
+  upstream. Drop the linux_sandbox_path gyp option as well.
+
+*chromium-30.0.1599.0 (17 Aug 2013)
+
+  17 Aug 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-28.0.1500.71.ebuild, -chromium-28.0.1500.89.ebuild,
+  -chromium-30.0.1581.2.ebuild, +chromium-30.0.1599.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Bump ffmpeg dependency (bug #480936 by floppym). Disable
+  nacl (http://crbug.com/269560). Remove old.
+
+  14 Aug 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-29.0.1547.41.ebuild:
+  Switch back to make build (ninja build has issues like bug #471272). Also do
+  not use system mesa, bug #475444 .
+
+*chromium-30.0.1588.0 (13 Aug 2013)
+
+  13 Aug 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-30.0.1568.0.ebuild, +chromium-30.0.1588.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Fix bug #479418 by floppym. Fix bug #473260 by Vladimir.
+  Exclude a failing test (bug #478168). Stop using system mesa. Temporarily use
+  bundled openssl. Remove old.
+
+  11 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  chromium-28.0.1500.71.ebuild, chromium-28.0.1500.89.ebuild,
+  chromium-28.0.1500.95.ebuild, chromium-29.0.1547.32.ebuild,
+  chromium-29.0.1547.41.ebuild, chromium-30.0.1568.0.ebuild,
+  chromium-30.0.1581.2.ebuild, chromium-9999-r1.ebuild:
+  depend on ffmpeg:0
+
+*chromium-29.0.1547.41 (09 Aug 2013)
+
+  09 Aug 2013; Mike Gilbert <floppym@gentoo.org> +chromium-29.0.1547.41.ebuild,
+  -chromium-29.0.1547.22.ebuild, chromium-30.0.1581.2.ebuild,
+  chromium-9999-r1.ebuild:
+  Beta channel bump. Tweak src_test to output each failed test command.
 
   31 Jul 2013; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
   Apply src_test change to live ebuild.
