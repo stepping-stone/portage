@@ -2013,7 +2013,6 @@ dev-ruby/barby:png - Add support for writing PNG images using dev-ruby/chunky_pn
 dev-ruby/barby:prawn - Add support for writing PDF documents using dev-ruby/prawn.
 dev-ruby/barby:qrcode - Add support for QRCode 2D codes using dev-ruby/rqrcode.
 dev-ruby/barby:rmagick - Add support for writing images (among others PNG, GIF and JPEG) using dev-ruby/rmagick. Not available on JRuby.
-dev-ruby/camping:mongrel - Also install www-servers/mongrel
 dev-ruby/facter:dmi - Use sys-apps/dmidecode to determine hardware system properties
 dev-ruby/facter:pciutils - Use sys-apps/pciutils to determine hardware system properties
 dev-ruby/rails:asset-pipeline - Also install the default components for the asset pipeline. These are not required but they are activated automatically in new Rails projects by default.
@@ -3574,6 +3573,7 @@ media-sound/squeezeslave:display - Enable a text-based display
 media-sound/squeezeslave:tremor - Use a fixed-point version of the Ogg Vorbis decoder (media-libs/tremor)
 media-sound/squeezeslave:wma - Enable support for streaming Windows Media Audio
 media-sound/squeezeslave:zones - Pairs surround sound speakers into stereo zones (requires 5.1 setup or better)
+media-sound/teamspeak-server-bin:tsdns - Make use of TeamSpeak DNS.
 media-sound/tomahawk:twitter - Enable twitter support
 media-sound/traverso:lv2 - Add support for Ladspa V2
 media-sound/umurmur:polarssl - Use net-libs/polarssl instead of dev-libs/openssl
@@ -3866,6 +3866,7 @@ media-video/mpv:pvr - Enable Video4Linux2 MPEG PVR
 media-video/mpv:quvi - Enable support for streaming sites using media-libs/libquvi
 media-video/mpv:radio - Enable V4L2 radio interface and support
 media-video/mpv:shm - Enable support for shm
+media-video/mpv:vaapi - Enable VAAPI (Video Acceleration API) for hardware decoding
 media-video/mpv:vf-dlopen - Install additional video filters for using with -vf dlopen
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
@@ -5071,6 +5072,7 @@ net-misc/plowshare:view-captcha - View captcha with aview
 net-misc/ps3mediaserver:multiuser - Allow renderer customization per-user.
 net-misc/ps3mediaserver:transcode - Install optional dependencies for transcoding support via media-video/mplayer
 net-misc/ps3mediaserver:tsmuxer - Install optional dependencies for transcoding support via media-video/tsmuxer
+net-misc/putty:gtk - Build the PuTTY client which requires x11-libs/gtk+:2. Otherwise only the CLI tools puttygen, plink, pscp and psftp will be built.
 net-misc/quagga:bgpclassless - Apply unofficial patch to enable classless prefixes for BGP. Patch and information to be found at http://hasso.linux.ee/doku.php/english:network:quagga
 net-misc/quagga:multipath - Enable multipath routes support for any number of routes
 net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessing the OSPF link state database
@@ -5879,9 +5881,7 @@ sys-apps/paludis:python-bindings - Enable Python bindings. Requires a lot of RAM
 sys-apps/paludis:ruby-bindings - Enable Ruby bindings.
 sys-apps/paludis:search-index - Enable cave search --index. Requires sqlite.
 sys-apps/paludis:visibility - Enable visibility support (g++ >=4.1)
-sys-apps/pciutils:compress-db - Compress pci.ids database by default
 sys-apps/pciutils:kmod - Enable sys-apps/kmod support for the -k switch in lspci command
-sys-apps/pciutils:network-cron - Monthly cronjob the update-pciids script
 sys-apps/pciutils:zlib - Support compressed pci.ids database
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
 sys-apps/pcsc-lite:libusb - Use dev-libs/libusb detection to hotplug new smartcard readers. This flag should only be enabled if you're running a non-Linux kernel or you don't want to use sys-fs/udev.
@@ -6004,6 +6004,9 @@ sys-cluster/charm:charmproduction - Optimize performance of Charm++ runtime
 sys-cluster/charm:charmtracing - Enable tracing support in Charm++
 sys-cluster/charm:cmkopt - Enable CMK optimisation
 sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
+sys-cluster/cinder:api - Installs the initscripts for the cinder api service
+sys-cluster/cinder:scheduler - Installs the initscripts for the cinder scheduler service
+sys-cluster/cinder:volume - Installs the initscripts for the cinder volume service
 sys-cluster/cluster-glue:large-cluster - Extend messages length limits for resource heavy clusters
 sys-cluster/cluster-glue:libnet - Force use of net-libs/libnet
 sys-cluster/corosync:infiniband - Enable Infiniband RDMA transport support
@@ -6030,6 +6033,21 @@ sys-cluster/mpich2:romio - Enable romio, a high-performance portable MPI-IO impl
 sys-cluster/mvapich2:large-cluster - Automatically generated description for large-cluster
 sys-cluster/mvapich2:medium-cluster - Automatically generated description for medium-cluster
 sys-cluster/mvapich2:romio - Automatically generated description for romio
+sys-cluster/neutron:dhcp - Installs the initscripts for the neutron dhcp service
+sys-cluster/neutron:l3 - Installs the initscripts for the neutron l3 service
+sys-cluster/neutron:metadata - Installs the initscripts for the neutron metadata service
+sys-cluster/neutron:openvswitch - Installs the initscripts for the neutron openvswitch service
+sys-cluster/neutron:server - Installs the initscripts for the neutron server service
+sys-cluster/nova:api - Installs the initscripts for the nova api service
+sys-cluster/nova:cert - Installs the initscripts for the nova scheduler service
+sys-cluster/nova:compute - Installs the initscripts for the nova volume service
+sys-cluster/nova:conductor - Installs the initscripts for the nova conductor service
+sys-cluster/nova:consoleauth - Installs the initscripts for the nova consoleauth service
+sys-cluster/nova:network - Installs the initscripts for the nova network service
+sys-cluster/nova:novncproxy - Installs the initscripts for the nova novncproxy service
+sys-cluster/nova:scheduler - Installs the initscripts for the nova scheduler service
+sys-cluster/nova:spicehtml5proxy - Installs the initscripts for the nova spicehtml5proxy service
+sys-cluster/nova:xvpvncproxy - Installs the initscripts for the nova xvpvncproxy service
 sys-cluster/ocfs:aio - Add aio support
 sys-cluster/openmpi:heterogeneous - Enable features required for heterogeneous platform support
 sys-cluster/openmpi:mpi-threads - Enable MPI_THREAD_MULTIPLE
@@ -6121,6 +6139,7 @@ sys-devel/llvm:multitarget - Build all host targets (default: host only)
 sys-devel/llvm:static-analyzer - Install the Clang static analyzer (requires USE=clang)
 sys-devel/llvm:udis86 - Enable support for dev-libs/udis86 disassembler library
 sys-devel/sparse:gtk - Build the test-inspect utility (requires x11-libs/gtk+ version 2)
+sys-devel/sparse:llvm - support llvm
 sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2).
 sys-firmware/ipxe:iso - Build a bootable ISO for using PXE
 sys-firmware/ipxe:qemu - Build the required PXE ROM images for app-emulation/qemu and app-emulation/qemu-kvm
@@ -6258,6 +6277,7 @@ sys-kernel/genkernel-next:gpg - Enable support for GPG (include gnupg dependency
 sys-kernel/genkernel-next:iscsi - Enable support for open-iscsi (include open-iscsi dependency)
 sys-kernel/genkernel-next:plymouth - Enable support for Plymouth (include Plymouth dependency)
 sys-kernel/gentoo-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
+sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/linux-docs:html - Install HTML documentation
 sys-kernel/linux-firmware:savedconfig - Allows individual selection of firmware files
@@ -6361,6 +6381,7 @@ www-apache/pwauth:ignore-case - Ignore string case in username (mostly Windows c
 www-apps/389-dsgw:adminserver - Install DSGW with Admin Server
 www-apps/ampache:transcode - Install optional dependencies for transcoding support
 www-apps/bitten:server - Install master instance that integrates itself with Trac
+www-apps/blohg:git - Enable Git support
 www-apps/bugzilla:extras - Optional Perl modules
 www-apps/bugzilla:modperl - Enable www-apache/mod_perl support
 www-apps/cgit:highlight - Enable source code highlighting
@@ -6455,9 +6476,7 @@ www-client/uzbl:tabbed - Install the uzbl-tabbed script
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-client/weboob:fast-libs - Enable fast libs
 www-client/weboob:secure-updates - Enable secure updates
-www-misc/litmus:gssapi - Support for GSSAPI through dev-perl/GSSAPI.
 www-misc/litmus:libproxy - Support for automatic proxy configuratino management through net-libs/libproxy.
-www-misc/litmus:openssl - Support for SSL through OpenSSL (dev-libs/openssl).
 www-misc/litmus:pkcs11 - Support for PKCS #11 through PaKChoiS (dev-libs/pakchois).
 www-misc/monitorix:evms - Make use of utilities for the IBM Enterprise Volume Management System with sys-fs/evms.
 www-misc/monitorix:hddtemp - Use SMART to monitor the temperature of hard drives with app-admin/hddtemp.

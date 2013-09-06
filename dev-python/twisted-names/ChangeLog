@@ -1,6 +1,24 @@
 # ChangeLog for dev-python/twisted-names
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.75 2013/08/23 12:58:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.81 2013/09/05 11:22:52 ago Exp $
+
+  05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> twisted-names-12.3.0.ebuild:
+  Stable for ppc64, wrt bug #468150
+
+  04 Sep 2013; Agostino Sarubbo <ago@gentoo.org> twisted-names-12.3.0.ebuild:
+  Stable for ppc, wrt bug #468150
+
+  03 Sep 2013; Agostino Sarubbo <ago@gentoo.org> twisted-names-12.3.0.ebuild:
+  Stable for ia64, wrt bug #468150
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> twisted-names-12.3.0.ebuild:
+  Stable for alpha, wrt bug #468150
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> twisted-names-12.3.0.ebuild:
+  Stable for x86, wrt bug #468150
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> twisted-names-12.3.0.ebuild:
+  Stable for amd64, wrt bug #468150
 
   23 Aug 2013; Jeroen Roovers <jer@gentoo.org> twisted-names-12.3.0.ebuild:
   Stable for HPPA (bug #468150).
