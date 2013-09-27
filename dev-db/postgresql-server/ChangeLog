@@ -1,6 +1,25 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.263 2013/09/05 19:44:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.265 2013/09/15 21:20:56 titanofold Exp $
+
+*postgresql-server-9.3.0-r1 (15 Sep 2013)
+*postgresql-server-9.2.4-r1 (15 Sep 2013)
+*postgresql-server-9.1.9-r1 (15 Sep 2013)
+*postgresql-server-9.0.13-r1 (15 Sep 2013)
+*postgresql-server-8.4.17-r1 (15 Sep 2013)
+
+  15 Sep 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-server-8.4.17-r1.ebuild, +postgresql-server-9.0.13-r1.ebuild,
+  +postgresql-server-9.1.9-r1.ebuild, +postgresql-server-9.2.4-r1.ebuild,
+  +postgresql-server-9.3.0-r1.ebuild, postgresql-server-9999.ebuild:
+  Add Python support for clients and libraries. Fixes bug 392673.
+
+*postgresql-server-9.3.0 (10 Sep 2013)
+
+  10 Sep 2013; Patrick Lauer <patrick@gentoo.org>
+  +postgresql-server-9.3.0.ebuild, -postgresql-server-9.3_beta1-r1.ebuild,
+  -postgresql-server-9.3_beta2.ebuild:
+  Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> postgresql-server-8.4.17.ebuild,
   postgresql-server-9.0.13.ebuild, postgresql-server-9.1.9.ebuild,

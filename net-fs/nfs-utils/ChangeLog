@@ -1,6 +1,27 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.220 2013/08/27 07:00:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.227 2013/09/25 17:26:19 ago Exp $
+
+  25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> nfs-utils-1.2.7-r1.ebuild:
+  Stable for ppc, wrt bug #480074
+
+  23 Sep 2013; Jeroen Roovers <jer@gentoo.org> nfs-utils-1.2.7-r1.ebuild:
+  Stable for HPPA (bug #480074).
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> nfs-utils-1.2.7-r1.ebuild:
+  Stable for ppc64, wrt bug #480074
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> nfs-utils-1.2.7-r1.ebuild:
+  Stable for alpha, wrt bug #480074
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> nfs-utils-1.2.7-r1.ebuild:
+  Stable for ia64, wrt bug #480074
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> nfs-utils-1.2.7-r1.ebuild:
+  Stable for amd64, wrt bug #480074
+
+  19 Sep 2013; Markus Meier <maekke@gentoo.org> nfs-utils-1.2.7-r1.ebuild:
+  arm stable, bug #480074
 
 *nfs-utils-1.2.8-r2 (27 Aug 2013)
 

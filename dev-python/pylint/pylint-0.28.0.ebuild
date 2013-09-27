@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.28.0.ebuild,v 1.3 2013/06/26 01:38:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.28.0.ebuild,v 1.5 2013/09/26 15:51:22 jlec Exp $
 
 EAPI=5
+
 PYTHON_COMPAT=( python{2_6,2_7,3_2} )
 
 inherit distutils-r1
@@ -23,7 +24,6 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 DISTUTILS_IN_SOURCE_BUILD=1
-DOCS=( doc/FAQ.txt doc/features.txt doc/manual.txt doc/quickstart.txt )
 
 PATCHES=( "${FILESDIR}"/${PN}-0.26.0-gtktest.patch )
 
@@ -40,11 +40,12 @@ python_test() {
 }
 
 python_install_all() {
-	doman man/{pylint,pyreverse}.1 || die "doman failed"
+	distutils-r1_python_install_all
+	doman man/{pylint,pyreverse}.1
 
 	if use examples; then
 		docinto examples
-		dodoc examples/* || die "dodoc failed"
+		dodoc examples/*
 	fi
 }
 

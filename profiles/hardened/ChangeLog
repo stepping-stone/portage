@@ -1,6 +1,21 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.8 2013/08/03 21:18:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.12 2013/09/24 08:28:21 mgorny Exp $
+
+  24 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  linux/amd64/package.use.stable.mask:
+  Add missing abi_x86_32 masks as reported by Patrick Lauer.
+
+  24 Sep 2013; Michał Górny <mgorny@gentoo.org> linux/amd64/package.use.mask,
+  +linux/amd64/package.use.stable.mask:
+  Move the abi_x86_32 mask to stable.mask, since the profile is EAPI=5 now.
+
+  23 Sep 2013; Magnus Granberg <zorry@gentoo.org>
+  +linux/amd64/eapi +/linux/x86/eapi
+  update amd64 and x86 to eapi 5
+
+  22 Sep 2013; Michał Górny <mgorny@gentoo.org> linux/amd64/package.use.mask:
+  Mask abi_x86_32 on hardened as well, to make the way for stablereq.
 
   03 Aug 2013; Anthony G. Basile <blueness@gentoo.org>
   linux/uclibc/mips/make.defaults:

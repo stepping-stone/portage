@@ -1,6 +1,80 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.168 2013/08/28 11:01:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.179 2013/09/26 19:46:56 floppym Exp $
+
+  26 Sep 2013; Mike Gilbert <floppym@gentoo.org> systemd-204-r1.ebuild,
+  systemd-207-r2.ebuild, systemd-9999-r1.ebuild:
+  Move gentoo-systemd-integration to PDEPEND, bug 486112.
+
+  26 Sep 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204-r1.ebuild:
+  Stable for arm, wrt bug #485546
+
+*systemd-207-r2 (22 Sep 2013)
+*systemd-204-r1 (22 Sep 2013)
+
+  22 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  +files/204-0001-polkit-Avoid-race-condition-in-scraping-proc.patch,
+  +files/204-0002-Add-usr-share-keymaps-to-localectl-supported-locatio.patch,
+  +files/204-0003-Allow-tabs-in-environment-files.patch,
+  +files/204-0004-Actually-allow-tabs-in-environment-files.patch,
+  +systemd-204-r1.ebuild, +systemd-207-r2.ebuild,
+  -files/206-0001-logind-update-state-file-after-generating-the-sessio.patch,
+  -files/206-0002-Add-usr-share-keymaps-to-localectl-supported-locatio.patch,
+  -files/206-0003-tmpfiles-support-passing-prefix-multiple-times.patch,
+  -files/206-0004-tmpfiles-introduce-exclude-prefix.patch,
+  -files/206-0005-tmpfiles-setup-exclude-dev-prefixes-files.patch,
+  -files/206-0006-allow-tabs-in-configuration-files.patch,
+  -files/206-0007-allow-tabs-in-configuration-files2.patch, -systemd-201.ebuild,
+  -systemd-206-r3.ebuild, -systemd-206-r4.ebuild, -systemd-206-r5.ebuild,
+  -systemd-207-r1.ebuild, -systemd-207.ebuild:
+  Backport the patch for security bug #485546. Backport patches from -207 to to-
+  go-stable -204-r1. Use gentoo-systemd-integration and locale migration in
+  -204-r1. Remove old.
+
+*systemd-207-r1 (18 Sep 2013)
+
+  18 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  +files/207-0001-swap-fix-reverse-dependencies.patch,
+  +files/207-0002-swap-create-.wants-symlink-to-auto-swap-devices.patch,
+  +systemd-207-r1.ebuild:
+  Backport swap activation patches, bug #484998. Ensure that locale.conf is
+  respected and used consistently by systemd & OpenRC, bug #465468.
+
+  18 Sep 2013; Michał Górny <mgorny@gentoo.org> systemd-9999-r1.ebuild:
+  Handle locale.conf/env.d wrt bug #465468.
+
+  14 Sep 2013; Mike Gilbert <floppym@gentoo.org> systemd-207.ebuild,
+  systemd-9999-r1.ebuild:
+  Replace --without-python with --disable-python-devel for non-native abis, bug
+  484934.
+
+*systemd-207 (14 Sep 2013)
+
+  14 Sep 2013; Michał Górny <mgorny@gentoo.org> +systemd-207.ebuild,
+  systemd-9999-r1.ebuild:
+  Version bump. Update kernel checks. Do not check for HOTPLUG on 3.7+ wrt bug
+  #476464. Run tests for native ABI only.
+
+*systemd-206-r5 (14 Sep 2013)
+
+  14 Sep 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/206-0006-allow-tabs-in-configuration-files.patch,
+  +files/206-0007-allow-tabs-in-configuration-files2.patch,
+  +systemd-206-r5.ebuild:
+  Allow tabs in environment files (#481554 by dolphinling)
+
+  13 Sep 2013; Michał Górny <mgorny@gentoo.org> systemd-9999-r1.ebuild:
+  Sync the live ebuild with latest changes.
+
+*systemd-206-r4 (11 Sep 2013)
+
+  11 Sep 2013; Michał Górny <mgorny@gentoo.org> +systemd-206-r4.ebuild:
+  Introduce -r4 that uses separate sys-apps/gentoo-systemd-integration.
+  Introduces local.d generator.
+
+  06 Sep 2013; Pacho Ramos <pacho@gentoo.org> systemd-204.ebuild,
+  systemd-206-r3.ebuild:
+  Check for TMPFS_POSIX_ACL when needed (#482336#c24 by Alexander Tsoy)
 
   28 Aug 2013; Pacho Ramos <pacho@gentoo.org> systemd-204.ebuild,
   systemd-206-r3.ebuild:

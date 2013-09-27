@@ -1,6 +1,24 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.162 2013/08/20 17:59:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.168 2013/09/25 17:21:36 ago Exp $
+
+  25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> bluez-4.101-r6.ebuild:
+  Stable for ppc, wrt bug #481828
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> bluez-4.101-r6.ebuild:
+  Stable for ppc64, wrt bug #481828
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> bluez-4.101-r6.ebuild:
+  Stable for x86, wrt bug #481828
+
+  17 Sep 2013; Jeroen Roovers <jer@gentoo.org> bluez-4.101-r6.ebuild:
+  Stable for HPPA (bug #481828).
+
+  15 Sep 2013; Markus Meier <maekke@gentoo.org> bluez-4.101-r6.ebuild:
+  arm stable, bug #481828
+
+  15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> bluez-4.101-r6.ebuild:
+  Stable for amd64, wrt bug #481828
 
 *bluez-4.101-r6 (20 Aug 2013)
 

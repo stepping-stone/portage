@@ -1,6 +1,30 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.77 2013/08/03 03:55:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.85 2013/09/25 17:21:07 ago Exp $
+
+  25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
+  Stable for ppc, wrt bug #478742
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
+  Stable for sparc, wrt bug #478742
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
+  Stable for ppc64, wrt bug #478742
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
+  Stable for alpha, wrt bug #478742
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
+  Stable for ia64, wrt bug #478742
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
+  Stable for amd64, wrt bug #478742
+
+  19 Sep 2013; Markus Meier <maekke@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
+  arm stable, bug #478742
+
+  17 Sep 2013; Jeroen Roovers <jer@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
+  Stable for HPPA (bug #478742).
 
   03 Aug 2013; Matt Turner <mattst88@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
   Add missing dependency on dev-perl/Try-Tiny, bug 478746.

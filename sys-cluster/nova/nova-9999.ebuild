@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.6 2013/09/05 20:57:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.10 2013/09/27 01:41:21 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,16 +15,22 @@ EGIT_REPO_URI="https://github.com/openstack/nova.git"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+api +cert +compute +conductor +consoleauth +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy"
+IUSE="+api +cert +compute +conductor +consoleauth +kvm +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres xen"
+REQUIRED_USE="|| ( mysql postgres sqlite )
+			  || ( kvm xen )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		app-admin/sudo"
 
 RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.2.4[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-0.7.8
-		<=dev-python/sqlalchemy-0.7.99
 		dev-python/boto[${PYTHON_USEDEP}]
+		sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
+	          <dev-python/sqlalchemy-0.7.10[sqlite,${PYTHON_USEDEP}] )
+		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
+	         <dev-python/sqlalchemy-0.7.10[mysql,${PYTHON_USEDEP}] )
+		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
+	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
 		>=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
 		<dev-python/d2to1-0.3[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.9.17[${PYTHON_USEDEP}]
@@ -44,7 +50,7 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
 		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
-		>=dev-python/suds-0.4
+		>=dev-python/suds-0.4[${PYTHON_USEDEP}]
 		dev-python/paramiko[${PYTHON_USEDEP}]
 		dev-python/pyasn1[${PYTHON_USEDEP}]
 		>=dev-python/Babel-0.9.6[${PYTHON_USEDEP}]
@@ -57,9 +63,13 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.10[${PYTHON_USEDEP}]
 		>=dev-python/websockify-0.5.1[${PYTHON_USEDEP}]
 		<dev-python/websockify-0.6[${PYTHON_USEDEP}]
-		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]"
-#oslo.config-1.2 is required but not released yet
+		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
+		virtual/python-argparse[${PYTHON_USEDEP}]
+		app-emulation/libvirt[${PYTHON_USEDEP}]
+		novncproxy? ( www-apps/novnc )
+		kvm? ( app-emulation/qemu )
+		xen? ( app-emulation/xen
+			   app-emulation/xen-tools )"
 
 PATCHES=(
 )
@@ -79,13 +89,18 @@ python_install() {
 	use conductor && dosym /etc/init.d/nova /etc/init.d/nova-conductor
 	use consoleauth && dosym /etc/init.d/nova /etc/init.d/nova-consoleauth
 	use network &&  dosym /etc/init.d/nova /etc/init.d/nova-network
-	use novncproxy &&dosym /etc/init.d/nova /etc/init.d/nova-nonvncproxy
+	use novncproxy &&dosym /etc/init.d/nova /etc/init.d/nova-novncproxy
 	use scheduler && dosym /etc/init.d/nova /etc/init.d/nova-scheduler
 	use spicehtml5proxy && dosym /etc/init.d/nova /etc/init.d/nova-spicehtml5proxy
 	use xvpvncproxy && dosym /etc/init.d/nova /etc/init.d/nova-xvpncproxy
 
-	dodir /var/log/nova
-	fowners nova:nova /var/log/nova
+	diropts -m 0750
+	dodir /var/run/nova /var/log/nova /var/lock/nova
+	fowners nova:nova /var/log/nova /var/lock/nova /var/run/nova
+
+	diropts -m 0755
+	dodir /var/lib/nova/instances
+	fowners nova:nova /var/lib/nova/instances
 
 	keepdir /etc/nova
 	insinto /etc/nova

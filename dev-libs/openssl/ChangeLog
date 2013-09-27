@@ -1,6 +1,44 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.480 2013/06/09 22:58:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.490 2013/09/23 06:03:30 jmorgan Exp $
+
+  23 Sep 2013; Jack Morgan <jmorgan@gentoo.org> openssl-1.0.1e-r1.ebuild:
+  removing ppc64 openssl-1.0.1e-r1 wrt bug #469976
+
+  23 Sep 2013; Jack Morgan <jmorgan@gentoo.org> openssl-1.0.1e.ebuild,
+  openssl-1.0.1e-r1.ebuild:
+  ppc64 stable for openssl-1.0.1e and ~ppc64 for openssl-1.0.1e-r1 wrt bug
+  #469976
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8y.ebuild,
+  openssl-1.0.1e-r1.ebuild:
+  Stable for alpha, wrt bug #455592
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8y.ebuild,
+  openssl-1.0.1e-r1.ebuild:
+  Stable for ia64, wrt bug #455592
+
+  15 Sep 2013; Markus Meier <maekke@gentoo.org> openssl-1.0.1e-r1.ebuild:
+  arm stable, bug #455592
+
+  15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8y.ebuild,
+  openssl-1.0.1e-r1.ebuild:
+  Stable for ppc64, wrt bug #455592
+
+  15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8y.ebuild,
+  openssl-1.0.1e-r1.ebuild:
+  Stable for ppc, wrt bug #455592
+
+  15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8y.ebuild,
+  openssl-1.0.1e-r1.ebuild:
+  Stable for x86, wrt bug #455592
+
+  15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8y.ebuild,
+  openssl-1.0.1e-r1.ebuild:
+  Stable for amd64, wrt bug #455592
+
+  12 Sep 2013; Jeroen Roovers <jer@gentoo.org> openssl-1.0.1e-r1.ebuild:
+  Stable for HPPA (bug #455592).
 
   09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.

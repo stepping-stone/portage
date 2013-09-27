@@ -1,10 +1,209 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8214 2013/09/05 10:09:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8275 2013/09/27 13:31:20 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Sep 2013; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Mask nginx >=1.4.2 for testing.
+
+  27 Sep 2013; Tiziano Müller <dev-zero@gentoo.org>
+  desc/nginx_modules_http.desc:
+  Add security to nginx_modules_http USE_EXPAND
+
+  26 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Unmask python-exec:2 for wider testing.
+
+  26 Sep 2013; Sven Vermeulen <swift@gentoo.org> package.mask:
+  Masking openscap-9999
+
+  26 Sep 2013; Tiziano Müller <dev-zero@gentoo.org>
+  desc/nginx_modules_http.desc:
+  Add echo to nginx_modules_http USE_EXPAND
+
+  24 Sep 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Temporarily disable openldap mask until s390 catches up
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> package.mask:
+  mask older and vulnerable version of openldap
+
+  22 Sep 2013; Pacho Ramos <pacho@gentoo.org> arch/arm/package.use.mask:
+  Mask USE on arm due missing keywords
+
+  21 Sep 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask zen-sources live ebuilds
+
+  21 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask multilib OpenGL packages for testing.
+
+  21 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Remove the mask on glu since the emul set is ready now.
+
+  21 Sep 2013; Michael Palimaka <kensington@gentoo.org>
+  targets/desktop/kde/package.use:
+  Enable xmp USE flag for media-gfx/exiv2 by default as it is required by
+  kde-base/libkexiv2.
+
+  20 Sep 2013; Ian Stakenvicius <axs@gentoo.org>
+  +default/linux/amd64/13.0/package.use.stable.mask:
+  stable masked abi_x86_32 on all relevant atoms
+
+  20 Sep 2013; Ian Stakenvicius <axs@gentoo.org> package.mask:
+  adjusted mask of mozplugger
+
+  19 Sep 2013; Tiziano Müller <dev-zero@gentoo.org> license_groups:
+  Add newly added Adaptec-EULA to the EULA license group (as discussed on the
+  gentoo-dev ml)
+
+  18 Sep 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  >=app-admin/ec2-api-tools-1.6.7.2-r4: Temporarily masked due to QA issue
+  during attempts to unbundle dependencies.
+
+  18 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Mask developer releases of dev-libs/botan
+
+  17 Sep 2013; Tim Harder <radhermit@gentoo.org> package.mask:
+  Unmask =media-video/mkvtoolnix-6.4.1.
+
+  17 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Link the gentoo-dev thread in python-exec:2 p.mask.
+
+  17 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask python-exec-2 for testing.
+
+  17 Sep 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Remove poppler mask as everything works now
+
+  16 Sep 2013; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask >=media-video/mkvtoolnix-6.4.0 until libmatroska-1.4.1 is released.
+
+  16 Sep 2013; Justin Lecher <jlec@gentoo.org> package.mask:
+  Mask gajim beta
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-sysinfo masked for removal on ~15/Oct/2013, Bug #414275
+  #414177
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-taste masked for removal on ~15/Oct/2013, Bug #414269
+  #414177
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-timeline masked for removal on ~15/Oct/2013, Bug #414261
+  #414177
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-tvonscreen masked for removal on ~15/Oct/2013, Bug #414257
+  #414177
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-tvtv masked for removal on ~15/Oct/2013, Bug #414255
+  #414177
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-vdrrip masked for removal on ~15/Oct/2013, Bug #414235
+  #414177
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-prefermenu masked for removal on ~15/Oct/2013, Bug #420883
+  #414177
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  cleanup pmask for media-plugins/vdr-channelscan, depend on wrt bug #474480
+  155253 414177, removed from tree
+
+  15 Sep 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove masked ruby18-only packages.
+
+  14 Sep 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask ocaml 4.01.0
+
+  14 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  desc/dracut_modules.desc:
+  Added dash use expand to dracut_modules.
+
+  14 Sep 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Expand sun-* package.mask reason to explain continuation, alternatives and
+  also mask and explain JCE; as requested in bugs #473830 and bug #484680,
+  reported by Martin Mokrejš.
+
+  14 Sep 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove masked ruby18-only packages.
+
+  13 Sep 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask dev-lang/jimtcl-9999 live ebuild
+
+  13 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask new PAM due to segfault in pam_unix.so, bug #484732.
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask virtual/pyparsing for removal since we no longer support split pyparsing
+  and therefore need it.
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Lastrite virtual/python-json -- JSON is now built-in in all supported
+  Pythons.
+
+  11 Sep 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Unmask buildbot-0.8.8 and buildbot-slave-0.8.8
+
+  11 Sep 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask buildbot live ebuilds
+
+  11 Sep 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask dev-tex/natbib for removal, bug 483974
+
+  11 Sep 2013; Pacho Ramos <pacho@gentoo.org> arch/powerpc/ppc32/use.mask,
+  arch/powerpc/use.mask:
+  Unmask systemd USE flag as it's keyworded there after talking with Ago
+  (#478076)
+
+  11 Sep 2013; Michał Górny <mgorny@gentoo.org> updates/3Q-2013:
+  Rename sys-devel/systemd-sdk to sys-devel/systemd-m4.
+
+  10 Sep 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Unmask postgresql-9.3 final
+
+  09 Sep 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Listed two more important security bugs in the gentoo-sources-3.8.13 mask
+  reason.
+
+  09 Sep 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  revert mask wrt #483588
+
+  09 Sep 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Fix perl mask once more
+
+  09 Sep 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Fix perl mask
+
+  08 Sep 2013; Ian Stakenvicius <axs@gentoo.org> package.mask:
+  masked media-libs/openal-1.15.1-r1 until emul-linux-* can be adjusted to
+  remove the colliding files
+
+  08 Sep 2013; Mikle Kolyada <zlogene@gentoo.org> package.mask:
+  Mask perl-5.18 and friends, again
+
+  08 Sep 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Unmask latest openocd
+
+  08 Sep 2013; Markos Chandras <hwoarang@gentoo.org> desc/input_devices.desc:
+  Add input devices for roccat-tools. Bug #395171
+
+  08 Sep 2013; Pacho Ramos <pacho@gentoo.org> arch/powerpc/package.use.mask:
+  monodevelop is not keyworded, bug #468030
+
+  07 Sep 2013; Mike Gilbert <floppym@gentoo.org> thirdpartymirrors:
+  Update pypi based on PEP 449, bug 482154 by Arfrever.
+
+  07 Sep 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask packages for removal
+
+  07 Sep 2013; Pacho Ramos <pacho@gentoo.org>
+  eapi-5-files/package.use.stable.mask:
+  Mask abi_x86_32 to let stabilization (#477182#c5)
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org>
   desc/python_single_target.desc, desc/python_targets.desc, package.mask:

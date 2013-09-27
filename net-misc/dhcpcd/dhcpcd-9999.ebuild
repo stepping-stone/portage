@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.5 2013/08/16 05:59:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.9 2013/09/22 18:01:42 williamh Exp $
 
 EAPI=5
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://roy.marples.name/${PN}.git"
-	inherit git-2
+	inherit git-r3
 else
 	MY_P="${P/_alpha/-alpha}"
 	MY_P="${MY_P/_beta/-beta}"
@@ -22,10 +22,11 @@ DESCRIPTION="A fully featured, yet light weight RFC2131 compliant DHCP client"
 HOMEPAGE="http://roy.marples.name/projects/dhcpcd/"
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="elibc_glibc ipv6"
+IUSE="elibc_glibc ipv6 kernel_linux +udev"
 
-DEPEND=""
-RDEPEND=""
+COMMON_DEPEND="udev? ( virtual/udev )"
+DEPEND="${COMMON_DEPEND}"
+RDEPEND="${COMMON_DEPEND}"
 
 src_prepare()
 {
@@ -34,14 +35,19 @@ src_prepare()
 
 src_configure()
 {
-	local hooks="--with-hook=ntp.conf"
+	local dev hooks rundir
+	use udev || dev="--without-dev --without-udev"
+	hooks="--with-hook=ntp.conf"
 	use elibc_glibc && hooks="${hooks} --with-hook=yp.conf"
+	use kernel_linux && rundir="--rundir=/run"
 	econf \
 			--prefix="${EPREFIX}" \
 			--libexecdir="${EPREFIX}/lib/dhcpcd" \
 			--dbdir="${EPREFIX}/var/lib/dhcpcd" \
 		--localstatedir="${EPREFIX}/var" \
+		${rundir} \
 		$(use_enable ipv6) \
+		${dev} \
 		${hooks}
 }
 

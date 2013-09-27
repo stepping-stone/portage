@@ -1,6 +1,29 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.370 2013/08/22 22:00:06 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.376 2013/09/23 17:58:22 williamh Exp $
+
+  23 Sep 2013; William Hubbs <williamh@gentoo.org> -dhcpcd-6.0.2.ebuild,
+  -dhcpcd-6.0.3.ebuild, -dhcpcd-6.0.5.ebuild:
+  remove old unstable versions
+
+  22 Sep 2013; William Hubbs <williamh@gentoo.org> dhcpcd-9999.ebuild:
+  add support for --rundir on Linux.
+
+*dhcpcd-6.1.0 (20 Sep 2013)
+
+  20 Sep 2013; William Hubbs <williamh@gentoo.org> +dhcpcd-6.1.0.ebuild:
+  version bump
+
+  16 Sep 2013; William Hubbs <williamh@gentoo.org> dhcpcd-9999.ebuild:
+  migrate to git-r3 eclass
+
+  13 Sep 2013; William Hubbs <williamh@gentoo.org> dhcpcd-9999.ebuild:
+  --with-udev and --with-dev are not valid switches to configure, so only use
+  --without-dev and --without-udev if the udev use flag is disabled.
+
+  09 Sep 2013; William Hubbs <williamh@gentoo.org> ChangeLog,
+  dhcpcd-9999.ebuild:
+  add udev use flag for bug #483970
 
   22 Aug 2013; William Hubbs <williamh@gentoo.org> -dhcpcd-5.99.7-r1.ebuild,
   -files/dhcpcd-5.99.7-fix-prefix.patch:

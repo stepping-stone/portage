@@ -1,6 +1,33 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.68 2013/08/18 13:44:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.74 2013/09/23 19:12:10 ago Exp $
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> spice-gtk-0.21.ebuild:
+  Stable for amd64, wrt bug #485420
+
+  23 Sep 2013; Doug Goldstein <cardoe@gentoo.org>
+  +files/spice-gtk-0.21-fix-g-clear-pointer-on-old-glib.patch,
+  spice-gtk-0.21.ebuild:
+  Drop the glib depend back down with a fix for g_clear_pointer() and add a
+  missing epatch_user. bug #485550
+
+  23 Sep 2013; Doug Goldstein <cardoe@gentoo.org> spice-gtk-0.21.ebuild:
+  Fix depend for g_clear_pointer() call in libspice-client-glib-2.0.so. Spotted
+  by Rafal Muzylo <galtgendo@o2.pl> bug #485550
+
+*spice-gtk-0.21 (19 Sep 2013)
+
+  19 Sep 2013; Doug Goldstein <cardoe@gentoo.org> +spice-gtk-0.21.ebuild,
+  -spice-gtk-0.18.ebuild, -spice-gtk-0.20.ebuild:
+  Bump for CVE-2013-4324
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> spice-gtk-0.18.ebuild,
+  spice-gtk-0.20-r1.ebuild, spice-gtk-0.20.ebuild:
+  Replace virtual/pyparsing dep with dev-python/pyparsing. The split versions
+  were removed and all in-tree versions support all impls now.
+
+  06 Sep 2013; Doug Goldstein <cardoe@gentoo.org> -spice-gtk-0.14-r2.ebuild:
+  Remove older version
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> spice-gtk-0.20-r1.ebuild:
   Stable for x86, wrt bug #480146

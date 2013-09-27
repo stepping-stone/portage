@@ -1,6 +1,44 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.143 2013/06/27 14:30:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.154 2013/09/26 17:48:57 ottxor Exp $
+
+  26 Sep 2013; Christoph Junghans <ottxor@gentoo.org> -fftw-3.2.2-r2.ebuild,
+  -fftw-3.2.2.ebuild, -fftw-3.3.3-r1.ebuild, -fftw-3.3.3.ebuild,
+  -files/fftw-3.2.1-as-needed.patch, -files/fftw-3.2.2-pc-threads.patch,
+  metadata.xml:
+  removed old (bug #478608)
+
+  26 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fftw-3.3.3-r2.ebuild:
+  Stable for arm, wrt bug #477182
+
+  25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fftw-3.3.3-r2.ebuild:
+  Stable for ppc, wrt bug #477182
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fftw-3.3.3-r2.ebuild:
+  Stable for sparc, wrt bug #477182
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fftw-3.3.3-r2.ebuild:
+  Stable for ppc64, wrt bug #477182
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fftw-3.3.3-r2.ebuild:
+  Stable for alpha, wrt bug #477182
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fftw-3.3.3-r2.ebuild:
+  Stable for ia64, wrt bug #477182
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fftw-3.3.3-r2.ebuild:
+  Stable for x86, wrt bug #477182
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fftw-3.3.3-r2.ebuild:
+  Stable for amd64, wrt bug #477182
+
+*fftw-3.3.3-r3 (17 Sep 2013)
+
+  17 Sep 2013; Christoph Junghans <ottxor@gentoo.org> +fftw-3.3.3-r3.ebuild:
+  added version without REQUIRED_USE
+
+  09 Sep 2013; Jeroen Roovers <jer@gentoo.org> fftw-3.3.3-r2.ebuild:
+  Stable for HPPA (bug #477182).
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> fftw-3.3.3-r1.ebuild,
   fftw-3.3.3-r2.ebuild:

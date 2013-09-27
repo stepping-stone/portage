@@ -1,6 +1,42 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.299 2013/04/21 09:27:38 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.310 2013/09/22 09:36:05 pacho Exp $
+
+*lighttpd-1.4.32-r3 (22 Sep 2013)
+
+  22 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/lighttpd.tmpfiles.conf,
+  +lighttpd-1.4.32-r3.ebuild, lighttpd-1.4.32-r2.ebuild:
+  Just noticed I forgot the revbump when it was committed...
+
+  22 Sep 2013; Pacho Ramos <pacho@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  Install tmpfiles.d conf (#476882 by Francisco Vazquez)
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  Stable for alpha, wrt bug #480126
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  Stable for x86, wrt bug #480126
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  Stable for ia64, wrt bug #480126
+
+  12 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  Stable for ppc64, wrt bug #480126
+
+  12 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  Stable for ppc, wrt bug #480126
+
+  08 Sep 2013; Markus Meier <maekke@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  arm stable, bug #480126
+
+  08 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  Stable for amd64, wrt bug #480126
+
+  06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  Stable for sparc, wrt bug #480126
+
+  06 Sep 2013; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  Stable for HPPA (bug #480126).
 
 *lighttpd-1.4.32-r2 (21 Apr 2013)
 

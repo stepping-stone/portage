@@ -1,6 +1,40 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1223 2013/09/02 22:43:02 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1227 2013/09/27 12:47:27 mpagano Exp $
+
+*vanilla-sources-3.11.2 (27 Sep 2013)
+
+  27 Sep 2013; Michael Pagano <mpagano@gentoo.org>
+  +vanilla-sources-3.11.2.ebuild:
+  Version bump
+
+*vanilla-sources-3.10.12 (15 Sep 2013)
+*vanilla-sources-3.11.1 (15 Sep 2013)
+*vanilla-sources-3.0.96 (15 Sep 2013)
+*vanilla-sources-3.4.62 (15 Sep 2013)
+
+  15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.96.ebuild,
+  +vanilla-sources-3.10.12.ebuild, +vanilla-sources-3.11.1.ebuild,
+  +vanilla-sources-3.4.62.ebuild, -vanilla-sources-3.0.95.ebuild,
+  -vanilla-sources-3.10.11.ebuild, -vanilla-sources-3.11.0.ebuild,
+  -vanilla-sources-3.4.61.ebuild:
+  Version bump for the 3.0 / 3.4 / 3.10 / 3.11 series, remove old.
+
+*vanilla-sources-3.2.51 (11 Sep 2013)
+
+  11 Sep 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.2.51.ebuild,
+  -vanilla-sources-3.2.50.ebuild:
+  Version bump for the 3.2 series, remove old.
+
+*vanilla-sources-3.4.61 (08 Sep 2013)
+*vanilla-sources-3.0.95 (08 Sep 2013)
+*vanilla-sources-3.10.11 (08 Sep 2013)
+
+  08 Sep 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.95.ebuild,
+  +vanilla-sources-3.10.11.ebuild, +vanilla-sources-3.4.61.ebuild,
+  -vanilla-sources-3.0.94.ebuild, -vanilla-sources-3.10.10.ebuild,
+  -vanilla-sources-3.4.60.ebuild:
+  Version bump for the 3.0 / 3.4 / 3.10 series, remove old.
 
 *vanilla-sources-3.11.0 (02 Sep 2013)
 
