@@ -1,6 +1,42 @@
 # ChangeLog for media-libs/libraw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.66 2013/09/12 09:03:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.72 2013/11/23 23:10:32 radhermit Exp $
+
+  23 Nov 2013; Tim Harder <radhermit@gentoo.org> -libraw-0.16.0_alpha2.ebuild,
+  -libraw-0.16.0_alpha2-r1.ebuild:
+  Remove old.
+
+*libraw-0.16.0_beta1 (23 Nov 2013)
+
+  23 Nov 2013; Tim Harder <radhermit@gentoo.org> +libraw-0.16.0_beta1.ebuild:
+  Version bump.
+
+*libraw-0.16.0_alpha3 (08 Nov 2013)
+
+  08 Nov 2013; Tim Harder <radhermit@gentoo.org> +libraw-0.16.0_alpha3.ebuild:
+  Version bump.
+
+  20 Oct 2013; Tim Harder <radhermit@gentoo.org>
+  files/libraw-0.16.0_alpha2-automagic-jasper.patch,
+  files/libraw-0.16.0_alpha2-lcms2-first.patch:
+  Use spaces instead of tabs to match upstream.
+
+*libraw-0.16.0_alpha2-r1 (20 Oct 2013)
+
+  20 Oct 2013; Tim Harder <radhermit@gentoo.org>
+  +libraw-0.16.0_alpha2-r1.ebuild,
+  +files/libraw-0.16.0_alpha2-automagic-jasper.patch,
+  +files/libraw-0.16.0_alpha2-custom-demosaic-paths.patch,
+  +files/libraw-0.16.0_alpha2-docs.patch,
+  +files/libraw-0.16.0_alpha2-lcms2-first.patch,
+  +files/libraw-0.16.0_alpha2-libdir.patch:
+  Switch to cmake build system (fixes bug #488598) and add multilib support
+  (bug #474652).
+
+*libraw-0.16.0_alpha2 (18 Oct 2013)
+
+  18 Oct 2013; Tim Harder <radhermit@gentoo.org> +libraw-0.16.0_alpha2.ebuild:
+  Version bump (bug #488302).
 
   12 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> -libraw-0.15.2.ebuild,
   -libraw-0.15.3.ebuild:

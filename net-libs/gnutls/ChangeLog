@@ -1,6 +1,31 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.449 2013/09/22 14:06:38 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.455 2013/11/23 22:56:38 radhermit Exp $
+
+*gnutls-3.2.7 (23 Nov 2013)
+
+  23 Nov 2013; Tim Harder <radhermit@gentoo.org> +gnutls-3.2.7.ebuild:
+  Version bump.
+
+*gnutls-3.2.6 (09 Nov 2013)
+
+  09 Nov 2013; Tim Harder <radhermit@gentoo.org> +gnutls-3.2.6.ebuild:
+  Version bump.
+
+  28 Oct 2013; Alon Bar-Lev <alonbl@gentoo.org> -gnutls-3.2.3.ebuild:
+  Remove old ebuild, bug#489262
+
+  28 Oct 2013; Alon Bar-Lev <alonbl@gentoo.org> -gnutls-3.2.4.ebuild:
+  Remove old ebuild, bug#489262
+
+*gnutls-3.2.5 (24 Oct 2013)
+
+  24 Oct 2013; Alon Bar-Lev <alonbl@gentoo.org> +files/gnutls-3.2.5-build.patch,
+  +gnutls-3.2.5.ebuild:
+  Version bump, bug#489262
+
+  22 Oct 2013; Fabian Groffen <grobian@gentoo.org> gnutls-3.2.4.ebuild:
+  Add patch from upstream to fix compilation on Darwin, bug #488498
 
   22 Sep 2013; Chris Reffett <creffett@gentoo.org> -gnutls-2.12.20.ebuild:
   Drop affected version wrt bug 455560

@@ -1,6 +1,66 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.484 2013/09/24 13:27:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.497 2013/11/18 19:39:23 jer Exp $
+
+  18 Nov 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-304.116.ebuild,
+  nvidia-drivers-331.20.ebuild:
+  Stable for AMD64 x86 too.
+
+  17 Nov 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-173.14.38.ebuild,
+  nvidia-drivers-304.116.ebuild, nvidia-drivers-325.15.ebuild,
+  nvidia-drivers-331.20.ebuild:
+  Move /etc/modprobe.d/nvidia.conf sed call to pkg_preinst (bug #491414).
+
+  13 Nov 2013; Mike Gilbert <floppym@gentoo.org> nvidia-drivers-331.20.ebuild:
+  Comment out broken pax-usercopy patch.
+
+  07 Nov 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-173.14.38.ebuild:
+  Raise max kernel version for 173*.
+
+*nvidia-drivers-304.116 (06 Nov 2013)
+
+  06 Nov 2013; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-304.116.ebuild:
+  Version bump.
+
+*nvidia-drivers-331.20 (06 Nov 2013)
+
+  06 Nov 2013; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-331.13.ebuild,
+  -nvidia-drivers-331.17.ebuild, +nvidia-drivers-331.20.ebuild:
+  Version bump.
+
+  02 Nov 2013; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-325.08.ebuild,
+  nvidia-drivers-325.15.ebuild:
+  Stable for AMD64 x86 too.
+
+  23 Oct 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-319.60.ebuild:
+  Stable for AMD64 x86 too.
+
+*nvidia-drivers-331.17 (23 Oct 2013)
+
+  23 Oct 2013; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-331.17.ebuild:
+  Version bump.
+
+  12 Oct 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.23.ebuild,
+  nvidia-drivers-173.14.38.ebuild, nvidia-drivers-304.108.ebuild,
+  nvidia-drivers-310.51.ebuild, nvidia-drivers-313.30.ebuild,
+  nvidia-drivers-319.49.ebuild, nvidia-drivers-319.60.ebuild,
+  nvidia-drivers-325.08.ebuild, nvidia-drivers-325.15.ebuild,
+  nvidia-drivers-331.13.ebuild:
+  Use readme.gentoo.eclass (bug #457594).
+
+  10 Oct 2013; Jeroen Roovers <jer@gentoo.org>
+  +files/nvidia-drivers-331.13-pax-usercopy.patch, nvidia-drivers-331.13.ebuild:
+  New PaX patch by Martin Väth (bug #487492).
+
+*nvidia-drivers-331.13 (05 Oct 2013)
+
+  05 Oct 2013; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-331.13.ebuild:
+  Version bump.
+
+*nvidia-drivers-319.60 (02 Oct 2013)
+
+  02 Oct 2013; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-319.60.ebuild:
+  Version bump.
 
   24 Sep 2013; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-173.14.37.ebuild:
   Old.

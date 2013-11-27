@@ -1,6 +1,33 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.137 2013/09/06 18:33:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.144 2013/11/26 22:11:11 pacho Exp $
+
+  26 Nov 2013; Pacho Ramos <pacho@gentoo.org> hddtemp-0.3_beta15-r7.ebuild:
+  x86 stable, bug #487148
+
+  18 Nov 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
+  Added drives to hddgentoo.db, fixes bug #481208.
+
+  20 Oct 2013; Markus Meier <maekke@gentoo.org> hddtemp-0.3_beta15-r7.ebuild:
+  arm stable, bug #487148
+
+  15 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  hddtemp-0.3_beta15-r7.ebuild:
+  Added missing || die.
+
+  10 Oct 2013; Chema Alonso <nimiux@gentoo.org> hddtemp-0.3_beta15-r7.ebuild:
+  Stable for amd64 wrt bug #487148
+
+  09 Oct 2013; Jeroen Roovers <jer@gentoo.org> hddtemp-0.3_beta15-r7.ebuild:
+  Stable for HPPA (bug #487148).
+
+*hddtemp-0.3_beta15-r24 (28 Sep 2013)
+*hddtemp-0.3_beta15-r7 (28 Sep 2013)
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/hddtemp.service-r1,
+  +files/hddtemp.service.conf, +hddtemp-0.3_beta15-r24.ebuild,
+  +hddtemp-0.3_beta15-r7.ebuild:
+  Fix unit file (#485924 by Tilo Prütz)
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> hddtemp-0.3_beta15-r6.ebuild:
   Stable for sparc, wrt bug #480036

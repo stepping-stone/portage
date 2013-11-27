@@ -1,6 +1,33 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.320 2013/09/12 12:29:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.325 2013/11/17 09:47:47 angelos Exp $
+
+  17 Nov 2013; Christoph Mende <angelos@gentoo.org> mpd-0.18.3.ebuild,
+  mpd-0.18.4.ebuild:
+  Add missing libmpdclient dependency (bug #491400)
+
+*mpd-0.18.4 (13 Nov 2013)
+
+  13 Nov 2013; Christoph Mende <angelos@gentoo.org> +mpd-0.18.4.ebuild,
+  -mpd-0.17.5.ebuild:
+  Version bump, remove old
+
+*mpd-0.18.3 (08 Nov 2013)
+
+  08 Nov 2013; Christoph Mende <angelos@gentoo.org> +mpd-0.18.3.ebuild,
+  -mpd-0.18.ebuild:
+  Version bump, remove old
+
+  01 Nov 2013; Jeroen Roovers <jer@gentoo.org> mpd-0.18.ebuild:
+  Marked ~hppa (bug #489962).
+
+*mpd-0.18 (31 Oct 2013)
+*mpd-0.17.6 (31 Oct 2013)
+
+  31 Oct 2013; Christoph Mende <angelos@gentoo.org> +mpd-0.17.6.ebuild,
+  +mpd-0.18.ebuild, -mpd-0.16.8.ebuild, -mpd-0.17.3.ebuild, -mpd-0.17.4.ebuild,
+  metadata.xml:
+  Version bump, remove old
 
 *mpd-0.17.5 (12 Sep 2013)
 

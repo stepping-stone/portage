@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.600 2013/08/15 04:39:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.606 2013/11/25 03:11:57 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -112,7 +112,8 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	[[ -n ${D_VER}   ]] && IUSE+=" d"
 	[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
 	tc_version_is_at_least 3 && IUSE+=" doc gcj gtk hardened multilib objc"
-	tc_version_is_at_least 4.0 && IUSE+=" objc-gc mudflap"
+	tc_version_is_at_least 4.0 && IUSE+=" objc-gc"
+	tc_version_is_at_least 4.0 && ! tc_version_is_at_least 4.9 && IUSE+=" mudflap"
 	tc_version_is_at_least 4.1 && IUSE+=" libssp objc++"
 	tc_version_is_at_least 4.2 && IUSE+=" openmp"
 	tc_version_is_at_least 4.3 && IUSE+=" fixed-point"
@@ -1283,12 +1284,18 @@ gcc_do_configure() {
 
 has toolchain_death_notice ${EBUILD_DEATH_HOOKS} || EBUILD_DEATH_HOOKS+=" toolchain_death_notice"
 toolchain_death_notice() {
-	pushd "${WORKDIR}"/build >/dev/null
-	tar jcf gcc-build-logs.tar.bz2 $(find -name config.log)
-	eerror
-	eerror "Please include ${PWD}/gcc-build-logs.tar.bz2 in your bug report"
-	eerror
-	popd >/dev/null
+	if [[ -e "${WORKDIR}"/build ]] ; then 
+		pushd "${WORKDIR}"/build >/dev/null
+		(echo '' | $(tc-getCC ${CTARGET}) ${CFLAGS} -v -E - 2>&1) > gccinfo.log
+		[[ -e "${T}"/build.log ]] && cp "${T}"/build.log .
+		tar jcf "${WORKDIR}"/gcc-build-logs.tar.bz2 \
+			gccinfo.log build.log $(find -name config.log)
+		rm gccinfo.log build.log
+		eerror
+		eerror "Please include ${WORKDIR}/gcc-build-logs.tar.bz2 in your bug report."
+		eerror
+		popd >/dev/null
+	fi
 }
 
 # This function accepts one optional argument, the make target to be used.
@@ -1388,6 +1395,8 @@ gcc_do_filter_flags() {
 	# dont want to funk ourselves
 	filter-flags '-mabi*' -m31 -m32 -m64
 
+	filter-flags '-frecord-gcc-switches' # 490738
+
 	case ${GCC_BRANCH_VER} in
 		3.2|3.3)
 			replace-cpu-flags k8 athlon64 opteron x86-64
@@ -1422,9 +1431,15 @@ gcc_do_filter_flags() {
 					# https://bugs.gentoo.org/454426
 					append-ldflags -Wl,--no-relax
 					;;
+				sparc)
+					# temporary workaround for random ICEs reproduced by multiple users
+					# https://bugs.gentoo.org/457062
+					[[ ${GCC_BRANCH_VER} == 4.6 || ${GCC_BRANCH_VER} == 4.7 ]] && \
+						MAKEOPTS+=" -j1"
+					;;
 				*-macos)
 					# http://gcc.gnu.org/PR25127
-					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER}  == 4.1 ]] && \
+					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER} == 4.1 ]] && \
 						filter-flags '-mcpu=*' '-march=*' '-mtune=*'
 					;;
 			esac
@@ -1640,6 +1655,7 @@ toolchain_src_install() {
 		if tc_version_is_at_least 4.0 ; then
 			newins "${GCC_FILESDIR}"/awk/fixlafiles.awk-no_gcc_la fixlafiles.awk || die
 			find "${D}/${LIBPATH}" -name libstdc++.la -type f -exec rm "{}" \;
+			find "${D}/${LIBPATH}" -name "lib?san.la" -type f -exec rm "{}" \; # 487550
 		else
 			doins "${GCC_FILESDIR}"/awk/fixlafiles.awk || die
 		fi

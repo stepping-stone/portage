@@ -1,6 +1,41 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.78 2013/08/27 15:27:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.88 2013/11/19 18:53:22 grobian Exp $
+
+  19 Nov 2013; Fabian Groffen <grobian@gentoo.org> cups-filters-1.0.41.ebuild:
+  Marked ~m68k-mint, bug #491080
+
+  04 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.36-r1.ebuild, cups-filters-1.0.36-r2.ebuild,
+  +files/cups-filters-1.0.36-parallel.patch:
+  Fix parallel build, bug 490218. Newer versions already contain this change.
+
+*cups-filters-1.0.41 (04 Nov 2013)
+
+  04 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cups-filters-1.0.41.ebuild, cups-filters-9999.ebuild:
+  Version bump
+
+  03 Nov 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.36-r1.ebuild:
+  Stable for ppc64, wrt bug #489720
+
+  03 Nov 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.36-r1.ebuild:
+  Stable for ppc, wrt bug #489720
+
+  03 Nov 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.36-r1.ebuild:
+  Stable for arm, wrt bug #489720
+
+  03 Nov 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.36-r1.ebuild:
+  Stable for alpha, wrt bug #489720
+
+  02 Nov 2013; Jeroen Roovers <jer@gentoo.org> cups-filters-1.0.36-r1.ebuild:
+  Stable for HPPA (bug #489802).
+
+  31 Oct 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.36-r1.ebuild:
+  Stable for x86, wrt bug #489720
+
+  31 Oct 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.36-r1.ebuild:
+  Stable for amd64, wrt bug #489720
 
   27 Aug 2013; Michael Palimaka <kensington@gentoo.org>
   cups-filters-1.0.34-r1.ebuild, cups-filters-1.0.36-r1.ebuild,

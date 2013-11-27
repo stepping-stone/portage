@@ -1,6 +1,46 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.278 2013/09/26 15:00:20 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.286 2013/11/26 19:07:29 jer Exp $
+
+  26 Nov 2013; Jeroen Roovers <jer@gentoo.org> firefox-24.1.1.ebuild:
+  Stable for HPPA too.
+
+*firefox-24.1.1 (19 Nov 2013)
+
+  19 Nov 2013; Jory A. Pratt <anarchy@gentoo.org> +firefox-24.1.1.ebuild,
+  -firefox-24.1.0-r1.ebuild:
+  Misc upstream fixes, updated deps on nss/nspr to match build requirements
+
+  18 Nov 2013; Jeroen Roovers <jer@gentoo.org> firefox-25.0.1.ebuild:
+  Readd stack direction patch. Again.
+
+*firefox-25.0.1 (18 Nov 2013)
+
+  18 Nov 2013; Jory A. Pratt <anarchy@gentoo.org> +firefox-25.0.1.ebuild,
+  -firefox-25.0-r1.ebuild:
+  Misc upstream bug fixes
+
+  08 Nov 2013; Jeroen Roovers <jer@gentoo.org> firefox-25.0-r1.ebuild,
+  +files/firefox-25.0-stack-grows-up.patch:
+  Fix systems where the stack grows up (bug #490746).
+
+*firefox-24.1.0-r1 (04 Nov 2013)
+*firefox-25.0-r1 (04 Nov 2013)
+
+  04 Nov 2013; Jory A. Pratt <anarchy@gentoo.org> +firefox-24.1.0-r1.ebuild,
+  +firefox-25.0-r1.ebuild, -files/bug-846986.patch,
+  -files/firefox-14.0_beta7-gst-aac-mp3.patch,
+  -files/firefox-14.0_beta7-gst-youtube-h264.patch,
+  -files/firefox-15.0-fix-gstreamer-html5-crash.patch,
+  -files/firefox-20-hppa.patch, -files/firefox-21-hppa.patch,
+  -files/moz24-drop-Wl-build-id.patch, -firefox-24.0-r1.ebuild:
+  New esr and testing release, security update
+
+  26 Oct 2013; Jory A. Pratt <anarchy@gentoo.org> firefox-24.0-r1.ebuild:
+  ia64 support, bug #487250
+
+  07 Oct 2013; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-24.0-r1.ebuild:
+  Fix sqlite dependency
 
   26 Sep 2013; Ian Stakenvicius <axs@gentoo.org> firefox-24.0-r1.ebuild:
   fixed incorrect bug #

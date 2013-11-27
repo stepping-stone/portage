@@ -1,6 +1,69 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.678 2013/09/14 22:10:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.693 2013/11/26 20:16:10 jer Exp $
+
+  26 Nov 2013; Jeroen Roovers <jer@gentoo.org> ffmpeg-1.0.8.ebuild:
+  Stable for HPPA (bug #492252).
+
+*ffmpeg-2.1.1 (22 Nov 2013)
+
+  22 Nov 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-2.1.1.ebuild:
+  version bump
+
+*ffmpeg-0.10.10 (14 Nov 2013)
+
+  14 Nov 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-0.10.10.ebuild:
+  version bump for the 0.10 slot
+
+*ffmpeg-2.1 (05 Nov 2013)
+
+  05 Nov 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-2.1.ebuild:
+  version bump
+
+  05 Nov 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add avx2 useflag
+
+  05 Nov 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add ssh useflag
+
+  26 Oct 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.10.9.ebuild,
+  ffmpeg-1.0.7.ebuild, ffmpeg-1.0.8.ebuild, ffmpeg-1.2.3.ebuild,
+  ffmpeg-1.2.4.ebuild, ffmpeg-2.0.2.ebuild, ffmpeg-9999.ebuild:
+  enable network useflag by default, bug #488762
+
+  26 Oct 2013; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.10.8.ebuild,
+  -ffmpeg-1.2.2.ebuild, -ffmpeg-2.0.1.ebuild:
+  remove old
+
+*ffmpeg-0.10.9 (11 Oct 2013)
+
+  11 Oct 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-0.10.9.ebuild:
+  bump for the 0.10 slot
+
+  11 Oct 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add zvbi useflag
+
+  11 Oct 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  Add ladspa useflag
+
+  11 Oct 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  there is now a libfdk-aac decoder, move it to the decoder section
+
+  11 Oct 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  bump yasm dep
+
+*ffmpeg-1.2.4 (11 Oct 2013)
+
+  11 Oct 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-1.2.4.ebuild:
+  version bump
+
+*ffmpeg-2.0.2 (11 Oct 2013)
+
+  11 Oct 2013; Alexis Ballier <aballier@gentoo.org> +ffmpeg-2.0.2.ebuild:
+  version bump
 
 *ffmpeg-1.0.8 (14 Sep 2013)
 

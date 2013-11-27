@@ -1,6 +1,28 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.248 2013/09/26 15:02:50 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.252 2013/11/21 14:35:38 anarchy Exp $
+
+*thunderbird-24.1.1 (21 Nov 2013)
+
+  21 Nov 2013; Jory A. Pratt <anarchy@gentoo.org> +thunderbird-24.1.1.ebuild,
+  -thunderbird-24.1.0-r2.ebuild:
+  Misc ui fixes, update nss/nspr deps for security
+
+*thunderbird-24.1.0-r2 (09 Nov 2013)
+
+  09 Nov 2013; Ian Stakenvicius <axs@gentoo.org> +thunderbird-24.1.0-r2.ebuild,
+  -thunderbird-24.1.0-r1.ebuild:
+  Add locale support for lightning an gdata-provider, bug 333945
+
+*thunderbird-24.1.0-r1 (04 Nov 2013)
+
+  04 Nov 2013; Jory A. Pratt <anarchy@gentoo.org> +thunderbird-24.1.0-r1.ebuild,
+  -files/enigmail_mailnews_extensions_genxpi.patch,
+  -files/moz24-drop-Wl-build-id.patch, -thunderbird-24.0-r1.ebuild:
+  New esr release, security update
+
+  26 Oct 2013; Jory A. Pratt <anarchy@gentoo.org> thunderbird-24.0-r1.ebuild:
+  ia64 support, bug #487250
 
   26 Sep 2013; Ian Stakenvicius <axs@gentoo.org>
   +files/moz24-drop-Wl-build-id.patch, thunderbird-24.0-r1.ebuild:

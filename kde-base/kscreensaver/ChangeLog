@@ -1,6 +1,29 @@
 # ChangeLog for kde-base/kscreensaver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.282 2013/09/03 19:50:18 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.287 2013/11/05 22:23:22 dilfridge Exp $
+
+*kscreensaver-4.11.3 (05 Nov 2013)
+
+  05 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kscreensaver-4.11.3.ebuild:
+  Version bump KDE SC 4.11.3
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  files/kscreensaver-4.5.95-nsfw.patch:
+  Restore kdepim 4.4.11.1, accidentally removed when removing kde 4.11.1
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org> -kscreensaver-4.11.1.ebuild,
+  files/kscreensaver-4.5.95-nsfw.patch:
+  Drop KDE SC 4.11.1
+
+  09 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  files/kscreensaver-4.5.95-nsfw.patch:
+  Version bump KDE SC 4.11.2
+
+*kscreensaver-4.11.2 (08 Oct 2013)
+
+  08 Oct 2013; Chris Reffett <creffett@gentoo.org> +kscreensaver-4.11.2.ebuild:
+  Version bump KDE SC 4.11.2
 
   03 Sep 2013; Chris Reffett <creffett@gentoo.org> -kscreensaver-4.11.0.ebuild,
   files/kscreensaver-4.5.95-nsfw.patch:

@@ -1,6 +1,42 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.708 2013/09/26 19:17:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.714 2013/11/23 17:47:09 jer Exp $
+
+  23 Nov 2013; Jeroen Roovers <jer@gentoo.org> python-3.3.2-r2.ebuild,
+  python-3.3.3.ebuild:
+  Typo.
+
+  23 Nov 2013; Mike Gilbert <floppym@gentoo.org> python-3.3.2-r2.ebuild,
+  python-3.3.3.ebuild:
+  Update the postinst upgrade message.
+
+*python-3.3.3 (21 Nov 2013)
+
+  21 Nov 2013; Mike Gilbert <floppym@gentoo.org> +python-3.3.3.ebuild:
+  Version bump. Thanks to Arfrever for maintaining the patchset.
+
+*python-2.7.5-r4 (26 Oct 2013)
+
+  26 Oct 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/python-2.7-issue18851.patch, +python-2.7.5-r4.ebuild:
+  Apply patch to fix regression in subprocess module, bug 489378.
+
+*python-2.7.5-r3 (16 Oct 2013)
+*python-3.2.5-r3 (16 Oct 2013)
+
+  16 Oct 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/python-2.7-issue16248.patch, +files/python-3.2-issue16248.patch,
+  +python-2.7.5-r3.ebuild, +python-3.2.5-r3.ebuild, -python-2.7.5-r2.ebuild,
+  -python-3.2.5-r2.ebuild:
+  Apply upstream fix for regression in Tkinter, bug 488208 by jlec.
+
+  10 Oct 2013; Dirkjan Ochtman <djc@gentoo.org> -files/python-3.2.3-x32.patch,
+  -python-2.6.8-r1.ebuild, -python-2.6.8-r2.ebuild, -python-2.7.3-r2.ebuild,
+  -python-2.7.3-r3.ebuild, -python-2.7.5-r1.ebuild, -python-2.7.5.ebuild,
+  -python-3.2.3-r1.ebuild, -python-3.2.3-r2.ebuild, -python-3.2.3.ebuild,
+  -python-3.2.4.ebuild, -python-3.2.5-r1.ebuild, -python-3.2.5.ebuild,
+  -python-3.3.1.ebuild, -python-3.3.2-r1.ebuild, -python-3.3.2.ebuild:
+  Remove old versions of python.
 
   26 Sep 2013; Mike Gilbert <floppym@gentoo.org>
   +files/python-2.7.5-nonfatal-compileall.patch, python-2.7.5-r2.ebuild:

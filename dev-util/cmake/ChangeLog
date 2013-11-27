@@ -1,6 +1,39 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.254 2013/09/11 18:00:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.261 2013/11/13 18:26:34 johu Exp $
+
+*cmake-2.8.12.1-r1 (13 Nov 2013)
+
+  13 Nov 2013; Johannes Huber <johu@gentoo.org> +cmake-2.8.12.1-r1.ebuild,
+  +files/cmake-2.8.12.1-FindImageMagick.patch, -cmake-2.8.12.1.ebuild:
+  Revision bump adds patch by Arfrever Frehtes Taifersar Arahesis
+  <arfrever.fta@gmail.com>. Patch is for compatibility with media-
+  gfx/imagemagick[q32] and media-gfx/imagemagick[q64] wrt bug #491124.
+
+*cmake-2.8.12.1 (12 Nov 2013)
+
+  12 Nov 2013; Johannes Huber <johu@gentoo.org> +cmake-2.8.12.1.ebuild,
+  -cmake-2.8.12.ebuild:
+  Version bump wrt bug #490194.
+
+  28 Oct 2013; Markus Meier <maekke@gentoo.org> cmake-2.8.11.2.ebuild:
+  arm stable, bug #488586
+
+  26 Oct 2013; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.11.2.ebuild:
+  Stable for amd64, wrt bug #488586
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> cmake-2.8.12.ebuild:
+  Fix compilation on Solaris
+
+*cmake-2.8.12 (21 Oct 2013)
+
+  21 Oct 2013; Chris Reffett <creffett@gentoo.org> +cmake-2.8.12.ebuild:
+  Move from KDE overlay wrt bug 487604
+
+  19 Oct 2013; Johannes Huber <johu@gentoo.org> -cmake-2.8.11.1.ebuild,
+  -files/cmake-2.8.10-FindPythonLibs.patch, -files/cmake-2.8.10-tests.patch,
+  -files/cmake-2.8.10.2-qt5.patch:
+  Remove old.
 
 *cmake-2.8.11.2 (11 Sep 2013)
 

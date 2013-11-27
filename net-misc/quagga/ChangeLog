@@ -1,6 +1,37 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.157 2013/09/24 14:32:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.165 2013/10/31 07:41:25 pinkbyte Exp $
+
+  31 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> quagga-0.99.22.4.ebuild,
+  +files/quagga-0.99.22.4-ipctl-forwarding.patch:
+  Fix for missing definitions on some hardened configuration, bug #437292.
+  Thanks to Graham Murray <gmurray AT webwayone.co.uk> for pointing on reasons
+  of this issue
+
+  10 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> -quagga-0.99.20.ebuild,
+  -quagga-0.99.20-r1.ebuild, -quagga-0.99.21.ebuild,
+  -files/quagga-0.99.21-fix-no-ipv6.patch, -quagga-0.99.22.ebuild,
+  -quagga-0.99.22.1.ebuild, -files/quagga-link-libcap.patch,
+  -files/quagga-services.init.2, -files/zebra.init.3:
+  Security cleanup wrt bug #475706
+
+  09 Oct 2013; Agostino Sarubbo <ago@gentoo.org> quagga-0.99.22.4.ebuild:
+  Stable for sparc, wrt bug #475706
+
+  07 Oct 2013; Agostino Sarubbo <ago@gentoo.org> quagga-0.99.22.4.ebuild:
+  Stable for ppc, wrt bug #475706
+
+  06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> quagga-0.99.22.4.ebuild:
+  Stable for alpha, wrt bug #475706
+
+  06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> quagga-0.99.22.4.ebuild:
+  Stable for x86, wrt bug #475706
+
+  28 Sep 2013; Chema Alonso <nimiux@gentoo.org> quagga-0.99.22.4.ebuild:
+  Stable for amd64 wrt bug #475706
+
+  27 Sep 2013; Agostino Sarubbo <ago@gentoo.org> quagga-0.99.22.4.ebuild:
+  Stable for arm, wrt bug #475706
 
   24 Sep 2013; Jeroen Roovers <jer@gentoo.org> quagga-0.99.22.4.ebuild:
   Stable for HPPA (bug #475706).

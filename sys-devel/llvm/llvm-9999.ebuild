@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.54 2013/09/13 15:10:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.60 2013/11/27 05:32:16 mgorny Exp $
 
 EAPI=5
 
@@ -18,28 +18,11 @@ EGIT_REPO_URI="http://llvm.org/git/llvm.git
 LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
 KEYWORDS=""
-IUSE="clang debug doc gold +libffi multitarget ocaml python
+IUSE="clang debug doc gold +libffi multitarget ncurses ocaml python
 	+static-analyzer test udis86 video_cards_radeon kernel_Darwin"
 
-DEPEND="!kernel_Darwin? ( app-admin/chrpath )
-	dev-lang/perl
-	dev-python/sphinx
-	>=sys-devel/make-3.79
-	>=sys-devel/flex-2.5.4
-	>=sys-devel/bison-1.875d
-	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1
-		( >=sys-freebsd/freebsd-lib-9.1-r10 sys-libs/libcxx )
-	)
-	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
-	sys-libs/zlib
-	gold? ( >=sys-devel/binutils-2.22[cxx] )
-	libffi? ( virtual/pkgconfig
-		virtual/libffi[${MULTILIB_USEDEP}] )
-	ocaml? ( dev-lang/ocaml )
-	udis86? ( dev-libs/udis86[pic(+),${MULTILIB_USEDEP}] )
-	${PYTHON_DEPS}"
-RDEPEND="dev-lang/perl
-	libffi? ( virtual/libffi[${MULTILIB_USEDEP}] )
+COMMON_DEPEND="
+	sys-libs/zlib:0=
 	clang? (
 		python? ( ${PYTHON_DEPS} )
 		static-analyzer? (
@@ -47,7 +30,25 @@ RDEPEND="dev-lang/perl
 			${PYTHON_DEPS}
 		)
 	)
-	udis86? ( dev-libs/udis86[pic(+),${MULTILIB_USEDEP}] )
+	gold? ( >=sys-devel/binutils-2.22[cxx] )
+	libffi? ( virtual/libffi:0=[${MULTILIB_USEDEP}] )
+	ncurses? ( sys-libs/ncurses:5=[${MULTILIB_USEDEP}] )
+	ocaml? ( dev-lang/ocaml )
+	udis86? ( dev-libs/udis86:0=[pic(+),${MULTILIB_USEDEP}] )"
+DEPEND="${COMMON_DEPEND}
+	dev-lang/perl
+	dev-python/sphinx
+	>=sys-devel/make-3.81
+	>=sys-devel/flex-2.5.4
+	>=sys-devel/bison-1.875d
+	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1
+		( >=sys-freebsd/freebsd-lib-9.1-r10 sys-libs/libcxx )
+	)
+	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
+	!kernel_Darwin? ( app-admin/chrpath )
+	libffi? ( virtual/pkgconfig )
+	${PYTHON_DEPS}"
+RDEPEND="${COMMON_DEPEND}
 	clang? ( !<=sys-devel/clang-9999-r99 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
@@ -178,16 +179,20 @@ src_prepare() {
 }
 
 multilib_src_configure() {
-	local CONF_FLAGS="--enable-keep-symbols
+	# disable timestamps since they confuse ccache
+	local CONF_FLAGS="--disable-timestamps
+		--enable-keep-symbols
 		--enable-shared
 		--with-optimize-option=
 		$(use_enable !debug optimized)
 		$(use_enable debug assertions)
-		$(use_enable debug expensive-checks)"
+		$(use_enable debug expensive-checks)
+		$(use_enable ncurses terminfo)
+		$(use_enable libffi)"
 
 	if use clang; then
 		CONF_FLAGS+="
-			--with-clang-resource-dir=../lib/clang/3.4"
+			--with-clang-resource-dir=../lib/clang/3.5"
 	fi
 
 	if use multitarget; then
@@ -199,11 +204,7 @@ multilib_src_configure() {
 		fi
 	fi
 
-	if [[ ${ABI} == amd64 ]]; then
-		CONF_FLAGS="${CONF_FLAGS} --enable-pic"
-	fi
-
-	if multilib_is_native_abi && use gold; then
+	if multilib_build_binaries && use gold; then
 		CONF_FLAGS="${CONF_FLAGS} --with-binutils-include=${EPREFIX}/usr/include/"
 	fi
 	if multilib_is_native_abi && use ocaml; then
@@ -217,9 +218,9 @@ multilib_src_configure() {
 	fi
 
 	if use libffi; then
+		local CPPFLAGS=${CPPFLAGS}
 		append-cppflags "$(pkg-config --cflags libffi)"
 	fi
-	CONF_FLAGS="${CONF_FLAGS} $(use_enable libffi)"
 
 	# build with a suitable Python version
 	python_export_best
@@ -281,7 +282,7 @@ multilib_src_install() {
 			"${ED}"/usr/bin/* || die
 	fi
 
-	if multilib_is_native_abi; then
+	if multilib_build_binaries; then
 		# Move files back.
 		if path_exists -o "${ED}"/tmp/llvm-config.*; then
 			mv "${ED}"/tmp/llvm-config.* "${ED}"/usr/bin || die

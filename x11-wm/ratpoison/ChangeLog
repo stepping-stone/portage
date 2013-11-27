@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.92 2013/07/17 14:44:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.94 2013/10/19 15:29:24 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
+
+  10 Oct 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Maintainership.
 
   17 Jul 2013; Jeroen Roovers <jer@gentoo.org> ratpoison-1.4.6.ebuild,
   files/ratpoison.el-gentoo.patch:

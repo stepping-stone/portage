@@ -1,6 +1,54 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.193 2013/08/23 13:03:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.201 2013/11/24 06:04:25 idella4 Exp $
+
+*xen-tools-4.3.1 (24 Nov 2013)
+
+  24 Nov 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4.3-anti-download.patch, +xen-tools-4.3.1.ebuild,
+  -files/xen-4.3.0-anti-download.patch, xen-tools-4.3.0-r3.ebuild:
+  renamed xen-4.3-anti-download.patch to xen-4.3.0-anti-download.patch, bump
+
+  09 Nov 2013; Michał Górny <mgorny@gentoo.org> xen-tools-4.2.2-r3.ebuild,
+  xen-tools-4.2.2-r5.ebuild, xen-tools-4.3.0-r3.ebuild:
+  Add missing PYTHON_REQUIRED_USE.
+
+*xen-tools-4.3.0-r3 (07 Nov 2013)
+*xen-tools-4.2.2-r5 (07 Nov 2013)
+
+  07 Nov 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-tools-4-CVE-2013-4369-XSA-68.patch,
+  +files/xen-tools-4-CVE-2013-4370-XSA-69.patch,
+  +files/xen-tools-4-CVE-2013-4371-XSA-70.patch,
+  +files/xen-tools-4-CVE-2013-4416-XSA-72.patch, +xen-tools-4.2.2-r5.ebuild,
+  +xen-tools-4.3.0-r3.ebuild, -xen-tools-4.2.2-r4.ebuild,
+  -xen-tools-4.3.0-r2.ebuild:
+  revbumps; add security patches XSA-68-70/72, remove old ebuilds
+
+*xen-tools-4.3.0-r2 (04 Nov 2013)
+
+  04 Nov 2013; Ian Delaney <idella4@gentoo.org> -xen-tools-4.3.0.ebuild,
+  -xen-tools-4.3.0-r1.ebuild, metadata.xml, xen-tools-4.2.2-r4.ebuild, 
+  +xen-tools-4.3.0-r2.ebuild:
+  revbump; add IUSE pam, fixes Bug #488660 by Pat Erley
+
+  04 Nov 2013; Ian Delaney <idella4@gentoo.org> +files/fix-gold-ld.patch,
+  xen-tools-4.2.2-r4.ebuild, xen-tools-4.3.0-r1.ebuild:
+  Add patch by dlan, fixes Bug 379537 by flameeyes
+
+*xen-tools-4.3.0-r1 (04 Nov 2013)
+
+  04 Nov 2013; Ian Delaney <idella4@gentoo.org> +xen-tools-4.3.0-r1.ebuild,
+  metadata.xml:
+  ocaml deps findlib, ocaml combined & re-located under DEPEND, stable fault
+  unfixable due to sole reliance on assigned maintainer of Bug 486076 submitting
+  a dev-lang/ocaml-4x for stable. Electing for now not to purge IUSE ocaml and
+  related deps though flagged as a future option.
+
+  04 Oct 2013; Ian Delaney <idella4@gentoo.org> -xen-tools-4.2.1-r5.ebuild,
+  xen-tools-4.2.2-r3.ebuild, xen-tools-4.2.2-r4.ebuild, xen-tools-4.3.0.ebuild:
+  remove old, remove ocaml from stable due to ocaml-4 being ~, add libgcrypt to
+  DEPEND and remove antiquated CDEPEND thanks to dev steev
 
   23 Aug 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.1-r5.ebuild,
   xen-tools-4.2.2-r3.ebuild, xen-tools-4.2.2-r4.ebuild, xen-tools-4.3.0.ebuild:

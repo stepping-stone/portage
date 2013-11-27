@@ -1,6 +1,41 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.84 2013/09/07 22:24:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.93 2013/11/19 04:50:55 ottxor Exp $
+
+*openntpd-20080406-r5 (19 Nov 2013)
+
+  19 Nov 2013; Christoph Junghans <ottxor@gentoo.org>
+  +files/openntpd.logrotate-20080406-r5, +openntpd-20080406-r5.ebuild:
+  bring back syslog support (bug #491134)
+
+  05 Nov 2013; Chema Alonso <nimiux@gentoo.org> openntpd-20080406-r4.ebuild:
+  Stable for amd64 wrt bug #488946
+
+  04 Nov 2013; Matt Turner <mattst88@gentoo.org> openntpd-20080406-r4.ebuild:
+  alpha stable, bug 488946.
+
+  24 Oct 2013; Jeroen Roovers <jer@gentoo.org> openntpd-20080406-r4.ebuild:
+  Stable for HPPA (bug #488946).
+
+  21 Oct 2013; Christoph Junghans <ottxor@gentoo.org>
+  openntpd-20080406-r4.ebuild:
+  fixed a typo
+
+*openntpd-20080406-r4 (21 Oct 2013)
+
+  21 Oct 2013; Christoph Junghans <ottxor@gentoo.org>
+  +files/openntpd.init.d-20080406-r4, +openntpd-20080406-r4.ebuild:
+  move log file (bug #477714#c10)
+
+  02 Oct 2013; Jeroen Roovers <jer@gentoo.org> openntpd-20080406-r3.ebuild:
+  Stable for HPPA (bug #477714).
+
+  28 Sep 2013; Christoph Junghans <ottxor@gentoo.org>
+  openntpd-20080406-r3.ebuild:
+  fix 1st time install (bug #477714#c7, thx to calchan)
+
+  27 Sep 2013; Agostino Sarubbo <ago@gentoo.org> openntpd-20080406-r3.ebuild:
+  Stable for arm, wrt bug #477714
 
   07 Sep 2013; Christoph Junghans <ottxor@gentoo.org>
   -openntpd-3.9_p1-r4.ebuild:

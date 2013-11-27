@@ -1,6 +1,21 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.186 2013/09/05 18:29:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.189 2013/11/03 16:50:09 jer Exp $
+
+*libnl-3.2.23 (03 Nov 2013)
+
+  03 Nov 2013; Jeroen Roovers <jer@gentoo.org> +libnl-3.2.23.ebuild,
+  +files/libnl-3.2.23-utils.h:
+  Version bump.
+
+*libnl-3.2.9999 (23 Oct 2013)
+
+  23 Oct 2013; Jeroen Roovers <jer@gentoo.org> +libnl-3.2.9999.ebuild:
+  Add live ebuild.
+
+  29 Sep 2013; Jeroen Roovers <jer@gentoo.org> -libnl-1.1.3.ebuild,
+  -libnl-3.2.21.ebuild:
+  Old.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> libnl-3.2.22-r2.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

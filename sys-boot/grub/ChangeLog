@@ -1,6 +1,49 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.282 2013/09/21 21:44:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.292 2013/10/26 14:41:41 floppym Exp $
+
+  26 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p5107-r2.ebuild,
+  grub-9999-r1.ebuild:
+  Add dependency on app-arch/unzip, bug 489400.
+
+  23 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p5107-r2.ebuild:
+  Apply previous change.
+
+  23 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-9999-r1.ebuild:
+  Remove build-time dependency on dejavu and unifont by downloading our own
+  copies. Add GRUB_AUTOGEN variable to control autogen separately from
+  autoreconf.
+
+*grub-9999-r1 (22 Oct 2013)
+
+  22 Oct 2013; Mike Gilbert <floppym@gentoo.org> +grub-9999-r1.ebuild,
+  -grub-9999.ebuild:
+  Revbump for git migration.
+
+  22 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-9999.ebuild:
+  Upstream migrated to git.
+
+  21 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p5107-r2.ebuild,
+  grub-9999.ebuild:
+  Remove dejavu and unifont from RDEPEND, bug 488670.
+
+  17 Oct 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  We don't rename /boot/grub.
+
+  17 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p5107-r2.ebuild,
+  grub-9999.ebuild:
+  Work around funky emu platform with USE=static by setting HOST_LDFLAGS instead
+  of LDFLAGS. Bug 488182 by Hodur.
+
+*grub-2.00_p5107-r2 (16 Oct 2013)
+
+  16 Oct 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -grub-2.00_p5107-r1.ebuild, +grub-2.00_p5107-r2.ebuild:
+  Fixed automagic linking against libdevmapper.so (bug #488234). Permission
+  kindly granted by floppym. Revbump comitted straight to stable.
+
+  14 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p5107-r1.ebuild:
+  Stable on amd64 and x86, bug 455544.
 
   21 Sep 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p5107-r1.ebuild,
   grub-9999.ebuild:

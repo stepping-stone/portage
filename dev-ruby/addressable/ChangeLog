@@ -1,6 +1,24 @@
 # ChangeLog for dev-ruby/addressable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.33 2013/08/16 05:07:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.38 2013/11/11 10:46:04 mrueg Exp $
+
+*addressable-2.3.5-r1 (11 Nov 2013)
+
+  11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +addressable-2.3.5-r1.ebuild:
+  Add ruby20 target. ppc64 keyword dropped. Rekeywording in bug #465948
+
+  25 Oct 2013; Hans de Graaff <graaff@gentoo.org> addressable-2.3.5.ebuild:
+  Avoid spec that requires connectivity.
+
+  01 Oct 2013; Manuel Rüger <mrueg@gentoo.org> -addressable-2.3.3.ebuild,
+  -addressable-2.3.4.ebuild:
+  Cleanup old.
+
+  30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> addressable-2.3.5.ebuild:
+  Stable for x86, wrt bug #485790
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> addressable-2.3.5.ebuild:
+  Stable for amd64, wrt bug #485790
 
 *addressable-2.3.5 (16 Aug 2013)
 

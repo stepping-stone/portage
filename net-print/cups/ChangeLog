@@ -1,6 +1,38 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.562 2013/09/05 19:44:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.570 2013/11/11 13:36:54 jer Exp $
+
+  11 Nov 2013; Jeroen Roovers <jer@gentoo.org> cups-1.6.4.ebuild:
+  Stable for HPPA (bug #489914).
+
+  31 Oct 2013; Agostino Sarubbo <ago@gentoo.org> cups-1.6.4.ebuild:
+  Stable for x86, wrt bug #489914
+
+  31 Oct 2013; Agostino Sarubbo <ago@gentoo.org> cups-1.6.4.ebuild:
+  Stable for amd64, wrt bug #489914
+
+*cups-1.7.0 (30 Oct 2013)
+
+  30 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org> -cups-1.6.3-r2.ebuild,
+  -cups-1.7_rc1.ebuild, +cups-1.7.0.ebuild, cups-9999.ebuild:
+  Version bump; remove old
+
+  22 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.6.2-r5.ebuild:
+  Drop stable keywords on unstable-only arches
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> cups-1.7_rc1.ebuild,
+  cups-9999.ebuild:
+  Fix cups.sock location for Prefix, bug #488204
+
+*cups-1.6.4 (01 Oct 2013)
+
+  01 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org> +cups-1.6.4.ebuild:
+  Version bump
+
+  30 Sep 2013; Andreas K. Huettel <dilfridge@gentoo.org> -cups-1.5.2-r4.ebuild,
+  -files/cups-1.4.4-fix-install-perms.patch, -files/cups-1.5.2-threads.patch,
+  -files/cups-1.5.2-threads2.patch:
+  Drop old
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> cups-1.6.3-r2.ebuild,
   cups-1.6.9999.ebuild, cups-1.7_rc1.ebuild, cups-9999.ebuild:

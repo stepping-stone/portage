@@ -1,6 +1,76 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.27 2013/09/22 20:05:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.42 2013/11/27 08:07:23 pinkbyte Exp $
+
+  27 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> mpv-9999.ebuild:
+  Remove workaround for building with gcc's PIE per
+  upstream(https://github.com/mpv-player/mpv/issues/361), thanks to Nikoli
+
+  22 Nov 2013; Tom Wijsman <TomWij@gentoo.org> mpv-9999.ebuild:
+  Upstream migrated to waf, migrate 9999 ebuild to git-r3 and made it use https;
+  proxied commit for Nikoli.
+
+*mpv-0.2.3 (16 Nov 2013)
+
+  16 Nov 2013; Tom Wijsman <TomWij@gentoo.org> +mpv-0.2.3.ebuild, metadata.xml,
+  mpv-9999.ebuild:
+  Version bump to 0.2.3, changed mp3 USE flag to mpg123 and restricted mpg123
+  dependency version; also corrected v4l USE flag and added dependency for it on
+  9999 version. Proxied commit for Nikoli.
+
+  11 Nov 2013; Tom Wijsman <TomWij@gentoo.org> mpv-9999.ebuild:
+  Removed support for mng from 9999 as upstream removed support for it, proxied
+  commit for Nikoli.
+
+  03 Nov 2013; Tom Wijsman <TomWij@gentoo.org> -mpv-0.1.6.ebuild:
+  Removed 0.1.6, proxied commit for Nikoli.
+
+*mpv-0.2.2 (03 Nov 2013)
+
+  03 Nov 2013; Ben de Groot <yngwin@gentoo.org> +mpv-0.2.2.ebuild:
+  version bump
+
+*mpv-0.2.1 (20 Oct 2013)
+
+  20 Oct 2013; Tom Wijsman <TomWij@gentoo.org> +mpv-0.2.1.ebuild,
+  -mpv-0.2.0.ebuild:
+  VDPAU is broken in 0.2.0, removed 0.2.0 and version bump to 0.2.1; proxied
+  commit for Nikli.
+
+  19 Oct 2013; Tom Wijsman <TomWij@gentoo.org> mpv-0.1.6.ebuild,
+  mpv-0.1.7.ebuild, mpv-0.2.0.ebuild, mpv-9999.ebuild:
+  Playing things with quvi need libav or ffmpeg with networking support, proxied
+  commit for Nikoli.
+
+  18 Oct 2013; Tom Wijsman <TomWij@gentoo.org> mpv-9999.ebuild:
+  Upstream removed support for gettext, removed localedir configure parameter as
+  it is no longer recognized; proxied commit for Nikoli.
+
+  18 Oct 2013; Jeroen Roovers <jer@gentoo.org> mpv-0.1.6.ebuild,
+  mpv-0.1.7.ebuild, mpv-0.2.0.ebuild, mpv-9999.ebuild:
+  Drop HPPA keywording (bug #488318).
+
+  17 Oct 2013; Tom Wijsman <TomWij@gentoo.org> mpv-0.2.0.ebuild,
+  mpv-9999.ebuild:
+  Fix up a typo in the luajit conditional configure flag, proxied commit for
+  Nikoli; fixes bug #488348.
+
+  17 Oct 2013; Jeroen Roovers <jer@gentoo.org> mpv-0.2.0.ebuild:
+  Drop ~hppa for now (bug #488318).
+
+*mpv-0.2.0 (16 Oct 2013)
+
+  16 Oct 2013; Tom Wijsman <TomWij@gentoo.org> +mpv-0.2.0.ebuild,
+  mpv-9999.ebuild:
+  Version bump to 0.2.0, LICENSE recently switched from GPL-3 to GPL-2; proxied
+  commit for Nikoli, fixes bug #488254.
+
+  05 Oct 2013; Alexander Vershilov <qnikst@gentoo.org> metadata.xml,
+  mpv-9999.ebuild:
+  add lua flag (request and patches by Nikoli)
+
+  30 Sep 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
+  Drop AUTHORS file, no longer distributed.
 
 *mpv-0.1.7 (22 Sep 2013)
 

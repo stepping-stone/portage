@@ -1,6 +1,27 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.79 2013/08/19 14:24:56 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.84 2013/11/22 13:35:02 hasufell Exp $
+
+*geos-3.4.1-r1 (22 Nov 2013)
+
+  22 Nov 2013; Julian Ospald <hasufell@gentoo.org> +geos-3.4.1-r1.ebuild,
+  -geos-3.4.1.ebuild:
+  install missing headers wrt #487068
+
+*geos-3.4.2 (21 Oct 2013)
+
+  21 Oct 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  +files/3.4.2-solaris-isnan.patch, +geos-3.4.2.ebuild:
+  version bump
+
+  30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> geos-3.4.1.ebuild:
+  Stable for x86, wrt bug #485974
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> geos-3.4.1.ebuild:
+  Stable for amd64, wrt bug #485974
+
+  27 Sep 2013; Agostino Sarubbo <ago@gentoo.org> geos-3.4.1.ebuild:
+  Stable for arm, wrt bug #485974
 
 *geos-3.4.1 (19 Aug 2013)
 

@@ -1,6 +1,24 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.99 2013/09/11 08:12:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.104 2013/11/19 15:14:54 jer Exp $
+
+  19 Nov 2013; Jeroen Roovers <jer@gentoo.org> rsyslog-7.4.4.ebuild:
+  Stable for HPPA (bug #475882).
+
+  18 Nov 2013; Ultrabug <ultrabug@gentoo.org> rsyslog-7.2.7.ebuild,
+  rsyslog-7.4.3.ebuild, rsyslog-7.4.4.ebuild, rsyslog-7.4.6.ebuild:
+  drop curl dependency, fix #485414 thx to Andrey Volkov
+
+  09 Nov 2013; Agostino Sarubbo <ago@gentoo.org> rsyslog-7.4.4.ebuild:
+  Stable for x86, wrt bug #475882
+
+  09 Nov 2013; Agostino Sarubbo <ago@gentoo.org> rsyslog-7.4.4.ebuild:
+  Stable for amd64, wrt bug #475882
+
+*rsyslog-7.4.6 (08 Nov 2013)
+
+  08 Nov 2013; Ultrabug <ultrabug@gentoo.org> +rsyslog-7.4.6.ebuild:
+  version bump, fix #490469
 
   11 Sep 2013; Michał Górny <mgorny@gentoo.org> rsyslog-7.2.7.ebuild,
   rsyslog-7.4.3.ebuild, rsyslog-7.4.4.ebuild:

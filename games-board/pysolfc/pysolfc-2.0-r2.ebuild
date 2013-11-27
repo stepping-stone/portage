@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0-r2.ebuild,v 1.1 2013/06/23 21:44:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0-r2.ebuild,v 1.3 2013/11/22 18:50:17 mr_bones_ Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ IUSE="extra-cardsets minimal +sound"
 S=${WORKDIR}/${MY_PN}-${PV}
 
 RDEPEND="sound? ( dev-python/pygame[${PYTHON_USEDEP}] )
-	!minimal? ( virtual/python-imaging[tk,${PYTHON_USEDEP}]
+	!minimal? ( dev-python/pillow[tk,${PYTHON_USEDEP}]
 		dev-tcltk/tktable )"
 
 python_prepare_all() {
@@ -37,7 +37,7 @@ python_prepare_all() {
 	sed -i \
 		-e "/pysol.desktop/d" \
 		-e "s:share/icons:share/pixmaps:" \
-		-e "s:data_dir =.*:data_dir = \'share/games/${PN}\':" \
+		-e "s:data_dir =.*:data_dir = \'${GAMES_DATADIR}/${PN}\':" \
 		setup.py || die
 
 	# avoid installing pysol.py into /usr/bin

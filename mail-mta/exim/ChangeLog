@@ -1,6 +1,63 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.258 2013/09/25 17:23:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.269 2013/11/01 19:55:09 grobian Exp $
+
+  01 Nov 2013; Fabian Groffen <grobian@gentoo.org> exim-4.82.ebuild,
+  metadata.xml:
+  Make support for PKCS#11 optional with USE=gnutls, cleanup some legacy code
+
+  30 Oct 2013; Jeroen Roovers <jer@gentoo.org> exim-4.82.ebuild:
+  Marked ~hppa (bug #489676).
+
+*exim-4.82 (28 Oct 2013)
+
+  28 Oct 2013; Fabian Groffen <grobian@gentoo.org> -exim-4.82_rc5.ebuild,
+  +exim-4.82.ebuild:
+  Version bump to 4.82,
+  https://lists.exim.org/lurker/message/20131028.143255.65ebff96.en.html
+
+  27 Oct 2013; Fabian Groffen <grobian@gentoo.org>
+  +files/exim_482_dsn_1_3.patch, exim-4.82_rc5.ebuild:
+  Add dsn patch that applies, but needs testing, bug #489242
+
+*exim-4.82_rc5 (24 Oct 2013)
+
+  24 Oct 2013; Fabian Groffen <grobian@gentoo.org> +exim-4.82_rc5.ebuild,
+  -exim-4.82_rc4.ebuild:
+  Bump to 4.82_RC5 (actual sources/commit that was meant for RC4)
+
+*exim-4.82_rc4 (22 Oct 2013)
+
+  22 Oct 2013; Fabian Groffen <grobian@gentoo.org> +exim-4.82_rc4.ebuild,
+  -exim-4.82_rc3.ebuild:
+  Bump to 4.82_RC4
+
+*exim-4.82_rc3 (10 Oct 2013)
+
+  10 Oct 2013; Fabian Groffen <grobian@gentoo.org> +exim-4.82_rc3.ebuild,
+  -exim-4.82_rc2.ebuild:
+  Bump to 4.82_RC3
+
+*exim-4.80.1-r3 (08 Oct 2013)
+
+  08 Oct 2013; Fabian Groffen <grobian@gentoo.org> +exim-4.80.1-r3.ebuild,
+  +files/exim.rc8, exim-4.82_rc2.ebuild:
+  Change init-file for /var/run to /run, bug #455346
+
+*exim-4.82_rc2 (03 Oct 2013)
+
+  03 Oct 2013; Fabian Groffen <grobian@gentoo.org> +exim-4.82_rc2.ebuild,
+  -exim-4.82_rc1.ebuild:
+  Bump to 4.82_RC2
+
+  01 Oct 2013; Fabian Groffen <grobian@gentoo.org> exim-4.82_rc1.ebuild:
+  Refine gnutls dependency to gnutls[pkcs11] thanks bes
+
+*exim-4.82_rc1 (30 Sep 2013)
+
+  30 Sep 2013; Fabian Groffen <grobian@gentoo.org> +exim-4.82_rc1.ebuild,
+  +files/exim-4.82-makefile-freebsd.patch, metadata.xml:
+  First release candidate for Exim 4.82 with DMARC support
 
   25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> exim-4.80.1-r2.ebuild:
   Stable for ppc, wrt bug #480058

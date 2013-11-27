@@ -1,6 +1,19 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.158 2013/09/05 18:46:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.161 2013/10/30 08:00:35 radhermit Exp $
+
+*py-1.4.18 (30 Oct 2013)
+
+  30 Oct 2013; Tim Harder <radhermit@gentoo.org> +py-1.4.18.ebuild:
+  Version bump.
+
+*py-1.4.17 (27 Oct 2013)
+
+  27 Oct 2013; Tim Harder <radhermit@gentoo.org> +py-1.4.17.ebuild:
+  Version bump.
+
+  22 Oct 2013; Fabian Groffen <grobian@gentoo.org> py-1.4.15.ebuild:
+  Marked ~x64-macos, bug #487670
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> py-1.4.12-r1.ebuild,
   py-1.4.13.ebuild, py-1.4.14.ebuild, py-1.4.15.ebuild:

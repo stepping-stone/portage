@@ -1,6 +1,44 @@
 # ChangeLog for virtual/perl-Module-CoreList
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.71 2013/08/27 03:30:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.80 2013/11/24 18:00:38 zlogene Exp $
+
+  24 Nov 2013; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Module-CoreList-2.840.0.ebuild:
+  sparc stable wrt bug #458122
+
+  24 Nov 2013; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Module-CoreList-2.840.0.ebuild:
+  ppc64 stable wrt bug #458122
+
+  24 Nov 2013; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Module-CoreList-2.840.0.ebuild:
+  ppc stable wrt bug #458122
+
+  24 Nov 2013; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Module-CoreList-2.840.0.ebuild:
+  ia64 stable wrt bug #458122
+
+  23 Nov 2013; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Module-CoreList-2.840.0.ebuild:
+  amd64 stable wrt bug #458122
+
+  22 Nov 2013; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Module-CoreList-2.840.0.ebuild:
+  x86 stable wrt bug #458122
+
+  21 Nov 2013; Jeroen Roovers <jer@gentoo.org>
+  perl-Module-CoreList-2.840.0.ebuild:
+  Stable for HPPA (bug #458122).
+
+  21 Nov 2013; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Module-CoreList-2.840.0.ebuild:
+  alpha stable wrt bug #458122
+
+*perl-Module-CoreList-3.000.000 (28 Oct 2013)
+
+  28 Oct 2013; Patrick Lauer <patrick@gentoo.org>
+  +perl-Module-CoreList-3.000.000.ebuild:
+  Bump
 
 *perl-Module-CoreList-2.970.0 (27 Aug 2013)
 

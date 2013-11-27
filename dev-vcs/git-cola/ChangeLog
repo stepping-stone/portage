@@ -1,6 +1,21 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.14 2013/06/25 15:03:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.17 2013/11/07 16:56:56 jlec Exp $
+
+*git-cola-1.9.1 (07 Nov 2013)
+
+  07 Nov 2013; Justin Lecher <jlec@gentoo.org> +git-cola-1.9.1.ebuild,
+  +files/1.9.1-disable-tests.patch,
+  +files/git-cola-1.9.1-system-ssh-askpass.patch:
+  Version BUmp
+
+  12 Oct 2013; Patrick Lauer <patrick@gentoo.org> git-cola-1.8.5.ebuild:
+  Whitespace
+
+*git-cola-1.8.5 (11 Oct 2013)
+
+  11 Oct 2013; Justin Lecher <jlec@gentoo.org> +git-cola-1.8.5.ebuild:
+  Version BUmp
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> git-cola-1.8.2.ebuild:
   Stable for x86, wrt bug #472286

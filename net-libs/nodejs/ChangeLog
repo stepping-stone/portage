@@ -1,6 +1,38 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.106 2013/09/25 02:42:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.112 2013/11/21 06:41:09 patrick Exp $
+
+*nodejs-0.11.9 (21 Nov 2013)
+
+  21 Nov 2013; Patrick Lauer <patrick@gentoo.org> +nodejs-0.11.9.ebuild:
+  Bump
+
+*nodejs-0.10.22 (14 Nov 2013)
+*nodejs-0.11.8 (14 Nov 2013)
+
+  14 Nov 2013; Patrick Lauer <patrick@gentoo.org> +nodejs-0.10.22.ebuild,
+  +nodejs-0.11.8.ebuild:
+  Bump for #490596
+
+  21 Oct 2013; Agostino Sarubbo <ago@gentoo.org> nodejs-0.10.21.ebuild:
+  Stable for x86, wrt bug #488624
+
+  21 Oct 2013; Agostino Sarubbo <ago@gentoo.org> nodejs-0.10.21.ebuild:
+  Stable for amd64, wrt bug #488624
+
+*nodejs-0.10.21 (21 Oct 2013)
+*nodejs-0.8.26 (21 Oct 2013)
+
+  21 Oct 2013; Patrick Lauer <patrick@gentoo.org> +nodejs-0.10.21.ebuild,
+  +nodejs-0.8.26.ebuild, -nodejs-0.10.17.ebuild, -nodejs-0.10.18.ebuild,
+  -nodejs-0.10.19.ebuild, -nodejs-0.10.20.ebuild, -nodejs-0.8.21.ebuild,
+  -nodejs-0.8.23.ebuild:
+  Bump for #488624
+
+*nodejs-0.10.20 (01 Oct 2013)
+
+  01 Oct 2013; Patrick Lauer <patrick@gentoo.org> +nodejs-0.10.20.ebuild:
+  Bump
 
 *nodejs-0.10.19 (25 Sep 2013)
 

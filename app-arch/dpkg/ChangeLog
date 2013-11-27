@@ -1,6 +1,36 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.233 2013/08/11 15:27:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.239 2013/11/19 16:24:55 jer Exp $
+
+  19 Nov 2013; Jeroen Roovers <jer@gentoo.org> dpkg-1.16.12-r1.ebuild:
+  Stable for HPPA (bug #491588).
+
+*dpkg-1.16.12-r1 (18 Nov 2013)
+
+  18 Nov 2013; Jeroen Roovers <jer@gentoo.org> -dpkg-1.16.12.ebuild,
+  +dpkg-1.16.12-r1.ebuild:
+  Apply the same patch to the stable candidate (bug #481810).
+
+*dpkg-1.17.1-r1 (18 Nov 2013)
+
+  18 Nov 2013; Jeroen Roovers <jer@gentoo.org> -dpkg-1.17.1.ebuild,
+  +dpkg-1.17.1-r1.ebuild, +files/dpkg-1.17.1-flags.patch:
+  Stop configure from mangling CFLAGS/LDFLAGS by Andrew Savchenko (bug
+  #481810).
+
+*dpkg-1.16.12 (02 Oct 2013)
+
+  02 Oct 2013; Jeroen Roovers <jer@gentoo.org> +dpkg-1.16.12.ebuild:
+  Version bump.
+
+  29 Sep 2013; Jeroen Roovers <jer@gentoo.org> -dpkg-1.16.8.ebuild,
+  -dpkg-1.16.9.ebuild:
+  Old.
+
+*dpkg-1.16.11 (28 Sep 2013)
+
+  28 Sep 2013; Jeroen Roovers <jer@gentoo.org> +dpkg-1.16.11.ebuild:
+  Version bump.
 
   11 Aug 2013; Jeroen Roovers <jer@gentoo.org> -dpkg-1.17.0.ebuild,
   dpkg-1.17.1.ebuild:

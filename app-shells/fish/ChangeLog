@@ -1,6 +1,21 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.59 2013/09/05 19:24:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.62 2013/11/04 19:35:22 polynomial-c Exp $
+
+  04 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
+  Took over maintenance.
+
+*fish-2.1.0-r1 (04 Nov 2013)
+
+  04 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> -fish-2.1.0.ebuild,
+  +fish-2.1.0-r1.ebuild:
+  Fixed docdir handling. Thanks to Elis Axelsson who reported this in bug
+  #489934 and made upstream aware of the problem.
+
+*fish-2.1.0 (31 Oct 2013)
+
+  31 Oct 2013; Jeff Horelick <jdhore@gentoo.org> +fish-2.1.0.ebuild:
+  Version bump
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fish-2.0.0.ebuild:
   Stable for x86, wrt bug #480226

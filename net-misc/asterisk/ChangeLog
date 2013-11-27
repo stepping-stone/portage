@@ -1,6 +1,26 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.459 2013/08/28 13:49:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.463 2013/10/30 10:35:05 chainsaw Exp $
+
+*asterisk-11.6.0-r1 (30 Oct 2013)
+
+  30 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.6.0-r1.ebuild:
+  A useful response to the debug USE-flag, as suggested by Kerin Millar and
+  implemented by Jaco Kroon. Closes bug #346959.
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Voip herd is removed: http://article.gmane.org/gmane.linux.gentoo.devel/88434
+
+*asterisk-1.8.24.0 (22 Oct 2013)
+
+  22 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.24.0.ebuild:
+  Version bump.
+
+*asterisk-11.6.0 (22 Oct 2013)
+
+  22 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.6.0.ebuild:
+  Version bump. Features improved NAT support and plugs a memory leak in the
+  logger.
 
   28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> -asterisk-1.8.20.2.ebuild,
   -asterisk-11.2.2.ebuild:

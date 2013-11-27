@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-325.15.ebuild,v 1.3 2013/09/13 14:29:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-325.15.ebuild,v 1.6 2013/11/17 17:25:04 jer Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ SRC_URI="
 
 LICENSE="GPL-2 NVIDIA-r1"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="-* amd64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="acpi multilib kernel_FreeBSD kernel_linux pax_kernel +tools +X"
 RESTRICT="bindist mirror strip"
 EMULTILIB_PKG="true"
@@ -240,25 +240,16 @@ src_install() {
 	if use kernel_linux; then
 		linux-mod_src_install
 
-		VIDEOGROUP="$(egetent group video | cut -d ':' -f 3)"
-		if [ -z "$VIDEOGROUP" ]; then
-			eerror "Failed to determine the video group gid."
-			die "Failed to determine the video group gid."
-		fi
-
 		# Add the aliases
-		[ -f "${FILESDIR}/nvidia-169.07" ] || die "nvidia missing in FILESDIR"
-		sed -e 's:PACKAGE:'${PF}':g' \
-			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia-169.07 > \
-			"${WORKDIR}"/nvidia
+		# This file is tweaked with the appropriate video group in
+		# pkg_preinst, see bug #491414
 		insinto /etc/modprobe.d
-		newins "${WORKDIR}"/nvidia nvidia.conf
+		newins "${FILESDIR}"/nvidia-169.07 nvidia.conf
 
 		# Ensures that our device nodes are created when not using X
 		exeinto "$(udev_get_udevdir)"
 		doexe "${FILESDIR}"/nvidia-udev.sh
 		udev_newrules "${FILESDIR}"/nvidia.udev-rule 99-nvidia.rules
-
 	elif use kernel_FreeBSD; then
 		if use x86-fbsd; then
 			insinto /boot/modules
@@ -360,6 +351,8 @@ src_install() {
 	fi
 
 	is_final_abi || die "failed to iterate through all ABIs"
+
+	readme.gentoo_create_doc
 }
 
 src_install-libs() {
@@ -402,7 +395,20 @@ src_install-libs() {
 }
 
 pkg_preinst() {
-	use kernel_linux && linux-mod_pkg_preinst
+	if use kernel_linux; then
+		linux-mod_pkg_preinst
+
+		local videogroup="$(egetent group video | cut -d ':' -f 3)"
+		if [ -z "${videogroup}" ]; then
+			eerror "Failed to determine the video group gid"
+			die "Failed to determine the video group gid"
+		else
+			sed -i \
+				-e "s:PACKAGE:${PF}:g" \
+				-e "s:VIDEOGID:${videogroup}:" \
+				"${D}"/etc/modprobe.d/nvidia.conf || die
+		fi
+	fi
 
 	# Clean the dynamic libGL stuff's home to ensure
 	# we dont have stale libs floating around
@@ -422,21 +428,8 @@ pkg_postinst() {
 	use X && "${ROOT}"/usr/bin/eselect opengl set --use-old nvidia
 	"${ROOT}"/usr/bin/eselect opencl set --use-old nvidia
 
-	elog "You must be in the video group to use the NVIDIA device"
-	elog "For more info, read the docs at"
-	elog "http://www.gentoo.org/doc/en/nvidia-guide.xml#doc_chap3_sect6"
-	elog
-	elog "This ebuild installs a kernel module and X driver. Both must"
-	elog "match explicitly in their version. This means, if you restart"
-	elog "X, you must modprobe -r nvidia before starting it back up"
-	elog
-	elog "To use the NVIDIA GLX, run \"eselect opengl set nvidia\""
-	elog
-	elog "To use the NVIDIA CUDA/OpenCL, run \"eselect opencl set nvidia\""
-	elog
-	elog "NVIDIA has requested that any bug reports submitted have the"
-	elog "output of nvidia-bug-report.sh included."
-	elog
+	readme.gentoo_print_elog
+
 	if ! use X; then
 		elog "You have elected to not install the X.org driver. Along with"
 		elog "this the OpenGL libraries and VDPAU libraries were not"

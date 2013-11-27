@@ -1,6 +1,42 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.35 2013/08/23 23:20:07 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.40 2013/11/21 15:47:44 ryao Exp $
+
+*zfs-kmod-0.6.2-r3 (21 Nov 2013)
+
+  21 Nov 2013; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.2-r3.ebuild,
+  -zfs-kmod-0.6.2-r1.ebuild, -zfs-kmod-0.6.2-r2.ebuild, -zfs-kmod-0.6.2.ebuild,
+  zfs-kmod-9999.ebuild:
+  Fix writeback regression introduced in -r2 that affected mmap() and AIO
+  writes; Apply locking fixes from Illumos; Reintroduce uio_prefaultpages() to
+  minimize the possibility of hitting zfsonlinux/zfs#1689; Add Linux 3.12
+  Support
+
+*zfs-kmod-0.6.2-r2 (18 Oct 2013)
+
+  18 Oct 2013; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.2-r2.ebuild:
+  Update 0.6.2 patchset with sys-fs/zfs-kmod-0.6.2-r2: Fixes memory leak
+  regression introduced by Compressed L2ARC support in 0.6.2 (fix ported from
+  Illumos); Fixes metaslab condensing race regression introduced by 0.6.2 (fix
+  ported from Illumos); Fixes bobj panic (fix ported from Illumos); fixes
+  logging of negative GUIDs to SPA history (fixed ported from Illumos)
+
+  14 Oct 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.2-r1.ebuild:
+  Reverse stabilization of sys-fs/zfs-kmod-0.6.2-r1 (to avoid confusing users
+  because sys-fs/zfs stabilization was reversed at the last minute because of
+  bug #487746)
+
+  14 Oct 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.2-r1.ebuild:
+  Stabilize sys-fs/zfs-kmod-0.6.2-r1 on amd64 (indirectly required by sys-
+  boot/grub:2 stabilization)
+
+*zfs-kmod-0.6.2-r1 (05 Oct 2013)
+
+  05 Oct 2013; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.2-r1.ebuild:
+  Fixed readdir regressions, fixed mknod return values, fixed compatibility
+  issues with hardened-sources, implement file attribute support (should fix
+  regression with portage's FEATURES=xattr), improved Linux 3.11 compatibility
+  (resolve LZ4 symbol conflicts)
 
 *zfs-kmod-0.6.2 (23 Aug 2013)
 

@@ -1,6 +1,33 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.247 2013/08/08 12:36:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.252 2013/11/26 08:27:56 polynomial-c Exp $
+
+  26 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> apache-2.4.7.ebuild,
+  metadata.xml:
+  Fixed bug #492578. Moved latest 2.4 ebuild to EAPI-5. Added myself as
+  maintainer.
+
+*apache-2.4.7 (26 Nov 2013)
+
+  26 Nov 2013; Patrick Lauer <patrick@gentoo.org> +apache-2.4.7.ebuild:
+  Bump
+
+  22 Nov 2013; Lars Wendler <polynomial-c@gentoo.org>
+  files/gentoo-apache-2.2.23-initd_fixups.patch:
+  Fixed startup of apache when pidfile exists. Thanks to Roman Barczyński who
+  reported this in bug #492222.
+
+*apache-2.2.26 (20 Nov 2013)
+
+  20 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> +apache-2.2.26.ebuild:
+  Version bump.
+
+  07 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> -apache-2.2.24-r1.ebuild,
+  apache-2.2.25.ebuild, -apache-2.4.4.ebuild, -apache-2.4.4-r3.ebuild,
+  -apache-2.4.6.ebuild, apache-2.4.6-r1.ebuild, apache-2.4.6-r2.ebuild,
+  +files/gentoo-apache-2.2.23-initd_fixups.patch:
+  Non-maintainer commit: Fixed problems with init script. Removed some older
+  ebuilds.
 
   08 Aug 2013; Agostino Sarubbo <ago@gentoo.org> apache-2.2.25.ebuild:
   Stable for sh, wrt bug #476568

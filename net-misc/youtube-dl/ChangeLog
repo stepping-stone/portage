@@ -1,6 +1,192 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.230 2013/09/25 14:51:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.266 2013/11/26 11:10:10 jer Exp $
+
+*youtube-dl-2013.11.26 (26 Nov 2013)
+
+  26 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.26.ebuild:
+  Version bump.
+
+  25 Nov 2013; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2013.08.02.ebuild,
+  youtube-dl-2013.10.09.ebuild, -youtube-dl-2013.10.15.ebuild,
+  -youtube-dl-2013.10.17.ebuild, -youtube-dl-2013.10.18.1.ebuild,
+  -youtube-dl-2013.10.18.2.ebuild, -youtube-dl-2013.10.23.2.ebuild,
+  -youtube-dl-2013.10.28.ebuild, -youtube-dl-2013.10.29.ebuild,
+  -youtube-dl-2013.10.30.ebuild, -youtube-dl-2013.11.03.ebuild,
+  -youtube-dl-2013.11.07.ebuild, -youtube-dl-2013.11.11.ebuild,
+  -youtube-dl-2013.11.13.ebuild, -youtube-dl-2013.11.15.ebuild,
+  -youtube-dl-2013.11.15.1.ebuild, -youtube-dl-2013.11.17.ebuild,
+  -youtube-dl-2013.11.18.1.ebuild, -youtube-dl-2013.11.19.ebuild:
+  Stable for HPPA x86 (bug #487532).
+
+*youtube-dl-2013.11.25.1 (25 Nov 2013)
+
+  25 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.25.1.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.24.1 (24 Nov 2013)
+
+  24 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.24.1.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.22.2 (23 Nov 2013)
+
+  23 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.22.2.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.21 (22 Nov 2013)
+
+  22 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.21.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.20 (20 Nov 2013)
+
+  20 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.20.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.19 (19 Nov 2013)
+
+  19 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.19.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.18.1 (18 Nov 2013)
+
+  18 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.18.1.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.17 (18 Nov 2013)
+
+  18 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.17.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.15.1 (16 Nov 2013)
+
+  16 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.15.1.ebuild:
+  Version bump.
+
+  15 Nov 2013; Joseph Jezak <josejx@gentoo.org> youtube-dl-2013.10.09.ebuild:
+  Marked ppc/ppc64 stable for bug #487532.
+
+*youtube-dl-2013.11.15 (15 Nov 2013)
+
+  15 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.15.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.13 (13 Nov 2013)
+
+  13 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.13.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.11 (11 Nov 2013)
+
+  11 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.11.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.07 (07 Nov 2013)
+
+  07 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.07.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.03 (03 Nov 2013)
+
+  03 Nov 2013; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2013.09.20.1.ebuild,
+  -youtube-dl-2013.09.24.2.ebuild, -youtube-dl-2013.09.29.ebuild,
+  -youtube-dl-2013.10.01.ebuild, -youtube-dl-2013.10.01.1.ebuild,
+  -youtube-dl-2013.10.04.ebuild, -youtube-dl-2013.10.06.ebuild,
+  -youtube-dl-2013.10.07.ebuild, -youtube-dl-2013.11.02.ebuild,
+  +youtube-dl-2013.11.03.ebuild:
+  Version bump.
+
+*youtube-dl-2013.11.02 (02 Nov 2013)
+
+  02 Nov 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.11.02.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.30 (30 Oct 2013)
+
+  30 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.30.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.29 (29 Oct 2013)
+
+  29 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.29.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.28 (28 Oct 2013)
+
+  28 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.28.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.23.2 (23 Oct 2013)
+
+  23 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.23.2.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.18.2 (19 Oct 2013)
+
+  19 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.18.2.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.18.1 (18 Oct 2013)
+
+  18 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.18.1.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.17 (17 Oct 2013)
+
+  17 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.17.ebuild:
+  Version bump.
+
+  15 Oct 2013; Jeroen Roovers <jer@gentoo.org> youtube-dl-2013.10.09.ebuild,
+  youtube-dl-2013.10.15.ebuild:
+  Remove test_age_restriction.py in 2013.10.09 too. Whitespace.
+
+*youtube-dl-2013.10.15 (15 Oct 2013)
+
+  15 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.15.ebuild:
+  Version bump.
+
+  14 Oct 2013; Tony Vroon <chainsaw@gentoo.org> youtube-dl-2013.10.09.ebuild:
+  Marked stable on AMD64 based on arch tester report by Elijah "Armageddon" El
+  Lazkani in bug #487532.
+
+  11 Oct 2013; Jeroen Roovers <jer@gentoo.org> youtube-dl-2013.10.09.ebuild:
+  Stable for HPPA (bug #487532).
+
+*youtube-dl-2013.10.09 (10 Oct 2013)
+
+  10 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.09.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.07 (07 Oct 2013)
+
+  07 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.07.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.06 (07 Oct 2013)
+
+  07 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.06.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.04 (04 Oct 2013)
+
+  04 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.04.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.01.1 (03 Oct 2013)
+
+  03 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.01.1.ebuild:
+  Version bump.
+
+*youtube-dl-2013.10.01 (01 Oct 2013)
+
+  01 Oct 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.10.01.ebuild:
+  Version bump.
+
+*youtube-dl-2013.09.29 (29 Sep 2013)
+
+  29 Sep 2013; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2013.09.29.ebuild:
+  Version bump.
 
 *youtube-dl-2013.09.24.2 (25 Sep 2013)
 

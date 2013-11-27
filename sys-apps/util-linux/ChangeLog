@@ -1,6 +1,31 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.436 2013/09/05 19:45:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.442 2013/11/09 11:37:14 polynomial-c Exp $
+
+  09 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> util-linux-9999.ebuild:
+  Fixed unconditional call of python-single-r1_pkg_setup (bug #490778) in live
+  ebuild as well.
+
+  09 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> util-linux-2.24.ebuild:
+  Fixed unconditional call of python-single-r1_pkg_setup (bug #490778).
+
+  29 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> util-linux-2.24.ebuild,
+  util-linux-9999.ebuild:
+  Moved 2.24 ebuild to EAPI-5. Synced 9999 ebuild with 2.24 version.
+
+*util-linux-2.24 (28 Oct 2013)
+
+  28 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> +util-linux-2.24.ebuild:
+  Version bump (bug #489342).
+
+*util-linux-2.23.2-r2 (29 Sep 2013)
+
+  29 Sep 2013; Mike Frysinger <vapier@gentoo.org> +util-linux-2.23.2-r2.ebuild:
+  Re-disable USE=tty-helpers by default and add an elog #483798 by Allen Parker.
+
+  29 Sep 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  util-linux-2.23.2-r1.ebuild:
+  Add USE=pam to control runuser #485486 by Denis Kaganovich.
 
 *util-linux-2.23.2-r1 (05 Sep 2013)
 

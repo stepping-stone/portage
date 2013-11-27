@@ -1,6 +1,33 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.462 2013/09/26 16:31:45 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.468 2013/11/18 18:52:27 polynomial-c Exp $
+
+*seamonkey-2.22.1 (18 Nov 2013)
+
+  18 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> +seamonkey-2.22.1.ebuild:
+  Version bump.
+
+  04 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.22.ebuild:
+  Fixed dependencies on libpng (bug #490314) and sqlite.
+
+*seamonkey-2.22 (02 Nov 2013)
+
+  02 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> +seamonkey-2.22.ebuild:
+  Security bump (bug #489796).
+
+  28 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.21.ebuild,
+  seamonkey-2.21-r1.ebuild:
+  Use latest ff patches.
+
+  28 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.21.ebuild,
+  seamonkey-2.21-r1.ebuild:
+  Fixed source URI for enigmail. Moved binutils from RDEPEND to DEPEND.
+
+*seamonkey-2.21-r1 (25 Oct 2013)
+
+  25 Oct 2013; Lars Wendler <polynomial-c@gentoo.org>
+  +seamonkey-2.21-r1.ebuild:
+  Revision bump to integrate enigmail-1.6.
 
   26 Sep 2013; Ian Stakenvicius <axs@gentoo.org>
   +files/moz24-drop-Wl-build-id.patch, seamonkey-2.21.ebuild:

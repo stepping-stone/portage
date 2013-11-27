@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.164 2013/09/25 17:28:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.166 2013/10/20 09:25:36 flameeyes Exp $
+
+*pcsc-lite-1.8.10 (20 Oct 2013)
+
+  20 Oct 2013; Diego E. Pettenò <flameeyes@gentoo.org> +pcsc-lite-1.8.10.ebuild:
+  Version bump.
+
+*pcsc-lite-1.8.9 (17 Oct 2013)
+
+  17 Oct 2013; Diego E. Pettenò <flameeyes@gentoo.org> +pcsc-lite-1.8.9.ebuild:
+  Version bump.
 
   25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> pcsc-lite-1.8.8-r1.ebuild:
   Stable for ppc, wrt bug #480102

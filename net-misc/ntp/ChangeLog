@@ -1,6 +1,33 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.192 2013/09/16 16:16:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.199 2013/11/19 20:00:56 pacho Exp $
+
+*ntp-4.2.6_p5-r8 (19 Nov 2013)
+
+  19 Nov 2013; Pacho Ramos <pacho@gentoo.org> +ntp-4.2.6_p5-r8.ebuild:
+  Register ntp unit file (#489040 by Kirill Elagin)
+
+  09 Nov 2013; Pacho Ramos <pacho@gentoo.org> ntp-4.2.6_p5-r7.ebuild:
+  x86 stable, bug #480084
+
+  04 Nov 2013; Matt Turner <mattst88@gentoo.org> ntp-4.2.6_p5-r7.ebuild:
+  alpha stable, bug 480084.
+
+*ntp-4.2.6_p5-r7 (11 Oct 2013)
+
+  11 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> -ntp-4.2.6_p5-r6.ebuild,
+  +ntp-4.2.6_p5-r7.ebuild:
+  Revbump to fix installation of sntp init script (problem reported by idl0r in
+  #gentoo-dev). Committed straight to stable.
+
+  10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> ntp-4.2.6_p5-r6.ebuild:
+  Marked stable on AMD64 based on arch tester report by MJJoker in bug #480084.
+
+  09 Oct 2013; Jeroen Roovers <jer@gentoo.org> ntp-4.2.6_p5-r6.ebuild:
+  Stable for HPPA (bug #480084).
+
+  08 Oct 2013; Markus Meier <maekke@gentoo.org> ntp-4.2.6_p5-r6.ebuild:
+  arm stable, bug #480084
 
 *ntp-4.2.6_p5-r6 (16 Sep 2013)
 

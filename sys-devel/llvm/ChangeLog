@@ -1,6 +1,39 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.137 2013/09/13 15:10:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.146 2013/11/27 05:32:16 mgorny Exp $
+
+  27 Nov 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Bump clang version to 3.5, bug #491880. Thanks to Mike Lothian for finding out
+  what is wrong.
+
+  12 Nov 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Bump make dep to 3.81 since 3.80 was reported non-working by okias.
+
+  10 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  llvm-3.3-r1.ebuild:
+  Change mistakenly committed stable ppc64 keyword to ~ppc64.
+
+  31 Oct 2013; Michał Górny <mgorny@gentoo.org>
+  files/llvm-3.4-gentoo-install.patch, llvm-9999.ebuild:
+  Update the Gentoo patch. Use multilib_build_binaries per bug #489586.
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild, metadata.xml:
+  Clean up the deps & configure call. Add USE=ncurses to control terminfo use.
+
+  13 Oct 2013; Agostino Sarubbo <ago@gentoo.org> llvm-3.3-r1.ebuild:
+  Add ppc64, wrt bug #320221
+
+  13 Oct 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Disable embedding timestamps to increase ccache hit rate.
+
+  13 Oct 2013; Michał Górny <mgorny@gentoo.org>
+  +files/clang-3.3-gcc-header-path.patch, llvm-3.3-r1.ebuild:
+  Backport g++-X.Y header location support. Fixes bug #487584.
+
+  04 Oct 2013; Michał Górny <mgorny@gentoo.org> llvm-3.3-r1.ebuild,
+  llvm-9999.ebuild:
+  Localize CPPFLAGS before appending to it -- prevent it from leaking out of the
+  correct ABI.
 
   13 Sep 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Add github LLVM mirror as git backup URL. Requested in bug #484748.

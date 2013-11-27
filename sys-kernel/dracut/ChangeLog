@@ -1,6 +1,95 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.130 2013/09/25 21:31:38 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.139 2013/11/18 19:10:48 aidecoe Exp $
+
+  18 Nov 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r1.ebuild,
+  +files/034-0007-dracut.sh-also-mkdir-run-lock-which-is.patch,
+  +files/034-0008-dracut.sh-no-need-to-make-subdirs-in-r.patch,
+  +files/034-0009-lvm-install-thin-utils-for-non-hostonl.patch,
+  +files/034-0010-module-setup.sh-add-comments-for-dracu.patch,
+  +files/034-0011-lvm-fix-thin-recognition.patch,
+  +files/034-0012-lvm-always-install-thin-utils-for-lvm.patch:
+  Fixed bug #487324 (redundant dirs) and bug #490098 (thin provisioning).
+
+  27 Oct 2013; Sven Vermeulen <swift@gentoo.org> dracut-026-r2.ebuild,
+  dracut-027-r3.ebuild, dracut-029.ebuild, dracut-030.ebuild,
+  dracut-031-r1.ebuild, dracut-033-r3.ebuild, dracut-034.ebuild,
+  dracut-034-r1.ebuild:
+  Fix bug #489080 - Depend on sec-policy/selinux-dracut if USE=selinux
+
+*dracut-034-r1 (16 Oct 2013)
+
+  16 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-034-r1.ebuild,
+  +files/034-0006-resume-fix-swap-detection-in-hostonly.patch:
+  Fixed bug #487322 (resume support in hostonly mode) and bug #486516
+  (redundant inclusion of libs from lib32 directory).
+
+  Thanks to Alexander Tsoy <alexander@tsoy.me> for patch for bug #486516.
+
+  08 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-031.ebuild:
+  Removed old revision of 031.
+
+  08 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-033.ebuild,
+  -dracut-033-r1.ebuild, -dracut-033-r2.ebuild:
+  Removed old revisions of 033.
+
+*dracut-034 (08 Oct 2013)
+
+  08 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-034.ebuild,
+  +files/034-0001-dracut.sh-do-not-bail-out-if-kernel-mo.patch,
+  +files/034-0002-dracut-functions.sh-support-for-altern.patch,
+  +files/034-0003-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/034-0004-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/034-0005-Install-dracut-install-into-libexec-di.patch:
+  Version bump.
+
+  NEWS
+  ~~~~
+  - do not run dhcp on parts of assembled network interfaces (bond, bridge)
+  - add option to turn on/off prelinking
+     --prelink, --noprelink
+     do_prelink=[yes|no]
+  - add ACPI table overriding
+  - do not log to syslog/kmsg/journal for UID != 0
+  - lvm/mdraid: Fix LVM on MD activation
+  - bcache module removed (now in bcache-tools upstream)
+  - mdadm: also install configs from /etc/mdadm.conf.d
+  - fixes for mdadm-3.2.6+
+  - mkinitrd: better compat support for SUSE
+  - fcoe: add FCoE UEFI boot device support
+  - rootfs-block: add support for the rootfallback= kernel cmdline option
+
+*dracut-033-r3 (06 Oct 2013)
+
+  06 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-033-r3.ebuild,
+  +files/033-0005-dracut.sh-harden-host_modalias-reading.patch,
+  +files/033-0006-ifup-do-not-dhcp-on-network-interface-.patch,
+  +files/033-0007-lvm-mdraid-Fix-LVM-on-MD-activation.patch,
+  +files/033-0008-mdraid-module-setup.sh-install-configs.patch,
+  +files/033-0009-mdraid-module-setup.sh-fixes-for-mdadm.patch:
+  Applied patches with bug fixes wrt mdraid and lvm.
+
+  It fixes bug #486344, bug #485748, possible bug on PPC and bug related to
+  net-bonding.
+
+  Thanks to Alexander Tsoy <alexander@tsoy.me> for some of these patches and
+  generally for help.
+
+*dracut-033-r2 (02 Oct 2013)
+
+  02 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-033-r2.ebuild,
+  +files/033-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/033-0004-Install-dracut-install-into-libexec-di.patch:
+  Fixes bug #485204 and bug #485218.
+
+  Thanks to Alexander Tsoy <alexander@tsoy.me> for suggestions on bug #485204.
+
+  Thanks to  Steven Newbury <s_j_newbury@yahoo.co.uk> for good suggestions on
+  bug #485218.  Patch installing dracut-install to /usr/libexec has been
+  submitted upstream.
+
+  28 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-033-r1.ebuild:
+  Removed dead 'optimization' flag from IUSE.
 
 *dracut-033-r1 (25 Sep 2013)
 

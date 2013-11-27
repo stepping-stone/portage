@@ -1,6 +1,25 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.54 2013/09/27 04:29:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.59 2013/11/12 09:09:20 jlec Exp $
+
+  12 Nov 2013; Justin Lecher <jlec@gentoo.org> kexec-tools-2.0.4-r1.ebuild,
+  kexec-tools-2.0.4-r2.ebuild, kexec-tools-9999.ebuild:
+  Fix missing deps and inter USE dependencies, thanks Arfrever spotting this
+
+  12 Nov 2013; Justin Lecher <jlec@gentoo.org> kexec-tools-2.0.4-r1.ebuild,
+  kexec-tools-2.0.4-r2.ebuild, kexec-tools-9999.ebuild,
+  +files/kexec-tools-2.0.4-out-of-source.patch:
+  Readd USE=zlib and fix out-of-source build, #490326
+
+  11 Nov 2013; Justin Lecher <jlec@gentoo.org> kexec-tools-2.0.4-r1.ebuild,
+  kexec-tools-2.0.4-r2.ebuild, kexec-tools-9999.ebuild:
+  Drop USE=zlib as it is always requiered, #490326
+
+  01 Nov 2013; Agostino Sarubbo <ago@gentoo.org> kexec-tools-2.0.4-r2.ebuild:
+  Stable for x86, wrt bug #486308
+
+  20 Oct 2013; Pacho Ramos <pacho@gentoo.org> kexec-tools-2.0.4-r2.ebuild:
+  amd64 stable, bug #486308
 
   27 Sep 2013; Mike Frysinger <vapier@gentoo.org> files/README.Gentoo,
   files/kexec-tools-2.0.0-respect-LDFLAGS.patch:

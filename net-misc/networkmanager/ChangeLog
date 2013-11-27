@@ -1,6 +1,41 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.180 2013/09/15 04:31:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.187 2013/11/15 19:40:09 pacho Exp $
+
+  15 Nov 2013; Pacho Ramos <pacho@gentoo.org> -networkmanager-0.9.8.4.ebuild,
+  -networkmanager-0.9.8.6.ebuild, networkmanager-0.9.8.8.ebuild:
+  Fix grep invocation (#491284 by Rodolphe Rocca), drop old.
+
+  12 Oct 2013; Mike Auty <ikelos@gentoo.org> networkmanager-0.9.8.6.ebuild,
+  networkmanager-0.9.8.8.ebuild, metadata.xml:
+  Clarify the wifi USE flag description and fix minor syntax issue in recent
+  ebuilds.
+
+  10 Oct 2013; Pacho Ramos <pacho@gentoo.org> networkmanager-0.9.8.8.ebuild:
+  Add a wifi USE flag to pull in wpa_supplicant only for that case (#473180 by
+  Marien Zwart)
+
+*networkmanager-0.9.8.8 (10 Oct 2013)
+
+  10 Oct 2013; Pacho Ramos <pacho@gentoo.org> +networkmanager-0.9.8.8.ebuild:
+  Version bump
+
+  06 Oct 2013; Pacho Ramos <pacho@gentoo.org> networkmanager-0.9.8.6.ebuild:
+  Add a warning for people having a NetworkManager.conf that loads ifnet plugin
+  preserved for some reason (#485658#c10 by Dennis Schridde)
+
+*networkmanager-0.9.8.6 (05 Oct 2013)
+
+  05 Oct 2013; Pacho Ramos <pacho@gentoo.org> +networkmanager-0.9.8.6.ebuild,
+  -networkmanager-0.9.6.4-r1.ebuild, -networkmanager-0.9.8.2-r3.ebuild:
+  Version bump, use keyfile plugin instead of ifnet for systemd to prevent
+  collisions and problems like bug #485658
+
+  01 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  networkmanager-0.9.6.4.ebuild, networkmanager-0.9.6.4-r1.ebuild,
+  networkmanager-0.9.8.2-r3.ebuild, networkmanager-0.9.8.4.ebuild:
+  Depend on dnsmasq[dhcp] for connection sharing (bug #475760, thanks to
+  Ronald).
 
 *networkmanager-0.9.8.4 (15 Sep 2013)
 

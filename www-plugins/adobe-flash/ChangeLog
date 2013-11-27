@@ -1,6 +1,48 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.213 2013/09/11 13:37:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.222 2013/11/14 01:39:39 jer Exp $
+
+  14 Nov 2013; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.310-r1.ebuild, -adobe-flash-11.2.202.310.ebuild,
+  metadata.xml:
+  Old.
+
+  13 Nov 2013; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.327.ebuild:
+  Stable for x86, wrt bug #491148
+
+  13 Nov 2013; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.327.ebuild:
+  Stable for amd64, wrt bug #491148
+
+*adobe-flash-11.2.202.327 (13 Nov 2013)
+
+  13 Nov 2013; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.327.ebuild:
+  Version bump.
+
+  02 Oct 2013; Ian Stakenvicius <axs@gentoo.org>
+  adobe-flash-11.2.202.310-r1.ebuild:
+  adjusted nspluginwrapper dependency to match previous versions of ebuilds, so
+  that it is only required on amd64 systems when not installing a 64bit flash
+
+  28 Sep 2013; Jeroen Roovers <jer@gentoo.org>
+  adobe-flash-11.2.202.310-r1.ebuild:
+  Oops, the glob is needed.
+
+  28 Sep 2013; Jeroen Roovers <jer@gentoo.org>
+  adobe-flash-11.2.202.310-r1.ebuild:
+  Remove unneeded glob.
+
+  28 Sep 2013; Jeroen Roovers <jer@gentoo.org>
+  adobe-flash-11.2.202.310-r1.ebuild:
+  Remove unused variable INSTALL_BASE. Set QA_PREBUILT appropriately.
+
+*adobe-flash-11.2.202.310-r1 (27 Sep 2013)
+
+  27 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  +adobe-flash-11.2.202.310-r1.ebuild:
+  Introduce a simplified, multilib-friendly ebuild by me, AxS and iamnr3.
 
   11 Sep 2013; Jeroen Roovers <jer@gentoo.org>
   -adobe-flash-11.2.202.297.ebuild, -files/memcpy-to-memmove.sh:

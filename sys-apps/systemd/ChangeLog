@@ -1,6 +1,100 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.179 2013/09/26 19:46:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.200 2013/11/25 19:32:38 mgorny Exp $
+
+  25 Nov 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Make dbus a PDEP + test dep since upstream no longer links to the library. Add
+  BUILT_SOURCES build to fix bug #492370.
+
+  24 Nov 2013; Pacho Ramos <pacho@gentoo.org> systemd-208-r2.ebuild:
+  amd64 stable, bug #487344
+
+  16 Nov 2013; Michał Górny <mgorny@gentoo.org> systemd-208-r2.ebuild,
+  systemd-9999.ebuild:
+  Force non-parallel install to avoid triggering automake bugs, bug #491398.
+
+  13 Nov 2013; Matt Turner <mattst88@gentoo.org> systemd-208-r2.ebuild:
+  Added ~alpha, bug 478076.
+
+*systemd-204-r3 (11 Nov 2013)
+
+  11 Nov 2013; Michał Górny <mgorny@gentoo.org> +systemd-204-r3.ebuild,
+  systemd-204-r1.ebuild, systemd-204-r2.ebuild:
+  Backport multilib support to -204 as requested by lxnay. Add missing fcaps
+  inherit.
+
+  04 Nov 2013; Michał Górny <mgorny@gentoo.org> systemd-204-r1.ebuild,
+  systemd-208-r2.ebuild, systemd-9999.ebuild:
+  Suggest disabling GRKERNSEC_PROC to make it possible to run systemd on
+  Hardened, bug #490366.
+
+  18 Oct 2013; Mike Gilbert <floppym@gentoo.org> systemd-204-r1.ebuild,
+  systemd-204-r2.ebuild:
+  Don't die in pkg_pretend if the user has manually removed the systemd
+  compatibility symlink. Patch by Łukasz Stelmach. Bug 487232.
+
+  17 Oct 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Bump kmod dep following upstream changes. Remove python-config hack wrt bug
+  #488396. Add slot operator deps. Switch to git-r3.
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> systemd-207-r2.ebuild,
+  systemd-208-r1.ebuild, systemd-208-r2.ebuild, systemd-9999.ebuild:
+  Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
+  #483304.
+
+  13 Oct 2013; Mike Gilbert <floppym@gentoo.org> systemd-208-r2.ebuild,
+  systemd-9999.ebuild:
+  Depend on udev-init-scripts unconditionally, bug 487080.
+
+*systemd-208-r2 (08 Oct 2013)
+
+  08 Oct 2013; Michał Górny <mgorny@gentoo.org> +systemd-208-r2.ebuild:
+  Backport commits tagged by upstream as bugfixes.
+
+*systemd-204-r2 (05 Oct 2013)
+
+  05 Oct 2013; Pacho Ramos <pacho@gentoo.org> +systemd-204-r2.ebuild:
+  Include multiple backports with tons of fixes from newer versions, thanks to
+  Fedora systemd maintainers for their work
+
+*systemd-9999 (04 Oct 2013)
+
+  04 Oct 2013; Michał Górny <mgorny@gentoo.org> +systemd-9999.ebuild,
+  -systemd-9999-r1.ebuild:
+  Move the live ebuild back to version 9999.
+
+  02 Oct 2013; Michał Górny <mgorny@gentoo.org> systemd-208-r1.ebuild:
+  Sync SRC_URI with udev.
+
+*systemd-208-r1 (02 Oct 2013)
+
+  02 Oct 2013; Michał Górny <mgorny@gentoo.org> +systemd-208-r1.ebuild,
+  -systemd-208.ebuild:
+  Revbump the ebuild and update the checksums for the new -208 tarball. We love
+  people who re-release the same version.
+
+*systemd-208 (02 Oct 2013)
+
+  02 Oct 2013; Michał Górny <mgorny@gentoo.org>
+  +files/208-0001-Work-around-link-libsystemd-label-to-libsystemd-logi.patch,
+  +files/208-0002-Update-Makefile.in.patch, +systemd-208.ebuild,
+  systemd-9999-r1.ebuild:
+  Version bump. Fix linking issues, bug #479038.
+
+  29 Sep 2013; Michał Górny <mgorny@gentoo.org> -systemd-204.ebuild:
+  Remove old, vulnerable version.
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204-r1.ebuild:
+  Stable for ppc64, wrt bug #485546
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204-r1.ebuild:
+  Stable for ppc, wrt bug #485546
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204-r1.ebuild:
+  Stable for x86, wrt bug #485546
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204-r1.ebuild:
+  Stable for amd64, wrt bug #485546
 
   26 Sep 2013; Mike Gilbert <floppym@gentoo.org> systemd-204-r1.ebuild,
   systemd-207-r2.ebuild, systemd-9999-r1.ebuild:

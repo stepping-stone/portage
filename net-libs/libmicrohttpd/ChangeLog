@@ -1,6 +1,22 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.41 2013/09/02 23:11:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.45 2013/11/25 20:57:09 jer Exp $
+
+  25 Nov 2013; Jeroen Roovers <jer@gentoo.org> libmicrohttpd-0.9.28.ebuild,
+  libmicrohttpd-0.9.30.ebuild, libmicrohttpd-0.9.31.ebuild:
+  Marked ~hppa too.
+
+  13 Nov 2013; Matt Turner <mattst88@gentoo.org> libmicrohttpd-0.9.31.ebuild:
+  Added ~alpha, bug 478076.
+
+  23 Oct 2013; Markus Meier <maekke@gentoo.org> libmicrohttpd-0.9.30.ebuild:
+  arm stable, bug #488644
+
+*libmicrohttpd-0.9.31 (19 Oct 2013)
+
+  19 Oct 2013; Anthony G. Basile <blueness@gentoo.org>
+  +libmicrohttpd-0.9.31.ebuild, metadata.xml:
+  Version bump
 
   02 Sep 2013; Anthony G. Basile <blueness@gentoo.org>
   -libmicrohttpd-0.9.21.ebuild, -libmicrohttpd-0.9.23.ebuild,
