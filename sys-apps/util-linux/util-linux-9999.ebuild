@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.48 2013/11/09 11:37:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.50 2013/12/22 23:21:56 vapier Exp $
 
-EAPI=5
+EAPI="4"
 
 PYTHON_COMPAT=( python2_7 python3_{2,3} )
 
@@ -111,6 +111,10 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_with udev) \
 		$(tc-has-tls || echo --disable-tls)
+}
+
+src_test() {
+	emake check
 }
 
 src_install() {

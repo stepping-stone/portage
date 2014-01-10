@@ -1,6 +1,39 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.133 2013/11/14 11:27:23 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.138 2013/12/31 17:15:52 tomwij Exp $
+
+  31 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
+  -files/virtualbox-guest-additions-7.initd:
+  [QA] Remove unused files.
+
+*virtualbox-guest-additions-4.3.6 (18 Dec 2013)
+
+  18 Dec 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-guest-additions-4.1.26.ebuild,
+  virtualbox-guest-additions-4.2.18.ebuild,
+  virtualbox-guest-additions-4.2.20.ebuild,
+  -virtualbox-guest-additions-4.3.2.ebuild,
+  virtualbox-guest-additions-4.3.4.ebuild,
+  +virtualbox-guest-additions-4.3.6.ebuild:
+  Version bump. Removed old. Added x11-proto/glproto to RDEPEND. Thanks to Yi
+  Yang for reporting this in bug #494592.
+
+  07 Dec 2013; Pacho Ramos <pacho@gentoo.org>
+  virtualbox-guest-additions-4.2.18.ebuild:
+  x86 stable, bug #480044
+
+*virtualbox-guest-additions-4.3.4 (30 Nov 2013)
+
+  30 Nov 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-guest-additions-4.3.0.ebuild,
+  +virtualbox-guest-additions-4.3.4.ebuild:
+  Version bump. Removed old.
+
+*virtualbox-guest-additions-4.2.20 (29 Nov 2013)
+
+  29 Nov 2013; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-guest-additions-4.2.20.ebuild:
+  Version bump.
 
   14 Nov 2013; Fabio Erculiani <lxnay@gentoo.org>
   virtualbox-guest-additions-4.2.18.ebuild,

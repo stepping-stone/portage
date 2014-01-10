@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.10.0.ebuild,v 1.2 2013/11/10 07:02:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.10.0.ebuild,v 1.4 2014/01/08 05:59:48 vapier Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils linux-info
+inherit distutils-r1 eutils linux-info user
 
 DESCRIPTION="A highly available, distributed, eventually consistent object/blob store"
 HOMEPAGE="https://launchpad.net/swift"
@@ -56,7 +56,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i 's/xattr/pyxattr/g' "${S}/swift.egg-info/requires.txt"
-	sed -i 's/xattr/pyxattr/g' "${S}/tools/pip-requires"
+	sed -i 's/xattr/pyxattr/g' "${S}/requirements.txt"
 }
 
 src_test () {

@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.3.1-r1.ebuild,v 1.1 2013/10/25 12:51:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.3.1-r1.ebuild,v 1.4 2014/01/05 19:50:43 vapier Exp $
 
-EAPI=5
+EAPI="4"
 
 inherit flag-o-matic eutils multilib toolchain-funcs mono-env libtool java-pkg-opt-2
 
@@ -13,13 +13,13 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-3 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="acl -cvs doc emacs git java nls +cxx openmp static-libs elibc_glibc"
+IUSE="acl -cvs doc emacs git java nls +cxx ncurses openmp static-libs elibc_glibc"
 
 DEPEND="virtual/libiconv
 	dev-libs/libxml2
-	sys-libs/ncurses
 	dev-libs/expat
 	acl? ( virtual/acl )
+	ncurses? ( sys-libs/ncurses )
 	java? ( >=virtual/jdk-1.4 )"
 RDEPEND="${DEPEND}
 	!git? ( cvs? ( dev-vcs/cvs ) )
@@ -60,6 +60,8 @@ src_configure() {
 		--with-included-libcroco \
 		--with-included-libunistring \
 		$(use_enable acl) \
+		$(use_enable cxx libasprintf) \
+		$(use_enable ncurses curses) \
 		$(use_enable openmp) \
 		$(use_enable static-libs static) \
 		$(use_with git) \

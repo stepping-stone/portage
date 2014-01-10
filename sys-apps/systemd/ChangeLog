@@ -1,6 +1,37 @@
 # ChangeLog for sys-apps/systemd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.200 2013/11/25 19:32:38 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.208 2014/01/07 09:41:03 pacho Exp $
+
+  07 Jan 2014; Pacho Ramos <pacho@gentoo.org> systemd-208-r2.ebuild,
+  systemd-9999.ebuild:
+  Keyword on ia64 (#478076 by Emeric Maschino)
+
+  31 Dec 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml,
+  systemd-9999.ebuild:
+  Add a use flag to enable KDBUS by default; this may be enabled unconditionally
+  in future revisions.
+
+  31 Dec 2013; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Stub-out docs/gtk-doc.make if we are not building docs, thanks to David
+  Heidelberger on bug 496310.
+
+  28 Dec 2013; Pacho Ramos <pacho@gentoo.org> -systemd-204-r2.ebuild,
+  -systemd-204-r3.ebuild, -systemd-207-r2.ebuild, -systemd-208-r1.ebuild,
+  systemd-208-r2.ebuild, systemd-9999.ebuild:
+  Update config checks also solving bug #493874 by Alexey Vladykin, drop old.
+
+  08 Dec 2013; Markus Meier <maekke@gentoo.org> systemd-208-r2.ebuild:
+  arm stable, bug #487344
+
+  04 Dec 2013; Mike Gilbert <floppym@gentoo.org> systemd-208-r2.ebuild,
+  systemd-9999.ebuild:
+  Move udev-init-scripts to PDEPEND to break circular dep.
+
+  02 Dec 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Disable maintainer mode which now gets enabled by default.
+
+  01 Dec 2013; Johannes Huber <johu@gentoo.org> systemd-208-r2.ebuild:
+  x86 stable, bug #487344
 
   25 Nov 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
   Make dbus a PDEP + test dep since upstream no longer links to the library. Add

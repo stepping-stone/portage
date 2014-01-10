@@ -1,17 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.20.3.ebuild,v 1.4 2013/11/18 10:39:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.20.3.ebuild,v 1.6 2013/12/21 16:36:56 ago Exp $
 
 EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
-HOMEPAGE="http://www.obsession.se/gentoo/"
+HOMEPAGE="http://www.obsession.se/gentoo/ http://gentoo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
 IUSE="nls"
 
 RDEPEND="

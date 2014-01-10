@@ -1,6 +1,40 @@
 # ChangeLog for dev-lang/perl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.399 2013/11/22 08:56:12 haubi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.410 2014/01/01 13:39:17 dilfridge Exp $
+
+  01 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Remove unused useflag description
+
+  01 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> -perl-5.10.1.ebuild,
+  -perl-5.8.8-r8.ebuild:
+  Remove old versions wrt bug #350785
+
+  19 Dec 2013; Jeroen Roovers <jer@gentoo.org> perl-5.16.3.ebuild:
+  Stable for HPPA (bug #461898).
+
+  16 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> perl-5.16.3.ebuild:
+  Stable on arm, wrt bug #461898
+
+  15 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> perl-5.16.3.ebuild:
+  ia64 stable wrt bug #461898
+
+  15 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> perl-5.16.3.ebuild:
+  ppc64 stable wrt bug #461898
+
+  15 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> perl-5.16.3.ebuild:
+  ppc stable wrt bug #461898
+
+  15 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> perl-5.16.3.ebuild:
+  sparc stable wrt bug #461898
+
+  14 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> perl-5.16.3.ebuild:
+  amd64 stable wrt bug #461898
+
+  14 Dec 2013; Johannes Huber <johu@gentoo.org> perl-5.16.3.ebuild:
+  x86 stable, bug #461898
+
+  13 Dec 2013; Matt Turner <mattst88@gentoo.org> perl-5.16.3.ebuild:
+  alpha stable, bug 461898.
 
   22 Nov 2013; Michael Haubenwallner <haubi@gentoo.org>
   files/eblits/pkg_setup-v50160001.eblit,
