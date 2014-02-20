@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/attica-4.11.2.ebuild,v 1.5 2013/12/11 20:27:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/attica-4.11.2.ebuild,v 1.7 2014/02/09 19:01:18 kensington Exp $
 
 EAPI=5
 

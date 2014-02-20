@@ -1,6 +1,51 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.578 2014/01/01 19:15:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.590 2014/02/16 12:08:38 ago Exp $
+
+  16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> cups-1.7.1.ebuild:
+  Stable for ia64, wrt bug #501198
+
+  16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> cups-1.7.1.ebuild:
+  Stable for x86, wrt bug #501198
+
+  16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> cups-1.7.1.ebuild:
+  Stable for amd64, wrt bug #501198
+
+  13 Feb 2014; Jeroen Roovers <jer@gentoo.org> cups-1.7.1.ebuild:
+  Stable for HPPA (bug #501198).
+
+  12 Feb 2014; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.6.4.ebuild:
+  Allow newer cups-filters to replace foomatic-filters here too.
+
+  24 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.6.4.ebuild,
+  cups-1.7.1.ebuild, cups-9999.ebuild:
+  The libusb backend hard-requires threading, bug 497194
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> -cups-1.6.2-r5.ebuild,
+  -files/cups-1.6.3-colord-profile.patch, -cups-1.7.0-r1.ebuild,
+  -files/pdftops-1.20.gentoo, -files/cupsd.init.d:
+  Remove old
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cups-1.6.4.ebuild:
+  Stable for alpha, wrt bug #489914
+
+  17 Jan 2014; Patrick Lauer <patrick@gentoo.org> cups-1.7.1.ebuild,
+  cups-9999.ebuild:
+  Whitespace
+
+  16 Jan 2014; Fabian Groffen <grobian@gentoo.org> cups-1.7.1.ebuild,
+  cups-9999.ebuild:
+  Fixed for and marked ~m68k-mint, bug #498100
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cups-1.6.4.ebuild:
+  Stable for ia64, wrt bug #489914
+
+*cups-1.7.1 (12 Jan 2014)
+
+  12 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> -cups-1.6.9999.ebuild,
+  -cups-1.7.0.ebuild, +cups-1.7.1.ebuild, cups-9999.ebuild,
+  files/cupsd.init.d-r1:
+  Version bump; remove old
 
 *cups-1.7.0-r1 (01 Jan 2014)
 

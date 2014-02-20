@@ -1,6 +1,21 @@
 # ChangeLog for sci-visualization/veusz
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.44 2013/07/16 16:29:13 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.47 2014/02/17 22:25:37 bicatali Exp $
+
+*veusz-1.20.1 (17 Feb 2014)
+
+  17 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +veusz-1.20.1.ebuild:
+  Version bump
+
+  05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> -veusz-1.17.1-r1.ebuild,
+  -veusz-1.18.ebuild, veusz-1.20.ebuild:
+  fits is now delivered by astropy
+
+*veusz-1.20 (29 Jan 2014)
+
+  29 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +veusz-1.20.ebuild,
+  metadata.xml:
+  Version bump
 
 *veusz-1.18 (16 Jul 2013)
 

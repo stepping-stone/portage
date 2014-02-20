@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.3 2014/01/08 09:42:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.6 2014/01/28 07:32:04 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 DISTUTILS_OPTIONAL=1
 WANT_AUTOMAKE="none"
+GENTOO_DEPEND_ON_PERL="no"
 
 inherit autotools bash-completion-r1 db-use depend.apache distutils-r1 elisp-common flag-o-matic java-pkg-opt-2 libtool multilib perl-module eutils
 
@@ -103,6 +104,9 @@ pkg_setup() {
 		append-cppflags -DSVN_DEBUG -DAP_DEBUG
 	fi
 
+	# http://mail-archives.apache.org/mod_mbox/subversion-dev/201306.mbox/%3C51C42014.3060700@wandisco.com%3E
+	[[ ${CHOST} == *-solaris2* ]] && append-cppflags -D__EXTENSIONS__
+
 	# Allow for custom repository locations.
 	SVN_REPOS_LOC="${SVN_REPOS_LOC:-${EPREFIX}/var/svn}"
 }
@@ -132,6 +136,13 @@ src_prepare() {
 		-i build-outputs.mk || die "sed failed"
 
 	if use python; then
+		if [[ ${CHOST} == *-darwin* ]] ; then
+			# http://mail-archives.apache.org/mod_mbox/subversion-dev/201306.mbox/%3C20130614113003.GA19257@tarsus.local2%3E
+			# in short, we don't have gnome-keyring stuff here, patch
+			# borrowed from MacPorts
+			epatch "${FILESDIR}"/${P}-swig-python-no-gnome-keyring.patch
+		fi
+
 		# XXX: make python_copy_sources accept path
 		S=${S}/subversion/bindings/swig/python python_copy_sources
 		rm -r "${S}"/subversion/bindings/swig/python || die
@@ -186,6 +197,12 @@ src_configure() {
 	# for build-time scripts
 	if use ctypes-python || use python || use test; then
 		python_export_best
+	fi
+
+	if use python && [[ ${CHOST} == *-darwin* ]] ; then
+		export ac_cv_python_link="$(tc-getCC) "'$(PYTHON_CFLAGS) -bundle -undefined dynamic_lookup $(PYTHON_LIBS)'
+		export ac_cv_python_libs='$(PYTHON_CFLAGS) -bundle -undefined dynamic_lookup $(PYTHON_LIBS)'
+		export ac_cv_python_compile="$(tc-getCC)"
 	fi
 
 	#force ruby-1.8 for bug 399105

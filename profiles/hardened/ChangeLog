@@ -1,6 +1,43 @@
 # ChangeLog for Gentoo/AMD64 profile directory
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.27 2013/12/31 21:31:06 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.36 2014/02/17 15:14:14 blueness Exp $
+
+  17 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/amd64/make.defaults, linux/musl/x86/make.defaults:
+  Sandbox from hardened-dev::musl overlay works
+
+  11 Feb 2014; Anthony G. Basile <blueness@gentoo.org> linux/make.defaults:
+  Add xtpax to BOOTSTRAP_USE/USE in base hardened make.default, for
+  sys-apps/elfix
+
+  03 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/uclibc/package.mask:
+  Remove -sys-libs/uclibc from hardened/linux/uclibc/package.mask, bug #500202
+
+  27 Jan 2014; Anthony G. Basile <blueness@gentoo.org> linux/musl/use.mask:
+  hardened/linux/musl: provide nls support with gettext
+
+  26 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/packages.build:
+  hardened/linux/musl: switch to dev-util/pkgconf which does better in musl
+
+  24 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/amd64/make.defaults, linux/musl/x86/make.defaults:
+  Move musl's linker path to gcc's specs file
+
+  24 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/amd64/make.defaults, linux/musl/make.defaults,
+  linux/musl/packages, linux/musl/packages.build, linux/musl/x86/make.defaults:
+  linux/musl: fix linker path and remove libiconv
+
+  23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
+  linux/amd64/package.use.stable.mask:
+  Fix qt packages category.
+
+  21 Jan 2014; Samuli Suominen <ssuominen@gentoo.org>
+  linux/amd64/package.use.stable.mask:
+  Missing abi_x86_32 mask for dev-libs/libcdio-paranoia wrt #497246 by Pacho
+  Ramos
 
   31 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
   +linux/arm/use.stable.mask:

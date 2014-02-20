@@ -1,6 +1,30 @@
 # ChangeLog for app-emulation/virtualbox
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.170 2013/12/18 20:54:38 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.176 2014/02/07 05:39:40 polynomial-c Exp $
+
+  07 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.3.6.ebuild:
+  Improved ifconfig location fix.
+
+  20 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.2.22.ebuild,
+  virtualbox-4.3.6.ebuild:
+  Added pax-mark call to VBoxManage.
+
+  17 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-4.2.18.ebuild, -virtualbox-4.2.20.ebuild,
+  -virtualbox-4.3.4.ebuild:
+  Security cleanup.
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org> virtualbox-4.2.22.ebuild:
+  Stable for x86, wrt bug #498166
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org> virtualbox-4.2.22.ebuild:
+  Stable for amd64, wrt bug #498166
+
+*virtualbox-4.2.22 (11 Jan 2014)
+
+  11 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-4.2.22.ebuild:
+  Version bump.
 
 *virtualbox-4.3.6 (18 Dec 2013)
 

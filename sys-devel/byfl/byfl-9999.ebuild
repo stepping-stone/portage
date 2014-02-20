@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/byfl-9999.ebuild,v 1.3 2013/11/12 16:12:07 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/byfl-9999.ebuild,v 1.5 2014/02/11 15:37:26 ottxor Exp $
 
 EAPI=5
 
-inherit autotools-utils flag-o-matic multilib
+inherit autotools-utils multilib
 
 if [ "${PV}" = "9999" ]; then
 	EGIT_REPO_URI="git://github.com/losalamos/${PN^b}.git http://github.com/losalamos/${PN}.git"
@@ -31,13 +31,12 @@ src_prepare() {
 	ln -s autoconf/configure.ac || die
 	eaclocal -I autoconf/m4
 	eautoconf
-	replace-flags -O? -O0 #upstream is working on this
 }
 
 src_configure() {
 	local myeconfargs=(
 		--enable-cxx11
 	)
-	autotools-utils_src_configure DRAGONEGG=/usr/$(get_libdir)/llvm/dragonegg.so
+	autotools-utils_src_configure DRAGONEGG=/usr/$(get_libdir)/dragonegg.so
 	MAKEOPTS+=" VERBOSE=1 LOPT=$(type -p opt)"
 }

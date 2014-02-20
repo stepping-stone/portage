@@ -1,6 +1,19 @@
 # ChangeLog for dev-php/PEAR-Net_SMTP
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.58 2013/11/23 21:03:47 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.62 2014/02/16 21:25:49 maekke Exp $
+
+  16 Feb 2014; Markus Meier <maekke@gentoo.org> PEAR-Net_SMTP-1.6.2.ebuild:
+  arm stable, bug #495570
+
+  14 Feb 2014; Akinori Hattori <hattya@gentoo.org> PEAR-Net_SMTP-1.6.2.ebuild:
+  ia64 stable wrt bug #495570
+
+  11 Feb 2014; Jeroen Roovers <jer@gentoo.org> PEAR-Net_SMTP-1.6.2.ebuild:
+  Stable for HPPA (bug #495570).
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-Net_SMTP-1.6.1.ebuild:
+  Removing stable keyword for sh/s390
 
 *PEAR-Net_SMTP-1.6.2 (23 Nov 2013)
 

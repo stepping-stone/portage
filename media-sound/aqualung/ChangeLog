@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/aqualung
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.30 2013/06/22 18:34:17 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.33 2014/01/28 16:33:04 ssuominen Exp $
+
+  28 Jan 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -aqualung-0.9_beta11-r1.ebuild:
+  old
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> aqualung-0.9_beta11-r2.ebuild:
+  Stable for x86, wrt bug #497248
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> aqualung-0.9_beta11-r2.ebuild:
+  amd64 stable, bug #497248
 
   22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/aqualung-0.9_beta11-libav9.patch, aqualung-0.9_beta11-r2.ebuild:

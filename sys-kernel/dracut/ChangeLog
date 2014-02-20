@@ -1,6 +1,99 @@
 # ChangeLog for sys-kernel/dracut
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.148 2013/12/28 18:36:37 aidecoe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.153 2014/02/17 11:42:11 aidecoe Exp $
+
+*dracut-036-r1 (17 Feb 2014)
+
+  17 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-036-r1.ebuild,
+  +files/036-0006-dracut.sh-Fix-variable-name-typo.patch:
+  Fixed problem with root= boot parameter being ignored by dracut in hostonly
+  mode. Rels comment #40 of bug #498832.
+
+  Commit on behalf of Alexander Tsoy <alexander@tsoy.me>.
+
+*dracut-036 (16 Feb 2014)
+
+  16 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-036.ebuild,
+  +files/036-0001-NEWS-update-for-version-036.patch,
+  +files/036-0002-dracut-functions.sh-support-for-altern.patch,
+  +files/036-0003-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/036-0004-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/036-0005-Install-dracut-install-into-libexec-di.patch:
+  Version bump.
+
+  At the request of QA team the use of DRACUT_MODULES use-expand has been
+  removed as well as run-time (pseudo-suggested) dependencies.  Instead, the
+  list of suggested dependencies is printed in postinst log message.  See
+  bug #498832.
+
+  NEWS
+  ~~~~
+  (since dracut-034)
+
+  - fixed skipcpio signature checking
+  - new argument "--rebuild"
+  - add lzo, lz4 compression
+  - install: install all binaries with <name> found in PATH
+  - lsinitrd can now handle initramfs images with an early cpio prepended
+    (microcode, ACPI tables)
+  - mkinitrd-suse added as a compat stub for dracut
+  - lvm: install thin utils for non-hostonly
+  - resume: fix swap detection in hostonly
+  - avoid loading unnecessary 32-bit libraries for 64-bit initrds
+  - crypt: wait for systemd password agents
+  - crypt: skip crypt swaps with password files
+  - network: before doing dhcp, dracut now checks, if the link has a carrier
+  - network: dhclient-script.sh now sets the lease time
+  - network: include usbnet drivers
+  - network: include all ethernet drivers
+  - network: add rd.bootif=0 to ignore BOOTIF
+  - i18n: introduce i18n_install_all, to install everything i18n related
+  - usrmount: always install the module,
+    so always mount /usr from within the initramfs
+  - "halt" the machine in systemd mode for die()
+
+  19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
+  Removed desc. of no longer existing 'optimization' flag.
+
+  19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r4.ebuild,
+  -files/034-0010-module-setup.sh-add-comments.patch.bz2:
+  Moved compressed patch out of portdir, fixes bug #498062.
+
+  19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-026-r2.ebuild,
+  -dracut-027-r3.ebuild, -dracut-029.ebuild, -dracut-030.ebuild,
+  -dracut-031-r1.ebuild, -dracut-033-r3.ebuild, -dracut-034-r3.ebuild,
+  -files/026-0000-fix-version-print.patch,
+  -files/027-0000-fix-version-print.patch,
+  -files/026-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/027-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/029-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/030-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/031-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/033-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/026-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/027-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/029-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/030-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/031-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/033-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/027-0003-Do-not-call-plymouth-with-full-path.patch,
+  -files/029-0003-LatArCyrHeb-16-as-a-default-i18n-font-.patch,
+  -files/030-0003-LatArCyrHeb-16-as-a-default-i18n-font-.patch,
+  -files/031-0003-Revert-base-setup-correct-system-time-.patch,
+  -files/026-0003-Revert-crypt-dmraid-mdraid-use-for_eac.patch,
+  -files/033-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  -files/033-0004-Install-dracut-install-into-libexec-di.patch,
+  -files/026-0004-lsinitrd.sh-fix-for-default-initrd-not.patch,
+  -files/027-0004-plymouth-plymouth-pretrigger.sh-fixup-.patch,
+  -files/033-0005-dracut.sh-harden-host_modalias-reading.patch,
+  -files/026-0005-lsinitrd.sh-removed-trailing.patch,
+  -files/033-0006-ifup-do-not-dhcp-on-network-interface-.patch,
+  -files/026-0006-make-host_fs_types-a-hashmap.patch,
+  -files/033-0007-lvm-mdraid-Fix-LVM-on-MD-activation.patch,
+  -files/033-0008-mdraid-module-setup.sh-install-configs.patch,
+  -files/033-0009-mdraid-module-setup.sh-fixes-for-mdadm.patch:
+  Removed old versions. Rels bug #498062. Versions prior to 034-r4 have bugs
+  which were not backported from 034-r4, so there's no reason to keep them.
 
   28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r3.ebuild,
   dracut-034-r4.ebuild, +files/034-0010-module-setup.sh-add-comments.patch.bz2,

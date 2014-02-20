@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/digikam
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.259 2013/12/07 22:14:53 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.262 2014/01/26 11:39:31 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> digikam-3.5.0.ebuild:
+  Stable for x86, wrt bug #493578
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> digikam-3.5.0.ebuild:
+  amd64 stable, bug 493578
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> digikam-3.5.0.ebuild:
+  Add slot dependency on usually breaking libraries
 
   07 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org> -digikam-3.4.0.ebuild:
   Remove old

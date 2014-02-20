@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.1.ebuild,v 1.1 2014/01/04 11:30:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.1.ebuild,v 1.3 2014/01/29 14:38:12 hattya Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs versionator libtool flag-o-matic eutils
@@ -14,7 +14,7 @@ SRC_URI="mirror://${PN}/${MY_P}.tar.xz"
 LICENSE="imagemagick"
 SLOT="0/${PV}"
 # KEYWORDS="~alpha ~ia64 ~ppc64 ~sparc ~amd64-fbsd" dropped because of missing KEYWORDS in app-text/mupdf wrt #491876
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~s390 ~sh ~x86 ~ppc-aix ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~x86 ~ppc-aix ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="autotrace bzip2 corefonts cxx djvu fftw fontconfig fpx graphviz hdri jbig jpeg jpeg2k lcms lqr lzma opencl openexr openmp pango pdf perl png postscript q32 q64 q8 raw static-libs svg test tiff truetype webp wmf X xml zlib"
 
 RESTRICT="perl? ( userpriv )"
@@ -34,11 +34,11 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	lcms? ( media-libs/lcms:2 )
 	lqr? ( media-libs/liblqr )
 	opencl? ( virtual/opencl )
-	openexr? ( media-libs/openexr )
+	openexr? ( media-libs/openexr:0= )
 	pango? ( x11-libs/pango )
-	pdf? ( app-text/mupdf )
-	perl? ( >=dev-lang/perl-5.8.8 )
-	png? ( media-libs/libpng:0 )
+	pdf? ( app-text/mupdf:0= )
+	perl? ( >=dev-lang/perl-5.8.8:0= )
+	png? ( media-libs/libpng:0= )
 	postscript? ( app-text/ghostscript-gpl )
 	raw? ( media-gfx/ufraw )
 	svg? ( gnome-base/librsvg )
@@ -47,7 +47,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 		media-fonts/urw-fonts
 		>=media-libs/freetype-2
 		)
-	webp? ( media-libs/libwebp )
+	webp? ( media-libs/libwebp:0= )
 	wmf? ( media-libs/libwmf )
 	X? (
 		x11-libs/libICE

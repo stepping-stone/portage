@@ -1,6 +1,26 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.169 2014/01/08 21:42:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.174 2014/02/16 06:41:58 ago Exp $
+
+  16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> llvm-3.4.ebuild:
+  Add ~sparc, wrt bug #320221
+
+  23 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.3-r1.ebuild,
+  llvm-3.3-r3.ebuild, llvm-3.4.ebuild:
+  Keep arm_neon.h header, thanks Yuta SATOH <nigoro.gentoo@0x100.com> in bug
+  #498908
+
+  15 Jan 2014; Michał Górny <mgorny@gentoo.org> llvm-3.4.ebuild,
+  llvm-9999.ebuild:
+  Make tests respect TMPDIR. Solution suggested by NAKAMURA Takumi on
+  http://llvm.org/bugs/show_bug.cgi?id=18335.
+
+  10 Jan 2014; Michał Górny <mgorny@gentoo.org> llvm-3.4.ebuild,
+  llvm-9999.ebuild:
+  Restore building clang-check and clang-format, bug #497620.
+
+  10 Jan 2014; Michał Górny <mgorny@gentoo.org> llvm-3.4.ebuild:
+  Re-add missing runtime gcc detection patch, bug #497704.
 
   08 Jan 2014; Michał Górny <mgorny@gentoo.org> llvm-3.4.ebuild,
   llvm-9999.ebuild:

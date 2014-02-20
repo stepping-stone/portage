@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pyds9
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/ChangeLog,v 1.9 2013/04/24 21:20:51 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/ChangeLog,v 1.11 2014/02/05 23:40:42 bicatali Exp $
+
+  05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> -pyds9-1.5.ebuild,
+  -pyds9-1.6.ebuild, pyds9-1.7.ebuild:
+  work the pyfits depedency, removed old
+
+*pyds9-1.7 (17 Jan 2014)
+
+  17 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +pyds9-1.7.ebuild:
+  Version bump
 
   24 Apr 2013; Sébastien Fabbro <bicatali@gentoo.org> pyds9-1.6.ebuild:
   Propagate use depedencies for python targets

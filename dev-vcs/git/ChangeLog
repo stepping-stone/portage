@@ -1,6 +1,64 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.238 2014/01/04 23:22:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.250 2014/02/18 21:21:45 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> git-1.8.5.5.ebuild:
+  Stable for HPPA (bug #501662).
+
+*git-1.9.0 (17 Feb 2014)
+
+  17 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -git-1.8.5.3.ebuild,
+  git-1.9.0_rc3.ebuild, +git-1.9.0.ebuild:
+  Version bump. Removed old.
+
+*git-1.8.5.5 (13 Feb 2014)
+
+  13 Feb 2014; Robin H. Johnson <robbat2@gentoo.org> +git-1.8.5.5.ebuild:
+  Bump.
+
+  13 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> git-9999.ebuild:
+  Minor fixes to live ebuild (bug #487902).
+
+*git-1.9.0_rc3 (08 Feb 2014)
+
+  08 Feb 2014; Robin H. Johnson <robbat2@gentoo.org>
+  +files/git-1.9.0_rc3-optional-cvs.patch, +git-1.9.0_rc3.ebuild:
+  Bump.
+
+  07 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> git-1.8.1.5.ebuild,
+  git-1.8.1.5-r1.ebuild, git-1.8.2.1.ebuild, git-1.8.3.2-r1.ebuild,
+  git-1.8.4.5.ebuild, git-1.8.5.3.ebuild, git-1.8.5.4.ebuild, git-9999.ebuild,
+  files/git-daemon-r1.initd:
+  Attempt to fix startup of git-daemon as non-root user (bug #460370). Added
+  sys-devel/gettext to DEPEND when nls USE flag is enabled.
+
+*git-1.8.5.4 (06 Feb 2014)
+
+  06 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> +git-1.8.5.4.ebuild:
+  Version bump.
+
+  04 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> git-1.8.1.5.ebuild,
+  git-1.8.1.5-r1.ebuild, git-1.8.2.1.ebuild, git-1.8.4.5.ebuild,
+  -git-1.8.5.2.ebuild, git-1.8.5.3.ebuild, git-9999.ebuild,
+  -files/git-1.7.12-git-svn-backport.patch, +files/git-daemon-r1.initd:
+  Added rewritten init script which no longer contains "need net" (bug
+  #490446). Added epatch_user (bug #497292). Added www-servers/nginx to the
+  list of server who work with git-instaweb (bug #491862). Removed reference to
+  no longer needed patch in remaining ebuilds. Removed old files and ebuilds.
+  Don't install git-prompt.sh as bash-completion file (bug #477920).
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> git-1.8.1.5-r1.ebuild,
+  git-1.8.3.2-r1.ebuild:
+  Mark s390/sh stable.
+
+  17 Jan 2014; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
+  removing myself as maintainer of git
+
+*git-1.8.5.3 (14 Jan 2014)
+
+  14 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -git-1.8.5.1.ebuild,
+  +git-1.8.5.3.ebuild:
+  Version bump. Removed old.
 
   04 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> git-1.8.5.2.ebuild,
   git-9999.ebuild:

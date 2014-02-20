@@ -1,6 +1,19 @@
 # ChangeLog for x11-libs/libxcb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.127 2013/11/23 11:50:01 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.130 2014/01/27 02:32:05 floppym Exp $
+
+  27 Jan 2014; Mike Gilbert <floppym@gentoo.org> libxcb-1.10.ebuild:
+  Drop python3_1 (again).
+
+*libxcb-1.10 (26 Jan 2014)
+
+  26 Jan 2014; Matt Turner <mattst88@gentoo.org> +libxcb-1.10.ebuild:
+  Version bumped to 1.10, bug 496800.
+
+*libxcb-1.9.3-r1 (11 Jan 2014)
+
+  11 Jan 2014; Michał Górny <mgorny@gentoo.org> +libxcb-1.9.3-r1.ebuild:
+  Backport the python-any-r1 conversion from x11 overlay.
 
 *libxcb-1.9.1-r1 (23 Nov 2013)
 

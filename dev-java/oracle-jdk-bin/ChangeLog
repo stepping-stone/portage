@@ -1,6 +1,30 @@
 # ChangeLog for dev-java/oracle-jdk-bin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.48 2013/12/25 13:36:21 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.53 2014/01/26 10:38:22 sera Exp $
+
+  26 Jan 2014; Ralph Sennhauser <sera@gentoo.org>
+  -oracle-jdk-bin-1.7.0.45.ebuild:
+  Remove vulnarable
+
+  25 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  oracle-jdk-bin-1.7.0.51-r1.ebuild:
+  Stable for x86, wrt bug #498148
+
+  25 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  oracle-jdk-bin-1.7.0.51-r1.ebuild:
+  Stable for amd64, wrt bug #498148
+
+*oracle-jdk-bin-1.7.0.51-r1 (19 Jan 2014)
+
+  19 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -oracle-jdk-bin-1.7.0.51.ebuild, +oracle-jdk-bin-1.7.0.51-r1.ebuild:
+  Forgot to change java_fx version.
+
+*oracle-jdk-bin-1.7.0.51 (17 Jan 2014)
+
+  17 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +oracle-jdk-bin-1.7.0.51.ebuild:
+  non-maintainer security bump due to slacking java herd (bug #498148).
 
   25 Dec 2013; Fabian Groffen <grobian@gentoo.org>
   oracle-jdk-bin-1.7.0.45.ebuild:

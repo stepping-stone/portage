@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libwebp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.67 2014/01/06 13:56:22 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.69 2014/01/26 20:57:54 floppym Exp $
+
+  26 Jan 2014; Mike Gilbert <floppym@gentoo.org> libwebp-0.4.0.ebuild:
+  Call elibtoolize to fix relinking when cross-compiling, bug 499270 by James Le
+  Cuirot.
+
+  16 Jan 2014; Anthony G. Basile <blueness@gentoo.org> libwebp-0.2.1.ebuild,
+  libwebp-0.3.0.ebuild, libwebp-0.3.1.ebuild, libwebp-0.4.0.ebuild:
+  Keyword ~mips
 
   06 Jan 2014; Naohiro Aota <naota@gentoo.org> libwebp-0.4.0.ebuild:
   Add ~x86-fbsd #496740

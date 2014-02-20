@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.89 2013/09/20 00:45:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.93 2014/02/13 11:37:51 vikraman Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
@@ -66,8 +66,11 @@ RDEPEND="${python_dep}
 	elibc_glibc? ( >=sys-apps/sandbox-2.2 )
 	elibc_uclibc? ( >=sys-apps/sandbox-2.2 )
 	>=app-misc/pax-utils-0.1.17
-	xattr? ( kernel_linux? ( || ( >=dev-lang/python-3.3_pre20110902 dev-python/pyxattr ) ) )
 	selinux? ( || ( >=sys-libs/libselinux-2.0.94[python] <sys-libs/libselinux-2.0.94 ) )
+	xattr? ( kernel_linux? (
+		$(for python_impl in python{2_6,2_7,3_2} pypy2_0; do
+			echo "python_targets_${python_impl}? ( dev-python/pyxattr[python_targets_${python_impl}] )"
+		done) ) )
 	!<app-shells/bash-3.2_p17
 	!<app-admin/logrotate-3.8.0"
 PDEPEND="
@@ -89,7 +92,8 @@ prefix_src_archives() {
 	done
 }
 
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/portage.git"
+EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/portage.git
+	https://github.com/gentoo/portage.git"
 S="${WORKDIR}"/${PN}
 
 compatible_python_is_selected() {
@@ -213,7 +217,7 @@ src_prepare() {
 	local _version=$(cd "${S}/.git" && git describe --tags | sed -e 's|-\([0-9]\+\)-.\+$|_p\1|')
 	_version=${_version:1}
 	einfo "Setting portage.VERSION to ${_version} ..."
-	sed -e "s/^VERSION=.*/VERSION='${_version}'/" -i pym/portage/__init__.py || \
+	sed -e "s/^VERSION =.*/VERSION = '${_version}'/" -i pym/portage/__init__.py || \
 		die "Failed to patch portage.VERSION"
 	sed -e "1s/VERSION/${_version}/" -i doc/fragment/version || \
 		die "Failed to patch VERSION in doc/fragment/version"

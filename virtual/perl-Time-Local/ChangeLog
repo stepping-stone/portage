@@ -1,6 +1,15 @@
 # ChangeLog for virtual/perl-Time-Local
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.71 2013/12/31 08:20:08 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.73 2014/01/20 20:47:25 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-Time-Local-1.200.0-r2.ebuild, perl-Time-Local-1.220.0.ebuild,
+  perl-Time-Local-1.230.0.ebuild:
+  Add arm64 love.
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-Time-Local-1.230.0.ebuild:
+  Mark m68k stable.
 
   31 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
   -perl-Time-Local-1.19.01.ebuild:

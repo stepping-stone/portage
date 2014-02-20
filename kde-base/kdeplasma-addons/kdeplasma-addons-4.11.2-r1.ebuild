@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.11.2-r1.ebuild,v 1.6 2013/12/11 20:27:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.11.2-r1.ebuild,v 1.8 2014/02/09 18:56:55 kensington Exp $
 
 EAPI=5
 

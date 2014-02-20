@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/kipi-plugins
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.158 2013/12/07 22:16:04 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.161 2014/01/26 11:39:35 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> kipi-plugins-3.5.0.ebuild:
+  Stable for x86, wrt bug #493578
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> kipi-plugins-3.5.0.ebuild:
+  amd64 stable, bug 493578
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  kipi-plugins-3.5.0.ebuild:
+  Add subslot dependency on usually breaking libraries
 
   07 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -kipi-plugins-3.4.0.ebuild:

@@ -1,6 +1,31 @@
 # ChangeLog for sys-devel/gdb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.248 2013/12/09 01:04:05 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.255 2014/02/17 13:36:21 jer Exp $
+
+  17 Feb 2014; Jeroen Roovers <jer@gentoo.org> gdb-7.6.2.ebuild:
+  Stable for HPPA (bug #501528).
+
+*gdb-7.7 (06 Feb 2014)
+
+  06 Feb 2014; Mike Frysinger <vapier@gentoo.org> +gdb-7.7.ebuild:
+  Version bump.
+
+  06 Feb 2014; Mike Frysinger <vapier@gentoo.org> gdb-9999.ebuild:
+  Update to EAPI=4.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> gdb-7.6.2.ebuild,
+  gdb-9999.ebuild:
+  Add arm64 love.
+
+  14 Jan 2014; Mike Frysinger <vapier@gentoo.org> gdb-9999.ebuild:
+  Disable readline explicitly since we use the system one #498008 by octoploid.
+
+  14 Jan 2014; Mike Frysinger <vapier@gentoo.org> gdb-7.6.1.ebuild,
+  gdb-7.6.2.ebuild, gdb-7.6.ebuild, gdb-9999.ebuild:
+  Re-add m68k keywords.
+
+  14 Jan 2014; Mike Frysinger <vapier@gentoo.org> gdb-9999.ebuild:
+  Disable binutils subdirs due to combined git tree #498008 by octoploid.
 
 *gdb-7.6.2 (09 Dec 2013)
 

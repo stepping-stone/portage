@@ -1,6 +1,17 @@
 # ChangeLog for virtual/libiconv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/ChangeLog,v 1.11 2013/07/28 20:17:18 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/ChangeLog,v 1.14 2014/02/16 00:51:12 jer Exp $
+
+  16 Feb 2014; Jeroen Roovers <jer@gentoo.org> libiconv-0-r1.ebuild:
+  Stable for HPPA (bug #500680).
+
+  24 Jan 2014; Anthony G. Basile <blueness@gentoo.org> libiconv-0-r1.ebuild,
+  libiconv-0.ebuild:
+  musl provides its own iconv
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libiconv-0-r1.ebuild,
+  libiconv-0.ebuild:
+  Add arm64 love.
 
 *libiconv-0-r1 (28 Jul 2013)
 

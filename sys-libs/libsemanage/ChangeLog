@@ -1,6 +1,24 @@
 # ChangeLog for sys-libs/libsemanage
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.60 2013/12/23 09:56:43 swift Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.64 2014/02/02 17:05:58 swift Exp $
+
+  02 Feb 2014; Sven Vermeulen <swift@gentoo.org> +libsemanage-2.2-r1.ebuild:
+  Support multilib
+
+*libsemanage-2.2-r1 (02 Feb 2014)
+
+  02 Feb 2014; Sven Vermeulen <swift@gentoo.org> +libsemanage-2.2-r1.ebuild:
+  Removing ruby support for libsemanage for now (libselinux has it removed as
+  we)
+
+  01 Feb 2014; Sven Vermeulen <swift@gentoo.org> libsemanage-2.2.ebuild:
+  Adding python3_3 to supported Pythons, see bug #499606
+
+  20 Jan 2014; Sven Vermeulen <swift@gentoo.org> libsemanage-2.2.ebuild:
+  Fix bug #497754 - Add in dep on virtual/pgkconfig
+
+  20 Jan 2014; Sven Vermeulen <swift@gentoo.org> libsemanage-2.2.ebuild:
+  Stabilize for amd64 and x86
 
   23 Dec 2013; Sven Vermeulen <swift@gentoo.org> -libsemanage-2.1.9.ebuild:
   Cleanup old version

@@ -1,6 +1,36 @@
 # ChangeLog for app-arch/tar
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.194 2013/11/25 12:20:59 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.201 2014/02/19 14:49:03 polynomial-c Exp $
+
+*tar-1.27.1-r2 (19 Feb 2014)
+
+  19 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -tar-1.27.1-r1.ebuild,
+  +tar-1.27.1-r2.ebuild:
+  Revbump to EAPI-4. Committed straight to stable where -r1 was stable.
+
+  19 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> tar-1.27.1-r1.ebuild:
+  Added missing die calls.
+
+  19 Feb 2014; Chema Alonso <nimiux@gentoo.org> tar-1.27.1-r1.ebuild:
+  Stable for amd64 wrt bug #496212
+
+  08 Feb 2014; Akinori Hattori <hattya@gentoo.org> tar-1.27.1-r1.ebuild:
+  ia64 stable wrt bug #496212
+
+  04 Feb 2014; Jeroen Roovers <jer@gentoo.org> tar-1.27.1-r1.ebuild:
+  Stable for HPPA (bug #496212).
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> tar-1.26-r1.ebuild,
+  tar-1.27-r2.ebuild, tar-1.27.1-r1.ebuild, tar-1.27.1.ebuild:
+  Add arm64 love.
+
+*tar-1.27.1-r1 (10 Jan 2014)
+
+  10 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> +tar-1.27.1-r1.ebuild,
+  +files/tar-1.27.1-recursion_norecursion.patch,
+  +files/tar-1.27.1-xattr_build_fix.patch:
+  Fixed build with xattr (bug #489170). Added an upstream fix regarding
+  recursion/norecursion.
 
 *tar-1.27.1 (25 Nov 2013)
 

@@ -1,6 +1,31 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.127 2013/12/18 20:54:59 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.132 2014/01/23 18:54:33 polynomial-c Exp $
+
+  23 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-video-virtualbox-4.2.22.ebuild, xf86-video-virtualbox-4.3.6.ebuild:
+  Added missing x11-proto/resourceproto and x11-proto/scrnsaverproto to DEPEND.
+  Thanks to Dominik Buerkle for reporting this in bug #499062.
+
+  17 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -xf86-video-virtualbox-4.2.18.ebuild, -xf86-video-virtualbox-4.2.20.ebuild,
+  -xf86-video-virtualbox-4.3.4.ebuild:
+  Security cleanup.
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  xf86-video-virtualbox-4.2.22.ebuild:
+  Stable for x86, wrt bug #498166
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  xf86-video-virtualbox-4.2.22.ebuild:
+  Stable for amd64, wrt bug #498166
+
+*xf86-video-virtualbox-4.2.22 (11 Jan 2014)
+
+  11 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +xf86-video-virtualbox-4.2.22.ebuild, xf86-video-virtualbox-4.3.6.ebuild,
+  +files/xf86-video-virtualbox-4.3.6-link-lazy.patch:
+  Version bump. Fixed link lazy patch (bug #494478).
 
 *xf86-video-virtualbox-4.3.6 (18 Dec 2013)
 

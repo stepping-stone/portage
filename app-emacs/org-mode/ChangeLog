@@ -1,6 +1,18 @@
 # ChangeLog for app-emacs/org-mode
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.160 2013/11/02 10:26:02 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.163 2014/02/12 08:44:27 ulm Exp $
+
+*org-mode-8.2.5h (12 Feb 2014)
+
+  12 Feb 2014; Ulrich Müller <ulm@gentoo.org> -org-mode-6.36c.ebuild,
+  -org-mode-8.2.ebuild, +org-mode-8.2.5h.ebuild:
+  Version bump. Remove old.
+
+  20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> org-mode-8.2.1.ebuild:
+  Stable for ppc, wrt bug #495334
+
+  15 Jan 2014; Chema Alonso <nimiux@gentoo.org> org-mode-8.2.1.ebuild:
+  Stable for amd64 wrt bug #495334
 
 *org-mode-8.2.1 (02 Nov 2013)
 
@@ -785,4 +797,3 @@
   intial commit
   ebuild taken from bug 163947, thanks to Tassilo Horn <tassilo@member.fsf.org>
   updated version of the org-mode included with Emacs 22
-

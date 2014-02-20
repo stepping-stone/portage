@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/sbc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sbc/ChangeLog,v 1.14 2013/12/23 11:23:44 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sbc/ChangeLog,v 1.16 2014/02/01 09:28:41 pacho Exp $
+
+*sbc-1.2 (01 Feb 2014)
+
+  01 Feb 2014; Pacho Ramos <pacho@gentoo.org> +sbc-1.2.ebuild, -sbc-1.0.ebuild,
+  -sbc-1.1-r1.ebuild:
+  Version bump, drop old (#499676 by Manuel Ruger)
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> sbc-1.1.ebuild:
+  Stable for ia64, wrt bug #477662
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> sbc-1.1.ebuild:
   Stable for ppc, wrt bug #477662

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.8.ebuild,v 1.1 2014/01/06 00:34:43 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.8.ebuild,v 1.3 2014/01/20 17:41:31 floppym Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -15,7 +15,7 @@ inherit eutils multilib
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
 IUSE="build doc epydoc +ipc linguas_ru pypy2_0 python2 python3 selinux xattr"
 
@@ -69,8 +69,11 @@ RDEPEND="${python_dep}
 	elibc_glibc? ( >=sys-apps/sandbox-2.2 )
 	elibc_uclibc? ( >=sys-apps/sandbox-2.2 )
 	>=app-misc/pax-utils-0.1.17
-	xattr? ( kernel_linux? ( || ( >=dev-lang/python-3.3_pre20110902 dev-python/pyxattr ) ) )
 	selinux? ( || ( >=sys-libs/libselinux-2.0.94[python] <sys-libs/libselinux-2.0.94 ) )
+	xattr? ( kernel_linux? (
+		$(for python_impl in python{2_6,2_7,3_2} pypy2_0; do
+			echo "python_targets_${python_impl}? ( dev-python/pyxattr[python_targets_${python_impl}] )"
+		done) ) )
 	!<app-shells/bash-3.2_p17
 	!<app-admin/logrotate-3.8.0"
 PDEPEND="

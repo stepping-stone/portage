@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/ffcall
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.41 2012/08/20 03:32:11 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.43 2014/02/08 13:42:20 pacho Exp $
+
+*ffcall-1.10-r4 (08 Feb 2014)
+
+  08 Feb 2014; Pacho Ramos <pacho@gentoo.org> +ffcall-1.10-r4.ebuild:
+  Drop .la files (#343973)
+
+  29 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
+  Move to maintainer-needed
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> ffcall-1.10-r3.ebuild:
   added prefix keywords

@@ -1,6 +1,22 @@
 # ChangeLog for app-crypt/p11-kit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.51 2013/09/27 07:29:21 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.55 2014/02/18 20:56:22 pacho Exp $
+
+  18 Feb 2014; Pacho Ramos <pacho@gentoo.org> p11-kit-0.20.2.ebuild:
+  amd64 stable, bug #500718
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> p11-kit-0.20.2.ebuild:
+  Stable for HPPA (bug #500718).
+
+*p11-kit-0.20.2-r1 (15 Feb 2014)
+
+  15 Feb 2014; Alon Bar-Lev <alonbl@gentoo.org> +p11-kit-0.20.2-r1.ebuild:
+  Add multilib support, bug#499392, thanks to Michael Mair-Keimberger (iamnr3)
+
+*p11-kit-0.20.2 (24 Jan 2014)
+
+  24 Jan 2014; Tim Harder <radhermit@gentoo.org> +p11-kit-0.20.2.ebuild:
+  Version bump.
 
 *p11-kit-0.20.1 (27 Sep 2013)
 

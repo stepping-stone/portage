@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.50 2013/12/22 23:21:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.52 2014/02/15 06:26:58 ssuominen Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ if [[ ${PV} == 9999 ]] ; then
 	inherit git-2 autotools
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
 	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.xz"
 fi
 
@@ -28,7 +28,7 @@ IUSE="bash-completion caps +cramfs cytune fdformat ncurses nls pam python selinu
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
-	!<sys-apps/sysvinit-2.88-r5
+	!<sys-apps/sysvinit-2.88-r7
 	!sys-block/eject
 	!<sys-libs/e2fsprogs-libs-1.41.8
 	!<sys-fs/e2fsprogs-1.41.8
@@ -91,7 +91,6 @@ src_configure() {
 		$(use_enable fdformat) \
 		--with-ncurses=$(usex ncurses $(usex unicode auto yes) no) \
 		--disable-kill \
-		--disable-last \
 		--disable-login \
 		$(use_enable tty-helpers mesg) \
 		--disable-nologin \

@@ -1,6 +1,29 @@
 # ChangeLog for net-firewall/iptables
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.302 2013/12/23 15:59:33 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.307 2014/02/18 15:49:19 mgorny Exp $
+
+*iptables-1.4.21-r1 (18 Feb 2014)
+
+  18 Feb 2014; Michał Górny <mgorny@gentoo.org>
+  +files/systemd/ip6tables-restore.service,
+  +files/systemd/ip6tables-store.service, +files/systemd/ip6tables.service,
+  +files/systemd/iptables-restore.service,
+  +files/systemd/iptables-store.service, +files/systemd/iptables.service,
+  +iptables-1.4.21-r1.ebuild:
+  Introduce systemd units wrt bug #479490.
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> iptables-1.4.20.ebuild:
+  Stable for alpha, wrt bug #485190
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> iptables-1.4.20.ebuild,
+  iptables-1.4.21.ebuild:
+  Add arm64 love.
+
+  16 Jan 2014; Mike Frysinger <vapier@gentoo.org> iptables-1.4.20.ebuild:
+  Mark m68k/s390/sh stable.
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> iptables-1.4.20.ebuild:
+  Stable for ia64, wrt bug #485190
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> iptables-1.4.20.ebuild:
   Stable for sparc, wrt bug #485190

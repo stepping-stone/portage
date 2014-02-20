@@ -1,6 +1,20 @@
 # ChangeLog for net-fs/cifs-utils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.75 2013/12/24 16:55:46 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.78 2014/01/29 07:05:40 pacho Exp $
+
+  29 Jan 2014; Pacho Ramos <pacho@gentoo.org> cifs-utils-6.1-r1.ebuild:
+  ia64 stable, bug #486312 (thanks to Emeric Maschino for testing)
+
+  26 Jan 2014; Pacho Ramos <pacho@gentoo.org> cifs-utils-6.1-r1.ebuild,
+  cifs-utils-6.2.ebuild, cifs-utils-6.3.ebuild:
+  Rekeyword as the package causing the keyword lost regained keywords time ago
+  (#476406)
+
+*cifs-utils-6.3 (11 Jan 2014)
+
+  11 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -cifs-utils-6.0.ebuild,
+  +cifs-utils-6.3.ebuild:
+  Version bump. Removed old.
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> cifs-utils-6.1-r1.ebuild:
   Stable for ppc64, wrt bug #486312

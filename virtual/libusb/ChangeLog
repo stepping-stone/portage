@@ -1,6 +1,35 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.41 2014/01/03 20:20:46 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.48 2014/02/10 17:07:43 ssuominen Exp $
+
+  10 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> -libusb-0.ebuild,
+  -libusb-1.ebuild:
+  old
+
+  02 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> libusb-1-r1.ebuild:
+  List libusb-1.0.18 as first provider despite it causing double-listing of
+  libusb (to avoid downgrade from 1.0.17 to 1.0.9 since 1.0.18 is not stable
+  yet) wrt #500038
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> libusb-0-r1.ebuild,
+  libusb-1-r1.ebuild:
+  Mark m68k/s390/sh stable.
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libusb-0-r1.ebuild,
+  libusb-1-r1.ebuild:
+  Stable for x86, wrt bug #488708
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libusb-0-r1.ebuild,
+  libusb-1-r1.ebuild:
+  Stable for sparc, wrt bug #488708
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libusb-0-r1.ebuild,
+  libusb-1-r1.ebuild:
+  Stable for ppc, wrt bug #488708
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libusb-0-r1.ebuild,
+  libusb-1-r1.ebuild:
+  Stable for ia64, wrt bug #488708
 
   03 Jan 2014; Chema Alonso <nimiux@gentoo.org> libusb-0-r1.ebuild,
   libusb-1-r1.ebuild:

@@ -1,6 +1,51 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.324 2014/01/06 09:42:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.338 2014/02/17 21:08:02 ago Exp $
+
+  17 Feb 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.35.0.ebuild:
+  Stable for arm, wrt bug #499902
+
+  16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.35.0.ebuild:
+  Stable for ia64, wrt bug #499902
+
+  16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.35.0.ebuild:
+  Stable for alpha, wrt bug #499902
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.35.0.ebuild:
+  Stable for sparc, wrt bug #499902
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.35.0.ebuild:
+  Stable for ppc64, wrt bug #499902
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.35.0.ebuild:
+  Stable for ppc, wrt bug #499902
+
+  09 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> curl-7.35.0.ebuild:
+  x86 stable wrt security bug #499902
+
+  02 Feb 2014; Richard Freeman <rich0@gentoo.org> curl-7.35.0.ebuild:
+  amd64 stable - 499902
+
+  01 Feb 2014; Jeroen Roovers <jer@gentoo.org> curl-7.35.0.ebuild:
+  Stable for HPPA (bug #499902).
+
+*curl-7.35.0 (29 Jan 2014)
+
+  29 Jan 2014; Anthony G. Basile <blueness@gentoo.org> +curl-7.35.0.ebuild:
+  Version bump, bug #499674
+
+  20 Jan 2014; Anthony G. Basile <blueness@gentoo.org> -curl-7.33.0.ebuild:
+  Remove vulnerable version, bug #497092
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> curl-7.34.0-r1.ebuild:
+  Add arm64 love.
+
+  16 Jan 2014; Mike Frysinger <vapier@gentoo.org> curl-7.33.0.ebuild,
+  curl-7.34.0-r1.ebuild:
+  Mark m68k/s390/sh stable.
+
+  12 Jan 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.34.0-r1.ebuild:
+  Stable for ia64, wrt bug #497092
 
   06 Jan 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.34.0-r1.ebuild:
   Stable for ppc, wrt bug #497092

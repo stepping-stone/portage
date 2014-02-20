@@ -1,6 +1,49 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.323 2014/01/06 15:49:11 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.334 2014/01/29 20:58:03 vapier Exp $
+
+  29 Jan 2014; Mike Frysinger <vapier@gentoo.org> cdrtools-3.01_alpha17.ebuild,
+  cdrtools-3.01_alpha21.ebuild, cdrtools-3.01_alpha22.ebuild:
+  Fix clean up of _p.mk files (bug added in recent commit).
+
+  24 Jan 2014; Daniel Pielmeier <billie@gentoo.org> -cdrtools-3.00.ebuild,
+  -cdrtools-3.01_alpha19.ebuild:
+  Remove old.
+
+*cdrtools-3.01_alpha22 (24 Jan 2014)
+
+  24 Jan 2014; Daniel Pielmeier <billie@gentoo.org>
+  +cdrtools-3.01_alpha22.ebuild:
+  Version bump.
+
+  21 Jan 2014; Mike Frysinger <vapier@gentoo.org> cdrtools-3.01_alpha17.ebuild,
+  cdrtools-3.01_alpha19.ebuild, cdrtools-3.01_alpha21.ebuild:
+  Add makedepend into DEPEND since it is used.
+
+  20 Jan 2014; Patrick Lauer <patrick@gentoo.org> cdrtools-3.01_alpha21.ebuild:
+  Whitespace
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> cdrtools-3.01_alpha21.ebuild:
+  Add cross-compiling support #486680.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> cdrtools-3.01_alpha17.ebuild,
+  cdrtools-3.01_alpha19.ebuild, cdrtools-3.01_alpha21.ebuild:
+  Update the local config.{sub,guess} files manually.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> cdrtools-3.01_alpha17.ebuild:
+  Mark s390/sh stable.
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cdrtools-3.01_alpha17.ebuild:
+  Stable for alpha, wrt bug #486318
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cdrtools-3.01_alpha17.ebuild:
+  Stable for ia64, wrt bug #486318
+
+*cdrtools-3.01_alpha21 (11 Jan 2014)
+
+  11 Jan 2014; Daniel Pielmeier <billie@gentoo.org>
+  +cdrtools-3.01_alpha21.ebuild:
+  Version bump.
 
   06 Jan 2014; Daniel Pielmeier <billie@gentoo.org>
   cdrtools-3.01_alpha19.ebuild:

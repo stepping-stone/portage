@@ -1,6 +1,103 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1008 2014/01/09 00:49:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1025 2014/02/20 05:56:17 phajdan.jr Exp $
+
+*chromium-34.0.1847.3 (18 Feb 2014)
+
+  18 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-34.0.1847.3.ebuild, +files/chromium-system-jinja-r4.patch,
+  -chromium-34.0.1825.4.ebuild:
+  Dev channel bump. Remove old.
+
+*chromium-33.0.1750.115 (20 Feb 2014)
+
+  20 Feb 2014; Mike Gilbert <floppym@gentoo.org> +chromium-33.0.1750.115.ebuild,
+  -chromium-33.0.1750.58.ebuild:
+  Beta channel bump.
+
+*chromium-34.0.1833.5 (12 Feb 2014)
+
+  12 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-34.0.1833.5.ebuild, +files/chromium-d8-r0.patch,
+  -chromium-34.0.1809.0.ebuild:
+  Dev channel bump. Fix bug #500306 by Murph. Remove old.
+
+*chromium-34.0.1825.4 (08 Feb 2014)
+
+  08 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-34.0.1825.4.ebuild, -chromium-32.0.1700.77.ebuild,
+  -chromium-34.0.1788.0.ebuild:
+  Dev channel bump. Non-Aura GTK+ UI is now default, but Aura is still
+  available. Remove old.
+
+*chromium-33.0.1750.70 (06 Feb 2014)
+
+  06 Feb 2014; Mike Gilbert <floppym@gentoo.org> +chromium-33.0.1750.70.ebuild,
+  -chromium-33.0.1750.46.ebuild:
+  Beta channel bump.
+
+  04 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-32.0.1700.102.ebuild:
+  x86 stable wrt security bug #499502
+
+*chromium-32.0.1700.107 (04 Feb 2014)
+
+  04 Feb 2014; Mike Gilbert <floppym@gentoo.org> +chromium-32.0.1700.107.ebuild:
+  Stable channel bump.
+
+*chromium-33.0.1750.58 (01 Feb 2014)
+
+  01 Feb 2014; Mike Gilbert <floppym@gentoo.org> +chromium-33.0.1750.58.ebuild,
+  -chromium-33.0.1750.29.ebuild:
+  Beta channel bump.
+
+  30 Jan 2014; Richard Freeman <rich0@gentoo.org>
+  chromium-32.0.1700.102.ebuild:
+  amd64 stable - 499502
+
+*chromium-34.0.1809.0 (29 Jan 2014)
+
+  29 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-34.0.1809.0.ebuild, +files/chromium-depot-tools-r0.patch,
+  +files/chromium-system-jinja-r3.patch:
+  Dev channel bump. Aura is now default. Use bundled icu.
+
+*chromium-32.0.1700.102 (28 Jan 2014)
+
+  28 Jan 2014; Mike Gilbert <floppym@gentoo.org> +chromium-32.0.1700.102.ebuild:
+  Stable channel bump.
+
+*chromium-33.0.1750.46 (23 Jan 2014)
+
+  23 Jan 2014; Mike Gilbert <floppym@gentoo.org> +chromium-33.0.1750.46.ebuild,
+  -chromium-33.0.1750.18.ebuild:
+  Beta channel bump.
+
+*chromium-33.0.1750.29 (18 Jan 2014)
+
+  18 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-33.0.1750.29.ebuild, -chromium-33.0.1750.3.ebuild, metadata.xml:
+  Beta channel bump. Use system libvpx again. Remove old.
+
+*chromium-34.0.1788.0 (17 Jan 2014)
+
+  17 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-gn-r1.patch, -chromium-31.0.1650.63.ebuild,
+  -chromium-32.0.1700.72.ebuild, +chromium-34.0.1788.0.ebuild,
+  +files/chromium-system-libjpeg-r0.patch:
+  Dev channel bump. Use system libvpx again. Remove old.
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org> chromium-32.0.1700.77.ebuild:
+  Stable for x86, wrt bug #498168
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org> chromium-32.0.1700.77.ebuild:
+  Stable for amd64, wrt bug #498168
+
+*chromium-32.0.1700.77 (16 Jan 2014)
+
+  16 Jan 2014; Mike Gilbert <floppym@gentoo.org> +chromium-32.0.1700.77.ebuild,
+  -chromium-32.0.1700.68.ebuild:
+  Stable channel bump.
 
 *chromium-32.0.1700.72 (09 Jan 2014)
 

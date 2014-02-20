@@ -1,6 +1,19 @@
 # ChangeLog for Gentoo/hppa profile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.201 2013/11/30 16:08:05 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.205 2014/02/18 11:31:12 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Unmask USE=oss as nothing else works properly.
+
+  31 Jan 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask x11-libs/libgksu dependency for xfce-extra/xfce4-taskmanager (bug
+  #499900).
+
+  23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> package.use.mask
+  Remove obsolete dev-perl/PDL[proj] entry. See bug #497328 for more info.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Drop python targets hacks now that base/ has it #474128.
 
   30 Nov 2013; Jeroen Roovers <jer@gentoo.org> make.defaults:
   Mask dev-lang/python-3.2*, unmask dev-lang/python-3.3* targets (bug #474128).

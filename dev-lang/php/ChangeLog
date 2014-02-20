@@ -1,6 +1,83 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.785 2014/01/05 09:37:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.803 2014/02/17 21:07:36 ago Exp $
+
+  17 Feb 2014; Agostino Sarubbo <ago@gentoo.org> php-5.5.9.ebuild:
+  Stable for arm, wrt bug #501312
+
+  16 Feb 2014; Jeroen Roovers <jer@gentoo.org> php-5.5.9.ebuild:
+  Stable for HPPA (bug #501312).
+
+  16 Feb 2014; Ole Markus With <olemarkus@gentoo.org> -php-5.5.2.ebuild:
+  Removing old version 5.5.2
+
+  16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> php-5.5.9.ebuild:
+  Stable for ia64, wrt bug #501312
+
+  16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> php-5.5.9.ebuild:
+  Stable for alpha, wrt bug #501312
+
+  15 Feb 2014; Agostino Sarubbo <ago@gentoo.org> php-5.5.9.ebuild:
+  Stable for x86, wrt bug #501312
+
+  15 Feb 2014; Agostino Sarubbo <ago@gentoo.org> php-5.5.9.ebuild:
+  Stable for amd64, wrt bug #501312
+
+  08 Feb 2014; Ole Markus With <olemarkus@gentoo.org> -php-5.3.27.ebuild,
+  -php-5.4.17.ebuild:
+  Remove older unsecure versions
+
+  08 Feb 2014; Ole Markus With <olemarkus@gentoo.org> php-5.3.27.ebuild,
+  php-5.3.28-r1.ebuild, php-5.3.28-r2.ebuild, php-5.3.28.ebuild,
+  php-5.4.17.ebuild, php-5.4.23.ebuild, php-5.4.24-r1.ebuild, php-5.4.24.ebuild,
+  php-5.4.25.ebuild, php-5.5.2.ebuild:
+  Remove frontbase keyword, which does nothing
+
+*php-5.5.8-r1 (02 Feb 2014)
+*php-5.4.24-r1 (02 Feb 2014)
+*php-5.6.0_alpha1-r1 (02 Feb 2014)
+*php-5.3.28-r2 (02 Feb 2014)
+
+  02 Feb 2014; Pacho Ramos <pacho@gentoo.org> +files/php-fpm_at-simple.service,
+  +files/php-fpm_at.service, +php-5.3.28-r2.ebuild, +php-5.4.24-r1.ebuild,
+  +php-5.5.8-r1.ebuild, +php-5.6.0_alpha1-r1.ebuild:
+  Rework systemd support (#439918)
+
+*php-5.6.0_alpha1 (28 Jan 2014)
+
+  28 Jan 2014; Ole Markus With <olemarkus@gentoo.org> +php-5.6.0_alpha1.ebuild:
+  Adding first alpha of php 5.6
+
+  17 Jan 2014; Richard Freeman <rich0@gentoo.org> php-5.3.28-r1.ebuild:
+  amd64 stable - 494249,492784
+
+*php-5.5.7 (13 Jan 2014)
+
+  13 Jan 2014; Ole Markus With <olemarkus@gentoo.org> +php-5.5.7.ebuild:
+  Restoring php-5.5.7
+
+  13 Jan 2014; Ole Markus With <olemarkus@gentoo.org> -php-5.4.18.ebuild,
+  -php-5.4.19.ebuild, -php-5.4.20.ebuild, -php-5.4.21.ebuild,
+  -php-5.4.22.ebuild, -php-5.5.3-r1.ebuild, -php-5.5.3.ebuild,
+  -php-5.5.4.ebuild, -php-5.5.5.ebuild, -php-5.5.6.ebuild, -php-5.5.7.ebuild:
+  Removing old versions
+
+*php-5.5.8 (13 Jan 2014)
+*php-5.4.24 (13 Jan 2014)
+
+  13 Jan 2014; Ole Markus With <olemarkus@gentoo.org> +php-5.4.24.ebuild,
+  +php-5.5.8.ebuild:
+  Version bump
+
+  12 Jan 2014; Agostino Sarubbo <ago@gentoo.org> php-5.3.28.ebuild,
+  php-5.4.23.ebuild, php-5.5.7.ebuild:
+  Stable for ia64, wrt bug #492784
+
+  10 Jan 2014; Jeroen Roovers <jer@gentoo.org> php-5.3.28-r1.ebuild:
+  Stable for HPPA (bug #492784).
+
+  10 Jan 2014; Ole Markus With <olemarkus@gentoo.org> php-5.3.28-r1.ebuild:
+  Fix for building with USE=threads. Bug #494240
 
   05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> php-5.3.28.ebuild,
   php-5.4.23.ebuild, php-5.5.7.ebuild:
