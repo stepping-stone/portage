@@ -1,6 +1,65 @@
 # ChangeLog for sys-kernel/aufs-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.97 2014/02/17 11:22:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.106 2014/04/01 14:56:36 jlec Exp $
+
+*aufs-sources-3.13.8 (01 Apr 2014)
+*aufs-sources-3.10.35 (01 Apr 2014)
+
+  01 Apr 2014; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.10.35.ebuild,
+  +aufs-sources-3.13.8.ebuild:
+  Bump to latest linux and genpatch release
+
+*aufs-sources-3.12.15 (28 Mar 2014)
+
+  28 Mar 2014; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.12.15.ebuild:
+  Bump to latest linux and genpatch release
+
+*aufs-sources-3.13.7 (24 Mar 2014)
+*aufs-sources-3.10.34 (24 Mar 2014)
+
+  24 Mar 2014; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.10.34.ebuild,
+  +aufs-sources-3.13.7.ebuild:
+  Bump to latest aufs3, genpatches and linux release
+
+*aufs-sources-3.12.14 (16 Mar 2014)
+
+  16 Mar 2014; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.12.14.ebuild:
+  Bump to latest aufs3, genpatches and linux release
+
+*aufs-sources-3.13.6 (10 Mar 2014)
+*aufs-sources-3.10.33 (10 Mar 2014)
+
+  10 Mar 2014; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.10.33.ebuild,
+  -aufs-sources-3.12.9.ebuild, +aufs-sources-3.13.6.ebuild:
+  Bump to latest aufs3, linux and genpatch release
+
+  06 Mar 2014; Justin Lecher <jlec@gentoo.org> -aufs-sources-3.10.17.ebuild,
+  -aufs-sources-3.10.28.ebuild, -aufs-sources-3.10.29.ebuild,
+  -aufs-sources-3.10.30.ebuild, -aufs-sources-3.11.10.ebuild,
+  -aufs-sources-3.12.10.ebuild, -aufs-sources-3.12.11.ebuild,
+  -aufs-sources-3.13.0-r1.ebuild, -aufs-sources-3.13.1.ebuild,
+  -aufs-sources-3.13.2.ebuild, -aufs-sources-3.13.3.ebuild, metadata.xml:
+  Drop old
+
+*aufs-sources-3.13.5 (25 Feb 2014)
+*aufs-sources-3.12.13 (25 Feb 2014)
+*aufs-sources-3.10.32 (25 Feb 2014)
+
+  25 Feb 2014; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.10.32.ebuild,
+  +aufs-sources-3.12.13.ebuild, +aufs-sources-3.13.5.ebuild:
+  Bump to latest aufs3, linux and genpatch release
+
+*aufs-sources-3.12.12 (24 Feb 2014)
+*aufs-sources-3.10.31 (24 Feb 2014)
+
+  24 Feb 2014; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.10.31.ebuild,
+  +aufs-sources-3.12.12.ebuild:
+  Bump to latest aufs3, linux and genpatch release
+
+*aufs-sources-3.13.4 (21 Feb 2014)
+
+  21 Feb 2014; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.13.4.ebuild:
+  Bump to latest genpatches and linux release
 
 *aufs-sources-3.10.30 (17 Feb 2014)
 

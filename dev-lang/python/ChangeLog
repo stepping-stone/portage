@@ -1,6 +1,45 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.744 2014/02/17 18:20:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.755 2014/04/01 19:08:28 maekke Exp $
+
+  01 Apr 2014; Markus Meier <maekke@gentoo.org> python-2.7.6.ebuild:
+  arm stable, bug #504742
+
+  30 Mar 2014; Mike Gilbert <floppym@gentoo.org> python-3.4.0.ebuild:
+  Update postinst message; python.eclass does not support 3.4.
+
+  28 Mar 2014; Mike Gilbert <floppym@gentoo.org> python-3.2.5-r3.ebuild:
+  Backport readline-6.3 fixes to python-3.2.5, bug 505416.
+
+*python-3.4.0 (28 Mar 2014)
+
+  28 Mar 2014; Mike Gilbert <floppym@gentoo.org> +python-3.4.0.ebuild:
+  Version bump. Permanently drop the 'doc' use flag.
+
+*python-3.3.5 (28 Mar 2014)
+
+  28 Mar 2014; Mike Gilbert <floppym@gentoo.org> +python-3.3.5.ebuild:
+  Version bump.
+
+  20 Mar 2014; Jeroen Roovers <jer@gentoo.org> python-2.7.6.ebuild:
+  Stable for HPPA (bug #504742).
+
+  18 Mar 2014; Agostino Sarubbo <ago@gentoo.org> python-3.3.3.ebuild:
+  Stable for ia64, wrt bug #497758
+
+  16 Mar 2014; Mike Gilbert <floppym@gentoo.org> python-2.6.9.ebuild:
+  Backport fix for bug 503180.
+
+*python-3.4.0_rc3 (15 Mar 2014)
+
+  15 Mar 2014; Mike Gilbert <floppym@gentoo.org> +python-3.4.0_rc3.ebuild:
+  Bump.
+
+  15 Mar 2014; Mike Gilbert <floppym@gentoo.org> python-2.7.6.ebuild:
+  Backport upstream fixes for bug 503180.
+
+  01 Mar 2014; Mike Gilbert <floppym@gentoo.org> python-3.4.0_rc1.ebuild:
+  Disable ensurepip.
 
 *python-3.4.0_rc1 (17 Feb 2014)
 

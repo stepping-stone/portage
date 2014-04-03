@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/metaclass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.27 2014/02/20 06:35:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.29 2014/03/11 01:43:51 mrueg Exp $
+
+  11 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -metaclass-0.0.1-r2.ebuild,
+  -metaclass-0.0.2.ebuild, -metaclass-0.0.3.ebuild, metaclass-0.0.1.ebuild:
+  Remove ree18. Cleanup old.
+
+*metaclass-0.0.4 (23 Feb 2014)
+
+  23 Feb 2014; Manuel Rüger <mrueg@gentoo.org> +metaclass-0.0.4.ebuild:
+  Version bump.
 
 *metaclass-0.0.3 (20 Feb 2014)
 

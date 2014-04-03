@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1085 2014/01/21 19:19:22 sdamashek Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1091 2014/03/30 16:49:29 zlogene Exp $
 
 -->
 <herds>
@@ -161,10 +161,6 @@
   <email>dev-tools@gentoo.org</email>
   <description>Language-agnostic software development and code analysis tools</description>
   <maintainer>
-    <email>xarthisius@gentoo.org</email>
-    <name>Kacper Kowalik</name>
-  </maintainer>
-  <maintainer>
   	<email>hwoarang@gentoo.org</email>
 	<name>Markos Chandras</name>
   </maintainer>
@@ -184,10 +180,6 @@
   <name>dotnet</name>
   <email>dotnet@gentoo.org</email>
   <description>DotNet-related packages</description>
-  <maintainer>
-    <email>pacho@gentoo.org</email>
-    <name>Pacho Ramos</name>
-  </maintainer>
   <maintainer>
     <email>angelos@gentoo.org</email>
     <name>Christoph Mende</name>
@@ -872,6 +864,10 @@
     <name>Sergei Trofimovich</name>
     <role>Team Lead</role>
   </maintainer>
+  <maintainer>
+    <email>vikraman@gentoo.org</email>
+    <name>Vikraman Choudhury</name>
+  </maintainer>
 </herd>
 <herd>
   <name>ml</name>
@@ -1219,6 +1215,10 @@
   <maintainer>
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
+  </maintainer>
+  <maintainer>
+    <email>zlogene@gentoo.org</email>
+    <name>Mikle Kolyada</name>
   </maintainer>
 </herd>
 <herd>
@@ -1727,10 +1727,6 @@
     <email>zerochaos@gentoo.org</email>
     <name>Rick Farina</name>
   </maintainer>
-  <maintainer>
-    <email>pinkbyte@gentoo.org</email>
-    <name>Sergey Popov</name>
-  </maintainer>
 </herd>
 <herd>
   <name>net-irc</name>
@@ -1952,6 +1948,10 @@
   <maintainer>
     <email>eva@gentoo.org</email>
     <name>Gilles Dartiguelongue</name>
+  </maintainer>
+  <maintainer>
+    <email>pacho@gentoo.org</email>
+    <name>Pacho Ramos</name>
   </maintainer>
 </herd>
 <herd>

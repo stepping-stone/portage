@@ -1,6 +1,34 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.197 2014/02/11 08:32:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.205 2014/03/09 11:56:21 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> glade-3.16.1.ebuild:
+  x86 stable, bug 499954
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> glade-3.16.1.ebuild:
+  amd64 stable, bug 499954
+
+  26 Feb 2014; Pacho Ramos <pacho@gentoo.org> glade-3.16.1.ebuild:
+  Add missing DEPEND (#502520 by Andrew Church)
+
+  26 Feb 2014; Pacho Ramos <pacho@gentoo.org> glade-3.16.1.ebuild:
+  Add missing DEPENDs (#502484 by Andrew Church)
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> -glade-3.16.0.ebuild,
+  glade-3.16.1.ebuild:
+  Drop python-2.6 support as pygobject-3.10 did, drop old
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> glade-3.16.1.ebuild,
+  glade-3.8.4.ebuild:
+  Fix wrong commit, bug 502160
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> glade-3.14.2.ebuild,
+  glade-3.16.1.ebuild:
+  Fix wrong commit, bug 502160
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> glade-3.14.2.ebuild,
+  glade-3.16.1.ebuild, glade-3.8.4.ebuild:
+  Fix wrong commit, bug 502160
 
   11 Feb 2014; Justin Lecher <jlec@gentoo.org>
   +files/glade-3.16.1-underlinking.patch, glade-3.16.1.ebuild:

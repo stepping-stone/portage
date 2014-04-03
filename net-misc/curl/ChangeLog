@@ -1,6 +1,34 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.338 2014/02/17 21:08:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.345 2014/04/02 15:38:28 blueness Exp $
+
+  02 Apr 2014; Anthony G. Basile <blueness@gentoo.org> curl-7.36.0.ebuild:
+  Disable tests again on 7.36.0
+
+*curl-7.35.0-r1 (02 Apr 2014)
+
+  02 Apr 2014; Anthony G. Basile <blueness@gentoo.org> +curl-7.35.0-r1.ebuild,
+  +files/curl-7.35.0-tests.patch:
+  Fix polarssl bug #503558, re-introduce tests bug #285669
+
+  31 Mar 2014; Anthony G. Basile <blueness@gentoo.org> curl-7.36.0.ebuild:
+  Enable tests, bug #285669
+
+*curl-7.36.0 (27 Mar 2014)
+
+  27 Mar 2014; Anthony G. Basile <blueness@gentoo.org> +curl-7.36.0.ebuild:
+  Version bump
+
+  04 Mar 2014; Naohiro Aota <naota@gentoo.org>
+  +files/curl-7.30.0-configure.patch, curl-7.35.0.ebuild:
+  Add upstream patch to fix non POSIX test construction. #501024
+
+  27 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -curl-7.34.0-r1.ebuild,
+  -files/curl-7.34.0-fix-ipv6-failover.patch:
+  Removed vulnerable version (bug #499902).
+
+  20 Feb 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix typo in rtmp USE flag description by Eivind Uggedal (bug #501894).
 
   17 Feb 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.35.0.ebuild:
   Stable for arm, wrt bug #499902

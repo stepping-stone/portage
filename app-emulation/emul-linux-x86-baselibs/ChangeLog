@@ -1,6 +1,40 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.184 2014/02/16 05:56:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.189 2014/03/27 14:45:24 ssuominen Exp $
+
+*emul-linux-x86-baselibs-20131008-r22 (27 Mar 2014)
+
+  27 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +emul-linux-x86-baselibs-20131008-r22.ebuild,
+  +files/remove-native-20131008-r22:
+  Remove libmagic.so* wrt #505936 by Graham Murray
+
+*emul-linux-x86-baselibs-20131008-r21 (04 Mar 2014)
+
+  04 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +emul-linux-x86-baselibs-20131008-r21.ebuild,
+  +files/remove-native-20131008-r21:
+  Add multilib dev-libs/libxslt.
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-baselibs-20131008-r20.ebuild:
+  Update libgcrypt dep to use slot :0.
+
+*emul-linux-x86-baselibs-20131008-r20 (28 Feb 2014)
+
+  28 Feb 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-baselibs-20131008-r20.ebuild,
+  +files/remove-native-20131008-r20:
+  Add dev-libs/lzo and dev-libs/libgcrypt.
+
+*emul-linux-x86-baselibs-20131008-r19 (22 Feb 2014)
+
+  22 Feb 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +emul-linux-x86-baselibs-20131008-r19.ebuild,
+  +files/remove-native-20131008-r19:
+  Temporarily comment out libtasn1.so.3* from remove-native to unbreak 32-bit
+  gnutls until a native multilib gnutls ebuild is available (bug #501556,
+  thanks to tman, Michiel de Bruijne, eroen et al.)
 
 *emul-linux-x86-baselibs-20131008-r18 (16 Feb 2014)
 

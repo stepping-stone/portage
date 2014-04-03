@@ -1,6 +1,24 @@
 # ChangeLog for mail-filter/razor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.100 2014/02/11 19:23:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.106 2014/03/19 15:25:58 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> razor-2.85-r2.ebuild:
+  Stable for alpha, wrt bug #495688
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> razor-2.85-r2.ebuild:
+  Stable for sparc, wrt bug #495688
+
+  06 Mar 2014; Agostino Sarubbo <ago@gentoo.org> razor-2.85-r2.ebuild:
+  Stable for ppc64, wrt bug #495688
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> razor-2.85-r2.ebuild:
+  Stable for ppc, wrt bug #495688
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> razor-2.85-r2.ebuild:
+  amd64 stable, bug #495688
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> razor-2.85-r2.ebuild:
+  x86 stable wrt bug #495688
 
   11 Feb 2014; Jeroen Roovers <jer@gentoo.org> razor-2.85-r2.ebuild:
   Stable for HPPA (bug #495688).

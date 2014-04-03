@@ -1,6 +1,56 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.19 2014/02/19 22:49:50 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.30 2014/03/31 12:27:14 nicolasbock Exp $
+
+*lammps-20140320 (31 Mar 2014)
+
+  31 Mar 2014; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20140320.ebuild:
+  sci-physics/lammps-20140320: Version bump.
+
+  17 Mar 2014; Christoph Junghans <ottxor@gentoo.org> lammps-20140314.ebuild:
+  added ~x86 (tested by me)
+
+*lammps-20140314 (15 Mar 2014)
+
+  15 Mar 2014; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20140314.ebuild:
+  sci-physics/lammps-20140314: Version bump.
+
+*lammps-20140312 (12 Mar 2014)
+
+  12 Mar 2014; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20140312.ebuild:
+  sci-physics/lammps-20140312: Version bump.
+
+*lammps-20140310 (11 Mar 2014)
+
+  11 Mar 2014; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20140310.ebuild:
+  sci-physics/lammps-20140310: Version bump.
+
+*lammps-20140304 (06 Mar 2014)
+
+  06 Mar 2014; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20140304.ebuild:
+  sci-physics/lammps-20140304: Version bump.
+
+  04 Mar 2014; Nicolas Bock <nicolasbock@gentoo.org> -lammps-20140122.ebuild,
+  -lammps-20140129.ebuild:
+  sci-physics/lammps: removing old versions now that 20140201 is stable.
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> lammps-20140201.ebuild:
+  amd64 stable, bug #500564
+
+  01 Mar 2014; Nicolas Bock <nicolasbock@gentoo.org> -lammps-20131201.ebuild,
+  -lammps-20131216.ebuild, -lammps-20131217.ebuild:
+  sci-physics/lammps: Removing old versions.
+
+*lammps-20140226 (01 Mar 2014)
+
+  01 Mar 2014; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20140226.ebuild:
+  sci-physics/lammps-20140226: Version bump.
+
+*lammps-20140214-r2 (27 Feb 2014)
+
+  27 Feb 2014; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20140214-r2.ebuild,
+  metadata.xml:
+  sci-physics/lammps-20140214-r2: Add Voronoi package.
 
   19 Feb 2014; Nicolas Bock <nicolasbock@gentoo.org> lammps-20140214-r1.ebuild:
   sci-physics/lammps-20140214-r1: Fixed some issues:  * Fixed file collision of

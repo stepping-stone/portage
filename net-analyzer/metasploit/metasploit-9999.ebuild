@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.11 2014/02/10 16:35:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.14 2014/03/24 22:05:46 zerochaos Exp $
 
 EAPI="5"
 
@@ -35,12 +35,13 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/activesupport:3.2
 	dev-ruby/activerecord:3.2
 	dev-ruby/json
-	>=dev-ruby/metasploit_data_models-0.16.9
+	>=dev-ruby/metasploit_data_models-0.17.0
 	dev-ruby/msgpack
 	dev-ruby/nokogiri
 	dev-ruby/builder:3
 	>=dev-ruby/pg-0.11
 	=dev-ruby/packetfu-1.1.9
+	dev-ruby/rb-readline
 	dev-ruby/robots
 	dev-ruby/kissfft
 	java? ( dev-ruby/rjb )
@@ -120,7 +121,8 @@ all_ruby_unpack() {
 
 all_ruby_prepare() {
 	# add psexec patch from pull request 2657 to allow custom exe templates from any files, bypassing most AVs
-	epatch "${FILESDIR}/agix_psexec_pull-2657.patch"
+	#epatch "${FILESDIR}/agix_psexec_pull-2657.patch"
+	epatch_user
 
 	#unbundle johntheripper, at least it now defaults to running the system version
 	rm -r data/john/run.*
@@ -136,6 +138,11 @@ all_ruby_prepare() {
 	#we regen this file in each_ruby_prepare
 	rm Gemfile.lock
 	#The Gemfile contains real known deps
+	#add our dep on upstream rb-readline instead of bundled one
+	sed -i "/gem 'packetfu'/a #use upstream readline instead of bundled\ngem 'rb-readline'" Gemfile || die
+	#remove the bundled readline
+	#https://github.com/rapid7/metasploit-framework/pull/3105
+	rm lib/rbreadline.rb
 	#now we edit the Gemfile based on use flags
 	#even if we pass --without=blah bundler still calculates the deps and messes us up
 	if ! use pcap; then

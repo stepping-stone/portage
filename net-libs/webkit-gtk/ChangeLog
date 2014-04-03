@@ -1,6 +1,76 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.242 2014/02/11 22:43:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.255 2014/03/23 15:35:30 pacho Exp $
+
+*webkit-gtk-2.2.6 (23 Mar 2014)
+*webkit-gtk-2.2.6-r200 (23 Mar 2014)
+
+  23 Mar 2014; Pacho Ramos <pacho@gentoo.org> +webkit-gtk-2.2.6-r200.ebuild,
+  +webkit-gtk-2.2.6.ebuild, -files/webkit-gtk-2.0.2-harfbuzz-0.9.18.patch,
+  -files/webkit-gtk-2.0.4-freetype-2.5.1.patch, -webkit-gtk-2.0.4.ebuild:
+  Version bump, drop old
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  x86 stable, bug 499954
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  amd64 stable, bug 499954
+
+  08 Mar 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/webkit-gtk-2.2.5-gir-nvidia-hangs.patch, webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  webkit-gtk can keep compiling forever due deadlock issue between gir and
+  nvidia-drivers, applied patch solves the issue (at least for me), bug #463960
+
+  08 Mar 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/webkit-gtk-2.2.5-sparc64-build.patch, webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  Apply openBSD patch for compat with sparc64
+
+  08 Mar 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  The ugly build system doesn't properly disable JIT in all places causing
+  problems in some arches. Try to really disable it when jit is wanted to be
+  disabled
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  webkit-gtk-2.2.5.ebuild:
+  Add ~mips keyword.
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  webkit-gtk-2.2.5-r200.ebuild:
+  Add ~mips keyword.
+
+  01 Mar 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/webkit-gtk-2.2.5-hppa-platform.patch,
+  +files/webkit-gtk-2.2.5-ia64-malloc.patch,
+  +files/webkit-gtk-2.2.5-ia64-platform.patch, webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  Apply various fixes to improve support on some arches (#502492 by Emeric
+  Maschino)
+
+  24 Feb 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  Parallel install fails sometimes (#501990)
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-2.2.4-r200.ebuild,
+  -webkit-gtk-2.2.4.ebuild, webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  Needs subslot dep on webp, drop old
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.0.4.ebuild,
+  webkit-gtk-2.2.5-r200.ebuild, webkit-gtk-2.2.5.ebuild:
+  Fix wrong commit, bug 502160
+
+*webkit-gtk-2.2.5-r200 (21 Feb 2014)
+*webkit-gtk-2.2.5 (21 Feb 2014)
+
+  21 Feb 2014; Pacho Ramos <pacho@gentoo.org> +webkit-gtk-2.2.5-r200.ebuild,
+  +webkit-gtk-2.2.5.ebuild, webkit-gtk-1.10.2-r300.ebuild,
+  webkit-gtk-1.8.3-r200.ebuild:
+  Version bump
 
   11 Feb 2014; Gilles Dartiguelongue <eva@gentoo.org> webkit-gtk-2.2.4.ebuild,
   webkit-gtk-2.2.4-r200.ebuild:
