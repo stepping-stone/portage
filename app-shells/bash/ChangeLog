@@ -1,6 +1,26 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.362 2014/04/02 11:38:52 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.365 2014/04/16 09:39:12 polynomial-c Exp $
+
+*bash-4.3_p11-r1 (16 Apr 2014)
+
+  16 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.2_p45-r1.ebuild,
+  -bash-4.2_p46-r1.ebuild, +bash-4.3_p11-r1.ebuild,
+  +files/bash-4.3-jobs-run-sigchld-trap.patch:
+  Added upstream fix. Removed old.
+
+*bash-4.2_p47 (14 Apr 2014)
+
+  14 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +bash-4.2_p47.ebuild,
+  bash-4.3_p11.ebuild:
+  Version bump. Added prefix support to bash-4.3
+
+*bash-4.3_p11 (12 Apr 2014)
+
+  12 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3_p8.ebuild,
+  +bash-4.3_p11.ebuild, -files/bash-4.3-input-line-realloc.patch,
+  -files/bash-4.3-pcomplete-dequote.patch:
+  Version bump. Removed old.
 
   02 Apr 2014; Tom Wijsman <TomWij@gentoo.org> bash-4.2_p46-r1.ebuild:
   Downgrade 4.2_p46-r1 to EAPI 4 per Poly-C's request, as this is an essential

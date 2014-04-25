@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.47 2014/03/17 16:33:56 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.49 2014/04/18 16:07:46 floppym Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
