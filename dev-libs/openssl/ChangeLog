@@ -1,6 +1,27 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.530 2014/04/19 10:17:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.534 2014/04/29 21:24:21 vapier Exp $
+
+  29 Apr 2014; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8y.ebuild:
+  Drop upgrade logic for avoiding collisions as these versions are very old at
+  this point #229775 by Whit Blauvelt.
+
+  29 Apr 2014; Mike Frysinger <vapier@gentoo.org> openssl-1.0.1g.ebuild:
+  Stabilize for arm64/m68k/sh #507074.
+
+  27 Apr 2014; Mike Frysinger <vapier@gentoo.org>
+  files/openssl-0.9.8h-ldflags.patch, files/openssl-1.0.0a-ldflags.patch,
+  files/openssl-1.0.0d-windres.patch, files/openssl-1.0.0h-pkg-config.patch,
+  files/openssl-1.0.1f-revert-alpha-perl-generation.patch,
+  files/openssl-1.0.2-ipv6.patch, files/openssl-1.0.2-parallel-build.patch:
+  Add more links to upstream bug tracker.
+
+*openssl-1.0.2_beta1-r2 (25 Apr 2014)
+
+  25 Apr 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -openssl-1.0.2_beta1-r1.ebuild, +openssl-1.0.2_beta1-r2.ebuild,
+  -files/openssl-1.0.2-free-list-fix.patch:
+  Added another bunch of upstream patches to openssl-1.0.2_beta1.
 
 *openssl-1.0.2_beta1-r1 (19 Apr 2014)
 

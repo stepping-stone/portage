@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.605 2014/04/23 23:51:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.609 2014/04/29 22:11:22 vapier Exp $
+
+  29 Apr 2014; Mike Frysinger <vapier@gentoo.org> wireshark-1.8.14.ebuild:
+  Drop random perl deps in favor of blockers #455122.
+
+  27 Apr 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for x86, wrt bug #508506
+
+  26 Apr 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for amd64, wrt bug #508506
+
+  25 Apr 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.7.ebuild:
+  Switch to USE=gtk3 as default.
 
   23 Apr 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.7.ebuild:
   Stable for HPPA (bug #508506).

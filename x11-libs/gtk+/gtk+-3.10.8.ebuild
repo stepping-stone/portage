@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.10.8.ebuild,v 1.11 2014/04/21 10:30:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.10.8.ebuild,v 1.13 2014/05/02 09:11:41 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -38,7 +38,7 @@ COMMON_DEPEND="
 	>=x11-libs/pango-1.32.4[introspection?]
 	x11-misc/shared-mime-info
 
-	colord? ( >=x11-misc/colord-0.1.9 )
+	colord? ( >=x11-misc/colord-0.1.9:0= )
 	cups? ( >=net-print/cups-1.2 )
 	introspection? ( >=dev-libs/gobject-introspection-1.32 )
 	wayland? (
@@ -65,7 +65,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	dev-libs/libxslt
 	dev-util/gdbus-codegen
-	>=dev-util/gtk-doc-am-1.11
+	>=dev-util/gtk-doc-am-1.20
 	sys-devel/gettext
 	virtual/pkgconfig
 	X? (
