@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.5.3-r1.ebuild,v 1.6 2014/04/28 17:53:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.5.3-r1.ebuild,v 1.14 2014/06/24 22:17:02 mgorny Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ then
 	inherit git-2
 else
 	SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm hppa ~mips ~ppc ~ppc64 ~x86"
+	KEYWORDS="alpha amd64 arm hppa ~mips ppc ppc64 x86"
 fi
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
@@ -24,7 +24,7 @@ LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
 IUSE="doc gudev +hwdb kmod introspection +keymap +modutils +openrc +rule-generator selinux static-libs test"
 
-COMMON_DEPEND="gudev? ( dev-libs/glib:2[${MULTILIB_USEDEP}] )
+COMMON_DEPEND="gudev? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
 	kmod? ( sys-apps/kmod )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	selinux? ( sys-libs/libselinux )

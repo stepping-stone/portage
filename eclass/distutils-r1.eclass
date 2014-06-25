@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.94 2014/01/18 15:06:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.99 2014/06/22 07:01:37 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -79,7 +79,7 @@ esac
 
 if [[ ! ${_DISTUTILS_R1} ]]; then
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
 	inherit multiprocessing python-r1
@@ -476,7 +476,7 @@ distutils-r1_python_install() {
 	debug-print "${FUNCNAME}: [${EPYTHON}] flags: ${flags}"
 
 	# enable compilation for the install phase.
-	local -x PYTHONDONTWRITEBYTECODE
+	local -x PYTHONDONTWRITEBYTECODE=
 
 	# python likes to compile any module it sees, which triggers sandbox
 	# failures if some packages haven't compiled their modules yet.
@@ -538,6 +538,9 @@ distutils-r1_python_install() {
 	if [[ -d ${root}$(python_get_sitedir)/tests ]]; then
 		die "Package installs 'tests' package, file collisions likely."
 	fi
+	if [[ -d ${root}/usr/$(get_libdir)/pypy/share ]]; then
+		die "Package installs 'share' in PyPy prefix, see bug #465546."
+	fi
 
 	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
 		_distutils-r1_wrap_scripts "${root}" "${scriptdir}"
@@ -592,6 +595,19 @@ distutils-r1_run_phase() {
 
 		mkdir -p "${TMPDIR}" "${HOME}" || die
 	fi
+
+	# Set up build environment, bug #513664.
+	local -x AR=${AR} CC=${CC} CPP=${CPP} CXX=${CXX}
+	tc-export AR CC CPP CXX
+
+	# How to build Python modules in different worlds...
+	local ldopts
+	case "${CHOST}" in
+		*-darwin*) ldopts='-bundle -undefined dynamic_lookup';;
+		*) ldopts='-shared';;
+	esac
+
+	local -x LDSHARED="${CC} ${ldopts}" LDCXXSHARED="${CXX} ${ldopts}"
 
 	"${@}"
 

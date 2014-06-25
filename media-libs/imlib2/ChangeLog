@@ -1,6 +1,22 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.121 2014/04/18 15:24:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.125 2014/06/23 14:11:50 mgorny Exp $
+
+  23 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +files/imlib2-1.4.6-out-of-source-build.patch, imlib2-1.4.6-r2.ebuild:
+  Fix out-of-source builds, bug #510522.
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> imlib2-1.4.6-r2.ebuild,
+  imlib2-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
+
+  17 May 2014; Michał Górny <mgorny@gentoo.org> -imlib2-9999-r1.ebuild,
+  imlib2-9999.ebuild:
+  Collapse the live ebuilds, and forward-port the MULTILIB_USEDEP fix.
+
+  17 May 2014; Michał Górny <mgorny@gentoo.org> imlib2-1.4.6-r2.ebuild:
+  Add missing MULTILIB_USEDEPs.
 
 *imlib2-9999-r1 (18 Apr 2014)
 *imlib2-1.4.6-r2 (18 Apr 2014)

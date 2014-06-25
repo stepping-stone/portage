@@ -74,6 +74,9 @@ prelude
 mssql
 
 # havent tested yet
+ruby
+ctypes-python
+sasl
 libproxy
 pkcs11
 gnutls
@@ -106,6 +109,7 @@ libupnp
 zvbi
 ldap
 mysql
+postgres
 dvd
 fluidsynth
 gnomecd

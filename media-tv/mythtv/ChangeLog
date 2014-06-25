@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.413 2014/04/19 23:46:44 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.416 2014/06/06 12:45:32 jer Exp $
+
+*mythtv-0.27.1_p20140527 (01 Jun 2014)
+
+  01 Jun 2014; Richard Freeman <rich0@gentoo.org>
+  +mythtv-0.27.1_p20140527.ebuild:
+  bump
+
+  10 May 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Drop duplicate USE=libass description.
 
   19 Apr 2014; Richard Freeman <rich0@gentoo.org> mythtv-0.27_p20140321.ebuild:
   amd64 stable - 471536
@@ -1984,7 +1993,7 @@
   -mythtv-0.14-r1.ebuild, -mythtv-0.15.1-r1.ebuild, -mythtv-0.15.1.ebuild,
   +mythtv-0.16.20050115.ebuild:
   rev dump to CVS snapshot for bug fixes and feature updates since upstream
-  won't release and won't suppport current stable merge changes from eclass
+  won't release and won't support current stable merge changes from eclass
   remove old revs fix up ebuild add XrandX extension since Gentoo X.org always
   has it
 

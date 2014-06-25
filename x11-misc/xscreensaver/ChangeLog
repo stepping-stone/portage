@@ -1,6 +1,34 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.352 2014/03/19 16:18:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.358 2014/06/09 20:05:10 jer Exp $
+
+*xscreensaver-5.29 (09 Jun 2014)
+
+  09 Jun 2014; Jeroen Roovers <jer@gentoo.org> +xscreensaver-5.29.ebuild,
+  -files/xscreensaver-5.27-comment-style.patch, -xscreensaver-5.27.ebuild,
+  -xscreensaver-5.28.ebuild:
+  Version bump.
+
+*xscreensaver-5.28 (05 Jun 2014)
+
+  05 Jun 2014; Jeroen Roovers <jer@gentoo.org> +xscreensaver-5.28.ebuild,
+  +files/xscreensaver-5.28-comment-style.patch:
+  Version bump.
+
+  04 Jun 2014; Jeroen Roovers <jer@gentoo.org> xscreensaver-5.27.ebuild:
+  die().
+
+  04 Jun 2014; Jeroen Roovers <jer@gentoo.org> xscreensaver-5.27.ebuild:
+  Generate desktop file.
+
+  04 Jun 2014; Jeroen Roovers <jer@gentoo.org> xscreensaver-5.27.ebuild:
+  Remove faulty copy operation (bug #512366).
+
+*xscreensaver-5.27 (28 May 2014)
+
+  28 May 2014; Jeroen Roovers <jer@gentoo.org> +xscreensaver-5.27.ebuild,
+  +files/xscreensaver-5.27-comment-style.patch:
+  Version bump.
 
   19 Mar 2014; Jeroen Roovers <jer@gentoo.org> -xscreensaver-5.22.ebuild,
   -files/xscreensaver-5.20-conf264.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/liquidwar6-0.4.3681.ebuild,v 1.1 2014/03/27 22:11:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/liquidwar6-0.4.3681.ebuild,v 1.3 2014/06/09 15:40:46 hasufell Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ RDEPEND="dev-db/sqlite:3
 	nls? ( virtual/libintl
 		virtual/libiconv )
 	ogg? (
-		media-libs/libsdl[X,audio,opengl,video]
+		media-libs/libsdl[X,sound,opengl,video]
 		media-libs/sdl-mixer[vorbis]
 	)
 	readline? ( sys-libs/ncurses
@@ -64,7 +64,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.2.3551-{ldconfig,paths}.patch
+	epatch "${FILESDIR}"/${PN}-0.2.3551-{ldconfig,paths}.patch \
+		"${FILESDIR}"/${PN}-0.4.3681-check-headers.patch
 
 	sed -i \
 		-e 's/-Werror//' \

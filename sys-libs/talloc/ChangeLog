@@ -1,6 +1,21 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.64 2014/03/11 03:44:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.67 2014/06/10 00:12:37 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> talloc-2.0.8-r1.ebuild,
+  talloc-2.0.8.ebuild, talloc-2.1.0-r1.ebuild, talloc-2.1.0.ebuild,
+  talloc-2.1.1.ebuild:
+  Add arm64/m68k love.
+
+*talloc-2.1.1 (23 May 2014)
+
+  23 May 2014; Lars Wendler <polynomial-c@gentoo.org> +talloc-2.1.1.ebuild:
+  Version bump.
+
+*talloc-2.1.0-r1 (14 May 2014)
+
+  14 May 2014; Michał Górny <mgorny@gentoo.org> +talloc-2.1.0-r1.ebuild:
+  Enable multilib support, bug #491222. Clean up Python deps.
 
   11 Mar 2014; Patrick Lauer <patrick@gentoo.org> talloc-2.1.0.ebuild:
   Add gettext dep #503820

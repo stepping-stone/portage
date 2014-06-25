@@ -1,14 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.295 2014/04/28 17:54:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.306 2014/06/24 22:17:36 mgorny Exp $
 
 EAPI=5
 
-inherit autotools bash-completion-r1 eutils linux-info multilib toolchain-funcs versionator multilib-minimal
+inherit autotools bash-completion-r1 eutils linux-info multilib multilib-minimal toolchain-funcs user versionator
 
 if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd"
 	inherit git-2
+	patchset=
 else
 	patchset=
 	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
@@ -31,8 +32,8 @@ RESTRICT="test"
 
 COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	acl? ( sys-apps/acl )
-	gudev? ( >=dev-libs/glib-2.22[${MULTILIB_USEDEP}] )
-	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
+	gudev? ( >=dev-libs/glib-2.34.3[${MULTILIB_USEDEP}] )
+	introspection? ( >=dev-libs/gobject-introspection-1.38 )
 	kmod? ( >=sys-apps/kmod-16 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
@@ -42,13 +43,14 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 		!<=app-emulation/emul-linux-x86-baselibs-20130224-r7
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
+# Force new make >= -r4 to skip some parallel build issues
 DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
 	sys-libs/libcap
 	virtual/os-headers
 	virtual/pkgconfig
-	!<sys-devel/make-3.82-r4
-	!<sys-kernel/linux-headers-2.6.32
+	>=sys-devel/make-3.82-r4
+	>=sys-kernel/linux-headers-2.6.39
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 # Try with `emerge -C docbook-xml-dtd` to see the build failure without DTDs
 if [[ ${PV} = 9999* ]]; then
@@ -75,7 +77,7 @@ multilib_check_headers() { :; }
 check_default_rules() {
 	# Make sure there are no sudden changes to upstream rules file
 	# (more for my own needs than anything else ...)
-	local udev_rules_md5=6bd3d421b9b6acd0e2d87ad720d6a389
+	local udev_rules_md5=ec9ab4df735f9213ce182b98bbb19637
 	MD5=$(md5sum < "${S}"/rules/50-udev-default.rules)
 	MD5=${MD5/  -/}
 	if [[ ${MD5} != ${udev_rules_md5} ]]; then
@@ -89,18 +91,18 @@ pkg_setup() {
 	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL ~FHANDLE ~NET"
 	linux-info_pkg_setup
 
-	# Based on README from tarball:
-	local MINKV=3.0
-	# These arch's have the mandatory accept4() function support in Linux 2.6.32*, see:
-	# $ grep -r define.*accept4 linux-2.6.32*/*
-	if use amd64 || use ia64 || use mips || use sparc || use x86; then
-		MINKV=2.6.32
-	fi
+	# CONFIG_FHANDLE was introduced by 2.6.39
+	local MINKV=2.6.39
 
 	if kernel_is -lt ${MINKV//./ }; then
 		eerror "Your running kernel is too old to run this version of ${P}"
 		eerror "You need to upgrade kernel at least to ${MINKV}"
 	fi
+
+	# http://cgit.freedesktop.org/systemd/systemd/commit/rules/50-udev-default.rules?id=3dff3e00e044e2d53c76fa842b9a4759d4a50e69
+	# http://bugs.gentoo.org/246847
+	# http://bugs.gentoo.org/514174
+	enewgroup input
 }
 
 src_prepare() {
@@ -118,11 +120,9 @@ src_prepare() {
 	fi
 
 	cat <<-EOF > "${T}"/40-gentoo.rules
-	# Gentoo specific usb group
+	# Gentoo specific floppy and usb groups
+	SUBSYSTEM=="block", KERNEL=="fd[0-9]", GROUP="floppy"
 	SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", GROUP="usb"
-	# Keep this for Linux 2.6.32 kernels with incomplete devtmpfs support because
-	# accept4() function is supported for some arch's wrt #457868
-	SUBSYSTEM=="mem", KERNEL=="null|zero|full|random|urandom", MODE="0666"
 	EOF
 
 	# Remove requirements for gettext and intltool wrt bug #443028
@@ -185,7 +185,6 @@ multilib_src_configure() {
 		--disable-seccomp
 		--disable-xz
 		--disable-pam
-		--disable-xattr
 		--disable-gcrypt
 		--disable-audit
 		--disable-libcryptsetup

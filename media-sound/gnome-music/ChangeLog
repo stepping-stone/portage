@@ -1,6 +1,21 @@
 # ChangeLog for media-sound/gnome-music
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/ChangeLog,v 1.11 2014/04/27 17:34:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/ChangeLog,v 1.15 2014/06/13 10:48:22 pacho Exp $
+
+  13 Jun 2014; Pacho Ramos <pacho@gentoo.org> -gnome-music-3.10.3.ebuild,
+  -gnome-music-3.12.1.ebuild, gnome-music-3.12.2.ebuild:
+  Fix shebang (#509866 by Jura), drop old.
+
+*gnome-music-3.12.2.1 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +gnome-music-3.12.2.1.ebuild:
+  Version bump
+
+  04 May 2014; Pacho Ramos <pacho@gentoo.org> gnome-music-3.10.4.ebuild:
+  x86 stable, bug 508862
+
+  04 May 2014; Pacho Ramos <pacho@gentoo.org> gnome-music-3.10.4.ebuild:
+  amd64 stable, bug 508862
 
 *gnome-music-3.12.1 (27 Apr 2014)
 

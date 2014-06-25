@@ -1,6 +1,81 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.609 2014/04/29 22:11:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.629 2014/06/22 17:32:42 zlogene Exp $
+
+  22 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> wireshark-1.10.8.ebuild,
+  wireshark-1.8.15.ebuild:
+  sparc stable wrt bug #513094
+
+*wireshark-1.10.8-r1 (20 Jun 2014)
+*wireshark-1.8.15-r1 (20 Jun 2014)
+
+  20 Jun 2014; Jeroen Roovers <jer@gentoo.org> +wireshark-1.8.15-r1.ebuild,
+  +wireshark-1.10.8-r1.ebuild:
+  Remove net-libs/adns support (bug #513982).
+
+  20 Jun 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.12.0_rc2.ebuild:
+  Remove net-libs/adns support (bug #513982).
+
+  19 Jun 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.12.0_rc2.ebuild,
+  +files/wireshark-1.12.0_rc2-va_list.patch:
+  Add va_list patch by Steev Klimaszewski (bug #513860).
+
+  17 Jun 2014; Tobias Klausmann <klausman@gentoo.org> wireshark-1.8.15.ebuild:
+  Stable on alpha, bug #513094
+
+  17 Jun 2014; Tobias Klausmann <klausman@gentoo.org> wireshark-1.10.8.ebuild:
+  Stable on alpha, bug #513094
+
+*wireshark-1.12.0_rc2 (14 Jun 2014)
+
+  14 Jun 2014; Jeroen Roovers <jer@gentoo.org> -wireshark-1.11.3.ebuild,
+  +wireshark-1.12.0_rc2.ebuild:
+  Version bump.
+
+  13 Jun 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.8.ebuild,
+  wireshark-1.8.15.ebuild:
+  Stable for x86, wrt bug #513094
+
+  13 Jun 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.8.ebuild,
+  wireshark-1.8.15.ebuild:
+  Stable for amd64, wrt bug #513094
+
+  13 Jun 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.15.ebuild:
+  Stable for HPPA (bug #513094).
+
+  13 Jun 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.8.ebuild:
+  Stable for HPPA (bug #513094).
+
+  13 Jun 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.15.ebuild:
+  Add mailing list announcement URL, too.
+
+  13 Jun 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.15.ebuild:
+  Add deprecation notice to the last 1.8 branch ebuild.
+
+*wireshark-1.10.8 (13 Jun 2014)
+*wireshark-1.8.15 (13 Jun 2014)
+
+  13 Jun 2014; Jeroen Roovers <jer@gentoo.org> -wireshark-1.8.14.ebuild,
+  +wireshark-1.8.15.ebuild, +wireshark-1.10.8.ebuild:
+  Version bump (bug #513094).
+
+  17 May 2014; Jeroen Roovers <jer@gentoo.org> -wireshark-1.10.6.ebuild:
+  Old.
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for alpha, wrt bug #508506
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for sparc, wrt bug #508506
+
+  13 May 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for ia64, wrt bug #508506
+
+  11 May 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for ppc64, wrt bug #508506
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for ppc, wrt bug #508506
 
   29 Apr 2014; Mike Frysinger <vapier@gentoo.org> wireshark-1.8.14.ebuild:
   Drop random perl deps in favor of blockers #455122.

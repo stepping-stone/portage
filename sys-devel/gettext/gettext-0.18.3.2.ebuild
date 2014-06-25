@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.3.2.ebuild,v 1.13 2014/04/28 17:49:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.3.2.ebuild,v 1.15 2014/06/18 20:47:33 mgorny Exp $
 
 EAPI="4"
 
@@ -12,11 +12,11 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="acl -cvs doc emacs git java nls +cxx ncurses openmp static-libs elibc_glibc"
 
 # only runtime goes multilib
-DEPEND="virtual/libiconv[${MULTILIB_USEDEP}]
+DEPEND=">=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
 	dev-libs/libxml2
 	dev-libs/expat
 	acl? ( virtual/acl )

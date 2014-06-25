@@ -1,6 +1,23 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.214 2014/05/02 08:45:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.217 2014/06/03 02:54:32 tetromino Exp $
+
+  03 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  files/glade-3.16.1-underlinking.patch:
+  Undo accidental commit to old patch
+
+  03 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> glade-3.18.3.ebuild,
+  files/glade-3.16.1-underlinking.patch,
+  +files/glade-3.18.1-underlinking.patch:
+  Really fix linking failure with ld.gold (bug #512068, thanks to Mark R.
+  Pariente for reporting).
+
+*glade-3.8.5 (31 May 2014)
+*glade-3.18.3 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +glade-3.18.3.ebuild,
+  +glade-3.8.5.ebuild:
+  Version bump
 
   02 May 2014; Pacho Ramos <pacho@gentoo.org> glade-3.16.1.ebuild,
   glade-3.18.2.ebuild, glade-3.8.4.ebuild:

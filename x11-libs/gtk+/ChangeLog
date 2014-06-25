@@ -1,6 +1,36 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.717 2014/05/02 09:11:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.724 2014/06/24 22:19:57 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> gtk+-2.24.23-r2.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> gtk+-2.24.23-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
+
+*gtk+-2.24.23-r2 (17 Jun 2014)
+
+  17 Jun 2014; Michał Górny <mgorny@gentoo.org> +gtk+-2.24.23-r2.ebuild,
+  -gtk+-2.24.23-r1.ebuild:
+  Fix gtk-doc hack, reported by galtgendo.
+
+  12 Jun 2014; Michał Górny <mgorny@gentoo.org> gtk+-2.24.23-r1.ebuild:
+  Force ${CHOST}-cups-config to obtain proper paths for multilib cups.
+
+  01 Jun 2014; Pacho Ramos <pacho@gentoo.org> -gtk+-3.12.1.ebuild:
+  drop old
+
+*gtk+-3.12.2 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +gtk+-3.12.2.ebuild:
+  Version bump
+
+*gtk+-2.24.23-r1 (14 May 2014)
+
+  14 May 2014; Michał Górny <mgorny@gentoo.org> +gtk+-2.24.23-r1.ebuild:
+  Enable multilib support, bug #489000.
 
   02 May 2014; Pacho Ramos <pacho@gentoo.org> gtk+-2.24.23.ebuild,
   gtk+-3.10.8.ebuild:

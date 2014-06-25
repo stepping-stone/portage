@@ -1,6 +1,38 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.682 2014/04/26 11:03:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.692 2014/06/20 14:11:03 jer Exp $
+
+  20 Jun 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=libadns (bug #513982).
+
+  14 Jun 2014; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  net-libs/cyassl is being tree cleaned, bug #495848
+
+  06 Jun 2014; Rick Farina <zerochaos@gentoo.org> package.mask:
+  masking <upower-0.99.0 due to portage failure to negotiate the upgrade for openrc users
+
+  06 Jun 2014; Zac Medico <zmedico@gentoo.org> package.use.mask:
+  Mask lua for www-servers/mongoose.
+
+  05 Jun 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask glamor flag for xorg-server, bug #510940.
+
+  05 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Mask USE='multislot' wrt bugs #507808, #507810 and #507814
+
+  05 Jun 2014; Manuel Rüger <mrueg@gentoo.org> package.use.mask:
+  Mask otr on net-im/climm.
+
+  30 May 2014; Mike Gilbert <floppym@gentoo.org> package.use.stable.mask:
+  Stable-mask sys-apps/systemd[ssl].
+
+  22 May 2014; Rick Farina <zerochaos@dev.gentoo.org> package.use.mask:
+  metasploit tests do not pass at this time
+
+  14 May 2014; Tom Wijsman <TomWij@gentoo.org> package.use.mask:
+  Documentation generation needs APIviz which is not in the Portage tree yet.
+  Tracked in Gentoo bug #509602.
 
   26 Apr 2014; Michał Górny <mgorny@gentoo.org> package.use.mask, use.mask:
   Mask USE flags for Python 2.6 to prepare for the removal.

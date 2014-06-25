@@ -1,6 +1,22 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.164 2014/02/21 09:32:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.167 2014/06/10 00:52:24 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> subversion-1.7.14.ebuild,
+  subversion-1.7.17.ebuild, subversion-1.8.8.ebuild, subversion-1.8.9.ebuild:
+  Add arm64 love.
+
+*subversion-1.7.17 (01 Jun 2014)
+
+  01 Jun 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +subversion-1.7.17.ebuild:
+  Version bump to 1.7.17, fixes bug 506308
+
+*subversion-1.8.9 (23 May 2014)
+
+  23 May 2014; Lars Wendler <polynomial-c@gentoo.org> -subversion-1.8.5.ebuild,
+  +subversion-1.8.9.ebuild, +files/subversion-1.8.9-po_fixes.patch:
+  Version bump. Removed old.
 
 *subversion-1.8.8 (21 Feb 2014)
 

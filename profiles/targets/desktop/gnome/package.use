@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.25 2014/04/20 19:45:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.27 2014/06/22 15:17:46 pacho Exp $
 
 # For eautoreconf in =app-crypt/seahorse-3.10.2-r1
 app-crypt/gcr vala
@@ -32,13 +32,16 @@ app-dicts/verbiste -gnome
 dev-ml/lablgtk -gnome
 
 # incompatible with >=evolution-data-server-3.6, bug #449138
-dev-vcs/giggle -eds
+<dev-vcs/giggle-0.7-r1 -eds
 
 # Pulled in by grilo-plugins which is needed for gnome-music
 media-libs/grilo playlist
 
 # Required for webkit-gtk-2
 media-libs/harfbuzz icu
+
+# Pulled in by tracker and grilo-plugins, has REQUIRED_USE="?? ( gtk qt4 qt5 )"
+media-libs/libmediaart gtk -qt4 -qt5
 
 # Pulled in by net-im/telepathy-connection-managers[msn] (via dev-python/papyon
 # and net-voip/telepathy-butterfly)

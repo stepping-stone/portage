@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.3_pre20140417.ebuild,v 1.2 2014/05/02 13:03:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.3_pre20140417.ebuild,v 1.6 2014/06/12 18:00:38 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG=yes
@@ -17,9 +17,11 @@ S="${WORKDIR}/${PN}-0.97.2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 # the doc USE flag doesn't seem to do anything without docbook2html
-IUSE="cairo doc python"
+# cairo support is preferred as explained by upstream at:
+# https://bugzilla.gnome.org/show_bug.cgi?id=729668#c6
+IUSE="+cairo doc python"
 
 RDEPEND="
 	>=dev-libs/glib-2:2
@@ -53,8 +55,9 @@ pkg_setup() {
 src_prepare() {
 	DOCS="AUTHORS ChangeLog KNOWN_BUGS MAINTAINERS NEWS README RELEASE-PROCESS THANKS TODO"
 
-	epatch "${FILESDIR}"/${PN}-0.97.0-gnome-doc.patch #159831 , upstream #????
+	epatch "${FILESDIR}"/${PN}-0.97.0-gnome-doc.patch #159381 , upstream #470812 #558690
 	epatch "${FILESDIR}"/${PN}-0.97.2-underlinking.patch #420685
+	epatch "${FILESDIR}"/${PN}-0.97.2-disable-cairo.patch #509636
 
 	if use python; then
 		python_fix_shebang .

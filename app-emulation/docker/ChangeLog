@@ -1,6 +1,23 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.19 2014/04/09 05:55:23 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.23 2014/06/25 04:34:23 patrick Exp $
+
+  25 Jun 2014; Patrick Lauer <patrick@gentoo.org> -docker-0.7.0.ebuild:
+  Remove ebuild that fetches from live git
+
+*docker-1.0.0 (09 Jun 2014)
+
+  09 Jun 2014; Greg Kroah-Hartman <gregkh@gentoo.org> +docker-1.0.0.ebuild:
+  1.0.0 release
+
+  03 Jun 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add proxy-maint herd.
+
+*docker-0.11.1 (09 May 2014)
+
+  09 May 2014; Greg Kroah-Hartman <gregkh@gentoo.org> +docker-0.11.1.ebuild,
+  metadata.xml:
+  0.11.1 version bump
 
 *docker-0.10.0 (09 Apr 2014)
 

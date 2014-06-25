@@ -1,6 +1,44 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1383 2014/04/28 12:05:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1389 2014/06/22 11:51:05 mpagano Exp $
+
+*git-sources-3.16_rc2 (22 Jun 2014)
+*git-sources-3.16_rc1 (22 Jun 2014)
+
+  22 Jun 2014; Michael Pagano <mpagano@gentoo.org>
+  -git-sources-3.15_rc1.ebuild, -git-sources-3.15_rc2.ebuild,
+  -git-sources-3.15_rc3.ebuild, -git-sources-3.15_rc4.ebuild,
+  -git-sources-3.15_rc5.ebuild, -git-sources-3.15_rc6.ebuild,
+  -git-sources-3.15_rc7.ebuild, -git-sources-3.15_rc8.ebuild,
+  +git-sources-3.16_rc1.ebuild, +git-sources-3.16_rc2.ebuild:
+  Update new, remove old.
+
+*git-sources-3.15_rc8 (02 Jun 2014)
+
+  02 Jun 2014; Mike Pagano <mpagano@gentoo.org> +git-sources-3.15_rc8.ebuild:
+  Version bump
+
+*git-sources-3.15_rc7 (25 May 2014)
+
+  25 May 2014; Michael Pagano <mpagano@gentoo.org>
+  +git-sources-3.15_rc7.ebuild:
+  Version bump
+
+*git-sources-3.15_rc6 (21 May 2014)
+
+  21 May 2014; Michael Pagano <mpagano@gentoo.org>
+  +git-sources-3.15_rc6.ebuild:
+  Version bump
+
+*git-sources-3.15_rc5 (09 May 2014)
+
+  09 May 2014; Mike Pagano <mpagano@gentoo.org> +git-sources-3.15_rc5.ebuild:
+  Version bump
+
+*git-sources-3.15_rc4 (05 May 2014)
+
+  05 May 2014; Mike Pagano <mpagano@gentoo.org> +git-sources-3.15_rc4.ebuild:
+  Version bump
 
 *git-sources-3.15_rc3 (28 Apr 2014)
 

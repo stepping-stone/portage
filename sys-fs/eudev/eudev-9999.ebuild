@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.50 2014/04/28 17:53:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.56 2014/06/24 22:17:02 mgorny Exp $
 
 EAPI="5"
 
-KV_min=2.6.31
+KV_min=2.6.39
 
 inherit autotools eutils multilib linux-info multilib-minimal
 
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE="doc gudev +hwdb kmod introspection +keymap +modutils +openrc +rule-generator selinux static-libs test"
 
 COMMON_DEPEND=">=sys-apps/util-linux-2.20
-	gudev? ( dev-libs/glib:2[${MULTILIB_USEDEP}] )
+	gudev? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	kmod? ( >=sys-apps/kmod-16 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
@@ -37,11 +37,10 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	)"
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )
-	>=dev-util/intltool-0.40.0
 	virtual/os-headers
 	virtual/pkgconfig
-	!<sys-devel/make-3.82-r4
-	!<sys-kernel/linux-headers-${KV_min}
+	>=sys-devel/make-3.82-r4
+	>=sys-kernel/linux-headers-${KV_min}
 	doc? ( >=dev-util/gtk-doc-1.18 )
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xml-dtd:4.5
@@ -54,12 +53,11 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/lvm2-2.02.103
 	!<sec-policy/selinux-base-2.20120725-r10
 	!sys-fs/udev
-	!sys-apps/systemd
-	!<sys-fs/udev-init-scripts-26"
+	!sys-apps/systemd"
 
 PDEPEND="hwdb? ( >=sys-apps/hwids-20140304[udev] )
 	keymap? ( >=sys-apps/hwids-20140304[udev] )
-	openrc? ( >=sys-fs/udev-init-scripts-18 )"
+	openrc? ( >=sys-fs/udev-init-scripts-26 )"
 
 REQUIRED_USE="keymap? ( hwdb )"
 
@@ -135,6 +133,7 @@ multilib_src_configure() {
 		--with-rootprefix=
 		--docdir=/usr/share/doc/${PF}
 		--libdir=/usr/$(get_libdir)
+		--with-rootlibexecdir=/lib/udev
 		--with-firmware-path="${EPREFIX}usr/lib/firmware/updates:${EPREFIX}usr/lib/firmware:${EPREFIX}lib/firmware/updates:${EPREFIX}lib/firmware"
 		--with-html-dir="/usr/share/doc/${PF}/html"
 		--enable-split-usr
@@ -157,8 +156,16 @@ multilib_src_configure() {
 			$(use_enable selinux)
 			$(use_enable rule-generator)
 		)
-	else econf_args+=(
-		$(echo --disable-{gtk-doc,introspection,keymap,libkmod,modules,static,selinux,rule-generator})
+	else
+		econf_args+=(
+			--disable-static
+			--disable-gtk-doc
+			--disable-introspection
+			--disable-keymap
+			--disable-libkmod
+			--disable-modules
+			--disable-selinux
+			--disable-rule-generator
 		)
 	fi
 	ECONF_SOURCE="${S}" econf "${econf_args[@]}"

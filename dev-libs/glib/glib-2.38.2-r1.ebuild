@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.38.2-r1.ebuild,v 1.11 2014/04/21 10:28:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.38.2-r1.ebuild,v 1.14 2014/06/18 19:11:16 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -15,22 +15,22 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2+"
 SLOT="2"
-IUSE="debug fam kernel_linux selinux static-libs systemtap test utils xattr"
+IUSE="debug fam kernel_linux +mime selinux static-libs systemtap test utils xattr"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
-# FIXME: want libselinux[${MULTILIB_USEDEP}] - bug #480960
+# FIXME: want >=libselinux-2.2.2-r4[${MULTILIB_USEDEP}] - bug #480960
 RDEPEND="
-	virtual/libiconv[${MULTILIB_USEDEP}]
-	virtual/libffi[${MULTILIB_USEDEP}]
-	sys-libs/zlib[${MULTILIB_USEDEP}]
+	>=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
+	>=virtual/libffi-3.0.13-r1[${MULTILIB_USEDEP}]
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	|| (
 		>=dev-libs/elfutils-0.142
 		>=dev-libs/libelf-0.8.12
 		>=sys-freebsd/freebsd-lib-9.2_rc1
 		)
 	selinux? ( sys-libs/libselinux )
-	xattr? ( sys-apps/attr[${MULTILIB_USEDEP}] )
-	fam? ( virtual/fam[${MULTILIB_USEDEP}] )
+	xattr? ( >=sys-apps/attr-2.4.47-r1[${MULTILIB_USEDEP}] )
+	fam? ( >=virtual/fam-0-r1[${MULTILIB_USEDEP}] )
 	utils? (
 		${PYTHON_DEPS}
 		>=dev-util/gdbus-codegen-${PV}[${PYTHON_USEDEP}] )
@@ -56,8 +56,9 @@ DEPEND="${RDEPEND}
 # gobject-introspection blocker to ensure people don't mix
 # different g-i and glib major versions
 
-PDEPEND="x11-misc/shared-mime-info
-	!<gnome-base/gvfs-1.6.4-r990"
+PDEPEND="!<gnome-base/gvfs-1.6.4-r990
+	mime? ( x11-misc/shared-mime-info )
+"
 # shared-mime-info needed for gio/xdgmime, bug #409481
 # Earlier versions of gvfs do not work with glib
 
@@ -215,6 +216,13 @@ multilib_src_configure() {
 		--enable-man \
 		--with-pcre=internal \
 		--with-xml-catalog="${EPREFIX}/etc/xml/catalog"
+
+	if multilib_is_native_abi; then
+		local d
+		for d in glib gio gobject; do
+			ln -s "${S}"/docs/reference/${d}/html docs/reference/${d}/html || die
+		done
+	fi
 }
 
 multilib_src_install_all() {

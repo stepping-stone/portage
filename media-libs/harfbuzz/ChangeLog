@@ -1,6 +1,27 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.75 2014/04/30 04:53:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.79 2014/06/24 22:12:09 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> harfbuzz-0.9.26-r1.ebuild,
+  harfbuzz-0.9.28.ebuild, harfbuzz-9999.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
+
+  24 Jun 2014; Jeroen Roovers <jer@gentoo.org> harfbuzz-0.9.28.ebuild:
+  Stable for HPPA (bug #509584).
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> harfbuzz-0.9.26-r1.ebuild,
+  harfbuzz-0.9.28.ebuild, harfbuzz-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
+
+*harfbuzz-0.9.28 (04 May 2014)
+
+  04 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  harfbuzz-0.9.26-r1.ebuild, +harfbuzz-0.9.28.ebuild, harfbuzz-9999.ebuild:
+  Version bump with small fixes for Indic and Hebrew shaping (bug #509456,
+  thanks to DrSlony). And use multilib_native_use_enable for introspection, not
+  _use_with.
 
   30 Apr 2014; Tim Harder <radhermit@gentoo.org> harfbuzz-0.9.26-r1.ebuild:
   Sync mips keywords.

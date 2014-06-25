@@ -1,6 +1,68 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.505 2014/04/19 18:59:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.516 2014/06/18 19:08:47 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> wine-1.6.1.ebuild,
+  wine-1.6.2.ebuild, wine-1.6.ebuild, wine-1.7.0.ebuild, wine-1.7.10.ebuild,
+  wine-1.7.11.ebuild, wine-1.7.12.ebuild, wine-1.7.13.ebuild,
+  wine-1.7.14.ebuild, wine-1.7.15.ebuild, wine-1.7.16.ebuild,
+  wine-1.7.17.ebuild, wine-1.7.18.ebuild, wine-1.7.19-r1.ebuild,
+  wine-1.7.20.ebuild, wine-1.7.3.ebuild, wine-1.7.4.ebuild, wine-1.7.8.ebuild,
+  wine-1.7.9.ebuild, wine-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
+
+  17 Jun 2014; Chema Alonso <nimiux@gentoo.org> wine-1.6.2.ebuild:
+  Stable for amd64 wrt bug #501442
+
+*wine-1.7.20 (16 Jun 2014)
+
+  16 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.20.ebuild,
+  wine-9999.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.20 for the announcement.
+  Use samba with ABI_X86="32 64" for win32 netapi support; note that there is
+  no emul-linux-x86-* alternative for netapi. Switch to multilib-minimal.eclass
+  (bugs #494394 and #511184, thanks to Michał Górny). Enable experimental
+  pthreads patch from winepulse patchset, otherwise gstreamer support is simply
+  broken with any version of dev-libs/glib we have in portage.
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org> wine-1.7.19-r1.ebuild:
+  Disallow mixing of emul-linux-x86 with multilib dependencies, since all
+  dependencies are unmasked now.
+
+  12 Jun 2014; Michał Górny <mgorny@gentoo.org> wine-1.7.19-r1.ebuild,
+  wine-9999.ebuild:
+  Support multilib gstreamer.
+
+  25 May 2014; Michał Górny <mgorny@gentoo.org> wine-1.7.19-r1.ebuild,
+  wine-9999.ebuild:
+  Support multilib unixODBC ebuild.
+
+  23 May 2014; Michał Górny <mgorny@gentoo.org> wine-9999.ebuild:
+  Forward-port the emul-linux dependency changes to the live ebuild.
+
+  21 May 2014; Michał Górny <mgorny@gentoo.org> wine-1.7.19-r1.ebuild:
+  Support new multilib-enabled packages as dependencies. Partially bug #510646.
+
+*wine-1.7.19-r1 (17 May 2014)
+
+  17 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> -wine-1.7.19.ebuild,
+  +wine-1.7.19-r1.ebuild, wine-9999.ebuild:
+  Pipelight needs xattrs to be enabled (bug #507950, thanks to Michael
+  Müller).
+
+*wine-1.7.19 (17 May 2014)
+
+  17 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.19.ebuild,
+  wine-9999.ebuild, metadata.xml:
+  Version bump, see http://www.winehq.org/announce/1.7.19 for the announcement.
+  Optionally apply the unofficial and unsupported Compholio patch set required
+  for Pipelight support (bug #507950, thanks to Patrick McMunn).
+
+*wine-1.7.18 (04 May 2014)
+
+  04 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.18.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.18 for the announcement.
 
 *wine-1.7.17 (19 Apr 2014)
 

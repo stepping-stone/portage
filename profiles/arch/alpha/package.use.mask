@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.150 2014/04/20 12:37:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.152 2014/06/24 14:27:03 tetromino Exp $
 
 # Julian Ospald <hasufell@gentoo.org> (20 Apr 2014)
 # Missing keywords, bug #508226
@@ -111,8 +111,8 @@ gnome-extra/libgda reports
 
 # Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
 # MySQL 5.5 wants systemtap, tcmalloc & jemalloc
->=dev-db/mysql-5.5 tcmalloc jemalloc
->=dev-db/mariadb-5.5 tcmalloc jemalloc
+>=dev-db/mysql-5.5 tcmalloc
+>=dev-db/mariadb-5.5 tcmalloc
 
 # Raúl Porcel <armin76@gentoo.org> (25 Jun 2012)
 # dev-qt/qtwebkit doesn't seem to work
@@ -137,10 +137,6 @@ net-libs/webkit-gtk webkit2
 # arch/alpha/package.mask:>=sys-fs/udev-167
 # Soon as that mask entry is gone, this can be removed too.
 sys-auth/consolekit acl
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
-# UDisks2 untested wrt http://bugs.gentoo.org/412801
-gnome-base/gvfs udisks
 
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
 # mask use numa for openmpi

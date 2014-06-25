@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-24.5.0.ebuild,v 1.1 2014/04/30 17:00:27 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-24.5.0.ebuild,v 1.5 2014/06/16 08:53:45 pacho Exp $
 
 EAPI="5"
 MOZ_ESR="1"
@@ -38,18 +38,20 @@ SRC_URI="${SRC_URI}
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip mirror"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="startup-notification"
+IUSE="selinux startup-notification"
 
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip
+	selinux? ( sec-policy/selinux-mozilla )"
 RDEPEND="dev-libs/dbus-glib
 	virtual/freedesktop-icon-theme
 	x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu
 
+	selinux? ( sec-policy/selinux-mozilla )
 	>=x11-libs/gtk+-2.2:2
 	>=media-libs/alsa-lib-1.0.16
 
@@ -94,7 +96,7 @@ src_install() {
 	insinto "/usr/share/icons/hicolor/128x128/apps"
 	newins "${icon_path}/../../../icons/mozicon128.png" "${icon}.png" || die
 	# Install a 48x48 icon into /usr/share/pixmaps for legacy DEs
-	newicon "${S}"/browser/chrome/icons/default/default48.png ${PN}-icon.png
+	newicon "${S}"/browser/chrome/icons/default/default48.png ${PN}.png
 	domenu "${FILESDIR}"/${PN}.desktop
 	sed -i -e "s:@NAME@:${name}:" -e "s:@ICON@:${icon}:" \
 		"${ED}/usr/share/applications/${PN}.desktop" || die

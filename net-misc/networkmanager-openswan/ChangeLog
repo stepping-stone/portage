@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/networkmanager-openswan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/ChangeLog,v 1.22 2014/04/27 08:58:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/ChangeLog,v 1.24 2014/06/24 01:26:10 tetromino Exp $
+
+  24 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  networkmanager-openswan-0.9.8.4.ebuild:
+  Missing libgnome-keyring dependency.
+
+  13 Jun 2014; Mike Gilbert <floppym@gentoo.org>
+  networkmanager-openswan-0.9.8.4.ebuild:
+  Depend on either openswan or libreswan.
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org>
   -networkmanager-openswan-0.9.6.0.ebuild:

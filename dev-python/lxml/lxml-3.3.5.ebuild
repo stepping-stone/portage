@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.3.5.ebuild,v 1.1 2014/04/25 05:03:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.3.5.ebuild,v 1.11 2014/05/17 13:50:27 ago Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_{2,3,4}} )
+PYTHON_COMPAT=( python{2_7,3_{2,3,4}} )
 inherit distutils-r1 flag-o-matic
 
 DESCRIPTION="A Pythonic binding for the libxml2 and libxslt libraries"
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD ElementTree GPL-2 PSF-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="beautifulsoup3 doc examples +threads"
 
 # Note: lib{xml2,xslt} are used as C libraries, not Python modules.
@@ -21,7 +21,6 @@ RDEPEND="
 	>=dev-libs/libxml2-2.7.2
 	>=dev-libs/libxslt-1.1.15
 	beautifulsoup3? (
-		python_targets_python2_6? ( dev-python/beautifulsoup:python-2[python_targets_python2_6] )
 		python_targets_python2_7? ( dev-python/beautifulsoup:python-2[python_targets_python2_7] )
 		python_targets_python3_2? ( dev-python/beautifulsoup:python-3[python_targets_python3_2] )
 		python_targets_python3_3? ( dev-python/beautifulsoup:python-3[python_targets_python3_3] )

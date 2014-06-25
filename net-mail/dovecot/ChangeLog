@@ -1,6 +1,39 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.475 2014/02/17 17:07:59 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.483 2014/06/13 09:55:45 eras Exp $
+
+  13 Jun 2014; Eray Aslan <eras@gentoo.org> -dovecot-2.0.19.ebuild,
+  -dovecot-2.1.16.ebuild, -dovecot-2.1.17.ebuild,
+  -files/dovecot-2.1.9_managesieve_gold.patch,
+  -files/dovecot-2.2.8-mail-headers.patch, -files/dovecot-2.2.8-sieve.patch,
+  -files/dovecot.init-r3:
+  Remove old
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> dovecot-2.2.13.ebuild:
+  Stable for ia64, wrt bug #509954
+
+  28 May 2014; Sergey Popov <pinkbyte@gentoo.org> dovecot-2.2.13-r1.ebuild:
+  Stable on amd64 and x86, wrt bug #509954
+
+  24 May 2014; Agostino Sarubbo <ago@gentoo.org> dovecot-2.2.13.ebuild:
+  Stable for amd64, wrt bug #509954
+
+  23 May 2014; Jeroen Roovers <jer@gentoo.org> dovecot-2.2.13-r1.ebuild:
+  Stable for HPPA (bug #509954).
+
+*dovecot-2.2.13-r1 (13 May 2014)
+
+  13 May 2014; Eray Aslan <eras@gentoo.org> +dovecot-2.2.13-r1.ebuild:
+  Sieve version bump
+
+*dovecot-2.2.13 (12 May 2014)
+
+  12 May 2014; Eray Aslan <eras@gentoo.org> +dovecot-2.2.13.ebuild,
+  +files/dovecot-10-ssl.patch:
+  Security bump - bug #509954
+
+  10 May 2014; Eray Aslan <eras@gentoo.org> dovecot-2.2.12.ebuild:
+  Adjust SRC_URI for rc releases - bug #509940
 
   17 Feb 2014; Eray Aslan <eras@gentoo.org> -dovecot-2.1.9.ebuild,
   -dovecot-2.2.5.ebuild, -dovecot-2.2.6.ebuild, -dovecot-2.2.7.ebuild,

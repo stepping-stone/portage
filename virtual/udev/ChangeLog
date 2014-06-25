@@ -1,6 +1,26 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.77 2014/03/29 16:07:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.83 2014/06/18 20:58:26 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> udev-208-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
+
+  09 Jun 2014; Mike Frysinger <vapier@gentoo.org> udev-208-r2.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Remove unused local description for USE="kmod" which turned to be redudant.
+
+  02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> -udev-208-r1.ebuild:
+  old
+
+  02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> udev-208-r2.ebuild:
+  Stabilize for everyone because providers have been marked stable wrt bugs
+  #506078 and #505962
+
+  11 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-208-r2.ebuild:
+  Update DESCRIPTION to not exclude sys-apps/systemd.
 
   29 Mar 2014; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Add eudev@g.o as a maintainer

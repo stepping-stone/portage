@@ -1,6 +1,21 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.49 2014/04/20 17:03:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.52 2014/06/15 14:11:30 hattya Exp $
+
+  15 Jun 2014; Akinori Hattori <hattya@gentoo.org> mime-types-1.23.ebuild,
+  mime-types-1.25.1.ebuild, mime-types-2.2.ebuild, mime-types-2.3.ebuild:
+  keyword ~ia64 wrt bug #510876
+
+*mime-types-2.3 (29 May 2014)
+
+  29 May 2014; Hans de Graaff <graaff@gentoo.org> +mime-types-2.3.ebuild:
+  Version bump.
+
+*mime-types-2.2 (17 May 2014)
+
+  17 May 2014; Hans de Graaff <graaff@gentoo.org> +mime-types-2.2.ebuild:
+  Version bump. Drop jruby since the code is no longer compatible with ruby 1.8
+  syntax.
 
   20 Apr 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/mime-types-1.18-linux-tests.patch, -mime-types-1.19.ebuild:

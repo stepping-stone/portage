@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0-r3.ebuild,v 1.12 2013/09/14 22:50:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0-r3.ebuild,v 1.14 2014/06/15 15:22:12 mgorny Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ IUSE="curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl examples ssl"
 # explicitly link to libgcrypt.
 DEPEND=">=net-misc/curl-7.25.0-r1[ssl=]
 	ssl? (
-		net-misc/curl[curl_ssl_gnutls=,curl_ssl_nss=,curl_ssl_openssl=,-curl_ssl_axtls,-curl_ssl_cyassl,-curl_ssl_polarssl]
+		net-misc/curl[curl_ssl_gnutls(-)=,curl_ssl_nss(-)=,curl_ssl_openssl(-)=,-curl_ssl_axtls(-),-curl_ssl_cyassl(-),-curl_ssl_polarssl(-)]
 		curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 )
 	)"
 RDEPEND="${DEPEND}"
@@ -40,6 +40,11 @@ python_prepare_all() {
 	sed -e "/data_files=/d" -i setup.py || die
 
 	distutils-r1_python_prepare_all
+}
+
+src_configure() {
+	# Override faulty detection in setup.py, bug 510974.
+	export PYCURL_SSL_LIBRARY=${CURL_SSL}
 }
 
 python_compile() {

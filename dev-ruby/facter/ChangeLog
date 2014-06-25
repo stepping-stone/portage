@@ -1,6 +1,23 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.93 2014/03/11 01:36:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.96 2014/06/22 18:59:29 prometheanfire Exp $
+
+*facter-1.7.6 (22 Jun 2014)
+
+  22 Jun 2014; Matthew Thode <prometheanfire@gentoo.org> +facter-1.7.6.ebuild:
+  needs to be stablized for bug 514476 CVE-2014-32[48,50]
+
+*facter-2.0.2 (15 Jun 2014)
+
+  15 Jun 2014; Matthew Thode <prometheanfire@gentoo.org> +facter-2.0.2.ebuild,
+  -facter-1.6.16.ebuild, -facter-1.6.18.ebuild, -facter-1.7.3.ebuild,
+  -facter-1.7.4.ebuild, -facter-1.7.5-r1.ebuild, -facter-1.7.5.ebuild,
+  metadata.xml:
+  fixes bug 513286 CVE-2014-3248
+
+  26 May 2014; Manuel Rüger <mrueg@gentoo.org> facter-1.6.16.ebuild,
+  facter-1.6.18.ebuild, facter-1.7.1-r1.ebuild, facter-1.7.3.ebuild:
+  Remove ruby18 target.
 
   11 Mar 2014; Manuel Rüger <mrueg@gentoo.org> facter-1.6.16.ebuild,
   facter-1.6.18.ebuild:

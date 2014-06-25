@@ -1,8 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.900.1-r6.ebuild,v 1.3 2013/11/09 12:15:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.900.1-r6.ebuild,v 1.5 2014/06/18 19:35:56 mgorny Exp $
 
 EAPI=5
+
+# outdated './configure': breaks in 'USE=opengl ABI_X86="32 64"' case:
+#  uses /usr/lib64 for 32-bit ABI.
+AUTOTOOLS_AUTORECONF=yes
 
 inherit autotools-multilib
 
@@ -18,10 +22,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="jpeg opengl static-libs"
 
 RDEPEND="
-	jpeg? ( virtual/jpeg:0[${MULTILIB_USEDEP}] )
+	jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
 	opengl? (
-		virtual/opengl:0[${MULTILIB_USEDEP}]
-		media-libs/freeglut:0[${MULTILIB_USEDEP}]
+		>=virtual/opengl-7.0-r1:0[${MULTILIB_USEDEP}]
+		>=media-libs/freeglut-2.8.1:0[${MULTILIB_USEDEP}]
 		)"
 DEPEND="${RDEPEND}
 	app-arch/unzip"

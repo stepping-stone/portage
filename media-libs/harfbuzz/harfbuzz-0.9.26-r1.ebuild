@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.26-r1.ebuild,v 1.4 2014/04/30 04:53:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.26-r1.ebuild,v 1.7 2014/06/24 22:12:09 mgorny Exp $
 
 EAPI=5
 
@@ -24,11 +24,11 @@ REQUIRED_USE="introspection? ( glib )"
 
 RDEPEND="
 	cairo? ( x11-libs/cairo:= )
-	glib? ( dev-libs/glib:2[${MULTILIB_USEDEP}] )
-	graphite? ( media-gfx/graphite2:=[${MULTILIB_USEDEP}] )
-	icu? ( dev-libs/icu:=[${MULTILIB_USEDEP}] )
+	glib? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
+	graphite? ( >=media-gfx/graphite2-1.2.1:=[${MULTILIB_USEDEP}] )
+	icu? ( >=dev-libs/icu-51.2-r1:=[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1.34 )
-	truetype? ( media-libs/freetype:2=[${MULTILIB_USEDEP}] )
+	truetype? ( >=media-libs/freetype-2.5.0.1:2=[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
@@ -77,7 +77,7 @@ multilib_src_configure() {
 		$(use_with glib gobject) \
 		$(use_with graphite graphite2) \
 		$(use_with icu) \
-		$(multilib_native_use_with introspection) \
+		$(multilib_native_use_enable introspection) \
 		$(use_with truetype freetype)
 }
 

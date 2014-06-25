@@ -1,6 +1,20 @@
 # ChangeLog for dev-python/soappy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.48 2013/10/22 14:26:56 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.52 2014/06/23 12:40:17 klausman Exp $
+
+  23 Jun 2014; Tobias Klausmann <klausman@gentoo.org> soappy-0.12.5-r2.ebuild:
+  Stable on alpha, bug #513132
+
+  19 Jun 2014; Markus Meier <maekke@gentoo.org> soappy-0.12.5-r2.ebuild:
+  arm stable, bug #513132
+
+  04 Jun 2014; Jeroen Roovers <jer@gentoo.org> soappy-0.12.5-r2.ebuild:
+  Stable for HPPA (bug #486506).
+
+*soappy-0.12.20 (26 May 2014)
+
+  26 May 2014; Patrick Lauer <patrick@gentoo.org> +soappy-0.12.20.ebuild:
+  Bump
 
   22 Oct 2013; Fabian Groffen <grobian@gentoo.org> soappy-0.12.5-r2.ebuild:
   Marked ~x64-macos, bug #487670

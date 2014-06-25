@@ -1,6 +1,48 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.75 2014/04/18 22:18:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.83 2014/06/15 15:52:07 mgorny Exp $
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-sdl-20140508.ebuild:
+  Move cross-emul-linux deps to !abi_x86_32?.
+
+  30 May 2014; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-sdl-20140406-r2.ebuild:
+  Restore stable keywords from 20140406, bug #511878.
+
+  29 May 2014; Michał Górny <mgorny@gentoo.org>
+  -emul-linux-x86-sdl-20140406.ebuild, -files/remove-native,
+  -files/remove-native-20140406-r1, -files/remove-native-20140508:
+  Remove the old revisions.
+
+  09 May 2014; Ulrich Müller <ulm@gentoo.org>
+  emul-linux-x86-sdl-20140406-r2.ebuild, emul-linux-x86-sdl-20140508.ebuild:
+  Fix LICENSE, this is a metapackage with USE=abi_x86_32.
+
+*emul-linux-x86-sdl-20140508 (08 May 2014)
+
+  08 May 2014; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-sdl-20140508.ebuild, +files/remove-native-20140508,
+  -emul-linux-x86-sdl-20140506.ebuild, -files/remove-native-20140506:
+  Version bump, drop old
+
+*emul-linux-x86-sdl-20140506 (06 May 2014)
+
+  06 May 2014; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-sdl-20140506.ebuild, +files/remove-native-20140506,
+  -emul-linux-x86-sdl-20131008-r1.ebuild,
+  -emul-linux-x86-sdl-20140406-r1.ebuild:
+  Version bump, drop old
+
+  04 May 2014; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-sdl-20140406.ebuild:
+  amd64 stable, bug 508322
+
+*emul-linux-x86-sdl-20140406-r2 (03 May 2014)
+
+  03 May 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-sdl-20140406-r2.ebuild:
+  Update to cover all libraries that were converted.
 
 *emul-linux-x86-sdl-20140406-r1 (18 Apr 2014)
 

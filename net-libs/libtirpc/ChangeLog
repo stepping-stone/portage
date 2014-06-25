@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.33 2014/02/02 07:59:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.35 2014/06/18 20:40:15 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libtirpc-0.2.4-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
+
+*libtirpc-0.2.4-r2 (30 May 2014)
+
+  30 May 2014; Michał Górny <mgorny@gentoo.org> +libtirpc-0.2.4-r2.ebuild:
+  Enable multilib support.
 
 *libtirpc-0.2.4-r1 (02 Feb 2014)
 

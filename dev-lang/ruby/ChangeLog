@@ -1,6 +1,42 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.650 2014/04/21 12:56:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.659 2014/06/19 18:11:22 maekke Exp $
+
+  19 Jun 2014; Markus Meier <maekke@gentoo.org> ruby-2.0.0_p481.ebuild:
+  arm stable, bug #512904
+
+  19 Jun 2014; Markus Meier <maekke@gentoo.org> ruby-1.9.3_p547.ebuild:
+  arm stable, bug #512904
+
+  15 Jun 2014; Akinori Hattori <hattya@gentoo.org> ruby-1.9.3_p547.ebuild,
+  ruby-2.0.0_p481.ebuild:
+  ia64 stable wrt bug #512904
+
+  11 Jun 2014; Jeroen Roovers <jer@gentoo.org> ruby-2.0.0_p481.ebuild:
+  Stable for HPPA (bug #512904).
+
+  10 Jun 2014; Jeroen Roovers <jer@gentoo.org> ruby-1.9.3_p547.ebuild:
+  Stable for HPPA (bug #512904).
+
+  10 Jun 2014; Hans de Graaff <graaff@gentoo.org> -ruby-2.0.0_p451.ebuild,
+  -ruby-2.1.1-r1.ebuild:
+  Cleanup.
+
+  10 Jun 2014; Hans de Graaff <graaff@gentoo.org> ruby-2.1.2.ebuild:
+  Depend on a version of eselect-ruby that supports ruby 2.1, fixing bug
+  512848.
+
+*ruby-1.9.3_p547 (17 May 2014)
+
+  17 May 2014; Hans de Graaff <graaff@gentoo.org> +ruby-1.9.3_p547.ebuild:
+  Version bump.
+
+*ruby-2.1.2 (10 May 2014)
+*ruby-2.0.0_p481 (10 May 2014)
+
+  10 May 2014; Hans de Graaff <graaff@gentoo.org> +ruby-2.0.0_p481.ebuild,
+  +ruby-2.1.2.ebuild:
+  Version bump.
 
   21 Apr 2014; Hans de Graaff <graaff@gentoo.org> -ruby-2.0.0_p353-r1.ebuild,
   -ruby-2.0.0_p353-r2.ebuild:

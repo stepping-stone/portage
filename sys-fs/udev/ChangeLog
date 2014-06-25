@@ -1,6 +1,110 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1025 2014/04/28 17:54:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1053 2014/06/24 22:17:36 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> udev-208-r1.ebuild,
+  udev-212-r1.ebuild, udev-214.ebuild, udev-9999.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
+
+  21 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Create group "input" wrt bugs #246847 and #514174
+
+  20 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> udev-214.ebuild,
+  udev-9999.ebuild:
+  Restore group "floppy" using 40-gentoo.rules
+
+  19 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> -udev-213.ebuild:
+  old
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> udev-208-r1.ebuild,
+  udev-212-r1.ebuild, udev-213.ebuild, udev-214.ebuild, udev-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
+
+*udev-214 (18 Jun 2014)
+
+  18 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +udev-214.ebuild,
+  udev-9999.ebuild:
+  Version bump; update md5sum of 50-udev-default.rules because upstream retired
+  group "floppy"
+
+  09 Jun 2014; Mike Frysinger <vapier@gentoo.org> udev-208-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> udev-212-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> udev-213.ebuild,
+  udev-9999.ebuild:
+  Raise gobject-introspection dependency from 1.31.1 to latest stable, which is
+  1.38, in attempt of solving bug #510864
+
+  02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Remove redudant --disable-networkd wrt http://cgit.freedesktop.org/systemd/sys
+  temd/commit/?id=0bbea466dcafc0ff51811a3bc451e983c02e63bf
+
+  02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> -udev-208.ebuild,
+  metadata.xml:
+  old
+
+*udev-208-r1 (02 Jun 2014)
+
+  02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +udev-208-r1.ebuild:
+  Backport building of multilib libgudev-1.0 to =208-r1 from >=212-r1 because
+  only 208 works with Linux 2.6.32.x series since CONFIG_FHANDLE=y was
+  introduced in Linux 2.6.39.
+
+  01 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> udev-212-r1.ebuild:
+  ia64 stable wrt big #505962
+
+  01 Jun 2014; Anthony G. Basile <blueness@gentoo.org> udev-212-r1.ebuild:
+  Stable ppc/ppc64, bug #505962
+
+  01 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> udev-212-r1.ebuild:
+  sparc stable wrt big #505962
+
+  01 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> udev-212-r1.ebuild:
+  alpha stable wrt big #505962
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-213.ebuild:
+  Fix building with USE="-kmod" wrt #511924. Thanks to Guillaume Castagnino for
+  reporting and Mike Gilbert for initial patch.
+
+  30 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-213.ebuild,
+  udev-9999.ebuild:
+  Raise kernel requirement to 2.6.39 for CONFIG_FHANDLE and remove compability
+  SUBSYSTEM=="mem" -line from 40-gentoo.rules with it, which was for Linux 2.6.32
+  compability. See #509570 which was filed against sys-fs/eudev.
+
+  28 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Remove --disable-xattr because git is now using libc's xattr support instead
+  of libattr wrt http://cgit.freedesktop.org/systemd/systemd/commit/?id=d2edfae0
+  f9bdbecf6a8518e2a5bcf06f470e0d9e
+
+*udev-213 (28 May 2014)
+
+  28 May 2014; Samuli Suominen <ssuominen@gentoo.org> +udev-213.ebuild,
+  udev-9999.ebuild:
+  Version bump. Pass --disable-networkd which we don't use anyway for sys-
+  fs/udev (to pass econf without sys-apps/kmod installed).
+
+  14 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-212-r1.ebuild,
+  udev-9999.ebuild:
+  Synchronize with live ebuild.
+
+  14 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-212-r1.ebuild:
+  Flip sys-devel/make and sys-kernel/linux-headers blockers to DEPENDs to ensure
+  they get emerged first.
+
+  13 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-212-r1.ebuild:
+  Force linux-headers-3.9 instead of 3.7 wrt #510186
+
+  09 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-212-r1.ebuild:
+  amd64/x86 stable wrt #505952
+
+  07 May 2014; Markus Meier <maekke@gentoo.org> udev-212-r1.ebuild:
+  arm stable, bug #505962
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> udev-208.ebuild,
   udev-212-r1.ebuild, udev-9999.ebuild:
