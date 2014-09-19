@@ -1,6 +1,34 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.489 2014/06/23 10:15:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.492 2014/09/18 10:29:46 chainsaw Exp $
+
+  18 Sep 2014; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.28.2.ebuild,
+  asterisk-1.8.29.0.ebuild, asterisk-11.10.2.ebuild, asterisk-11.11.0.ebuild,
+  asterisk-11.12.0.ebuild, asterisk-12.3.2.ebuild, asterisk-12.4.0.ebuild,
+  asterisk-12.5.0.ebuild:
+  Add missing build-time dependency on pkgconfig, as identified by cyberbat in
+  bug #522396.
+
+*asterisk-12.5.0 (20 Aug 2014)
+*asterisk-11.12.0 (20 Aug 2014)
+
+  20 Aug 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.12.0.ebuild,
+  +asterisk-12.5.0.ebuild:
+  Squelching the FORTIFY_SOURCE warnings, as we have this in our GCC specs the
+  build system should not try to apply it again on the command line. At long
+  last handles large SIP-over-SSL packets correctly. LUA vs convential dial
+  plan context clashes found & fixed.
+
+*asterisk-12.4.0 (14 Jul 2014)
+*asterisk-11.11.0 (14 Jul 2014)
+*asterisk-1.8.29.0 (14 Jul 2014)
+
+  14 Jul 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.29.0.ebuild,
+  +asterisk-11.11.0.ebuild, +asterisk-12.4.0.ebuild:
+  New development on the 12 branch adds persistent connection support on the
+  built-in HTTP server. Fixes trickling down to stable branches include making
+  ast_careful_fwrite careful enough to avoid infinite loops and avoiding
+  unnecessary MOH restarts. Downstream patchset unchanged.
 
   23 Jun 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.26.1.ebuild,
   -asterisk-11.8.1.ebuild, -asterisk-12.1.1.ebuild, -asterisk-12.2.0.ebuild:

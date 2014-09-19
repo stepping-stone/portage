@@ -1,6 +1,25 @@
 # ChangeLog for www-servers/hiawatha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/ChangeLog,v 1.4 2014/06/21 10:26:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/ChangeLog,v 1.8 2014/08/20 17:49:45 hasufell Exp $
+
+*hiawatha-9.7 (20 Aug 2014)
+
+  20 Aug 2014; Julian Ospald <hasufell@gentoo.org> +hiawatha-9.7.ebuild:
+  version bump
+
+  12 Jul 2014; Julian Ospald <hasufell@gentoo.org> hiawatha-9.6.ebuild,
+  hiawatha-9.6-r1.ebuild:
+  rm wrong build type
+
+  11 Jul 2014; Julian Ospald <hasufell@gentoo.org> hiawatha-9.5.ebuild,
+  hiawatha-9.6.ebuild, hiawatha-9.6-r1.ebuild:
+  fix polarssl dep wrt #516832
+
+*hiawatha-9.6-r1 (01 Jul 2014)
+
+  01 Jul 2014; Pacho Ramos <pacho@gentoo.org> +files/hiawatha.service,
+  +hiawatha-9.6-r1.ebuild:
+  Add unit file (#515568 by Tim Mohlmann)
 
 *hiawatha-9.6 (21 Jun 2014)
 

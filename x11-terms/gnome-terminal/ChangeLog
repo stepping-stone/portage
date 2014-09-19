@@ -1,6 +1,18 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.288 2014/05/31 09:27:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.291 2014/07/23 15:38:54 ago Exp $
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-terminal-3.12.3.ebuild:
+  Stable for x86, wrt bug #512012
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-terminal-3.12.3.ebuild:
+  Stable for amd64, wrt bug #512912
+
+*gnome-terminal-3.12.3 (26 Jun 2014)
+
+  26 Jun 2014; Pacho Ramos <pacho@gentoo.org> +gnome-terminal-3.12.3.ebuild,
+  -gnome-terminal-3.12.0.ebuild:
+  Version bump, drop old
 
 *gnome-terminal-3.12.2 (31 May 2014)
 

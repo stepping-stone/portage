@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.56 2014/06/24 22:17:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.61 2014/09/15 11:01:16 blueness Exp $
 
 EAPI="5"
 
 KV_min=2.6.39
 
-inherit autotools eutils multilib linux-info multilib-minimal
+inherit autotools eutils linux-info multilib multilib-minimal user
 
 if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
@@ -21,11 +21,11 @@ HOMEPAGE="https://github.com/gentoo/eudev"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="doc gudev +hwdb kmod introspection +keymap +modutils +openrc +rule-generator selinux static-libs test"
+IUSE="doc gudev +hwdb +kmod introspection +keymap +modutils +openrc +rule-generator selinux static-libs test"
 
 COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	gudev? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
-	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
+	introspection? ( >=dev-libs/gobject-introspection-1.38 )
 	kmod? ( >=sys-apps/kmod-16 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
@@ -106,16 +106,14 @@ src_prepare() {
 
 	epatch_user
 
-	if [[ ! -e configure ]]; then
-		if use doc; then
-			gtkdocize --docdir docs || die "gtkdocize failed"
-		else
-			echo 'EXTRA_DIST =' > docs/gtk-doc.make
-		fi
-		eautoreconf
+	if use doc; then
+		gtkdocize --docdir docs || die "gtkdocize failed"
 	else
-		elibtoolize
+		echo 'EXTRA_DIST =' > docs/gtk-doc.make
 	fi
+	# This may break without WANT_AUTOMAKE=1.13, but we
+	# we want this so we can fix problems upstream.
+	eautoreconf
 }
 
 multilib_src_configure() {
@@ -175,6 +173,7 @@ multilib_src_compile() {
 	if multilib_is_native_abi; then
 		emake
 	else
+		emake -C src/shared
 		emake -C src/libudev
 		use gudev && emake -C src/gudev
 	fi
@@ -214,6 +213,12 @@ multilib_src_install_all() {
 
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/40-gentoo.rules
+
+	insinto /usr/share/doc/${PF}/html/gudev
+	doins "${S}"/docs/gudev/html/*
+
+	insinto /usr/share/doc/${PF}/html/libudev
+	doins "${S}"/docs/libudev/html/*
 }
 
 pkg_preinst() {
@@ -271,4 +276,22 @@ pkg_postinst() {
 	elog "fixing known issues visit:"
 	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
 	elog
+
+	# http://cgit.freedesktop.org/systemd/systemd/commit/rules/50-udev-default.rules?id=3dff3e00e044e2d53c76fa842b9a4759d4a50e69
+	# http://bugs.gentoo.org/246847
+	# http://bugs.gentoo.org/514174
+	enewgroup input
+
+	# Update hwdb database in case the format is changed by udev version.
+	if has_version 'sys-apps/hwids[udev]'; then
+		udevadm hwdb --update --root="${ROOT%/}"
+		# Only reload when we are not upgrading to avoid potential race w/ incompatible hwdb.bin and the running udevd
+		if [[ -z ${REPLACING_VERSIONS} ]]; then
+			# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+			if [[ ${ROOT} != "" ]] && [[ ${ROOT} != "/" ]]; then
+				return 0
+			fi
+			udevadm control --reload
+		fi
+	fi
 }

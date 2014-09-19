@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.9999.ebuild,v 1.6 2014/06/19 13:14:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.9999.ebuild,v 1.9 2014/09/13 09:34:20 mgorny Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ fi
 
 inherit eutils flag-o-matic multilib multilib-minimal toolchain-funcs ${SCM}
 
-DESCRIPTION="Complete solution to record, convert and stream audio and video."
+DESCRIPTION="Complete solution to record, convert and stream audio and video"
 HOMEPAGE="http://libav.org/"
 if [[ ${PV} == *9999 ]] ; then
 	SRC_URI=""
@@ -138,6 +138,8 @@ MULTILIB_WRAPPED_HEADERS=(
 )
 
 src_prepare() {
+	epatch_user
+
 	# if we have snapshot then we need to hardcode the version
 	if [[ ${PV%_p*} != ${PV} ]]; then
 		sed -i -e "s/UNKNOWN/DATE-${PV#*_pre}/" "${S}/version.sh" || die
@@ -278,7 +280,7 @@ multilib_src_configure() {
 		fi
 	fi
 
-	"${S}"/configure \
+	set -- "${S}"/configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--shlibdir="${EPREFIX}"/usr/$(get_libdir) \
@@ -289,7 +291,9 @@ multilib_src_configure() {
 		--optflags="${CFLAGS}" \
 		--extra-cflags="${CFLAGS}" \
 		$(use_enable static-libs static) \
-		"${myconf[@]}" || die
+		"${myconf[@]}"
+	echo "${@}"
+	"${@}" || die
 }
 
 multilib_src_compile() {

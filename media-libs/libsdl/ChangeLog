@@ -1,6 +1,27 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.219 2014/06/25 11:03:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.224 2014/09/10 09:40:20 jer Exp $
+
+  10 Sep 2014; Jeroen Roovers <jer@gentoo.org> libsdl-1.2.15-r8.ebuild:
+  Stable for HPPA (bug #522270).
+
+  26 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> -libsdl-1.2.15-r7.ebuild:
+  old
+
+*libsdl-1.2.15-r8 (25 Jul 2014)
+
+  25 Jul 2014; Alfredo Tupone <tupone@gentoo.org> +libsdl-1.2.15-r8.ebuild:
+  Removing a dependency on x11-libs/libXt Fix bug #514378
+
+  30 Jun 2014; Julian Ospald <hasufell@gentoo.org> -libsdl-1.2.15-r5.ebuild,
+  -libsdl-1.2.15-r6.ebuild:
+  remove old
+
+*libsdl-1.2.15-r7 (30 Jun 2014)
+
+  30 Jun 2014; Julian Ospald <hasufell@gentoo.org> +libsdl-1.2.15-r7.ebuild,
+  +files/libsdl-1.2.15-caca.patch:
+  fix various multilib failures wrt #514486
 
   25 Jun 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/libsdl-1.2.13-sdl-config.patch, -files/libsdl-1.2.14-click.patch,

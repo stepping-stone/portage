@@ -1,6 +1,28 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.152 2014/06/19 13:32:03 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.157 2014/09/16 18:17:33 johu Exp $
+
+*filelight-4.14.1 (16 Sep 2014)
+
+  16 Sep 2014; Johannes Huber <johu@gentoo.org> +filelight-4.14.1.ebuild:
+  Version bump KDE SC 4.14.1
+
+*filelight-4.14.0 (20 Aug 2014)
+
+  20 Aug 2014; Johannes Huber <johu@gentoo.org> +filelight-4.14.0.ebuild:
+  Version bump KDE SC 4.14.0
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> filelight-4.12.5.ebuild,
+  filelight-4.13.3.ebuild:
+  Remove trailing '.' from DESCRIPTION.
+
+  23 Jul 2014; Johannes Huber <johu@gentoo.org> -filelight-4.13.2.ebuild:
+  Remove KDE SC 4.13.2
+
+*filelight-4.13.3 (16 Jul 2014)
+
+  16 Jul 2014; Johannes Huber <johu@gentoo.org> +filelight-4.13.3.ebuild:
+  Version bump KDE SC 4.13.3
 
   19 Jun 2014; Chris Reffett <creffett@gentoo.org> -filelight-4.13.1.ebuild:
   Remove KDE SC 4.13.1

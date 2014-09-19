@@ -1,6 +1,50 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.373 2014/06/17 03:58:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.380 2014/09/09 15:59:39 polynomial-c Exp $
+
+*bash-4.3_p24-r1 (09 Sep 2014)
+
+  09 Sep 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3_p22-r1.ebuild,
+  +bash-4.3_p24-r1.ebuild, -files/bash-4.3-indirect-array-element.patch,
+  +files/bash-4.3-term-cleanup.patch:
+  Revbump so bash cleans up readline and its terminal state in all cases.
+  Removed old.
+
+  30 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> files/bashrc:
+  Added KDE's konsole to the list of valid terms for PROMPT_COMMAND.
+
+*bash-4.3_p24 (24 Aug 2014)
+
+  24 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3_p22.ebuild,
+  +bash-4.3_p24.ebuild:
+  Version bump. Removed old.
+
+*bash-4.3_p22-r1 (12 Aug 2014)
+
+  12 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3_p18-r4.ebuild,
+  +bash-4.3_p22-r1.ebuild, +files/bash-4.3-append-process-segfault.patch,
+  -files/bash-4.3-here-doc-ps2-comsub.patch,
+  -files/bash-4.3-lastpipe-nested-pipe-segfault.patch:
+  Revbump to fix a segmentation fault with lastpipe. Removed old.
+
+*bash-4.3_p22 (02 Aug 2014)
+
+  02 Aug 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3_p18-r3.ebuild,
+  +bash-4.3_p22.ebuild:
+  Version bump. Removed old.
+
+*bash-4.3_p18-r4 (24 Jul 2014)
+
+  24 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3_p18-r2.ebuild,
+  +bash-4.3_p18-r4.ebuild, +files/bash-4.3-indirect-array-element.patch:
+  Revbump to fix a bug in array name expansion. Removed old.
+
+*bash-4.3_p18-r3 (08 Jul 2014)
+
+  08 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3_p18.ebuild,
+  -bash-4.3_p18-r1.ebuild, +bash-4.3_p18-r3.ebuild,
+  +files/bash-4.3-lastpipe-nested-pipe-segfault.patch:
+  Revbump to fix a segfault in lastpipe mode. Removed old.
 
 *bash-4.3_p18-r2 (17 Jun 2014)
 

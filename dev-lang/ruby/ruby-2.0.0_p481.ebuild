@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p481.ebuild,v 1.4 2014/06/19 18:11:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p481.ebuild,v 1.6 2014/08/21 09:23:19 graaff Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ SRC_URI="mirror://ruby/2.0/${MY_P}.tar.bz2
 		 http://dev.gentoo.org/~flameeyes/ruby-team/${PN}-patches-${PATCHSET}.tar.bz2"
 
 LICENSE="|| ( Ruby-BSD BSD-2 )"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="berkdb debug doc examples gdbm ipv6 +rdoc rubytests socks5 ssl xemacs ncurses +readline"
 
 RDEPEND="
@@ -52,7 +52,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 PDEPEND="
-	>=dev-ruby/rubygems-2.0.2[ruby_targets_ruby20]
+	virtual/rubygems:ruby20
 	>=dev-ruby/json-1.7.7[ruby_targets_ruby20]
 	>=dev-ruby/rake-0.9.6[ruby_targets_ruby20]
 	rdoc? ( >=dev-ruby/rdoc-4.0.0[ruby_targets_ruby20] )

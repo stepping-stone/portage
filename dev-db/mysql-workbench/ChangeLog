@@ -1,6 +1,25 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.93 2014/05/17 07:53:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.97 2014/08/25 19:34:11 graaff Exp $
+
+  25 Aug 2014; Hans de Graaff <graaff@gentoo.org> mysql-workbench-6.1.7.ebuild,
+  +files/mysql-workbench-6.1.7-mysql_options4.patch:
+  Add patch to compile against mariadb 10, fixing bug 520664.
+
+  12 Jul 2014; Hans de Graaff <graaff@gentoo.org> mysql-workbench-6.1.7.ebuild,
+  +files/mysql-workbench-6.1.7-wbcopytables.patch:
+  Fix wbcopytables RPATH. Thanks to Tom Hope for providing a patch in bug
+  516376.
+
+  12 Jul 2014; Hans de Graaff <graaff@gentoo.org>
+  -mysql-workbench-6.0.8.ebuild, -mysql-workbench-6.1.4.ebuild:
+  Cleanup.
+
+*mysql-workbench-6.1.7 (30 Jun 2014)
+
+  30 Jun 2014; Hans de Graaff <graaff@gentoo.org>
+  +mysql-workbench-6.1.7.ebuild:
+  Version bump.
 
 *mysql-workbench-6.1.6 (17 May 2014)
 

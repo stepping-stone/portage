@@ -1,6 +1,15 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.209 2014/06/23 11:16:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.211 2014/08/05 18:34:08 mrueg Exp $
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> gajim-0.15.4.ebuild,
+  gajim-0.16_rc1.ebuild, gajim-0.16_rc2.ebuild:
+  Remove trailing '.' from DESCRIPTION.
+
+*gajim-0.16_rc2 (09 Jul 2014)
+
+  09 Jul 2014; Justin Lecher <jlec@gentoo.org> +gajim-0.16_rc2.ebuild:
+  Version BUmp
 
   23 Jun 2014; Tobias Klausmann <klausman@gentoo.org> gajim-0.16_rc1.ebuild:
   Dekeywording on alpha due to missing pyopenssl-0.14

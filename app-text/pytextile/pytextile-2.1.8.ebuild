@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.1.8.ebuild,v 1.2 2014/05/31 13:55:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.1.8.ebuild,v 1.4 2014/08/10 18:30:21 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -10,7 +10,7 @@ inherit distutils-r1
 MY_PN="textile"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A Python implementation of Textile, Dean Allen's Human Text Generator for creating (X)HTML."
+DESCRIPTION="A Python implementation of Textile, Dean Allen's Human Text Generator for creating (X)HTML"
 HOMEPAGE="https://github.com/ikirudennis/python-textile"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
@@ -26,9 +26,9 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
+PATCHES=( "${FILESDIR}"/${P}-sanitizer.patch )
+
 python_prepare_all() {
-	# https://github.com/ikirudennis/python-textile/issues/6
-	sed -e 's:testSanitize:_&:' -i textile/tests/__init__.py || die
 	# This resolves a nasty race condition noted and observed by Arfrever
 	sed -e 's:with-id = 1::' -i setup.cfg || die
 	distutils-r1_python_prepare_all

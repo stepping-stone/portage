@@ -1,6 +1,32 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.508 2014/06/18 20:35:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.512 2014/08/29 20:51:04 alonbl Exp $
+
+*gnutls-3.3.7-r1 (29 Aug 2014)
+
+  29 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> +gnutls-3.3.7-r1.ebuild:
+  Remove htmldir if \!use doc, bug#520854. Force regenerate of makeinfo files,
+  bug#520818
+
+*gnutls-3.2.17 (24 Aug 2014)
+*gnutls-3.3.7 (24 Aug 2014)
+
+  24 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> +files/gnutls-3.3.7-build.patch,
+  +gnutls-3.2.17.ebuild, +gnutls-3.3.7.ebuild, -gnutls-3.2.15.ebuild,
+  -gnutls-3.3.4-r1.ebuild:
+  Version bump, bug#520784, cleanup
+
+*gnutls-3.2.16 (08 Aug 2014)
+*gnutls-3.3.6 (08 Aug 2014)
+
+  08 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> +gnutls-3.2.16.ebuild,
+  +gnutls-3.3.6.ebuild, -gnutls-3.3.4.ebuild:
+  Version bump, bug#518762
+
+*gnutls-3.3.4-r1 (06 Jul 2014)
+
+  06 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org> +gnutls-3.3.4-r1.ebuild:
+  Fix dane roots issue, bug#443104, thanks to Rafał Mużyło
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> gnutls-3.3.4.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

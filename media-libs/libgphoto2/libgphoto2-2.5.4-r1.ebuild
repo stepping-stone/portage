@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.4-r1.ebuild,v 1.2 2014/06/18 19:42:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.4-r1.ebuild,v 1.11 2014/09/15 08:21:21 ago Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0/6" # libgphoto2.so soname version
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="doc examples exif gd jpeg nls serial zeroconf"
 
 # By default, drivers for all supported cameras will be compiled.
@@ -161,7 +161,7 @@ multilib_src_configure() {
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		--with-hotplug-doc-dir="${EPREFIX}"/usr/share/doc/${PF}/hotplug \
 		--with-rpmbuild=$(type -P true) \
-		udevscriptdir="$(udev_get_udevdir)" \
+		udevscriptdir="$(get_udevdir)" \
 		"${myconf[@]}"
 }
 
@@ -197,7 +197,7 @@ multilib_src_install_all() {
 	# end fixup
 
 	local udev_rules cam_list
-	udev_rules="$(udev_get_udevdir)/rules.d/70-libgphoto2.rules"
+	udev_rules="$(get_udevdir)/rules.d/70-libgphoto2.rules"
 	cam_list="/usr/$(get_libdir)/libgphoto2/print-camera-list"
 
 	if [ -x "${ED}"${cam_list} ]; then

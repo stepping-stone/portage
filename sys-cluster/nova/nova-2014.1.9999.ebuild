@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1.9999.ebuild,v 1.2 2014/05/05 06:17:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1.9999.ebuild,v 1.5 2014/08/10 20:21:07 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils git-2 multilib user
 
-DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python."
+DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python"
 HOMEPAGE="https://launchpad.net/nova"
 EGIT_REPO_URI="https://github.com/openstack/nova.git"
 EGIT_BRANCH="stable/icehouse"
@@ -24,15 +24,25 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
 		app-admin/sudo"
 
-RDEPEND="sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
-	          <dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}] )
-		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
-	         <dev-python/sqlalchemy-0.9.99[mysql,${PYTHON_USEDEP}] )
-		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
-	            <dev-python/sqlalchemy-0.9.99[postgres,${PYTHON_USEDEP}] )
+RDEPEND="sqlite? (
+			>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[sqlite,${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+		)
+		mysql? (
+			dev-python/mysql-python
+			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		)
+		postgres? (
+			dev-python/psycopg:2
+			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		)
 		>=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]
 		>=dev-python/boto-2.12.0[${PYTHON_USEDEP}]
 		!~dev-python/boto-2.13.0[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]

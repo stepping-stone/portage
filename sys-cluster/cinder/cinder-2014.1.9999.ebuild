@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1.9999.ebuild,v 1.1 2014/04/28 02:50:19 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1.9999.ebuild,v 1.5 2014/09/14 19:50:12 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils git-2 user
 
-DESCRIPTION="Cinder is the OpenStack Block storage service, a spin out of nova-volumes."
+DESCRIPTION="Cinder is the OpenStack Block storage service, a spin out of nova-volumes"
 HOMEPAGE="https://launchpad.net/cinder"
 EGIT_REPO_URI="https://github.com/openstack/cinder.git"
 EGIT_BRANCH="stable/icehouse"
@@ -40,9 +40,8 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
 				dev-python/oslo-sphinx[${PYTHON_USEDEP}] )"
 
-RDEPEND="=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]
 		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
@@ -62,16 +61,28 @@ RDEPEND="=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		>=dev-python/python-swiftclient-1.6[${PYTHON_USEDEP}]
 		>=dev-python/requests-1.1[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
+		!~dev-python/routes-2.0[${PYTHON_USEDEP}]
 		>=dev-python/taskflow-0.1.3[${PYTHON_USEDEP}]
 		<dev-python/taskflow-0.2[${PYTHON_USEDEP}]
 		>=dev-python/rtslib-fb-2.1.39[${PYTHON_USEDEP}]
-		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
-		sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
-			<dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}] )
-		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
-			<dev-python/sqlalchemy-0.9.99[mysql,${PYTHON_USEDEP}] )
-		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
-			<dev-python/sqlalchemy-0.9.99[postgres,${PYTHON_USEDEP}] )
+		>=dev-python/six-1.6.0[${PYTHON_USEDEP}]
+		sqlite? (
+			>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[sqlite,${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+		)
+		mysql? (
+			dev-python/mysql-python
+			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		)
+		postgres? (
+			dev-python/psycopg:2
+			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		)
 		>=dev-python/sqlalchemy-migrate-0.9[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]
 		>=dev-python/suds-0.4[${PYTHON_USEDEP}]

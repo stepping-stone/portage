@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1108 2014/06/13 17:24:41 rhill Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1117 2014/08/29 07:57:24 zlogene Exp $
 
 -->
 <herds>
@@ -149,6 +149,10 @@
   <maintainer>
     <email>alonbl@gentoo.org</email>
     <name>Alon Bar-Lev</name>
+  </maintainer>
+  <maintainer>
+    <email>k_f@gentoo.org</email>
+    <name>Kristian Fiskerstrand</name>
   </maintainer>
 </herd>
 <herd>
@@ -331,6 +335,16 @@
   </maintainer>
 </herd>
 <herd>
+  <name>3dprint</name>
+  <email>3dprint@gentoo.org</email>
+  <description>Packages related to 3D printers</description>
+  <maintainer>
+    <email>amynka@gentoo.org</email>
+    <name>Amy Winston</name>
+    <role>Team Lead, packages maintainer</role>
+  </maintainer>
+</herd>
+<herd>
   <name>java</name>
   <email>java@gentoo.org</email>
   <description>Java-related packages</description>
@@ -375,7 +389,26 @@
   <name>perl</name>
   <email>perl@gentoo.org</email>
   <description>Perl-related packages</description>
-  <maintainingproject>/proj/en/perl/index.xml</maintainingproject>
+  <maintainer>
+    <email>axs@gentoo.org</email>
+    <name>Ian Stakenvicius</name>
+  </maintainer>
+  <maintainer>
+    <email>civil@gentoo.org</email>
+    <name>Vladimir Smirnow</name>
+  </maintainer>
+  <maintainer>
+    <email>dilfridge@gentoo.org</email>
+    <name>Andreas K. Hüttel</name>
+  </maintainer>
+  <maintainer>
+    <email>monsieurp@gentoo.org</email>
+    <name>Patrice Clement</name>
+  </maintainer>
+  <maintainer>
+    <email>zlogene@gentoo.org</email>
+    <name>Mikle Kolyada</name>
+  </maintainer>
 </herd>
 <herd>
   <name>prefix</name>
@@ -968,10 +1001,6 @@
     <email>maksbotan@gentoo.org</email>
     <name>Maxim Koltsov</name>
   </maintainer>
-  <maintainer>
-    <email>pinkbyte@gentoo.org</email>
-    <name>Sergey Popov</name>
-  </maintainer>
 </herd>
 <herd>
   <name>ruby</name>
@@ -1364,7 +1393,7 @@
     <name>Tim Harder</name>
   </maintainer>
   <maintainer>
-    <email>ssuominen@gentoo.org></email>
+    <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
   </maintainer>
   <maintainer>
@@ -1508,6 +1537,10 @@
   <maintainer>
     <email>dolsen@gentoo.org</email>
     <name>Brian Dolbec</name>
+  </maintainer>
+  <maintainer>
+    <email>twitch153@gentoo.org</email>
+    <name>Devan Franchini</name>
   </maintainer>
 </herd>
 <herd>
@@ -1783,6 +1816,9 @@
     <email>ago@gentoo.org</email>
     <name>Agostino Sarubbo</name>
   </maintainer>
+  <maintainer>
+    <email>zlogene@gentoo.org</email>
+  </maintainer>
 </herd>
 <herd>
   <name>sh</name>
@@ -1915,10 +1951,6 @@
   <name>net-news</name>
   <email>net-news@gentoo.org</email>
   <description>Herd for NNTP related packages in net-news</description>
-  <maintainer>
-    <email>kensington@gentoo.org</email>
-    <name>Michael Palimaka</name>
-  </maintainer>
   <maintainer>
     <email>radhermit@gentoo.org</email>
     <name>Tim Harder</name>
@@ -2259,6 +2291,12 @@
     <email>mrueg@gentoo.org</email>
     <name>Manuel Rüger</name>
   </maintainer>
+</herd> 
+<herd>
+  <name>eselect</name>
+  <email>eselect@gentoo.org</email>
+  <description>Gentoo eselect project</description>
+  <maintainingproject>/proj/en/eselect/index.xml</maintainingproject>
 </herd> 
 </herds>
 

@@ -1,6 +1,25 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.351 2014/06/14 10:36:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.355 2014/09/18 18:59:55 angelos Exp $
+
+*mpd-0.18.14 (18 Sep 2014)
+
+  18 Sep 2014; Christoph Mende <christoph@gentoo.org> +mpd-0.18.14.ebuild,
+  -mpd-0.18.13.ebuild:
+  Version bump, remove old
+
+*mpd-0.18.13 (05 Sep 2014)
+
+  05 Sep 2014; Christoph Mende <angelos@gentoo.org> +mpd-0.18.13.ebuild,
+  -mpd-0.18.11.ebuild:
+  Version bump, remove old
+
+  25 Aug 2014; Raúl Porcel <armin76@gentoo.org> mpd-0.17.6.ebuild:
+  Drop sparc
+
+  14 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> mpd-0.17.6.ebuild,
+  mpd-0.18.10-r1.ebuild, mpd-0.18.11.ebuild:
+  Simplify libcdio dependency string.
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> mpd-0.18.10-r1.ebuild:
   x86 stable wrt bug #509502

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-212-r5.ebuild,v 1.5 2014/06/24 22:17:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-212-r5.ebuild,v 1.17 2014/09/14 10:18:09 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
-KEYWORDS="~alpha amd64 arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
 IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
 	kdbus +kmod lzma pam policykit python qrcode +seccomp selinux ssl
 	test vanilla xattr"
@@ -59,8 +59,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-libs/glibc-2.14
 	!sys-fs/udev"
 
-# sys-apps/daemon: the daemon only (+ build-time lib dep for tests)
-PDEPEND=">=sys-apps/dbus-1.6.8-r1:0
+# sys-apps/dbus: the daemon only (+ build-time lib dep for tests)
+PDEPEND=">=sys-apps/dbus-1.6.8-r1:0[systemd]
 	>=sys-apps/hwids-20130717-r1[udev]
 	>=sys-fs/udev-init-scripts-25
 	policykit? ( sys-auth/polkit )
@@ -71,6 +71,7 @@ DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils:0
 	dev-util/gperf
 	>=dev-util/intltool-0.50
+	>=sys-apps/coreutils-8.16
 	>=sys-devel/binutils-2.23.1
 	>=sys-devel/gcc-4.6
 	>=sys-kernel/linux-headers-${MINKV}
@@ -458,6 +459,12 @@ pkg_postinst() {
 		elog "To get additional features, a number of optional runtime dependencies may"
 		elog "be installed:"
 		elog "- sys-apps/systemd-ui: for GTK+ systemadm UI and gnome-ask-password-agent"
+	fi
+
+	if has_version sys-apps/openrc &&
+		! has_version sys-fs/udev-init-scripts; then
+		elog "If you plan to boot using OpenRC and udev or eudev, you"
+		elog "need to install the udev-init-scripts package."
 	fi
 }
 

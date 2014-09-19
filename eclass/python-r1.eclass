@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.74 2014/06/19 08:08:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.76 2014/08/18 08:56:06 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -293,7 +293,7 @@ python_gen_usedep() {
 	[[ ${matches[@]} ]] || die "No supported implementations match python_gen_usedep patterns: ${@}"
 
 	local out=${matches[@]}
-	echo ${out// /,}
+	echo "${out// /,}"
 }
 
 # @FUNCTION: python_gen_useflags
@@ -330,7 +330,7 @@ python_gen_useflags() {
 		done
 	done
 
-	echo ${matches[@]}
+	echo "${matches[@]}"
 }
 
 # @FUNCTION: python_gen_cond_dep
@@ -368,24 +368,26 @@ python_gen_cond_dep() {
 	local dep=${1}
 	shift
 
-	# substitute ${PYTHON_USEDEP} if used
-	if [[ ${dep} == *'${PYTHON_USEDEP}'* ]]; then
-		local PYTHON_USEDEP=$(python_gen_usedep "${@}")
-		dep=${dep//\$\{PYTHON_USEDEP\}/${PYTHON_USEDEP}}
-	fi
-
 	for impl in "${PYTHON_COMPAT[@]}"; do
 		_python_impl_supported "${impl}" || continue
 
 		for pattern; do
 			if [[ ${impl} == ${pattern} ]]; then
+				# substitute ${PYTHON_USEDEP} if used
+				# (since python_gen_usedep() will not return ${PYTHON_USEDEP}
+				#  the code is run at most once)
+				if [[ ${dep} == *'${PYTHON_USEDEP}'* ]]; then
+					local PYTHON_USEDEP=$(python_gen_usedep "${@}")
+					dep=${dep//\$\{PYTHON_USEDEP\}/${PYTHON_USEDEP}}
+				fi
+
 				matches+=( "python_targets_${impl}? ( ${dep} )" )
 				break
 			fi
 		done
 	done
 
-	echo ${matches[@]}
+	echo "${matches[@]}"
 }
 
 # @ECLASS-VARIABLE: BUILD_DIR

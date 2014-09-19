@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/prison
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/prison/ChangeLog,v 1.15 2014/06/14 10:12:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/prison/ChangeLog,v 1.19 2014/08/03 14:54:22 johu Exp $
+
+  03 Aug 2014; Johannes Huber <johu@gentoo.org> -prison-1.0.ebuild:
+  Remove old.
+
+  02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> prison-1.1.1.ebuild:
+  Stable for ppc64, wrt bug #509648
+
+  13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> prison-1.1.1.ebuild:
+  Stable for ppc, wrt bug #509648
+
+  10 Jul 2014; Chema Alonso <nimiux@gentoo.org> prison-1.1.1.ebuild:
+  Stable for amd64 wrt bug #509648
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> prison-1.1.1.ebuild:
   x86 stable wrt bug #509648

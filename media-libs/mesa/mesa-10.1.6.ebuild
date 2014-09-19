@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.6.ebuild,v 1.1 2014/06/25 10:45:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.6.ebuild,v 1.3 2014/07/26 09:04:22 ssuominen Exp $
 
 EAPI=5
 
@@ -94,8 +94,8 @@ RDEPEND="
 	gallium? ( app-admin/eselect-mesa )
 	>=app-admin/eselect-opengl-1.2.7
 	>=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
-	gbm? ( >=virtual/udev-208-r2[${MULTILIB_USEDEP}] )
-	dri3? ( >=virtual/udev-208-r2[${MULTILIB_USEDEP}] )
+	gbm? ( >=virtual/libudev-208:=[${MULTILIB_USEDEP}] )
+	dri3? ( >=virtual/libudev-208:=[${MULTILIB_USEDEP}] )
 	>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 	>=x11-libs/libxshmfence-1.1[${MULTILIB_USEDEP}]
 	>=x11-libs/libXdamage-1.1.4-r1[${MULTILIB_USEDEP}]
@@ -301,6 +301,11 @@ multilib_src_configure() {
 		"
 	fi
 
+	# on abi_x86_32 hardened we need to have asm disable  
+	if [[ ${ABI} == x86* ]] && use pic; then
+		myconf+=" --disable-asm"
+	fi
+
 	# build fails with BSD indent, bug #428112
 	use userland_GNU || export INDENT=cat
 
@@ -317,7 +322,6 @@ multilib_src_configure() {
 		$(use_enable gles2) \
 		$(use_enable nptl glx-tls) \
 		$(use_enable osmesa) \
-		$(use_enable !pic asm) \
 		--with-dri-drivers=${DRI_DRIVERS} \
 		--with-gallium-drivers=${GALLIUM_DRIVERS} \
 		PYTHON2="${PYTHON}" \

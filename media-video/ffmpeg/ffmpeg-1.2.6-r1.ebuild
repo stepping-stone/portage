@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.2.6-r1.ebuild,v 1.3 2014/06/19 13:14:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.2.6-r1.ebuild,v 1.13 2014/09/15 08:23:19 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ fi
 
 inherit eutils flag-o-matic multilib multilib-minimal toolchain-funcs ${SCM}
 
-DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec."
+DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec"
 HOMEPAGE="http://ffmpeg.org/"
 if [ "${PV#9999}" != "${PV}" ] ; then
 	SRC_URI=""
@@ -26,7 +26,7 @@ FFMPEG_REVISION="${PV#*_p}"
 LICENSE="GPL-2 amr? ( GPL-3 ) encode? ( aac? ( GPL-3 ) )"
 SLOT="0"
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
 	aac aacplus alsa amr bindist bluray +bzip2 cdio celt
@@ -286,7 +286,7 @@ multilib_src_configure() {
 		esac
 	fi
 
-	"${S}/configure" \
+	set -- "${S}/configure" \
 		--prefix="${EPREFIX}/usr" \
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \
 		--shlibdir="${EPREFIX}/usr/$(get_libdir)" \
@@ -299,7 +299,9 @@ multilib_src_configure() {
 		--extra-cflags="${CFLAGS}" \
 		--extra-cxxflags="${CXXFLAGS}" \
 		$(use_enable static-libs static) \
-		"${myconf[@]}" || die
+		"${myconf[@]}"
+	echo "${@}"
+	"${@}" || die
 }
 
 multilib_src_compile() {

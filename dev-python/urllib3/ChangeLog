@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/urllib3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.21 2014/05/06 04:44:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.23 2014/07/16 14:16:45 idella4 Exp $
+
+*urllib3-1.9 (16 Jul 2014)
+
+  16 Jul 2014; Ian Delaney <idella4@gentoo.org> +urllib3-1.9.ebuild:
+  bump; fix to tests ensuring imports from installed system six, fix patch by
+  fau, fixes Bug #517078
+
+*urllib3-1.8.3 (26 Jun 2014)
+
+  26 Jun 2014; Tim Harder <radhermit@gentoo.org> +urllib3-1.8.3.ebuild:
+  Version bump.
 
   06 May 2014; Tim Harder <radhermit@gentoo.org> urllib3-1.8-r1.ebuild,
   urllib3-1.8.2.ebuild:

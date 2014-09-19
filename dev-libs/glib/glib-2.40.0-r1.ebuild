@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.40.0-r1.ebuild,v 1.2 2014/06/18 19:11:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.40.0-r1.ebuild,v 1.12 2014/09/15 08:18:20 ago Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -16,10 +16,11 @@ SRC_URI="${SRC_URI}
 LICENSE="LGPL-2+"
 SLOT="2"
 IUSE="debug fam kernel_linux +mime selinux static-libs systemtap test utils xattr"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
 # FIXME: want >=libselinux-2.2.2-r4[${MULTILIB_USEDEP}] - bug #480960
 RDEPEND="
+	!<dev-util/gdbus-codegen-${PV}
 	>=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
 	>=virtual/libffi-3.0.13-r1[${MULTILIB_USEDEP}]
 	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
@@ -50,7 +51,6 @@ DEPEND="${RDEPEND}
 		${PYTHON_DEPS}
 		>=dev-util/gdbus-codegen-${PV}[${PYTHON_USEDEP}]
 		>=sys-apps/dbus-1.2.14 )
-	!<dev-libs/gobject-introspection-1.$(get_version_component_range 2)
 	!<dev-util/gtk-doc-1.15-r2
 "
 # gobject-introspection blocker to ensure people don't mix

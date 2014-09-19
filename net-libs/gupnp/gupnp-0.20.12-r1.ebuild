@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12-r1.ebuild,v 1.4 2014/06/24 22:17:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12-r1.ebuild,v 1.8 2014/08/07 19:36:01 jer Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/GUPnP"
 
 LICENSE="LGPL-2"
 SLOT="0/4"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="connman +introspection kernel_linux networkmanager"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
@@ -57,7 +57,7 @@ multilib_src_configure() {
 	use networkmanager && backend=network-manager
 
 	# fake connman.pc to avoid pulling it in unnecessarily (only dbus
-	# interface is used) and fix multilib.
+	# interface is used) and fix multilib. [fixed in vcs]
 	# https://bugzilla.gnome.org/show_bug.cgi?id=731457
 
 	ECONF_SOURCE=${S} \

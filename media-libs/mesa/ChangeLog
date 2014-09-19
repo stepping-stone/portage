@@ -1,6 +1,40 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.566 2014/06/25 10:45:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.573 2014/09/16 17:23:19 chithanh Exp $
+
+  16 Sep 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-10.2.7.ebuild:
+  Enable gbm by default so we can enable glamor by default in xorg-server
+
+*mesa-10.2.7 (07 Sep 2014)
+
+  07 Sep 2014; Michał Górny <mgorny@gentoo.org>
+  +files/mesa-10.2.7-llvm-unique_ptr.patch, +mesa-10.2.7.ebuild:
+  Version bump, requested in bug #522306. Update dependencies from ::x11. Fix
+  llvm-3.5.0 support, bug #522300.
+
+*mesa-10.2.6 (19 Aug 2014)
+
+  19 Aug 2014; Matt Turner <mattst88@gentoo.org> +mesa-10.2.6.ebuild,
+  -mesa-10.2.5.ebuild:
+  Version bump to 10.2.6.
+
+*mesa-10.2.5 (19 Aug 2014)
+
+  19 Aug 2014; Matt Turner <mattst88@gentoo.org> +mesa-10.2.5.ebuild:
+  Version bump to 10.2.5, bug 519406.
+
+  26 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> mesa-10.0.4.ebuild,
+  mesa-10.1.0.ebuild, mesa-10.1.1.ebuild, mesa-10.1.3.ebuild,
+  mesa-10.1.4.ebuild, mesa-10.1.6.ebuild, mesa-10.2.1.ebuild,
+  mesa-10.2.2.ebuild, mesa-10.2.4.ebuild, mesa-7.10.3.ebuild,
+  mesa-7.11.2.ebuild, mesa-8.0.4-r1.ebuild, mesa-9.0.3.ebuild,
+  mesa-9.1.6.ebuild, mesa-9.2.5-r1.ebuild:
+  Use virtual/libudev instead of virtual/udev.
+
+  08 Jul 2014; Magnus Granberg <zorry@gentoo.org> mesa-9.2.5-r1.ebuild,
+  mesa-10.1.6.ebuild, mesa-10.2.1.ebuild, mesa-10.2.2.ebuild:
+  Disable asm on x86 only if use pic #512208
 
 *mesa-10.1.6 (25 Jun 2014)
 *mesa-10.2.2 (25 Jun 2014)

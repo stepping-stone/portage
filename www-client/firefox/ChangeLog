@@ -1,6 +1,88 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.338 2014/06/15 08:33:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.359 2014/09/11 22:17:11 axs Exp $
+
+*firefox-31.1.0-r1 (11 Sep 2014)
+
+  11 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-31.1.0-r1.ebuild, -firefox-31.1.0.ebuild:
+  added missing dependencies to a revbump of the new stable candidate; didn't
+  migrate changes to v32 ebuild to avoid unnecessary rebuilds, will do so with
+  next commit
+
+  07 Sep 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.8.0.ebuild:
+  Stable for ppc64, wrt bug #522020
+
+  07 Sep 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.8.0.ebuild:
+  Stable for ppc, wrt bug #522020
+
+  05 Sep 2014; Jeroen Roovers <jer@gentoo.org> firefox-24.8.0.ebuild:
+  Stable for HPPA (bug #522020).
+
+  05 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-31.1.0.ebuild,
+  firefox-32.0.ebuild:
+  fixed minimum versions on some deps, fix is in-place, revbumps will be coming
+  after other bugs are sorted
+
+  05 Sep 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.8.0.ebuild:
+  Stable for x86, wrt bug #522020
+
+  05 Sep 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.8.0.ebuild:
+  Stable for amd64, wrt bug #522020
+
+*firefox-32.0 (03 Sep 2014)
+*firefox-24.8.0 (03 Sep 2014)
+*firefox-31.1.0 (03 Sep 2014)
+
+  03 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +firefox-24.8.0.ebuild,
+  +firefox-31.1.0.ebuild, +firefox-32.0.ebuild, -firefox-24.5.0.ebuild,
+  -firefox-24.6.0.ebuild, -firefox-29.0.1.ebuild, -firefox-31.0.ebuild:
+  version bump, cheanup of some old ebuilds
+
+  10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.7.0.ebuild:
+  Stable for ppc64, wrt bug #517876
+
+  09 Aug 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.7.0.ebuild:
+  Stable for ppc, wrt bug #517876
+
+  08 Aug 2014; Jeroen Roovers <jer@gentoo.org> firefox-24.7.0.ebuild:
+  Stable for HPPA (bug #517876).
+
+  04 Aug 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.7.0.ebuild:
+  Stable for x86, wrt bug #517876
+
+  01 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> firefox-24.7.0.ebuild:
+  amd64 stable wrt bug #517876
+
+  01 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> -firefox-30.0.ebuild,
+  firefox-31.0.ebuild:
+  remove old; made firefox-31 compatible with fixed IUSE=wifi implementation in
+  mozconfig-v4.eclass
+
+  01 Aug 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-31.0.ebuild:
+  made compatible with fixed IUSE=wifi implementation in mozconfig-v4.eclass
+
+  31 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-31.0.ebuild:
+  bumped patchset to fix bug 518494
+
+*firefox-31.0 (28 Jul 2014)
+
+  28 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +firefox-31.0.ebuild:
+  version bump, remove old; security bug 517876
+
+  25 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-24.7.0.ebuild:
+  fixed nss dependency, bug 518024
+
+*firefox-24.7.0 (24 Jul 2014)
+
+  24 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +firefox-24.7.0.ebuild:
+  version bump for ESR, security bug 517876
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.6.0.ebuild:
+  Stable for ppc64, wrt bug #512896
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.6.0.ebuild:
+  Stable for ppc, wrt bug #512896
 
   15 Jun 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.6.0.ebuild:
   Stable for x86, wrt bug #512896

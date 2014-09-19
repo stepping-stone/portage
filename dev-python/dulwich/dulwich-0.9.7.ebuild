@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.9.7.ebuild,v 1.1 2014/06/20 02:58:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.9.7.ebuild,v 1.3 2014/08/10 21:09:52 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 
-DESCRIPTION="Dulwich is a pure-Python implementation of the Git file formats and protocols."
+DESCRIPTION="Dulwich is a pure-Python implementation of the Git file formats and protocols"
 HOMEPAGE="https://github.com/jelmer/dulwich/  http://pypi.python.org/pypi/dulwich"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
@@ -18,7 +18,6 @@ IUSE="doc examples test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/gevent[$(python_gen_usedep python2_7)]
-		virtual/python-unittest2[${PYTHON_USEDEP}]
 	)"
 RDEPEND=""
 DISTUTILS_IN_SOURCE_BUILD=1

@@ -1,6 +1,28 @@
 # ChangeLog for kde-base/kbreakout
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbreakout/ChangeLog,v 1.207 2014/06/19 13:32:10 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbreakout/ChangeLog,v 1.212 2014/09/16 18:17:34 johu Exp $
+
+*kbreakout-4.14.1 (16 Sep 2014)
+
+  16 Sep 2014; Johannes Huber <johu@gentoo.org> +kbreakout-4.14.1.ebuild:
+  Version bump KDE SC 4.14.1
+
+*kbreakout-4.14.0 (20 Aug 2014)
+
+  20 Aug 2014; Johannes Huber <johu@gentoo.org> +kbreakout-4.14.0.ebuild:
+  Version bump KDE SC 4.14.0
+
+  05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> kbreakout-4.12.5.ebuild,
+  kbreakout-4.13.3.ebuild:
+  Remove trailing '.' from DESCRIPTION.
+
+  23 Jul 2014; Johannes Huber <johu@gentoo.org> -kbreakout-4.13.2.ebuild:
+  Remove KDE SC 4.13.2
+
+*kbreakout-4.13.3 (16 Jul 2014)
+
+  16 Jul 2014; Johannes Huber <johu@gentoo.org> +kbreakout-4.13.3.ebuild:
+  Version bump KDE SC 4.13.3
 
   19 Jun 2014; Chris Reffett <creffett@gentoo.org> -kbreakout-4.13.1.ebuild:
   Remove KDE SC 4.13.1

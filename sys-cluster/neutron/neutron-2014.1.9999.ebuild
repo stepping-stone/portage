@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.9999.ebuild,v 1.2 2014/05/14 06:01:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.9999.ebuild,v 1.6 2014/08/10 20:20:58 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 git-2 user
 
-DESCRIPTION="A virtual network service for Openstack."
+DESCRIPTION="A virtual network service for Openstack"
 HOMEPAGE="https://launchpad.net/neutron"
 EGIT_REPO_URI="https://github.com/openstack/neutron.git"
 EGIT_BRANCH="stable/icehouse"
@@ -42,7 +42,6 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
 		>=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]
 		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
@@ -55,12 +54,23 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
 		>=dev-python/python-neutronclient-2.3.4[${PYTHON_USEDEP}]
 		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
-		sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
-	          <dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}] )
-		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
-	         <dev-python/sqlalchemy-0.9.99[mysql,${PYTHON_USEDEP}] )
-		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
-	            <dev-python/sqlalchemy-0.9.99[postgres,${PYTHON_USEDEP}] )
+		sqlite? (
+			>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[sqlite,${PYTHON_USEDEP}]
+	        <=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+		)
+		mysql? (
+			dev-python/mysql-python
+			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		)
+		postgres? (
+			dev-python/psycopg:2
+			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
+			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		)
 		>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.7.0[${PYTHON_USEDEP}]
 		>=dev-python/alembic-0.4.1[${PYTHON_USEDEP}]

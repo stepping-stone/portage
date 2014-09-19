@@ -1,6 +1,38 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.207 2014/05/31 20:53:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.214 2014/08/21 15:14:10 vapier Exp $
+
+*xbmc-13.2 (21 Aug 2014)
+
+  21 Aug 2014; Mike Frysinger <vapier@gentoo.org> +xbmc-13.2.ebuild:
+  Version bump #512700 by Michael Cook.
+
+  12 Aug 2014; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Add support for running tests #519118 by Anthony Ryan.
+
+*xbmc-13.1 (30 Jul 2014)
+
+  30 Jul 2014; Mike Frysinger <vapier@gentoo.org> +xbmc-13.1.ebuild:
+  Version bump #512700 by Michael Cook.
+
+  29 Jul 2014; Mike Frysinger <vapier@gentoo.org> xbmc-12.3.ebuild,
+  xbmc-13.0_p2.ebuild, xbmc-9999.ebuild:
+  Require mesa[gles2] when USE=gles is enabled #515104 by A. Person.
+
+  29 Jul 2014; Mike Frysinger <vapier@gentoo.org> xbmc-12.1-r1.ebuild,
+  xbmc-12.2-r1.ebuild, xbmc-12.3.ebuild, xbmc-13.0_p2.ebuild, xbmc-9999.ebuild:
+  Drop redundant --enable-gl as there is a `use_enable opengl gl` call later on
+  #513708 by Gerhard Bräunlich.
+
+  29 Jul 2014; Mike Frysinger <vapier@gentoo.org> xbmc-12.3.ebuild,
+  xbmc-13.0_p2.ebuild, xbmc-9999.ebuild:
+  Support newer samba where USE=smbclient is always enabled #510866 by Daniel
+  Klaffenbach.
+
+  24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> xbmc-11.0.ebuild,
+  xbmc-12.1-r1.ebuild, xbmc-12.2-r1.ebuild, xbmc-12.3.ebuild,
+  xbmc-13.0_p2.ebuild, xbmc-9999.ebuild:
+  Split USE="udev" to USE="udisks" and USE="upower"
 
   31 May 2014; Samuli Suominen <ssuominen@gentoo.org> xbmc-11.0.ebuild,
   xbmc-12.1-r1.ebuild, xbmc-12.2-r1.ebuild, xbmc-12.3.ebuild,

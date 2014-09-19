@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/rdflib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.44 2014/05/26 04:53:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.46 2014/08/13 17:47:38 blueness Exp $
+
+  13 Aug 2014; Anthony G. Basile <blueness@gentoo.org> rdflib-4.0.1.ebuild,
+  rdflib-4.1.0.ebuild, rdflib-4.1.1.ebuild, rdflib-4.1.2.ebuild:
+  Keyword ~ppc64, bug #518436
+
+  29 Jul 2014; Ian Delaney <idella4@gentoo.org> rdflib-4.1.2.ebuild:
+  Add py3.4 support
 
   26 May 2014; Ian Delaney <idella4@gentoo.org> rdflib-4.1.2.ebuild:
   take out py3.4 to fix bug #510996

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/gnome-mahjongg-3.12.2.ebuild,v 1.1 2014/05/31 07:18:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/gnome-mahjongg-3.12.2.ebuild,v 1.4 2014/09/13 07:11:59 mr_bones_ Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.16"
+VALA_MIN_API_VERSION="0.18"
 
 inherit gnome-games vala
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Mahjongg"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE=""
 
 RDEPEND="

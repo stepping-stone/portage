@@ -1,6 +1,24 @@
 # ChangeLog for kde-base/picmi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.80 2014/06/19 13:32:51 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.84 2014/09/16 18:17:20 johu Exp $
+
+*picmi-4.14.1 (16 Sep 2014)
+
+  16 Sep 2014; Johannes Huber <johu@gentoo.org> +picmi-4.14.1.ebuild:
+  Version bump KDE SC 4.14.1
+
+*picmi-4.14.0 (20 Aug 2014)
+
+  20 Aug 2014; Johannes Huber <johu@gentoo.org> +picmi-4.14.0.ebuild:
+  Version bump KDE SC 4.14.0
+
+  23 Jul 2014; Johannes Huber <johu@gentoo.org> -picmi-4.13.2.ebuild:
+  Remove KDE SC 4.13.2
+
+*picmi-4.13.3 (16 Jul 2014)
+
+  16 Jul 2014; Johannes Huber <johu@gentoo.org> +picmi-4.13.3.ebuild:
+  Version bump KDE SC 4.13.3
 
   19 Jun 2014; Chris Reffett <creffett@gentoo.org> -picmi-4.13.1.ebuild:
   Remove KDE SC 4.13.1

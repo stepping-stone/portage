@@ -1,6 +1,23 @@
 # ChangeLog for dev-python/astroid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astroid/ChangeLog,v 1.4 2014/05/08 09:37:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astroid/ChangeLog,v 1.8 2014/09/10 09:35:33 idella4 Exp $
+
+*astroid-1.2.1 (10 Sep 2014)
+
+  10 Sep 2014; Ian Delaney <idella4@gentoo.org> +astroid-1.2.1.ebuild,
+  astroid-1.2.0.ebuild:
+  bump; update deps, test pahse
+
+  10 Aug 2014; Ian Delaney <idella4@gentoo.org> astroid-1.2.0.ebuild:
+  tidy
+
+  31 Jul 2014; Ian Delaney <idella4@gentoo.org> astroid-1.2.0.ebuild:
+  update dep, test phase wrt Bug #518272
+
+*astroid-1.2.0 (31 Jul 2014)
+
+  31 Jul 2014; Ian Delaney <idella4@gentoo.org> +astroid-1.2.0.ebuild:
+  bump
 
 *astroid-1.1.1 (08 May 2014)
 

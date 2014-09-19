@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.2.ebuild,v 1.4 2014/06/18 20:46:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.2.ebuild,v 1.7 2014/08/26 19:59:37 mgorny Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
 LICENSE="GPL-2 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
-IUSE="bash-completion caps +cramfs cytune fdformat ncurses nls pam python selinux slang static-libs +suid test tty-helpers udev unicode"
+IUSE="caps +cramfs cytune fdformat ncurses nls pam python selinux slang static-libs +suid test tty-helpers udev unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -88,14 +88,18 @@ lfs_fallocate_test() {
 multilib_src_configure() {
 	lfs_fallocate_test
 	export ac_cv_header_security_pam_misc_h=$(multilib_native_usex pam) #485486
+	# We manually set --libdir to the default since on prefix, econf will set it to
+	# a value which the configure script does not recognize.  This makes it set the
+	# usrlib_execdir to a bad value. bug #518898#c2, fixed upstream for >2.25
 	ECONF_SOURCE=${S} \
 	econf \
-		--docdir="/usr/share/doc/${PF}" \
-		--enable-fs-paths-extra=/usr/sbin:/bin:/usr/bin \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--enable-fs-paths-extra="${EPREFIX}/usr/sbin:${EPREFIX}/bin:${EPREFIX}/usr/bin" \
+		--libdir='${prefix}/'"$(get_libdir)" \
 		$(multilib_native_use_enable nls) \
 		--enable-agetty \
 		--with-bashcompletiondir="$(get_bashcompdir)" \
-		$(multilib_native_use_enable bash-completion) \
+		--enable-bash-completion \
 		$(multilib_native_use_enable caps setpriv) \
 		$(multilib_native_use_enable cramfs) \
 		$(multilib_native_use_enable cytune) \

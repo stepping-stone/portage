@@ -1,6 +1,21 @@
 # ChangeLog for dev-haskell/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.25 2014/06/05 08:15:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.29 2014/08/13 15:26:42 nativemad Exp $
+
+  13 Aug 2014; Andreas Schuerch <nativemad@gentoo.org>
+  cairo-0.12.5.0-r1.ebuild:
+  x86 stable, see bug 507390
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> cairo-0.12.0.ebuild,
+  cairo-0.12.3.1.ebuild, cairo-0.12.3.ebuild, cairo-0.12.4-r1.ebuild,
+  cairo-0.12.5.0-r1.ebuild, cairo-0.12.5.3.ebuild:
+  Drop trailing '.' from description.
+
+  25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Drop redundant '<maintainer>' field, leave only '<herd>'.
+
+  17 Jul 2014; Chema Alonso <nimiux@gentoo.org> cairo-0.12.5.0-r1.ebuild:
+  Stable for amd64 wrt bug #507390
 
   05 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> cairo-0.12.4-r1.ebuild:
   Use unmodified 'gtk2hsTypeGen' (bug #512474 by Paweł Hajdan, Jr.).

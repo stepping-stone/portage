@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.5.2.ebuild,v 1.1 2014/06/24 23:50:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.5.2.ebuild,v 1.19 2014/09/14 09:11:47 dilfridge Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ BRANDING="${PN}-branding-gentoo-0.8.tar.xz"
 inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
 unset SCM_ECLASS
 
-DESCRIPTION="LibreOffice, a full office productivity suite."
+DESCRIPTION="LibreOffice, a full office productivity suite"
 HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentoo.org/~dilfridge/distfiles/${BRANDING} )"
 [[ -n ${PATCHSET} ]] && SRC_URI+=" http://dev.gentooexperimental.org/~scarabeus/${PATCHSET}"
@@ -89,7 +89,7 @@ unset lo_xt
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
@@ -97,17 +97,17 @@ COMMON_DEPEND="
 	app-arch/unzip
 	>=app-text/hunspell-1.3.2-r3
 	app-text/mythes
-	app-text/libabw
+	=app-text/libabw-0.0*
 	>=app-text/libexttextcat-3.2
-	app-text/libebook
-	app-text/libetonyek
+	=app-text/libebook-0.0*
+	=app-text/libetonyek-0.0*
 	app-text/liblangtag
-	app-text/libmspub
-	>=app-text/libmwaw-0.2
-	>=app-text/libodfgen-0.0.3
+	=app-text/libmspub-0.0*
+	=app-text/libmwaw-0.2*
+	=app-text/libodfgen-0.0*
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
-	>=app-text/libwps-0.2.2
+	=app-text/libwps-0.2*
 	>=app-text/poppler-0.16:=[xpdf-headers(+),cxx]
 	>=dev-cpp/clucene-2.3.3.4-r2
 	dev-cpp/libcmis:0.4
@@ -117,21 +117,21 @@ COMMON_DEPEND="
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1:=
 	>=dev-libs/libatomic_ops-7.2d
-	=dev-libs/liborcus-0.5*:=
+	=dev-libs/liborcus-0.5*
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
-	>=dev-libs/openssl-1.0.0d
-	>=dev-libs/redland-1.0.16[ssl]
+	>=dev-libs/openssl-1.0.0d:0
+	>=dev-libs/redland-1.0.16
 	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
 	>=media-libs/harfbuzz-0.9.18:=[icu(+)]
 	media-libs/lcms:2
 	>=media-libs/libpng-1.4
-	>=media-libs/libcdr-0.0.5
-	media-libs/libfreehand
-	media-libs/libvisio
+	=media-libs/libcdr-0.0*
+	=media-libs/libfreehand-0.0*
+	=media-libs/libvisio-0.0*
 	>=net-misc/curl-7.21.4
 	net-nds/openldap
 	sci-mathematics/lpsolve
@@ -209,7 +209,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
-	>=dev-util/mdds-0.10.2:=
+	>=dev-util/mdds-0.10.3:=
 	virtual/pkgconfig
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2

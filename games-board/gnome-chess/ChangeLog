@@ -1,6 +1,22 @@
 # ChangeLog for games-board/gnome-chess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-chess/ChangeLog,v 1.15 2014/05/31 06:34:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-chess/ChangeLog,v 1.19 2014/09/11 08:04:33 mr_bones_ Exp $
+
+  11 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -gnome-chess-3.10.3.ebuild:
+  old
+
+  23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-chess-3.12.3.ebuild:
+  Stable for x86, wrt bug #512012
+
+  22 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gnome-chess-3.12.3.ebuild:
+  Stable for amd64, wrt bug #512912
+
+*gnome-chess-3.12.3 (28 Jun 2014)
+
+  28 Jun 2014; Pacho Ramos <pacho@gentoo.org> +gnome-chess-3.12.3.ebuild,
+  -gnome-chess-3.12.1.ebuild, -gnome-chess-3.12.2.ebuild:
+  Version bump, drop old
 
 *gnome-chess-3.12.2 (31 May 2014)
 
