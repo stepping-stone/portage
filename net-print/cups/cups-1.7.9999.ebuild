@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.9999.ebuild,v 1.3 2014/09/07 20:48:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.9999.ebuild,v 1.7 2014/11/02 12:42:26 swift Exp $
 
 EAPI=5
 
@@ -35,12 +35,12 @@ SLOT="0"
 IUSE="acl dbus debug gnutls java kerberos lprng-compat pam
 	python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf"
 
-LANGS="ca es fr it ja pt_BR ru"
+LANGS="ca cs de es fr it ja pt_BR ru"
 for X in ${LANGS} ; do
 	IUSE="${IUSE} +linguas_${X}"
 done
 
-RDEPEND="
+CDEPEND="
 	app-text/libpaper
 	acl? (
 		kernel_linux? (
@@ -54,7 +54,6 @@ RDEPEND="
 	!lprng-compat? ( !net-print/lprng )
 	pam? ( virtual/pam )
 	python? ( ${PYTHON_DEPS} )
-	selinux? ( sec-policy/selinux-cups )
 	ssl? (
 		gnutls? (
 			>=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}]
@@ -72,8 +71,12 @@ RDEPEND="
 	)
 "
 
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
+"
+
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-cups )
 "
 
 PDEPEND="
@@ -151,6 +154,9 @@ src_prepare() {
 	base_src_prepare
 	use systemd && epatch "${FILESDIR}/${PN}-1.7.2-systemd-socket-2.patch"
 
+	# Remove ".SILENT" rule for verbose output (bug 524338).
+	sed 's#^.SILENT:##g' -i "${S}"/Makedefs.in || die "sed failed"
+
 	# Fix install-sh, posix sh does not have 'function'.
 	sed 's#function gzipcp#gzipcp()#g' -i "${S}/install-sh"
 
@@ -192,9 +198,13 @@ multilib_src_configure() {
 		)
 	fi
 
+	# explicitly specify compiler wrt bug 524340
+	#
 	# need to override KRB5CONFIG for proper flags
 	# https://www.cups.org/str.php?L4423
 	econf \
+		CC="$(tc-getCC)" \
+		CXX="$(tc-getCXX)" \
 		KRB5CONFIG="${EPREFIX}"/usr/bin/${CHOST}-krb5-config \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--localstatedir="${EPREFIX}"/var \

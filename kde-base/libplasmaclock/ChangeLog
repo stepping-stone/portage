@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/libplasmaclock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.207 2014/09/16 18:17:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.209 2014/11/06 19:18:47 mrueg Exp $
+
+  06 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -libplasmaclock-4.11.11.ebuild,
+  -libplasmaclock-4.11.12.ebuild:
+  Cleanup old.
+
+*libplasmaclock-4.11.13 (25 Oct 2014)
+
+  25 Oct 2014; Manuel Rüger <mrueg@gentoo.org> +libplasmaclock-4.11.13.ebuild:
+  Version bump KDE SC 4.11.13
 
 *libplasmaclock-4.11.12 (16 Sep 2014)
 

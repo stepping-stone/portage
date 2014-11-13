@@ -1,6 +1,21 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.55 2014/01/16 09:56:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.58 2014/11/02 04:26:52 yngwin Exp $
+
+*qpdfview-0.4.12 (02 Nov 2014)
+
+  02 Nov 2014; Ben de Groot <yngwin@gentoo.org>
+  +files/qpdfview-0.4.12-no_sql.patch, +qpdfview-0.4.12.ebuild:
+  Version bump, with patch from bug #526462. Tightening up formatting again.
+
+  28 Sep 2014; Davide Pesavento <pesa@gentoo.org> qpdfview-0.4.11.1.ebuild:
+  Minor cleanup.
+
+*qpdfview-0.4.11.1 (24 Sep 2014)
+
+  24 Sep 2014; Ben de Groot <yngwin@gentoo.org> +qpdfview-0.4.11.1.ebuild,
+  metadata.xml:
+  Version bump. Thanks to Alpha Bravo in bug #506068 for ebuild improvements.
 
   16 Jan 2014; Michael Palimaka <kensington@gentoo.org> -qpdfview-0.4.4.ebuild,
   -qpdfview-0.4.6.ebuild:

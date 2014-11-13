@@ -1,6 +1,39 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.267 2014/09/10 08:49:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.274 2014/11/12 20:18:17 axs Exp $
+
+  12 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  adobe-flash-11.2.202.418.ebuild:
+  modified dependency atoms for emul-* packages slightly
+
+*adobe-flash-11.2.202.418 (12 Nov 2014)
+
+  12 Nov 2014; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.418.ebuild:
+  Version bump.
+
+  02 Nov 2014; Sven Vermeulen <swift@gentoo.org>
+  adobe-flash-11.2.202.411.ebuild:
+  Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
+  #527698)
+
+  15 Oct 2014; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.406.ebuild:
+  Old.
+
+  15 Oct 2014; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.411.ebuild:
+  Stable for x86, wrt bug #525430
+
+  15 Oct 2014; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.411.ebuild:
+  Stable for amd64, wrt bug #525430
+
+*adobe-flash-11.2.202.411 (15 Oct 2014)
+
+  15 Oct 2014; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.411.ebuild:
+  Version bump (bug #525430).
 
   10 Sep 2014; Jeroen Roovers <jer@gentoo.org>
   -adobe-flash-11.2.202.400.ebuild:

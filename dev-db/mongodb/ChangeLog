@@ -1,6 +1,25 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.98 2014/09/02 08:31:57 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.101 2014/11/12 10:22:35 ultrabug Exp $
+
+*mongodb-2.6.5-r1 (12 Nov 2014)
+*mongodb-2.6.4-r1 (12 Nov 2014)
+
+  12 Nov 2014; Ultrabug <ultrabug@gentoo.org> -mongodb-2.6.4.ebuild,
+  +mongodb-2.6.4-r1.ebuild, -mongodb-2.6.5.ebuild, +mongodb-2.6.5-r1.ebuild:
+  add PaX marking on 2.6 ebuilds wrt #526114
+
+*mongodb-2.4.12 (17 Oct 2014)
+
+  17 Oct 2014; Ultrabug <ultrabug@gentoo.org> -mongodb-2.4.10-r1.ebuild,
+  +mongodb-2.4.12.ebuild:
+  version bump, drop old
+
+*mongodb-2.6.5 (13 Oct 2014)
+
+  13 Oct 2014; Ultrabug <ultrabug@gentoo.org> -mongodb-2.6.3.ebuild,
+  +mongodb-2.6.5.ebuild:
+  version bump fix #525176
 
 *mongodb-2.4.11 (02 Sep 2014)
 

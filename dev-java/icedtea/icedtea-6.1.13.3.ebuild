@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.13.3.ebuild,v 1.3 2014/05/17 15:22:54 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.13.3.ebuild,v 1.6 2014/11/02 08:28:40 swift Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -72,7 +72,6 @@ COMMON_DEP="
 	kerberos? ( virtual/krb5 )
 	nss? ( >=dev-libs/nss-3.12.5-r1 )
 	pulseaudio?  ( >=media-sound/pulseaudio-0.9.11:= )
-	selinux? ( sec-policy/selinux-java )
 	systemtap? ( >=dev-util/systemtap-1 )"
 
 # media-fonts/lklug needs ppc ppc64 keywords
@@ -90,7 +89,8 @@ RDEPEND="${COMMON_DEP}
 		)
 	)
 	alsa? ( ${ALSA_COMMON_DEP} )
-	cups? ( ${CUPS_COMMON_DEP} )"
+	cups? ( ${CUPS_COMMON_DEP} )
+	selinux? ( sec-policy/selinux-java )"
 
 # Only ant-core-1.8.1 has fixed ant -diagnostics when xerces+xalan are not present.
 # ca-certificates, perl and openssl are used for the cacerts keystore generation
@@ -107,7 +107,7 @@ DEPEND="${COMMON_DEP} ${ALSA_COMMON_DEP} ${CUPS_COMMON_DEP} ${X_COMMON_DEP}
 	app-arch/unzip
 	app-arch/zip
 	app-misc/ca-certificates
-	dev-java/ant-core
+	>=dev-java/ant-core-1.8.2
 	dev-lang/perl
 	>=dev-libs/libxslt-1.1.26
 	dev-libs/openssl
@@ -116,8 +116,14 @@ DEPEND="${COMMON_DEP} ${ALSA_COMMON_DEP} ${CUPS_COMMON_DEP} ${X_COMMON_DEP}
 	${X_DEPEND}
 	pax_kernel? ( sys-apps/elfix )"
 
-PDEPEND="webstart? ( dev-java/icedtea-web:6 )
-	nsplugin? ( dev-java/icedtea-web:6[nsplugin] )"
+PDEPEND="webstart? ( || (
+			dev-java/icedtea-web:0
+			>=dev-java/icedtea-web-1.3.2:6
+		) )
+		nsplugin? ( || (
+			dev-java/icedtea-web:0[nsplugin]
+			>=dev-java/icedtea-web-1.3.2:6[nsplugin]
+		) )"
 
 S="${WORKDIR}"/${ICEDTEA_PKG}
 

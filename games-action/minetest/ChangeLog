@@ -1,6 +1,14 @@
 # ChangeLog for games-action/minetest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/ChangeLog,v 1.14 2014/09/15 19:43:00 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/ChangeLog,v 1.16 2014/10/15 11:45:30 nimiux Exp $
+
+  15 Oct 2014; Chema Alonso <nimiux@gentoo.org> minetest-0.4.10-r1.ebuild:
+  Stable for amd64 wrt bug #522906
+
+*minetest-0.4.10-r2 (25 Sep 2014)
+
+  25 Sep 2014; Julian Ospald <hasufell@gentoo.org> +minetest-0.4.10-r2.ebuild:
+  use bundled lua
 
 *minetest-0.4.10-r1 (15 Sep 2014)
 

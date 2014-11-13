@@ -1,6 +1,18 @@
 # ChangeLog for virtual/perl-Module-CoreList
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.101 2014/09/23 09:57:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.104 2014/11/08 16:16:10 dilfridge Exp $
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Module-CoreList-2.840.0.ebuild, -perl-Module-CoreList-5.21.1-r1.ebuild:
+  Remove old
+
+  08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Module-CoreList-3.100.0.ebuild:
+  Remove old (Perl 5.20.0 cleanup)
+
+  18 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-Module-CoreList-3.30.0.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   23 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   perl-Module-CoreList-3.30.0.ebuild:

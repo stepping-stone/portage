@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.67 2014/08/10 20:37:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.70 2014/11/06 05:36:45 vapier Exp $
+
+  06 Nov 2014; Mike Frysinger <vapier@gentoo.org> libp11-0.2.8.ebuild:
+  Require libltdl:0 specifically, and allow older libtool for stable ebuilds
+  #528294 by Pacho Ramos.
+
+  05 Nov 2014; Mike Frysinger <vapier@gentoo.org> libp11-0.2.8.ebuild:
+  Depend on libltdl rather than libtool #528294 by Pacho Ramos.
+
+*libp11-0.2.8-r2 (16 Oct 2014)
+
+  16 Oct 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/libp11-0.2.8-variable-buffer-size.patch, +libp11-0.2.8-r2.ebuild:
+  Fix from Chromium OS for handling of large certificates.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libp11-0.2.8-r1.ebuild,
   libp11-0.2.8.ebuild:

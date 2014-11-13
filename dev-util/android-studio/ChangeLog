@@ -1,6 +1,18 @@
 # ChangeLog for dev-util/android-studio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.5 2014/09/03 19:29:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.7 2014/11/03 02:22:16 dlan Exp $
+
+*android-studio-0.8.14.135.1538390 (03 Nov 2014)
+
+  03 Nov 2014; Yixun Lan <dlan@gentoo.org>
+  +android-studio-0.8.14.135.1538390.ebuild:
+  version bump, bug 528018, proxy for Jason Zaman
+
+*android-studio-0.8.12.135.1503853 (12 Oct 2014)
+
+  12 Oct 2014; Sven Vermeulen <swift@gentoo.org>
+  +android-studio-0.8.12.135.1503853.ebuild:
+  Bumping android-studio to 0.8.12.135.1503853, requested by Jason
 
 *android-studio-0.8.6.135.1339820 (03 Sep 2014)
 

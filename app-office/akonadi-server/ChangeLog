@@ -1,6 +1,29 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.142 2014/08/10 11:42:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.148 2014/11/09 16:48:12 mrueg Exp $
+
+  09 Nov 2014; Manuel Rüger <mrueg@gentoo.org> akonadi-server-1.13.0.ebuild:
+  Apply gcc check. See bug #520102.
+
+  03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  akonadi-server-1.11.0.ebuild, akonadi-server-1.12.1-r1.ebuild,
+  akonadi-server-1.13.0.ebuild:
+  Update PostgreSQL dependencies and/or checks to virtual/postgresql.
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  akonadi-server-1.12.1-r1.ebuild:
+  ppc64 stable wrt bug #517492
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  akonadi-server-1.12.1-r1.ebuild:
+  ppc stable wrt bug #517492
+
+  12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
+  akonadi-server-1.12.1-r1.ebuild:
+  x86 stable wrt bug #517492
+
+  08 Oct 2014; Manuel Rüger <mrueg@gentoo.org> akonadi-server-1.12.1-r1.ebuild:
+  Mark stable on amd64. See bug #517492.
 
 *akonadi-server-1.13.0 (10 Aug 2014)
 

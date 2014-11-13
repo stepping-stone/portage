@@ -1,6 +1,22 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.44 2014/05/28 09:45:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.47 2014/11/08 08:54:04 yngwin Exp $
+
+*qupzilla-1.8.4 (08 Nov 2014)
+
+  08 Nov 2014; Ben de Groot <yngwin@gentoo.org> +qupzilla-1.8.4.ebuild:
+  version bump
+
+*qupzilla-1.8.3 (23 Oct 2014)
+
+  23 Oct 2014; Ben de Groot <yngwin@gentoo.org> +qupzilla-1.8.3.ebuild:
+  version bump, bug #525284
+
+*qupzilla-1.8.0 (02 Oct 2014)
+
+  02 Oct 2014; Ben de Groot <yngwin@gentoo.org> +qupzilla-1.8.0.ebuild:
+  Version bump. Add qt5 support. Thanks to Alpha Bravo for ebuild improvements
+  in bug #522952.
 
 *qupzilla-1.6.6 (28 May 2014)
 

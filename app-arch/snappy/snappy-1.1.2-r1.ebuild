@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/snappy-1.1.2-r1.ebuild,v 1.2 2014/08/11 22:07:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/snappy-1.1.2-r1.ebuild,v 1.5 2014/10/30 18:45:33 maekke Exp $
 
 EAPI="5"
 
@@ -13,12 +13,10 @@ SRC_URI="http://dev.gentoo.org/~radhermit/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 src_prepare() {
-	default
-
 	# Avoid automagic lzo and gzip by not checking for it
 	sed -i '/^CHECK_EXT_COMPRESSION_LIB/d' configure.ac || die
 

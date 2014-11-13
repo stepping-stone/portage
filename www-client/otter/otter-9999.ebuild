@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/otter/otter-9999.ebuild,v 1.2 2014/09/19 17:01:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/otter/otter-9999.ebuild,v 1.4 2014/11/05 16:43:15 jer Exp $
 
 EAPI=5
 WANT_CMAKE="always"
@@ -22,7 +22,7 @@ DEPEND="
 	dev-qt/qtprintsupport:5
 	dev-qt/qtscript:5
 	dev-qt/qtsql:5
-	dev-qt/qtwebkit:5[widgets]
+	dev-qt/qtwebkit:5
 	dev-qt/qtwidgets:5
 "
 RDEPEND="
@@ -31,8 +31,6 @@ RDEPEND="
 DOCS=( CHANGELOG HACKING TODO )
 
 src_prepare() {
-	sed -i -e 's|Application;||g' ${PN}-browser.desktop || die
-
 	if [[ -n ${LINGUAS} ]]; then
 		local lingua
 		for lingua in resources/translations/*.qm; do

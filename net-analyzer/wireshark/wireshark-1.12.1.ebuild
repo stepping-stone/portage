@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.1.ebuild,v 1.8 2014/09/20 11:05:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.1.ebuild,v 1.14 2014/11/11 10:21:06 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user
@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}download/src/all-versions/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="
 	adns +caps crypt doc doc-pdf geoip +gtk3 ipv6 kerberos lua +netlink +pcap
 	portaudio +qt4 selinux smi ssl zlib
@@ -24,8 +24,9 @@ GTK_COMMON_DEPEND="
 	x11-libs/gdk-pixbuf
 	x11-libs/pango
 	x11-misc/xdg-utils
+	virtual/freedesktop-icon-theme
 "
-RDEPEND="
+CDEPEND="
 	>=dev-libs/glib-2.14:2
 	netlink? ( dev-libs/libnl:3 )
 	adns? ( >=net-dns/c-ares-1.5 )
@@ -42,17 +43,21 @@ RDEPEND="
 	portaudio? ( media-libs/portaudio )
 	qt4? (
 		dev-qt/qtcore:4
-		dev-qt/qtgui:4
+		dev-qt/qtgui:4[accessibility]
 		x11-misc/xdg-utils
 		)
-	selinux? ( sec-policy/selinux-wireshark )
 	smi? ( net-libs/libsmi )
 	ssl? ( net-libs/gnutls )
 	zlib? ( sys-libs/zlib !=sys-libs/zlib-1.2.4 )
 "
 
+# We need perl for `pod2html`.  The rest of the perl stuff is to block older
+# and broken installs. #455122
 DEPEND="
-	${RDEPEND}
+	${CDEPEND}
+	dev-lang/perl
+	!<virtual/perl-Pod-Simple-3.170
+	!<perl-core/Pod-Simple-3.170
 	doc? (
 		app-doc/doxygen
 		app-text/asciidoc
@@ -61,12 +66,13 @@ DEPEND="
 		doc-pdf? ( dev-java/fop )
 		www-client/lynx
 	)
-	>=virtual/perl-Pod-Simple-3.170.0
 	sys-devel/bison
 	sys-devel/flex
-	virtual/perl-Getopt-Long
-	virtual/perl-Time-Local
 	virtual/pkgconfig
+"
+RDEPEND="
+	${CDEPEND}
+	selinux? ( sec-policy/selinux-wireshark )
 "
 
 pkg_setup() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.10.ebuild,v 1.3 2014/07/23 15:17:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.10.ebuild,v 1.5 2014/11/03 16:11:04 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -37,7 +37,7 @@ COMMON_DEPEND="
 	net-misc/modemmanager
 	>=net-misc/networkmanager-0.8.9[modemmanager]
 	>=sys-auth/polkit-0.103
-	|| ( >=sys-power/upower-0.9.1 sys-power/upower-pm-utils )
+	|| ( >=sys-power/upower-0.9.1:= sys-power/upower-pm-utils )
 	>=x11-libs/gdk-pixbuf-2.23.0:2
 	>=x11-libs/gtk+-3.4.1:3
 	>=x11-libs/libnotify-0.7.3:0=
@@ -56,6 +56,7 @@ COMMON_DEPEND="
 # libgnomekbd needed only for gkbd-keyboard-display tool
 RDEPEND="${COMMON_DEPEND}
 	|| ( ( app-admin/openrc-settingsd sys-auth/consolekit ) >=sys-apps/systemd-31 )
+	x11-themes/gnome-icon-theme
 	x11-themes/gnome-icon-theme-symbolic
 	colord? ( >=gnome-extra/gnome-color-manager-3 )
 	cups? (

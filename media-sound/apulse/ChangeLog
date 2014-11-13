@@ -1,0 +1,21 @@
+# ChangeLog for media-sound/apulse
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apulse/ChangeLog,v 1.3 2014/11/10 22:26:38 axs Exp $
+
+*apulse-0.1.2-r1 (10 Nov 2014)
+
+  10 Nov 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +apulse-0.1.2-r1.ebuild, -apulse-0.1.2.ebuild:
+  add ability to install with the help of emul-* packages, to support stable-
+  amd64 users installing keyworded skype[apulse]
+
+*apulse-0.1.2 (14 Oct 2014)
+
+  14 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org> +apulse-0.1.2.ebuild:
+  version bump
+
+*apulse-0.1.1 (05 Oct 2014)
+
+  05 Oct 2014; Jauhien Piatlicki <jauhien@gentoo.org> +apulse-0.1.1.ebuild,
+  +metadata.xml:
+  initial import, bug 523498

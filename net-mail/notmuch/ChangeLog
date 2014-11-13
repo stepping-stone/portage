@@ -1,6 +1,20 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.104 2014/09/18 19:47:19 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.106 2014/11/11 11:32:28 nimiux Exp $
+
+  11 Nov 2014; Chema Alonso <nimiux@gentoo.org> notmuch-0.18.2.ebuild:
+  Stable for amd64 wrt bug #516756
+
+*notmuch-0.18.2 (01 Nov 2014)
+
+  01 Nov 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +notmuch-0.18.2.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  - Fix test suite to work with gdb 7.8
+  - Emacs 24.4 related bug fixes
 
   18 Sep 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
   notmuch-0.16-r1.ebuild, notmuch-0.17.ebuild, notmuch-0.18.1.ebuild:

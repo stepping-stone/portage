@@ -1,6 +1,20 @@
 # ChangeLog for net-libs/libnice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.76 2014/09/15 08:23:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.79 2014/11/11 22:16:12 tetromino Exp $
+
+  11 Nov 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libnice-0.1.8.ebuild:
+  Fix USE=introspection multilib build (bug #528958, thanks to Alex Barker,
+  drhopfen et al.)
+
+*libnice-0.1.8 (11 Nov 2014)
+
+  11 Nov 2014; Pacho Ramos <pacho@gentoo.org> +libnice-0.1.8.ebuild,
+  -libnice-0.1.4-r1.ebuild, -libnice-0.1.4.ebuild:
+  Version bump, drop old
+
+  11 Oct 2014; Markus Meier <maekke@gentoo.org> libnice-0.1.7.ebuild:
+  arm stable, bug #512012
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libnice-0.1.7.ebuild:
   Stable for sparc, wrt bug #512012
