@@ -1,6 +1,21 @@
 # ChangeLog for x11-terms/xterm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.396 2014/05/14 16:56:14 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.399 2015/02/18 15:58:44 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xterm-314.ebuild:
+  Stable for amd64, wrt bug #530652
+
+*xterm-314 (23 Jan 2015)
+
+  23 Jan 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xterm-314.ebuild:
+  Version bump.
+
+*xterm-312 (28 Nov 2014)
+
+  28 Nov 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xterm-312.ebuild:
+  Version bump, bug #513494.
 
 *xterm-304 (14 May 2014)
 

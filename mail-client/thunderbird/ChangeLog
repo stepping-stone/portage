@@ -1,6 +1,46 @@
 # ChangeLog for mail-client/thunderbird
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.304 2014/11/02 08:33:52 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.315 2015/02/18 09:16:13 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.4.0.ebuild:
+  Stable for ppc, wrt bug #536564
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.4.0.ebuild:
+  Stable for ppc64, wrt bug #536564
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.4.0.ebuild:
+  Stable for x86, wrt bug #536564
+
+  07 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> thunderbird-31.4.0.ebuild:
+  amd64 stable wrt bug #536564
+
+*thunderbird-31.4.0 (14 Jan 2015)
+
+  14 Jan 2015;  <anarchy@gentoo.org> +thunderbird-31.4.0.ebuild,
+  files/icon/thunderbird-unbranded.desktop, files/icon/thunderbird.desktop:
+  Security bump, misc bug fixes
+
+  24 Dec 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.3.0.ebuild:
+  Stable for ppc64, wrt bug #531408
+
+  24 Dec 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.3.0.ebuild:
+  Stable for ppc, wrt bug #531408
+
+  10 Dec 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.3.0.ebuild:
+  Stable for x86, wrt bug #531408
+
+  10 Dec 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.3.0.ebuild:
+  Stable for amd64, wrt bug #531408
+
+  04 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  thunderbird-31.3.0.ebuild:
+  bump minimum version of dev-libs/nss as per bug 531614
+
+*thunderbird-31.3.0 (03 Dec 2014)
+
+  03 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thunderbird-31.3.0.ebuild, -thunderbird-31.2.0-r1.ebuild:
+  version bump for security bug 531408
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> thunderbird-24.8.0.ebuild,
   thunderbird-31.2.0-r1.ebuild:

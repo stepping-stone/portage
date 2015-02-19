@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.296 2014/04/21 00:08:15 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.298 2015/02/13 01:30:50 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -157,6 +157,16 @@ handle_genpatches() {
 			if use experimental ; then
 				UNIPATCH_LIST_GENPATCHES+=" ${DISTDIR}/${tarball}"
 				debug-print "genpatches tarball: $tarball"
+
+				# check gcc version < 4.9.X uses patch 5000 and = 4.9.X uses patch 5010			
+				if [[ $(gcc-major-version) -eq 4 ]] && [[ $(gcc-minor-version) -ne 9 ]]; then
+						# drop 5000_enable-additional-cpu-optimizations-for-gcc-4.9.patch
+						UNIPATCH_EXCLUDE+=" 5010_enable-additional-cpu-optimizations-for-gcc-4.9.patch"
+				else
+					#drop 5000_enable-additional-cpu-optimizations-for-gcc.patch
+					UNIPATCH_EXCLUDE+=" 5000_enable-additional-cpu-optimizations-for-gcc.patch"
+				fi
+
 			fi
 		else
 			UNIPATCH_LIST_GENPATCHES+=" ${DISTDIR}/${tarball}"
@@ -859,16 +869,18 @@ postinst_sources() {
 	KV_MINOR=$(get_version_component_range 2 ${OKV})
 	KV_PATCH=$(get_version_component_range 3 ${OKV})
 	if [[ "$(tc-arch)" = "sparc" ]]; then
-		if [[ ${KV_MAJOR} -ge 3 || ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} > 2.6.24 ]] ; then
-			echo
-			elog "NOTE: Since 2.6.25 the kernel Makefile has changed in a way that"
-			elog "you now need to do"
-			elog "  make CROSS_COMPILE=sparc64-unknown-linux-gnu-"
-			elog "instead of just"
-			elog "  make"
-			elog "to compile the kernel. For more information please browse to"
-			elog "https://bugs.gentoo.org/show_bug.cgi?id=214765"
-			echo
+		if [[ $(gcc-major-version) -lt 4 && $(gcc-minor-version) -lt 4 ]]; then
+			if [[ ${KV_MAJOR} -ge 3 || ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} > 2.6.24 ]] ; then
+				echo
+				elog "NOTE: Since 2.6.25 the kernel Makefile has changed in a way that"
+				elog "you now need to do"
+				elog "  make CROSS_COMPILE=sparc64-unknown-linux-gnu-"
+				elog "instead of just"
+				elog "  make"
+				elog "to compile the kernel. For more information please browse to"
+				elog "https://bugs.gentoo.org/show_bug.cgi?id=214765"
+				echo
+			fi
 		fi
 	fi
 }

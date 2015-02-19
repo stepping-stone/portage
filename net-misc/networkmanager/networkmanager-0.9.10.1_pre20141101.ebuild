@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.1_pre20141101.ebuild,v 1.1 2014/11/01 15:50:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.1_pre20141101.ebuild,v 1.11 2015/01/27 18:54:20 blueness Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -9,7 +9,10 @@ GNOME2_LA_PUNT="yes"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit bash-completion-r1 eutils gnome2 linux-info multilib systemd user readme.gentoo toolchain-funcs vala versionator virtualx udev
+# Tests need python2, https://bugzilla.gnome.org/show_bug.cgi?id=739448
+PYTHON_COMPAT=( python2_7 )
+
+inherit bash-completion-r1 eutils gnome2 linux-info multilib python-any-r1 systemd user readme.gentoo toolchain-funcs vala versionator virtualx udev
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
 HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
@@ -23,7 +26,7 @@ IUSE="bluetooth connection-sharing consolekit +dhclient dhcpcd gnutls +introspec
 kernel_linux +nss +modemmanager ncurses +ppp resolvconf selinux systemd teamd test \
 vala +wext +wifi zeroconf" # wimax
 
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 arm ~ppc ~ppc64 x86"
 
 REQUIRED_USE="
 	modemmanager? ( ppp )
@@ -65,7 +68,7 @@ COMMON_DEPEND="
 	dhclient? ( =net-misc/dhcp-4*[client] )
 	dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.3 )
-	ppp? ( >=net-dialup/ppp-2.4.5:=[ipv6] )
+	ppp? ( >=net-dialup/ppp-2.4.5:=[ipv6] net-dialup/rp-pppoe )
 	resolvconf? ( net-dns/openresolv )
 	systemd? ( >=sys-apps/systemd-183:0= )
 	teamd? ( >=net-misc/libteam-1.9 )
@@ -84,9 +87,10 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	vala? ( $(vala_depend) )
 	test? (
-		dev-lang/python:2.7
-		dev-python/dbus-python[python_targets_python2_7]
-		dev-python/pygobject:2[python_targets_python2_7] )
+		$(python_gen_any_dep '
+			dev-python/dbus-python[${PYTHON_USEDEP}]
+			dev-python/pygobject:2[${PYTHON_USEDEP}]')
+	)
 "
 
 sysfs_deprecated_check() {
@@ -125,10 +129,6 @@ src_prepare() {
 
 	# Find arping at proper place, bug #523632
 	epatch "${FILESDIR}/${PN}-0.9.10.0-arpingpath.patch"
-
-	# Use python2.7 shebangs for test scripts, upstream bug #739448
-	sed -e 's@\(^#!.*python\)@\12.7@' \
-		-i */tests/*.py || die
 
 	# Force use of /run, avoid eautoreconf, upstream bug #737139
 	sed -e 's:$localstatedir/run/:/run/:' -i configure || die
@@ -193,6 +193,7 @@ src_configure() {
 }
 
 src_test() {
+	python_setup
 	Xemake check
 }
 
@@ -265,7 +266,8 @@ pkg_postinst() {
 			ewarn "(like bug #485658)."
 			ewarn "Because of this, you will likely need to reconfigure some of"
 			ewarn "your networks. To do this you can rely on Gnome control center,"
-			ewarn "nm-connection-editor or nmtui tools for example."
+			ewarn "nm-connection-editor or nmtui tools for example once updated"
+			ewarn "NetworkManager version is installed."
 		fi
 	else
 		if ! version_is_at_least 0.9.10.0-r1 ${REPLACING_VERSIONS}; then
@@ -275,7 +277,8 @@ pkg_postinst() {
 			ewarn "plugin."
 			ewarn "Because of this, you will likely need to reconfigure some of"
 			ewarn "your networks. To do this you can rely on Gnome control center,"
-			ewarn "nm-connection-editor or nmtui tools for example."
+			ewarn "nm-connection-editor or nmtui tools for example once updated"
+			ewarn "NetworkManager version is installed."
 		fi
 	fi
 
@@ -285,9 +288,15 @@ pkg_postinst() {
 		if grep plugins "${EROOT}etc/NetworkManager/NetworkManager.conf" | grep -q ifnet; then
 			ewarn
 			ewarn "You seem to use 'ifnet' plugin in ${EROOT}etc/NetworkManager/NetworkManager.conf"
-			ewarn "Since it won't be used when running under Systemd, you will need to stop setting"
-			ewarn "ifnet plugin there to allow NetworkManager to work."
+			ewarn "Since it won't be used, you will need to stop setting ifnet plugin there."
 			ewarn
 		fi
+	fi
+
+	# NM shows lots of errors making nmcli neither unusable, bug #528748 upstream bug #690457
+	if grep -r "psk-flags=1" "${EROOT}"/etc/NetworkManager/; then
+		ewarn "You have psk-flags=1 setting in above files, you will need to"
+		ewarn "either reconfigure affected networks or, at least, set the flag"
+		ewarn "value to '0'."
 	fi
 }

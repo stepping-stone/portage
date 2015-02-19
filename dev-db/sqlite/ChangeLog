@@ -1,6 +1,45 @@
 # ChangeLog for dev-db/sqlite
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.538 2014/11/05 04:04:05 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.547 2015/02/14 02:55:52 floppym Exp $
+
+*sqlite-3.8.8.2 (14 Feb 2015)
+
+  14 Feb 2015; Mike Gilbert <floppym@gentoo.org> +sqlite-3.8.8.2.ebuild:
+  Version bump by Arfrever.
+
+  22 Jan 2015; Markus Meier <maekke@gentoo.org> sqlite-3.8.7.4.ebuild:
+  arm stable, bug #536142
+
+*sqlite-3.8.8.1 (20 Jan 2015)
+
+  20 Jan 2015; Mike Gilbert <floppym@gentoo.org> +sqlite-3.8.8.1.ebuild:
+  Version bump. Ebuild by Arfrever.
+
+  16 Jan 2015; Patrick Lauer <patrick@gentoo.org> sqlite-3.8.7.4.ebuild:
+  Stable for amd64 and x86 #536142
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> sqlite-3.8.7.4.ebuild:
+  Stable for HPPA (bug #536142).
+
+*sqlite-3.8.7.4 (12 Dec 2014)
+
+  12 Dec 2014; Mike Gilbert <floppym@gentoo.org> +sqlite-3.8.7.4.ebuild:
+  Version bump. Ebuild by Arfrever.
+
+*sqlite-3.8.7.3 (08 Dec 2014)
+
+  08 Dec 2014; Mike Gilbert <floppym@gentoo.org> +sqlite-3.8.7.3.ebuild:
+  Version bump. Ebuild by Arfrever.
+
+*sqlite-3.8.7.2 (19 Nov 2014)
+
+  19 Nov 2014; Mike Gilbert <floppym@gentoo.org> +sqlite-3.8.7.2.ebuild:
+  Version bump. Ebuild by Arfrever.
+
+  18 Nov 2014; Mike Gilbert <floppym@gentoo.org> -sqlite-3.8.2.ebuild,
+  -sqlite-3.8.3.1.ebuild, -sqlite-3.8.3.ebuild, -sqlite-3.8.4.1.ebuild,
+  -sqlite-3.8.4.3.ebuild, -sqlite-3.8.4.ebuild, -sqlite-3.8.5.ebuild:
+  Remove old.
 
 *sqlite-3.8.7.1 (05 Nov 2014)
 

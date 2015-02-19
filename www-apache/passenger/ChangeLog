@@ -1,6 +1,22 @@
 # ChangeLog for www-apache/passenger
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.103 2014/10/30 14:17:50 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.107 2015/01/17 10:00:37 graaff Exp $
+
+  17 Jan 2015; Hans de Graaff <graaff@gentoo.org> passenger-4.0.56.ebuild:
+  Remove obsolete pkg_post instructions that are no longer true for Passenger
+  4.x.
+
+  29 Dec 2014; Hans de Graaff <graaff@gentoo.org> passenger-4.0.53.ebuild:
+  Drop ruby21 to create a stable candidate.
+
+  29 Dec 2014; Hans de Graaff <graaff@gentoo.org> -passenger-4.0.48.ebuild,
+  -passenger-4.0.49.ebuild, -passenger-4.0.52.ebuild:
+  Cleanup.
+
+*passenger-4.0.56 (29 Dec 2014)
+
+  29 Dec 2014; Hans de Graaff <graaff@gentoo.org> +passenger-4.0.56.ebuild:
+  Version bump.
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> passenger-4.0.41.ebuild:
   Stable for amd64, wrt bug #512188

@@ -1,6 +1,47 @@
 # ChangeLog for app-editors/vim-core
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.452 2014/10/26 17:47:20 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.460 2015/02/07 02:15:32 radhermit Exp $
+
+*vim-core-7.4.622 (07 Feb 2015)
+
+  07 Feb 2015; Tim Harder <radhermit@gentoo.org> +vim-core-7.4.622.ebuild:
+  Version bump.
+
+*vim-core-7.4.591 (26 Jan 2015)
+
+  26 Jan 2015; Tim Harder <radhermit@gentoo.org> +vim-core-7.4.591.ebuild,
+  vim-core-9999.ebuild:
+  Version bump.
+
+  05 Jan 2015; Yixun Lan <dlan@gentoo.org> vim-core-7.4.560.ebuild:
+  keyword ~arm64, test on board
+
+*vim-core-7.4.560 (04 Jan 2015)
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> +vim-core-7.4.560.ebuild,
+  vim-core-9999.ebuild:
+  Version bump.
+
+  08 Dec 2014; Tim Harder <radhermit@gentoo.org> -vim-core-7.3.762.ebuild,
+  -vim-core-7.3.1214.ebuild, -vim-core-7.4.430.ebuild,
+  -vim-core-7.4.475.ebuild:
+  Remove old.
+
+*vim-core-7.4.542 (08 Dec 2014)
+
+  08 Dec 2014; Tim Harder <radhermit@gentoo.org> +vim-core-7.4.542.ebuild:
+  Version bump.
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> -vim-core-7.4.52.ebuild,
+  -vim-core-7.4.155.ebuild, -vim-core-7.4.169.ebuild, -vim-core-7.4.193.ebuild,
+  -vim-core-7.4.326.ebuild, -vim-core-7.4.417.ebuild:
+  Remove old.
+
+*vim-core-7.4.527 (24 Nov 2014)
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> +vim-core-7.4.527.ebuild,
+  vim-core-9999.ebuild:
+  Version bump, fix locale installs (bug #527128).
 
 *vim-core-7.4.488 (26 Oct 2014)
 

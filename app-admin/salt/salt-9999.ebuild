@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.13 2014/11/13 03:58:29 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.17 2015/02/17 20:07:03 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -23,8 +23,8 @@ fi
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="cherrypy ldap libcloud libvirt gnupg keyring mako mongodb mysql nova"
-IUSE+=" openssl redis timelib raet +zeromq test"
+IUSE="api ldap libcloud libvirt gnupg keyring mako mongodb mysql nova"
+IUSE+=" openssl redis selinux timelib raet +zeromq test"
 
 RDEPEND="sys-apps/pciutils
 	dev-python/jinja[${PYTHON_USEDEP}]
@@ -45,33 +45,35 @@ RDEPEND="sys-apps/pciutils
 	)
 	zeromq? (
 		>=dev-python/pyzmq-2.2.0[${PYTHON_USEDEP}]
-		dev-python/m2crypto[${PYTHON_USEDEP}]
+		>=dev-python/m2crypto-0.22.3[${PYTHON_USEDEP}]
 		dev-python/pycrypto[${PYTHON_USEDEP}]
+	)
+	api? (
+		|| (
+			dev-python/cherrypy[${PYTHON_USEDEP}]
+			www-servers/tornado[${PYTHON_USEDEP}]
+		)
 	)
 	mongodb? ( dev-python/pymongo[${PYTHON_USEDEP}] )
 	keyring? ( dev-python/keyring[${PYTHON_USEDEP}] )
 	mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
 	redis? ( dev-python/redis-py[${PYTHON_USEDEP}] )
+	selinux? ( sec-policy/selinux-salt )
 	timelib? ( dev-python/timelib[${PYTHON_USEDEP}] )
 	nova? ( >=dev-python/python-novaclient-2.17.0[${PYTHON_USEDEP}] )
-	gnupg? ( dev-python/python-gnupg[${PYTHON_USEDEP}] )
-	cherrypy? ( >=dev-python/cherrypy-3.2.2[${PYTHON_USEDEP}] )"
+	gnupg? ( dev-python/python-gnupg[${PYTHON_USEDEP}] )"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		dev-python/pip[${PYTHON_USEDEP}]
 		dev-python/virtualenv[${PYTHON_USEDEP}]
 		dev-python/timelib[${PYTHON_USEDEP}]
-		>=dev-python/SaltTesting-2014.4.24[${PYTHON_USEDEP}]
+		>=dev-python/SaltTesting-2015.2.16[${PYTHON_USEDEP}]
 		${RDEPEND}
 	)"
 
 DOCS=(README.rst AUTHORS)
 
 REQUIRED_USE="|| ( raet zeromq )"
-
-PATCHES=(
-	"${FILESDIR}/${P}-remove-pydsl-includes-test.patch"
-)
 
 python_prepare() {
 	# this test fails because it trys to "pip install distribute"
@@ -81,7 +83,7 @@ python_prepare() {
 python_install_all() {
 	USE_SETUPTOOLS=1 distutils-r1_python_install_all
 
-	for s in minion master syndic; do
+	for s in minion master syndic $(use api && echo api); do
 		newinitd "${FILESDIR}"/${s}-initd-3 salt-${s}
 		newconfd "${FILESDIR}"/${s}-confd-1 salt-${s}
 		systemd_dounit "${FILESDIR}"/salt-${s}.service
@@ -97,5 +99,6 @@ python_test() {
 
 	# using ${T} for the TMPDIR makes some tests needs paths that exceed PATH_MAX
 	USE_SETUPTOOLS=1 SHELL="/bin/bash" TMPDIR="/tmp" \
-		./tests/runtests.py --unit-tests --no-report --verbose || die "testing failed"
+		${EPYTHON} tests/runtests.py \
+		--unit-tests --no-report --verbose || die "testing failed"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.9.0-r1.ebuild,v 1.2 2014/10/29 02:42:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.9.0-r1.ebuild,v 1.4 2015/01/04 19:15:11 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,6 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	dev-python/numpy[${PYTHON_USEDEP}]
-	sci-chemistry/openbabel[python]
 	sci-chemistry/openbabel-python[${PYTHON_USEDEP}]
 	opal? ( dev-python/zsi[${PYTHON_USEDEP}] )
 	pdb2pka? ( sci-chemistry/apbs[${PYTHON_USEDEP},-mpi] )"
@@ -62,7 +61,7 @@ src_configure() {
 		cd "${BUILD_DIR}" || die
 
 		cat > build_config.py <<- EOF
-		PREFIX="${ED}/$(python_get_sitedir)/${PN}"
+		PREFIX="${D}/$(python_get_sitedir)/${PN}"
 		#URL="http://<COMPUTER NAME>/pdb2pqr/"
 		APBS="${EPREFIX}/usr/bin/apbs"
 		#OPAL="http://nbcr-222.ucsd.edu/opal2/services/pdb2pqr_1.8"
@@ -104,7 +103,7 @@ src_install() {
 
 		escons install
 
-		find "${ED}"$(python_get_sitedir)/${PN}/{jmol,examples,doc,contrib} -delete || die
+		find "${D}$(python_get_sitedir)"/${PN}/{jmol,examples,doc,contrib} -delete || die
 
 		python_doscript "${FILESDIR}"/{${PN},pdb2pka}
 

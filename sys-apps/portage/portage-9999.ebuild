@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.105 2014/09/26 20:32:03 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.110 2015/02/13 17:47:58 dolsen Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ DEPEND="!build? ( ${PYTHON_DEPS//bzip2(+)/ssl(+),bzip2(+)} )
 # quite slow, so it's not considered in the dependencies as an alternative to
 # to python-3.3 / pyxattr. Also, xattr support is only tested with Linux, so
 # for now, don't pull in xattr deps for other kernels.
-# For whirlpool hash, require python[ssl] or python-mhash (bug #425046).
+# For whirlpool hash, require python[ssl] (bug #425046).
 # For compgen, require bash[readline] (bug #445576).
 RDEPEND="
 	dev-lang/python-exec:2
@@ -188,7 +188,7 @@ python_install_all() {
 	dodir /usr/sbin
 	for target in ${sbin_relocations}; do
 		einfo "Moving /usr/bin/${target} to /usr/sbin/${target}"
-		mv "${ED}usr/bin/${target}" "${ED}usr/sbin/${target}"
+		mv "${ED}usr/bin/${target}" "${ED}usr/sbin/${target}" || die "sbin scripts move failed!"
 	done
 }
 
@@ -212,4 +212,30 @@ pkg_preinst() {
 	if chown portage:portage "${ED}"var/log/portage{,/elog} 2>/dev/null ; then
 		chmod g+s,ug+rwx "${ED}"var/log/portage{,/elog}
 	fi
+}
+
+pkg_postinst() {
+	einfo "This version of portage now has the new plugin-sync system"
+	einfo "An additional 'auto-sync = yes' setting is needed for each repo"
+	einfo "you wish 'emerge --sync' to sync"
+	einfo "The default setting is 'no'"
+	einfo "The primary sync action is now controlled via the emaint command"
+	einfo "The emaint sync module is more flexible in its capabilities"
+	einfo "It is similar to layman's -s and -S options"
+	einfo ""
+	einfo " 'emerge --sync' is now equivalent to 'emaint sync -a'"
+	einfo ""
+	einfo "run 'emaint sync --auto' to sync all auto-sync enabled repos"
+	einfo " options are:"
+	einfo "    -A, --allrepos  Sync all repos that have a sync-url defined"
+	einfo "    -a, --auto      Sync auto-sync enabled repos only"
+	einfo "    -r REPO, --repo REPO  Sync the specified repo"
+	einfo "                          even if 'auto-sync = no' is set"
+	einfo ""
+	einfo "Currently installed sync-type modules include:"
+	einfo "    rsync, git, cvs, svn, websync"
+	einfo "    the websync module currently runs emerge-webrsync for you"
+	einfo ""
+	einfo "For sync module specifications: https://wiki.gentoo.org/wiki/Project:Portage/Sync"
+	einfo ""
 }

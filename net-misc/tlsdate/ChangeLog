@@ -1,6 +1,29 @@
 # ChangeLog for net-misc/tlsdate
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/ChangeLog,v 1.11 2014/11/06 16:00:28 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/ChangeLog,v 1.17 2015/02/18 10:07:39 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> tlsdate-0.0.12-r2.ebuild:
+  make the build log verbose
+
+*tlsdate-0.0.12-r2 (14 Feb 2015)
+
+  14 Feb 2015; Mike Frysinger <vapier@gentoo.org> +tlsdate-0.0.12-r2.ebuild:
+  Use the whole system cert store rather than hardcoding a specific CA #534394.
+
+  01 Feb 2015; Markus Meier <maekke@gentoo.org> tlsdate-0.0.12-r1.ebuild:
+  arm stable, bug #538200
+
+  01 Feb 2015; Agostino Sarubbo <ago@gentoo.org> tlsdate-0.0.12-r1.ebuild:
+  Stable for x86, wrt bug #538200
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> tlsdate-0.0.12-r1.ebuild:
+  Stable for amd64, wrt bug #538200
+
+*tlsdate-0.0.12-r1 (03 Jan 2015)
+
+  03 Jan 2015; <hanno@gentoo.org> +tlsdate-0.0.12-r1.ebuild:
+  Fix default server/config, disable polarssl (broken upstream), install dbus
+  rules.
 
 *tlsdate-0.0.12 (06 Nov 2014)
 

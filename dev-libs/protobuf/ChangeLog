@@ -1,6 +1,40 @@
 # ChangeLog for dev-libs/protobuf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.68 2014/10/31 00:43:41 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.77 2015/01/26 09:37:24 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> protobuf-2.5.0-r2.ebuild:
+  Stable for x86, wrt bug #536794
+
+  22 Jan 2015; Markus Meier <maekke@gentoo.org> protobuf-2.5.0-r2.ebuild:
+  arm stable, bug #536794
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> protobuf-2.5.0-r2.ebuild:
+  Stable for amd64, wrt bug #536794
+
+  28 Nov 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.5.0-r2.ebuild,
+  protobuf-2.6.1-r1.ebuild, +files/protobuf-2.5.0-emacs-24.4.patch:
+  Fix build with emacs-24.4 (bug #524100, patch by ulm).
+
+  27 Nov 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.5.0-r2.ebuild,
+  protobuf-2.6.1-r1.ebuild:
+  Fix python/java builds (bug #530922) and doc installs.
+
+  27 Nov 2014; Tim Harder <radhermit@gentoo.org> protobuf-2.5.0-r2.ebuild,
+  protobuf-2.6.1-r1.ebuild:
+  Apply patches manually so they don't get applied twice.
+
+*protobuf-2.6.1-r1 (27 Nov 2014)
+*protobuf-2.5.0-r2 (27 Nov 2014)
+
+  27 Nov 2014; Tim Harder <radhermit@gentoo.org> +protobuf-2.5.0-r2.ebuild,
+  +protobuf-2.6.1-r1.ebuild:
+  Add multilib support.
+
+  21 Nov 2014; Agostino Sarubbo <ago@gentoo.org> protobuf-2.5.0-r1.ebuild:
+  Stable for amd64, wrt bug #529858
+
+  21 Nov 2014; Agostino Sarubbo <ago@gentoo.org> protobuf-2.5.0-r1.ebuild:
+  Stable for x86, wrt bug #529858
 
 *protobuf-2.6.1 (31 Oct 2014)
 

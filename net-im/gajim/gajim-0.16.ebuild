@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16.ebuild,v 1.3 2014/11/12 13:07:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16.ebuild,v 1.5 2015/01/17 19:58:46 maekke Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ SRC_URI="
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="avahi crypt dbus gnome gnome-keyring kde idle jingle libnotify networkmanager nls spell +srv test X xhtml"
 
 REQUIRED_USE="
@@ -54,12 +54,12 @@ RDEPEND="${COMMON_DEPEND}
 		avahi? ( net-dns/avahi[dbus,gtk,python,${PYTHON_USEDEP}] )
 		)
 	gnome? (
-		dev-python/libgnome-python
-		dev-python/egg-python
+		dev-python/libgnome-python[${PYTHON_USEDEP}]
+		dev-python/egg-python[${PYTHON_USEDEP}]
 		)
-	gnome-keyring? ( dev-python/gnome-keyring-python )
+	gnome-keyring? ( dev-python/gnome-keyring-python[${PYTHON_USEDEP}] )
 	idle? ( x11-libs/libXScrnSaver )
-	jingle? ( net-libs/farstream:0.1[python] )
+	jingle? ( net-libs/farstream:0.1[python,${PYTHON_USEDEP}] )
 	kde? ( kde-base/kwalletmanager )
 	networkmanager? (
 			dev-python/dbus-python[${PYTHON_USEDEP}]

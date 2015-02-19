@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.7.0.ebuild,v 1.3 2014/09/14 08:30:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.7.0.ebuild,v 1.7 2015/02/15 14:59:01 ago Exp $
 
 EAPI=5
 
@@ -17,12 +17,13 @@ HOMEPAGE="http://gitorious.org/orcus/pages/Home"
 LICENSE="MIT"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE="static-libs"
 
 RDEPEND="
 	>=dev-libs/boost-1.51.0:=
-	>=dev-libs/libixion-0.7.0
+	=dev-libs/libixion-0.7*
+	sys-libs/zlib:=
 "
 DEPEND="${RDEPEND}
 	>=dev-util/mdds-0.8.1

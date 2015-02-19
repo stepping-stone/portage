@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/vice
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.96 2014/10/04 01:29:56 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.98 2015/02/11 03:05:43 mr_bones_ Exp $
+
+*vice-2.4.16-r1 (11 Feb 2015)
+
+  11 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> +vice-2.4.16-r1.ebuild,
+  -vice-2.4.16.ebuild, metadata.xml:
+  rework gui selection and deps; add more use flags
+
+*vice-2.4.16 (05 Feb 2015)
+
+  05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/vice-2.4.16-autotools.patch, +vice-2.4.16.ebuild,
+  files/vice-2.4-arm.patch, files/vice-2.4-autotools.patch,
+  files/vice-2.4-buffer.patch, files/vice-2.4-ffmpeg-1.patch:
+  version bump
 
   04 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/vice-2.3-libav.patch, -files/vice-2.3-notexi.patch, -vice-2.3.ebuild:

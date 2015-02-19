@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/enum34-1.0.ebuild,v 1.1 2014/10/11 17:08:45 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/enum34-1.0.ebuild,v 1.6 2015/01/17 23:03:22 blueness Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 python3_3 )
+PYTHON_COMPAT=( python{2_7,3_3} pypy pypy3 )
 
 inherit distutils-r1
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~mips ~x86"
 IUSE="doc"
 
 DEPEND=""

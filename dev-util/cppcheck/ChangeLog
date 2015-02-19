@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/cppcheck
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.57 2014/10/10 13:23:54 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.60 2015/02/15 19:11:30 zlogene Exp $
+
+  15 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> cppcheck-1.67.ebuild:
+  Add ~arm keyword
+
+*cppcheck-1.67 (28 Dec 2014)
+
+  28 Dec 2014; Jeroen Roovers <jer@gentoo.org> +cppcheck-1.67.ebuild:
+  Version bump (bug #525954 by Christian Strahl).
+
+  28 Nov 2014; Pacho Ramos <pacho@gentoo.org> cppcheck-1.66.ebuild:
+  Support python 3.4
 
   10 Oct 2014; Michael Weber <xmw@gentoo.org> cppcheck-1.65-r1.ebuild:
   Backport ebuild improvements (test, bug 511438), manpage.

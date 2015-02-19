@@ -1,6 +1,22 @@
 # ChangeLog for Gentoo/AMD64 profile directory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.73 2014/10/23 11:15:51 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.77 2015/01/30 22:04:37 blueness Exp $
+
+  30 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/amd64/make.defaults, linux/musl/x86/make.defaults:
+  musl: unhide the CPU_FLAGS_X86 USE_EXPANDs, mirror change from
+  arch/{amd64,x86}/make.defaults.
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> linux/musl/amd64/use.mask,
+  linux/musl/x86/use.mask:
+  Unmask CPU_FLAGS_X86 in musl profiles.
+
+  30 Dec 2014; Anthony G. Basile <blueness@gentoo.org> linux/musl/package.mask:
+  Unmask >sys-apps/file-5.17 for musl, bug #525816
+
+  18 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/ppc/make.defaults:
+  linux/musl/ppc/make.defaults: add mutlib ABI, thanks Felix Janda
 
   23 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
   +linux/musl/package.use.mask:

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.12.3.ebuild,v 1.4 2014/10/05 12:35:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.12.3.ebuild,v 1.7 2014/12/19 13:33:18 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python3_{3,4} )
 PYTHON_REQ_USE="threads"
 
 inherit gnome2 python-r1
@@ -15,7 +15,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Orca"
 
 LICENSE="LGPL-2.1+ CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 IUSE="+braille"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

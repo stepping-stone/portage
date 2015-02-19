@@ -1,6 +1,30 @@
 # ChangeLog for mail-client/thunderbird-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.165 2014/11/02 08:35:00 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.171 2015/02/15 15:07:49 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-bin-31.4.0.ebuild:
+  Stable for x86, wrt bug #536564
+
+  07 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> thunderbird-bin-31.4.0.ebuild:
+  amd64 stable wrt bug #536564
+
+*thunderbird-bin-31.4.0 (14 Jan 2015)
+
+  14 Jan 2015;  <anarchy@gentoo.org> +thunderbird-bin-31.4.0.ebuild,
+  files/icon/thunderbird-bin.desktop:
+  Security bump, misc bug fixes
+
+  10 Dec 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-bin-31.3.0.ebuild:
+  Stable for x86, wrt bug #531408
+
+  10 Dec 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-bin-31.3.0.ebuild:
+  Stable for amd64, wrt bug #531408
+
+*thunderbird-bin-31.3.0 (02 Dec 2014)
+
+  02 Dec 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thunderbird-bin-31.3.0.ebuild:
+  version bump for security bug 531408
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org>
   thunderbird-bin-31.2.0-r1.ebuild:

@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20131009.ebuild,v 1.4 2014/11/02 12:03:50 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20131009.ebuild,v 1.13 2015/01/30 17:27:26 mgorny Exp $
 
 EAPI=5
 
 # https://bugs.gentoo.org/show_bug.cgi?id=434356#c4
-PYTHON_COMPAT=( python{2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 EGIT_REPO_URI="git://git.mplayer2.org/mplayer2.git"
 
@@ -21,7 +21,7 @@ SRC_URI="http://dev.gentoo.org/~maksbotan/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux"
 IUSE="+alsa aqua bluray bs2b cddb +cdio cpudetection debug directfb doc dvb +dvd
 +dvdnav +enca ftp gif +iconv ipv6 jack joystick jpeg ladspa lcms +libass libcaca
 lirc md5sum mng +mp3 +network +opengl oss png pnm portaudio +postproc pulseaudio
@@ -29,9 +29,9 @@ pvr +quvi radio samba selinux +shm tga +threads +unicode v4l vcd vdpau +X xinera
 +xscreensaver +xv yuv4mpeg"
 IUSE+=" symlink"
 
-CPU_FEATURES="3dnow 3dnowext altivec +mmx mmxext sse sse2 ssse3"
+CPU_FEATURES="cpu_flags_x86_3dnow:3dnow cpu_flags_x86_3dnowext:3dnowext altivec +cpu_flags_x86_mmx:mmx cpu_flags_x86_mmxext:mmxext cpu_flags_x86_sse:sse cpu_flags_x86_sse2:sse2 cpu_flags_x86_ssse3:ssse3"
 for x in ${CPU_FEATURES}; do
-	IUSE+=" ${x}"
+	IUSE+=" ${x%:*}"
 done
 
 REQUIRED_USE="
@@ -311,7 +311,7 @@ src_configure() {
 	use shm || myconf+=" --disable-shm"
 
 	for i in ${CPU_FEATURES//+/}; do
-		myconf+=" $(use_enable ${i})"
+		myconf+=" $(use_enable ${i%:*} ${i#*:})"
 	done
 
 	use debug && myconf+=" --enable-debug=3"

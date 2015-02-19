@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/twisted-names
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.99 2014/11/12 04:04:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.101 2014/11/21 01:50:32 floppym Exp $
+
+  21 Nov 2014; Mike Gilbert <floppym@gentoo.org> -twisted-names-12.3.0.ebuild,
+  -twisted-names-13.0.0.ebuild:
+  Remove ebuilds using twisted.eclass.
+
+*twisted-names-14.0.2 (18 Nov 2014)
+
+  18 Nov 2014; Patrick Lauer <patrick@gentoo.org> +twisted-names-14.0.2.ebuild:
+  Bump
 
 *twisted-names-14.0.1 (12 Nov 2014)
 

@@ -1,6 +1,45 @@
 # ChangeLog for www-client/seamonkey
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.501 2014/11/06 07:51:42 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.509 2015/02/07 23:52:04 polynomial-c Exp $
+
+*seamonkey-2.32.1 (07 Feb 2015)
+
+  07 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> +seamonkey-2.32.1.ebuild:
+  Version bump.
+
+  07 Feb 2015; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.32.ebuild:
+  Stable for x86/amd64, wrt bug #539242
+
+*seamonkey-2.32 (14 Jan 2015)
+
+  14 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.31-r1.ebuild,
+  +seamonkey-2.32.ebuild, -files/icon/seamonkey.desktop,
+  +files/seamonkey.desktop:
+  Version bump.
+
+  02 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.26.1.ebuild,
+  -seamonkey-2.30-r1.ebuild,
+  -files/seamonkey-2.30-webm-disallow-negative-samples.patch,
+  -files/pixman-supplement.patch:
+  Removed vulnerable versions.
+
+  10 Dec 2014; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.31-r1.ebuild:
+  Stable for x86, wrt bug #531408
+
+  10 Dec 2014; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.31-r1.ebuild:
+  Stable for amd64, wrt bug #531408
+
+*seamonkey-2.31-r1 (06 Dec 2014)
+
+  06 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.31.ebuild,
+  +seamonkey-2.31-r1.ebuild:
+  Revbump to fix broken epatch line.
+
+*seamonkey-2.31 (05 Dec 2014)
+
+  05 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.29.1.ebuild,
+  +seamonkey-2.31.ebuild, metadata.xml:
+  Security bump (bug #531408). Removed old.
 
   06 Nov 2014; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.30-r1.ebuild,
   -files/seamonkey-2.30-pulseaudio_configure_switch_fix.patch:

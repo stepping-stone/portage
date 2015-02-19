@@ -1,22 +1,20 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.41.ebuild,v 1.1 2014/11/17 19:22:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.41.ebuild,v 1.5 2015/01/26 10:06:41 ago Exp $
 
 EAPI="5"
 
 AUTOTOOLS_AUTORECONF=1
 
-inherit eutils linux-info pam autotools-utils versionator
-
-MY_P="${PN}-$(replace_version_separator 2 .)"
+inherit eutils linux-info pam autotools-utils
 
 DESCRIPTION="Tools and libraries to configure and manage kernel control groups"
 HOMEPAGE="http://libcg.sourceforge.net/"
-SRC_URI="mirror://sourceforge/project/libcg/${PN}/v0.39.rc/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/project/libcg/${PN}/v${PV}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="+daemon debug pam static-libs +tools debug"
 
 RDEPEND="pam? ( virtual/pam )"
@@ -27,8 +25,6 @@ DEPEND="
 	sys-devel/flex
 	"
 REQUIRED_USE="daemon? ( tools )"
-
-S="${WORKDIR}/${MY_P}"
 
 DOCS=(README_daemon README README_systemd INSTALL)
 pkg_setup() {

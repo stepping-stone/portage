@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.13.0.ebuild,v 1.4 2014/11/13 15:19:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.13.0.ebuild,v 1.9 2014/12/28 14:53:20 titanofold Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ if [[ $PV = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://kde/stable/${PN/-server/}/src/${P/-server/}.tar.bz2"
-	KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 	S="${WORKDIR}/${P/-server/}"
 fi
 
@@ -56,7 +56,7 @@ DEPEND="${CDEPEND}
 	test? ( sys-apps/dbus )
 "
 RDEPEND="${CDEPEND}
-	postgres? ( virtual/postgresql[server] )
+	postgres? ( dev-db/postgresql[server] )
 "
 
 RESTRICT="test"
@@ -64,8 +64,8 @@ RESTRICT="test"
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		[[ $(gcc-major-version) -lt 4 ]] || \
-			( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 7 ]] ) \
-			&& die "Sorry, but gcc-4.7 and earlier won't work (see bug #520102)."
+			( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 7 ]] ) \
+			&& die "Sorry, but gcc-4.6 and earlier won't work (see bug #520102)."
 	fi
 }
 

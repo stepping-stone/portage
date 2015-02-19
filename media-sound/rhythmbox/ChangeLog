@@ -1,6 +1,22 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.263 2014/10/03 10:00:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.268 2014/12/19 13:40:46 pacho Exp $
+
+  19 Dec 2014; Pacho Ramos <pacho@gentoo.org> rhythmbox-3.1.ebuild:
+  amd64 stable, bug 529964
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> rhythmbox-3.1.ebuild:
+  x86 stable, bug 529964
+
+  01 Dec 2014; Michał Górny <mgorny@gentoo.org> rhythmbox-3.1.ebuild:
+  Use python-r1 to avoid issues with python-single-r1 when depending on libpeas.
+  Enforce proper USE dependency on libpeas.
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> rhythmbox-3.1.ebuild:
+  python-3.3 is the default again
+
+  24 Nov 2014; Pacho Ramos <pacho@gentoo.org> rhythmbox-3.1.ebuild:
+  Support python 3.4
 
   03 Oct 2014; Pacho Ramos <pacho@gentoo.org> rhythmbox-3.1.ebuild:
   Tests failing for years without upstream caring at all, upstream bug #688745

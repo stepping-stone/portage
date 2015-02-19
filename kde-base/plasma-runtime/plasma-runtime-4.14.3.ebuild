@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/plasma-runtime-4.14.3.ebuild,v 1.1 2014/11/16 12:21:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/plasma-runtime-4.14.3.ebuild,v 1.6 2015/02/17 11:06:40 ago Exp $
 
 EAPI=5
 
@@ -10,11 +10,12 @@ DECLARATIVE_REQUIRED="always"
 inherit kde4-meta
 
 DESCRIPTION="Script engine and package tool for plasma"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
 	$(add_kdebase_dep kactivities '' 4.13)
+	$(add_kdebase_dep kdelibs 'crypt')
 "
 RDEPEND="${DEPEND}"
 

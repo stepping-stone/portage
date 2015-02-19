@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.152 2014/11/17 23:34:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.162 2015/02/01 12:01:06 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -15,29 +15,21 @@
 inherit eutils multiprocessing unpacker
 [[ ${CATEGORY} == "perl-core" ]] && inherit alternatives
 
-PERL_EXPF="src_unpack src_compile src_test src_install"
+PERL_EXPF="src_unpack src_prepare src_configure src_compile src_test src_install"
 
 case "${EAPI:-0}" in
-	4|5)
-		PERL_EXPF+=" src_prepare src_configure"
+	5)
 		[[ ${CATEGORY} == "perl-core" ]] && \
 			PERL_EXPF+=" pkg_postinst pkg_postrm"
 
 		case "${GENTOO_DEPEND_ON_PERL:-yes}" in
 		yes)
-			case "${EAPI:-0}" in
-			5)
-				case "${GENTOO_DEPEND_ON_PERL_SUBSLOT:-yes}" in
-				yes)
-					DEPEND="dev-lang/perl:=[-build(-)]"
-					;;
-				*)
-					DEPEND="dev-lang/perl[-build(-)]"
-					;;
-				esac
+			case "${GENTOO_DEPEND_ON_PERL_SUBSLOT:-yes}" in
+			yes)
+				DEPEND="dev-lang/perl:=[-build(-)]"
 				;;
 			*)
-				DEPEND="|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )"
+				DEPEND="dev-lang/perl[-build(-)]"
 				;;
 			esac
 			RDEPEND="${DEPEND}"
@@ -46,20 +38,6 @@ case "${EAPI:-0}" in
 		;;
 	*)
 		die "EAPI=${EAPI} is not supported by perl-module.eclass"
-		;;
-esac
-
-case "${EAPI:-0}" in
-	5)
-		;;
-	*)
-		ewarn
-		ewarn "******************************************************************"
-		ewarn "${EBUILD}:"
-		ewarn "Support for EAPI=${EAPI:-0} in perl-module.eclass will be removed"
-		ewarn "on 1/Feb/2015. Please fix your overlay ebuilds to use EAPI=5."
-		ewarn "******************************************************************"
-		ewarn
 		;;
 esac
 
@@ -75,7 +53,7 @@ case "${PERL_EXPORT_PHASE_FUNCTIONS:-yes}" in
 		;;
 esac
 
-LICENSE="${LICENSE:-|| ( Artistic GPL-1 GPL-2 GPL-3 )}"
+LICENSE="${LICENSE:-|| ( Artistic GPL-1+ )}"
 
 if [[ -n ${MY_PN} || -n ${MY_PV} || -n ${MODULE_VERSION} ]] ; then
 	: ${MY_P:=${MY_PN:-${PN}}-${MY_PV:-${MODULE_VERSION:-${PV}}}}
@@ -105,7 +83,6 @@ perl-module_src_unpack() {
 	debug-print-function $FUNCNAME "$@"
 
 	unpacker_src_unpack
-	has src_prepare ${PERL_EXPF} || perl-module_src_prepare
 }
 
 # @FUNCTION: perl-module_src_prepare
@@ -115,7 +92,6 @@ perl-module_src_unpack() {
 # This function is to be called during the ebuild src_prepare() phase.
 perl-module_src_prepare() {
 	debug-print-function $FUNCNAME "$@"
-	has src_prepare ${PERL_EXPF} && \
 	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
 	debug-print "$FUNCNAME: applying user patches"
 	epatch_user
@@ -134,22 +110,7 @@ perl-module_src_prepare() {
 # This function is to be called during the ebuild src_configure() phase.
 perl-module_src_configure() {
 	debug-print-function $FUNCNAME "$@"
-	perl-module_src_prep
-}
 
-# @FUNCTION: perl-module_src_prep
-# @USAGE: perl-module_src_prep
-# @DESCRIPTION:
-# Configure the ebuild sources (bis).
-#
-# This function is still around for historical reasons 
-# and will be soon deprecated.
-#
-# Please use the function above instead, perl-module_src_configure().
-#
-# TODO: Move code to perl-module_src_configure().
-perl-module_src_prep() {
-	debug-print-function $FUNCNAME "$@"
 	[[ ${SRC_PREP} = yes ]] && return 0
 	SRC_PREP="yes"
 
@@ -202,6 +163,21 @@ perl-module_src_prep() {
 	fi
 }
 
+# @FUNCTION: perl-module_src_prep
+# @USAGE: perl-module_src_prep
+# @DESCRIPTION:
+# Configure the ebuild sources (bis).
+#
+# This function is still around for historical reasons 
+# and will be soon deprecated.
+#
+# Please use the function above instead, perl-module_src_configure().
+perl-module_src_prep() {
+	debug-print-function $FUNCNAME "$@"
+	ewarn "perl-modules.eclass: perl-module_src_prep is deprecated and will be removed. Please use perl-module_src_configure instead."
+	perl-module_src_configure
+}
+
 # @FUNCTION: perl-module_src_compile
 # @USAGE: perl-module_src_compile
 # @DESCRIPTION:
@@ -210,8 +186,6 @@ perl-module_src_prep() {
 perl-module_src_compile() {
 	debug-print-function $FUNCNAME "$@"
 	perl_set_version
-
-	has src_configure ${PERL_EXPF} || perl-module_src_prep
 
 	if [[ $(declare -p mymake 2>&-) != "declare -a mymake="* ]]; then
 		local mymake_local=(${mymake})
@@ -319,44 +293,66 @@ perl-module_src_install() {
 # @FUNCTION: perl-module_pkg_setup
 # @USAGE: perl-module_pkg_setup
 # @DESCRIPTION:
-# This function is to be called during the pkg_setup() phase.
+# This function was to be called during the pkg_setup() phase.
+# Deprecated, to be removed. Where it is called, place a call to perl_set_version instead.
 perl-module_pkg_setup() {
 	debug-print-function $FUNCNAME "$@"
+	ewarn "perl-modules.eclass: perl-module_pkg_setup is deprecated and will be removed. Please use perl_set_version instead."
 	perl_set_version
 }
 
 # @FUNCTION: perl-module_pkg_preinst
 # @USAGE: perl-module_pkg_preinst
 # @DESCRIPTION:
-# This function is to be called during the pkg_preinst() phase.
+# This function was to be called during the pkg_preinst() phase.
+# Deprecated, to be removed. Where it is called, place a call to perl_set_version instead.
 perl-module_pkg_preinst() {
 	debug-print-function $FUNCNAME "$@"
+	ewarn "perl-modules.eclass: perl-module_pkg_preinst is deprecated and will be removed. Please use perl_set_version instead."
 	perl_set_version
 }
 
 # @FUNCTION: perl-module_pkg_postinst
 # @USAGE: perl-module_pkg_postinst
 # @DESCRIPTION:
-# This function is to be called during the pkg_postinst() phase.
+# This function is to be called during the pkg_postinst() phase. It only does 
+# useful things for the perl-core category, where it handles the file renaming and symbolic
+# links that prevent file collisions for dual-life packages installing scripts. 
+# In any other category it immediately exits.
 perl-module_pkg_postinst() {
 	debug-print-function $FUNCNAME "$@"
+	if [[ ${CATEGORY} != perl-core ]] ; then
+		eqawarn "perl-module.eclass: You are calling perl-module_pkg_postinst outside the perl-core category."
+		eqawarn "   This does not do anything; the call can be safely removed."
+		return 0
+	fi
 	perl_link_duallife_scripts
 }
 
 # @FUNCTION: perl-module_pkg_prerm
 # @USAGE: perl-module_pkg_prerm
 # @DESCRIPTION:
-# This function is to be called during the pkg_prerm() phase.
+# This function was to be called during the pkg_prerm() phase.
+# It does not do anything. Deprecated, to be removed.
 perl-module_pkg_prerm() {
 	debug-print-function $FUNCNAME "$@"
+	ewarn "perl-module.eclass: perl-module_pkg_prerm does not do anything and will be removed. Please remove the call."
 }
 
 # @FUNCTION: perl-module_pkg_postrm
 # @USAGE: perl-module_pkg_postrm
 # @DESCRIPTION:
-# This function is to be called during the pkg_postrm() phase.
+# This function is to be called during the pkg_postrm() phase. It only does 
+# useful things for the perl-core category, where it handles the file renaming and symbolic
+# links that prevent file collisions for dual-life packages installing scripts. 
+# In any other category it immediately exits.
 perl-module_pkg_postrm() {
 	debug-print-function $FUNCNAME "$@"
+	if [[ ${CATEGORY} != perl-core ]] ; then
+		eqawarn "perl-module.eclass: You are calling perl-module_pkg_postrm outside the perl-core category."
+		eqawarn "   This does not do anything; the call can be safely removed."
+		return 0
+	fi
 	perl_link_duallife_scripts
 }
 
@@ -524,12 +520,9 @@ perl_rm_files() {
 # @FUNCTION: perl_link_duallife_scripts
 # @USAGE: perl_link_duallife_scripts
 # @DESCRIPTION:
-# This function contains the bulk of perl-module_pkg_postinst()'s logic
-# and will be soon deprecated. 
-#
-# Please use perl-module_pkg_postinst() instead.
-#
-# TODO: Move code to perl-module_pkg_postinst().
+# Moves files and generates symlinks so dual-life packages installing scripts do not
+# lead to file collisions. Mainly for use in pkg_postinst and pkg_postrm, and makes 
+# only sense for perl-core packages.
 perl_link_duallife_scripts() {
 	debug-print-function $FUNCNAME "$@"
 	if [[ ${CATEGORY} != perl-core ]] || ! has_version ">=dev-lang/perl-5.8.8-r8" ; then

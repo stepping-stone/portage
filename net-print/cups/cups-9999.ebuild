@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.68 2014/11/02 12:42:26 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.70 2015/02/10 21:19:39 dilfridge Exp $
 
 EAPI=5
 
@@ -21,7 +21,6 @@ if [[ ${PV} == *9999 ]]; then
 	if [[ ${PV} != 9999 ]]; then
 		EGIT_BRANCH=branch-${PV/.9999}
 	fi
-	KEYWORDS=""
 else
 	SRC_URI="http://www.cups.org/software/${MY_PV}/${MY_P}-source.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~m68k-mint"
@@ -97,7 +96,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.6.0-dont-compress-manpages.patch"
 	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
-	"${FILESDIR}/${PN}-2.0.0-rename-systemd-service-files.patch"
+	"${FILESDIR}/${PN}-2.0.1-rename-systemd-service-files.patch"
 )
 
 MULTILIB_CHOST_TOOLS=(
@@ -326,7 +325,7 @@ pkg_postinst() {
 	if ! [[ "${REPLACING_VERSIONS}" ]]; then
 		echo
 		elog "For information about installing a printer and general cups setup"
-		elog "take a look at: http://www.gentoo.org/doc/en/printing-howto.xml"
+		elog "take a look at: https://wiki.gentoo.org/wiki/Printing"
 		echo
 	fi
 

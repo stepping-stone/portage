@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.14.ebuild,v 1.1 2014/11/14 18:41:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.14.ebuild,v 1.7 2015/02/17 11:06:42 ago Exp $
 
 EAPI=5
 
@@ -13,17 +13,17 @@ OPENGL_REQUIRED="always"
 inherit python-single-r1 kde4-meta
 
 DESCRIPTION="Plasma: KDE desktop framework"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug gps json +kdepim nepomuk python qalculate"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 COMMONDEPEND="
-	dev-libs/libdbusmenu-qt
+	dev-libs/libdbusmenu-qt[qt4(+)]
 	>=dev-qt/qtcore-4.8.4-r3:4
 	!kde-misc/ktouchpadenabler
 	$(add_kdebase_dep kactivities)
-	$(add_kdebase_dep kdelibs 'nepomuk?')
+	$(add_kdebase_dep kdelibs 'crypt,nepomuk?')
 	$(add_kdebase_dep kephal)
 	$(add_kdebase_dep ksysguard)
 	$(add_kdebase_dep libkworkspace)

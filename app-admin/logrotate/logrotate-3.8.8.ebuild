@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.8.ebuild,v 1.1 2014/11/04 19:55:09 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.8.ebuild,v 1.7 2015/01/21 13:03:14 armin76 Exp $
 
 EAPI=5
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit autotools eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Rotates, compresses, and mails system logs"
 HOMEPAGE="https://fedorahosted.org/logrotate/"
@@ -12,7 +12,7 @@ SRC_URI="https://fedorahosted.org/releases/l/o/logrotate/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="acl selinux"
 
 CDEPEND="
@@ -34,8 +34,9 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ignore-hidden.patch \
 		"${FILESDIR}"/${P}-fbsd.patch \
 		"${FILESDIR}"/${P}-noasprintf.patch \
-		"${FILESDIR}"/${P}-atomic-create.patch
-	"${S}"/autogen.sh || die
+		"${FILESDIR}"/${P}-atomic-create.patch \
+		"${FILESDIR}"/${P}-Werror.patch
+	eautoreconf
 }
 
 src_compile() {

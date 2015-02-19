@@ -1,6 +1,49 @@
 # ChangeLog for net-misc/dhcpcd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.436 2014/11/14 16:36:52 williamh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.446 2015/02/17 21:01:44 maekke Exp $
+
+  17 Feb 2015; Markus Meier <maekke@gentoo.org> dhcpcd-6.6.7.ebuild:
+  arm stable, bug #538418
+
+  02 Feb 2015; Jeroen Roovers <jer@gentoo.org> dhcpcd-6.6.7.ebuild:
+  Stable for HPPA (bug #538418).
+
+  01 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> dhcpcd-6.6.7.ebuild:
+  amd64 stable wrt bug #538418
+
+  30 Jan 2015; William Hubbs <williamh@gentoo.org> dhcpcd-6.7.1.ebuild,
+  dhcpcd-9999.ebuild:
+  Add the embedded use flag for #535960.
+
+*dhcpcd-6.7.1 (30 Jan 2015)
+
+  30 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> -dhcpcd-6.6.0.ebuild,
+  -dhcpcd-6.6.1.ebuild, -dhcpcd-6.6.2.ebuild, -dhcpcd-6.6.4.ebuild,
+  -dhcpcd-6.6.5.ebuild, +dhcpcd-6.7.1.ebuild:
+  Version bump. Removed old.
+
+  10 Jan 2015; Tobias Klausmann <klausman@gentoo.org> dhcpcd-6.4.7.ebuild:
+  Stable on alpha, bug 523900
+
+*dhcpcd-6.6.7 (06 Jan 2015)
+
+  06 Jan 2015; William Hubbs <williamh@gentoo.org> +dhcpcd-6.6.7.ebuild:
+  version bump
+
+*dhcpcd-6.6.6 (18 Dec 2014)
+
+  18 Dec 2014; William Hubbs <williamh@gentoo.org> +dhcpcd-6.6.6.ebuild:
+  version bump
+
+*dhcpcd-6.6.5 (10 Dec 2014)
+
+  10 Dec 2014; William Hubbs <williamh@gentoo.org> +dhcpcd-6.6.5.ebuild:
+  version bump
+
+*dhcpcd-6.6.4 (29 Nov 2014)
+
+  29 Nov 2014; Jason Zaman <perfinon@gentoo.org> +dhcpcd-6.6.4.ebuild:
+  Version bump on behalf of rsmarples
 
 *dhcpcd-6.6.2 (14 Nov 2014)
 

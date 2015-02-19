@@ -1,6 +1,31 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.182 2014/11/10 10:51:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.189 2014/12/28 14:46:02 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  xemacs-21.4.22-r4.ebuild, xemacs-21.5.31.ebuild, xemacs-21.5.33.ebuild,
+  xemacs-21.5.34-r2.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
+
+  16 Dec 2014; Jeroen Roovers <jer@gentoo.org> xemacs-21.5.31.ebuild,
+  xemacs-21.5.33.ebuild:
+  Do not export variables in the global scope (bug #527076).
+
+  04 Dec 2014; Ulrich Müller <ulm@gentoo.org> -xemacs-21.4.22-r2.ebuild,
+  -xemacs-21.4.22-r3.ebuild:
+  Remove old.
+
+  04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> xemacs-21.4.22-r4.ebuild:
+  Stable for ppc64, wrt bug #475658
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> xemacs-21.4.22-r4.ebuild:
+  Stable for sparc, wrt bug #475658
+
+  23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> xemacs-21.4.22-r4.ebuild:
+  x86 stable wrt bug #475658
+
+  20 Nov 2014; Tobias Klausmann <klausman@gentoo.org> xemacs-21.4.22-r4.ebuild:
+  Stable on alpha, bug 475658
 
   10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> xemacs-21.4.22-r4.ebuild:
   Stable for ppc, wrt bug #475658

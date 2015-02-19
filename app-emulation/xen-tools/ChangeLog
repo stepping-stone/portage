@@ -1,6 +1,41 @@
 # ChangeLog for app-emulation/xen-tools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.266 2014/11/06 23:00:32 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.270 2015/02/16 06:57:16 dlan Exp $
+
+*xen-tools-4.5.0-r1 (15 Feb 2015)
+*xen-tools-4.4.1-r6 (15 Feb 2015)
+*xen-tools-4.3.3-r4 (15 Feb 2015)
+
+  15 Feb 2015; Yixun Lan <dlan@gentoo.org> -xen-tools-4.3.3-r2.ebuild,
+  +xen-tools-4.3.3-r4.ebuild, -xen-tools-4.4.1-r4.ebuild,
+  -xen-tools-4.4.1-r5.ebuild, +xen-tools-4.4.1-r6.ebuild,
+  -xen-tools-4.5.0.ebuild, +xen-tools-4.5.0-r1.ebuild:
+  minor revision bump, also drop old
+
+*xen-tools-4.5.0 (21 Jan 2015)
+*xen-tools-4.4.1-r5 (21 Jan 2015)
+*xen-tools-4.3.3-r3 (21 Jan 2015)
+*xen-tools-4.2.5-r2 (21 Jan 2015)
+
+  21 Jan 2015; Yixun Lan <dlan@gentoo.org> +xen-tools-4.2.5-r2.ebuild,
+  +xen-tools-4.3.3-r3.ebuild, +xen-tools-4.4.1-r5.ebuild,
+  -xen-tools-4.5.0_rc4.ebuild, +xen-tools-4.5.0.ebuild,
+  files/gentoo-patches.conf:
+  version bump
+
+*xen-tools-4.5.0_rc4 (19 Dec 2014)
+
+  19 Dec 2014; Yixun Lan <dlan@gentoo.org> +xen-tools-4.5.0_rc4.ebuild,
+  files/gentoo-patches.conf:
+  add 4.5.0_rc4 for testing, with keywords dropped to alter user
+
+*xen-tools-4.4.1-r4 (26 Nov 2014)
+*xen-tools-4.3.3-r2 (26 Nov 2014)
+
+  26 Nov 2014; Yixun Lan <dlan@gentoo.org> +xen-tools-4.3.3-r2.ebuild,
+  -xen-tools-4.4.1-r1.ebuild, -xen-tools-4.4.1-r2.ebuild,
+  +xen-tools-4.4.1-r4.ebuild:
+  security version bump, bug 530182
 
 *xen-tools-4.4.1-r3 (06 Nov 2014)
 

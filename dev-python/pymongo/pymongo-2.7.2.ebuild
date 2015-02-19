@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.7.2.ebuild,v 1.2 2014/10/13 20:09:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.7.2.ebuild,v 1.4 2015/02/16 09:51:28 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa x86"
 IUSE="doc kerberos test"
 
 RDEPEND="
@@ -26,7 +26,7 @@ DEPEND="
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
-		dev-db/mongodb
+		>=dev-db/mongodb-2.6.0
 	)
 "
 DISTUTILS_IN_SOURCE_BUILD=1

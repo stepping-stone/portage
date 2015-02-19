@@ -1,6 +1,33 @@
 # ChangeLog for x11-misc/xscreensaver
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.381 2014/11/17 12:19:38 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.389 2015/02/01 13:43:02 ago Exp $
+
+  01 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xscreensaver-5.32.ebuild:
+  Stable for x86, wrt bug #533752
+
+  31 Jan 2015; Jeroen Roovers <jer@gentoo.org> xscreensaver-5.32.ebuild:
+  Depend on virtual/glu by stephen.smith3141 (bug #538362).
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> xscreensaver-5.32.ebuild:
+  Stable for amd64, wrt bug #533752
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> xscreensaver-5.32.ebuild:
+  arm stable, bug #533752
+
+  29 Dec 2014; Jeroen Roovers <jer@gentoo.org> xscreensaver-5.32.ebuild:
+  Stable for HPPA (bug #533752).
+
+  30 Nov 2014; Jeroen Roovers <jer@gentoo.org> -xscreensaver-5.29.ebuild:
+  Old.
+
+  29 Nov 2014; Markus Meier <maekke@gentoo.org> xscreensaver-5.30.ebuild:
+  arm stable, bug #525680
+
+*xscreensaver-5.32 (20 Nov 2014)
+
+  20 Nov 2014; Jeroen Roovers <jer@gentoo.org> -xscreensaver-5.31.ebuild,
+  +xscreensaver-5.32.ebuild, -files/xscreensaver-5.31-uint32_t.patch:
+  Version bump.
 
 *xscreensaver-5.31 (17 Nov 2014)
 

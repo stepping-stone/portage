@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.114 2014/11/12 03:31:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.116 2014/11/21 01:50:32 floppym Exp $
+
+  21 Nov 2014; Mike Gilbert <floppym@gentoo.org> -twisted-conch-12.3.0.ebuild,
+  -twisted-conch-13.0.0.ebuild:
+  Remove ebuilds using twisted.eclass.
+
+*twisted-conch-14.0.2 (18 Nov 2014)
+
+  18 Nov 2014; Patrick Lauer <patrick@gentoo.org> +twisted-conch-14.0.2.ebuild:
+  Bump
 
   12 Nov 2014; Ian Delaney <idella4@gentoo.org> twisted-conch-14.0.1.ebuild:
   Delete redundant comment

@@ -1,6 +1,63 @@
 # ChangeLog for Gentoo/AMD64 profile directory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.292 2014/11/16 02:25:27 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.306 2015/02/18 11:02:57 chithanh Exp $
+
+  18 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.stable.mask:
+  Mask multilib for x11-libs/xcb-util*
+
+  13 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  package.use.stable.mask:
+  Mask multilib features of librevenge until zlib goes multilib
+
+  11 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.use.stable.mask, package.use.stable.mask:
+  Mask abi_x86_32 on media-video/rtmpdump.
+
+  30 Jan 2015; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Hide CPU_FLAGS_X86 everywhere but on amd64 & x86.
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> package.use.force,
+  package.use.mask:
+  Update package.use.* entries for CPU_FLAGS_X86. Keep duplicate with old flags
+  until conversion is complete.
+
+  28 Jan 2015; Mike Gilbert <floppym@gentoo.org> make.defaults:
+  Set CPU_FLAGS_X86 to a reasonable default.
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> use.mask:
+  Mask CPU_FLAGS_X86 for non-x86 arches.
+
+  24 Jan 2015; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.use.stable.mask, package.use.stable.mask:
+  Apply stable-masks to mysql packages, sync no-emul-linux-x86 profile.
+
+  14 Dec 2014; Michał Górny <mgorny@gentoo.org> package.use:
+  Enable multilib by default on ati- and nvidia-drivers, bug #532492.
+
+  13 Dec 2014; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.use.stable.mask, package.use.stable.mask:
+  Stable-mask abi_x86_32 for bug #526042.
+
+  08 Dec 2014; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.mask, no-emul-linux-x86/package.use.mask:
+  Mask gcj-jdk[X] instead of the whole package, pointed out in bug #531900,
+  comment 3.
+
+  07 Dec 2014; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.mask:
+  Mask gcj-jdk as well.
+
+  07 Dec 2014; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.use.mask:
+  Reduce the gcc[gcj] mask to gcc[awt] since only that carries real
+  emul-linux-x86 dependencies (though gcc[gcj] is still subject to automagic
+  deps).
+
+  30 Nov 2014; Michał Górny <mgorny@gentoo.org>
+  +no-emul-linux-x86/package.use.mask:
+  Mask sys-devel/gcc[gcj] since the multilib deps are broken for a long time
+  with no will from the maintainer to accept a patch.
 
   16 Nov 2014; Mike Gilbert <floppym@gentoo.org> use.stable.mask:
   Drop unneeded python3_4 (un)mask.

@@ -1,6 +1,35 @@
 # ChangeLog for net-analyzer/greenbone-security-assistant
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/ChangeLog,v 1.12 2014/11/04 12:33:12 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/ChangeLog,v 1.16 2015/02/15 02:02:46 patrick Exp $
+
+  15 Feb 2015; Patrick Lauer <patrick@gentoo.org>
+  -greenbone-security-assistant-5.0.4.ebuild:
+  Remove old version with unsatisfied dependencies
+
+*greenbone-security-assistant-6.0_beta6 (14 Feb 2015)
+*greenbone-security-assistant-5.0.5 (14 Feb 2015)
+
+  14 Feb 2015; Justin Lecher <jlec@gentoo.org>
+  +greenbone-security-assistant-5.0.5.ebuild,
+  +greenbone-security-assistant-6.0_beta6.ebuild,
+  -greenbone-security-assistant-6.0_beta3.ebuild,
+  -greenbone-security-assistant-6.0_beta4.ebuild:
+  Version Bump
+
+  18 Dec 2014; Justin Lecher <jlec@gentoo.org>
+  greenbone-security-assistant-5.0.4.ebuild,
+  greenbone-security-assistant-6.0_beta4.ebuild:
+  Fix version number if depndencies, #532896
+
+*greenbone-security-assistant-6.0_beta4 (01 Dec 2014)
+
+  01 Dec 2014; Justin Lecher <jlec@gentoo.org>
+  -greenbone-security-assistant-2.0.1.ebuild,
+  -greenbone-security-assistant-4.0.1.ebuild,
+  -greenbone-security-assistant-4.0.2.ebuild,
+  -greenbone-security-assistant-5.0.3-r1.ebuild,
+  +greenbone-security-assistant-6.0_beta4.ebuild:
+  Version Bump; drop old
 
 *greenbone-security-assistant-5.0.4 (04 Nov 2014)
 

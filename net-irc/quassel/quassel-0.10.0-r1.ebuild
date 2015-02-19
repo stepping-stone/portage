@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.10.0-r1.ebuild,v 1.3 2014/09/13 15:30:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.10.0-r1.ebuild,v 1.6 2015/01/29 01:35:36 johu Exp $
 
 EAPI=5
 
@@ -21,8 +21,8 @@ IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl syslo
 SERVER_RDEPEND="
 	dev-qt/qtscript:4
 	crypt? (
-		app-crypt/qca:2
-		app-crypt/qca-ossl
+		app-crypt/qca:2[qt4(+)]
+		|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
 	)
 	!postgres? ( dev-qt/qtsql:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] )
 	postgres? ( dev-qt/qtsql:4[postgres] )
@@ -38,10 +38,10 @@ GUI_RDEPEND="
 	)
 	kde? (
 		kde-base/kdelibs:4
-		kde-base/oxygen-icons:4
+		|| ( kde-apps/oxygen-icons kde-base/oxygen-icons:4 )
 		ayatana? ( kde-misc/plasma-widget-message-indicator )
 	)
-	phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) )
+	phonon? ( || ( media-libs/phonon[qt4] dev-qt/qtphonon:4 ) )
 	webkit? ( dev-qt/qtwebkit:4 )
 "
 

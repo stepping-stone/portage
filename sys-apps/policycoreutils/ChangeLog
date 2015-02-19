@@ -1,6 +1,33 @@
 # ChangeLog for sys-apps/policycoreutils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.145 2014/11/14 19:20:37 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.149 2015/02/06 06:04:27 perfinion Exp $
+
+  06 Feb 2015; Jason Zaman <perfinion@gentoo.org> policycoreutils-2.3-r3.ebuild:
+  Stablize 2.3-r3
+
+*policycoreutils-2.4 (04 Feb 2015)
+
+  04 Feb 2015; Jason Zaman <perfinion@gentoo.org> +policycoreutils-2.4.ebuild:
+  Version bump
+
+*policycoreutils-2.4_rc7 (06 Dec 2014)
+*policycoreutils-2.3-r3 (06 Dec 2014)
+
+  06 Dec 2014; Jason Zaman <perfinion@gentoo.org>
+  +policycoreutils-2.3-r3.ebuild, +policycoreutils-2.4_rc7.ebuild,
+  -policycoreutils-2.4_rc2.ebuild, -policycoreutils-2.4_rc5.ebuild,
+  -policycoreutils-2.4_rc6.ebuild,
+  files/0020-disable-autodetection-of-pam-and-audit.patch,
+  files/0030-make-inotify-check-use-flag-triggered.patch,
+  policycoreutils-2.4_rc6-r1.ebuild:
+  version bump and ebuild clean up, drop old RC
+
+*policycoreutils-2.4_rc6-r1 (22 Nov 2014)
+
+  22 Nov 2014; Jason Zaman <perfinon@gentoo.org>
+  +files/0001-policycoreutils-pp-add-roletype-statements-for-both-.patch,
+  +policycoreutils-2.4_rc6-r1.ebuild:
+  add patch from upstream to fix missing roletypes
 
 *policycoreutils-2.4_rc6 (14 Nov 2014)
 

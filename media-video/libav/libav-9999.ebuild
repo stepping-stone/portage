@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.74 2014/09/17 00:11:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.77 2015/01/30 16:57:31 mgorny Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ IUSE="aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc
 
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
-CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext neon ssse3 vis avx2"
+CPU_FEATURES="cpu_flags_x86_3dnow:amd3dnow cpu_flags_x86_3dnowext:amd3dnowext altivec cpu_flags_x86_avx:avx cpu_flags_x86_mmx:mmx cpu_flags_x86_mmxext:mmxext neon cpu_flags_x86_ssse3:ssse3 vis cpu_flags_x86_avx2:avx2"
 for i in ${CPU_FEATURES} ; do
 	IUSE+=" ${i%:*}"
 done
@@ -96,11 +96,8 @@ RDEPEND="
 	vaapi? ( >=x11-libs/libva-1.2.1-r1[${MULTILIB_USEDEP}] )
 	vdpau? ( >=x11-libs/libvdpau-0.7[${MULTILIB_USEDEP}] )
 	vpx? ( >=media-libs/libvpx-1.2.0_pre20130625[${MULTILIB_USEDEP}] )
-	X? (
-		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
-		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
-		>=x11-libs/libXfixes-5.0.1[${MULTILIB_USEDEP}]
-	)
+	X? ( >=x11-libs/libxcb-1.9.1[${MULTILIB_USEDEP}]
+		 >=x11-libs/libxcb-1.9.1[${MULTILIB_USEDEP}] )
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 "
 
@@ -108,7 +105,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
 	doc? ( app-text/texi2html )
 	ieee1394? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
-	mmx? ( dev-lang/yasm )
+	cpu_flags_x86_mmx? ( dev-lang/yasm )
 	rtmp? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	schroedinger? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	ssl? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
@@ -212,7 +209,7 @@ multilib_src_configure() {
 	for i in alsa oss jack; do
 		use ${i} || myconf+=( --disable-indev=${i} )
 	done
-	use X && myconf+=( --enable-x11grab )
+	use X && myconf+=( --enable-libxcb )
 	# Outdevs
 	for i in alsa oss ; do
 		use ${i} || myconf+=( --disable-outdev=${i} )
@@ -321,7 +318,7 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	dodoc Changelog README INSTALL
+	dodoc Changelog README.md INSTALL
 }
 
 multilib_src_test() {

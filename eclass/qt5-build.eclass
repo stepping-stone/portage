@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.10 2014/11/14 02:49:57 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.14 2015/02/18 14:15:37 pesa Exp $
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:
@@ -23,11 +23,7 @@ QT5_MINOR_VERSION=${PV#*.}
 QT5_MINOR_VERSION=${QT5_MINOR_VERSION%%.*}
 
 HOMEPAGE="https://www.qt.io/ https://qt-project.org/"
-if [[ ${QT5_MINOR_VERSION} -ge 4 ]]; then
-	LICENSE="|| ( LGPL-2.1 LGPL-3 )"
-else
-	LICENSE="|| ( LGPL-2.1 GPL-3 )"
-fi
+LICENSE="|| ( LGPL-2.1 LGPL-3 )"
 SLOT="5"
 
 # @ECLASS-VARIABLE: QT5_MODULE
@@ -51,14 +47,14 @@ case ${PV} in
 		# development releases
 		QT5_BUILD_TYPE="release"
 		MY_P=${QT5_MODULE}-opensource-src-${PV/_/-}
-		SRC_URI="http://download.qt-project.org/development_releases/qt/${PV%.*}/${PV/_/-}/submodules/${MY_P}.tar.xz"
+		SRC_URI="http://download.qt.io/development_releases/qt/${PV%.*}/${PV/_/-}/submodules/${MY_P}.tar.xz"
 		S=${WORKDIR}/${MY_P}
 		;;
 	*)
 		# official stable releases
 		QT5_BUILD_TYPE="release"
 		MY_P=${QT5_MODULE}-opensource-src-${PV}
-		SRC_URI="http://download.qt-project.org/archive/qt/${PV%.*}/${PV}/submodules/${MY_P}.tar.xz"
+		SRC_URI="http://download.qt.io/official_releases/qt/${PV%.*}/${PV}/submodules/${MY_P}.tar.xz"
 		S=${WORKDIR}/${MY_P}
 		;;
 esac
@@ -72,7 +68,7 @@ EGIT_REPO_URI=(
 IUSE="debug test"
 
 [[ ${PN} == qtwebkit ]] && RESTRICT+=" mirror" # bug 524584
-[[ ${QT5_BUILD_TYPE} == release && ${QT5_MINOR_VERSION} -le 3 ]] && RESTRICT+=" test" # bug 457182
+[[ ${QT5_BUILD_TYPE} == release ]] && RESTRICT+=" test" # bug 457182
 
 DEPEND="
 	dev-lang/perl
@@ -85,8 +81,12 @@ if [[ ${PN} != qttest ]]; then
 		DEPEND+=" test? ( >=dev-qt/qttest-${PV}:5[debug=] )"
 	fi
 fi
+RDEPEND="
+	dev-qt/qtchooser
+"
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install src_test pkg_postinst pkg_postrm
+
 
 # @ECLASS-VARIABLE: PATCHES
 # @DEFAULT_UNSET
@@ -575,9 +575,9 @@ qt5_base_configure() {
 		# and cause problems on hardened, so turn them off
 		-no-pch
 
-		# reduced relocations cause major breakage on at least arm and ppc, so we
-		# don't specify anything and let configure figure out if they are supported,
-		# see also https://bugreports.qt-project.org/browse/QTBUG-36129
+		# reduced relocations cause major breakage on at least arm and ppc, so
+		# don't specify anything and let the configure figure out if they are
+		# supported; see also https://bugreports.qt.io/browse/QTBUG-36129
 		#-reduce-relocations
 
 		# let configure automatically detect if GNU gold is available

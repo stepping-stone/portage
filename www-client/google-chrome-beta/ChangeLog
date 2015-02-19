@@ -1,6 +1,83 @@
 # ChangeLog for www-client/google-chrome-beta
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-beta/ChangeLog,v 1.54 2014/11/13 02:38:57 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-beta/ChangeLog,v 1.65 2015/02/12 15:17:17 floppym Exp $
+
+*google-chrome-beta-41.0.2272.53_p1 (12 Feb 2015)
+
+  12 Feb 2015; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-41.0.2272.53_p1.ebuild,
+  -google-chrome-beta-41.0.2272.43_p1.ebuild:
+  Automated update.
+
+*google-chrome-beta-41.0.2272.43_p1 (06 Feb 2015)
+
+  06 Feb 2015; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-41.0.2272.43_p1.ebuild,
+  -google-chrome-beta-41.0.2272.35_p1.ebuild:
+  Automated update.
+
+*google-chrome-beta-41.0.2272.35_p1 (29 Jan 2015)
+
+  29 Jan 2015; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-41.0.2272.35_p1.ebuild,
+  -google-chrome-beta-41.0.2272.17_p1.ebuild:
+  Automated update.
+
+*google-chrome-beta-41.0.2272.17_p1 (27 Jan 2015)
+
+  27 Jan 2015; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-41.0.2272.17_p1.ebuild,
+  -google-chrome-beta-41.0.2272.16_p1.ebuild:
+  Automated update.
+
+*google-chrome-beta-41.0.2272.16_p1 (23 Jan 2015)
+
+  23 Jan 2015; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-41.0.2272.16_p1.ebuild,
+  -google-chrome-beta-40.0.2214.85_p1.ebuild:
+  Automated update.
+
+*google-chrome-beta-40.0.2214.85_p1 (14 Jan 2015)
+
+  14 Jan 2015; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-40.0.2214.85_p1.ebuild,
+  -google-chrome-beta-40.0.2214.69_p1.ebuild:
+  Automated update.
+
+*google-chrome-beta-40.0.2214.69_p1 (07 Jan 2015)
+
+  07 Jan 2015; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-40.0.2214.69_p1.ebuild,
+  -google-chrome-beta-40.0.2214.45_p1.ebuild:
+  Automated update.
+
+*google-chrome-beta-40.0.2214.45_p1 (18 Dec 2014)
+
+  18 Dec 2014; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-40.0.2214.45_p1.ebuild,
+  -google-chrome-beta-40.0.2214.38_p1.ebuild:
+  Automated update.
+
+*google-chrome-beta-40.0.2214.38_p1 (11 Dec 2014)
+
+  11 Dec 2014; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-40.0.2214.38_p1.ebuild,
+  -google-chrome-beta-40.0.2214.28_p1.ebuild:
+  Automated update.
+
+*google-chrome-beta-40.0.2214.28_p1 (04 Dec 2014)
+
+  04 Dec 2014; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-40.0.2214.28_p1.ebuild,
+  -google-chrome-beta-40.0.2214.10_p1.ebuild:
+  Automated update.
+
+*google-chrome-beta-40.0.2214.10_p1 (21 Nov 2014)
+
+  21 Nov 2014; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-beta-40.0.2214.10_p1.ebuild,
+  -google-chrome-beta-39.0.2171.62_p1.ebuild:
+  Automated update.
 
 *google-chrome-beta-39.0.2171.62_p1 (13 Nov 2014)
 

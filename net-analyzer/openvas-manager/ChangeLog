@@ -1,6 +1,31 @@
 # ChangeLog for net-analyzer/openvas-manager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/ChangeLog,v 1.15 2014/11/04 12:33:19 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/ChangeLog,v 1.19 2015/02/14 14:28:55 jlec Exp $
+
+  14 Feb 2015; Justin Lecher <jlec@gentoo.org> -openvas-manager-5.0.7.ebuild,
+  -openvas-manager-6.0_beta3.ebuild, -openvas-manager-6.0_beta4.ebuild,
+  openvas-manager-5.0.8.ebuild, openvas-manager-6.0_beta5.ebuild:
+  Drop old; fix dependencies versions
+
+  10 Feb 2015; Justin Lecher <jlec@gentoo.org> openvas-manager-5.0.8.ebuild:
+  Fix dependencies, #539530
+
+*openvas-manager-6.0_beta5 (03 Feb 2015)
+*openvas-manager-5.0.8 (03 Feb 2015)
+
+  03 Feb 2015; Justin Lecher <jlec@gentoo.org> +openvas-manager-5.0.8.ebuild,
+  +openvas-manager-6.0_beta5.ebuild,
+  files/openvas-manager-5.0.4-bsdsource.patch,
+  +files/openvas-manager-6.0_beta5-bsdsource.patch:
+  Version BUmp
+
+*openvas-manager-6.0_beta4 (01 Dec 2014)
+*openvas-manager-5.0.7 (01 Dec 2014)
+
+  01 Dec 2014; Justin Lecher <jlec@gentoo.org> -openvas-manager-4.0.4.ebuild,
+  -openvas-manager-5.0.4-r2.ebuild, -openvas-manager-5.0.5.ebuild,
+  +openvas-manager-5.0.7.ebuild, +openvas-manager-6.0_beta4.ebuild:
+  Version Bump; drop old vulnerable versions, #531094
 
 *openvas-manager-5.0.5 (04 Nov 2014)
 

@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/gnome-color-manager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.53 2014/11/13 11:51:48 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.55 2015/02/04 09:48:30 pacho Exp $
+
+  04 Feb 2015; Pacho Ramos <pacho@gentoo.org> gnome-color-manager-3.14.2.ebuild:
+  Rekeyword on ia64
+
+*gnome-color-manager-3.14.2 (22 Dec 2014)
+
+  22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-color-manager-3.14.2.ebuild:
+  Version bump for Gnome 3.14. Dropped keywords addressed at bug #523924.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -files/gnome-color-manager-2.32.0-libnotify-0.7.patch,

@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/stevedore
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.22 2014/10/26 03:05:49 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.24 2015/02/09 00:03:24 radhermit Exp $
+
+  09 Feb 2015; Tim Harder <radhermit@gentoo.org> stevedore-1.1.0.ebuild:
+  Add pypi site to HOMEPAGE.
+
+*stevedore-1.1.0 (18 Nov 2014)
+
+  18 Nov 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +stevedore-1.1.0.ebuild:
+  bup
 
   26 Oct 2014; Mike Gilbert <floppym@gentoo.org> stevedore-1.0.0.ebuild:
   Unpin dev-python/pillow.

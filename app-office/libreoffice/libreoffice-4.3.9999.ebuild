@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.5 2014/11/17 11:23:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.15 2015/02/15 19:58:47 dilfridge Exp $
 
 EAPI=5
 
@@ -26,8 +26,8 @@ ADDONS_URI="http://dev-www.libreoffice.org/src/"
 BRANDING="${PN}-branding-gentoo-0.8.tar.xz"
 # PATCHSET="${P}-patchset-01.tar.xz"
 
-[[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
-inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
+[[ ${PV} == *9999* ]] && SCM_ECLASS="git-r3"
+inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic nsplugins versionator ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="LibreOffice, a full office productivity suite"
@@ -60,6 +60,8 @@ unset DEV_URI
 # If you want them gone, patches are welcome.
 ADDONS_SRC+=" ${ADDONS_URI}/d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz" # modifies source code
+ADDONS_SRC+=" collada? ( ${ADDONS_URI}/4b87018f7fff1d054939d19920b751a0-collada2gltf-master-cb1d97788a.tar.bz2 )"
+ADDONS_SRC+=" collada? ( ${ADDONS_URI}/OpenCOLLADA-master-6509aa13af.tar.bz2 )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip )"
 ADDONS_SRC+=" libreoffice_extensions_wiki-publisher? ( ${ADDONS_URI}/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip )" # no release for 8 years, should we package it?
 ADDONS_SRC+=" libreoffice_extensions_scripting-javascript? ( ${ADDONS_URI}/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip )" # Does not build with 1.6 rhino at all
@@ -72,7 +74,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding coinmp collada +cups dbus debug eds firebird gltf gnome gstreamer
-+gtk gtk3 jemalloc kde mysql odk opengl postgres telepathy test +vba vlc"
++gtk gtk3 jemalloc kde mysql odk opengl postgres telepathy test vlc"
 
 LO_EXTS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -89,8 +91,10 @@ unset lo_xt
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 
+# FIXME: collada? ( media-libs/opencollada )
+#        how to configure system-collada?
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	app-arch/zip
@@ -110,7 +114,7 @@ COMMON_DEPEND="
 	>=app-text/libwps-0.3.0
 	>=app-text/poppler-0.16:=[xpdf-headers(+),cxx]
 	>=dev-cpp/clucene-2.3.3.4-r2
-	dev-cpp/libcmis:0.4
+	=dev-cpp/libcmis-0.4*
 	dev-db/unixODBC
 	>=dev-libs/boost-1.46:=
 	dev-libs/expat
@@ -129,7 +133,7 @@ COMMON_DEPEND="
 	>=media-libs/glew-1.10
 	>=media-libs/harfbuzz-0.9.18:=[icu(+)]
 	media-libs/lcms:2
-	>=media-libs/libpng-1.4
+	>=media-libs/libpng-1.4:0=
 	>=media-libs/libcdr-0.1.0
 	>=media-libs/libfreehand-0.1.0
 	>=media-libs/libvisio-0.1.0
@@ -144,7 +148,6 @@ COMMON_DEPEND="
 	x11-libs/libXrender
 	bluetooth? ( net-wireless/bluez )
 	coinmp? ( sci-libs/coinor-mp )
-	collada? ( media-libs/opencollada )
 	cups? ( net-print/cups )
 	dbus? ( >=dev-libs/dbus-glib-0.92 )
 	eds? ( gnome-extra/evolution-data-server )
@@ -175,7 +178,7 @@ COMMON_DEPEND="
 		virtual/glu
 		virtual/opengl
 	)
-	postgres? ( >=virtual/postgresql-9.0[kerberos] )
+	postgres? ( >=dev-db/postgresql-9.0[kerberos] )
 	telepathy? (
 		dev-libs/glib:2
 		>=net-libs/telepathy-glib-0.18.0
@@ -196,7 +199,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 if [[ ${PV} != *9999* ]]; then
-	PDEPEND="~app-office/libreoffice-l10n-${PV}"
+	PDEPEND="=app-office/libreoffice-l10n-$(get_version_component_range 1-2)*"
 else
 	# Translations are not reliable on live ebuilds
 	# rather force people to use english only.
@@ -244,8 +247,17 @@ PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
 
-	# from master branch
+	# from 4.4 branch
 	"${FILESDIR}/${PN}-4.3.1.2-implement--with-system-coinmp.patch"
+	"${FILESDIR}/${PN}-4.3.4.1-boost-1.56.0.patch" # bug 522178
+	"${FILESDIR}/${PN}-4.3.5.2-system-opencollada.patch"
+	"${FILESDIR}/${PN}-4.3.5.2-detect-KDE5-fallback-to-KDE4UI.patch"
+	"${FILESDIR}/${PN}-4.3.5.2-DPI.patch"
+
+	# from master branch
+
+	# submitted
+	"${FILESDIR}/${PN}-4.3.5.2-remove-bashisms.patch" # bug 525454
 )
 
 REQUIRED_USE="
@@ -280,7 +292,7 @@ pkg_pretend() {
 
 	# Ensure pg version but we have to be sure the pg is installed (first
 	# install on clean system)
-	if use postgres && has_version virtual/postgresql; then
+	if use postgres && has_version dev-db/postgresql; then
 		 pgslot=$(postgresql-config show)
 		 if [[ ${pgslot//.} < 90 ]] ; then
 			eerror "PostgreSQL slot must be set to 9.0 or higher."
@@ -314,12 +326,10 @@ src_unpack() {
 		for mod in ${MODULES}; do
 			mypv=${PV/.9999}
 			[[ ${mypv} != ${PV} ]] && EGIT_BRANCH="${PN}-${mypv/./-}"
-			EGIT_PROJECT="${PN}/${mod}"
-			EGIT_SOURCEDIR="${WORKDIR}/${P}"
-			[[ ${mod} != core ]] && EGIT_SOURCEDIR="${WORKDIR}/${PN}-${mod}-${PV}"
+			EGIT_CHECKOUT_DIR="${WORKDIR}/${P}"
+			[[ ${mod} != core ]] && EGIT_CHECKOUT_DIR="${WORKDIR}/${PN}-${mod}-${PV}"
 			EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${mod}"
-			EGIT_NOUNPACK="true"
-			git-2_src_unpack
+			git-r3_src_unpack
 			if [[ ${mod} != core ]]; then
 				mod2=${mod}
 				# mapping does not match on help
@@ -329,7 +339,7 @@ src_unpack() {
 				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
 			fi
 		done
-		unset EGIT_PROJECT EGIT_SOURCEDIR EGIT_REPO_URI EGIT_BRANCH
+		unset EGIT_CHECKOUT_DIR EGIT_REPO_URI EGIT_BRANCH
 	fi
 }
 
@@ -445,6 +455,7 @@ src_configure() {
 	# --enable-extension-integration: enable any extension integration support
 	# --without-{fonts,myspell-dicts,ppsd}: prevent install of sys pkgs
 	# --disable-report-builder: too much java packages pulled in without pkgs
+	# FIXME: $(use_with collada system-opencollada)
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}/" \
 		--with-system-headers \
@@ -511,7 +522,6 @@ src_configure() {
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable telepathy) \
-		$(use_enable vba) \
 		$(use_enable vlc) \
 		$(use_with coinmp system-coinmp) \
 		$(use_with gltf system-libgltf) \
@@ -559,11 +569,15 @@ src_install() {
 
 	# Fix bash completion placement
 	newbashcomp "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN}
-	rm -rf "${ED}"/etc/
+	bashcomp_alias \
+		libreoffice \
+		unopkg loimpress lobase localc lodraw lomath lowriter lofromtemplate loweb loffice
+	rm -rf "${ED}"/etc/ || die
 
 	if use branding; then
 		insinto /usr/$(get_libdir)/${PN}/program
 		newins "${WORKDIR}/branding-sofficerc" sofficerc
+		dodir /etc/env.d
 		echo "CONFIG_PROTECT=/usr/$(get_libdir)/${PN}/program/sofficerc" > "${ED}"/etc/env.d/99${PN}
 	fi
 
@@ -578,6 +592,10 @@ src_install() {
 
 	# Remove desktop files for support to old installs that can't parse mime
 	rm -rf "${ED}"/usr/share/mimelnk/
+
+	# FIXME: Hack add missing file
+	insinto /usr/$(get_libdir)/${PN}/program
+	doins "${S}"/instdir/program/libsaxlo.so
 
 	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
 	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin

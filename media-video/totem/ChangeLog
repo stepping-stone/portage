@@ -1,6 +1,30 @@
 # ChangeLog for media-video/totem
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.381 2014/11/13 12:25:15 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.387 2015/02/11 09:40:22 pacho Exp $
+
+  11 Feb 2015; Pacho Ramos <pacho@gentoo.org> totem-3.14.2.ebuild:
+  Newer grilo is needed (#539686 by Émeric Maschino)
+
+*totem-3.14.2 (03 Feb 2015)
+
+  03 Feb 2015; Pacho Ramos <pacho@gentoo.org> +totem-3.14.2.ebuild:
+  Version bump
+
+*totem-3.14.1 (24 Dec 2014)
+
+  24 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> -totem-3.12.1.ebuild,
+  +totem-3.14.1.ebuild:
+  Version bump for Gnome 3.14. Dropped keywords, bug #523924. Needs gstreamer
+  1.4, to follow. Clean up old revision.
+
+  19 Dec 2014; Pacho Ramos <pacho@gentoo.org> totem-3.12.2.ebuild:
+  amd64 stable, bug 529964
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> totem-3.12.2.ebuild:
+  x86 stable, bug 529964
+
+  01 Dec 2014; Michał Górny <mgorny@gentoo.org> totem-3.12.2.ebuild:
+  Add missing PYTHON_USEDEP on libpeas.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -files/totem-2.30.2-mp2t-support.patch,

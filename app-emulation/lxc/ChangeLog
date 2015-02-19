@@ -1,6 +1,45 @@
 # ChangeLog for app-emulation/lxc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.53 2014/11/09 15:28:25 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.61 2015/02/17 15:15:21 hwoarang Exp $
+
+*lxc-1.1.0-r2 (17 Feb 2015)
+
+  17 Feb 2015; Markos Chandras <hwoarang@gentoo.org> +lxc-1.1.0-r2.ebuild,
+  -lxc-1.1.0-r1.ebuild, -lxc-1.1.0.ebuild:
+  Revbump to use correct systemd file. Bug #540076. Drop old
+
+*lxc-1.1.0-r1 (15 Feb 2015)
+
+  15 Feb 2015; Markos Chandras <hwoarang@gentoo.org> +files/lxc_at.service.2,
+  +lxc-1.1.0-r1.ebuild:
+  Since 1.1.0, guests are started in daemon mode so adapt the systemd service
+  file. Also add missing Delegate=yes to facilitate systemd containers. Bug
+  #540076 by Joachim Herb
+
+  08 Feb 2015; Markos Chandras <hwoarang@gentoo.org> lxc-1.1.0.ebuild:
+  Add another kernel config check for CHECKPOINT_RESTORE
+
+*lxc-1.1.0 (08 Feb 2015)
+
+  08 Feb 2015; Markos Chandras <hwoarang@gentoo.org> +lxc-1.1.0.ebuild,
+  metadata.xml:
+  Version bump. Bug #538698
+
+  05 Feb 2015; Markos Chandras <hwoarang@gentoo.org> lxc-1.0.6-r1.ebuild,
+  lxc-1.0.7.ebuild:
+  Add missing use_enable seccomp. Bug #538834
+
+  31 Jan 2015; Markos Chandras <hwoarang@gentoo.org> -lxc-1.0.4.ebuild,
+  -lxc-1.0.6.ebuild:
+  Drop old
+
+  29 Jan 2015; Mike Frysinger <vapier@gentoo.org> lxc-1.0.7.ebuild:
+  Fix by Simran Basi to set distro explicitly to Gentoo to fix cross-compiling.
+
+*lxc-1.0.7 (21 Dec 2014)
+
+  21 Dec 2014; Markos Chandras <hwoarang@gentoo.org> +lxc-1.0.7.ebuild:
+  Version bump
 
   09 Nov 2014; Justin Lecher <jlec@gentoo.org> lxc-1.0.6-r1.ebuild:
   Fix for old bash-completion, #527520

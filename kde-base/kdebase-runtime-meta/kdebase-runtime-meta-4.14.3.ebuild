@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.14.3.ebuild,v 1.1 2014/11/16 12:21:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.14.3.ebuild,v 1.7 2015/02/17 11:06:37 ago Exp $
 
 EAPI=5
 inherit kde4-meta-pkg
 
 DESCRIPTION="Merge this to pull in all kdebase-runtime-derived packages"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="+crash-reporter +handbook minimal nepomuk"
 
 RDEPEND="
@@ -41,7 +41,7 @@ RDEPEND="
 	crash-reporter? ( $(add_kdebase_dep drkonqi ) )
 	handbook? ( || (
 		$(add_kdebase_dep khelpcenter)
-		kde-base/khelpcenter:5[compat]
+		kde-plasma/khelpcenter:5[compat(+)]
 	) )
 	nepomuk? ( $(add_kdebase_dep nepomuk) )
 	!minimal? (

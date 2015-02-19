@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/drush
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/drush/ChangeLog,v 1.10 2014/10/24 16:34:31 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/drush/ChangeLog,v 1.13 2014/12/28 10:22:05 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> drush-6.5.0.ebuild:
+  Stable for x86, wrt bug #533608
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> drush-6.5.0.ebuild:
+  Stable for amd64, wrt bug #533608
+
+*drush-6.5.0 (22 Nov 2014)
+
+  22 Nov 2014; Michael Orlitzky <mjo@gentoo.org> +drush-6.5.0.ebuild,
+  -drush-6.2.0.ebuild, -drush-6.4.0.ebuild:
+  Version bump, remove older 6.x versions.
 
 *drush-6.4.0 (24 Oct 2014)
 

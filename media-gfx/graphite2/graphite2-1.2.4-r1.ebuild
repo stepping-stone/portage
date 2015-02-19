@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4-r1.ebuild,v 1.13 2014/11/16 22:56:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4-r1.ebuild,v 1.16 2014/12/13 21:01:33 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,10 @@ RDEPEND="
 	perl? ( dev-lang/perl:= )
 "
 DEPEND="${RDEPEND}
-	perl? ( virtual/perl-Module-Build )
+	perl? (
+		virtual/perl-Module-Build
+		dev-perl/locale-maketext-lexicon
+		)
 	test? (
 		dev-libs/glib:2
 		media-libs/fontconfig
@@ -39,7 +42,7 @@ PATCHES=(
 )
 
 pkg_setup() {
-	use perl && perl-module_pkg_setup
+	use perl && perl_set_version
 	use test && python-any-r1_pkg_setup
 }
 
@@ -77,7 +80,7 @@ src_compile() {
 	cmake-multilib_src_compile
 	if use perl; then
 		cd contrib/perl || die
-		perl-module_src_prep
+		perl-module_src_configure
 		perl-module_src_compile
 	fi
 }

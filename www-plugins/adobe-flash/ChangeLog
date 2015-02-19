@@ -1,6 +1,104 @@
 # ChangeLog for www-plugins/adobe-flash
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.277 2014/11/13 11:18:36 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.299 2015/02/06 14:06:50 jer Exp $
+
+  06 Feb 2015; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.440.ebuild:
+  Old.
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.442.ebuild:
+  Stable for x86, wrt bug #538982
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.442.ebuild:
+  Stable for amd64, wrt bug #538982
+
+*adobe-flash-11.2.202.442 (06 Feb 2015)
+
+  06 Feb 2015; Patrick Lauer <patrick@gentoo.org>
+  +adobe-flash-11.2.202.442.ebuild:
+  Bump #538982
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> adobe-flash-11.2.202.440.ebuild:
+  Switch to CPU_FLAGS_X86.
+
+  27 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.438.ebuild:
+  Old.
+
+  27 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
+  adobe-flash-11.2.202.440.ebuild:
+  amd64/x86 stable wrt bug #537426
+
+*adobe-flash-11.2.202.440 (27 Jan 2015)
+
+  27 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.440.ebuild:
+  Version bump (bug #537426).
+
+  23 Jan 2015; Jeroen Roovers <jer@gentoo.org> -adobe-flash-11.2.202.429.ebuild:
+  Old.
+
+  23 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.438.ebuild:
+  Stable for x86, wrt bug #537378
+
+  23 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.438.ebuild:
+  Stable for amd64, wrt bug #537378
+
+*adobe-flash-11.2.202.438 (22 Jan 2015)
+
+  22 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.438.ebuild:
+  Version bump.
+
+  14 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.425.ebuild:
+  Old.
+
+  14 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.429.ebuild:
+  Stable for x86, wrt bug #536562
+
+  14 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.429.ebuild:
+  Stable for amd64, wrt bug #536562
+
+*adobe-flash-11.2.202.429 (14 Jan 2015)
+
+  14 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.429.ebuild:
+  Version bump (bug #536562).
+
+  10 Dec 2014; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.424.ebuild:
+  Old.
+
+  09 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.425.ebuild:
+  Stable for x86, wrt bug #532074
+
+  09 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.425.ebuild:
+  Stable for amd64, wrt bug #532074
+
+*adobe-flash-11.2.202.425 (09 Dec 2014)
+
+  09 Dec 2014; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.425.ebuild:
+  Version bump.
+
+  28 Nov 2014; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.418.ebuild, adobe-flash-11.2.202.424.ebuild:
+  Stable for AMD64 x86 (bug #530692).
+
+*adobe-flash-11.2.202.424 (25 Nov 2014)
+
+  25 Nov 2014; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.424.ebuild:
+  Version bump (bug #530692).
 
   13 Nov 2014; Jeroen Roovers <jer@gentoo.org>
   -adobe-flash-11.2.202.411.ebuild:

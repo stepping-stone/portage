@@ -1,6 +1,60 @@
 # ChangeLog for app-editors/gvim
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.443 2014/10/26 17:52:52 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.455 2015/02/07 02:25:09 radhermit Exp $
+
+  07 Feb 2015; Tim Harder <radhermit@gentoo.org> gvim-9999.ebuild:
+  Use python-r1 instead of python-single-r1.
+
+*gvim-7.4.622 (07 Feb 2015)
+
+  07 Feb 2015; Tim Harder <radhermit@gentoo.org> +gvim-7.4.622.ebuild,
+  gvim-9999.ebuild:
+  Version bump. Re-enable supporting both py2 and py3 at the same time.
+
+*gvim-7.4.591 (26 Jan 2015)
+
+  26 Jan 2015; Tim Harder <radhermit@gentoo.org> +gvim-7.4.591.ebuild:
+  Version bump.
+
+  22 Jan 2015; Tim Harder <radhermit@gentoo.org> gvim-9999.ebuild:
+  Add ruby:2.2 and drop ruby:1.9 support.
+
+  06 Jan 2015; Tim Harder <radhermit@gentoo.org> gvim-9999.ebuild:
+  Remove old EAPI specific EROOT fallback.
+
+*gvim-7.4.560 (04 Jan 2015)
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> +gvim-7.4.560.ebuild,
+  gvim-9999.ebuild:
+  Version bump.
+
+  23 Dec 2014; Tim Harder <radhermit@gentoo.org> gvim-9999.ebuild:
+  Drop duplicate dep on eselect-vi.
+
+  23 Dec 2014; Tim Harder <radhermit@gentoo.org> gvim-9999.ebuild:
+  Use array for configure options.
+
+  14 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> gvim-7.4.273.ebuild,
+  gvim-7.4.488.ebuild, gvim-7.4.527.ebuild, gvim-7.4.542.ebuild,
+  gvim-9999.ebuild:
+  Links to libperl, so add a slot operator to Perl dependency
+
+  08 Dec 2014; Tim Harder <radhermit@gentoo.org> -gvim-7.3.762.ebuild,
+  -gvim-7.3.1214.ebuild, -gvim-7.4.430.ebuild, -gvim-7.4.475.ebuild,
+  -files/gvim-7.1.285-darwin-x11link.patch,
+  -files/gvim-7.1.319-interix-cflags.patch, -files/gvim-7.1-interix-link.patch,
+  -files/gvim-7.3.1214-python3.patch, -files/gvim-7.4.193-fix-tests.patch:
+  Remove old.
+
+*gvim-7.4.542 (08 Dec 2014)
+
+  08 Dec 2014; Tim Harder <radhermit@gentoo.org> +gvim-7.4.542.ebuild:
+  Version bump.
+
+*gvim-7.4.527 (24 Nov 2014)
+
+  24 Nov 2014; Tim Harder <radhermit@gentoo.org> +gvim-7.4.527.ebuild:
+  Version bump.
 
 *gvim-7.4.488 (26 Oct 2014)
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.7.ebuild,v 1.1 2014/10/14 10:14:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.7.ebuild,v 1.6 2015/02/12 11:46:55 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_{6,7} python3_{2,3} )
+PYTHON_COMPAT=( python2_{6,7} python3_{2,3,4} )
 
-inherit gnome2 python-any-r1 virtualx
+inherit gnome2 autotools python-any-r1 virtualx
 
 DESCRIPTION="Telepathy instant messaging and video/audio call client for GNOME"
 HOMEPAGE="https://wiki.gnome.org/Apps/Empathy"
@@ -17,7 +17,7 @@ SLOT="0"
 
 IUSE="debug +geoloc gnome gnome-online-accounts +map spell test +v4l"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-linux"
 
 # False positives caused by nested configure scripts
 QA_CONFIGURE_OPTIONS=".*"
@@ -43,7 +43,7 @@ COMMON_DEPEND="
 	media-libs/clutter-gst:2.0
 	>=media-libs/cogl-1.14:1.0=
 
-	net-libs/farstream:0.2
+	net-libs/farstream:0.2=
 	>=net-libs/telepathy-farstream-0.6.0:=
 	>=net-libs/telepathy-glib-0.23.2
 	>=net-im/telepathy-logger-0.8.0:=
@@ -95,6 +95,12 @@ PDEPEND=">=net-im/telepathy-mission-control-5.14"
 pkg_setup() {
 	python-any-r1_pkg_setup
 	export PYTHONIOENCODING=UTF-8 # See bug 489774
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-3.12.7-Fix-parallel-build-in-extensions.patch"
+	eautoreconf
+	gnome2_src_prepare
 }
 
 src_configure() {

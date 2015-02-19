@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.61.ebuild,v 1.1 2014/11/10 23:03:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.61.ebuild,v 1.4 2015/02/14 19:48:55 dilfridge Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ IUSE="dbus +foomatic jpeg perl png static-libs tiff zeroconf"
 
 RDEPEND="
 	>=app-text/ghostscript-gpl-9.09
-	app-text/poppler:=[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
+	<app-text/poppler-0.31.0:=[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
 	>=app-text/qpdf-3.0.2:=
 	media-libs/fontconfig
 	media-libs/freetype:2
@@ -72,7 +72,7 @@ src_compile() {
 
 	if use perl; then
 		pushd "${S}/scripting/perl" > /dev/null
-		perl-module_src_prep
+		perl-module_src_configure
 		perl-module_src_compile
 		popd > /dev/null
 	fi
@@ -112,8 +112,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	perl-module_pkg_postinst
-
 	if ! use foomatic ; then
 		ewarn "You are disabling the foomatic code in cups-filters. Please do that ONLY if absolutely."
 		ewarn "necessary. net-print/foomatic-filters as replacement is deprecated and unmaintained."

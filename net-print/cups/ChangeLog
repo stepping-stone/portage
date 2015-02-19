@@ -1,6 +1,58 @@
 # ChangeLog for net-print/cups
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.649 2014/11/02 12:42:26 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.660 2015/02/13 14:23:59 pacho Exp $
+
+*cups-2.0.2-r1 (13 Feb 2015)
+
+  13 Feb 2015; Pacho Ramos <pacho@gentoo.org> +cups-2.0.2-r1.ebuild,
+  +files/cups-2.0.2-rename-systemd-service-files.patch,
+  +files/cups-2.0.2-systemd-socket.patch:
+  Fix cups starting (socket and ports handling) on systemd with Fedora approach
+  (that also improves the way errors in cups are reported when occur) as
+  currently starting is not working properly leading to the printers being not
+  accessible for other machines in the network.
+
+*cups-2.0.2 (10 Feb 2015)
+
+  10 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> +cups-2.0.2.ebuild,
+  cups-9999.ebuild:
+  Version bump
+
+  01 Feb 2015; Agostino Sarubbo <ago@gentoo.org> cups-2.0.1-r1.ebuild:
+  Stable for x86, wrt bug #533692
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cups-2.0.1-r1.ebuild:
+  Stable for amd64, wrt bug #533692
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> cups-2.0.1-r1.ebuild:
+  Stable for HPPA (bug #533692).
+
+  03 Jan 2015; Manuel Rüger <mrueg@gentoo.org> cups-9999.ebuild:
+  Update doc URL in elog as suggested by a3li. Fixes bug #534496.
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> cups-2.0.1-r1.ebuild:
+  arm stable, bug #533692
+
+  06 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  +files/cups-2.0.1-fix-linkage-to-gnutls.patch, cups-2.0.1-r1.ebuild:
+  fix gnutls linkage in case of USE="-ssl", fixes bug #531830
+
+  20 Nov 2014; Matthias Maier <tamiko@gentoo.org>
+  +files/cups-2.0.1-xinetd-installation-fix.patch, cups-2.0.1-r1.ebuild:
+  fix xinetd configuration wrt bug #529916
+
+*cups-2.0.1-r1 (19 Nov 2014)
+
+  19 Nov 2014; Matthias Maier <tamiko@gentoo.org> +cups-2.0.1-r1.ebuild,
+  -cups-2.0.1.ebuild, files/cups-2.0.1-rename-systemd-service-files.patch:
+  also ship with gentoo specific systemd units
+
+*cups-2.0.1 (19 Nov 2014)
+
+  19 Nov 2014; Matthias Maier <tamiko@gentoo.org> +cups-2.0.1.ebuild,
+  +files/cups-2.0.1-fix-compilation.patch,
+  +files/cups-2.0.1-rename-systemd-service-files.patch, cups-2.0.0-r2.ebuild:
+  version bump
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> cups-1.7.5-r2.ebuild,
   cups-1.7.5.ebuild, cups-1.7.9999.ebuild, cups-2.0.0-r2.ebuild,

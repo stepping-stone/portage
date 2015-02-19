@@ -1,6 +1,44 @@
 # ChangeLog for dev-python/cython
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.135 2014/11/11 11:14:29 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.145 2015/02/17 14:36:56 jer Exp $
+
+  17 Feb 2015; Jeroen Roovers <jer@gentoo.org> cython-0.21.1.ebuild:
+  Stable for HPPA (bug #530280).
+
+  16 Feb 2015; Pacho Ramos <pacho@gentoo.org> cython-0.21.1.ebuild:
+  amd64/ppc/ppc64/x86 stable, bug #530280
+
+*cython-0.22 (15 Feb 2015)
+
+  15 Feb 2015; Patrick Lauer <patrick@gentoo.org> +cython-0.22.ebuild:
+  Bump
+
+  03 Jan 2015; Ian Delaney <idella4@gentoo.org> cython-0.19.1-r1.ebuild,
+  cython-0.21.1.ebuild, cython-0.21.ebuild:
+  drop pypy support from remaining versions
+
+  01 Jan 2015; Mike Gilbert <floppym@gentoo.org> cython-0.21.2.ebuild:
+  Drop unnecessary python_gen_cond_dep call.
+
+*cython-0.21.2 (01 Jan 2015)
+
+  01 Jan 2015; Ian Delaney <idella4@gentoo.org> +cython-0.21.2.ebuild,
+  cython-0.21.1.ebuild:
+  bump; drop pypy support due to failing testsuites, set border to version of
+  setuptools, found to be required on testing, tidy
+
+  01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> cython-0.21.ebuild:
+  Stable for sparc, wrt bug #524416
+
+  23 Nov 2014; Mike Gilbert <floppym@gentoo.org> -cython-0.19.1.ebuild:
+  Remove old.
+
+  23 Nov 2014; Mike Gilbert <floppym@gentoo.org> cython-0.19.1-r1.ebuild,
+  cython-0.21.1.ebuild, cython-0.21.ebuild:
+  Use python_gen_cond_dep for numpy.
+
+  22 Nov 2014; Justin Lecher <jlec@gentoo.org> cython-0.21.1.ebuild:
+  Add pypy3 support
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> cython-0.21.ebuild:
   Stable for ia64, wrt bug #524416
