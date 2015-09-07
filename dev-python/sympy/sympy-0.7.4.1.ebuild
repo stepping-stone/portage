@@ -1,17 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.4.1.ebuild,v 1.3 2014/07/06 17:33:56 floppym Exp $
+# $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3} )
 
 inherit distutils-r1 eutils virtualx
 
 DESCRIPTION="Computer Algebra System in pure Python"
 HOMEPAGE="http://sympy.org"
 SRC_URI="https://github.com/${PN}/${PN}/releases/download/${P}/${P}.tar.gz
-	http://dev.gentoo.org/~bicatali/distfiles/${P}-system-mpmath.patch.gz"
+	https://dev.gentoo.org/~bicatali/distfiles/${P}-system-mpmath.patch.gz"
 
 LICENSE="BSD"
 SLOT="0"

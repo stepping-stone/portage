@@ -1,6 +1,59 @@
 # ChangeLog for xfce-base/xfce4-panel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.253 2014/06/22 21:53:20 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.268 2015/08/06 14:51:04 zlogene Exp $
+
+  06 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> xfce4-panel-4.12.0.ebuild:
+  ia64 stable wrt bug #553500
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> xfce4-panel-4.12.0.ebuild:
+  ppc stable wrt bug #553500
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  xfce4-panel-4.12.0-r1.ebuild:
+  Stable on alpha, bug 553500
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org> xfce4-panel-4.12.0.ebuild:
+  Stable for PPC64 (bug #553500).
+
+  11 Jul 2015; Markus Meier <maekke@gentoo.org> xfce4-panel-4.12.0.ebuild:
+  arm stable, bug #553500
+
+*xfce4-panel-4.12.0-r1 (04 Jul 2015)
+
+  04 Jul 2015; Jason Zaman <perfinion@gentoo.org> +xfce4-panel-4.12.0-r1.ebuild:
+  revbump to fix gtk-doc QA issue
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> xfce4-panel-4.12.0.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Jason Zaman <perfinion@gentoo.org> -xfce4-panel-4.11.0.ebuild,
+  -xfce4-panel-4.11.1.ebuild:
+  drop old
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> xfce4-panel-4.12.0.ebuild:
+  x86 stable wrt bug #553500
+
+  01 Jul 2015; Jeroen Roovers <jer@gentoo.org> xfce4-panel-4.12.0.ebuild:
+  Stable for HPPA (bug #553500).
+
+  15 Apr 2015; Michał Górny <mgorny@gentoo.org> xfce4-panel-4.12.0.ebuild:
+  Revert timezone-data dep bump, the new version does not work either
+
+  14 Apr 2015; Michał Górny <mgorny@gentoo.org> xfce4-panel-4.12.0.ebuild:
+  Add a blocker against broken timezone-data versions, fixes deadlock bug
+  #538484
+
+*xfce4-panel-4.12.0 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfce4-panel-4.12.0.ebuild:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> xfce4-panel-4.11.1.ebuild:
+  add arm64 support, tested on A53 board
 
 *xfce4-panel-4.11.1 (22 Jun 2014)
 

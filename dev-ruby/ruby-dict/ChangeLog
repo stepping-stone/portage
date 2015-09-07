@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-dict
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.19 2014/11/26 02:26:55 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.21 2015/07/05 07:02:07 graaff Exp $
+
+  05 Jul 2015; Hans de Graaff <graaff@gentoo.org> ruby-dict-0.9.4-r4.ebuild:
+  Remove tests since they only call the script in production and that requires
+  a network connection, fixing bug 332983.
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> ruby-dict-0.9.4-r4.ebuild:
+  Add ruby22.
 
   26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> ruby-dict-0.9.4-r3.ebuild,
   ruby-dict-0.9.4-r4.ebuild:

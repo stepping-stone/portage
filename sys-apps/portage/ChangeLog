@@ -1,6 +1,103 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1430 2015/02/13 17:47:58 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1457 2015/08/02 09:41:10 pacho Exp $
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> portage-2.2.20.ebuild:
+  sparc stable wrt bug #554104
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> portage-2.2.20.ebuild:
+  ppc stable wrt bug #554104
+
+  17 Jul 2015; Tobias Klausmann <klausman@gentoo.org> portage-2.2.20.ebuild:
+  Stable on alpha, bug 554104
+
+  16 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.20.ebuild:
+  ia64 stable wrt bug #554104
+
+  11 Jul 2015; Zac Medico <zmedico@gentoo.org> portage-2.2.20.ebuild,
+  portage-9999.ebuild:
+  Require >=app-arch/tar-1.27 for --xattrs-include (bug 554498).
+
+  11 Jul 2015; Jeroen Roovers <jer@gentoo.org> portage-2.2.20.ebuild:
+  Stable for HPPA (bug #554104).
+
+  09 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.20.ebuild:
+  arm stable wrt bug #554104
+
+  08 Jul 2015; Jeroen Roovers <jer@gentoo.org> portage-2.2.20.ebuild:
+  Stable for PPC64 (bug #554104).
+
+  07 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.20.ebuild:
+  x86 stable wrt bug #554104
+
+  07 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.20.ebuild:
+  amd64 stable wrt bug #554104
+
+*portage-2.2.20 (18 May 2015)
+
+  18 May 2015; Brian Dolbec <dolsen@gentoo.org> +portage-2.2.20.ebuild,
+  -portage-2.2.19.ebuild:
+  Version Bump, remove previous version. Fixes bugs 539510, 549666, 549616,
+  549826, 534022.
+
+*portage-2.2.19 (13 May 2015)
+
+  13 May 2015; Brian Dolbec <dolsen@gentoo.org> -portage-2.2.15.ebuild,
+  -portage-2.2.17.ebuild, +portage-2.2.19.ebuild:
+  Bump, remove old ~ versions. Fixes bugs 542732, 501866, 543818, 545252,
+  545270, 544624, 525376, 546010, 546176, 547086, 546512, 547414, 
+  542796, 547532, 547086, 547390, 325009, 547736, 428098, 547778, 548438,
+  532784, 548516, 548556, 548710, 547732, 488836, 256376, 549072, 
+  549322.
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.18.ebuild:
+  ia64 stable wrt bug #541116
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.18.ebuild:
+  alpha stable wrt bug #541116
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.18.ebuild:
+  arm stable wrt bug #541116
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.18.ebuild:
+  sparc stable wrt bug #541116
+
+  25 Apr 2015; Zac Medico <zmedico@gentoo.org> metadata.xml:
+  Update changelog and doc links.
+
+  25 Apr 2015; Zac Medico <zmedico@gentoo.org> portage-2.2.14.ebuild,
+  portage-2.2.15.ebuild, portage-2.2.17.ebuild, portage-2.2.18.ebuild,
+  portage-2.2.8-r2.ebuild, portage-9999.ebuild:
+  Update HOMEPAGE, thanks to charles17 for reporting (bug 547542).
+
+  25 Apr 2015; Brian Dolbec <dolsen@gentoo.org> portage-9999.ebuild:
+  Update EGIT_REPO_URI
+
+  25 Apr 2015; Brian Dolbec <dolsen@gentoo.org> portage-9999.ebuild:
+  Update EGIT_SRC uri.
+
+  21 Apr 2015; Jeroen Roovers <jer@gentoo.org> portage-2.2.18.ebuild:
+  Stable for HPPA (bug #541116).
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> portage-2.2.18.ebuild:
+  ppc/ppc64/x86 stable, bug #541116
+
+  19 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.18.ebuild:
+  amd64 stable wrt bug #541116
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> portage-2.2.14.ebuild,
+  portage-2.2.15.ebuild, portage-2.2.17.ebuild, portage-2.2.18.ebuild,
+  portage-9999.ebuild:
+  Drop old Python implementations
+
+*portage-2.2.18 (04 Mar 2015)
+
+  04 Mar 2015; Brian Dolbec <dolsen@gentoo.org> +portage-2.2.18.ebuild:
+  Version bump. Fixes bugs 539706, 538980, 282639, 540882, 541188, 541198,
+  541302, 500436, 540482, 511806, 541754, 542052.
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> portage-2.2.14.ebuild:
+  Stable for ppc, wrt bug #531594
 
   13 Feb 2015; Brian Dolbec <dolsen@gentoo.org> portage-9999.ebuild:
   Update ebuild back to automagic, undeclared vcs deps. Fix typo in bug # for

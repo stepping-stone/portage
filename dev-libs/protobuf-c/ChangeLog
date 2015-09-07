@@ -1,6 +1,59 @@
 # ChangeLog for dev-libs/protobuf-c
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.13 2015/01/10 06:48:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.29 2015/08/02 09:12:18 pacho Exp $
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> protobuf-c-1.1.1.ebuild:
+  sparc stable wrt bug #528240
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org> protobuf-c-1.1.1.ebuild:
+  Stable on alpha, bug 519772
+
+  16 Jul 2015; Jeroen Roovers <jer@gentoo.org> protobuf-c-1.1.1.ebuild:
+  Mark ~hppa (bug #519772).
+
+  15 Jul 2015; Tobias Klausmann <klausman@gentoo.org> protobuf-c-1.1.1.ebuild:
+  Keyworded on alpha, bug 519772
+
+  27 Jun 2015; Markus Meier <maekke@gentoo.org> protobuf-c-1.0.2-r1.ebuild:
+  arm stable, bug #528240
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> protobuf-c-1.0.2-r1.ebuild:
+  ppc64 stable wrt bug #528240
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> protobuf-c-1.0.2-r1.ebuild:
+  ppc stable wrt bug #528240
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> protobuf-c-1.0.2-r1.ebuild,
+  protobuf-c-1.1.1.ebuild:
+  ppc* love
+
+  04 May 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
+
+  25 Apr 2015; Jeroen Roovers <jer@gentoo.org> protobuf-c-1.1.1.ebuild:
+  Marked ~ppc64 too.
+
+  09 Apr 2015; Agostino Sarubbo <ago@gentoo.org> protobuf-c-1.0.2-r1.ebuild:
+  Stable for x86, wrt bug #532000
+
+  09 Apr 2015; Agostino Sarubbo <ago@gentoo.org> protobuf-c-1.0.2-r1.ebuild:
+  Stable for amd64, wrt bug #532000
+
+  16 Mar 2015; Tim Harder <radhermit@gentoo.org> -protobuf-c-1.0.1.ebuild,
+  -protobuf-c-1.0.2.ebuild, -protobuf-c-1.1.0.ebuild:
+  Remove old.
+
+*protobuf-c-1.1.1 (16 Mar 2015)
+
+  16 Mar 2015; Tim Harder <radhermit@gentoo.org> +protobuf-c-1.1.1.ebuild:
+  Version bump.
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/protobuf-c-1.1.0-no-build-tests.patch, protobuf-c-1.1.0.ebuild:
+  Add arm64/mips love. Fix cross-compiling #518440 by Luke-Jr.
 
 *protobuf-c-1.1.0 (10 Jan 2015)
 

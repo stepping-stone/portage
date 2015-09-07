@@ -1,17 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/screenlets/screenlets-0.1.6.ebuild,v 1.5 2014/12/16 09:25:24 jer Exp $
+# $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=yes
 
 inherit distutils-r1 eutils
 
 DESCRIPTION="Screenlets are small owner-drawn applications"
 HOMEPAGE="http://www.screenlets.org https://launchpad.net/screenlets"
-SRC_URI="http://code.launchpad.net/screenlets/trunk/${PV}/+download/screenlets-${PV}.tar.bz2"
+SRC_URI="https://code.launchpad.net/screenlets/trunk/${PV}/+download/screenlets-${PV}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"

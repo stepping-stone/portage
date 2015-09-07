@@ -1,6 +1,63 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.279 2015/02/16 18:23:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.294 2015/07/23 09:35:31 ago Exp $
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> bind-tools-9.10.2_p2.ebuild:
+  Stable for sparc, wrt bug #553584
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> bind-tools-9.10.2_p2.ebuild:
+  Stable for ppc, wrt bug #553584
+
+  17 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> bind-tools-9.10.2_p2.ebuild:
+  ia64 stable wrt bug #553584
+
+  15 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> bind-tools-9.10.2_p2.ebuild:
+  arm stable wrt bug #553584
+
+  14 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  bind-tools-9.10.2_p2.ebuild:
+  Stable on alpha, bug 553584
+
+  11 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> bind-tools-9.10.2_p2.ebuild:
+  x86 stable wrt bug #553584
+
+  11 Jul 2015; Jeroen Roovers <jer@gentoo.org> bind-tools-9.10.2_p2.ebuild:
+  Stable for HPPA PPC64 (bug #553584).
+
+  09 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> bind-tools-9.10.2_p2.ebuild:
+  amd64 stable wrt bug #553584
+
+*bind-tools-9.10.2_p2 (08 Jul 2015)
+
+  08 Jul 2015; Christian Ruppert <idl0r@gentoo.org> -bind-tools-9.9.5.ebuild,
+  -bind-tools-9.10.2.ebuild, -bind-tools-9.10.2-r1.ebuild,
+  +bind-tools-9.10.2_p2.ebuild:
+  Version bump, bug 553584
+
+*bind-tools-9.10.2-r1 (26 May 2015)
+
+  26 May 2015; Mike Frysinger <vapier@gentoo.org> +bind-tools-9.10.2-r1.ebuild,
+  +files/bind-tools-9.10.2-openssl.patch:
+  Clean up openssl logic to fix cross-compiling #417129 by Bertrand Jacquin.
+
+  26 May 2015; Mike Frysinger <vapier@gentoo.org> bind-tools-9.10.1_p1.ebuild:
+  Mark s390/sh stable.
+
+  26 May 2015; Mike Frysinger <vapier@gentoo.org> bind-tools-9.10.1_p1.ebuild,
+  bind-tools-9.10.2.ebuild:
+  Add arm64/m68k love.
+
+  21 Apr 2015; Mike Gilbert <floppym@gentoo.org> bind-tools-9.10.2.ebuild:
+  Add blocker on <net-dns/bind-9.10.2 so that portage does not complain about
+  file collisions.
+
+*bind-tools-9.10.2 (21 Apr 2015)
+
+  21 Apr 2015; Eray Aslan <eras@gentoo.org> +bind-tools-9.10.2.ebuild:
+  Non-maintainer bump.  Add dnssec tools - bug #473400
+
+  18 Mar 2015; Mike Gilbert <floppym@gentoo.org> bind-tools-9.10.1_p1.ebuild:
+  Pass --with-idnlib=-lidnkit to work around bug 543664.
 
   16 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> bind-tools-9.10.1_p1.ebuild:
   alpha/ia64/sparc stable wrt bug #539220

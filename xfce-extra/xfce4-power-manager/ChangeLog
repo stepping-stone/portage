@@ -1,6 +1,66 @@
 # ChangeLog for xfce-extra/xfce4-power-manager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.89 2014/12/03 05:39:40 williamh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.101 2015/08/05 10:47:46 perfinion Exp $
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> xfce4-power-manager-1.5.2.ebuild:
+  ppc stable wrt bug #553500
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org>
+  xfce4-power-manager-1.5.2.ebuild:
+  Stable for PPC64 (bug #553500).
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  xfce4-power-manager-1.5.2.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  xfce4-power-manager-1.5.2.ebuild:
+  x86 stable wrt bug #553500
+
+  21 Jun 2015; Jason Zaman <perfinion@gentoo.org>
+  xfce4-power-manager-1.5.2.ebuild:
+  add pm-utils to deps
+
+*xfce4-power-manager-1.5.2 (21 Jun 2015)
+
+  21 Jun 2015; Jason Zaman <perfinion@gentoo.org>
+  +xfce4-power-manager-1.5.2.ebuild:
+  version bump
+
+*xfce4-power-manager-1.5.0 (26 May 2015)
+
+  26 May 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-power-manager-1.5.0.ebuild:
+  Version bump. The new version switches to GTK+3 and upower-0.99*, has some
+  real icon improvements and some icon-related bug fixes.
+
+  26 Apr 2015; Jeroen Roovers <jer@gentoo.org>
+  xfce4-power-manager-1.4.1.ebuild, xfce4-power-manager-1.4.4.ebuild:
+  Marked ~ppc64 (bug #520296).
+
+  22 Apr 2015; Denis Dupeyron <calchan@gentoo.org>
+  -xfce4-power-manager-1.4.0.ebuild, -xfce4-power-manager-1.4.2.ebuild,
+  -xfce4-power-manager-1.4.3.ebuild,
+  -files/xfce4-power-manager-1.4.0-fix-handle-lid-switch.patch:
+  Cleanup. Make sure to keep xfce4-power-manager-1.4.1 as long as bug #531694
+  is not resolved upstream.
+
+*xfce4-power-manager-1.4.4 (22 Mar 2015)
+
+  22 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-power-manager-1.4.4.ebuild:
+  Version bump with trayicon reintroduced and minor bugfixes. Add slot operators
+  to deps.
+
+*xfce4-power-manager-1.4.3 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-power-manager-1.4.3.ebuild:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
 
 *xfce4-power-manager-1.4.2 (03 Dec 2014)
 

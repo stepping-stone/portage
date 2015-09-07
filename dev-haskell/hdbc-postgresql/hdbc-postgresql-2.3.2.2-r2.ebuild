@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/hdbc-postgresql-2.3.2.2-r2.ebuild,v 1.3 2014/12/28 15:21:59 titanofold Exp $
+# $Id$
 
 EAPI=5
 
@@ -14,7 +14,7 @@ MY_PN="HDBC-postgresql"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="PostgreSQL driver for HDBC"
-HOMEPAGE="http://github.com/hdbc/hdbc-postgresql"
+HOMEPAGE="https://github.com/hdbc/hdbc-postgresql"
 SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 RESTRICT="test" # requires configured postgresql
 
-RDEPEND=">=dev-db/postgresql-7
+RDEPEND=">=dev-db/postgresql-7:*
 	dev-haskell/convertible:=[profile?]
 	dev-haskell/mtl:=[profile?]
 	dev-haskell/parsec:=[profile?]

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/pychecker-0.8.19-r1.ebuild,v 1.4 2015/02/01 13:49:06 ago Exp $
+# $Id$
 
 EAPI=5
 
@@ -9,12 +9,12 @@ PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 DESCRIPTION="Python source code checking tool"
-HOMEPAGE="http://pychecker.sourceforge.net/ http://pypi.python.org/pypi/PyChecker"
+HOMEPAGE="http://pychecker.sourceforge.net/ https://pypi.python.org/pypi/PyChecker"
 SRC_URI="mirror://sourceforge/pychecker/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 DOCS=( pycheckrc ChangeLog KNOWN_BUGS MAINTAINERS NEWS README TODO )

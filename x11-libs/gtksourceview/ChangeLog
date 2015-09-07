@@ -1,6 +1,76 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.281 2015/01/24 12:44:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.299 2015/07/30 13:24:19 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> gtksourceview-2.10.5-r3.ebuild,
+  gtksourceview-3.14.4.ebuild:
+  Stable for sparc, wrt bug #551814
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  gtksourceview-2.10.5-r3.ebuild:
+  Stable on alpha, bug 551814
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  gtksourceview-3.14.4.ebuild:
+  Stable on alpha, bug 551814
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> gtksourceview-2.10.5-r3.ebuild,
+  gtksourceview-3.14.4.ebuild:
+  ppc stable wrt bug #551814
+
+  17 Jul 2015; Agostino Sarubbo <ago@gentoo.org> gtksourceview-2.10.5-r3.ebuild,
+  gtksourceview-3.14.4.ebuild:
+  Stable for ia64, wrt bug #551814
+
+  07 Jul 2015; Markus Meier <maekke@gentoo.org> gtksourceview-2.10.5-r3.ebuild:
+  arm stable, bug #551814
+
+  07 Jul 2015; Markus Meier <maekke@gentoo.org> gtksourceview-3.14.4.ebuild:
+  arm stable, bug #551814
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> gtksourceview-2.10.5-r3.ebuild,
+  gtksourceview-3.14.4.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
+  gtksourceview-2.10.5-r3.ebuild, gtksourceview-3.14.4.ebuild:
+  amd64 stable wrt bug #551814
+
+  21 Jun 2015; Jeroen Roovers <jer@gentoo.org> gtksourceview-2.10.5-r3.ebuild,
+  gtksourceview-3.14.4.ebuild:
+  Stable for PPC64 (bug #551814).
+
+*gtksourceview-3.16.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +gtksourceview-3.16.1.ebuild:
+  Version bump for Gnome 3.16.
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> gtksourceview-3.14.3.ebuild:
+  arm stable, bug #534012
+
+*gtksourceview-2.10.5-r3 (06 Jun 2015)
+
+  06 Jun 2015; Pacho Ramos <pacho@gentoo.org> +gtksourceview-2.10.5-r3.ebuild:
+  Drop obsolete glade support (#551290)
+
+*gtksourceview-3.14.4 (12 Apr 2015)
+
+  12 Apr 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +gtksourceview-3.14.4.ebuild:
+  Version bump. Fixes search related crash.
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtksourceview-3.14.3.ebuild:
+  x86 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtksourceview-3.14.3.ebuild:
+  ppc64 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtksourceview-3.14.3.ebuild:
+  ppc stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtksourceview-3.14.3.ebuild:
+  amd64 stable, bug 534012
 
 *gtksourceview-3.14.3 (24 Jan 2015)
 

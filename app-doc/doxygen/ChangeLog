@@ -1,6 +1,50 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.280 2015/01/21 15:29:06 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.291 2015/08/06 14:54:01 tamiko Exp $
+
+*doxygen-1.8.10-r1 (06 Aug 2015)
+
+  06 Aug 2015; Matthias Maier <tamiko@gentoo.org> +doxygen-1.8.10-r1.ebuild:
+  do not link support libraries dynamically, see discussion on bug #554974;
+  reintroduce useless latex use flag, see bug #556808
+
+*doxygen-1.8.10 (05 Aug 2015)
+
+  05 Aug 2015; Matthias Maier <tamiko@gentoo.org> +doxygen-1.8.10.ebuild,
+  +files/doxygen-1.8.10-link_with_pthread.patch, doxygen-9999.ebuild:
+  version bump; switch to cmake - many thanks to Alex Turbov for a preliminary
+  ebuild; drop keywords due to major build system change
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> doxygen-1.8.9.1.ebuild:
+  sparc stable wrt bug #550348
+
+  24 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> doxygen-1.8.9.1.ebuild:
+  ia64 stable wrt bug #550348
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> doxygen-1.8.9.1.ebuild:
+  ppc stable wrt bug #550348
+
+  16 Jul 2015; Tobias Klausmann <klausman@gentoo.org> doxygen-1.8.9.1.ebuild:
+  Stable on alpha, bug 550348
+
+  07 Jul 2015; Markus Meier <maekke@gentoo.org> doxygen-1.8.9.1.ebuild:
+  arm stable, bug #550348
+
+*doxygen-9999 (28 May 2015)
+
+  28 May 2015; Matthias Maier <tamiko@gentoo.org> +doxygen-9999.ebuild:
+  add a live version
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> doxygen-1.8.9.1.ebuild:
+  Stable for x86, wrt bug #550348
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> doxygen-1.8.9.1.ebuild:
+  Stable for amd64, wrt bug #550348
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> doxygen-1.8.3.1.ebuild,
+  doxygen-1.8.4-r2.ebuild, doxygen-1.8.5.ebuild, doxygen-1.8.8.ebuild,
+  doxygen-1.8.9.1.ebuild:
+  Remove old Python implementations
 
   21 Jan 2015; Matthias Maier <tamiko@gentoo.org> -doxygen-1.7.6.1.ebuild:
   drop old

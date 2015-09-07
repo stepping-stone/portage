@@ -1,18 +1,18 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-3.14.0.ebuild,v 1.1 2014/12/30 23:53:01 eva Exp $
+# $Id$
 
 EAPI="5"
 
 DESCRIPTION="Meta package for GNOME-Light, merge this package to install"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="https://www.gnome.org/"
 LICENSE="metapackage"
 SLOT="2.0"
 IUSE="cups +gnome-shell"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 # XXX: Note to developers:
 # This is a wrapper for the 'light' GNOME 3 desktop, and should only consist of
@@ -34,6 +34,7 @@ RDEPEND="!gnome-base/gnome
 
 	>=x11-themes/adwaita-icon-theme-${PV}
 	>=x11-themes/gnome-themes-standard-${PV}
+	>=x11-themes/gnome-backgrounds-${PV}
 
 	>=x11-terms/gnome-terminal-${PV}
 "

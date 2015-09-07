@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/youcompleteme-20130910.ebuild,v 1.2 2013/09/10 10:41:22 radhermit Exp $
+# $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 inherit multilib python-single-r1 cmake-utils vim-plugin
 
 if [[ ${PV} == 9999* ]] ; then
@@ -11,7 +11,7 @@ if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
 else
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="http://dev.gentoo.org/~radhermit/vim/${P}.tar.xz"
+	SRC_URI="https://dev.gentoo.org/~radhermit/vim/${P}.tar.xz"
 fi
 
 DESCRIPTION="vim plugin: a code-completion engine for Vim"

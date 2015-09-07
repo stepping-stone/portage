@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-2.2.ebuild,v 1.11 2014/08/01 11:31:47 armin76 Exp $
+# $Id$
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
 DESCRIPTION="a collection of extensions to Distutils"
-HOMEPAGE="http://pypi.python.org/pypi/setuptools"
+HOMEPAGE="https://pypi.python.org/pypi/setuptools"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="PSF-2"

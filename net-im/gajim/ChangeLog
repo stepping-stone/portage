@@ -1,6 +1,71 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.216 2015/01/17 19:58:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.231 2015/08/06 10:41:00 jlec Exp $
+
+  06 Aug 2015; Justin Lecher <jlec@gentoo.org> -files/0.14-python-version.patch,
+  -files/0.14.1-testing.patch, -files/0.14.4-unicode.patch,
+  -files/gajim-0.14.4-debian_patches_unicode.patch,
+  -files/gajim-0.15-SA48695-2.patch, -files/gajim-0.15-SA48695.patch,
+  -files/gajim-0.15-plugin.patch, -files/gajim-0.15.2-CVE-2012-5524.patch,
+  -files/gajim-0.15.3-roster.patch, -files/gajim-0.15.3-starttls.patch,
+  -files/gajim-0.16.1-gnupg-2.1-backport.patch,
+  -files/gajim-0.16_beta2-pyopenssl-backport-1.patch,
+  -files/gajim-0.16_beta2-pyopenssl-backport-2.patch, -gajim-0.16.1-r2.ebuild,
+  -gajim-0.16.1.ebuild, -gajim-0.16.2.ebuild:
+  Clean old; obsoletes bug #556596
+
+*gajim-0.16.3 (02 Aug 2015)
+
+  02 Aug 2015; Justin Lecher <jlec@gentoo.org> +gajim-0.16.3.ebuild:
+  Version Bump
+
+  28 Jul 2015; Justin Lecher <jlec@gentoo.org> gajim-0.16.2.ebuild:
+  Fix deps; bug #556080
+
+*gajim-0.16.2 (27 Jul 2015)
+
+  27 Jul 2015; Justin Lecher <jlec@gentoo.org> +gajim-0.16.2.ebuild:
+  Version Bump
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> gajim-0.16.1-r2.ebuild,
+  gajim-0.16.1.ebuild, gajim-0.16.ebuild:
+  Move various kde-base packages to kde-apps.
+
+*gajim-0.16.1-r2 (20 May 2015)
+
+  20 May 2015; Justin Lecher <jlec@gentoo.org> +gajim-0.16.1-r2.ebuild,
+  -gajim-0.16.1-r1.ebuild, files/gajim-0.16.1-gnupg-2.1-backport.patch:
+  Fix patch, bug #549742
+
+*gajim-0.16.1-r1 (18 May 2015)
+
+  18 May 2015; Justin Lecher <jlec@gentoo.org>
+  +files/gajim-0.16.1-gnupg-2.1-backport.patch, +gajim-0.16.1-r1.ebuild,
+  -gajim-0.15.4.ebuild:
+  Backport fix for gnupg 2.1, bug #549742; Drop old
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> gajim-0.16.ebuild:
+  ppc64 stable wrt bug #533404
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> gajim-0.16.ebuild:
+  ppc stable wrt bug #533404
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gajim-0.15.4.ebuild:
+  Drop old Python implementations
+
+  29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> gajim-0.16.ebuild:
+  x86 stable wrt bug #533404
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gajim-0.16.ebuild:
+  Stable for amd64, wrt bug #533404
+
+  02 Mar 2015; Justin Lecher <jlec@gentoo.org> gajim-0.16.1.ebuild:
+  Raise dep version of python-nbxmpp
+
+*gajim-0.16.1 (01 Mar 2015)
+
+  01 Mar 2015; Justin Lecher <jlec@gentoo.org> +gajim-0.16.1.ebuild:
+  Version Bump
 
   17 Jan 2015; Markus Meier <maekke@gentoo.org> gajim-0.16.ebuild:
   arm stable, bug #533404
@@ -29,7 +94,7 @@
 *gajim-0.16_rc2 (09 Jul 2014)
 
   09 Jul 2014; Justin Lecher <jlec@gentoo.org> +gajim-0.16_rc2.ebuild:
-  Version BUmp
+  Version Bump
 
   23 Jun 2014; Tobias Klausmann <klausman@gentoo.org> gajim-0.16_rc1.ebuild:
   Dekeywording on alpha due to missing pyopenssl-0.14
@@ -115,7 +180,7 @@
 *gajim-0.16_beta1 (17 Sep 2013)
 
   17 Sep 2013; Justin Lecher <jlec@gentoo.org> +gajim-0.16_beta1.ebuild:
-  Version BUmp
+  Version Bump
 
 *gajim-0.16_alpha2 (28 Jul 2013)
 
@@ -138,7 +203,7 @@
 *gajim-0.15.4 (26 May 2013)
 
   26 May 2013; Justin Lecher <jlec@gentoo.org> +gajim-0.15.4.ebuild:
-  Version BUmp
+  Version Bump
 
   23 Apr 2013; Justin Lecher <jlec@gentoo.org> -gajim-0.15.2-r3.ebuild,
   -gajim-0.15.2-r4.ebuild, -gajim-0.15.3.ebuild:
@@ -175,7 +240,7 @@
 
   18 Mar 2013; Justin Lecher <jlec@gentoo.org> +gajim-0.15.3.ebuild,
   +files/gajim-0.15.3-roster.patch:
-  Version BUmp; include backport of last tab closed fix, #461248
+  Version Bump; include backport of last tab closed fix, #461248
 
 *gajim-0.15.2-r4 (23 Feb 2013)
 
@@ -235,7 +300,7 @@
 
   05 Nov 2012; Justin Lecher <jlec@gentoo.org> -gajim-0.15-r2.ebuild,
   +gajim-0.15.2.ebuild, metadata.xml:
-  Version BUmp
+  Version Bump
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> gajim-0.15.1.ebuild:
   ia64/sparc stable wrt #427544
@@ -402,7 +467,7 @@
 
   20 Jun 2011; Justin Lecher <jlec@gentoo.org> gajim-0.14.1-r2.ebuild,
   gajim-0.14.1-r3.ebuild, +gajim-0.14.3.ebuild:
-  Version BUmp
+  Version Bump
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> gajim-0.14.1-r2.ebuild:
   ia64/sparc stable wrt #357765

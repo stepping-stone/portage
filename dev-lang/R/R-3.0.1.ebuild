@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.1.ebuild,v 1.13 2015/02/07 11:05:26 dilfridge Exp $
+# $Id$
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
 SRC_URI="
 	mirror://cran/src/base/R-3/${P}.tar.gz
-	bash-completion? ( http://dev.gentoo.org/~bicatali/distfiles/${BCP}.bz2 )"
+	bash-completion? ( https://dev.gentoo.org/~bicatali/distfiles/${BCP}.bz2 )"
 
 LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2.1"
 SLOT="0"
@@ -29,9 +29,9 @@ CDEPEND="
 	jpeg? ( virtual/jpeg:0 )
 	lapack? ( virtual/lapack )
 	perl? ( dev-lang/perl )
-	png? ( media-libs/libpng )
-	readline? ( sys-libs/readline )
-	tk? ( dev-lang/tk )
+	png? ( media-libs/libpng:0= )
+	readline? ( sys-libs/readline:0= )
+	tk? ( dev-lang/tk:0= )
 	X? ( x11-libs/libXmu x11-misc/xdg-utils )"
 
 DEPEND="${CDEPEND}

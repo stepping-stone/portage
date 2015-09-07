@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-poppler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.29 2015/01/26 13:55:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.31 2015/06/09 16:51:17 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> python-poppler-0.12.1-r4.ebuild:
+  Drop old Python implementations
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -python-poppler-0.12.1-r3.ebuild:
   Remove old.

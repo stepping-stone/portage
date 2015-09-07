@@ -1,6 +1,54 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.228 2015/01/15 11:36:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.238 2015/07/08 07:53:59 vapier Exp $
+
+  08 Jul 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/libgcrypt-1.5.4-clang-arm.patch, libgcrypt-1.5.4-r1.ebuild,
+  libgcrypt-1.5.4-r100.ebuild, libgcrypt-1.5.4.ebuild:
+  Add fix from upstream for building for arm with clang.
+
+*libgcrypt-1.6.3-r3 (28 Jun 2015)
+
+  28 Jun 2015; Kristian Fiskerstrand <k_f@gentoo.org>
+  +files/libgcrypt-1.6.3-freebsd-mpi.patch, +libgcrypt-1.6.3-r3.ebuild,
+  -files/libgcrypt-1.6.0-serial-tests.patch,
+  -files/libgcrypt-1.6.1-x32-compat.patch, -libgcrypt-1.6.1-r2.ebuild,
+  -libgcrypt-1.6.2.ebuild, -libgcrypt-1.6.3-r2.ebuild, -libgcrypt-1.6.3.ebuild:
+  Fix compile issue on fbsd (bug #494740). Cleanup old.
+
+  14 Jun 2015; Michał Górny <mgorny@gentoo.org> libgcrypt-1.6.3-r2.ebuild:
+  Build the PDF only for native ABI, bug #552110.
+
+*libgcrypt-1.6.3-r2 (13 Jun 2015)
+
+  13 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libgcrypt-1.6.3-r1.ebuild, +libgcrypt-1.6.3-r2.ebuild:
+  The multilib fix below needed a revbump (bug #551944, #551930).
+
+  13 Jun 2015; Michał Górny <mgorny@gentoo.org> libgcrypt-1.6.3-r1.ebuild:
+  Fix multilib install, bug #551930.
+
+*libgcrypt-1.6.3-r1 (12 Jun 2015)
+
+  12 Jun 2015; Kristian Fiskerstrand <k_f@gentoo.org>
+  +libgcrypt-1.6.3-r1.ebuild:
+  Add doc USE flag to install gcrypt.pdf. Fixes bug #551398. Patch contributed
+  by Andrew Savchenko.
+
+  19 Apr 2015; <jmorgan@gentoo.org> libgcrypt-1.5.4-r1.ebuild:
+  ppc64 stable wrt 524308
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libgcrypt-1.5.4-r1.ebuild:
+  Stable for ppc, wrt bug #524308
+
+  01 Mar 2015; Kristian Fiskerstrand <k_f@gentoo.org> libgcrypt-1.6.3.ebuild:
+  Add an explicit WANT_AUTOMAKE to ensure a match with upstream requirements
+
+*libgcrypt-1.6.3 (27 Feb 2015)
+
+  27 Feb 2015; Kristian Fiskerstrand <k_f@gentoo.org> +libgcrypt-1.6.3.ebuild:
+  New upstream release, security fix for two side channel attacks:
+  CVE-2014-3591,CVE-2015-0837
 
   15 Jan 2015; Raúl Porcel <armin76@gentoo.org> libgcrypt-1.5.4-r1.ebuild:
   alpha/ia64/sparc stable wrt #524308

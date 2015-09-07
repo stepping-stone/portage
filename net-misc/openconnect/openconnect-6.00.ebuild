@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-6.00.ebuild,v 1.2 2014/12/20 03:07:11 floppym Exp $
+# $Id$
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 
 inherit eutils linux-info python-any-r1
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.infradead.org/openconnect.html"
 # New versions of openconnect-script can be found here:
 # http://git.infradead.org/users/dwmw2/vpnc-scripts.git/history/HEAD:/vpnc-script
 SRC_URI="ftp://ftp.infradead.org/pub/${PN}/${P}.tar.gz
-	http://dev.gentoo.org/~hasufell/distfiles/openconnect-script-20140311.tar.xz"
+	https://dev.gentoo.org/~hasufell/distfiles/openconnect-script-20140311.tar.xz"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/3"
@@ -34,7 +34,7 @@ DEPEND="dev-libs/libxml2
 		>=net-libs/gnutls-3[static-libs?] dev-libs/nettle
 		app-misc/ca-certificates
 	)
-	gssapi? ( app-crypt/mit-krb5 )
+	gssapi? ( virtual/krb5 )
 	libproxy? ( net-libs/libproxy )
 	nls? ( virtual/libintl )"
 RDEPEND="${DEPEND}

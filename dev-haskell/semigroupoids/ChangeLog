@@ -1,6 +1,20 @@
 # ChangeLog for dev-haskell/semigroupoids
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/semigroupoids/ChangeLog,v 1.5 2014/12/14 05:45:09 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/semigroupoids/ChangeLog,v 1.8 2015/08/01 16:24:16 slyfox Exp $
+
+*semigroupoids-5.0.0.2 (01 Aug 2015)
+
+  01 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +semigroupoids-5.0.0.2.ebuild, metadata.xml:
+  Version bump.
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*semigroupoids-4.3 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +semigroupoids-4.3.ebuild:
+  Bump semigroupoids to 4.3
 
 *semigroupoids-4.2 (14 Dec 2014)
 

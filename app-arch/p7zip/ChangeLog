@@ -1,6 +1,69 @@
 # ChangeLog for app-arch/p7zip
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.162 2014/05/10 17:09:55 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.179 2015/07/30 19:10:41 jlec Exp $
+
+  30 Jul 2015; Justin Lecher <jlec@gentoo.org> -p7zip-9.20.1-r4.ebuild:
+  Drop vulnerable version, bug #536012
+
+  30 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> p7zip-9.20.1-r5.ebuild:
+  ia64 stable wrt bug #536012
+
+  24 Jun 2015; Agostino Sarubbo <ago@gentoo.org> p7zip-9.20.1-r5.ebuild:
+  Stable for ppc, wrt bug #536012
+
+*p7zip-9.38.1-r2 (22 Jun 2015)
+
+  22 Jun 2015; Justin Lecher <jlec@gentoo.org>
+  +files/p7zip-9.38.1-CVE-2015-1038.patch, +p7zip-9.38.1-r2.ebuild,
+  -p7zip-9.38.1-r1.ebuild:
+  Fix CVE-2015-1038 in latest version, bug #536012
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> p7zip-9.20.1-r5.ebuild:
+  alpha stable wrt bug #536012
+
+  20 Jun 2015; Jeroen Roovers <jer@gentoo.org> p7zip-9.20.1-r5.ebuild:
+  Stable for PPC64 (bug #536012).
+
+  18 Jun 2015; Jeroen Roovers <jer@gentoo.org> p7zip-9.20.1-r5.ebuild:
+  Stable for HPPA (bug #536012).
+
+  17 Jun 2015; Agostino Sarubbo <ago@gentoo.org> p7zip-9.20.1-r5.ebuild:
+  Stable for sparc, wrt bug #536012
+
+  17 Jun 2015; Agostino Sarubbo <ago@gentoo.org> p7zip-9.20.1-r5.ebuild:
+  Stable for x86, wrt bug #536012
+
+  16 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> p7zip-9.20.1-r5.ebuild:
+  amd64 stable wrt bug #536012
+
+*p7zip-9.20.1-r5 (16 Jun 2015)
+
+  16 Jun 2015; Justin Lecher <jlec@gentoo.org>
+  +files/p7zip-9.20.1-CVE-2015-1038.patch, +p7zip-9.20.1-r5.ebuild:
+  Import debian patch for CVE-2015-1038, bug #536012; latest version is still
+  vulnerable
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+*p7zip-9.38.1-r1 (04 May 2015)
+
+  04 May 2015; Justin Lecher <jlec@gentoo.org> +p7zip-9.38.1-r1.ebuild,
+  -p7zip-9.20.1-r5.ebuild, -p7zip-9.38.1.ebuild, p7zip-9.20.1-r4.ebuild:
+  Correctly fix bug #465296, thanks Wadlax figuring this out
+
+  08 Apr 2015; Justin Lecher <jlec@gentoo.org>
+  +files/p7zip-9.38.1-osversion.patch, p7zip-9.38.1.ebuild:
+  Fix compilation problems on x86, bug #545912
+
+  07 Apr 2015; Justin Lecher <jlec@gentoo.org> p7zip-9.20.1-r4.ebuild,
+  p7zip-9.20.1-r5.ebuild, p7zip-9.38.1.ebuild:
+  Drop useless Desktop items, bug #465296
+
+*p7zip-9.38.1 (07 Apr 2015)
+
+  07 Apr 2015; Justin Lecher <jlec@gentoo.org> +p7zip-9.38.1.ebuild:
+  Version Bump, bug #545202
 
   10 May 2014; Justin Lecher <jlec@gentoo.org> p7zip-9.20.1-r5.ebuild:
   Add support for x32, #506602, patch by Luke-Jr

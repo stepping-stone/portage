@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.0.24-r2.ebuild,v 1.2 2014/12/28 18:20:45 floppym Exp $
+# $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils python-single-r1
 
@@ -25,8 +25,8 @@ RDEPEND="${PYTHON_DEPS}
 	kde? (
 		>=kde-base/kdelibs-4
 		kde-base/pykde4[${PYTHON_USEDEP}]
-		kde-base/kompare
-		kde-base/kdesu
+		kde-apps/kompare:4
+		kde-apps/kdesu:4
 	)
 	gnome? (
 		gnome-base/libglade

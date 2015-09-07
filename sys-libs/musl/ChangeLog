@@ -1,6 +1,111 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.41 2015/01/14 21:08:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.65 2015/06/14 17:55:57 blueness Exp $
+
+  14 Jun 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.10-r1.ebuild:
+  Stable for ppc.
+
+  10 Jun 2015; Patrick Lauer <patrick@gentoo.org> musl-1.1.10-r1.ebuild:
+  Whitespace
+
+  07 Jun 2015; Anthony G. Basile <blueness@gentoo.org> -musl-1.1.9.ebuild:
+  Remove buggy version.
+
+  07 Jun 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.10-r1.ebuild:
+  Stable on amd64/arm/x86.
+
+*musl-1.1.10-r1 (06 Jun 2015)
+
+  06 Jun 2015; Anthony G. Basile <blueness@gentoo.org>
+  +files/musl-1.1.10-uselocale-0-fix.diff, +musl-1.1.10-r1.ebuild,
+  -musl-1.1.10.ebuild:
+  Add patch to fix uselocale regresson.
+
+*musl-1.1.10 (05 Jun 2015)
+
+  05 Jun 2015; Anthony G. Basile <blueness@gentoo.org> +musl-1.1.10.ebuild:
+  Version bump
+
+  17 May 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.9.ebuild:
+  Drop ~ppc since its broken like mips.
+
+  14 May 2015; Anthony G. Basile <blueness@gentoo.org> -musl-1.1.7.ebuild,
+  -musl-1.1.8.ebuild:
+  Drop older stable versions that depended on sys-apps/getent.
+
+  14 May 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.9.ebuild:
+  Drop ~mips since its broken.
+
+  13 May 2015; Ulrich Müller <ulm@gentoo.org> musl-1.1.9.ebuild,
+  musl-9999.ebuild:
+  [QA] Fixup whitespace.
+
+*musl-1.1.9 (13 May 2015)
+
+  13 May 2015; Anthony G. Basile <blueness@gentoo.org> +files/ldconfig.in,
+  +musl-1.1.9.ebuild, musl-9999.ebuild:
+  Version bump.  Addresses bug #544128.
+
+  13 May 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.8-r2.ebuild:
+  Stable for amd64, arm, ppc and x86.
+
+*musl-1.1.8-r2 (18 Apr 2015)
+
+  18 Apr 2015; Anthony G. Basile <blueness@gentoo.org> +musl-1.1.8-r2.ebuild,
+  -musl-1.1.8-r1.ebuild, musl-9999.ebuild:
+  Add /etc/env.d/00musl.
+
+  15 Apr 2015; Anthony G. Basile <blueness@gentoo.org> -musl-1.1.5.ebuild,
+  -musl-1.1.6.ebuild, -musl-1.1.7-r3.ebuild:
+  Cleup older versions.
+
+*musl-1.1.8-r1 (15 Apr 2015)
+
+  15 Apr 2015; Anthony G. Basile <blueness@gentoo.org> +files/getent,
+  +files/ldconfig, +musl-1.1.8-r1.ebuild, musl-9999.ebuild:
+  Merge with sys-apps/getent.  Add ldconfig.  Bug #545006.
+
+  01 Apr 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.8.ebuild:
+  Mark stable on all musl arches.
+
+*musl-1.1.8 (30 Mar 2015)
+
+  30 Mar 2015; Anthony G. Basile <blueness@gentoo.org> +musl-1.1.8.ebuild,
+  musl-9999.ebuild:
+  Version bump.
+
+*musl-1.1.7-r3 (28 Mar 2015)
+
+  28 Mar 2015; Anthony G. Basile <blueness@gentoo.org> +musl-1.1.7-r3.ebuild,
+  -musl-1.1.7-r2.ebuild:
+  Fix ldd symlink again.  Bug #544306.
+
+*musl-1.1.7-r2 (28 Mar 2015)
+
+  28 Mar 2015; Anthony G. Basile <blueness@gentoo.org> +musl-1.1.7-r2.ebuild,
+  -musl-1.1.7-r1.ebuild, musl-9999.ebuild:
+  Fix ldd symlink.  Bug #544128.
+
+*musl-1.1.7-r1 (26 Mar 2015)
+
+  26 Mar 2015; Anthony G. Basile <blueness@gentoo.org> +musl-1.1.7-r1.ebuild,
+  musl-9999.ebuild:
+  Make ldd symlink happy when cross compiling.  Bug #544128.
+
+  24 Mar 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.7.ebuild:
+  Stable on amd64, arm, ppc and x86.
+
+*musl-1.1.7 (21 Mar 2015)
+
+  21 Mar 2015; Anthony G. Basile <blueness@gentoo.org> +musl-1.1.7.ebuild:
+  Version bump.  Add sym link for ldd.
+
+  07 Mar 2015; Anthony G. Basile <blueness@gentoo.org> musl-9999.ebuild:
+  Provide a sym link to ld.so for ldd.  Bug #542026.
+
+  27 Feb 2015; Mike Frysinger <vapier@gentoo.org> musl-1.1.5.ebuild,
+  musl-1.1.6.ebuild, musl-9999.ebuild:
+  Use more readable CTARGET setup logic.
 
   14 Jan 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.6.ebuild:
   Stable on amd64, arm, ppc and x86

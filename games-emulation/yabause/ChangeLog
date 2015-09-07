@@ -1,6 +1,28 @@
 # ChangeLog for games-emulation/yabause
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/ChangeLog,v 1.38 2015/02/09 21:39:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/ChangeLog,v 1.44 2015/05/22 16:55:18 mr_bones_ Exp $
+
+  22 May 2015; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  yabause-0.9.14.ebuild:
+  hide non-PIC asm behind pic USE flag (bug #539656)
+
+  26 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -yabause-0.9.10.ebuild:
+  old
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> yabause-0.9.14.ebuild:
+  Stable for x86, wrt bug #542730
+
+  12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> yabause-0.9.14.ebuild:
+  Stable for amd64, wrt bug #542730
+
+  09 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  yabause-0.9.14.ebuild:
+  clean metadata
+
+  09 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/yabause-0.9.12-RWX.patch, -files/yabause-0.9.12-cmake.patch,
+  -yabause-0.9.12.ebuild, yabause-0.9.14.ebuild:
+  old
 
 *yabause-0.9.14 (09 Feb 2015)
 

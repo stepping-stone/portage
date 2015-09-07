@@ -1,6 +1,25 @@
 # ChangeLog for dev-java/gcj-jdk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.16 2014/07/14 18:45:53 sera Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.20 2015/07/11 09:19:56 chewi Exp $
+
+  11 Jul 2015; James Le Cuirot <chewi@gentoo.org> -gcj-jdk-4.7.3-r1.ebuild,
+  gcj-jdk-4.7.4.ebuild:
+  Drop java on ia64 and also drop old version.
+
+  21 May 2015; James Le Cuirot <chewi@gentoo.org> -gcj-jdk-4.8.3.ebuild,
+  gcj-jdk-4.8.4.ebuild:
+  ~ppc keyword.
+
+*gcj-jdk-4.8.4 (03 May 2015)
+
+  03 May 2015; James Le Cuirot <chewi@gentoo.org> +gcj-jdk-4.8.4.ebuild,
+  -gcj-jdk-4.7.3.ebuild, -gcj-jdk-4.8.2.ebuild, gcj-jdk-4.9.2.ebuild:
+  Let's just keep versions for the latest stable and unstable gcc in each SLOT.
+
+*gcj-jdk-4.9.2 (17 Mar 2015)
+
+  17 Mar 2015; James Le Cuirot <chewi@gentoo.org> +gcj-jdk-4.9.2.ebuild:
+  Simple version bump. Tested with ecj 4.4 to build icedtea 7.
 
 *gcj-jdk-4.8.3 (14 Jul 2014)
 *gcj-jdk-4.8.2 (14 Jul 2014)

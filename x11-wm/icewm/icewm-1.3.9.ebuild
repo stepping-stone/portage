@@ -1,16 +1,16 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.9.ebuild,v 1.2 2014/11/07 08:09:14 polynomial-c Exp $
+# $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils python-single-r1
 
 DESCRIPTION="Ice Window Manager with Themes"
 HOMEPAGE="http://www.icewm.org/ https://github.com/bbidulock/icewm"
 LICENSE="GPL-2"
-SRC_URI="http://github.com/bbidulock/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/bbidulock/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -25,7 +25,7 @@ S=${WORKDIR}/${P/_}
 
 RDEPEND="
 	media-libs/fontconfig
-	x11-libs/gdk-pixbuf:2
+	x11-libs/gdk-pixbuf:2[X]
 	x11-libs/libX11
 	x11-libs/libXrandr
 	x11-libs/libXext

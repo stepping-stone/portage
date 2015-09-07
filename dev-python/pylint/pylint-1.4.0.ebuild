@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.4.0.ebuild,v 1.2 2014/12/15 10:39:06 idella4 Exp $
+# $Id$
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit distutils-r1
 RESTRICT="test" # needs pygtk
 
 DESCRIPTION="Python code static checker"
-HOMEPAGE="http://www.logilab.org/project/pylint http://pypi.python.org/pypi/pylint"
+HOMEPAGE="http://www.logilab.org/project/pylint https://pypi.python.org/pypi/pylint"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"

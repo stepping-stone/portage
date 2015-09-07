@@ -1,6 +1,20 @@
 # ChangeLog for dev-haskell/highlighting-kate
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/highlighting-kate/ChangeLog,v 1.20 2014/12/20 09:43:33 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/highlighting-kate/ChangeLog,v 1.23 2015/07/20 18:11:50 slyfox Exp $
+
+*highlighting-kate-0.6 (20 Jul 2015)
+
+  20 Jul 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +highlighting-kate-0.6.ebuild:
+  Version bump.
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*highlighting-kate-0.5.14 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +highlighting-kate-0.5.14.ebuild:
+  Bump highlighting-kate to 0.5.14
 
 *highlighting-kate-0.5.11.1 (20 Dec 2014)
 

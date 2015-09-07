@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.110 2015/02/13 17:47:58 dolsen Exp $
+# $Id$
 
 EAPI=5
 
 PYTHON_COMPAT=(
 	pypy
-	python3_2 python3_3 python3_4
+	python3_3 python3_4
 	python2_7
 )
 # Note: substituted below
@@ -15,7 +15,7 @@ PYTHON_REQ_USE='bzip2(+)'
 inherit distutils-r1 git-r3 multilib
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
-HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
+HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Portage"
 
 LICENSE="GPL-2"
 KEYWORDS=""
@@ -23,6 +23,7 @@ SLOT="0"
 IUSE="build doc epydoc +ipc linguas_ru selinux xattr"
 
 DEPEND="!build? ( ${PYTHON_DEPS//bzip2(+)/ssl(+),bzip2(+)} )
+	>=app-arch/tar-1.27
 	dev-lang/python-exec:2
 	>=sys-apps/sed-4.0.5 sys-devel/patch
 	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
@@ -35,6 +36,7 @@ DEPEND="!build? ( ${PYTHON_DEPS//bzip2(+)/ssl(+),bzip2(+)} )
 # For whirlpool hash, require python[ssl] (bug #425046).
 # For compgen, require bash[readline] (bug #445576).
 RDEPEND="
+	>=app-arch/tar-1.27
 	dev-lang/python-exec:2
 	!build? (
 		>=sys-apps/sed-4.0.5
@@ -49,7 +51,7 @@ RDEPEND="
 	xattr? ( kernel_linux? (
 		>=sys-apps/install-xattr-0.3
 		$(python_gen_cond_dep 'dev-python/pyxattr[${PYTHON_USEDEP}]' \
-			python{2_7,3_2} pypy)
+			python2_7 pypy)
 	) )
 	!<app-admin/logrotate-3.8.0"
 PDEPEND="
@@ -62,7 +64,7 @@ PDEPEND="
 
 REQUIRED_USE="epydoc? ( $(python_gen_useflags 'python2*') )"
 
-SRC_ARCHIVES="http://dev.gentoo.org/~dolsen/releases/portage"
+SRC_ARCHIVES="https://dev.gentoo.org/~dolsen/releases/portage"
 
 prefix_src_archives() {
 	local x y
@@ -73,7 +75,7 @@ prefix_src_archives() {
 	done
 }
 
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/portage.git
+EGIT_REPO_URI="git://anongit.gentoo.org/proj/portage.git
 	https://github.com/gentoo/portage.git"
 
 python_prepare_all() {

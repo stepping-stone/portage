@@ -1,6 +1,77 @@
 # ChangeLog for www-apps/wordpress
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.165 2014/12/19 03:45:45 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.178 2015/08/04 23:32:04 jmbsvicetto Exp $
+
+*wordpress-4.2.4 (04 Aug 2015)
+
+  04 Aug 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +wordpress-4.2.4.ebuild, -wordpress-4.2.3.ebuild:
+  Bump wordpress to 4.2.4 release and drop vulnerable versions -
+  CVE-2015-{2213,5730,5731,5732,5733,5734}.
+
+  25 Jul 2015; Sebastian Pipping <sping@gentoo.org> -wordpress-3.8.5.ebuild,
+  -wordpress-3.9.3.ebuild, -wordpress-4.0.1.ebuild, -wordpress-4.1.ebuild,
+  -wordpress-4.1.1.ebuild, -wordpress-4.1.2-r2.ebuild, -wordpress-4.2.ebuild,
+  -wordpress-4.2.1.ebuild, -wordpress-4.2.2.ebuild:
+  Remove vulnerable releases (bug #548828 but not only)
+
+*wordpress-4.2.3 (25 Jul 2015)
+
+  25 Jul 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +wordpress-4.2.3.ebuild:
+  Bump wordpress to release 4.2.3 - fixes bug 548828. Security bump to address
+  CVE-2015-5622 and CVE-2015-5623.
+
+  08 May 2015; Sebastian Pipping <sping@gentoo.org> ChangeLog:
+  Sign manifest
+
+*wordpress-4.2.2 (08 May 2015)
+
+  08 May 2015; Sebastian Pipping <sping@gentoo.org> +wordpress-4.2.2.ebuild:
+  Bump to 4.2.2
+
+*wordpress-4.2.1 (27 Apr 2015)
+
+  27 Apr 2015; Sebastian Pipping <sping@gentoo.org> +wordpress-4.2.1.ebuild:
+  Bump to 4.2.1 (security)
+
+  26 Apr 2015; Patrick Lauer <patrick@gentoo.org> wordpress-4.1.2-r2.ebuild,
+  wordpress-4.2.ebuild:
+  Whitespace
+
+*wordpress-4.2 (25 Apr 2015)
+
+  25 Apr 2015; Sebastian Pipping <sping@gentoo.org> +wordpress-4.2.ebuild:
+  Bump to 4.2
+
+  25 Apr 2015; Sebastian Pipping <sping@gentoo.org> -wordpress-4.1.2.ebuild,
+  -wordpress-4.1.2-r1.ebuild:
+  Remove old revisions of 4.1.2
+
+*wordpress-4.1.2-r2 (25 Apr 2015)
+
+  25 Apr 2015; Sebastian Pipping <sping@gentoo.org> +wordpress-4.1.2-r2.ebuild,
+  metadata.xml:
+  Guard installation of themes by use flag "themes", enabled by default since
+  default theme is affected; polish description; use slot ${PV}
+
+*wordpress-4.1.2-r1 (21 Apr 2015)
+
+  21 Apr 2015; Sebastian Pipping <sping@gentoo.org> +wordpress-4.1.2-r1.ebuild,
+  metadata.xml:
+  Guard installation of Akismet and Hello Dolly plug-ins behind use flags (bug
+  #544984) with Akismet enabled by default to smooth transition (only); update
+  license from GPLv2 to GPLv2+
+
+*wordpress-4.1.2 (21 Apr 2015)
+
+  21 Apr 2015; Sebastian Pipping <sping@gentoo.org> +wordpress-4.1.2.ebuild:
+  Bump to 4.1.2 (seems trivial, bug #547320)
+
+*wordpress-4.1.1 (24 Feb 2015)
+
+  24 Feb 2015; Tim Harder <radhermit@gentoo.org> +wordpress-4.1.1.ebuild:
+  Version bump.
 
 *wordpress-4.1 (19 Dec 2014)
 

@@ -1,6 +1,28 @@
 # ChangeLog for dev-haskell/cabal-install
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.27 2015/01/26 09:56:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.32 2015/08/01 16:11:04 slyfox Exp $
+
+  01 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  cabal-install-1.18.0.3.ebuild:
+  Use dobashcomp for bash-completion.
+
+*cabal-install-1.22.6.0 (26 Jul 2015)
+
+  26 Jul 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +cabal-install-1.22.6.0.ebuild, metadata.xml:
+  Version bump.
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  cabal-install-1.18.0.3-r1.ebuild:
+  Stable for ia64, wrt bug #536358
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  cabal-install-1.18.0.3-r1.ebuild:
+  Stable for sparc, wrt bug #536358
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  cabal-install-1.18.0.3-r1.ebuild:
+  Stable for alpha, wrt bug #536358
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
   cabal-install-1.18.0.3-r1.ebuild:

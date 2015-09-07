@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eom/eom-1.8.1.ebuild,v 1.2 2014/12/10 09:31:29 tamiko Exp $
+# $Id$
 
 EAPI="5"
 
 GCONF_DEBUG="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit gnome2 python-single-r1 versionator
 
@@ -28,14 +28,14 @@ RDEPEND="
 	>=dev-libs/glib-2.25.9:2
 	>=dev-libs/libxml2-2:2
 	gnome-base/dconf:0
-	>=mate-base/mate-desktop-1.6:0
+	>=mate-base/mate-desktop-1.8:0
 	sys-libs/zlib:0
 	x11-libs/cairo:0
 	>=x11-libs/gdk-pixbuf-2.4:2[jpeg?,tiff?]
 	>=x11-libs/gtk+-2.18:2
 	x11-libs/libX11:0
 	>=x11-misc/shared-mime-info-0.20:0
-	>=x11-themes/mate-icon-theme-1.6:0
+	>=x11-themes/mate-icon-theme-1.8:0
 	virtual/libintl:0
 	dbus? ( >=dev-libs/dbus-glib-0.71:0 )
 	exif? (

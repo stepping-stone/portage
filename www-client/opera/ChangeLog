@@ -1,6 +1,74 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.825 2015/02/11 17:08:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.837 2015/08/04 05:53:00 jer Exp $
+
+*opera-31.0.1889.99 (04 Aug 2015)
+
+  04 Aug 2015; Jeroen Roovers <jer@gentoo.org> -opera-30.0.1835.88.ebuild,
+  +opera-31.0.1889.99.ebuild:
+  Version bump.
+
+*opera-30.0.1835.125 (14 Jul 2015)
+
+  14 Jul 2015; Jeroen Roovers <jer@gentoo.org> -opera-30.0.1835.59.ebuild,
+  +opera-30.0.1835.125.ebuild:
+  Version bump.
+
+*opera-30.0.1835.88 (25 Jun 2015)
+
+  25 Jun 2015; Jeroen Roovers <jer@gentoo.org> -opera-30.0.1835.52.ebuild,
+  +opera-30.0.1835.88.ebuild:
+  Version bump.
+
+*opera-30.0.1835.59 (11 Jun 2015)
+
+  11 Jun 2015; Jeroen Roovers <jer@gentoo.org> -opera-29.0.1795.60.ebuild,
+  +opera-30.0.1835.59.ebuild:
+  Version bump.
+
+*opera-30.0.1835.52 (09 Jun 2015)
+
+  09 Jun 2015; Jeroen Roovers <jer@gentoo.org> -opera-29.0.1795.47.ebuild,
+  +opera-30.0.1835.52.ebuild:
+  Version bump.
+
+*opera-29.0.1795.60 (21 May 2015)
+
+  21 May 2015; Jeroen Roovers <jer@gentoo.org> -opera-28.0.1750.51.ebuild,
+  +opera-29.0.1795.60.ebuild:
+  Version bump.
+
+*opera-29.0.1795.47 (29 Apr 2015)
+
+  29 Apr 2015; Jeroen Roovers <jer@gentoo.org> -opera-28.0.1750.48.ebuild,
+  +opera-29.0.1795.47.ebuild:
+  Version bump.
+
+  09 Apr 2015; Jeroen Roovers <jer@gentoo.org> opera-28.0.1750.51.ebuild:
+  Remove unneeded libudev hack.
+
+*opera-28.0.1750.51 (09 Apr 2015)
+
+  09 Apr 2015; Jeroen Roovers <jer@gentoo.org> -opera-28.0.1750.40.ebuild,
+  +opera-28.0.1750.51.ebuild:
+  Version bump.
+
+*opera-28.0.1750.48 (18 Mar 2015)
+
+  18 Mar 2015; Jeroen Roovers <jer@gentoo.org> -opera-27.0.1689.69.ebuild,
+  -opera-27.0.1689.76.ebuild, +opera-28.0.1750.48.ebuild:
+  Version bump.
+
+*opera-28.0.1750.40 (12 Mar 2015)
+
+  12 Mar 2015; Jeroen Roovers <jer@gentoo.org> +opera-28.0.1750.40.ebuild:
+  Version bump.
+
+*opera-27.0.1689.76 (04 Mar 2015)
+
+  04 Mar 2015; Jeroen Roovers <jer@gentoo.org> -opera-27.0.1689.66.ebuild,
+  +opera-27.0.1689.76.ebuild:
+  Version bump.
 
 *opera-27.0.1689.69 (11 Feb 2015)
 

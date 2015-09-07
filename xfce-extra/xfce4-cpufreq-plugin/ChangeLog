@@ -1,6 +1,37 @@
 # ChangeLog for xfce-extra/xfce4-cpufreq-plugin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpufreq-plugin/ChangeLog,v 1.15 2014/04/22 14:01:40 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpufreq-plugin/ChangeLog,v 1.22 2015/08/05 10:47:48 perfinion Exp $
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org>
+  xfce4-cpufreq-plugin-1.1.2.ebuild:
+  ppc stable wrt bug #553500
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org>
+  xfce4-cpufreq-plugin-1.1.2.ebuild:
+  Stable for PPC64 (bug #553500).
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  xfce4-cpufreq-plugin-1.1.2.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  xfce4-cpufreq-plugin-1.1.2.ebuild:
+  x86 stable wrt bug #553500
+
+*xfce4-cpufreq-plugin-1.1.2 (24 Jun 2015)
+
+  24 Jun 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-cpufreq-plugin-1.1.2.ebuild:
+  Version bump with minor build-time fixes and translation update
+
+*xfce4-cpufreq-plugin-1.1.1 (12 Apr 2015)
+
+  12 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-cpufreq-plugin-1.1.1.ebuild:
+  Version bump with minor bugfixes.
 
   22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
   -xfce4-cpufreq-plugin-1.0.0.ebuild:

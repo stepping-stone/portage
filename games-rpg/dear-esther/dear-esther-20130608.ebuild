@@ -1,11 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dear-esther/dear-esther-20130608.ebuild,v 1.2 2014/10/15 10:20:08 pacho Exp $
+# $Id$
 
 # TODO: unbundle libSDL2
 
 EAPI=5
-
 inherit eutils gnome2-utils unpacker games
 
 TIMESTAMP="${PV:4:2}${PV:6:2}${PV:0:4}"
@@ -15,7 +14,7 @@ SRC_URI="dearesther-linux-${TIMESTAMP}-bin"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="bindist fetch splitdebug"
 
@@ -25,21 +24,11 @@ QA_PREBUILT="${MYGAMEDIR#/}/dearesther_linux
 
 DEPEND="app-arch/unzip"
 RDEPEND="
-	|| (
-		(
-			>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
-			>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
-			>=media-libs/openal-1.15.1[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)
-"
+	>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+	>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
+	>=media-libs/openal-1.15.1[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	virtual/opengl[abi_x86_32(-)]"
 
 S=${WORKDIR}/data
 

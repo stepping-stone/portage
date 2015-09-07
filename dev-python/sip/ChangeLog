@@ -1,6 +1,53 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.303 2015/02/17 11:09:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.314 2015/07/29 16:55:44 pesa Exp $
+
+  29 Jul 2015; Davide Pesavento <pesa@gentoo.org> sip-4.16.9.ebuild:
+  Sync with live ebuild.
+
+*sip-4.9999 (29 Jul 2015)
+
+  29 Jul 2015; Davide Pesavento <pesa@gentoo.org> +sip-4.9999.ebuild:
+  Import live ebuild from qt overlay.
+
+*sip-4.16.9 (22 Jul 2015)
+
+  22 Jul 2015; Davide Pesavento <pesa@gentoo.org> +sip-4.16.9.ebuild:
+  Version bump.
+
+  29 Jun 2015; Davide Pesavento <pesa@gentoo.org> -files/sip-4.9.3-darwin.patch,
+  -sip-4.15.3.ebuild:
+  Drop old version. As of now, sparc no longer has a stable sip, see bug #523322
+  comment #15.
+
+  17 Jun 2015; Davide Pesavento <pesa@gentoo.org> -sip-4.16.7.ebuild:
+  Drop version that is not going to get stabilized.
+
+*sip-4.16.8 (14 Jun 2015)
+
+  14 Jun 2015; Davide Pesavento <pesa@gentoo.org> +sip-4.16.8.ebuild,
+  -sip-4.16.6.ebuild:
+  Version bump; remove old.
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> sip-4.16.2.ebuild:
+  Stable for ia64, wrt bug #523322
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sip-4.15.3.ebuild:
+  Drop old Python implementations
+
+*sip-4.16.7 (29 Mar 2015)
+
+  29 Mar 2015; Davide Pesavento <pesa@gentoo.org> +sip-4.16.7.ebuild,
+  -sip-4.16.5.ebuild:
+  Version bump, remove old.
+
+*sip-4.16.6 (02 Mar 2015)
+
+  02 Mar 2015; Davide Pesavento <pesa@gentoo.org> +sip-4.16.6.ebuild:
+  Version bump.
 
   17 Feb 2015; Agostino Sarubbo <ago@gentoo.org> sip-4.16.2.ebuild:
   Stable for ppc64, wrt bug #517344

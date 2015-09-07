@@ -1,6 +1,38 @@
 # ChangeLog for dev-python/pyquery
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.50 2014/12/20 07:53:50 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.60 2015/08/06 16:09:45 klausman Exp $
+
+  06 Aug 2015; Tobias Klausmann <klausman@gentoo.org> pyquery-1.2.9.ebuild:
+  Stable on alpha, bug 530572
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> pyquery-1.2.9.ebuild:
+  sparc stable wrt bug #530572
+
+  11 Jul 2015; Tobias Klausmann <klausman@gentoo.org> pyquery-1.2.9.ebuild:
+  Keyworded on alpha, bug 525246
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  31 May 2015; Markus Meier <maekke@gentoo.org> pyquery-1.2.9.ebuild:
+  arm stable, bug #530572
+
+*pyquery-1.2.9-r1 (19 Mar 2015)
+
+  19 Mar 2015; Patrick Lauer <patrick@gentoo.org> +pyquery-1.2.9-r1.ebuild:
+  Bump for missing test dep
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyquery-1.2.9.ebuild:
+  x86 stable, bug 540290
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyquery-1.2.9.ebuild:
+  ppc stable, bug 540290
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyquery-1.2.9.ebuild:
+  ppc64 stable, bug 540290
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyquery-1.2.9.ebuild:
+  amd64 stable, bug 540290
 
   20 Dec 2014; Ian Delaney <idella4@gentoo.org> -pyquery-1.1.1.ebuild,
   -pyquery-1.2.1-r1.ebuild, -pyquery-1.2.1.ebuild, pyquery-1.2.4.ebuild,

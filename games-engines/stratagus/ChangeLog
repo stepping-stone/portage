@@ -1,6 +1,19 @@
 # ChangeLog for games-engines/stratagus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.30 2015/02/13 04:55:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.34 2015/06/02 06:35:31 mr_bones_ Exp $
+
+  02 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> stratagus-2.2.7.ebuild:
+  add slot dep for repoman
+
+  09 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/stratagus-2.2.5.5-libpng15.patch, -stratagus-2.2.5.5.ebuild:
+  old
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> stratagus-2.2.7.ebuild:
+  Stable for x86, wrt bug #539926
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> stratagus-2.2.7.ebuild:
+  Stable for amd64, wrt bug #539926
 
   13 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> stratagus-2.2.7.ebuild:
   EAPI=5

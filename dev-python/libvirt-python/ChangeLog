@@ -1,6 +1,65 @@
 # ChangeLog for dev-python/libvirt-python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/ChangeLog,v 1.29 2015/01/27 10:41:17 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/ChangeLog,v 1.44 2015/08/07 14:44:58 tamiko Exp $
+
+*libvirt-python-1.2.18 (07 Aug 2015)
+
+  07 Aug 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-python-1.2.18.ebuild:
+  version bump, bug #556904
+
+  26 Jul 2015; Patrick Lauer <patrick@gentoo.org> -libvirt-python-1.2.16.ebuild:
+  Remove old with unsatisfiable deps
+
+*libvirt-python-1.2.17 (02 Jul 2015)
+
+  02 Jul 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-python-1.2.17.ebuild:
+  version bump
+
+  23 Jun 2015; Matthias Maier <tamiko@gentoo.org> -libvirt-python-1.2.10.ebuild,
+  -libvirt-python-1.2.12.ebuild, -libvirt-python-1.2.14.ebuild:
+  cleanup
+
+  23 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-python-1.2.15.ebuild:
+  Stable for x86, wrt bug #552272
+
+  20 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> libvirt-python-1.2.15.ebuild:
+  amd64 stable wrt bug #552272
+
+*libvirt-python-1.2.16 (14 Jun 2015)
+
+  14 Jun 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-python-1.2.16.ebuild:
+  version bump, bug #550992, thanks to Thomas Stein for reporting
+
+  25 May 2015; Patrick Lauer <patrick@gentoo.org> -libvirt-python-1.2.11.ebuild,
+  -libvirt-python-1.2.13.ebuild:
+  Remove old with unsatisfied dependencies
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-python-1.2.14.ebuild:
+  Stable for x86, wrt bug #548706
+
+  08 May 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-python-1.2.14.ebuild:
+  Stable for amd64, wrt bug #548706
+
+*libvirt-python-1.2.15 (05 May 2015)
+
+  05 May 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-python-1.2.15.ebuild:
+  version bump, bug #548640, thanks to Thomas Stein.
+
+*libvirt-python-1.2.14 (05 Apr 2015)
+
+  05 Apr 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-python-1.2.14.ebuild:
+  version bump
+
+  13 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-python-1.2.12.ebuild:
+  Stable for x86, wrt bug #543044
+
+  13 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-python-1.2.12.ebuild:
+  Stable for amd64, wrt bug #543044
+
+*libvirt-python-1.2.13 (13 Mar 2015)
+
+  13 Mar 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-python-1.2.13.ebuild:
+  version bump, bug #542902
 
 *libvirt-python-1.2.12 (27 Jan 2015)
 

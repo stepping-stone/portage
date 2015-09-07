@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.28 2015/01/05 13:39:18 blueness Exp $
+# $Id$
 
 EAPI="4"
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
-HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
+HOMEPAGE="https://www.gnu.org/software/libc/libc.html"
 
 LICENSE="LGPL-2.1+ BSD HPND ISC inner-net rc PCRE"
 #KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
@@ -76,13 +76,13 @@ RDEPEND="!sys-kernel/ps3-sources
 if [[ ${CATEGORY} == cross-* ]] ; then
 	DEPEND+=" !crosscompile_opts_headers-only? (
 		>=${CATEGORY}/binutils-2.24
-		>=${CATEGORY}/gcc-4.4
+		>=${CATEGORY}/gcc-4.6
 	)"
 	[[ ${CATEGORY} == *-linux* ]] && DEPEND+=" ${CATEGORY}/linux-headers"
 else
 	DEPEND+="
 		>=sys-devel/binutils-2.24
-		>=sys-devel/gcc-4.4
+		>=sys-devel/gcc-4.6
 		virtual/os-headers"
 	RDEPEND+=" vanilla? ( !sys-libs/timezone-data )"
 	PDEPEND+=" !vanilla? ( sys-libs/timezone-data )"
@@ -93,7 +93,7 @@ upstream_uris() {
 }
 gentoo_uris() {
 	local devspace="HTTP~vapier/dist/URI HTTP~azarah/glibc/URI"
-	devspace=${devspace//HTTP/http://dev.gentoo.org/}
+	devspace=${devspace//HTTP/https://dev.gentoo.org/}
 	echo mirror://gentoo/$1 ${devspace//URI/$1}
 }
 SRC_URI=$(
@@ -145,7 +145,7 @@ src_test()      { eblit-run src_test      ; }
 src_install()   { eblit-run src_install   ; }
 
 # FILESDIR might not be available during binpkg install
-for x in setup {pre,post}inst ; do
+for x in pretend setup {pre,post}inst ; do
 	e="${FILESDIR}/eblits/pkg_${x}.eblit"
 	if [[ -e ${e} ]] ; then
 		. "${e}"

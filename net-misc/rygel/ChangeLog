@@ -1,6 +1,38 @@
 # ChangeLog for net-misc/rygel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.61 2014/12/23 23:17:14 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.69 2015/07/04 12:24:15 pacho Exp $
+
+  04 Jul 2015; Pacho Ramos <pacho@gentoo.org> -rygel-0.24.2.ebuild,
+  rygel-0.26.1.ebuild:
+  Needs to be rebuilt with libunistring subslot bumps, drop old
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> rygel-0.24.4.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> rygel-0.24.4.ebuild:
+  amd64 stable wrt bug #551814
+
+*rygel-0.26.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +rygel-0.26.1.ebuild:
+  Version bump for Gnome 3.16.
+
+*rygel-0.24.4 (17 May 2015)
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> +rygel-0.24.4.ebuild,
+  -rygel-0.22.3.ebuild, -rygel-0.24.3.ebuild:
+  Version bump, drop old
+
+*rygel-0.24.3 (01 May 2015)
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org> +rygel-0.24.3.ebuild:
+  Version bump.
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> rygel-0.24.2.ebuild:
+  x86 stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> rygel-0.24.2.ebuild:
+  amd64 stable, bug 534012
 
   23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> -rygel-0.22.2.ebuild,
   +rygel-0.24.2.ebuild:

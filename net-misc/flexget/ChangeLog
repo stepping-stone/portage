@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/flexget
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.59 2015/01/05 23:48:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.62 2015/06/04 10:41:56 jlec Exp $
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
+
+*flexget-1.2.315 (31 May 2015)
+
+  31 May 2015; Mike Gilbert <floppym@gentoo.org> +flexget-1.2.315.ebuild:
+  Version bump.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> flexget-1.2.141.ebuild:
+  Drop old Python implementations
 
   05 Jan 2015; Mike Gilbert <floppym@gentoo.org> flexget-1.2.247.ebuild,
   flexget-9999.ebuild:

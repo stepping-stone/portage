@@ -1,6 +1,31 @@
 # ChangeLog for dev-ruby/mechanize
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.46 2015/02/10 09:27:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.53 2015/06/11 05:20:09 graaff Exp $
+
+  11 Jun 2015; Hans de Graaff <graaff@gentoo.org> -mechanize-2.6.0.ebuild:
+  Cleanup.
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  11 May 2015; Jeroen Roovers <jer@gentoo.org> mechanize-2.7.3.ebuild,
+  mechanize-2.7.3-r1.ebuild:
+  Mark ~ppc64 (bug #522056).
+
+  03 May 2015; Hans de Graaff <graaff@gentoo.org> mechanize-2.7.3-r1.ebuild:
+  Add ruby22.
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mechanize-2.7.3.ebuild:
+  Stable for x86, wrt bug #545458
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mechanize-2.7.3.ebuild:
+  Stable for amd64, wrt bug #545458
+
+*mechanize-2.7.3-r1 (04 Apr 2015)
+
+  04 Apr 2015; Hans de Graaff <graaff@gentoo.org> mechanize-2.7.3.ebuild,
+  +mechanize-2.7.3-r1.ebuild:
+  Create stable candidate.
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mechanize-2.7.3.ebuild:
   Add ~ppc, wrt bug #522056

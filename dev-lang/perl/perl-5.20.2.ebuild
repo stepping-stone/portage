@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.20.2.ebuild,v 1.1 2015/02/14 23:04:02 dilfridge Exp $
+# $Id$
 
 EAPI=5
 
@@ -21,17 +21,17 @@ SRC_URI="
 	mirror://cpan/src/5.0/${MY_P}.tar.bz2
 	mirror://cpan/authors/id/${MODULE_AUTHOR:0:1}/${MODULE_AUTHOR:0:2}/${MODULE_AUTHOR}/${MY_P}.tar.bz2
 	mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.xz
-	http://dev.gentoo.org/~dilfridge/distfiles/${MY_P}-patches-${PATCH_VER}.tar.xz
+	https://dev.gentoo.org/~dilfridge/distfiles/${MY_P}-patches-${PATCH_VER}.tar.xz
 "
 HOMEPAGE="http://www.perl.org/"
 
 LICENSE="|| ( Artistic GPL-1+ )"
 SLOT="0/${SHORT_PV}"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="berkdb debug doc gdbm ithreads"
 
 RDEPEND="
-	berkdb? ( sys-libs/db )
+	berkdb? ( sys-libs/db:* )
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )
 	app-arch/bzip2
 	sys-libs/zlib

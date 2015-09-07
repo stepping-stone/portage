@@ -1,6 +1,101 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.143 2015/02/02 09:11:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.170 2015/08/02 17:28:18 jlec Exp $
+
+  02 Aug 2015; Justin Lecher <jlec@gentoo.org> rebase-1507.ebuild:
+  Fix stable KEYWORDS
+
+*rebase-1508 (02 Aug 2015)
+
+  02 Aug 2015; Justin Lecher <jlec@gentoo.org> +rebase-1508.ebuild:
+  Version Bump
+
+  02 Aug 2015; Justin Lecher <jlec@gentoo.org> -rebase-1505.ebuild,
+  -rebase-1506.ebuild:
+  Drop old
+
+  02 Aug 2015; Justin Lecher <jlec@gentoo.org> rebase-1507.ebuild:
+  Follow stable ppc for ALLARCHES, bug #553618
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> rebase-1507.ebuild:
+  ppc stable wrt bug #553618
+
+*rebase-1507 (30 Jun 2015)
+
+  30 Jun 2015; Justin Lecher <jlec@gentoo.org> +rebase-1507.ebuild:
+  Version Bump
+
+  15 Jun 2015; Justin Lecher <jlec@gentoo.org> -rebase-1504.ebuild:
+  Drop old
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1505.ebuild:
+  Stable for ppc, wrt bug #550804
+
+  09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1505.ebuild:
+  Stable for x86, wrt bug #550804
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1505.ebuild:
+  Stable for amd64, wrt bug #550804
+
+*rebase-1506 (30 May 2015)
+
+  30 May 2015; Justin Lecher <jlec@gentoo.org> +rebase-1506.ebuild:
+  Version Bump
+
+  13 May 2015; Justin Lecher <jlec@gentoo.org> -rebase-1503.ebuild:
+  Drop old
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1504.ebuild:
+  Stable for x86, wrt bug #548594
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> rebase-1504.ebuild:
+  ppc stable wrt bug #548594
+
+  12 May 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1504.ebuild:
+  Stable for amd64, wrt bug #548594
+
+*rebase-1505 (04 May 2015)
+
+  04 May 2015; Justin Lecher <jlec@gentoo.org> +rebase-1505.ebuild:
+  Version Bump
+
+*rebase-1503 (08 Apr 2015)
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> +rebase-1503.ebuild:
+  Restore -1503 that was just marked stable, bug #545982.
+
+  08 Apr 2015; Justin Lecher <jlec@gentoo.org> -rebase-1502.ebuild,
+  -rebase-1503.ebuild:
+  Drop old
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1503.ebuild:
+  Stable for ppc/x86, wrt bug #545430
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1503.ebuild:
+  Stable for amd64, wrt bug #545430
+
+*rebase-1504 (03 Apr 2015)
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> +rebase-1504.ebuild:
+  Version BUMP
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> -rebase-1412.ebuild,
+  -rebase-1501.ebuild:
+  Drop old
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1502.ebuild:
+  Stable for x86, wrt bug #541512
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1502.ebuild:
+  Stable for ppc, wrt bug #541512
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1502.ebuild:
+  Stable for amd64, wrt bug #541512
+
+*rebase-1503 (27 Feb 2015)
+
+  27 Feb 2015; Justin Lecher <jlec@gentoo.org> +rebase-1503.ebuild:
+  Version Bump
 
 *rebase-1502 (02 Feb 2015)
 
@@ -24,7 +119,7 @@
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> -rebase-1403.ebuild,
   -rebase-1406.ebuild, -rebase-1408.ebuild, -rebase-1409.ebuild,
   -rebase-1410.ebuild, +rebase-1501.ebuild:
-  Version BUmp; Drop old
+  Version Bump; Drop old
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> rebase-1411.ebuild:
   Stable for ppc, wrt bug #531422
@@ -57,7 +152,7 @@
 *rebase-1410 (30 Sep 2014)
 
   30 Sep 2014; Justin Lecher <jlec@gentoo.org> +rebase-1410.ebuild:
-  Version BUmp
+  Version Bump
 
   15 Sep 2014; Justin Lecher <jlec@gentoo.org> -rebase-1111.ebuild:
   Drop ebuild with deprecated EAPI
@@ -85,14 +180,14 @@
 
   04 Jun 2014; Justin Lecher <jlec@gentoo.org> -rebase-1404.ebuild,
   +rebase-1406.ebuild:
-  Version BUmp, fixes broken snapshot, #512286
+  Version Bump, fixes broken snapshot, #512286
 
 *rebase-1404 (02 Jun 2014)
 
   02 Jun 2014; Justin Lecher <jlec@gentoo.org> -rebase-1202.ebuild,
   -rebase-1303.ebuild, -rebase-1310.ebuild, -rebase-1311.ebuild,
   -rebase-1312.ebuild, +rebase-1404.ebuild:
-  Version BUmp; clean old
+  Version Bump; clean old
 
 *rebase-1403 (06 Mar 2014)
 
@@ -110,7 +205,7 @@
 *rebase-1311 (02 Nov 2013)
 
   02 Nov 2013; Justin Lecher <jlec@gentoo.org> +rebase-1311.ebuild:
-  Version BUmp
+  Version Bump
 
 *rebase-1310 (08 Oct 2013)
 

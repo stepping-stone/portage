@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1-r1.ebuild,v 1.18 2013/07/14 17:34:30 ago Exp $
+# $Id$
 
 EAPI=3
 
@@ -21,7 +21,7 @@ KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbs
 IUSE="doc"
 
 RDEPEND="
-	app-admin/eselect-lapack
+	app-eselect/eselect-lapack
 	virtual/blas"
 DEPEND="
 	${RDEPEND}
@@ -76,9 +76,9 @@ src_install() {
 
 src_test() {
 	cd "${S}"/TESTING/MATGEN
-	emake || die "Failed to create tmglib.a"
+	emake -j1 || die "Failed to create tmglib.a"
 	cd "${S}"/TESTING
-	emake || die "lapack-reference tests failed."
+	emake -j1 || die "lapack-reference tests failed."
 }
 
 pkg_postinst() {

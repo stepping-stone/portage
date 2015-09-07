@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.3.5.ebuild,v 1.13 2014/11/24 16:02:53 floppym Exp $
+# $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_{2,3,4}} )
-inherit distutils-r1 flag-o-matic
+PYTHON_COMPAT=( python{2_7,3_{3,4}} )
+inherit distutils-r1 eutils flag-o-matic
 
 DESCRIPTION="A Pythonic binding for the libxml2 and libxslt libraries"
-HOMEPAGE="http://lxml.de/ http://pypi.python.org/pypi/lxml/"
+HOMEPAGE="http://lxml.de/ https://pypi.python.org/pypi/lxml/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD ElementTree GPL-2 PSF-2"
@@ -49,6 +49,15 @@ python_test() {
 	cp -r -l src/lxml/tests "${BUILD_DIR}"/lib/lxml/ || die
 	cp -r -l src/lxml/html/tests "${BUILD_DIR}"/lib/lxml/html/ || die
 	ln -s "${S}"/doc "${BUILD_DIR}"/ || die
+
+	OLDPWD=$(pwd)
+	cd "${BUILD_DIR}" || die "can't cd into ${BUILD_DIR}"
+
+	# Patching test files has to happen at this precise moment.
+	# Not before, not after but now.
+	epatch "${FILESDIR}"/lxml-3.3.x-test_etree.py.patch
+
+	cd "${OLDPWD}"
 
 	local test
 	for test in test.py selftest.py selftest2.py; do

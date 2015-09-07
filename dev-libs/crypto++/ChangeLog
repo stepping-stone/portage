@@ -1,6 +1,45 @@
 # ChangeLog for dev-libs/crypto++
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.96 2014/03/19 13:52:25 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.106 2015/07/23 09:34:36 ago Exp $
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> crypto++-5.6.2-r2.ebuild:
+  Stable for sparc, wrt bug #553808
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> crypto++-5.6.2-r2.ebuild:
+  Stable for ppc, wrt bug #553808
+
+  14 Jul 2015; Tobias Klausmann <klausman@gentoo.org> crypto++-5.6.2-r2.ebuild:
+  Stable on alpha, bug 553808
+
+  10 Jul 2015; Agostino Sarubbo <ago@gentoo.org> crypto++-5.6.2-r2.ebuild:
+  Stable for x86, wrt bug #553808
+
+  10 Jul 2015; Agostino Sarubbo <ago@gentoo.org> crypto++-5.6.2-r2.ebuild:
+  Stable for amd64, wrt bug #553808
+
+  07 Jul 2015; Jeroen Roovers <jer@gentoo.org> crypto++-5.6.2-r2.ebuild:
+  Stable for HPPA PPC64 (bug #553808).
+
+  02 Jul 2015; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/crypto++-5.6.1-fix_build_system.patch,
+  -files/crypto++-5.6.1-gcc-4.7.patch,
+  -files/crypto++-5.6.1-r3-fix_build_system.patch,
+  -files/crypto++-5.6.1-rijndael.patch, -files/crypto++-5.6.1-sunos.patch,
+  -files/crypto++-5.6.2-make.patch:
+  Cleanup leftovers
+
+*crypto++-5.6.2-r2 (02 Jul 2015)
+
+  02 Jul 2015; Alon Bar-Lev <alonbl@gentoo.org> +crypto++-5.6.2-r2.ebuild,
+  +files/crypto++-5.6.2-cve-2015-2141.patch:
+  Fix cve-2015-2141, bug#553808
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  05 May 2015; Manuel Rüger <mrueg@gentoo.org> -crypto++-5.6.1-r1.ebuild,
+  -crypto++-5.6.1-r3.ebuild, -crypto++-5.6.2.ebuild:
+  Remove old.
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> crypto++-5.6.2-r1.ebuild:
   Stable for alpha, wrt bug #499322

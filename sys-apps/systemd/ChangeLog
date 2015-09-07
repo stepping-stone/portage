@@ -1,6 +1,206 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.349 2015/02/17 20:15:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.397 2015/08/05 12:09:38 zlogene Exp $
+
+  05 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> systemd-218-r3.ebuild:
+  ia64 stable wrt bug #536902
+
+*systemd-224-r1 (03 Aug 2015)
+
+  03 Aug 2015; Mike Gilbert <floppym@gentoo.org>
+  +files/224-0001-networkd-fix-neworkd-crash.patch, +systemd-224-r1.ebuild:
+  Backport fix for networkd crash.
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> systemd-218-r3.ebuild:
+  sparc stable wrt bug #536902
+
+*systemd-224 (01 Aug 2015)
+
+  01 Aug 2015; Mike Gilbert <floppym@gentoo.org> +systemd-224.ebuild:
+  Version bump.
+
+  01 Aug 2015; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Remove code for defunct terminal USE flag. Re-enable networkd to support
+  socket activation.
+
+  24 Jul 2015; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Remove /etc/systemd/systemd/sockets.target.wants, bug 555814.
+
+  19 Jul 2015; Markus Meier <maekke@gentoo.org> systemd-218-r3.ebuild:
+  arm stable, bug #536902
+
+  17 Jul 2015; Mike Gilbert <floppym@gentoo.org> systemd-222-r1.ebuild,
+  systemd-9999.ebuild:
+  Depend on >=sys-apps/hwids-20150417.
+
+  15 Jul 2015; Tobias Klausmann <klausman@gentoo.org> systemd-218-r3.ebuild:
+  Stable on alpha, bug 536902
+
+  13 Jul 2015; Mike Gilbert <floppym@gentoo.org> systemd-222-r1.ebuild,
+  systemd-9999.ebuild:
+  Restore audit patch.
+
+*systemd-222-r1 (12 Jul 2015)
+
+  12 Jul 2015; Mike Gilbert <floppym@gentoo.org> +systemd-222-r1.ebuild,
+  systemd-9999.ebuild:
+  Quit playing games to avoid depending on libcap and libmount for non-native
+  abis. Bug 554580 by LE GARREC Vincent.
+
+  11 Jul 2015; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Call default src_unpack function in the live ebuild.
+
+  10 Jul 2015; Mike Gilbert <floppym@gentoo.org> systemd-222.ebuild,
+  systemd-9999.ebuild:
+  Add workaround for build failure with gcc-4.7, bug 554454 by Alexander Tsoy.
+
+  10 Jul 2015; Mike Gilbert <floppym@gentoo.org> systemd-222.ebuild,
+  systemd-9999.ebuild:
+  Always pass --without-python to configure, bug 554448.
+
+  10 Jul 2015; Mike Gilbert <floppym@gentoo.org> systemd-222.ebuild,
+  systemd-9999.ebuild:
+  Eliminate unifont dependency by fetching a copy in SRC_URI.
+
+*systemd-222 (09 Jul 2015)
+
+  09 Jul 2015; Mike Gilbert <floppym@gentoo.org> +systemd-222.ebuild,
+  systemd-9999.ebuild:
+  Version bump. Move python modules to dev-python/python-systemd.
+
+  01 Jul 2015; Mike Gilbert <floppym@gentoo.org> systemd-220-r2.ebuild:
+  Backport unifont build workaround.
+
+*systemd-221 (27 Jun 2015)
+
+  27 Jun 2015; Mike Gilbert <floppym@gentoo.org> +systemd-221.ebuild,
+  systemd-9999.ebuild:
+  Bump. Require python at build time for the live ebuild. Resolve build issue
+  without python enabled, bug 552790.
+
+  21 Jun 2015; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Enable kdbus by default.
+
+  14 Jun 2015; Mike Gilbert <floppym@gentoo.org> +files/compile-unifont.py,
+  systemd-220-r2.ebuild, systemd-9999.ebuild:
+  Add missing compile-unifont.py. Update EGIT_REPO_URI to point at github.
+
+  10 Jun 2015; Mike Gilbert <floppym@gentoo.org> systemd-216-r3.ebuild,
+  systemd-218-r3.ebuild, systemd-219_p112.ebuild, systemd-220-r2.ebuild:
+  Add blocker on dev-libs/libgudev.
+
+  10 Jun 2015; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Drop references to gudev, gtk-doc, and gobject-introspection.
+
+  30 May 2015; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Depend on >=sys-apps/util-linux-2.26, bug 550832 by Elias Probst.
+
+  30 May 2015; Mike Gilbert <floppym@gentoo.org> systemd-216-r3.ebuild,
+  systemd-218-r3.ebuild, systemd-219_p112.ebuild, systemd-220-r2.ebuild,
+  systemd-9999.ebuild:
+  Remove obsolete postinst messages.
+
+  30 May 2015; Pacho Ramos <pacho@gentoo.org> systemd-216-r3.ebuild,
+  systemd-218-r3.ebuild, systemd-219_p112.ebuild, systemd-220-r2.ebuild,
+  systemd-9999.ebuild:
+  Drop systemd-ui references as it's dead and will be removed soon
+
+  30 May 2015; Pacho Ramos <pacho@gentoo.org> -systemd-215-r3.ebuild,
+  -systemd-216-r4.ebuild, -systemd-219-r2.ebuild, -systemd-220-r1.ebuild,
+  -systemd-220.ebuild:
+  Drop old
+
+  29 May 2015; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Convert to a more traditional live ebuild.
+
+  28 May 2015; Mike Gilbert <floppym@gentoo.org> systemd-220-r2.ebuild:
+  Add manpage deps due to autoreconf, bug 550704.
+
+*systemd-220-r2 (28 May 2015)
+
+  28 May 2015; Mike Gilbert <floppym@gentoo.org> +systemd-220-r2.ebuild,
+  systemd-220-r1.ebuild, systemd-9999.ebuild:
+  More backports.
+
+*systemd-220-r1 (26 May 2015)
+
+  26 May 2015; Mike Gilbert <floppym@gentoo.org> +systemd-220-r1.ebuild:
+  Backport a regression fix for udev inotify handling, bug 550358. Thanks to
+  Matthias Dahl and poncho.
+
+*systemd-220 (24 May 2015)
+
+  24 May 2015; Mike Gilbert <floppym@gentoo.org> +systemd-220.ebuild,
+  systemd-9999.ebuild:
+  Version bump.
+
+  27 Apr 2015; Agostino Sarubbo <ago@gentoo.org> systemd-216-r3.ebuild:
+  Stable for sparc, wrt bug #525112
+
+  26 Apr 2015; Mike Gilbert <floppym@gentoo.org> systemd-219_p112.ebuild:
+  Fix SRC_URI.
+
+*systemd-219_p112 (26 Apr 2015)
+
+  26 Apr 2015; Mike Gilbert <floppym@gentoo.org> +systemd-219_p112.ebuild:
+  Add a snapshot from the v219-stable branch upstream.
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> systemd-218-r3.ebuild:
+  amd64/ppc/ppc64/x86 stable, bug #536902
+
+  18 Apr 2015; Mike Gilbert <floppym@gentoo.org> -systemd-219-r1.ebuild,
+  systemd-216-r3.ebuild, systemd-216-r4.ebuild, systemd-218-r3.ebuild,
+  systemd-219-r2.ebuild, systemd-9999.ebuild:
+  Adjust glibc blocker, bug 546194.
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> systemd-216-r3.ebuild:
+  Stable for ia64, wrt bug #525112
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> systemd-216-r3.ebuild:
+  Stable for alpha, wrt bug #525112
+
+  13 Apr 2015; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Bump gnu-efi dep and remove Gentoo-specific paths.
+
+  11 Apr 2015; Michał Górny <mgorny@gentoo.org> metadata.xml,
+  systemd-9999.ebuild:
+  Add USE=gnuefi for newly-added EFI boot manager & stub loader.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> systemd-215-r3.ebuild,
+  systemd-216-r3.ebuild, systemd-216-r4.ebuild, systemd-218-r3.ebuild,
+  systemd-219-r1.ebuild, systemd-219-r2.ebuild, systemd-9999.ebuild:
+  Drop old Python implementations
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> systemd-216-r3.ebuild:
+  ppc64 stable, bug #525112
+
+*systemd-219-r2 (11 Mar 2015)
+
+  11 Mar 2015; Mike Gilbert <floppym@gentoo.org> +systemd-219-r2.ebuild:
+  Grab missing systemd.conf.m4 from git to fix optional ACL support, bug 542644
+  by poncho.
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> systemd-216-r3.ebuild:
+  Stable for ppc, wrt bug #525112
+
+  28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  seccomp USE flag is now global, removing from metadata
+
+*systemd-219-r1 (27 Feb 2015)
+
+  27 Feb 2015; Mike Gilbert <floppym@gentoo.org> +systemd-219-r1.ebuild,
+  -systemd-219.ebuild:
+  Re-add the audit patch.
+
+  20 Feb 2015; Mike Gilbert <floppym@gentoo.org> systemd-219.ebuild,
+  systemd-9999.ebuild:
+  Depend on media-fonts/unifont[utils] when USE=terminal. Bug 540652 by Marcel
+  Unbehaun and Reuben Martin.
+
+*systemd-219 (19 Feb 2015)
+
+  19 Feb 2015; Mike Gilbert <floppym@gentoo.org> +systemd-219.ebuild:
+  Version bump.
 
   17 Feb 2015; Pacho Ramos <pacho@gentoo.org> systemd-218-r3.ebuild,
   systemd-9999.ebuild:

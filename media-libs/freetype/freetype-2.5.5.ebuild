@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.5.ebuild,v 1.8 2015/02/18 09:15:34 ago Exp $
+# $Id$
 
 EAPI=5
 inherit autotools-multilib flag-o-matic multilib toolchain-funcs
@@ -13,19 +13,20 @@ SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 		mirror://nongnu/freetype/ft2demos-${PV}.tar.bz2 )
 	doc?	( mirror://sourceforge/freetype/${PN}-doc-${PV}.tar.bz2
 		mirror://nongnu/freetype/${PN}-doc-${PV}.tar.bz2 )
-	infinality? ( http://dev.gentoo.org/~polynomial-c/${P}-infinality-patches.tar.xz )"
+	infinality? ( https://dev.gentoo.org/~polynomial-c/${P}-infinality-patches.tar.xz )"
 
 LICENSE="|| ( FTL GPL-2+ )"
 SLOT="2"
-KEYWORDS="~alpha amd64 arm ~arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="X +adobe-cff auto-hinter bindist bzip2 debug doc fontforge harfbuzz
 	infinality png static-libs utils"
 REQUIRED_USE="harfbuzz? ( auto-hinter )"
+RESTRICT="!bindist? ( bindist )" # bug 541408
 
 CDEPEND=">=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	bzip2? ( >=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}] )
 	harfbuzz? ( >=media-libs/harfbuzz-0.9.19[truetype,${MULTILIB_USEDEP}] )
-	png? ( >=media-libs/libpng-1.2.51[${MULTILIB_USEDEP}] )
+	png? ( >=media-libs/libpng-1.2.51:=[${MULTILIB_USEDEP}] )
 	utils? (
 		X? (
 			>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
@@ -152,7 +153,7 @@ multilib_src_install_all() {
 		# Probably fontforge needs less but this way makes things simplier...
 		einfo "Installing internal headers required for fontforge"
 		local header
-		find src/truetype include/freetype/internal -name '*.h' | \
+		find src/truetype include/internal -name '*.h' | \
 		while read header; do
 			mkdir -p "${ED}/usr/include/freetype2/internal4fontforge/$(dirname ${header})" || die
 			cp ${header} "${ED}/usr/include/freetype2/internal4fontforge/$(dirname ${header})" || die

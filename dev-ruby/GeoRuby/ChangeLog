@@ -1,6 +1,23 @@
 # ChangeLog for dev-ruby/GeoRuby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/GeoRuby/ChangeLog,v 1.12 2015/02/08 11:59:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/GeoRuby/ChangeLog,v 1.17 2015/06/07 16:37:15 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*GeoRuby-2.5.2 (04 Apr 2015)
+
+  04 Apr 2015; Hans de Graaff <graaff@gentoo.org> +GeoRuby-2.5.2.ebuild:
+  Version bump. Add ruby22.
+
+  13 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -GeoRuby-2.2.1-r1.ebuild:
+  Remove old.
+
+  13 Mar 2015; Agostino Sarubbo <ago@gentoo.org> GeoRuby-2.2.1-r2.ebuild:
+  Stable for x86, wrt bug #542994
+
+  12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> GeoRuby-2.2.1-r2.ebuild:
+  Stable for amd64, wrt bug #542994
 
   08 Feb 2015;  <hanno@gentoo.org> metadata.xml:
   remove myself as maintainer, goes to sci-geosciences and ruby herd

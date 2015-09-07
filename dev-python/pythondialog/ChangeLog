@@ -1,6 +1,49 @@
 # ChangeLog for dev-python/pythondialog
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.27 2015/01/02 12:36:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.39 2015/08/02 22:39:36 mrueg Exp $
+
+  02 Aug 2015; Manuel Rüger <mrueg@gentoo.org> -pythondialog-3.2.0.ebuild:
+  Remove old.
+
+  02 Aug 2015; Agostino Sarubbo <ago@gentoo.org> pythondialog-3.2.2.ebuild:
+  Stable for x86, wrt bug #553886
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> pythondialog-3.2.2.ebuild:
+  Stable for sparc, wrt bug #553886
+
+  29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> pythondialog-3.2.2.ebuild:
+  ia64 stable wrt bug #553886
+
+  29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> pythondialog-3.2.2.ebuild:
+  amd64 stable wrt bug #553886
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> pythondialog-3.2.2.ebuild:
+  ppc stable wrt bug #553886
+
+  17 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  pythondialog-3.2.2.ebuild:
+  Stable on alpha, bug 553886
+
+*pythondialog-3.3.0 (04 Jul 2015)
+
+  04 Jul 2015; Ian Delaney <idella4@gentoo.org> +pythondialog-3.3.0.ebuild,
+  -pythondialog-3.2.1.ebuild, pythondialog-3.2.2.ebuild:
+  correction to deps, bump
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+*pythondialog-3.2.2 (24 Apr 2015)
+
+  24 Apr 2015; Ian Delaney <idella4@gentoo.org> +pythondialog-3.2.2.ebuild,
+  -pythondialog-2.7.ebuild:
+  bump and rm old
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pythondialog-3.2.0.ebuild:
+  Stable for ia64, wrt bug #532648
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pythondialog-3.2.0.ebuild:
+  Stable for alpha, wrt bug #532648
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pythondialog-3.2.0.ebuild:
   Stable for sparc, wrt bug #532648

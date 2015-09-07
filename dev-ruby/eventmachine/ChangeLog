@@ -1,6 +1,41 @@
 # ChangeLog for dev-ruby/eventmachine
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.26 2014/08/05 16:01:02 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.35 2015/08/07 02:02:33 mrueg Exp $
+
+*eventmachine-1.0.8 (07 Aug 2015)
+
+  07 Aug 2015; Manuel Rüger <mrueg@gentoo.org> +eventmachine-1.0.8.ebuild:
+  Version bump.
+
+  05 Jul 2015; Hans de Graaff <graaff@gentoo.org> eventmachine-1.0.7.ebuild:
+  ...and also add the slot to the built-time dependency of openssl.
+
+  05 Jul 2015; Hans de Graaff <graaff@gentoo.org> eventmachine-1.0.7.ebuild:
+  Fix openssl slot to be the one that can be compiled against.
+
+  05 Jul 2015; Hans de Graaff <graaff@gentoo.org> eventmachine-1.0.7.ebuild:
+  Avoid tests requiring a network connection, fixing bug 342029. Fix openssl
+  slot dependency.
+
+*eventmachine-1.0.7 (10 Jun 2015)
+
+  10 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +eventmachine-1.0.7.ebuild:
+  Version bump. Add ruby22.
+
+  09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -eventmachine-0.12.10-r2.ebuild:
+  Remove old.
+
+  09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> eventmachine-1.0.3-r1.ebuild:
+  Stable for x86, wrt bug #551420
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> eventmachine-1.0.3-r1.ebuild:
+  Stable for amd64, wrt bug #551420
+
+*eventmachine-1.0.3-r2 (07 Jun 2015)
+
+  07 Jun 2015; Hans de Graaff <graaff@gentoo.org> eventmachine-1.0.3-r1.ebuild,
+  +eventmachine-1.0.3-r2.ebuild:
+  Create stable candidate.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> eventmachine-0.12.10-r2.ebuild,
   eventmachine-1.0.3-r1.ebuild:

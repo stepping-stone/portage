@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130925.ebuild,v 1.3 2014/10/20 07:02:24 ago Exp $
+# $Id$
 
 EAPI=5
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 GIT_REV="cba22d36b77da53890bd65fdadd0e63925687af0"
 GIT_SHORT="cba22d3"
@@ -16,10 +16,9 @@ SRC_URI="https://git.ipxe.org/ipxe.git/snapshot/${GIT_REV}.tar.bz2 -> ${P}-${GIT
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="iso +qemu undi usb vmware"
+IUSE="iso lkrn +qemu undi usb vmware"
 
-DEPEND="sys-devel/make
-	dev-lang/perl
+DEPEND="dev-lang/perl
 	sys-libs/zlib
 	iso? (
 		sys-boot/syslinux
@@ -29,14 +28,9 @@ RDEPEND=""
 
 S="${WORKDIR}/ipxe-${GIT_SHORT}/src"
 
-pkg_setup() {
-	local myld=$(tc-getLD)
-
-	${myld} -v | grep -q "GNU gold" && \
-	ewarn "gold linker unable to handle 16-bit code using ld.bfd. bug #438058"
-}
-
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-git-version.patch #482804
+
 	cat <<-EOF > "${S}"/config/local/general.h
 #undef BANNER_TIMEOUT
 #define BANNER_TIMEOUT 0
@@ -51,17 +45,18 @@ EOF
 }
 
 src_compile() {
+	tc-ld-disable-gold
 	ipxemake() {
 		# Q='' makes the build verbose since that's what everyone loves now
 		emake Q='' \
-			CC=$(tc-getCC) \
-			LD="$(tc-getLD).bfd" \
-			AR=$(tc-getAR) \
-			OBJCOPY=$(tc-getOBJCOPY) \
-			RANLIB=$(tc-getRANLIB) \
-			OBJDUMP=$(tc-getPROG OBJDUMP objdump) \
-			HOST_CC=$(tc-getBUILD_CC) \
-			${*}
+			CC="$(tc-getCC)" \
+			LD="$(tc-getLD)" \
+			AR="$(tc-getAR)" \
+			OBJCOPY="$(tc-getOBJCOPY)" \
+			RANLIB="$(tc-getRANLIB)" \
+			OBJDUMP="$(tc-getOBJDUMP)" \
+			HOST_CC="$(tc-getBUILD_CC)" \
+			"$@"
 	}
 
 	export NO_WERROR=1
@@ -85,6 +80,7 @@ src_compile() {
 	use iso && ipxemake bin/ipxe.iso
 	use undi && ipxemake bin/undionly.kpxe
 	use usb && ipxemake bin/ipxe.usb
+	use lkrn && ipxemake bin/ipxe.lkrn
 }
 
 src_install() {
@@ -97,4 +93,5 @@ src_install() {
 	use iso && doins bin/*.iso
 	use undi && doins bin/*.kpxe
 	use usb && doins bin/*.usb
+	use lkrn && doins bin/*.lkrn
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.20.ebuild,v 1.1 2015/01/27 11:56:05 polynomial-c Exp $
+# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="http://www.samba.org/ftp/pub/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="dev-libs/popt
@@ -72,6 +72,6 @@ pkg_postinst() {
 	if has_version sys-auth/sssd; then
 		ewarn "You have sssd installed. It is known to break after ldb upgrades,"
 		ewarn "so please try to rebuild it before reporting bugs."
-		ewarn "See http://bugs.gentoo.org/404281"
+		ewarn "See https://bugs.gentoo.org/404281"
 	fi
 }

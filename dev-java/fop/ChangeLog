@@ -1,6 +1,67 @@
 # ChangeLog for dev-java/fop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.71 2014/08/10 20:13:16 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.87 2015/07/22 14:11:36 monsieurp Exp $
+
+  22 Jul 2015; Patrice Clement <monsieurp@gentoo.org> -fop-2.0.ebuild:
+  Remove old.
+
+  19 Jul 2015; Patrice Clement <monsieurp@gentoo.org> fop-2.0-r1.ebuild:
+  Stable for amd64. Stable for ppc+ppc64+x86 with ALLARCHES. Fix bug 555326.
+
+*fop-2.0-r1 (17 Jul 2015)
+
+  17 Jul 2015; Patrice Clement <monsieurp@gentoo.org> +fop-2.0-r1.ebuild:
+  Set SLOT back to 0. Create launcher using PN instead of PN-SLOT. Fix bug
+  555144.
+
+  11 Jul 2015; Patrice Clement <monsieurp@gentoo.org>
+  -files/fop-2.0-build.xml.patch, fop-2.0.ebuild:
+  Mend compiling process by dropping previous patch and adding back
+  eventResourceGenerator task definition so that event-model.xml files are
+  correctly generated. Add required jars into lib directory using java-pkg_jar-
+  from. Fix bug 554386.
+
+  05 Jul 2015; Patrice Clement <monsieurp@gentoo.org>
+  +files/fop-2.0-build.xml.patch, fop-2.0.ebuild, metadata.xml:
+  Add patch to remove unneeded (and broken) Ant task. Fix bug 553982.
+
+  29 Jun 2015; Patrice Clement <monsieurp@gentoo.org> fop-2.0.ebuild:
+  Set JAVA_ANT_ENCODING to ISO-8859-1. Fix bug 553494.
+
+  28 Jun 2015; Patrice Clement <monsieurp@gentoo.org> fop-2.0.ebuild:
+  Stable for ppc+ppc64 with ALLARCHES.
+
+  27 Jun 2015; Patrice Clement <monsieurp@gentoo.org> fop-2.0.ebuild:
+  Keyword for ppc+ppc64. Signed off by James Le Cuirot <chewi@gentoo.org>.
+
+  27 Jun 2015; Patrice Clement <monsieurp@gentoo.org> fop-2.0.ebuild:
+  Use a combination of - instead of  courtesy of James Le Cuirot
+  <chewi@gentoo.org>. Fix bug 553392.
+
+  27 Jun 2015; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  Remove unused USE flag and clear QA warning.
+
+  27 Jun 2015; Patrice Clement <monsieurp@gentoo.org> -fop-0.95.ebuild,
+  -fop-1.1.ebuild:
+  Remove old.
+
+  27 Jun 2015; Agostino Sarubbo <ago@gentoo.org> fop-2.0.ebuild:
+  Stable for x86, wrt bug #553370
+
+  27 Jun 2015; Agostino Sarubbo <ago@gentoo.org> fop-2.0.ebuild:
+  Stable for amd64, wrt bug #553370
+
+  27 Jun 2015; Patrice Clement <monsieurp@gentoo.org> fop-2.0.ebuild:
+  Make use of ${P} where we can in order to avoid clashing with other SLOTs. Fix
+  bug 553392.
+
+  27 Jun 2015; Patrice Clement <monsieurp@gentoo.org> fop-2.0.ebuild:
+  Slot version 2.0 as it should.
+
+*fop-2.0 (27 Jun 2015)
+
+  27 Jun 2015; Patrice Clement <monsieurp@gentoo.org> +fop-2.0.ebuild:
+  Version bump. Fix bug 551966.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fop-1.1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

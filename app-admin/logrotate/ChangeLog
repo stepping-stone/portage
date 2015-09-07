@@ -1,6 +1,111 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.187 2015/01/21 13:03:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.215 2015/08/02 18:47:02 ago Exp $
+
+  02 Aug 2015; Agostino Sarubbo <ago@gentoo.org> logrotate-3.9.1.ebuild:
+  Stable for x86, wrt bug #556144
+
+  31 Jul 2015; Agostino Sarubbo <ago@gentoo.org> logrotate-3.9.1.ebuild:
+  Stable for amd64, wrt bug #556144
+
+  30 Jul 2015; Markus Meier <maekke@gentoo.org> logrotate-3.9.1.ebuild:
+  arm stable, bug #556144
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org> logrotate-3.9.1.ebuild:
+  Stable on alpha, bug 556144
+
+  28 Jun 2015; Chema Alonso <nimiux@gentoo.org> -logrotate-3.8.7.ebuild,
+  -files/logrotate-3.8.7-atomic-create.patch,
+  -files/logrotate-3.8.7-datehack.patch, -files/logrotate-3.8.7-fbsd.patch,
+  -files/logrotate-3.8.7-ignore-hidden.patch,
+  -files/logrotate-3.8.7-noasprintf.patch:
+  Drop old
+
+*logrotate-3.9.1 (28 Jun 2015)
+
+  28 Jun 2015; Chema Alonso <nimiux@gentoo.org> +logrotate-3.9.1.ebuild,
+  +files/logrotate-3.9.1-Werror.patch,
+  +files/logrotate-3.9.1-atomic-create.patch,
+  +files/logrotate-3.9.1-fbsd.patch,
+  +files/logrotate-3.9.1-ignore-hidden.patch,
+  +files/logrotate-3.9.1-noasprintf.patch:
+  version bump
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> logrotate-3.8.9-r1.ebuild:
+  alpha stable wrt bug #550032
+
+  17 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> logrotate-3.8.9-r1.ebuild:
+  amd64 stable wrt bug #550032
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> logrotate-3.8.9-r1.ebuild:
+  Stable for ppc, wrt bug #550032
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> logrotate-3.8.9-r1.ebuild:
+  sparc stable wrt bug #550032
+
+  31 May 2015; Mikle Kolyada <zlogene@gentoo.org> logrotate-3.8.9-r1.ebuild:
+  arm stable wrt bug #550032
+
+  28 May 2015; Jeroen Roovers <jer@gentoo.org> logrotate-3.8.9-r1.ebuild:
+  Stable for PPC64 (bug #550032).
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> logrotate-3.8.9-r1.ebuild:
+  Stable for x86, wrt bug #550032
+
+  25 May 2015; Jeroen Roovers <jer@gentoo.org> logrotate-3.8.9-r1.ebuild:
+  Stable for HPPA (bug #550032).
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> logrotate-3.8.9-r1.ebuild:
+  Stable for amd64, wrt bug #550032
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> logrotate-3.8.9.ebuild:
+  sparc stable wrt bug #545566
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> logrotate-3.8.9.ebuild:
+  Stable for PPC64 (bug #545566).
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> logrotate-3.8.9.ebuild:
+  ppc stable wrt bug #545566
+
+*logrotate-3.8.9-r1 (21 Apr 2015)
+
+  21 Apr 2015; Chema Alonso <nimiux@gentoo.org> +logrotate-3.8.9-r1.ebuild,
+  metadata.xml:
+  Bump to fix bug #485848 and bug #546462
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> logrotate-3.8.9.ebuild:
+  Stable for x86, wrt bug #545566
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> logrotate-3.8.9.ebuild:
+  Stable for ia64, wrt bug #545566
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> logrotate-3.8.9.ebuild:
+  Stable for alpha, wrt bug #545566
+
+  09 Apr 2015; Chema Alonso <nimiux@gentoo.org> logrotate-3.8.9.ebuild:
+  Fix bug #545922 by Duncan
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> logrotate-3.8.9.ebuild:
+  Stable for amd64, wrt bug #545566
+
+  07 Apr 2015; Jeroen Roovers <jer@gentoo.org> logrotate-3.8.9.ebuild:
+  Stable for HPPA (bug #545566).
+
+  04 Apr 2015; Chema Alonso <nimiux@gentoo.org> logrotate-3.8.9.ebuild:
+  Fix bug #485848 by Marek Mrva
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> logrotate-3.8.8.ebuild:
+  Stable for ppc, wrt bug #531744
+
+*logrotate-3.8.9 (01 Mar 2015)
+
+  01 Mar 2015; Chema Alonso <nimiux@gentoo.org> +logrotate-3.8.9.ebuild,
+  +files/logrotate-3.8.9-Werror.patch,
+  +files/logrotate-3.8.9-atomic-create.patch,
+  +files/logrotate-3.8.9-fbsd.patch,
+  +files/logrotate-3.8.9-ignore-hidden.patch,
+  +files/logrotate-3.8.9-noasprintf.patch:
+  Version bump. Fix bug #533992
 
   21 Jan 2015; Raúl Porcel <armin76@gentoo.org> logrotate-3.8.8.ebuild:
   alpha/arm64/ia64/s390/sh/sparc stable wrt #531744

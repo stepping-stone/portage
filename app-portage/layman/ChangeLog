@@ -1,6 +1,26 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.229 2015/02/18 13:45:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.235 2015/06/25 00:24:51 floppym Exp $
+
+  25 Jun 2015; Mike Gilbert <floppym@gentoo.org> layman-2.3.0.ebuild,
+  layman-9999.ebuild:
+  Call python_setup before esetup.py in python_prepare_all, bug 552906.
+
+  07 May 2015; Anthony G. Basile <blueness@gentoo.org> layman-2.3.0.ebuild:
+  Keyworded ~ppc.  Bug #539366.
+
+  02 May 2015; Jeroen Roovers <jer@gentoo.org> layman-2.3.0.ebuild:
+  Marked ~ppc64 (bug #539366).
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org> layman-9999.ebuild:
+  Switch to anongit.gentoo.org.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> layman-2.0.0-r1.ebuild,
+  layman-2.0.0-r3.ebuild:
+  Remove old Python implementations
+
+  27 Mar 2015; Devan Franchini <twitch153@gentoo.org> layman-9999.ebuild:
+  Removes invalid dtest.py testing in favor of the external.py test suite
 
   18 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> layman-2.3.0.ebuild:
   Add ~s390 keyword, wrt bug #539366

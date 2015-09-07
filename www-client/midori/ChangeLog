@@ -1,6 +1,28 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.130 2015/01/03 15:06:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.136 2015/08/05 11:02:47 perfinion Exp $
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  04 Jul 2015; Jason Zaman <perfinion@gentoo.org> midori-0.5.10.ebuild:
+  fix bug 553562, add gcr[gtk] to deps
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> midori-0.5.10.ebuild:
+  x86 stable wrt bug #553500
+
+  25 Jun 2015; Lars Wendler <polynomial-c@gentoo.org> midori-0.5.10.ebuild,
+  +files/midori-0.5.10-fix-webkit2-build-breakage.patch:
+  Fixed build failure with webkit2.
+
+*midori-0.5.10 (24 Jun 2015)
+
+  24 Jun 2015; Pacho Ramos <pacho@gentoo.org> +midori-0.5.10.ebuild:
+  Version bump, fixes compilation problems with latest vala
+
+  21 Apr 2015; Denis Dupeyron <calchan@gentoo.org> -midori-0.5.5.ebuild:
+  Remove midori-0.5.5 because it depends on old and no longer maintained (by
+  upstream) vala-0.20. Bug #536594.
 
   03 Jan 2015; Michał Górny <mgorny@gentoo.org> midori-0.5.5.ebuild,
   midori-0.5.8-r1.ebuild, midori-0.5.8.ebuild:

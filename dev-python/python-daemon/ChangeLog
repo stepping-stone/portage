@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/python-daemon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/ChangeLog,v 1.20 2015/02/02 09:22:56 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/ChangeLog,v 1.24 2015/06/23 09:38:23 mrueg Exp $
+
+  23 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -python-daemon-1.6.ebuild:
+  Remove old.
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> python-daemon-1.6-r1.ebuild:
+  arm stable, bug #540290
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> python-daemon-1.6-r1.ebuild:
+  Drop old Python implementations
+
+  04 Apr 2015; Dirkjan Ochtman <djc@gentoo.org> python-daemon-2.0.5.ebuild:
+  Add docutils dep for python-daemon (fixes bug 541068)
 
   02 Feb 2015; Dirkjan Ochtman <djc@gentoo.org> -python-daemon-2.0.1.ebuild,
   -python-daemon-2.0.3.ebuild:

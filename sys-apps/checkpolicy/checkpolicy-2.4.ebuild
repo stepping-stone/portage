@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.4.ebuild,v 1.1 2015/02/04 17:55:33 perfinion Exp $
+# $Id$
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/rel
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND=">=sys-libs/libsepol-${SEPOL_VER}
@@ -34,7 +34,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" YACC="bison -y"
+	emake CC="$(tc-getCC)" YACC="bison -y" LIBDIR="\$(PREFIX)/$(get_libdir)"
 }
 
 src_install() {

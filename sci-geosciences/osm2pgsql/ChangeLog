@@ -1,6 +1,26 @@
 # ChangeLog for sci-geosciences/osm2pgsql
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.16 2014/12/28 16:50:47 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.20 2015/06/18 04:33:20 patrick Exp $
+
+*osm2pgsql-0.87.1 (18 Jun 2015)
+
+  18 Jun 2015; Patrick Lauer <patrick@gentoo.org> +osm2pgsql-0.87.1.ebuild:
+  Bump
+
+  10 May 2015; Aaron W. Swenson <titanofold@gentoo.org>
+  osm2pgsql-0.84.0.ebuild, osm2pgsql-0.86.0.ebuild, osm2pgsql-0.87.0.ebuild,
+  osm2pgsql-99999999.ebuild:
+  Fix bug 548862. Add slot operator to dev-db/postgresql and dev-lang/lua
+  dependencies.
+
+  18 Apr 2015; Sven Wegener <swegener@gentoo.org> osm2pgsql-0.84.0.ebuild,
+  osm2pgsql-0.86.0.ebuild, osm2pgsql-0.87.0.ebuild:
+  Rename distfile to include package name.
+
+*osm2pgsql-0.87.0 (25 Mar 2015)
+
+  25 Mar 2015; Patrick Lauer <patrick@gentoo.org> +osm2pgsql-0.87.0.ebuild:
+  Bump
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   osm2pgsql-0.84.0.ebuild, osm2pgsql-0.86.0.ebuild, osm2pgsql-99999999.ebuild:

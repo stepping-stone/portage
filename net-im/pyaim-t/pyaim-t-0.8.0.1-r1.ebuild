@@ -1,15 +1,15 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8.0.1-r1.ebuild,v 1.4 2014/11/23 16:51:53 mrueg Exp $
+# $Id$
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 inherit eutils python-single-r1
 
 MY_P="${P/pyaim-t/pyaimt}"
 DESCRIPTION="Python based jabber transport for AIM"
-HOMEPAGE="http://code.google.com/p/pyaimt/"
-SRC_URI="http://pyaimt.googlecode.com/files/${MY_P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/pyaimt/"
+SRC_URI="https://pyaimt.googlecode.com/files/${MY_P}.tar.gz"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"

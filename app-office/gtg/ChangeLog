@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gtg
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.16 2014/11/01 10:47:01 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.18 2015/06/09 11:56:24 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gtg-0.3.ebuild:
+  Remove old Python implementations
 
   01 Nov 2014; Gilles Dartiguelongue <eva@gentoo.org> -gtg-0.2.4-r1.ebuild,
   -gtg-0.2.5.ebuild, -files/gtg-0.2.4-hamster.patch:

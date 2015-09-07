@@ -1,6 +1,50 @@
 # ChangeLog for xfce-base/xfce4-settings
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.125 2014/09/16 11:14:25 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.138 2015/08/06 14:52:36 zlogene Exp $
+
+  06 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> xfce4-settings-4.12.0.ebuild:
+  ia64 stable wrt bug #553500
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> xfce4-settings-4.12.0.ebuild:
+  ppc stable wrt bug #553500
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  xfce4-settings-4.12.0.ebuild:
+  Stable on alpha, bug 553500
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org> xfce4-settings-4.12.0.ebuild:
+  Stable for PPC64 (bug #553500).
+
+  11 Jul 2015; Markus Meier <maekke@gentoo.org> xfce4-settings-4.12.0.ebuild:
+  arm stable, bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> xfce4-settings-4.12.0.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Jason Zaman <perfinion@gentoo.org> -xfce4-settings-4.11.3.ebuild:
+  drop old
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> xfce4-settings-4.12.0.ebuild:
+  x86 stable wrt bug #553500
+
+  01 Jul 2015; Jeroen Roovers <jer@gentoo.org> xfce4-settings-4.12.0.ebuild:
+  Stable for HPPA (bug #553500).
+
+  31 May 2015; Jason Zaman <perfinion@gentoo.org> xfce4-settings-4.10.1.ebuild:
+  pin dep <libxfce4ui-4.12 bug 549780
+
+*xfce4-settings-4.12.0 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfce4-settings-4.12.0.ebuild,
+  metadata.xml:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> xfce4-settings-4.11.3.ebuild:
+  add arm64 support, tested on A53 board
 
   16 Sep 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/xfce4-settings-4.11.2-upower-0.99.patch,

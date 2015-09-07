@@ -1,6 +1,27 @@
 # ChangeLog for dev-haskell/vector
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/ChangeLog,v 1.21 2014/12/14 06:56:41 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/ChangeLog,v 1.27 2015/08/02 10:59:55 slyfox Exp $
+
+  02 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org> -vector-0.10.11.0.ebuild,
+  -vector-0.10.12.2.ebuild, -vector-0.10.9.1.ebuild, -vector-0.9.1.ebuild:
+  Drop old.
+
+  23 Jun 2015; Sergei Trofimovich <slyfox@gentoo.org> vector-0.10.0.1.ebuild:
+  Limit upper bound, does not work with ghc-7.8.
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> vector-0.10.0.1.ebuild:
+  ppc stable wrt bug #480568
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> vector-0.10.0.1.ebuild:
+  ppc64 stable wrt bug #480568
+
+*vector-0.10.12.3 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +vector-0.10.12.3.ebuild:
+  Bump vector to 0.10.12.3
+
+  20 Feb 2015; Raúl Porcel <armin76@gentoo.org> vector-0.10.0.1.ebuild:
+  alpha/ia64 stable wrt #480568
 
 *vector-0.10.12.2 (14 Dec 2014)
 

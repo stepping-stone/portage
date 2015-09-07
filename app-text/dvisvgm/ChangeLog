@@ -1,6 +1,50 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.67 2015/01/05 14:29:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.80 2015/08/04 11:55:24 zlogene Exp $
+
+  04 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> dvisvgm-1.8.1.ebuild:
+  ia64 stable wrt bug #534906
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> dvisvgm-1.8.1.ebuild:
+  Stable for sparc, wrt bug #534906
+
+*dvisvgm-1.10 (27 Jul 2015)
+
+  27 Jul 2015; Alexis Ballier <aballier@gentoo.org> +dvisvgm-1.10.ebuild:
+  version bump, fix build with kpathsea from texlive 2015
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> dvisvgm-1.8.1.ebuild:
+  ppc stable wrt bug #534906
+
+  20 Jul 2015; Jeroen Roovers <jer@gentoo.org> dvisvgm-1.8.1.ebuild:
+  Stable for HPPA (bug #534906).
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> dvisvgm-1.8.1.ebuild:
+  Stable for alpha, wrt bug #534906
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> dvisvgm-1.8.1.ebuild:
+  Stable for x86, wrt bug #534906
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> dvisvgm-1.8.1.ebuild:
+  Stable for amd64, wrt bug #534906
+
+  09 Jun 2015; Markus Meier <maekke@gentoo.org> dvisvgm-1.8.1.ebuild:
+  arm stable, bug #534906
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -dvisvgm-1.0.8.ebuild,
+  -dvisvgm-1.0.9.ebuild:
+  Remove old.
+
+  13 Apr 2015; Alexis Ballier <aballier@gentoo.org> dvisvgm-1.9.2.ebuild:
+  add missing app-text/{xmlto,asciidoc} build dep, bug #546458
+
+*dvisvgm-1.9.2 (13 Apr 2015)
+
+  13 Apr 2015; Alexis Ballier <aballier@gentoo.org> +dvisvgm-1.9.2.ebuild:
+  version bump
 
 *dvisvgm-1.9 (05 Jan 2015)
 

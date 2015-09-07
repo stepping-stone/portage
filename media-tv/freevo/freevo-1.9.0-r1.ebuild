@@ -1,12 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0-r1.ebuild,v 1.4 2014/12/12 23:23:14 mgorny Exp $
+# $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 DISTUTILS_SINGLE_IMPL=1
+
 inherit eutils distutils-r1
 
 DESCRIPTION="Digital video jukebox (PVR, DVR)"
@@ -16,9 +17,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="directfb cdparanoia doc dvd encode fbcon flac gphoto2 jpeg lame lirc matrox mixer nls tv vorbis xine X"
+IUSE="cdparanoia doc dvd encode fbcon flac gphoto2 jpeg lame lirc matrox mixer nls tv vorbis xine X"
 
-RDEPEND="dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
+RDEPEND="
+	dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
 	virtual/python-imaging[${PYTHON_USEDEP}]
 	dev-python/pygame[${PYTHON_USEDEP}]
 	>=dev-python/twisted-core-2.5[${PYTHON_USEDEP}]
@@ -30,15 +32,14 @@ RDEPEND="dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
 	>=dev-python/kaa-imlib2-0.2.3[${PYTHON_USEDEP}]
 	dev-python/kaa-display[${PYTHON_USEDEP}]
 
-	media-video/mplayer[directfb?,fbcon?]
-	>=media-libs/libsdl-1.2.5[directfb?,fbcon?]
+	media-video/mplayer[fbcon?]
+	>=media-libs/libsdl-1.2.5[fbcon?]
 	media-libs/sdl-image[jpeg,png]
 	x11-apps/xset
 
 	cdparanoia? ( media-sound/cdparanoia )
 	dvd? (
 		>=media-video/lsdvd-0.10
-		directfb? ( media-libs/xine-lib[directfb] )
 		fbcon? ( media-libs/xine-lib[fbcon] )
 		encode? ( media-video/dvdbackup )
 	)
@@ -56,11 +57,11 @@ RDEPEND="dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
 PATCHES=( "${FILESDIR}"/${P}-{PIL,distutils-r1}.patch )
 
 pkg_setup() {
-	if ! { use X || use directfb || use fbcon || use matrox ; } ; then
+	if ! { use X || use fbcon || use matrox ; } ; then
 		echo
 		ewarn "WARNING - no video support specified in USE flags."
 		ewarn "Please be sure that media-libs/libsdl supports whatever video"
-		ewarn "support (X11, fbcon, directfb, etc) you plan on using."
+		ewarn "support (X11, fbcon, etc.) you plan on using."
 		echo
 	fi
 
@@ -101,11 +102,10 @@ src_install() {
 		doins "${FILESDIR}/freevo.desktop"
 	fi
 
-	exeinto /usr/bin
-	newexe "${FILESDIR}"/${PN}-1.8.2.boot freevoboot
+	newbin "${FILESDIR}"/${PN}-1.8.2.boot freevoboot
 	newconfd "${FILESDIR}/freevo.conf" freevo
 
-	rm -rf "${D}/usr/share/doc"
+	rm -rf "${D}/usr/share/doc" || die
 
 	dodoc ChangeLog FAQ RELEASE_NOTES README TODO \
 		Docs/{CREDITS,NOTES,*.txt,plugins/*.txt}
@@ -115,15 +115,11 @@ src_install() {
 	use nls || rm -rf "${D}"/usr/share/locale
 
 	# Create a default freevo setup
-	cd "${S}/src"
+	cd "${S}/src" || die
 	if [ "${PROFILE_ARCH}" == "xbox" ]; then
 		myconf="${myconf} --geometry=640x480 --display=x11"
-	elif use matrox && use directfb; then
-		myconf="${myconf} --geometry=768x576 --display=dfbmga"
 	elif use matrox ; then
 		myconf="${myconf} --geometry=768x576 --display=mga"
-	elif use directfb; then
-		myconf="${myconf} --geometry=768x576 --display=directfb"
 	elif use X ; then
 		myconf="${myconf} --geometry=800x600 --display=x11"
 	else

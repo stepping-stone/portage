@@ -1,6 +1,119 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1420 2015/02/04 14:15:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1442 2015/08/03 10:26:22 mpagano Exp $
+
+*git-sources-4.2_rc5 (03 Aug 2015)
+
+  03 Aug 2015; Michael Pagano <mpagano@gentoo.org> +git-sources-4.2_rc5.ebuild:
+  Version bump.
+
+*git-sources-4.2_rc4 (26 Jul 2015)
+
+  26 Jul 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.2_rc4.ebuild:
+  Version bump
+
+*git-sources-4.2_rc3 (20 Jul 2015)
+
+  20 Jul 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.2_rc3.ebuild:
+  Version bump.
+
+  19 Jul 2015; Mike Pagano <mpagano@gentoo.org> git-sources-4.2_rc2.ebuild:
+  Bump KBASE_VER to 4.1 Bug #554702. Thanks to jospezial.
+
+*git-sources-4.2_rc2 (13 Jul 2015)
+
+  13 Jul 2015; Mike Pagano <mpagano@gentoo.org> -git-sources-4.1_rc1.ebuild,
+  -git-sources-4.1_rc2.ebuild, -git-sources-4.1_rc3.ebuild,
+  -git-sources-4.1_rc4.ebuild, -git-sources-4.1_rc5.ebuild,
+  -git-sources-4.1_rc6.ebuild, -git-sources-4.1_rc7.ebuild,
+  -git-sources-4.1_rc8.ebuild, +git-sources-4.2_rc2.ebuild:
+  Version bump. Remove old.
+
+*git-sources-4.1_rc8 (15 Jun 2015)
+
+  15 Jun 2015; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.1_rc8.ebuild:
+  Automated version bump to 4.1_rc8
+
+*git-sources-4.1_rc7 (08 Jun 2015)
+
+  08 Jun 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.1_rc7.ebuild:
+  Version bump
+
+*git-sources-4.1_rc6 (01 Jun 2015)
+
+  01 Jun 2015; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.1_rc6.ebuild:
+  Automated version bump to 4.1_rc6
+
+*git-sources-4.1_rc5 (25 May 2015)
+
+  25 May 2015; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.1_rc5.ebuild:
+  Automated version bump to 4.1_rc5
+
+*git-sources-4.1_rc4 (18 May 2015)
+
+  18 May 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.1_rc4.ebuild:
+  Version bump
+
+*git-sources-4.1_rc3 (11 May 2015)
+
+  11 May 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.1_rc3.ebuild:
+  Version bump
+
+  04 May 2015; Mike Pagano <mpagano@gentoo.org> git-sources-4.1_rc2.ebuild:
+  Remove misleading DEBLOB support variable.
+
+*git-sources-4.1_rc2 (04 May 2015)
+
+  04 May 2015; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.1_rc2.ebuild:
+  Automated version bump to 4.1_rc2
+
+  29 Apr 2015; Mike Pagano <mpagano@gentoo.org> git-sources-4.1_rc1.ebuild:
+  Add kernel environment variable K_BASE_VER.
+
+*git-sources-4.1_rc1 (27 Apr 2015)
+
+  27 Apr 2015; Mike Pagano <mpagano@gentoo.org> -git-sources-4.0_rc1.ebuild,
+  -git-sources-4.0_rc2.ebuild, -git-sources-4.0_rc3.ebuild,
+  -git-sources-4.0_rc4.ebuild, -git-sources-4.0_rc5.ebuild,
+  -git-sources-4.0_rc6.ebuild, -git-sources-4.0_rc7.ebuild,
+  +git-sources-4.1_rc1.ebuild:
+  Version bump. Remove old.
+
+*git-sources-4.0_rc7 (07 Apr 2015)
+
+  07 Apr 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.0_rc7.ebuild:
+  Version bump
+
+*git-sources-4.0_rc6 (31 Mar 2015)
+
+  31 Mar 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.0_rc6.ebuild:
+  Version bump
+
+*git-sources-4.0_rc5 (23 Mar 2015)
+
+  23 Mar 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.0_rc5.ebuild:
+  Version bump
+
+*git-sources-4.0_rc4 (16 Mar 2015)
+
+  16 Mar 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.0_rc4.ebuild:
+  version bump
+
+*git-sources-4.0_rc3 (09 Mar 2015)
+
+  09 Mar 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.0_rc3.ebuild:
+  Version bump
+
+*git-sources-4.0_rc2 (03 Mar 2015)
+
+  03 Mar 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.0_rc2.ebuild:
+  Version bump
+
+*git-sources-4.0_rc1 (23 Feb 2015)
+
+  23 Feb 2015; Mike Pagano <mpagano@gentoo.org> -git-sources-3.19_rc7.ebuild,
+  +git-sources-4.0_rc1.ebuild:
+  Linux patch 4.0_rc1. Remove old version.
 
   04 Feb 2015; Mike Pagano <mpagano@gentoo.org> -git-sources-3.19_rc1.ebuild,
   -git-sources-3.19_rc2.ebuild, -git-sources-3.19_rc3.ebuild,

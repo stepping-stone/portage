@@ -1,20 +1,20 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r5.ebuild,v 1.12 2014/12/06 16:40:07 ago Exp $
+# $Id$
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 GNOME_ORG_MODULE="gamin"
 GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools eutils flag-o-matic libtool python-r1 gnome.org multilib-minimal
 
 DESCRIPTION="Library providing the FAM File Alteration Monitor API"
-HOMEPAGE="http://www.gnome.org/~veillard/gamin/"
+HOMEPAGE="https://www.gnome.org/~veillard/gamin/"
 SRC_URI="${SRC_URI}
 	mirror://gentoo/gamin-0.1.9-freebsd.patch.bz2
-	http://dev.gentoo.org/~grobian/patches/libgamin-0.1.10-opensolaris.patch.bz2
+	https://dev.gentoo.org/~grobian/patches/libgamin-0.1.10-opensolaris.patch.bz2
 	http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz" # pkg.m4 for eautoreconf
 
 LICENSE="LGPL-2"

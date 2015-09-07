@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/dot2tex
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.36 2014/12/04 10:46:06 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.38 2015/06/09 18:24:56 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> dot2tex-2.8.7-r1.ebuild,
+  dot2tex-2.9.0.ebuild:
+  Drop old Python implementations
 
   04 Dec 2014; Alexis Ballier <aballier@gentoo.org> dot2tex-2.9.0.ebuild:
   sphinx is only needed for doc

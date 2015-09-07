@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.29 2015/02/07 20:38:02 floppym Exp $
+# $Id$
 
 EAPI=5
 
@@ -10,7 +10,7 @@ if [[ ${PV} == 9999 ]]; then
 fi
 
 if [[ -n ${GRUB_AUTOGEN} ]]; then
-	PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+	PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 	inherit python-any-r1
 fi
 
@@ -25,7 +25,7 @@ if [[ ${PV} != 9999 ]]; then
 	else
 		SRC_URI="mirror://gnu/${PN}/${P}.tar.xz
 			mirror://gentoo/${P}.tar.xz
-			http://dev.gentoo.org/~floppym/dist/${P}.tar.xz"
+			https://dev.gentoo.org/~floppym/dist/${P}.tar.xz"
 		S=${WORKDIR}/${P%_*}
 	fi
 	KEYWORDS="~amd64 ~x86"
@@ -42,25 +42,14 @@ SRC_URI+=" fonts? ( mirror://gnu/unifont/${UNIFONT}/${UNIFONT}.pcf.gz )
 	themes? ( mirror://sourceforge/dejavu/${DEJAVU}.zip )"
 
 DESCRIPTION="GNU GRUB boot loader"
-HOMEPAGE="http://www.gnu.org/software/grub/"
+HOMEPAGE="https://www.gnu.org/software/grub/"
 
 # Includes licenses for dejavu and unifont
 LICENSE="GPL-3 fonts? ( GPL-2-with-font-exception ) themes? ( BitstreamVera )"
 SLOT="2"
 IUSE="debug device-mapper doc efiemu +fonts mount +multislot nls static sdl test +themes truetype libzfs"
 
-GRUB_ALL_PLATFORMS=(
-	# everywhere:
-	emu
-	# mips only:
-	qemu-mips loongson
-	# amd64, x86, ppc, ppc64:
-	ieee1275
-	# amd64, x86:
-	coreboot multiboot efi-32 pc qemu xen
-	# amd64, ia64:
-	efi-64
-)
+GRUB_ALL_PLATFORMS=( coreboot efi-32 efi-64 emu ieee1275 loongson multiboot qemu qemu-mips pc uboot xen )
 IUSE+=" ${GRUB_ALL_PLATFORMS[@]/#/grub_platforms_}"
 
 REQUIRED_USE="
@@ -142,18 +131,6 @@ QA_WX_LOAD="
 QA_PRESTRIPPED="
 	usr/lib.*/grub/.*/kernel.img
 "
-
-pkg_pretend() {
-	if [[ ${MERGE_TYPE} != binary ]]; then
-		# Bug 439082
-		if ! test-flags-CC -fuse-ld=bfd > /dev/null &&
-			$(tc-getLD) --version | grep -q "GNU gold"; then
-			eerror "GRUB does not function correctly when built with the gold linker."
-			eerror "Please select the bfd linker with binutils-config."
-			die "GNU gold detected"
-		fi
-	fi
-}
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
@@ -256,10 +233,11 @@ src_configure() {
 
 	use static && HOST_LDFLAGS+=" -static"
 
-	export TARGET_LDFLAGS+=" $(test-flags-CC -fuse-ld=bfd)"
+	tc-ld-disable-gold #439082 #466536 #526348
+	export TARGET_LDFLAGS="${TARGET_LDFLAGS} ${LDFLAGS}"
+	unset LDFLAGS
 
-	tc-export CC NM OBJCOPY STRIP
-	export TARGET_CC=${TARGET_CC:-${CC}}
+	tc-export CC NM OBJCOPY RANLIB STRIP
 	tc-export BUILD_CC # Bug 485592
 
 	# Portage will take care of cleaning up GRUB_PLATFORMS
@@ -314,7 +292,7 @@ pkg_postinst() {
 	mount-boot_pkg_postinst
 
 	elog "For information on how to configure GRUB2 please refer to the guide:"
-	elog "    http://wiki.gentoo.org/wiki/GRUB2_Quick_Start"
+	elog "    https://wiki.gentoo.org/wiki/GRUB2_Quick_Start"
 
 	if has_version 'sys-boot/grub:0'; then
 		elog "A migration guide for GRUB Legacy users is available:"
@@ -322,11 +300,10 @@ pkg_postinst() {
 	fi
 
 	if [[ -z ${REPLACING_VERSIONS} ]]; then
-		if ! has_version sys-boot/os-prober; then
-			elog "Install sys-boot/os-prober to enable detection of other operating systems using grub2-mkconfig."
-		fi
-		if ! has_version dev-libs/libisoburn; then
-			elog "Install dev-libs/libisoburn to enable creation of rescue media using grub2-mkrescue."
-		fi
+		elog
+		elog "You may consider installing the following optional packages:"
+		optfeature "Detect other operating systems (grub-mkconfig)" sys-boot/os-prober
+		optfeature "Create rescue media (grub-mkrescue)" dev-libs/libisoburn
+		optfeature "Enable RAID device detection" sys-fs/mdadm
 	fi
 }

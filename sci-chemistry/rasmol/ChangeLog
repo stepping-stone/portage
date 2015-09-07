@@ -1,6 +1,35 @@
 # ChangeLog for sci-chemistry/rasmol
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.39 2012/12/20 14:54:13 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.46 2015/06/17 14:39:33 jlec Exp $
+
+  17 Jun 2015; Justin Lecher <jlec@gentoo.org> -rasmol-2.7.5.2-r1.ebuild,
+  rasmol-2.7.5.2-r2.ebuild:
+  Fix compilation problems on ppc, bug #547318; drop old
+
+*rasmol-2.7.5.2-r2 (18 May 2015)
+
+  18 May 2015; Justin Lecher <jlec@gentoo.org> +rasmol-2.7.5.2-r2.ebuild:
+  Drop -traditional from CPPFLAGS, bug #547318; enhance preprocessor definitions
+
+  29 Mar 2015; Justin Lecher <jlec@gentoo.org> -files/ldflags.patch,
+  -files/rasmol.sh.debian, -rasmol-2.7.5.2.ebuild:
+  Drop old
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rasmol-2.7.5.2-r1.ebuild:
+  Stable for ppc, wrt bug #543036
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rasmol-2.7.5.2-r1.ebuild:
+  Stable for x86, wrt bug #543036
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rasmol-2.7.5.2-r1.ebuild:
+  Stable for amd64, wrt bug #543036
+
+*rasmol-2.7.5.2-r1 (12 Mar 2015)
+
+  12 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/rasmol-2.7.5.2-format-security.patch,
+  +files/rasmol-2.7.5.2-longlong.patch, +rasmol-2.7.5.2-r1.ebuild:
+  Fix for format-security, #543032
 
   20 Dec 2012; Justin Lecher <jlec@gentoo.org> -rasmol-2.7.5.1.ebuild,
   metadata.xml:

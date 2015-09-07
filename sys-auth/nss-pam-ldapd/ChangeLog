@@ -1,6 +1,70 @@
 # ChangeLog for sys-auth/nss-pam-ldapd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.16 2014/06/15 03:51:13 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.28 2015/07/05 14:31:40 zlogene Exp $
+
+  05 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  nss-pam-ldapd-0.8.14-r2.ebuild:
+  x86 stable wrt bug #552398
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> nss-pam-ldapd-0.8.14-r2.ebuild:
+  Stable for amd64, wrt bug #552398
+
+  18 Jun 2015; Patrick McLean <chutzpah@gentoo.org> +files/nslcd-run-s6,
+  nss-pam-ldapd-0.9.6.ebuild:
+  Add missing s6 run file from bug #550594.
+
+  17 Jun 2015; Matthew Thode <prometheanfire@gentoo.org> +files/nslcd-init-r2,
+  +files/nslcd-init-s6, -nss-pam-ldapd-0.9.5-r1.ebuild,
+  nss-pam-ldapd-0.9.6.ebuild:
+  adding s6 suport for bug 550594
+
+*nss-pam-ldapd-0.9.6 (15 Jun 2015)
+
+  15 Jun 2015; Patrick McLean <chutzpah@gentoo.org> +nss-pam-ldapd-0.9.6.ebuild:
+  Version bump.
+
+*nss-pam-ldapd-0.8.14-r2 (15 May 2015)
+
+  15 May 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +nss-pam-ldapd-0.8.14-r2.ebuild, -nss-pam-ldapd-0.8.13.ebuild,
+  -nss-pam-ldapd-0.8.14-r1.ebuild, -nss-pam-ldapd-0.8.14.ebuild,
+  nss-pam-ldapd-0.9.5-r1.ebuild:
+  multilib for nss-pam-ldapd
+
+  09 May 2015; Zac Medico <zmedico@gentoo.org> files/nslcd.service:
+  Fix systemd service unit content.
+
+*nss-pam-ldapd-0.9.5-r1 (07 Apr 2015)
+
+  07 Apr 2015; Patrick McLean <chutzpah@gentoo.org> +files/nslcd-tmpfiles.conf,
+  +files/nslcd.service, +nss-pam-ldapd-0.9.5-r1.ebuild,
+  -nss-pam-ldapd-0.9.4-r1.ebuild, -nss-pam-ldapd-0.9.4-r2.ebuild,
+  -nss-pam-ldapd-0.9.4.ebuild, -nss-pam-ldapd-0.9.5.ebuild, metadata.xml:
+  Revision bump, add systemd service files (bug #545780). Remove old.
+
+*nss-pam-ldapd-0.9.5 (30 Mar 2015)
+
+  30 Mar 2015; Patrick McLean <chutzpah@gentoo.org> +nss-pam-ldapd-0.9.5.ebuild:
+  Version bump.
+
+  11 Mar 2015; Patrick McLean <chutzpah@gentoo.org>
+  nss-pam-ldapd-0.9.4-r2.ebuild:
+  Split dependencies into COMMON_DEP so RDEPEND won't have test deps.
+
+*nss-pam-ldapd-0.9.4-r2 (11 Mar 2015)
+
+  11 Mar 2015; Patrick McLean <chutzpah@gentoo.org>
+  +files/nss-pam-ldapd-0.9.4-disable-py3-only-linters.patch,
+  +nss-pam-ldapd-0.9.4-r2.ebuild, metadata.xml:
+  Revision bump, add "utils" USE flag to control installation of userspace
+  utilities written in python. Use python-r1 eclass to install python code
+  rather than the automake-based internal code.
+
+*nss-pam-ldapd-0.9.4-r1 (09 Mar 2015)
+
+  09 Mar 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +nss-pam-ldapd-0.9.4-r1.ebuild:
+  adding multilib support from bug 542374
 
 *nss-pam-ldapd-0.9.4 (15 Jun 2014)
 

@@ -1,15 +1,15 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.2.ebuild,v 1.15 2014/11/01 01:03:37 vapier Exp $
+# $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools python-single-r1 linux-info libtool eutils
 
 DESCRIPTION="Tool to setup encrypted devices with dm-crypt"
-HOMEPAGE="http://code.google.com/p/cryptsetup/"
-SRC_URI="http://cryptsetup.googlecode.com/files/${P}.tar.bz2"
+HOMEPAGE="https://code.google.com/p/cryptsetup/"
+SRC_URI="https://cryptsetup.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -117,6 +117,6 @@ pkg_postinst() {
 		elog "Users using cryptsetup-1.0.x (dm-crypt plain) volumes must use"
 		elog "a compatibility mode when using cryptsetup-1.1.x. This can be"
 		elog "done by specifying the cipher (-c), key size (-s) and hash (-h)."
-		elog "For more info, see http://code.google.com/p/cryptsetup/wiki/FrequentlyAskedQuestions#6._Issues_with_Specific_Versions_of_cryptsetup"
+		elog "For more info, see https://code.google.com/p/cryptsetup/wiki/FrequentlyAskedQuestions#6._Issues_with_Specific_Versions_of_cryptsetup"
 	fi
 }

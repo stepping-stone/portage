@@ -1,18 +1,18 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.3_pre20140417-r1.ebuild,v 1.4 2014/08/07 17:53:18 jer Exp $
+# $Id$
 
 EAPI=5
 GCONF_DEBUG=yes
 GNOME2_LA_PUNT=yes
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils gnome2 python-single-r1 multilib
 
 DESCRIPTION="Diagram/flowchart creation program"
 HOMEPAGE="https://wiki.gnome.org/Apps/Dia"
 
-SRC_URI="http://dev.gentoo.org/~pacho/gnome/${PN}-0.97.3_pre20140417.tar.xz"
+SRC_URI="https://dev.gentoo.org/~pacho/gnome/${PN}-0.97.3_pre20140417.tar.xz"
 S="${WORKDIR}/${PN}-0.97.2"
 
 LICENSE="GPL-2"

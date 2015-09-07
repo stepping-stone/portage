@@ -1,21 +1,21 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.7.ebuild,v 1.3 2015/02/13 04:55:59 mr_bones_ Exp $
+# $Id$
 
 EAPI=5
 inherit cmake-utils eutils games
 
 DESCRIPTION="A realtime strategy game engine"
 HOMEPAGE="http://stratagus.sourceforge.net/"
-SRC_URI="http://launchpad.net/stratagus/trunk/${PV}/+download/stratagus_${PV}.orig.tar.gz"
+SRC_URI="https://launchpad.net/stratagus/trunk/${PV}/+download/stratagus_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="bzip2 debug doc mikmod mng theora vorbis"
 
 RDEPEND="dev-db/sqlite:3
-	>=dev-lang/lua-5
+	>=dev-lang/lua-5:0
 	dev-lua/toluapp
 	media-libs/libpng:0
 	virtual/opengl

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-xmlbuilder/java-xmlbuilder-0.6-r1.ebuild,v 1.1 2013/10/14 18:03:36 ercpe Exp $
+# $Id$
 
 EAPI=5
 
@@ -9,8 +9,8 @@ JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-pkg-simple
 
 DESCRIPTION="A utility that allows simple XML documents to be constructed using Java"
-HOMEPAGE="https://code.google.com/p/java-xmlbuilder/"
-SRC_URI="http://dev.gentoo.org/~ercpe/distfiles/${CATEGORY}/${PN}/${P}.tar.bz2"
+HOMEPAGE="https://github.com/jmurty/java-xmlbuilder"
+SRC_URI="https://dev.gentoo.org/~ercpe/distfiles/${CATEGORY}/${PN}/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"

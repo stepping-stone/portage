@@ -1,6 +1,17 @@
 # ChangeLog for app-arch/rar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.90 2014/08/29 08:50:37 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.93 2015/06/26 08:39:57 ago Exp $
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> rar-5.2.1.ebuild:
+  Stable for x86, wrt bug #534818
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> rar-5.2.1.ebuild:
+  Stable for amd64, wrt bug #534818
+
+*rar-5.2.1 (14 Mar 2015)
+
+  14 Mar 2015; Jeff Horelick <jdhore@gentoo.org> +rar-5.2.1.ebuild:
+  Version bump
 
 *rar-5.1.0 (29 Aug 2014)
 

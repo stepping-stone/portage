@@ -1,6 +1,37 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.149 2015/02/06 06:04:27 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.157 2015/07/23 05:15:17 perfinion Exp $
+
+  23 Jul 2015; Jason Zaman <perfinion@gentoo.org> policycoreutils-9999.ebuild:
+  Rebuild policy store in postinst(), there are some changes to the format
+
+  17 Jul 2015; Jason Zaman <perfinion@gentoo.org> policycoreutils-9999.ebuild:
+  add python3 compat to live ebuild
+
+*policycoreutils-2.4-r1 (04 Jul 2015)
+
+  04 Jul 2015; Jason Zaman <perfinion@gentoo.org>
+  +policycoreutils-2.4-r1.ebuild, policycoreutils-9999.ebuild:
+  bump of policycoreutils-extra, fixes bugs 544598, 517456, 517450
+
+*policycoreutils-9999 (09 Jun 2015)
+
+  09 Jun 2015; Sven Vermeulen <swift@gentoo.org> +policycoreutils-9999.ebuild:
+  Adding policycoreutils-9999 to better support upstream integrations
+
+  10 May 2015; Jason Zaman <perfinion@gentoo.org> policycoreutils-2.4.ebuild:
+  stabilize selinux 2.4 userland
+
+  09 May 2015; Jason Zaman <perfinion@gentoo.org> policycoreutils-2.4.ebuild:
+  ewarn has been moved to libsemanage
+
+  18 Apr 2015; Jason Zaman <perfinion@gentoo.org>
+  -policycoreutils-2.3-r2.ebuild, -policycoreutils-2.4_rc6-r1.ebuild,
+  -policycoreutils-2.4_rc7.ebuild:
+  Drop old RCs
+
+  04 Mar 2015; Sven Vermeulen <swift@gentoo.org> policycoreutils-2.4.ebuild:
+  Fix build failure on x32 (bug #541618)
 
   06 Feb 2015; Jason Zaman <perfinion@gentoo.org> policycoreutils-2.3-r3.ebuild:
   Stablize 2.3-r3

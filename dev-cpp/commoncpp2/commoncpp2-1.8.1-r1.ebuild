@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.8.1-r1.ebuild,v 1.3 2014/03/01 22:24:51 mgorny Exp $
+# $Id$
 
 EAPI="5"
 
@@ -8,10 +8,10 @@ inherit eutils autotools
 
 DESCRIPTION="C++ framework offering portable support for threading, sockets, file access, daemons, persistence, serial I/O, XML parsing, and system services"
 SRC_URI="mirror://gnu/commoncpp/${P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/software/commoncpp/"
+HOMEPAGE="https://www.gnu.org/software/commoncpp/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="debug doc examples ipv6 gnutls ssl static-libs"
 REQUIRED_USE="gnutls? ( ssl )"
 
@@ -27,7 +27,8 @@ src_prepare() {
 		"${FILESDIR}/1.8.1-configure_detect_netfilter.patch" \
 		"${FILESDIR}/1.8.0-glibc212.patch" \
 		"${FILESDIR}/1.8.1-autoconf-update.patch" \
-		"${FILESDIR}/1.8.1-fix-buffer-overflow.patch"
+		"${FILESDIR}/1.8.1-fix-buffer-overflow.patch" \
+		"${FILESDIR}/1.8.1-parallel-build.patch"
 	eautoreconf
 }
 

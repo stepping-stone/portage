@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.12.2.ebuild,v 1.4 2015/02/14 04:35:08 vapier Exp $
+# $Id$
 
 EAPI="5"
 
@@ -11,10 +11,10 @@ if [[ "${PV}" == "9999" ]] ; then
 	EGIT_URI_APPEND="${PN}"
 elif [[ *"${PV}" == *"_pre"* ]] ; then
 	MY_P=${P%%_*}
-	SRC_URI="http://download.enlightenment.org/pre-releases/${MY_P}.tar.bz2"
+	SRC_URI="https://download.enlightenment.org/pre-releases/${MY_P}.tar.bz2"
 	EKEY_STATE="snap"
 else
-	SRC_URI="http://download.enlightenment.org/rel/libs/${PN}/${MY_P}.tar.bz2"
+	SRC_URI="https://download.enlightenment.org/rel/libs/${PN}/${MY_P}.tar.bz2"
 	EKEY_STATE="snap"
 fi
 
@@ -25,7 +25,7 @@ inherit autotools enlightenment
 DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 arm x86"
 IUSE="+bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus jpeg2k neon oldlua opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl sound systemd tga tiff tslib v4l2 wayland webp X xim xine xpm"
 
 REQUIRED_USE="
@@ -54,7 +54,7 @@ RDEPEND="
 	)
 	harfbuzz? ( media-libs/harfbuzz )
 	ibus? ( app-i18n/ibus )
-	jpeg2k? ( media-libs/openjpeg )
+	jpeg2k? ( media-libs/openjpeg:0 )
 	!oldlua? ( >=dev-lang/luajit-2.0.0 )
 	oldlua? ( dev-lang/lua )
 	physics? ( >=sci-physics/bullet-2.80 )

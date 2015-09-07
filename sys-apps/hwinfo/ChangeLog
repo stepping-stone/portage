@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/hwinfo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.37 2014/05/28 10:19:55 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.41 2015/05/27 11:18:08 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> hwinfo-21.4.ebuild:
+  Stable for x86, wrt bug #546932
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> hwinfo-21.4.ebuild:
+  Stable for amd64, wrt bug #546932
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> hwinfo-21.4.ebuild:
+  ppc stable wrt bug #546932
+
+  27 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -hwinfo-18.1.ebuild,
+  -hwinfo-18.5.ebuild:
+  Remove old.
 
 *hwinfo-21.4 (28 May 2014)
 

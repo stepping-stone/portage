@@ -1,6 +1,47 @@
 # ChangeLog for dev-qt/qtlockedfile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/ChangeLog,v 1.13 2015/02/18 18:19:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/ChangeLog,v 1.22 2015/07/25 15:54:17 maekke Exp $
+
+  25 Jul 2015; Markus Meier <maekke@gentoo.org>
+  qtlockedfile-2.4.1_p20130904.ebuild:
+  arm stable, bug #549076
+
+  01 Jul 2015; Jeroen Roovers <jer@gentoo.org>
+  qtlockedfile-2.4.1_p20150629.ebuild:
+  Mark ~hppa (bug #553704).
+
+  29 Jun 2015; Davide Pesavento <pesa@gentoo.org>
+  qtlockedfile-2.4.1_p20130904.ebuild, qtlockedfile-2.4.1_p20150629.ebuild:
+  Update HOMEPAGE (I cannot find anything better...)
+
+*qtlockedfile-2.4.1_p20150629 (29 Jun 2015)
+
+  29 Jun 2015; Davide Pesavento <pesa@gentoo.org>
+  +qtlockedfile-2.4.1_p20150629.ebuild, -qtlockedfile-2.4.1_p20130904-r2.ebuild:
+  New snapshot. Fixes bug #549170.
+
+  16 May 2015; Pacho Ramos <pacho@gentoo.org>
+  qtlockedfile-2.4.1_p20130904.ebuild:
+  ppc stable wrt bug #514896
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org>
+  qtlockedfile-2.4.1_p20130904-r2.ebuild:
+  Use qmake-utils helper functions.
+
+*qtlockedfile-2.4.1_p20130904-r2 (10 May 2015)
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org>
+  +qtlockedfile-2.4.1_p20130904-r2.ebuild, -files/qtlockedfile5.prf,
+  -qtlockedfile-2.4.1_p20130904-r1.ebuild, files/qtlockedfile.prf:
+  Use improved and unified qtlockedfile.prf from Fedora.
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org>
+  qtlockedfile-2.4.1_p20130904-r1.ebuild, qtlockedfile-2.4.1_p20130904.ebuild:
+  Add ~ppc64, wrt bug #488996
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org>
+  qtlockedfile-2.4.1_p20130904-r1.ebuild, qtlockedfile-2.4.1_p20130904.ebuild:
+  Add ~ppc, wrt bug #488996
 
   18 Feb 2015; Davide Pesavento <pesa@gentoo.org>
   qtlockedfile-2.4.1_p20130904-r1.ebuild:

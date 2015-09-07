@@ -1,6 +1,36 @@
 # ChangeLog for media-libs/libv4l
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.108 2014/11/25 17:48:26 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.118 2015/08/04 11:51:56 zlogene Exp $
+
+  04 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> libv4l-1.6.2.ebuild:
+  ia64 stable wrt bug #552014
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libv4l-1.6.2.ebuild:
+  Stable for sparc, wrt bug #552014
+
+  30 Jul 2015; Mike Frysinger <vapier@gentoo.org> libv4l-1.6.2.ebuild:
+  Add arm64/m68k/mips/s390/sh love.
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> libv4l-1.6.2.ebuild:
+  ppc stable wrt bug #552014
+
+  18 Jul 2015; Jeroen Roovers <jer@gentoo.org> libv4l-1.6.2.ebuild:
+  Stable for PPC64 (bug #552014).
+
+  18 Jul 2015; Jeroen Roovers <jer@gentoo.org> libv4l-1.6.2.ebuild:
+  Stable for HPPA (bug #552014).
+
+  16 Jul 2015; Tobias Klausmann <klausman@gentoo.org> libv4l-1.6.2.ebuild:
+  Stable on alpha, bug 552014
+
+  28 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> libv4l-1.6.2.ebuild:
+  x86 stable wrt bug #552014
+
+  27 Jun 2015; Markus Meier <maekke@gentoo.org> libv4l-1.6.2.ebuild:
+  arm stable, bug #552014
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libv4l-1.6.2.ebuild:
+  Stable for amd64, wrt bug #552014
 
 *libv4l-1.6.2 (25 Nov 2014)
 

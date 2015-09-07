@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/htop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.150 2014/11/11 10:53:34 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.152 2015/06/12 18:53:03 chutzpah Exp $
+
+  12 Jun 2015; Patrick McLean <chutzpah@gentoo.org> htop-1.0.3.ebuild:
+  Add  to DEPEND to make sure the needed python interpreter is installed so htop
+  can build.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> htop-1.0.2-r2.ebuild,
+  htop-1.0.3.ebuild:
+  Drop old Python implementations
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> htop-1.0.3.ebuild:
   Stable for ia64, wrt bug #525450

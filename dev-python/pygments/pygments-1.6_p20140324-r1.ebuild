@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.6_p20140324-r1.ebuild,v 1.9 2014/12/01 09:45:12 ago Exp $
+# $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1 bash-completion-r1 vcs-snapshot
 
@@ -11,7 +11,7 @@ MY_PN="Pygments"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Pygments is a syntax highlighting package written in Python"
-HOMEPAGE="http://pygments.org/ http://pypi.python.org/pypi/Pygments"
+HOMEPAGE="http://pygments.org/ https://pypi.python.org/pypi/Pygments"
 #SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 SRC_URI="https://bitbucket.org/birkenfeld/pygments-main/get/b839f47dbb3a10830db7dc3114f0ad4f470bcfa5.tar.gz -> ${P}.tar.gz"
 

@@ -1,6 +1,29 @@
 # ChangeLog for dev-java/ant-eclipse-ecj
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.47 2015/02/10 18:51:46 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.52 2015/06/22 14:56:57 mgorny Exp $
+
+  22 Jun 2015; Michał Górny <mgorny@gentoo.org> -ant-eclipse-ecj-3.7.1.ebuild:
+  Drop old version that requires removed package
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> ant-eclipse-ecj-3.7.2.ebuild:
+  ppc64 stable wrt bug #503890
+
+  09 May 2015; James Le Cuirot <chewi@gentoo.org>
+  -ant-eclipse-ecj-3.3.0-r1.ebuild, -ant-eclipse-ecj-3.4.ebuild,
+  -ant-eclipse-ecj-3.5.2.ebuild, -ant-eclipse-ecj-3.6-r1.ebuild,
+  -files/compiler-settings-3.3, -files/compiler-settings-3.4,
+  -files/compiler-settings-3.5, -files/ecj-3.6:
+  Remove old versions.
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> ant-eclipse-ecj-3.6-r1.ebuild,
+  ant-eclipse-ecj-3.7.2.ebuild:
+  ppc stable wrt bug #503890
+
+*ant-eclipse-ecj-4.4.2 (15 Mar 2015)
+
+  15 Mar 2015; James Le Cuirot <chewi@gentoo.org> +ant-eclipse-ecj-4.4.2.ebuild:
+  Version bump. Fixes issue introduced in last version where the rest of
+  eclipse-ecj was built and included in the jar.
 
   10 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
   -ant-eclipse-ecj-4.2.ebuild:

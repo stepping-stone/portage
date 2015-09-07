@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/hjsmin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hjsmin/ChangeLog,v 1.6 2014/10/04 17:11:10 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hjsmin/ChangeLog,v 1.8 2015/08/01 15:24:46 slyfox Exp $
+
+*hjsmin-0.1.5.0 (01 Aug 2015)
+
+  01 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org> +hjsmin-0.1.5.0.ebuild:
+  Version bump.
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *hjsmin-0.1.4.7 (04 Oct 2014)
 

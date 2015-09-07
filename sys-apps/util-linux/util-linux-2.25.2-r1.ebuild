@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.25.2-r1.ebuild,v 1.1 2015/01/02 12:21:08 pacho Exp $
+# $Id$
 
 EAPI="4"
 
-PYTHON_COMPAT=( python2_7 python3_{2,3,4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
 inherit eutils toolchain-funcs libtool flag-o-matic bash-completion-r1 \
 	python-single-r1 multilib-minimal systemd
@@ -21,7 +21,7 @@ else
 fi
 
 DESCRIPTION="Various useful Linux utilities"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
+HOMEPAGE="https://www.kernel.org/pub/linux/utils/util-linux/"
 
 LICENSE="GPL-2 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"

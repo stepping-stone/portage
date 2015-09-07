@@ -1,6 +1,40 @@
 # ChangeLog for dev-util/patchutils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.73 2014/02/07 08:01:30 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.84 2015/08/06 15:35:23 jlec Exp $
+
+  06 Aug 2015; Justin Lecher <jlec@gentoo.org>
+  +files/patchutils-0.3.3-format-security.patch, patchutils-0.3.3.ebuild:
+  Fix for format-security, bug #556846
+
+  30 Jul 2015; Justin Lecher <jlec@gentoo.org> -patchutils-0.3.2.ebuild:
+  Drop old
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> patchutils-0.3.3.ebuild:
+  Stable for sparc, wrt bug #530906
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> patchutils-0.3.3.ebuild:
+  ppc stable wrt bug #530906
+
+  22 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> patchutils-0.3.3.ebuild:
+  ia64 stable wrt bug #530906
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> patchutils-0.3.3.ebuild:
+  Stable for alpha, wrt bug #530906
+
+  22 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> patchutils-0.3.3.ebuild:
+  x86 stable wrt bug #530906
+
+  16 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> patchutils-0.3.3.ebuild:
+  amd64 stable wrt bug #530906
+
+  09 Jun 2015; Jeroen Roovers <jer@gentoo.org> patchutils-0.3.3.ebuild:
+  Stable for PPC64 (bug #530906).
+
+  09 Jun 2015; Jeroen Roovers <jer@gentoo.org> patchutils-0.3.3.ebuild:
+  Stable for HPPA (bug #530906).
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> patchutils-0.3.3.ebuild:
+  arm stable, bug #530906
 
   07 Feb 2014; Mike Frysinger <vapier@gentoo.org> patchutils-0.3.2.ebuild,
   patchutils-0.3.3.ebuild:

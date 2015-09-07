@@ -1,6 +1,22 @@
 # ChangeLog for dev-java/nekohtml
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.18 2014/10/27 06:00:40 ercpe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/ChangeLog,v 1.23 2015/07/31 12:26:43 mrueg Exp $
+
+  31 Jul 2015; Manuel Rüger <mrueg@gentoo.org> -nekohtml-1.9.18.ebuild,
+  -nekohtml-1.9.6.ebuild:
+  Remove old.
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> nekohtml-1.9.18-r1.ebuild:
+  ppc stable wrt bug #535088
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> nekohtml-1.9.18-r1.ebuild:
+  Stable for x86, wrt bug #535088
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> nekohtml-1.9.18-r1.ebuild:
+  Stable for amd64, wrt bug #535088
 
 *nekohtml-1.9.18-r1 (27 Oct 2014)
 

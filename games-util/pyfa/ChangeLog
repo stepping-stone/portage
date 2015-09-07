@@ -1,6 +1,27 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.30 2015/02/17 22:37:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.34 2015/06/27 01:55:53 tetromino Exp $
+
+*pyfa-1.12.0 (27 Jun 2015)
+
+  27 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.11.0.ebuild,
+  +pyfa-1.12.0.ebuild:
+  Belated version bump.
+
+*pyfa-1.11.0 (22 May 2015)
+
+  22 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.8.1.ebuild,
+  -pyfa-1.9.0.ebuild, +pyfa-1.11.0.ebuild:
+  Version bump for Mosaic.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyfa-1.8.1.ebuild,
+  pyfa-1.9.0.ebuild, pyfa-9999.ebuild:
+  Drop old Python implementations
+
+*pyfa-1.9.0 (21 Feb 2015)
+
+  21 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org> +pyfa-1.9.0.ebuild:
+  Version bump for Tiamat.
 
 *pyfa-1.8.1 (17 Feb 2015)
 
@@ -188,4 +209,3 @@
   +files/pyfa-1.0.3-staticPath.patch, +pyfa-1.0.6.ebuild,
   +files/configforced.py, +files/pyfa.desktop, +metadata.xml:
   New ebuild for bug #352188, formerly maintained in Sunrise.
-

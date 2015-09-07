@@ -1,6 +1,28 @@
 # ChangeLog for app-backup/amanda
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.114 2015/01/22 19:41:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.119 2015/06/09 09:00:32 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> amanda-3.3.7.ebuild:
+  Stable for amd64, wrt bug #549626
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> amanda-3.3.7.ebuild:
+  ppc64 stable wrt bug #549626
+
+*amanda-3.3.7 (03 Apr 2015)
+
+  03 Apr 2015; Ian Delaney <idella4@gentoo.org> +amanda-3.3.7.ebuild,
+  amanda-3.3.3-r1.ebuild, amanda-3.3.5.ebuild:
+  bump, patch fix from bug #537248 dropped, no longer required, request from
+  proxy maintainer from bug #529074
+
+  03 Apr 2015; Ian Delaney <idella4@gentoo.org>
+  +files/local-amanda-perl5.20.patch, amanda-3.3.3-r1.ebuild,
+  amanda-3.3.5.ebuild:
+  patch to fix build failure, sourced by proxy maintianer and C. Head from
+  upstream in Bug #537248, confirmed with runtests
 
   22 Jan 2015; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Sync e-mail address.

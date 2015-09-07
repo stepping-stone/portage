@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libcaldav
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcaldav/ChangeLog,v 1.4 2012/09/11 10:46:17 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcaldav/ChangeLog,v 1.6 2015/07/28 06:45:45 aballier Exp $
+
+  28 Jul 2015; Alexis Ballier <aballier@gentoo.org> libcaldav-0.6.2.ebuild:
+  add missing tl-latexextra dep when building docs, bug #528560 by
+  tharvik@gmail.com
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop maintainership
@@ -18,4 +25,3 @@
   08 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   +libcaldav-0.6.2.ebuild, +metadata.xml:
   New library
-

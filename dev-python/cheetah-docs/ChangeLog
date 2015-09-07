@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cheetah-docs
-# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/ChangeLog,v 1.13 2014/08/10 21:08:40 slyfox Exp $
+# Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/ChangeLog,v 1.15 2015/06/09 15:05:14 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  cheetah-docs-0.9.16_alpha1.ebuild, metadata.xml:
+  Use ecvs_clean; bump EAPI; modernize ebuild style
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   cheetah-docs-0.9.16_alpha1.ebuild:

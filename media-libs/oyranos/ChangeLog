@@ -1,6 +1,40 @@
 # ChangeLog for media-libs/oyranos
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.25 2014/07/30 22:59:45 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.33 2015/08/06 20:54:05 xmw Exp $
+
+  06 Aug 2015; Michael Weber <xmw@gentoo.org> oyranos-0.9.4-r2.ebuild,
+  oyranos-0.9.5-r1.ebuild, oyranos-0.9.5.ebuild:
+  Add slot operator :0= to elektra.
+
+  05 Aug 2015; Michael Weber <xmw@gentoo.org> oyranos-0.9.4-r2.ebuild,
+  oyranos-0.9.5-r1.ebuild, oyranos-0.9.5.ebuild, oyranos-9999.ebuild:
+  Add := to exiv, https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/188, thanks a17r.
+
+  05 Aug 2015; Michael Weber <xmw@gentoo.org> oyranos-0.9.5-r1.ebuild:
+  Fix DOCS.
+
+*oyranos-0.9.5-r1 (05 Aug 2015)
+
+  05 Aug 2015; Michael Weber <xmw@gentoo.org> +oyranos-0.9.5-r1.ebuild,
+  oyranos-0.9.5.ebuild, oyranos-9999.ebuild:
+  Revbump to implement changes of p/r 164 (thanks a17r).
+
+  25 Jul 2015; Michał Górny <mgorny@gentoo.org>
+  -files/oyranos-9999-buildsystem.patch, metadata.xml, oyranos-9999.ebuild:
+  Update the live ebuild. https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/157 by a17r.
+
+  27 May 2015; Matthias Maier <tamiko@gentoo.org> oyranos-0.9.4-r2.ebuild,
+  oyranos-0.9.5.ebuild, oyranos-9999.ebuild:
+  remove dependency on lcms-1*, see bug #526642
+
+  10 May 2015; Michael Weber <xmw@gentoo.org>
+  files/oyranos-0.9.5-buildsystem-r1.patch,
+  files/oyranos-9999-buildsystem.patch, oyranos-0.9.5.ebuild,
+  oyranos-9999.ebuild:
+  Fix port changes from 0.9.5 to live ebuild, update buildsystem patch (Thanks
+  DrSlony, bug 548572).
 
 *oyranos-0.9.5 (30 Jul 2014)
 

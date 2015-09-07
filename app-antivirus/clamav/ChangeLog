@@ -1,6 +1,36 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.501 2015/02/05 15:17:10 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.510 2015/07/24 12:38:55 zlogene Exp $
+
+  24 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> clamav-0.98.7.ebuild:
+  ia64 stable wrt bug #548066
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> clamav-0.98.7.ebuild:
+  Stable for sparc, wrt bug #548066
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> clamav-0.98.7.ebuild:
+  Stable for alpha, wrt bug #548066
+
+  24 Jun 2015; Agostino Sarubbo <ago@gentoo.org> clamav-0.98.7.ebuild:
+  Stable for ppc, wrt bug #548066
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  05 Jun 2015; Agostino Sarubbo <ago@gentoo.org> clamav-0.98.7.ebuild:
+  Stable for x86, wrt bug #548066
+
+  05 Jun 2015; Agostino Sarubbo <ago@gentoo.org> clamav-0.98.7.ebuild:
+  Stable for amd64, wrt bug #548066
+
+*clamav-0.98.7 (27 May 2015)
+
+  27 May 2015; Thomas Raschbacher <lordvan@gentoo.org> +clamav-0.98.7.ebuild:
+  version bump for Bug #548066 (and Bug #538084)
+  fixed openssl dep (SLOT) + url to blog entry
+
+  07 Apr 2015; Jeroen Roovers <jer@gentoo.org> files/clamav.logrotate:
+  Set file owner/group.
 
   05 Feb 2015; Thomas Raschbacher <lordvan@gentoo.org> -clamav-0.98.ebuild,
   -clamav-0.98.1.ebuild, -clamav-0.98.1-r1.ebuild, -clamav-0.98.3.ebuild,

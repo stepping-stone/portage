@@ -1,6 +1,71 @@
 # ChangeLog for xfce-base/thunar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.175 2014/07/24 10:58:32 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.191 2015/08/06 14:47:06 zlogene Exp $
+
+  06 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> thunar-1.6.10.ebuild:
+  ia64 stable wrt bug #553500
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> thunar-1.6.10.ebuild:
+  ppc stable wrt bug #553500
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org> thunar-1.6.10-r1.ebuild:
+  Stable on alpha, bug 553500
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org> thunar-1.6.10.ebuild:
+  Stable for PPC64 (bug #553500).
+
+  11 Jul 2015; Markus Meier <maekke@gentoo.org> thunar-1.6.10.ebuild:
+  arm stable, bug #553500
+
+*thunar-1.6.10-r1 (02 Jul 2015)
+
+  02 Jul 2015; Jason Zaman <perfinion@gentoo.org> +thunar-1.6.10-r1.ebuild:
+  revbump to fix QA errors, non-existent configure options
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> thunar-1.6.10.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> thunar-1.6.10.ebuild:
+  x86 stable wrt bug #553500
+
+*thunar-1.6.10 (23 May 2015)
+
+  23 May 2015; Michał Górny <mgorny@gentoo.org> +thunar-1.6.10.ebuild,
+  -thunar-1.6.6.ebuild, -thunar-1.6.7.ebuild, -thunar-1.6.8.ebuild,
+  -thunar-1.6.9.ebuild:
+  Version bump. The new version fixes crashes and 100% cpu load issues that
+  could occur when reloading file information and the trash. Drop old.
+
+*thunar-1.6.9 (17 May 2015)
+
+  17 May 2015; Michał Górny <mgorny@gentoo.org> +thunar-1.6.9.ebuild:
+  Version bump with a lot of bugfixes.
+
+*thunar-1.6.8 (12 May 2015)
+
+  12 May 2015; Denis Dupeyron <calchan@gentoo.org> +thunar-1.6.8.ebuild:
+  Version bump, thanks to Christian Tietz (bug #548878).
+
+  20 Apr 2015; Michał Górny <mgorny@gentoo.org> thunar-1.6.7.ebuild:
+  Add slot operators. Disable unused startup-notification support,
+  https://bugzilla.xfce.org/show_bug.cgi?id=11837.
+
+*thunar-1.6.7 (20 Apr 2015)
+
+  20 Apr 2015; Jason Zaman <perfinion@gentoo.org> +thunar-1.6.7.ebuild:
+  Version Bump
+
+*thunar-1.6.6 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +thunar-1.6.6.ebuild:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> thunar-1.6.3.ebuild:
+  add arm64 support, tested on A53 board
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> thunar-1.6.3.ebuild:
   Rename USE="udev" to USE="udisks" wrt #516380

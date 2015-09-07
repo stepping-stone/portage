@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.7.0.1.ebuild,v 1.4 2014/08/13 14:34:38 nativemad Exp $
+# $Id$
 
 EAPI=5
 
@@ -12,8 +12,8 @@ inherit distutils-r1 fdo-mime versionator
 DESCRIPTION="A Python-extensible molecular graphics system"
 HOMEPAGE="http://www.pymol.org/"
 SRC_URI="
-	http://dev.gentoo.org/~jlec/distfiles/${PN}-1.7.0.0.png.xz
-	http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz
+	https://dev.gentoo.org/~jlec/distfiles/${PN}-1.7.0.0.png.xz
+	https://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz
 "
 #	mirror://sourceforge/project/${PN}/${PN}/$(get_version_component_range 1-2)/${PN}-v${PV}.tar.bz2
 
@@ -24,14 +24,14 @@ IUSE="apbs web"
 
 DEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
-	dev-python/pmw[${PYTHON_USEDEP}]
 	dev-python/pyopengl[${PYTHON_USEDEP}]
+	media-libs/freeglut
 	media-libs/freetype:2
-	media-libs/glew
-	media-libs/libpng
+	media-libs/glew:0=
+	media-libs/libpng:0=
 	media-video/mpeg-tools
 	sys-libs/zlib
-	media-libs/freeglut
+	virtual/pmw[${PYTHON_USEDEP}]
 	apbs? (
 		sci-chemistry/apbs
 		sci-chemistry/pdb2pqr
@@ -79,7 +79,9 @@ python_install_all() {
 	doenvd "${T}"/20pymol
 
 	newicon "${WORKDIR}"/${PN}-1.7.0.0.png ${PN}.png
-	make_desktop_entry pymol PyMol ${PN} "Graphics;Education;Science;Chemistry" "MimeType=chemical/x-pdb;"
+	make_desktop_entry ${PN} PyMol ${PN} \
+		"Graphics;Education;Science;Chemistry;" \
+		"MimeType=chemical/x-pdb;chemical/x-mdl-molfile;chemical/x-mol2;chemical/seq-aa-fasta;chemical/seq-na-fasta;chemical/x-xyz;chemical/x-mdl-sdf;"
 
 	if ! use web; then
 		rm -rf "${D}/$(python_get_sitedir)/web" || die

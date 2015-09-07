@@ -1,6 +1,29 @@
 # ChangeLog for net-misc/minidlna
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.43 2014/10/30 10:01:45 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.49 2015/08/02 18:56:03 ago Exp $
+
+  02 Aug 2015; Agostino Sarubbo <ago@gentoo.org> minidlna-1.1.4.ebuild:
+  Stable for x86, wrt bug #549084
+
+  17 Jul 2015; Markus Meier <maekke@gentoo.org> minidlna-1.1.4.ebuild:
+  arm stable, bug #549084
+
+  27 Jun 2015; Agostino Sarubbo <ago@gentoo.org> minidlna-1.1.4.ebuild:
+  Stable for amd64, wrt bug #549084
+
+  20 Jun 2015; Mike Gilbert <floppym@gentoo.org> files/minidlna-1.1.2.service:
+  Simplify description for better display during startup.
+
+  20 Jun 2015; Mike Gilbert <floppym@gentoo.org> files/minidlna-1.1.2.service:
+  Remove pointless dependencies.
+
+*minidlna-1.1.4 (27 Feb 2015)
+
+  27 Feb 2015; Michael Weber <xmw@gentoo.org> +minidlna-1.1.4.ebuild,
+  -minidlna-1.1.0-r2.ebuild, -minidlna-1.1.0-r3.ebuild, -minidlna-1.1.1.ebuild,
+  -minidlna-1.1.2.ebuild:
+  Version bump with gentoo logo (bug 522112, thanks BT, Steve Dibb, Perfect
+  Gentleman and baru reddy).
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> minidlna-1.1.3.ebuild:
   Stable for x86, wrt bug #524644

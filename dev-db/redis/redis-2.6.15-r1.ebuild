@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.6.15-r1.ebuild,v 1.4 2014/08/10 20:02:32 slyfox Exp $
+# $Id$
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SLOT="0"
 RDEPEND="tcmalloc? ( dev-util/google-perftools )
 	jemalloc? ( >=dev-libs/jemalloc-3.2 )"
 DEPEND=">=sys-devel/autoconf-2.63
-	test? ( dev-lang/tcl )
+	test? ( dev-lang/tcl:0= )
 	${RDEPEND}"
 REQUIRED_USE="tcmalloc? ( !jemalloc )
 	jemalloc? ( !tcmalloc )"
@@ -93,7 +93,7 @@ src_install() {
 	systemd_dounit "${FILESDIR}/redis.service"
 	systemd_newtmpfilesd "${FILESDIR}/redis.tmpfiles" redis.conf
 
-	nonfatal dodoc 00-RELEASENOTES BUGS CONTRIBUTING MANIFESTO README
+	dodoc 00-RELEASENOTES BUGS CONTRIBUTING MANIFESTO README
 
 	dobin src/redis-cli
 	dosbin src/redis-benchmark src/redis-server src/redis-check-aof src/redis-check-dump

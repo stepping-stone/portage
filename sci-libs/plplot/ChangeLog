@@ -1,6 +1,29 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.60 2015/02/02 10:13:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.65 2015/07/23 20:20:57 pacho Exp $
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> plplot-5.11.0-r1.ebuild:
+  ppc stable wrt bug #529038
+
+*plplot-5.11.0-r1 (07 May 2015)
+
+  07 May 2015; Justin Lecher <jlec@gentoo.org> +plplot-5.11.0-r1.ebuild,
+  -plplot-5.11.0.ebuild, plplot-5.10.0-r1.ebuild:
+  Don't build all devices by default, bug #548816; don't build broken devices
+  after upstreams recommendation, bug #547254
+
+*plplot-5.11.0 (20 Apr 2015)
+
+  20 Apr 2015; Justin Lecher <jlec@gentoo.org>
+  +files/plplot-5.11.0-multiarch.patch, +files/plplot-5.11.0-ocaml.patch,
+  +files/plplot-5.11.0-octave.patch, +plplot-5.11.0.ebuild:
+  Version Bump
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> plplot-5.10.0-r1.ebuild:
+  Drop old Python implementations
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> plplot-5.10.0-r1.ebuild:
+  Fix tcl/tk slotting
 
   02 Feb 2015; Justin Lecher <jlec@gentoo.org> plplot-5.10.0-r1.ebuild,
   +files/plplot-5.10.0-cmake.patch, metadata.xml:

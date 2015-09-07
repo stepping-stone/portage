@@ -1,6 +1,45 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.64 2015/02/11 10:26:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.76 2015/08/01 16:36:53 zlogene Exp $
+
+  01 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> zeromq-4.1.1.ebuild:
+  ia64 stable wrt bug #551214
+
+  26 Jul 2015; Jeroen Roovers <jer@gentoo.org> zeromq-4.1.1.ebuild:
+  Stable for HPPA (bug #551214).
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> zeromq-4.1.1.ebuild:
+  ppc stable wrt bug #551214
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org> zeromq-4.1.1.ebuild:
+  Stable for PPC64 (bug #551214).
+
+  21 Jun 2015; Markus Meier <maekke@gentoo.org> zeromq-4.1.1.ebuild:
+  arm stable, bug #551214
+
+*zeromq-4.1.2 (19 Jun 2015)
+
+  19 Jun 2015; Justin Lecher <jlec@gentoo.org> +zeromq-4.1.2.ebuild:
+  Version Bump
+
+  09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> zeromq-4.1.1.ebuild:
+  Stable for x86, wrt bug #551214
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> zeromq-4.1.1.ebuild:
+  Stable for amd64, wrt bug #551214
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> -zeromq-4.0.5.ebuild:
+  Drop vulnerable version, bug #549182
+
+*zeromq-3.2.5 (04 Jun 2015)
+*zeromq-4.1.1 (04 Jun 2015)
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> +zeromq-3.2.5.ebuild,
+  +zeromq-4.1.1.ebuild, zeromq-3.2.3.ebuild:
+  Version Bump; fix subslots to soname
+
+  07 Apr 2015; Justin Lecher <jlec@gentoo.org> zeromq-2.2.0.ebuild:
+  Block net-libs/cppzmq due to file collision, bug #545226
 
 *zeromq-4.0.5 (11 Feb 2015)
 
@@ -53,7 +92,7 @@
 
   24 Dec 2013; Justin Lecher <jlec@gentoo.org> zeromq-4.0.1.ebuild,
   zeromq-4.0.1-r1.ebuild, +zeromq-4.0.3.ebuild:
-  Version BUmp; restrict test to serial execution, #489844
+  Version Bump; restrict test to serial execution, #489844
 
   07 Dec 2013; Markus Meier <maekke@gentoo.org> zeromq-4.0.1-r1.ebuild:
   add ~arm, bug #489452

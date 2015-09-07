@@ -4,4 +4,8 @@
   <maintainer>
     <email>mjo@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">unofficial-sigs</remote-id>
+    <remote-id type="github">extremeshok/clamav-unofficial-sigs</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,40 @@
 # ChangeLog for games-util/joystick
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.26 2015/02/05 09:59:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.35 2015/06/28 11:38:23 zlogene Exp $
+
+  28 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> joystick-1.4.8-r1.ebuild:
+  x86 stable wrt bug #552214
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> joystick-1.4.8-r1.ebuild:
+  Stable for amd64, wrt bug #552214
+
+  17 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  files/joystick-1.4.8-udev.patch:
+  fix my udev patch with updates from Piotr Chmura
+
+*joystick-1.4.8-r1 (16 May 2015)
+
+  16 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/joystick-1.4.8-udev.patch, +joystick-1.4.8-r1.ebuild:
+  look in both places for old and new udev package locations of udevadm (bug
+  #543200)
+
+  02 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/joystick-1.4.4-build.patch, -joystick-1.4.4.ebuild:
+  old
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> joystick-1.4.8.ebuild:
+  arm stable, bug #542502
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> joystick-1.4.8.ebuild:
+  Stable for x86, wrt bug #542502
+
+  09 Mar 2015; Agostino Sarubbo <ago@gentoo.org> joystick-1.4.8.ebuild:
+  Stable for amd64, wrt bug #542502
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/joystick-1.4.7-build.patch, -joystick-1.4.7.ebuild:
+  old
 
 *joystick-1.4.8 (05 Feb 2015)
 

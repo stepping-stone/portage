@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-common-internals/ktp-common-internals-0.9.0.ebuild,v 1.1 2014/10/26 16:37:44 kensington Exp $
+# $Id$
 
 EAPI=5
 
@@ -10,7 +10,7 @@ sr@latin sv uk zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="KDE Telepathy common library"
-HOMEPAGE="http://community.kde.org/Real-Time_Communication_and_Collaboration"
+HOMEPAGE="https://community.kde.org/Real-Time_Communication_and_Collaboration"
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/stable/kde-telepathy/${PV}/src/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
@@ -24,7 +24,7 @@ IUSE="debug otr semantic-desktop"
 
 DEPEND="
 	>=net-libs/telepathy-qt-0.9.5[qt4]
-	>=net-libs/telepathy-logger-qt-0.5.80
+	>=net-libs/telepathy-logger-qt-0.5.80:0
 	otr? (
 		dev-libs/libgcrypt:=
 		>=net-libs/libotr-4.0.0

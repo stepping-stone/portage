@@ -1,6 +1,29 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.66 2015/01/06 19:33:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.71 2015/07/14 08:51:10 aballier Exp $
+
+  14 Jul 2015; Alexis Ballier <aballier@gentoo.org> libva-1.6.0.ebuild,
+  libva-9999.ebuild:
+  fix regression overwriting REQUIRED_USE, bug #554398
+
+*libva-1.6.0 (06 Jul 2015)
+
+  06 Jul 2015; Alexis Ballier <aballier@gentoo.org> +libva-1.6.0.ebuild,
+  libva-9999.ebuild:
+  version bump, bug #553902
+
+  21 Jun 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/libva-1.5.1-wayland-automagic.patch, libva-1.5.1.ebuild:
+  Fix automagic dependency on wayland (#529388 by Oleg, Cecil Curry Manuel Rüger
+  and others)
+
+  22 Mar 2015; Ryan Hill <rhill@gentoo.org> libva-1.5.1.ebuild:
+  Add nouveau to VIDEO_CARDS (bug #543982).
+
+*libva-1.5.1 (20 Mar 2015)
+
+  20 Mar 2015; Alexis Ballier <aballier@gentoo.org> +libva-1.5.1.ebuild:
+  version bump
 
   06 Jan 2015; Manuel Rüger <mrueg@gentoo.org> libva-1.3.1.ebuild,
   libva-1.4.0.ebuild, libva-1.4.1.ebuild, libva-1.5.0.ebuild, libva-9999.ebuild:

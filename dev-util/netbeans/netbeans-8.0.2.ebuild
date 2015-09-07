@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-8.0.2.ebuild,v 1.2 2015/02/04 21:40:23 fordfrog Exp $
+# $Id$
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -9,8 +9,8 @@ DESCRIPTION="Netbeans IDE"
 HOMEPAGE="http://netbeans.org/"
 SLOT="8.0"
 SOURCE_URL="http://download.netbeans.org/netbeans/8.0.2/final/zip/netbeans-8.0.2-201411181905-src.zip"
-PATCHES_URL="http://dev.gentoo.org/~fordfrog/distfiles/netbeans-8.0.2-build.xml.patch.bz2"
-L10N_URL="http://dev.gentoo.org/~fordfrog/distfiles/netbeans-l10n-8.0.1-20141110.tar.bz2"
+PATCHES_URL="https://dev.gentoo.org/~fordfrog/distfiles/netbeans-8.0.2-build.xml.patch.bz2"
+L10N_URL="https://dev.gentoo.org/~fordfrog/distfiles/netbeans-l10n-8.0.1-20141110.tar.bz2"
 ALL_URLS="${SOURCE_URL} ${PATCHES_URL} ${L10N_URL}"
 SRC_URI="linguas_af? ( ${ALL_URLS} )
 	linguas_ar? ( ${ALL_URLS} )
@@ -46,7 +46,7 @@ SRC_URI="linguas_af? ( ${ALL_URLS} )
 	linguas_zh_TW? ( ${ALL_URLS} )
 "
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE_NETBEANS_MODULES="
 	+netbeans_modules_apisupport
 	netbeans_modules_cnd

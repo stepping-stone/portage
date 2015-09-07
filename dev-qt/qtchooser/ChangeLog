@@ -1,6 +1,31 @@
 # ChangeLog for dev-qt/qtchooser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/ChangeLog,v 1.7 2015/01/22 07:40:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/ChangeLog,v 1.15 2015/08/05 08:49:58 zlogene Exp $
+
+  05 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> qtchooser-0_p20150102.ebuild:
+  QA: ia64 stable (bug #529196)
+
+  05 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  qtchooser-0_p20150102.ebuild:
+  Stable on alpha, bug 529196
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> qtchooser-0_p20150102.ebuild:
+  arm stable, bug #530238
+
+  16 May 2015; Pacho Ramos <pacho@gentoo.org> qtchooser-0_p20150102.ebuild:
+  ppc stable wrt bug #530238
+
+  16 May 2015; Jeroen Roovers <jer@gentoo.org> qtchooser-0_p20150102.ebuild:
+  Stable for HPPA PPC64 (bug #530238).
+
+  15 May 2015; Mikle Kolyada <zlogene@gentoo.org> qtchooser-0_p20150102.ebuild:
+  x86 stable wrt bug #530238
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> qtchooser-0_p20150102.ebuild:
+  amd64 stable wrt bug #530238
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> qtchooser-0_p20150102.ebuild:
+  add arm64 support, tested on A53 board
 
   22 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> qtchooser-0_p20150102.ebuild:
   Add ~ppc and ~ppc64, wrt bug #529196

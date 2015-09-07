@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.10.ebuild,v 1.18 2014/03/31 21:13:00 mgorny Exp $
+# $Id$
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3} pypy )
 
 inherit distutils-r1
 
 DESCRIPTION="Python Documentation Utilities"
-HOMEPAGE="http://docutils.sourceforge.net/ http://pypi.python.org/pypi/docutils"
+HOMEPAGE="http://docutils.sourceforge.net/ https://pypi.python.org/pypi/docutils"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD-2 GPL-3 public-domain"

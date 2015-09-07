@@ -1,6 +1,20 @@
 # ChangeLog for dev-util/amtterm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/amtterm/ChangeLog,v 1.4 2012/10/16 20:21:25 ryao Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/amtterm/ChangeLog,v 1.7 2015/07/27 13:57:48 cardoe Exp $
+
+  27 Jul 2015; Doug Goldstein <cardoe@gentoo.org> -amtterm-1.2.ebuild,
+  -amtterm-1.3.ebuild:
+  Drop older versions
+
+*amtterm-1.4 (27 Jul 2015)
+
+  27 Jul 2015; Doug Goldstein <cardoe@gentoo.org> +amtterm-1.4.ebuild:
+  version bump. handles 0x29 messages.
+
+*amtterm-1.3-r1 (04 May 2015)
+
+  04 May 2015; Jason Zaman <perfinion@gentoo.org> +amtterm-1.3-r1.ebuild:
+  fix automagic deps, update HOMEPAGE, eapi5
 
   16 Oct 2012; Richard Yao <ryao@gentoo.org> amtterm-1.3.ebuild:
   Switch to EAPI=3 and keyword ~amd64-linux

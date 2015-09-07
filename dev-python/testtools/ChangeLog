@@ -1,6 +1,55 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.116 2015/01/09 01:42:26 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.130 2015/07/27 01:35:14 floppym Exp $
+
+  27 Jul 2015; Mike Gilbert <floppym@gentoo.org> testtools-1.8.0.ebuild:
+  Restore pypy.
+
+  26 Jul 2015; Michał Górny <mgorny@gentoo.org> testtools-1.8.0.ebuild:
+  Revert pypy support because of broken deps
+
+  26 Jul 2015; Ian Delaney <idella4@gentoo.org> testtools-1.7.1.ebuild,
+  testtools-1.8.0.ebuild:
+  add pypy support, rm un-needed dep from -1.8.0
+
+  24 Jul 2015; Ian Delaney <idella4@gentoo.org> testtools-1.7.1.ebuild,
+  testtools-1.8.0.ebuild:
+  remove duplicate entry of PYTHON_COMPAT
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
+
+*testtools-1.8.0 (27 May 2015)
+
+  27 May 2015; Justin Lecher <jlec@gentoo.org> +testtools-1.8.0.ebuild,
+  metadata.xml:
+  Version Bump
+
+  21 May 2015; Matt Turner <mattst88@gentoo.org> testtools-1.7.1.ebuild:
+  Added ~alpha, bug 544148.
+
+  26 Apr 2015; Jeroen Roovers <jer@gentoo.org> testtools-1.7.1.ebuild:
+  Marked ~ppc64 (bug #544148).
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> testtools-0.9.36.ebuild:
+  Drop old Python implementations
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> testtools-1.7.1.ebuild:
+  add ~arm, bug #544148
+
+  30 Mar 2015; Jeroen Roovers <jer@gentoo.org> testtools-1.7.1.ebuild:
+  Marked ~hppa (bug #544146).
+
+*testtools-1.7.1 (21 Mar 2015)
+
+  21 Mar 2015; Alex Brandt <alunduil@gentoo.org> +testtools-1.7.1.ebuild:
+  add version 1.7.1
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> testtools-1.5.0.ebuild:
+  add arm64 support, tested on A53 board
 
 *testtools-1.5.0 (09 Jan 2015)
 

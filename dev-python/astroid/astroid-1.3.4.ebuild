@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astroid/astroid-1.3.4.ebuild,v 1.1 2015/01/26 16:59:12 vapier Exp $
+# $Id$
 
 EAPI=5
 
@@ -10,12 +10,12 @@ RESTRICT="test" # False is not True ;)
 inherit distutils-r1
 
 DESCRIPTION="Abstract Syntax Tree for logilab packages"
-HOMEPAGE="http://bitbucket.org/logilab/astroid http://pypi.python.org/pypi/astroid"
+HOMEPAGE="https://bitbucket.org/logilab/astroid https://pypi.python.org/pypi/astroid"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x64-macos ~x86-macos"
 IUSE="test"
 
 # Version specified in __pkginfo__.py.

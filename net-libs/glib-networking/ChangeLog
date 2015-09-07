@@ -1,6 +1,40 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.96 2015/01/11 12:11:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.106 2015/07/30 13:23:59 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> glib-networking-2.42.1.ebuild:
+  Stable for sparc, wrt bug #551814
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  glib-networking-2.42.1.ebuild:
+  Stable on alpha, bug 551814
+
+  17 Jul 2015; Agostino Sarubbo <ago@gentoo.org> glib-networking-2.42.1.ebuild:
+  Stable for ia64, wrt bug #551814
+
+*glib-networking-2.44.0 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +glib-networking-2.44.0.ebuild:
+  Version bump for Gnome 3.16.
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> glib-networking-2.42.1.ebuild:
+  arm stable, bug #534012
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> glib-networking-2.42.1.ebuild:
+  Stable for HPPA (bug #534012).
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> glib-networking-2.42.1.ebuild:
+  x86 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> glib-networking-2.42.1.ebuild:
+  ppc64 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> glib-networking-2.42.1.ebuild:
+  ppc stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> glib-networking-2.42.1.ebuild:
+  amd64 stable, bug 534012
 
   11 Jan 2015; Gilles Dartiguelongue <eva@gentoo.org>
   glib-networking-2.42.1.ebuild:

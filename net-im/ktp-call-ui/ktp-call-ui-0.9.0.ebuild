@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-call-ui/ktp-call-ui-0.9.0.ebuild,v 1.1 2014/10/26 16:37:44 kensington Exp $
+# $Id$
 
 EAPI=5
 
@@ -10,7 +10,7 @@ sr@ijekavianlatin sr@latin sv th tr ug uk zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="KDE Telepathy audio/video conferencing ui"
-HOMEPAGE="http://community.kde.org/Real-Time_Communication_and_Collaboration"
+HOMEPAGE="https://community.kde.org/Real-Time_Communication_and_Collaboration"
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/stable/kde-telepathy/${PV}/src/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
@@ -23,7 +23,7 @@ SLOT="4"
 IUSE="debug v4l"
 
 DEPEND="
-	>=media-libs/qt-gstreamer-1.2.0
+	>=media-libs/qt-gstreamer-1.2.0[qt4(+)]
 	>=net-im/ktp-common-internals-${PV}
 	net-libs/farstream:0.2
 	>=net-libs/telepathy-farstream-0.6.0

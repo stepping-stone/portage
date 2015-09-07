@@ -1,6 +1,22 @@
 # ChangeLog for sys-block/di
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.44 2014/03/09 02:32:09 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.48 2015/05/19 07:33:33 polynomial-c Exp $
+
+*di-4.36 (19 May 2015)
+
+  19 May 2015; Lars Wendler <polynomial-c@gentoo.org> -di-4.31.ebuild,
+  -di-4.32.ebuild, -di-4.33.ebuild, -di-4.34.ebuild, +di-4.36.ebuild,
+  -files/di-4.31-mkdir.patch, -files/di-4.32-build.patch:
+  Version bump. Removed old.
+
+  29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> di-4.35.ebuild:
+  x86 stable wrt bug #530312
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> di-4.35.ebuild:
+  Stable for amd64, wrt bug #530312
+
+  20 Mar 2015; Anthony G. Basile <blueness@gentoo.org> di-4.35.ebuild:
+  Stable on ppc and ppc64.  Bug #530312.
 
 *di-4.35 (09 Mar 2014)
 

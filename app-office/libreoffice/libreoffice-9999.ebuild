@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.28 2015/02/15 19:58:47 dilfridge Exp $
+# $Id$
 
 EAPI=5
 
@@ -99,16 +99,16 @@ COMMON_DEPEND="
 	>=app-text/hunspell-1.3.2-r3
 	app-text/mythes
 	>=app-text/libabw-0.1.0
-	>=app-text/libexttextcat-3.2
+	>=app-text/libexttextcat-3.4.4
 	>=app-text/libebook-0.1.1
-	>=app-text/libetonyek-0.1.1
+	>=app-text/libetonyek-0.1.2
 	app-text/liblangtag
 	>=app-text/libmspub-0.1.0
-	>=app-text/libmwaw-0.3.4
+	>=app-text/libmwaw-0.3.6
 	>=app-text/libodfgen-0.1.0
 	app-text/libwpd:0.10[tools]
 	app-text/libwpg:0.3
-	>=app-text/libwps-0.3.0
+	=app-text/libwps-0.4*
 	>=app-text/poppler-0.16:=[xpdf-headers(+),cxx]
 	>=dev-cpp/clucene-2.3.3.4-r2
 	=dev-cpp/libcmis-0.5*
@@ -117,7 +117,7 @@ COMMON_DEPEND="
 	dev-libs/expat
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1:=
-	>=dev-libs/liborcus-0.7.0
+	>=dev-libs/liborcus-0.9.0
 	>=dev-libs/librevenge-0.0.1
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/nss-3.12.9
@@ -159,7 +159,10 @@ COMMON_DEPEND="
 		x11-libs/gdk-pixbuf[X]
 		>=x11-libs/gtk+-2.24:2
 	)
-	gtk3? ( >=x11-libs/gtk+-3.2:3 )
+	gtk3? (
+		dev-libs/glib:2
+		>=x11-libs/gtk+-3.2:3
+	)
 	gstreamer? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
@@ -175,7 +178,7 @@ COMMON_DEPEND="
 		dev-java/tomcat-servlet-api:3.0
 	)
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
-	postgres? ( >=dev-db/postgresql-9.0[kerberos] )
+	postgres? ( >=dev-db/postgresql-9.0:*[kerberos] )
 	telepathy? (
 		dev-libs/glib:2
 		>=net-libs/telepathy-glib-0.18.0
@@ -188,10 +191,11 @@ RDEPEND="${COMMON_DEPEND}
 	!app-office/libreoffice-bin-debug
 	!<app-office/openoffice-bin-3.4.0-r1
 	!app-office/openoffice
-	media-fonts/libertine-ttf
+	media-fonts/libertine
 	media-fonts/liberation-fonts
 	media-fonts/urw-fonts
 	java? ( >=virtual/jre-1.6 )
+	kde? ( $(add_kdeapps_dep kioclient) )
 	vlc? ( media-video/vlc )
 "
 
@@ -214,7 +218,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
-	>=dev-util/mdds-0.10.3:=
+	>=dev-util/mdds-0.12.0:=
 	media-libs/glm
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
@@ -519,6 +523,12 @@ src_configure() {
 }
 
 src_compile() {
+	# more and more LO stuff tries to use OpenGL, including tests during build
+	# bug 501508, bug 540624, bug 545974 and probably more
+	addpredict /dev/dri
+	addpredict /dev/ati
+	addpredict /dev/nvidiactl
+
 	# hack for offlinehelp, this needs fixing upstream at some point
 	# it is broken because we send --without-help
 	# https://bugs.freedesktop.org/show_bug.cgi?id=46506

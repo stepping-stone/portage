@@ -1,6 +1,33 @@
 # ChangeLog for dev-ruby/ruby-gstreamer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.73 2015/02/03 16:54:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.80 2015/08/03 21:50:13 mrueg Exp $
+
+  03 Aug 2015; Manuel Rüger <mrueg@gentoo.org> -ruby-gstreamer-1.1.8.ebuild:
+  Remove old. Drop stable keyword for ppc.
+
+  03 Aug 2015; Agostino Sarubbo <ago@gentoo.org> ruby-gstreamer-2.2.3.ebuild:
+  Stable for x86, wrt bug #554164
+
+  03 Aug 2015; Agostino Sarubbo <ago@gentoo.org> ruby-gstreamer-2.2.3.ebuild:
+  Stable for amd64, wrt bug #554164
+
+  11 Jul 2015; Hans de Graaff <graaff@gentoo.org> ruby-gstreamer-2.2.5.ebuild:
+  Bring forward missing x86 keyword.
+
+*ruby-gstreamer-2.2.5 (09 Jul 2015)
+
+  09 Jul 2015; Hans de Graaff <graaff@gentoo.org> +ruby-gstreamer-2.2.5.ebuild:
+  Version bump. Run tests. Add missing dependencies leading to dropped x86
+  keyword, bug 554312.
+
+*ruby-gstreamer-2.2.3-r1 (05 Jul 2015)
+
+  05 Jul 2015; Manuel Rüger <mrueg@gentoo.org> +ruby-gstreamer-2.2.3-r1.ebuild,
+  ruby-gstreamer-2.2.3.ebuild:
+  Create stabilization candidate.
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> ruby-gstreamer-2.2.4.ebuild:
+  Add ruby22.
 
 *ruby-gstreamer-2.2.4 (03 Feb 2015)
 

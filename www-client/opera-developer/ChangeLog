@@ -1,6 +1,105 @@
 # ChangeLog for www-client/opera-developer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/ChangeLog,v 1.33 2015/02/17 18:10:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/ChangeLog,v 1.50 2015/07/23 05:25:01 jer Exp $
+
+*opera-developer-32.0.1933.0 (23 Jul 2015)
+
+  23 Jul 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-32.0.1910.0.ebuild, +opera-developer-32.0.1933.0.ebuild:
+  Version bump.
+
+*opera-developer-32.0.1926.0 (16 Jul 2015)
+
+  16 Jul 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-32.0.1899.0.ebuild, +opera-developer-32.0.1926.0.ebuild:
+  Version bump.
+
+*opera-developer-32.0.1910.0 (01 Jul 2015)
+
+  01 Jul 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-31.0.1876.0.ebuild, +opera-developer-32.0.1910.0.ebuild:
+  Version bump.
+
+*opera-developer-32.0.1899.0 (20 Jun 2015)
+
+  20 Jun 2015; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-32.0.1899.0.ebuild:
+  Version bump.
+
+  03 Jun 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-31.0.1857.0.ebuild, opera-developer-31.0.1876.0.ebuild:
+  Add x11-libs/libnotify dependency.
+
+*opera-developer-31.0.1876.0 (27 May 2015)
+
+  27 May 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-30.0.1835.6.ebuild, +opera-developer-31.0.1876.0.ebuild:
+  Version bump.
+
+*opera-developer-31.0.1857.0 (08 May 2015)
+
+  08 May 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-30.0.1820.0.ebuild, -opera-developer-30.0.1833.0.ebuild,
+  +opera-developer-31.0.1857.0.ebuild:
+  Version bump.
+
+*opera-developer-30.0.1835.6 (23 Apr 2015)
+
+  23 Apr 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-30.0.1812.0.ebuild, +opera-developer-30.0.1835.6.ebuild:
+  Version bump.
+
+*opera-developer-30.0.1833.0 (16 Apr 2015)
+
+  16 Apr 2015; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-30.0.1833.0.ebuild:
+  Version bump.
+
+*opera-developer-30.0.1820.0 (01 Apr 2015)
+
+  01 Apr 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-29.0.1795.14.ebuild, +opera-developer-30.0.1820.0.ebuild:
+  Version bump.
+
+*opera-developer-30.0.1812.0 (25 Mar 2015)
+
+  25 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-29.0.1795.0.ebuild, +opera-developer-30.0.1812.0.ebuild:
+  Version bump.
+
+*opera-developer-29.0.1795.14 (18 Mar 2015)
+
+  18 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-29.0.1794.0.ebuild, +opera-developer-29.0.1795.14.ebuild:
+  Version bump.
+
+  13 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-29.0.1788.0.ebuild:
+  Old.
+
+*opera-developer-29.0.1795.0 (12 Mar 2015)
+
+  12 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-29.0.1795.0.ebuild:
+  Version bump.
+
+*opera-developer-29.0.1794.0 (07 Mar 2015)
+
+  07 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-29.0.1781.0.ebuild, +opera-developer-29.0.1794.0.ebuild:
+  Version bump.
+
+*opera-developer-29.0.1788.0 (04 Mar 2015)
+
+  04 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-29.0.1778.0.ebuild, +opera-developer-29.0.1788.0.ebuild:
+  Version bump.
+
+*opera-developer-29.0.1781.0 (21 Feb 2015)
+
+  21 Feb 2015; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-29.0.1773.0.ebuild, +opera-developer-29.0.1781.0.ebuild:
+  Version bump.
 
 *opera-developer-29.0.1778.0 (17 Feb 2015)
 

@@ -1,6 +1,32 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.471 2015/02/18 09:17:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.478 2015/07/25 21:54:06 polynomial-c Exp $
+
+*dbus-1.8.20 (25 Jul 2015)
+
+  25 Jul 2015; Lars Wendler <polynomial-c@gentoo.org> +dbus-1.8.20.ebuild:
+  Version bump.
+
+*dbus-1.8.18 (04 Jul 2015)
+
+  04 Jul 2015; Pacho Ramos <pacho@gentoo.org> +dbus-1.8.18.ebuild:
+  Version bump
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> dbus-1.8.16.ebuild:
+  Rework elog messages (#546612)
+
+  08 Apr 2015; Mike Frysinger <vapier@gentoo.org> dbus-1.8.16.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  28 Feb 2015; Kristian Fiskerstrand <k_f@gentoo.org> -dbus-1.8.10.ebuild,
+  -dbus-1.8.12.ebuild:
+  Security cleanup for bug #539482
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> dbus-1.8.16.ebuild:
+  Stable for alpha, wrt bug #539482
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> dbus-1.8.16.ebuild:
+  Stable for ia64, wrt bug #539482
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> dbus-1.8.16.ebuild:
   Stable for ppc, wrt bug #539482

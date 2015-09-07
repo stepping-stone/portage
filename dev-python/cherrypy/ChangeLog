@@ -1,6 +1,26 @@
 # ChangeLog for dev-python/cherrypy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.70 2014/12/20 03:54:09 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.75 2015/07/02 04:36:03 patrick Exp $
+
+*cherrypy-3.8.0 (02 Jul 2015)
+
+  02 Jul 2015; Patrick Lauer <patrick@gentoo.org> +cherrypy-3.8.0.ebuild:
+  Bump
+
+*cherrypy-3.7.0 (11 Jun 2015)
+
+  11 Jun 2015; Ian Delaney <idella4@gentoo.org> +cherrypy-3.7.0.ebuild,
+  cherrypy-3.3.0.ebuild:
+  bump
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> cherrypy-3.3.0.ebuild:
+  arm stable, bug #540290
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
+
+  27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -cherrypy-3.1.2.ebuild:
+  Remove old.
 
   20 Dec 2014; Ian Delaney <idella4@gentoo.org> -cherrypy-2.3.0.ebuild,
   -cherrypy-3.2.0.ebuild, -cherrypy-3.2.1.ebuild, -cherrypy-3.2.2-r1.ebuild,

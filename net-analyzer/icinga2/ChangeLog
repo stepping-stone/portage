@@ -1,6 +1,95 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.23 2015/02/14 08:47:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.43 2015/08/06 15:30:34 ago Exp $
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> icinga2-2.3.5.ebuild:
+  Stable for x86, wrt bug #554282
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> icinga2-2.3.5.ebuild:
+  Stable for amd64, wrt bug #554282
+
+*icinga2-2.3.8 (20 Jul 2015)
+
+  20 Jul 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.3.8.ebuild:
+  bup
+
+*icinga2-2.3.7 (16 Jul 2015)
+
+  16 Jul 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.3.7.ebuild:
+  bup
+
+  15 Jul 2015; Matthew Thode <prometheanfire@gentoo.org> files/icinga2.confd:
+  adding an option to conf.d for bug 554132
+
+*icinga2-2.3.6 (09 Jul 2015)
+
+  09 Jul 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.3.6.ebuild,
+  -icinga2-2.3.3.ebuild, -icinga2-2.3.4.ebuild, icinga2-9999.ebuild:
+  more bups
+
+*icinga2-2.3.5 (17 Jun 2015)
+
+  17 Jun 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.3.5.ebuild:
+  bup
+
+  03 May 2015; Matthew Thode <prometheanfire@gentoo.org> files/icinga2.initd:
+  fixing reload in init script bug 548302
+
+*icinga2-2.3.4 (22 Apr 2015)
+
+  22 Apr 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.3.4.ebuild:
+  bup
+
+*icinga2-2.3.3 (27 Mar 2015)
+
+  27 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.3.3.ebuild,
+  -icinga2-2.2.1-r2.ebuild, -icinga2-2.2.3-r1.ebuild, -icinga2-2.2.4.ebuild,
+  -icinga2-2.3.2-r1.ebuild, -icinga2-2.3.2.ebuild, icinga2-9999.ebuild:
+  bup
+
+*icinga2-2.3.2-r1 (25 Mar 2015)
+
+  25 Mar 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga2-2.3.2-r1.ebuild:
+  adding minimal use flag bug 543484
+
+  13 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> icinga2-9999.ebuild:
+  fixing fowners for 9999
+
+  13 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> files/icinga2.initd,
+  icinga2-2.3.2.ebuild:
+  fixing reload in init script
+
+*icinga2-2.3.2 (13 Mar 2015)
+
+  13 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.3.2.ebuild,
+  -icinga2-2.3.0.ebuild:
+  bumping to 2.3.2
+
+  11 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> icinga2-9999.ebuild:
+  really sign
+
+  11 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> icinga2-9999.ebuild:
+  signing
+
+*icinga2-9999 (11 Mar 2015)
+
+  11 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-9999.ebuild:
+  adding 9999 version
+
+  11 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> icinga2-2.3.0.ebuild:
+  signing
+
+*icinga2-2.3.0 (11 Mar 2015)
+
+  11 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.3.0.ebuild,
+  files/icinga2.initd:
+  bup
+
+*icinga2-2.2.4 (03 Mar 2015)
+
+  03 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.2.4.ebuild:
+  bump of icinga2 and allowing monitoring-plugins to be used bug 541162
 
   14 Feb 2015; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove short <longdescription>.

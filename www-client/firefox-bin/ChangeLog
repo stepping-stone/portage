@@ -1,6 +1,133 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.220 2015/02/15 15:07:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.246 2015/08/07 18:47:26 axs Exp $
+
+  07 Aug 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  -files/all-gentoo-1-cve-2015-4000.js, -files/all-gentoo.js,
+  -firefox-bin-31.8.0.ebuild, -firefox-bin-38.1.0.ebuild:
+  cleaned up old/vulnerable ebuilds
+
+  07 Aug 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-38.1.1.ebuild:
+  Stable for x86, wrt bug #556942
+
+  07 Aug 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-38.1.1.ebuild:
+  Stable for amd64, wrt bug #556942
+
+*firefox-bin-39.0.3 (07 Aug 2015)
+*firefox-bin-38.1.1 (07 Aug 2015)
+
+  07 Aug 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-bin-38.1.1.ebuild, +firefox-bin-39.0.3.ebuild,
+  -firefox-bin-39.0.ebuild:
+  version bumps for security bug 556942
+
+  29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> firefox-bin-38.1.0.ebuild:
+  amd64 stable wrt bug #555416
+
+  21 Jul 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  -firefox-bin-31.7.0.ebuild:
+  removed old for security bug 554036
+
+  18 Jul 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-31.8.0.ebuild:
+  Stable for x86, wrt bug #554036
+
+  18 Jul 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-31.8.0.ebuild:
+  Stable for amd64, wrt bug #554036
+
+  16 Jul 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  firefox-bin-39.0.ebuild:
+  added http sources to SRC_URI, bug 531278
+
+*firefox-bin-38.1.0 (03 Jul 2015)
+*firefox-bin-39.0 (03 Jul 2015)
+*firefox-bin-31.8.0 (03 Jul 2015)
+
+  03 Jul 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-bin-31.8.0.ebuild, +firefox-bin-38.1.0.ebuild,
+  +firefox-bin-39.0.ebuild, -firefox-bin-31.7.0-r1.ebuild,
+  -firefox-bin-38.0.1-r1.ebuild:
+  version bumps, removed some old ebuilds
+
+  31 May 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  firefox-bin-31.7.0-r1.ebuild, firefox-bin-31.7.0.ebuild,
+  firefox-bin-38.0.1-r1.ebuild:
+  added missing die on prefs copy
+
+*firefox-bin-31.7.0-r1 (31 May 2015)
+*firefox-bin-38.0.1-r1 (31 May 2015)
+
+  31 May 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/all-gentoo-1-cve-2015-4000.js, +firefox-bin-31.7.0-r1.ebuild,
+  +firefox-bin-38.0.1-r1.ebuild, -firefox-bin-31.6.0.ebuild,
+  -firefox-bin-38.0.1.ebuild:
+  disabled ssl3.dhe_* in prefs to prevent Logjam, bug 550288
+
+  23 May 2015; Mikle Kolyada <zlogene@gentoo.org> firefox-bin-31.7.0.ebuild:
+  x86 stable wrt bug #549356
+
+  18 May 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-31.7.0.ebuild:
+  Stable for amd64, wrt bug #549356
+
+*firefox-bin-38.0.1 (15 May 2015)
+*firefox-bin-31.7.0 (15 May 2015)
+
+  15 May 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-bin-31.7.0.ebuild, +firefox-bin-38.0.1.ebuild,
+  -firefox-bin-31.5.3.ebuild, -firefox-bin-36.0.4.ebuild,
+  -firefox-bin-37.0.1.ebuild:
+  version bump; removed old
+
+  24 Apr 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-31.6.0.ebuild:
+  Stable for x86, wrt bug #545232
+
+  24 Apr 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-31.6.0.ebuild:
+  Stable for amd64, wrt bug #545232
+
+*firefox-bin-37.0.1 (06 Apr 2015)
+
+  06 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> -firefox-bin-37.0.ebuild,
+  +firefox-bin-37.0.1.ebuild:
+  Version bump. Removed old.
+
+*firefox-bin-31.6.0 (01 Apr 2015)
+*firefox-bin-37.0 (01 Apr 2015)
+
+  01 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-bin-31.6.0.ebuild, +firefox-bin-37.0.ebuild,
+  -firefox-bin-31.5.0.ebuild, -firefox-bin-34.0.5.ebuild,
+  -firefox-bin-35.0.ebuild, -firefox-bin-36.0.ebuild:
+  version bump for security bug 545232; remove old
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-31.5.3.ebuild:
+  Stable for x86, wrt bug #544056
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-31.5.3.ebuild:
+  Stable for amd64, wrt bug #544056
+
+*firefox-bin-36.0.4 (24 Mar 2015)
+*firefox-bin-31.5.3 (24 Mar 2015)
+
+  24 Mar 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -firefox-bin-31.4.0.ebuild, +firefox-bin-31.5.3.ebuild,
+  +firefox-bin-36.0.4.ebuild:
+  Security bump (bug #544056). Removed old.
+
+  07 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> firefox-bin-31.5.0.ebuild:
+  x86 stable wrt bug #541316
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-31.5.0.ebuild:
+  Stable for amd64, wrt bug #541316
+
+  26 Feb 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  -firefox-bin-31.2.0-r1.ebuild, -firefox-bin-31.3.0.ebuild:
+  cleaned up old ebuilds
+
+*firefox-bin-31.5.0 (26 Feb 2015)
+*firefox-bin-36.0 (26 Feb 2015)
+
+  26 Feb 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-bin-31.5.0.ebuild, +firefox-bin-36.0.ebuild:
+  Version bumps
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-31.4.0.ebuild:
   Stable for x86, wrt bug #536564

@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.110 2015/01/31 02:49:39 patrick Exp $
+# $Id$
 
-# @ECLASS: distutils-r1
+# @ECLASS: distutils-r1.eclass
 # @MAINTAINER:
 # Python team <python@gentoo.org>
 # @AUTHOR:
@@ -40,8 +40,8 @@
 # as well. Thus, all the variables defined and documented there are
 # relevant to the packages using distutils-r1.
 #
-# For more information, please see the python-r1 Developer's Guide:
-# http://www.gentoo.org/proj/en/Python/python-r1/dev-guide.xml
+# For more information, please see the wiki:
+# https://wiki.gentoo.org/wiki/Project:Python/distutils-r1
 
 case "${EAPI:-0}" in
 	0|1|2|3)
@@ -393,7 +393,7 @@ _distutils-r1_create_setup_cfg() {
 			root = ${D}
 		_EOF_
 
-		if [[ ! ${DISTUTILS_SINGLE_IMPL} ]] && _python_want_python_exec2; then
+		if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
 			cat >> "${HOME}"/.pydistutils.cfg <<-_EOF_ || die
 				install-scripts = $(python_get_scriptdir)
 			_EOF_
@@ -444,11 +444,7 @@ _distutils-r1_wrap_scripts() {
 	local bindir=${2}
 
 	local PYTHON_SCRIPTDIR
-	if _python_want_python_exec2; then
-		python_export PYTHON_SCRIPTDIR
-	else
-		PYTHON_SCRIPTDIR=${bindir}
-	fi
+	python_export PYTHON_SCRIPTDIR
 
 	local f python_files=() non_python_files=()
 
@@ -462,7 +458,7 @@ _distutils-r1_wrap_scripts() {
 			if [[ ${shebang} == '#!'*${EPYTHON}* ]]; then
 				debug-print "${FUNCNAME}: matching shebang: ${shebang}"
 				python_files+=( "${f}" )
-			elif _python_want_python_exec2; then
+			else
 				debug-print "${FUNCNAME}: non-matching shebang: ${shebang}"
 				non_python_files+=( "${f}" )
 			fi
@@ -473,18 +469,11 @@ _distutils-r1_wrap_scripts() {
 		for f in "${python_files[@]}"; do
 			local basename=${f##*/}
 
-			if ! _python_want_python_exec2; then
-				local newf=${f%/*}/${basename}-${EPYTHON}
-				debug-print "${FUNCNAME}: renaming ${f#${path}/} to ${newf#${path}/}"
-				mv "${f}" "${newf}" || die
-			fi
-
 			debug-print "${FUNCNAME}: installing wrapper at ${bindir}/${basename}"
-			_python_ln_rel "${path}${EPREFIX}"$(_python_get_wrapper_path) \
+			_python_ln_rel "${path}${EPREFIX}"/usr/lib/python-exec/python-exec2 \
 				"${path}${bindir}/${basename}" || die
 		done
 
-		# (non-empty only with python-exec:2)
 		for f in "${non_python_files[@]}"; do
 			local basename=${f##*/}
 
@@ -516,7 +505,7 @@ distutils-r1_python_install() {
 
 	# python likes to compile any module it sees, which triggers sandbox
 	# failures if some packages haven't compiled their modules yet.
-	addpredict "$(python_get_sitedir)"
+	addpredict "${EPREFIX}/usr/$(get_libdir)/${EPYTHON}"
 	addpredict /usr/lib/portage/pym
 	addpredict /usr/local # bug 498232
 
@@ -544,15 +533,11 @@ distutils-r1_python_install() {
 			case "${a}" in
 				--install-scripts=*)
 					scriptdir=${a#--install-scripts=}
-					if _python_want_python_exec2; then
-						unset "${arg_var}"
-					fi
+					unset "${arg_var}"
 					;;
 				--install-scripts)
 					scriptdir=${!1}
-					if _python_want_python_exec2; then
-						unset "${arg_var}" "${1}"
-					fi
+					unset "${arg_var}" "${1}"
 					shift
 					;;
 			esac
@@ -564,9 +549,13 @@ distutils-r1_python_install() {
 
 	esetup.py install --root="${root}" "${args[@]}"
 
-	if [[ -d ${root}$(python_get_sitedir)/tests ]]; then
-		die "Package installs 'tests' package, file collisions likely."
-	fi
+	local forbidden_package_names=( examples test tests )
+	local p
+	for p in "${forbidden_package_names[@]}"; do
+		if [[ -d ${root}$(python_get_sitedir)/${p} ]]; then
+			die "Package installs '${p}' package which is forbidden and likely a bug in the build system."
+		fi
+	done
 	if [[ -d ${root}/usr/$(get_libdir)/pypy/share ]]; then
 		eqawarn "Package installs 'share' in PyPy prefix, see bug #465546."
 	fi

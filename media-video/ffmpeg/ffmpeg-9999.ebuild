@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.185 2015/02/18 14:36:26 aballier Exp $
+# $Id$
 
 EAPI="5"
 
@@ -75,7 +75,7 @@ FFMPEG_FLAG_MAP=(
 		# decoders
 		amr:libopencore-amrwb amr:libopencore-amrnb fdk:libfdk-aac
 		jpeg2k:libopenjpeg bluray:libbluray celt:libcelt gme:libgme gsm:libgsm
-		modplug:libmodplug opus:libopus quvi:libquvi rtmp:librtmp ssh:libssh
+		modplug:libmodplug opus:libopus quvi:libquvi librtmp ssh:libssh
 		schroedinger:libschroedinger speex:libspeex vorbis:libvorbis vpx:libvpx
 		zvbi:libzvbi
 		# libavfilter options
@@ -90,12 +90,13 @@ FFMPEG_FLAG_MAP=(
 # Same as above but for encoders, i.e. they do something only with USE=encode.
 FFMPEG_ENCODER_FLAG_MAP=(
 	aac:libvo-aacenc amrenc:libvo-amrwbenc mp3:libmp3lame
-	aacplus:libaacplus faac:libfaac theora:libtheora twolame:libtwolame
-	wavpack:libwavpack webp:libwebp x264:libx264 x265:libx265 xvid:libxvid
+	aacplus:libaacplus faac:libfaac snappy:libsnappy theora:libtheora
+	twolame:libtwolame wavpack:libwavpack webp:libwebp x264:libx264 x265:libx265
+	xvid:libxvid
 )
 
 IUSE="
-	alsa bindist +encode examples jack oss pic static-libs test v4l
+	alsa +encode examples jack oss pic static-libs test v4l
 	${FFMPEG_FLAG_MAP[@]%:*}
 	${FFMPEG_ENCODER_FLAG_MAP[@]%:*}
 "
@@ -103,7 +104,7 @@ IUSE="
 # Strings for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
 ARM_CPU_FEATURES=( armv5te armv6 armv6t2 neon armvfp:vfp )
-MIPS_CPU_FEATURES=( mips32r2 mipsdspr1 mipsdspr2 mipsfpu )
+MIPS_CPU_FEATURES=( mipsdspr1 mipsdspr2 mipsfpu )
 PPC_CPU_FEATURES=( altivec )
 X86_CPU_FEATURES_RAW=( 3dnow:amd3dnow 3dnowext:amd3dnowext avx:avx avx2:avx2 fma3:fma3 fma4:fma4 mmx:mmx mmxext:mmxext sse:sse sse2:sse2 sse3:sse3 ssse3:ssse3 sse4_1:sse4 sse4_2:sse42 xop:xop )
 X86_CPU_FEATURES=( ${X86_CPU_FEATURES_RAW[@]/#/cpu_flags_x86_} )
@@ -147,7 +148,7 @@ CPU_FEATURES_MAP="
 	amd64:X86
 "
 
-FFTOOLS=( aviocat cws2fws ffescape ffeval ffhash fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher )
+FFTOOLS=( aviocat cws2fws ffescape ffeval ffhash fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart sidxindex trasher )
 IUSE="${IUSE} ${FFTOOLS[@]/#/+fftools_}"
 
 RDEPEND="
@@ -164,6 +165,7 @@ RDEPEND="
 		amrenc? ( >=media-libs/vo-amrwbenc-0.1.2-r1[${MULTILIB_USEDEP}] )
 		faac? ( >=media-libs/faac-1.28-r3[${MULTILIB_USEDEP}] )
 		mp3? ( >=media-sound/lame-3.99.5-r1[${MULTILIB_USEDEP}] )
+		snappy? ( >=app-arch/snappy-1.1.2-r1[${MULTILIB_USEDEP}] )
 		theora? (
 			>=media-libs/libtheora-1.1.1[encode,${MULTILIB_USEDEP}]
 			>=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}]
@@ -172,10 +174,10 @@ RDEPEND="
 		wavpack? ( >=media-sound/wavpack-4.60.1-r1[${MULTILIB_USEDEP}] )
 		webp? ( >=media-libs/libwebp-0.3.0[${MULTILIB_USEDEP}] )
 		x264? ( >=media-libs/x264-0.0.20130506:=[${MULTILIB_USEDEP}] )
-		x265? ( >=media-libs/x265-1.2:=[${MULTILIB_USEDEP}] )
+		x265? ( >=media-libs/x265-1.6:=[${MULTILIB_USEDEP}] )
 		xvid? ( >=media-libs/xvid-1.3.2-r1[${MULTILIB_USEDEP}] )
 	)
-	fdk? ( >=media-libs/fdk-aac-0.1.3[${MULTILIB_USEDEP}] )
+	fdk? ( >=media-libs/fdk-aac-0.1.3:=[${MULTILIB_USEDEP}] )
 	flite? ( >=app-accessibility/flite-1.4-r4[${MULTILIB_USEDEP}] )
 	fontconfig? ( >=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}] )
 	frei0r? ( media-plugins/frei0r-plugins )
@@ -207,7 +209,7 @@ RDEPEND="
 	opus? ( >=media-libs/opus-1.0.2-r2[${MULTILIB_USEDEP}] )
 	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )
 	quvi? ( media-libs/libquvi:0.4[${MULTILIB_USEDEP}] )
-	rtmp? ( >=media-video/rtmpdump-2.4_p20131018[${MULTILIB_USEDEP}] )
+	librtmp? ( >=media-video/rtmpdump-2.4_p20131018[${MULTILIB_USEDEP}] )
 	samba? ( >=net-fs/samba-3.6.23-r1[${MULTILIB_USEDEP}] )
 	schroedinger? ( >=media-libs/schroedinger-1.0.11-r1[${MULTILIB_USEDEP}] )
 	sdl? ( >=media-libs/libsdl-1.2.15-r4[sound,video,${MULTILIB_USEDEP}] )
@@ -243,7 +245,7 @@ DEPEND="${RDEPEND}
 	ladspa? ( >=media-libs/ladspa-sdk-1.13-r2[${MULTILIB_USEDEP}] )
 	libv4l? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	cpu_flags_x86_mmx? ( >=dev-lang/yasm-1.2 )
-	rtmp? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
+	librtmp? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	schroedinger? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	test? ( net-misc/wget sys-devel/bc )
 	truetype? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
@@ -269,15 +271,15 @@ GPL_REQUIRED_USE="
 	)
 "
 REQUIRED_USE="
-	bindist? (
-		encode? ( !faac !aacplus )
-		gpl? ( !openssl !fdk )
-	)
 	libv4l? ( v4l )
 	fftools_cws2fws? ( zlib )
 	test? ( encode )
 	${GPL_REQUIRED_USE}
 	${CPU_REQUIRED_USE}"
+RESTRICT="
+	encode? ( faac? ( bindist ) aacplus? ( bindist ) )
+	gpl? ( openssl? ( bindist ) fdk? ( bindist ) )
+"
 
 S=${WORKDIR}/${P/_/-}
 
@@ -364,7 +366,7 @@ multilib_src_configure() {
 	# We need to do this so that features of that CPU will be better used
 	# If they contain an unknown CPU it will not hurt since ffmpeg's configure
 	# will just ignore it.
-	for i in $(get-flag mcpu) $(get-flag mtune) $(get-flag march) ; do
+	for i in $(get-flag mcpu) $(get-flag march) $(get-flag mtune) ; do
 		[[ ${i} = native ]] && i="host" # bug #273421
 		myconf+=( --cpu=${i} )
 		break
@@ -403,9 +405,7 @@ multilib_src_configure() {
 		--cc="$(tc-getCC)" \
 		--cxx="$(tc-getCXX)" \
 		--ar="$(tc-getAR)" \
-		--optflags="${CFLAGS}" \
-		--extra-cflags="${CFLAGS}" \
-		--extra-cxxflags="${CXXFLAGS}" \
+		--optflags=" " \
 		$(use_enable static-libs static) \
 		"${myconf[@]}"
 	echo "${@}"

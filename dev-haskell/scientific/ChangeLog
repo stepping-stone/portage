@@ -1,6 +1,19 @@
 # ChangeLog for dev-haskell/scientific
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/scientific/ChangeLog,v 1.5 2014/12/14 05:43:47 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/scientific/ChangeLog,v 1.8 2015/06/06 16:15:12 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*scientific-0.3.3.8 (02 Apr 2015)
+
+  02 Apr 2015; Mark Wright <gienah@gentoo.org> +scientific-0.3.3.8.ebuild:
+  Bump scientific to 0.3.3.8
+
+*scientific-0.3.3.7 (11 Mar 2015)
+
+  11 Mar 2015; Mark Wright <gienah@gentoo.org> +scientific-0.3.3.7.ebuild:
+  Bump scientific to 0.3.3.7
 
 *scientific-0.3.3.3 (14 Dec 2014)
 

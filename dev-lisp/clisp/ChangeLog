@@ -1,6 +1,16 @@
 # ChangeLog for dev-lisp/clisp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.114 2014/12/28 15:36:16 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.117 2015/06/09 14:57:00 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> clisp-2.49-r8.ebuild:
+  x86 stable wrt bug #511170
+
+  20 Feb 2015; Andrey Grozin <grozin@gentoo.org> -clisp-2.47-r1.ebuild,
+  -files/pari.patch:
+  Cleaning old (#540808)
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> clisp-2.47-r1.ebuild,
   clisp-2.48-r1.ebuild, clisp-2.48-r2.ebuild, clisp-2.49-r8.ebuild:

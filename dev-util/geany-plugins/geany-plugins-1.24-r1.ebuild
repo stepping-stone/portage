@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-1.24-r1.ebuild,v 1.1 2014/04/14 06:11:35 binki Exp $
+# $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools-utils python-single-r1 vala versionator
 
@@ -14,7 +14,7 @@ SRC_URI="http://plugins.geany.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ~ppc64 sparc x86"
 IUSE="+autoclose +commander debugger +defineformat devhelp enchant gpg gtkspell lua markdown multiterm nls python scope soup webkit"
 
 LINGUAS="be ca da de es fr gl ja pt pt_BR ru tr zh_CN"

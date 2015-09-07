@@ -1,6 +1,41 @@
 # ChangeLog for dev-libs/mpfr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.185 2014/11/01 07:24:34 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.196 2015/07/30 13:01:50 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  Stable for sparc, wrt bug #549520
+
+  23 Jul 2015; Mike Frysinger <vapier@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  22 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  ia64 stable wrt bug #549520
+
+*mpfr-3.1.3 (20 Jun 2015)
+
+  20 Jun 2015; Mike Frysinger <vapier@gentoo.org> +mpfr-3.1.3.ebuild:
+  Version bump.
+
+  30 May 2015; Mikle Kolyada <zlogene@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  arm stable wrt bug #549520
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  Stable for x86, wrt bug #549520
+
+  20 May 2015; Matt Turner <mattst88@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  alpha stable, bug 549520.
+
+  17 May 2015; Jeroen Roovers <jer@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  Stable for HPPA (bug #549520).
+
+  16 May 2015; Pacho Ramos <pacho@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  ppc stable wrt bug #549520
+
+  16 May 2015; Jeroen Roovers <jer@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  Stable for PPC64 (bug #545850).
+
+  15 May 2015; Mikle Kolyada <zlogene@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  amd64 stable wrt bug #549520
 
 *mpfr-3.1.2_p10 (01 Nov 2014)
 

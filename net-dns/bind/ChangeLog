@@ -1,6 +1,79 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.526 2015/02/07 12:31:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.547 2015/08/06 04:52:58 maekke Exp $
+
+  06 Aug 2015; Markus Meier <maekke@gentoo.org> bind-9.10.2_p3.ebuild:
+  arm stable, bug #556150
+
+  05 Aug 2015; Jeroen Roovers <jer@gentoo.org> bind-9.10.2_p3.ebuild:
+  Stable for HPPA PPC64 (bug #556150).
+
+  01 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> bind-9.10.2_p3.ebuild:
+  ia64 syable wrt bug #556150
+
+  31 Jul 2015; Tobias Klausmann <klausman@gentoo.org> bind-9.10.2_p3.ebuild:
+  Stable on alpha, bug 556150
+
+  31 Jul 2015; Agostino Sarubbo <ago@gentoo.org> bind-9.10.2_p3.ebuild:
+  Stable for x86, wrt bug #556150
+
+  31 Jul 2015; Agostino Sarubbo <ago@gentoo.org> bind-9.10.2_p3.ebuild:
+  Stable for amd64, wrt bug #556150
+
+  31 Jul 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
+
+*bind-9.10.2_p3 (30 Jul 2015)
+
+  30 Jul 2015; Christian Ruppert <idl0r@gentoo.org> -bind-9.9.5-r3.ebuild,
+  -bind-9.10.1_p1.ebuild, +bind-9.10.2_p3.ebuild, -files/127.zone-r1,
+  -files/named.conf-r7:
+  Security bump, bug 556150. Cleanup
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> bind-9.10.2_p2.ebuild:
+  Stable for sparc, wrt bug #553584
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> bind-9.10.2_p2.ebuild:
+  Stable for ppc, wrt bug #553584
+
+  17 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> bind-9.10.2_p2.ebuild:
+  ia64 stable wrt bug #553584
+
+  15 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> bind-9.10.2_p2.ebuild:
+  arm stable wrt bug #553584
+
+  14 Jul 2015; Tobias Klausmann <klausman@gentoo.org> bind-9.10.2_p2.ebuild:
+  Stable on alpha, bug 553584
+
+  11 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> bind-9.10.2_p2.ebuild:
+  x86 stable wrt bug #553584
+
+  11 Jul 2015; Jeroen Roovers <jer@gentoo.org> bind-9.10.2_p2.ebuild:
+  Stable for HPPA PPC64 (bug #553584).
+
+  09 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> bind-9.10.2_p2.ebuild:
+  amd64 stable wrt bug #553584
+
+*bind-9.10.2_p2 (08 Jul 2015)
+
+  08 Jul 2015; Christian Ruppert <idl0r@gentoo.org> -bind-9.10.2.ebuild,
+  +bind-9.10.2_p2.ebuild:
+  Version bump, bug 553584
+
+*bind-9.10.2 (21 Apr 2015)
+
+  21 Apr 2015; Eray Aslan <eras@gentoo.org> +bind-9.10.2.ebuild:
+  Non-maintainer bump
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> bind-9.10.1_p1.ebuild:
+  Drop old Python implementations
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> bind-9.10.1_p1.ebuild,
+  bind-9.9.5-r3.ebuild:
+  use dosbin instead of exeinto /usr/sbin/ && doexe; fix slot operators
+
+  28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  seccomp USE flag is now global, removing from metadata
 
   07 Feb 2015; Christian Ruppert <idl0r@gentoo.org> bind-9.10.1_p1.ebuild,
   metadata.xml:

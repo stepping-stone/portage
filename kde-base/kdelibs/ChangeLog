@@ -1,6 +1,67 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1048 2015/02/18 16:26:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1061 2015/07/25 11:59:54 pacho Exp $
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> kdelibs-4.14.8.ebuild:
+  ppc stable wrt bug #550740
+
+  18 Jul 2015; Johannes Huber <johu@gentoo.org>
+  -files/kdelibs-4.15.6-fix-bic.patch, -kdelibs-4.14.7.ebuild,
+  -kdelibs-4.14.9.ebuild:
+  Remove old.
+
+  18 Jul 2015; Johannes Huber <johu@gentoo.org> -kdelibs-4.14.6-r1.ebuild:
+  Remove KDE PIM 4.14.6
+
+*kdelibs-4.14.10 (02 Jul 2015)
+
+  02 Jul 2015; Manuel Rüger <mrueg@gentoo.org> +kdelibs-4.14.10.ebuild:
+  Version bump.
+
+  13 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> kdelibs-4.14.8.ebuild:
+  x86 stable wrt bug #550740
+
+  12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> kdelibs-4.14.8.ebuild:
+  amd64 stable wrt bug #550740
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  kdelibs-4.14.3-r1.ebuild, kdelibs-4.14.6-r1.ebuild, kdelibs-4.14.7.ebuild,
+  kdelibs-4.14.8.ebuild, kdelibs-4.14.9.ebuild:
+  Move various kde-base packages to kde-apps.
+
+*kdelibs-4.14.9 (03 Jun 2015)
+
+  03 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +kdelibs-4.14.9.ebuild:
+  Version bump.
+
+*kdelibs-4.14.8 (15 May 2015)
+
+  15 May 2015; Michael Palimaka <kensington@gentoo.org> +kdelibs-4.14.8.ebuild:
+  Version bump.
+
+*kdelibs-4.14.7 (28 Apr 2015)
+
+  28 Apr 2015; Michael Palimaka <kensington@gentoo.org> +kdelibs-4.14.7.ebuild:
+  Version bump.
+
+  31 Mar 2015; Michael Palimaka <kensington@gentoo.org>
+  kdelibs-4.14.3-r1.ebuild, kdelibs-4.14.6-r1.ebuild:
+  Enforce missing USE dependency.
+
+*kdelibs-4.14.6-r1 (21 Mar 2015)
+
+  21 Mar 2015; Michael Palimaka <kensington@gentoo.org>
+  +files/kdelibs-4.14.5-fatalwarnings.patch,
+  +files/kdelibs-4.14.5-mimetypes.patch, +files/kdelibs-4.15.6-fix-bic.patch,
+  +kdelibs-4.14.6-r1.ebuild:
+  Version bump.
+
+  19 Feb 2015; Michael Palimaka <kensington@gentoo.org>
+  -files/kdelibs-4.13.1-kio-diskfree.patch,
+  -files/kdelibs-4.13.2-CVE-2014-3494.patch,
+  -files/kdelibs-4.13.3-CVE-2014-5033.patch,
+  -files/kdelibs-4.7.96-mimetypes.patch:
+  Remove unused patches.
 
   18 Feb 2015; Michał Górny <mgorny@gentoo.org> -kdelibs-4.12.5-r2.ebuild:
   Remove KDE SC 4.12

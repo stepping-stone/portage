@@ -1,6 +1,45 @@
 # ChangeLog for app-text/mupdf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.113 2014/12/30 19:50:30 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.123 2015/08/06 11:47:08 ago Exp $
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> mupdf-1.5-r1.ebuild:
+  Stable for amd64, wrt bug #528680
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> mupdf-1.5-r1.ebuild:
+  ppc stable wrt bug #528680
+
+  17 Jul 2015; Jeroen Roovers <jer@gentoo.org> mupdf-1.5-r1.ebuild:
+  Stable for PPC64 too.
+
+  17 Jul 2015; Jeroen Roovers <jer@gentoo.org> mupdf-1.5-r1.ebuild:
+  Stable for HPPA (bug #528680).
+
+  27 Jun 2015; Markus Meier <maekke@gentoo.org> mupdf-1.5-r1.ebuild:
+  arm stable, bug #528680
+
+  01 Jun 2015; Michael Weber <xmw@gentoo.org>
+  +files/mupdf-1.7a-system-mujs.patch, mupdf-1.7a.ebuild:
+  Enable javascript support (bug 550286, Cedric Sodhi).
+
+*mupdf-1.7a (20 May 2015)
+
+  20 May 2015; Michael Weber <xmw@gentoo.org> +mupdf-1.7a.ebuild:
+  Version bump (chneukirchen).
+
+*mupdf-1.7 (17 Apr 2015)
+
+  17 Apr 2015; Michael Weber <xmw@gentoo.org> +mupdf-1.7.ebuild,
+  mupdf-9999.ebuild:
+  Version bump
+
+*mupdf-1.6 (26 Feb 2015)
+
+  26 Feb 2015; Michael Weber <xmw@gentoo.org> +mupdf-1.6.ebuild,
+  mupdf-1.5-r1.ebuild, mupdf-9999.ebuild:
+  Version bump (thanks sping, bug 526508), update ebuilds.
+
+  26 Feb 2015; Michael Weber <xmw@gentoo.org> mupdf-1.5-r1.ebuild:
+  Drop COPYING and force /usr/share/doc/${PF} (thanks Roger, bug 526508)
 
   30 Dec 2014; Markus Meier <maekke@gentoo.org> mupdf-1.4-r1.ebuild:
   arm stable, bug #533504

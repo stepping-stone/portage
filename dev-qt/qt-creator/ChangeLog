@@ -1,6 +1,65 @@
 # ChangeLog for dev-qt/qt-creator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.41 2015/02/18 19:05:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.53 2015/07/08 16:40:26 pesa Exp $
+
+*qt-creator-3.4.2 (08 Jul 2015)
+
+  08 Jul 2015; Davide Pesavento <pesa@gentoo.org> +qt-creator-3.4.2.ebuild,
+  -qt-creator-3.4.1.ebuild:
+  Version bump.
+
+*qt-creator-3.4.1 (02 Jun 2015)
+
+  02 Jun 2015; Davide Pesavento <pesa@gentoo.org> +qt-creator-3.4.1.ebuild,
+  -qt-creator-3.4.0.ebuild:
+  Version bump.
+
+  04 May 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-3.4.0.ebuild:
+  More fixes for building the qbs plugin (bug 548086).
+
+  04 May 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-3.2.2.ebuild,
+  qt-creator-3.4.0.ebuild:
+  Add webkit USE flag wrt bug 538236. Remove unused debug USE flag from 3.4
+  ebuild.
+
+  28 Apr 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-3.4.0.ebuild:
+  Raise dev-util/qbs dep to match bundled version and to fix bug 537244.
+
+*qt-creator-3.4.0 (23 Apr 2015)
+
+  23 Apr 2015; Davide Pesavento <pesa@gentoo.org> +qt-creator-3.4.0.ebuild,
+  -qt-creator-3.3.2.ebuild, -qt-creator-3.4.0_rc1.ebuild:
+  Version bump.
+
+  01 Apr 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml,
+  qt-creator-2.8.1.ebuild, qt-creator-3.2.2.ebuild, qt-creator-3.3.2.ebuild,
+  qt-creator-3.4.0_rc1.ebuild:
+  Substitute all references to 'qt-project.org' with 'qt.io'
+
+*qt-creator-3.4.0_rc1 (01 Apr 2015)
+
+  01 Apr 2015; Davide Pesavento <pesa@gentoo.org> +qt-creator-3.4.0_rc1.ebuild,
+  metadata.xml:
+  Version bump.
+
+  29 Mar 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-2.8.1.ebuild,
+  qt-creator-3.2.2.ebuild, qt-creator-3.3.2.ebuild:
+  Switch git URIs to code.qt.io wrt bug #544842.
+
+  18 Mar 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-3.3.2.ebuild:
+  Adjust qbs dependency.
+
+*qt-creator-3.3.2 (08 Mar 2015)
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> +qt-creator-3.3.2.ebuild,
+  -qt-creator-3.3.1.ebuild:
+  Version bump.
+
+*qt-creator-3.3.1 (24 Feb 2015)
+
+  24 Feb 2015; Davide Pesavento <pesa@gentoo.org> +qt-creator-3.3.1.ebuild,
+  -qt-creator-3.3.0.ebuild:
+  Version bump.
 
   18 Feb 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-3.3.0.ebuild:
   The quickwidgets module is needed too. Fixes bug 540192.

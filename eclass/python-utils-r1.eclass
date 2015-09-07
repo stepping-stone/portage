@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.75 2015/01/02 00:15:15 mgorny Exp $
+# $Id$
 
-# @ECLASS: python-utils-r1
+# @ECLASS: python-utils-r1.eclass
 # @MAINTAINER:
 # Python team <python@gentoo.org>
 # @AUTHOR:
@@ -16,8 +16,8 @@
 # This eclass does not set any metadata variables nor export any phase
 # functions. It can be inherited safely.
 #
-# For more information, please see the python-r1 Developer's Guide:
-# http://www.gentoo.org/proj/en/Python/python-r1/dev-guide.xml
+# For more information, please see the wiki:
+# https://wiki.gentoo.org/wiki/Project:Python/python-utils-r1
 
 case "${EAPI:-0}" in
 	0|1|2|3|4|5)
@@ -635,21 +635,14 @@ python_newexe() {
 	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
 	[[ ${#} -eq 2 ]] || die "Usage: ${FUNCNAME} <path> <new-name>"
 
-	local d=${python_scriptroot:-${DESTTREE}/bin}
-	local wrapd=${d}
+	local wrapd=${python_scriptroot:-${DESTTREE}/bin}
 
 	local f=${1}
-	local barefn=${2}
-	local newfn
+	local newfn=${2}
 
-	if _python_want_python_exec2; then
-		local PYTHON_SCRIPTDIR
-		python_export PYTHON_SCRIPTDIR
-		d=${PYTHON_SCRIPTDIR#${EPREFIX}}
-		newfn=${barefn}
-	else
-		newfn=${barefn}-${EPYTHON}
-	fi
+	local PYTHON_SCRIPTDIR d
+	python_export PYTHON_SCRIPTDIR
+	d=${PYTHON_SCRIPTDIR#${EPREFIX}}
 
 	(
 		dodir "${wrapd}"
@@ -658,8 +651,8 @@ python_newexe() {
 	)
 
 	# install the wrapper
-	_python_ln_rel "${ED%/}"$(_python_get_wrapper_path) \
-		"${ED%/}/${wrapd}/${barefn}" || die
+	_python_ln_rel "${ED%/}"/usr/lib/python-exec/python-exec2 \
+		"${ED%/}/${wrapd}/${newfn}" || die
 
 	# don't use this at home, just call python_doscript() instead
 	if [[ ${_PYTHON_REWRITE_SHEBANG} ]]; then
@@ -847,29 +840,45 @@ python_wrapper_setup() {
 		mkdir -p "${workdir}"/{bin,pkgconfig} || die
 
 		# Clean up, in case we were supposed to do a cheap update.
-		rm -f "${workdir}"/bin/python{,2,3,-config}
-		rm -f "${workdir}"/bin/2to3
-		rm -f "${workdir}"/pkgconfig/python{,2,3}.pc
+		rm -f "${workdir}"/bin/python{,2,3,-config} || die
+		rm -f "${workdir}"/bin/2to3 || die
+		rm -f "${workdir}"/pkgconfig/python{,2,3}.pc || die
 
 		local EPYTHON PYTHON
 		python_export "${impl}" EPYTHON PYTHON
 
-		local pyver
+		local pyver pyother
 		if python_is_python3; then
 			pyver=3
+			pyother=2
 		else
 			pyver=2
+			pyother=3
 		fi
 
 		# Python interpreter
-		ln -s "${PYTHON}" "${workdir}"/bin/python || die
-		ln -s python "${workdir}"/bin/python${pyver} || die
+		# note: we don't use symlinks because python likes to do some
+		# symlink reading magic that breaks stuff
+		# https://bugs.gentoo.org/show_bug.cgi?id=555752
+		cat > "${workdir}/bin/python" <<-_EOF_
+			#!/bin/sh
+			exec "${PYTHON}" "\${@}"
+		_EOF_
+		cp "${workdir}/bin/python" "${workdir}/bin/python${pyver}" || die
+		chmod +x "${workdir}/bin/python" "${workdir}/bin/python${pyver}" || die
 
-		local nonsupp=()
+		local nonsupp=( "python${pyother}" "python${pyother}-config" )
 
 		# CPython-specific
 		if [[ ${EPYTHON} == python* ]]; then
-			ln -s "${PYTHON}-config" "${workdir}"/bin/python-config || die
+			cat > "${workdir}/bin/python-config" <<-_EOF_
+				#!/bin/sh
+				exec "${PYTHON}-config" "\${@}"
+			_EOF_
+			cp "${workdir}/bin/python-config" \
+				"${workdir}/bin/python${pyver}-config" || die
+			chmod +x "${workdir}/bin/python-config" \
+				"${workdir}/bin/python${pyver}-config" || die
 
 			# Python 2.6+.
 			ln -s "${PYTHON/python/2to3-}" "${workdir}"/bin/2to3 || die
@@ -879,7 +888,7 @@ python_wrapper_setup() {
 				"${workdir}"/pkgconfig/python.pc || die
 			ln -s python.pc "${workdir}"/pkgconfig/python${pyver}.pc || die
 		else
-			nonsupp+=( 2to3 python-config )
+			nonsupp+=( 2to3 python-config "python${pyver}-config" )
 		fi
 
 		local x
@@ -887,7 +896,7 @@ python_wrapper_setup() {
 			cat >"${workdir}"/bin/${x} <<__EOF__
 #!/bin/sh
 echo "${x} is not supported by ${EPYTHON}" >&2
-exit 1
+exit 127
 __EOF__
 			chmod +x "${workdir}"/bin/${x} || die
 		done
@@ -996,7 +1005,7 @@ python_fix_shebang() {
 			local shebang i
 			local error= from=
 
-			IFS= read -r shebang <${f}
+			IFS= read -r shebang <"${f}"
 
 			# First, check if it's shebang at all...
 			if [[ ${shebang} == '#!'* ]]; then
@@ -1097,40 +1106,6 @@ python_fix_shebang() {
 			fi
 		fi
 	done
-}
-
-# @FUNCTION: _python_want_python_exec2
-# @INTERNAL
-# @DESCRIPTION:
-# Check whether we should be using python-exec:2.
-_python_want_python_exec2() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	# EAPI 4 lacks slot operators, so just fix it on python-exec:2.
-	[[ ${EAPI} == 4 ]] && return 0
-
-	# Check if we cached the result, or someone put an override.
-	if [[ ! ${_PYTHON_WANT_PYTHON_EXEC2+1} ]]; then
-		has_version 'dev-lang/python-exec:2'
-		_PYTHON_WANT_PYTHON_EXEC2=$(( ! ${?} ))
-	fi
-
-	# Non-zero means 'yes', zero means 'no'.
-	[[ ${_PYTHON_WANT_PYTHON_EXEC2} != 0 ]]
-}
-
-# @FUNCTION: _python_get_wrapper_path
-# @INTERNAL
-# @DESCRIPTION:
-# Output path to proper python-exec slot.
-_python_get_wrapper_path() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	if _python_want_python_exec2; then
-		echo /usr/lib/python-exec/python-exec2
-	else
-		echo /usr/bin/python-exec
-	fi
 }
 
 # @FUNCTION: python_export_utf8_locale

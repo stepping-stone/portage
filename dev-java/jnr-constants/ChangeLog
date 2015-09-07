@@ -1,6 +1,29 @@
 # ChangeLog for dev-java/jnr-constants
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-constants/ChangeLog,v 1.11 2014/03/03 23:41:11 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-constants/ChangeLog,v 1.16 2015/06/17 09:21:56 monsieurp Exp $
+
+  17 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  -jnr-constants-0.8.2-r1.ebuild, -jnr-constants-0.8.2.ebuild,
+  -jnr-constants-0.8.3.ebuild, -jnr-constants-0.8.4.ebuild,
+  -jnr-constants-0.8.5.ebuild:
+  Remove old.
+
+  17 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  jnr-constants-0.8.6.ebuild:
+  Stable for x86+amd64 through ALLARCHES. Fix bug 552362.
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  21 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
+  jnr-constants-0.8.6.ebuild:
+  Set required virtual JRE/JDK to 1.6.
+
+*jnr-constants-0.8.6 (21 Mar 2015)
+
+  21 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
+  +jnr-constants-0.8.6.ebuild, jnr-constants-0.8.5.ebuild:
+  Version bump courtesy of Arfrever <arfrever.fta@gmail.com>.
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> jnr-constants-0.8.5.ebuild:
   amd64 stable, bug #495396

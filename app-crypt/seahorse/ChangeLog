@@ -1,6 +1,43 @@
 # ChangeLog for app-crypt/seahorse
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.188 2014/12/30 11:41:23 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.197 2015/07/31 13:41:24 tetromino Exp $
+
+  31 Jul 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  seahorse-3.14.1.ebuild, seahorse-3.16.0-r1.ebuild:
+  Missing gdbus-codegen dependency (bug #556384, thanks to selurvedu).
+
+  05 Jul 2015; Pacho Ramos <pacho@gentoo.org> seahorse-3.16.0-r1.ebuild:
+  dev-util/itstool DEPEND
+
+  28 Jun 2015; Pacho Ramos <pacho@gentoo.org> -seahorse-3.16.0.ebuild,
+  seahorse-3.16.0-r1.ebuild:
+  DEPEND on yelp-tools is needed (#553476 by Kris Couck), drop old
+
+*seahorse-3.16.0-r1 (19 Jun 2015)
+
+  19 Jun 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/seahorse-3.16.0-gnupg-detection.patch, +seahorse-3.16.0-r1.ebuild:
+  Fix gnupg detection (#546980)
+
+*seahorse-3.16.0 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +seahorse-3.16.0.ebuild:
+  Version bump for Gnome 3.16.
+
+  13 May 2015; Pacho Ramos <pacho@gentoo.org> -seahorse-3.12.2.ebuild,
+  -seahorse-3.14.0.ebuild, seahorse-3.14.1.ebuild:
+  Not compatible with gnupg-2.1 (#547456), drop old
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> seahorse-3.14.1.ebuild:
+  x86 stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> seahorse-3.14.1.ebuild:
+  amd64 stable, bug 534012
+
+*seahorse-3.14.1 (07 Mar 2015)
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> +seahorse-3.14.1.ebuild:
+  Version bump
 
   30 Dec 2014; Pacho Ramos <pacho@gentoo.org> seahorse-3.12.2.ebuild,
   seahorse-3.14.0.ebuild:

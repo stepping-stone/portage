@@ -1,6 +1,28 @@
 # ChangeLog for media-gfx/freecad
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.25 2014/11/12 16:52:51 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.29 2015/07/23 21:37:17 xmw Exp $
+
+  23 Jul 2015; Michael Weber <xmw@gentoo.org> freecad-0.12.5284-r4.ebuild,
+  freecad-0.13.1830-r1.ebuild, freecad-0.14.3702-r1.ebuild,
+  freecad-0.15.4671.ebuild, freecad-9999.ebuild:
+  Use slot-style dependency specification
+
+*freecad-0.15.4671 (23 Jul 2015)
+
+  23 Jul 2015; Michael Weber <xmw@gentoo.org> +freecad-0.15.4671.ebuild,
+  -freecad-0.14.3702.ebuild, freecad-0.12.5284-r4.ebuild,
+  freecad-0.13.1830-r1.ebuild, freecad-0.14.3702-r1.ebuild, freecad-9999.ebuild:
+  Version bump (thanks  Priit Laes for the cleanups, bug 546786), update live
+  build, just use CASROOT from environment (as set by eselect opencascade),
+  RDEPEND on tested version of opencascade.
+
+  21 Jul 2015; Michael Weber <xmw@gentoo.org> freecad-9999.ebuild:
+  Update EGIT_REPO_URI to github, fix README installation (thanks Fabian Kislat
+  , bug 553362).
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> freecad-0.13.1830-r1.ebuild,
+  freecad-0.14.3702-r1.ebuild, freecad-0.14.3702.ebuild, freecad-9999.ebuild:
+  Drop old Python implementations
 
   12 Nov 2014; Mike Gilbert <floppym@gentoo.org> freecad-9999.ebuild:
   Switch to git-r3, bug 527524.

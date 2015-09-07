@@ -1,6 +1,37 @@
 # ChangeLog for x11-libs/libva-intel-driver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.39 2015/02/05 10:41:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.45 2015/07/24 15:14:10 mgorny Exp $
+
+  24 Jul 2015; Michał Górny <mgorny@gentoo.org>
+  files/libva-intel-driver-1.6.0-wayland-automagic.patch:
+  Fix wayland-automagic patch to handle both USE=wayland and USE=-wayland (with
+  installed and uninstalled wayland) properly. Bug #555440.
+
+  14 Jul 2015; Alexis Ballier <aballier@gentoo.org>
+  libva-intel-driver-1.6.0.ebuild,
+  +files/libva-intel-driver-1.6.0-wayland-automagic.patch:
+  fix build with USE=-wayland but wayland is installed, bug #553468
+
+  14 Jul 2015; Alexis Ballier <aballier@gentoo.org>
+  libva-intel-driver-1.6.0.ebuild, libva-intel-driver-9999.ebuild:
+  bump libva dep, bug #554206 by Priit Laes
+
+*libva-intel-driver-1.6.0 (06 Jul 2015)
+
+  06 Jul 2015; Alexis Ballier <aballier@gentoo.org>
+  +libva-intel-driver-1.6.0.ebuild:
+  version bump, bug #553902
+
+  24 Jun 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/libva-intel-driver-1.5.1-wayland-automagic.patch,
+  libva-intel-driver-1.5.1.ebuild:
+  Fix automagic wayland depend (#529388)
+
+*libva-intel-driver-1.5.1 (20 Mar 2015)
+
+  20 Mar 2015; Alexis Ballier <aballier@gentoo.org>
+  +libva-intel-driver-1.5.1.ebuild:
+  version bump
 
   05 Feb 2015; Alexis Ballier <aballier@gentoo.org>
   -libva-intel-driver-1.3.2.ebuild, -libva-intel-driver-1.4.0.ebuild:

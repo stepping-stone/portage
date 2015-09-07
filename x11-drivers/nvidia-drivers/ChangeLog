@@ -1,6 +1,128 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.608 2015/02/09 07:35:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.634 2015/08/08 06:38:04 jer Exp $
+
+  08 Aug 2015; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-352.21.ebuild,
+  nvidia-drivers-352.30.ebuild:
+  Stable for AMD64 x86 too.
+
+*nvidia-drivers-355.06 (07 Aug 2015)
+
+  07 Aug 2015; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-355.06.ebuild:
+  Version bump.
+
+*nvidia-drivers-352.30 (29 Jul 2015)
+
+  29 Jul 2015; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-352.30.ebuild:
+  Version bump.
+
+  28 Jul 2015; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-346.82.ebuild,
+  nvidia-drivers-346.87.ebuild:
+  Stable for AMD64 x86 too.
+
+*nvidia-drivers-346.87 (22 Jul 2015)
+
+  22 Jul 2015; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-346.87.ebuild:
+  Version bump.
+
+  05 Jul 2015; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-346.72.ebuild,
+  nvidia-drivers-346.82.ebuild:
+  Stable for AMD64 x86 too.
+
+  27 Jun 2015; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-352.21.ebuild:
+  Stable for AMD64 x86 too.
+
+*nvidia-drivers-346.82 (23 Jun 2015)
+
+  23 Jun 2015; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-346.82.ebuild:
+  Version bump.
+
+  23 Jun 2015; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-352.21.ebuild:
+  Raise kernel compatibility to <4.2.
+
+*nvidia-drivers-352.21 (18 Jun 2015)
+
+  18 Jun 2015; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-352.09.ebuild,
+  +nvidia-drivers-352.21.ebuild:
+  Version bump.
+
+  14 Jun 2015; Ulrich Müller <ulm@gentoo.org> nvidia-drivers-346.72.ebuild:
+  [QA] Remove emul-linux-x86-* from dependencies.
+
+  30 May 2015; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.23.ebuild,
+  nvidia-drivers-173.14.39.ebuild, nvidia-drivers-304.125.ebuild,
+  nvidia-drivers-331.113.ebuild, nvidia-drivers-340.76.ebuild,
+  nvidia-drivers-343.36.ebuild, nvidia-drivers-349.16.ebuild,
+  nvidia-drivers-352.09.ebuild:
+  Drop emul-linux* dependencies (bug #544876).
+
+  20 May 2015; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-346.59.ebuild,
+  nvidia-drivers-346.72.ebuild:
+  Stable for AMD64 x86 too.
+
+*nvidia-drivers-352.09 (19 May 2015)
+
+  19 May 2015; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-352.09.ebuild:
+  Version bump.
+
+*nvidia-drivers-346.72 (13 May 2015)
+
+  13 May 2015; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-346.72.ebuild:
+  Version bump.
+
+  21 Apr 2015; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-349.16.ebuild:
+  Stable for AMD64 x86 too.
+
+  15 Apr 2015; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-346.47.ebuild,
+  nvidia-drivers-346.59.ebuild:
+  Stable for AMD64 x86 too.
+
+*nvidia-drivers-349.16 (15 Apr 2015)
+
+  15 Apr 2015; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-349.12.ebuild,
+  +nvidia-drivers-349.16.ebuild:
+  Version bump.
+
+*nvidia-drivers-346.59 (07 Apr 2015)
+
+  07 Apr 2015; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-346.59.ebuild:
+  Version bump.
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> nvidia-drivers-96.43.23.ebuild,
+  nvidia-drivers-173.14.39.ebuild, nvidia-drivers-304.125.ebuild,
+  nvidia-drivers-331.113.ebuild, nvidia-drivers-340.76.ebuild,
+  nvidia-drivers-343.36.ebuild, nvidia-drivers-346.47.ebuild,
+  nvidia-drivers-349.12.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> Manifest:
+  Fix Manifest (bug #544718 by email200202).
+
+*nvidia-drivers-349.12 (26 Mar 2015)
+
+  26 Mar 2015; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-349.12.ebuild:
+  Version bump.
+
+  22 Mar 2015; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-304.125.ebuild,
+  nvidia-drivers-331.113.ebuild, nvidia-drivers-340.76.ebuild,
+  nvidia-drivers-343.36.ebuild, nvidia-drivers-346.47.ebuild:
+  "exeinto /usr/bin; doexe" -> "dobin" (bug #543932).
+
+  08 Mar 2015; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-346.35.ebuild,
+  nvidia-drivers-346.47.ebuild:
+  Stable for AMD64 x86 too.
+
+  04 Mar 2015; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-346.47.ebuild:
+  Raise compatible kernel version.
+
+*nvidia-drivers-346.47 (04 Mar 2015)
+
+  04 Mar 2015; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.23.ebuild,
+  nvidia-drivers-173.14.39.ebuild, nvidia-drivers-304.125.ebuild,
+  nvidia-drivers-331.113.ebuild, nvidia-drivers-340.76.ebuild,
+  nvidia-drivers-343.36.ebuild, nvidia-drivers-346.35.ebuild,
+  +nvidia-drivers-346.47.ebuild:
+  Fix dev-libs/glib SLOTting. Fix -96* *DEPEND. Version bump.
 
   09 Feb 2015; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-304.125.ebuild,
   nvidia-drivers-331.113.ebuild, nvidia-drivers-340.76.ebuild,

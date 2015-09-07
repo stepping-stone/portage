@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.5.1.ebuild,v 1.6 2015/01/31 19:48:12 grobian Exp $
+# $Id$
 
 EAPI=5
 
@@ -15,11 +15,11 @@ SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.xz
 	clang? ( http://llvm.org/releases/${PV}/compiler-rt-${PV}.src.tar.xz
 		http://llvm.org/releases/${PV}/cfe-${PV}.src.tar.xz
 		http://llvm.org/releases/${PV}/clang-tools-extra-${PV}.src.tar.xz )
-	!doc? ( http://dev.gentoo.org/~voyageur/distfiles/${PN}-3.5.0-manpages.tar.bz2 )"
+	!doc? ( https://dev.gentoo.org/~voyageur/distfiles/${PN}-3.5.0-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
 SLOT="0/3.5"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="clang debug doc gold libedit +libffi multitarget ncurses ocaml python
 	+static-analyzer test xml video_cards_radeon
 	kernel_Darwin kernel_FreeBSD"
@@ -37,7 +37,7 @@ COMMON_DEPEND="
 	gold? ( >=sys-devel/binutils-2.22:*[cxx] )
 	libedit? ( dev-libs/libedit:0=[${MULTILIB_USEDEP}] )
 	libffi? ( >=virtual/libffi-3.0.13-r1:0=[${MULTILIB_USEDEP}] )
-	ncurses? ( >=sys-libs/ncurses-5.9-r3:5=[${MULTILIB_USEDEP}] )
+	ncurses? ( >=sys-libs/ncurses-5.9-r3:0=[${MULTILIB_USEDEP}] )
 	ocaml? ( dev-lang/ocaml:0= )"
 # configparser-3.2 breaks the build (3.3 or none at all are fine)
 DEPEND="${COMMON_DEPEND}
@@ -94,7 +94,7 @@ pkg_pretend() {
 		ewarn
 
 		(( build_size *= 14 ))
-	elif is-flagq -g || is-flagq -ggdb; then
+	elif is-flagq '-g?(gdb)?([1-9])'; then
 		ewarn "The C++ compiler -g option is known to increase the size of the package"
 		ewarn "considerably. If you run out of space, please consider removing it."
 		ewarn

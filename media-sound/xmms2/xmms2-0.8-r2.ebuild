@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r2.ebuild,v 1.5 2015/02/06 14:09:08 aballier Exp $
+# $Id$
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="alpha amd64 ppc x86"
 
 IUSE="aac airplay +alsa ao asf avahi cdda curl cxx ffmpeg flac gvfs ices
 jack mac mlib-update mms +mad modplug mp3 mp4 musepack ofa oss
@@ -70,7 +70,7 @@ RDEPEND="server? (
 DEPEND="${RDEPEND}
 	dev-lang/python
 	python? ( dev-python/pyrex )
-	perl? ( virtual/perl-Module-Build )
+	perl? ( dev-perl/Module-Build )
 	virtual/pkgconfig
 	test? ( dev-util/cunit )
 	"

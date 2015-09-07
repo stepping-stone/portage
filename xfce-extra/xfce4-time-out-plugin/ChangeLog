@@ -1,6 +1,39 @@
 # ChangeLog for xfce-extra/xfce4-time-out-plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-time-out-plugin/ChangeLog,v 1.21 2012/11/28 12:24:00 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-time-out-plugin/ChangeLog,v 1.29 2015/08/05 10:47:48 perfinion Exp $
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org>
+  xfce4-time-out-plugin-1.0.2.ebuild:
+  ppc stable wrt bug #553500
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org>
+  xfce4-time-out-plugin-1.0.2.ebuild:
+  Stable for PPC64 (bug #553500).
+
+  11 Jul 2015; Markus Meier <maekke@gentoo.org>
+  xfce4-time-out-plugin-1.0.2.ebuild:
+  arm stable, bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  xfce4-time-out-plugin-1.0.2.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  xfce4-time-out-plugin-1.0.2.ebuild:
+  x86 stable wrt bug #553500
+
+  01 Jul 2015; Jeroen Roovers <jer@gentoo.org>
+  xfce4-time-out-plugin-1.0.2.ebuild:
+  Stable for HPPA (bug #553500).
+
+*xfce4-time-out-plugin-1.0.2 (12 Apr 2015)
+
+  12 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-time-out-plugin-1.0.2.ebuild:
+  Version bump with minor fixes.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-time-out-plugin-1.0.1.ebuild:
@@ -97,4 +130,3 @@
   25 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   +xfce4-time-out-plugin-0.1.1.ebuild:
   Rename xfce4-time-out to xfce4-time-out-plugin.
-

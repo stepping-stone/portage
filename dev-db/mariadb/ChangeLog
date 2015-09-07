@@ -1,6 +1,98 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.97 2015/02/18 13:54:58 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.118 2015/08/08 04:35:53 grknight Exp $
+
+*mariadb-5.5.45 (08 Aug 2015)
+
+  08 Aug 2015; Brian Evans <grknight@gentoo.org> +mariadb-5.5.45.ebuild,
+  -mariadb-5.5.43-r1.ebuild, -mariadb-5.5.44.ebuild:
+  Version bump for 5.5 series; Drop old 5.5s
+
+*mariadb-10.0.21-r1 (08 Aug 2015)
+*mariadb-10.0.21 (08 Aug 2015)
+
+  08 Aug 2015; Brian Evans <grknight@gentoo.org> +mariadb-10.0.21-r1.ebuild,
+  +mariadb-10.0.21.ebuild:
+  Version bump for 10.0 series
+
+*mariadb-10.0.20-r1 (28 Jul 2015)
+
+  28 Jul 2015; Brian Evans <grknight@gentoo.org> +mariadb-10.0.20-r1.ebuild,
+  metadata.xml:
+  Revbumps for new mysql packaging splitting client and server
+
+  16 Jul 2015; Brian Evans <grknight@gentoo.org> -mariadb-10.0.16.ebuild:
+  Drop old version for security Bug 546724
+
+  16 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> mariadb-10.0.19.ebuild:
+  ia64 stable wrt bug #546724
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> mariadb-10.0.19.ebuild:
+  Stable for alpha, wrt bug #546724
+
+*mariadb-5.5.44 (20 Jun 2015)
+
+  20 Jun 2015; Brian Evans <grknight@gentoo.org> +mariadb-5.5.44.ebuild:
+  Verison bump for 5.5 series
+
+*mariadb-10.0.20 (20 Jun 2015)
+
+  20 Jun 2015; Brian Evans <grknight@gentoo.org> +mariadb-10.0.20.ebuild:
+  Version bump
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> mariadb-10.0.19.ebuild:
+  sparc stable wrt bug #546724
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> mariadb-10.0.19.ebuild:
+  ppc stable wrt bug #546724
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> mariadb-10.0.19.ebuild:
+  Stable for arm, wrt bug #546724
+
+  20 May 2015; Mikle Kolyada <zlogene@gentoo.org> mariadb-10.0.19.ebuild:
+  x86 stable wrt bug #546724
+
+  20 May 2015; Jeroen Roovers <jer@gentoo.org> mariadb-10.0.19.ebuild:
+  Stable for HPPA PPC64 (bug #546724).
+
+  19 May 2015; Agostino Sarubbo <ago@gentoo.org> mariadb-10.0.19.ebuild:
+  Stable for amd64, wrt bug #546724
+
+*mariadb-5.5.43-r1 (09 May 2015)
+*mariadb-10.0.19 (09 May 2015)
+
+  09 May 2015; Brian Evans <grknight@gentoo.org> +mariadb-10.0.19.ebuild,
+  +mariadb-5.5.43-r1.ebuild, -mariadb-10.0.17.ebuild, -mariadb-10.0.18.ebuild,
+  -mariadb-5.5.43.ebuild:
+  Version bump and revision bump to fix upstream MDEV-8115 bug which can crash
+  the upgrade process; Drop old
+
+*mariadb-10.0.18 (08 May 2015)
+
+  08 May 2015; Brian Evans <grknight@gentoo.org> +mariadb-10.0.18.ebuild:
+  Version bump; includes security fixes
+
+*mariadb-5.5.43 (01 May 2015)
+
+  01 May 2015; Brian Evans <grknight@gentoo.org> +mariadb-5.5.43.ebuild,
+  -mariadb-5.5.41.ebuild, -mariadb-5.5.42.ebuild:
+  Version bump for 5.5 series; remove vulnerable 5.5 versions wrt bug 546724
+
+  25 Mar 2015; Brian Evans <grknight@gentoo.org> mariadb-10.0.17.ebuild:
+  Add additional ~arm64 keyword to latest version
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> mariadb-10.0.16.ebuild:
+  add arm64 support, tested on A53 board
+
+*mariadb-10.0.17 (01 Mar 2015)
+
+  01 Mar 2015; Brian Evans <grknight@gentoo.org> +mariadb-10.0.17.ebuild:
+  Version bump
+
+*mariadb-5.5.42 (24 Feb 2015)
+
+  24 Feb 2015; Brian Evans <grknight@gentoo.org> +mariadb-5.5.42.ebuild:
+  Version bump for 5.5 series
 
   18 Feb 2015; Brian Evans <grknight@gentoo.org> -mariadb-10.0.15-r1.ebuild:
   Drop old versions for security bug 537262

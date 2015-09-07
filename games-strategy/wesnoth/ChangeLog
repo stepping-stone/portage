@@ -1,6 +1,40 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.240 2015/01/26 16:55:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.250 2015/07/18 14:24:53 pacho Exp $
+
+  18 Jul 2015; Pacho Ramos <pacho@gentoo.org> wesnoth-1.12.4.ebuild:
+  Needs to be rebuilt when libboost so versions change
+
+*wesnoth-1.12.4 (26 Jun 2015)
+
+  26 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> +wesnoth-1.12.4.ebuild:
+  version bump
+
+  13 May 2015; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-1.12.2.ebuild:
+  add slot dep for lua
+
+  13 May 2015; Michael Sterrett <mr_bones_@gentoo.org> -wesnoth-1.12.1.ebuild:
+  old
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> wesnoth-1.12.2.ebuild:
+  Stable for x86, wrt bug #548954
+
+  12 May 2015; Agostino Sarubbo <ago@gentoo.org> wesnoth-1.12.2.ebuild:
+  Stable for amd64, wrt bug #548954
+
+*wesnoth-1.12.2 (09 Apr 2015)
+
+  09 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> +wesnoth-1.12.2.ebuild:
+  version bump
+
+  08 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -wesnoth-1.10.7.ebuild:
+  old
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> wesnoth-1.12.1.ebuild:
+  Stable for x86, wrt bug #541106
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> wesnoth-1.12.1.ebuild:
+  Stable for amd64, wrt bug #541106
 
   26 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/wesnoth-1.12-cmake.patch, -wesnoth-1.12.ebuild:

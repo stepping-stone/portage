@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.14.2-r2.ebuild,v 1.1 2015/01/26 17:47:05 pacho Exp $
+# $Id$
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Terminal/"
 LICENSE="GPL-3+"
 SLOT="0"
 IUSE="debug +gnome-shell +nautilus"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux"
 
 # FIXME: automagic dependency on gtk+[X]
 RDEPEND="
@@ -30,11 +30,15 @@ RDEPEND="
 	nautilus? ( >=gnome-base/nautilus-3 )
 "
 # gtk+:2 needed for gtk-builder-convert, bug 356239
+# itstool required for help/* with non-en LINGUAS, see bug #549358
+# xmllint required for glib-compile-resources, see bug #549304
 DEPEND="${RDEPEND}
 	app-text/yelp-tools
+	dev-libs/libxml2
 	dev-util/appdata-tools
 	dev-util/gdbus-codegen
 	|| ( dev-util/gtk-builder-convert <=x11-libs/gtk+-2.24.10:2 )
+	dev-util/itstool
 	>=dev-util/intltool-0.50
 	sys-devel/gettext
 	virtual/pkgconfig
@@ -62,9 +66,6 @@ src_configure() {
 		$(use_enable gnome-shell search-provider) \
 		$(use_with nautilus nautilus-extension) \
 		VALAC=$(type -P true)
-		# Docs are broken in this release.
-		#ITSTOOL=$(type -P true) \
-		#XMLLINT=$(type -P true)
 }
 
 src_install() {

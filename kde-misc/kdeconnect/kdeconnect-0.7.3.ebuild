@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/kdeconnect-0.7.3.ebuild,v 1.4 2015/02/02 14:44:04 kensington Exp $
+# $Id$
 
 EAPI=5
 
@@ -20,7 +20,7 @@ else
 fi
 
 DESCRIPTION="Adds communication between KDE and your smartphone"
-HOMEPAGE="http://www.kde.org/"
+HOMEPAGE="https://www.kde.org/"
 
 LICENSE="GPL-2+"
 SLOT="4"
@@ -33,7 +33,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep plasma-workspace)
-	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
+	app-crypt/qca:2[openssl]
 "
 
 [[ ${KDE_BUILD_TYPE} != live ]] && S=${WORKDIR}/${MY_P}

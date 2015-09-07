@@ -1,6 +1,43 @@
 # ChangeLog for sys-process/parallel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.68 2015/02/02 00:19:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.77 2015/07/10 03:24:17 radhermit Exp $
+
+*parallel-20150622 (10 Jul 2015)
+
+  10 Jul 2015; Tim Harder <radhermit@gentoo.org> +parallel-20150622.ebuild:
+  Version bump.
+
+  30 Jun 2015; Ian Delaney <idella4@gentoo.org> -parallel-20140622.ebuild,
+  -parallel-20141122.ebuild, -parallel-20150122.ebuild,
+  -parallel-20150222.ebuild, -parallel-20150322.ebuild:
+  cleanup for bug #552622
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> parallel-20141122.ebuild:
+  Stable for x86, wrt bug #535688
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> parallel-20150522.ebuild:
+  Stable for x86, wrt bug #552622
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> parallel-20150522.ebuild:
+  Stable for amd64, wrt bug #552622
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> parallel-20141122.ebuild:
+  Stable for amd64, wrt bug #535688
+
+*parallel-20150522 (27 May 2015)
+
+  27 May 2015; Robin H. Johnson <robbat2@gentoo.org> +parallel-20150522.ebuild:
+  Bump.
+
+*parallel-20150322 (01 Apr 2015)
+
+  01 Apr 2015; Tim Harder <radhermit@gentoo.org> +parallel-20150322.ebuild:
+  Version bump.
+
+*parallel-20150222 (24 Feb 2015)
+
+  24 Feb 2015; Tim Harder <radhermit@gentoo.org> +parallel-20150222.ebuild:
+  Version bump.
 
 *parallel-20150122 (02 Feb 2015)
 

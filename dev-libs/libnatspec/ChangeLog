@@ -1,6 +1,46 @@
 # ChangeLog for dev-libs/libnatspec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnatspec/ChangeLog,v 1.20 2014/01/19 10:09:39 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnatspec/ChangeLog,v 1.32 2015/07/26 21:40:53 mgorny Exp $
+
+  26 Jul 2015; Michał Górny <mgorny@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  Add proper pkg_setup() to fix USE=-python, bug #546212.
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/185 by a17r.
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  Stable for alpha, wrt bug #548686
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  30 May 2015; Mikle Kolyada <zlogene@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  arm stable wrt bug #548686
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  ppc stable wrt bug #548686
+
+  13 May 2015; Mikle Kolyada <zlogene@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  sparc stable wrt bug #548686
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  Stable for x86, wrt bug #548686
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  ia64 stable wrt bug #548686
+
+  10 May 2015; Jeroen Roovers <jer@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  Stable for PPC64 (bug #548686).
+
+  08 May 2015; Agostino Sarubbo <ago@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  Stable for amd64, wrt bug #548686
+
+  07 May 2015; Jeroen Roovers <jer@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  Stable for HPPA (bug #548686).
+
+*libnatspec-0.2.6-r1 (25 Mar 2015)
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> +libnatspec-0.2.6-r1.ebuild,
+  libnatspec-0.2.6.ebuild:
+  Fix tcl/tk slotting; bump to EAPI=5
 
   19 Jan 2014; Mike Frysinger <vapier@gentoo.org> libnatspec-0.2.6.ebuild:
   Add arm64 love.

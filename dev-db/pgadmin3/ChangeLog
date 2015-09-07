@@ -1,6 +1,32 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.103 2015/02/15 08:37:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.109 2015/07/23 20:22:48 pacho Exp $
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> pgadmin3-1.20.0-r1.ebuild:
+  ppc stable wrt bug #551322
+
+*pgadmin3-1.20.0-r2 (15 Jul 2015)
+
+  15 Jul 2015; Aaron W. Swenson <titanofold@gentoo.org>
+  +pgadmin3-1.20.0-r2.ebuild, +files/pgadmin3-menu-assert.patch:
+  Fix bug 554872 with patch from upstream. Also, added epatch_user line.
+
+  11 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> pgadmin3-1.20.0-r1.ebuild:
+  x86 stable wrt bug #551322
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> pgadmin3-1.20.0-r1.ebuild:
+  Stable for amd64, wrt bug #551322
+
+  11 Jun 2015; Aaron W. Swenson <titanofold@gentoo.org>
+  files/pgadmin3-desktop.patch:
+  Fix bug 338843. Patch now modifies icon path.
+
+*pgadmin3-1.20.0-r1 (20 May 2015)
+
+  20 May 2015; Aaron W. Swenson <titanofold@gentoo.org>
+  +pgadmin3-1.20.0-r1.ebuild:
+  Version bump fixes bug 533336. Now supports best wxGTK available, instead of
+  just 2.8, fixing bug 517232.
 
 *pgadmin3-1.20.0 (15 Feb 2015)
 

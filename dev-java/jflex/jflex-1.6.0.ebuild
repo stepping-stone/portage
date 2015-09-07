@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/jflex-1.6.0.ebuild,v 1.1 2015/01/18 21:16:24 monsieurp Exp $
+# $Id$
 
 EAPI="5"
 
@@ -14,16 +14,18 @@ SRC_URI="http://${PN}.de/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="1.6"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc ppc64 x86 ~amd64-fbsd ~ppc-macos ~x64-macos ~x86-macos"
+
+CDEPEND="dev-java/ant-core:0
+	>=dev-java/javacup-0.11a_beta20060608:0
+	dev-java/junit:0"
 
 RDEPEND=">=virtual/jre-1.5
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
-	>=dev-java/ant-core-1.7.0
-	>=dev-java/javacup-0.11a_beta20060608:0"
+	${CDEPEND}"
 
 DEPEND=">=virtual/jdk-1.5
-	dev-java/junit:0
-	>=dev-java/javacup-0.11a_beta20060608:0"
+	${CDEPEND}"
 
 IUSE="${JAVA_PKG_IUSE} source vim-syntax"
 
@@ -69,7 +71,7 @@ src_test() {
 
 src_install() {
 	java-pkg_newjar build/${P}.jar ${PN}.jar
-	java-pkg_dolauncher "${PN}" --main jflex.Main
+	java-pkg_dolauncher "${PN}-${SLOT}" --main jflex.Main
 	java-pkg_register-ant-task
 
 	if use doc ; then

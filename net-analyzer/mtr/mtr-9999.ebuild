@@ -1,8 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-9999.ebuild,v 1.5 2014/12/27 12:20:52 jer Exp $
+# $Id$
 
 EAPI=5
+
 inherit eutils autotools fcaps flag-o-matic git-r3
 
 DESCRIPTION="My TraceRoute, an Excellent network diagnostic tool"
@@ -16,7 +17,7 @@ KEYWORDS=""
 IUSE="gtk ipv6"
 
 RDEPEND="
-	sys-libs/ncurses
+	sys-libs/ncurses:0=
 	gtk? (
 		dev-libs/glib:2
 		x11-libs/gtk+:2
@@ -24,6 +25,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
+	sys-devel/autoconf
 	virtual/pkgconfig
 "
 
@@ -37,8 +39,9 @@ src_unpack() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/0.80-impl-dec.patch \
-		"${FILESDIR}"/0.85-gtk.patch
+		"${FILESDIR}"/${PN}-0.80-impl-dec.patch \
+		"${FILESDIR}"/${PN}-0.85-gtk.patch \
+		"${FILESDIR}"/${PN}-9999-tinfo.patch
 
 	sed -i -e "/^\s*xver=/s|$.*)|${EGIT_VERSION:0:8}|" Makefile.am || die
 

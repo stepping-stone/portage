@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.2.5-r1.ebuild,v 1.5 2014/05/20 20:56:18 mrueg Exp $
+# $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 
 DESCRIPTION="Stateful programmatic web browsing in Python"
-HOMEPAGE="http://wwwsearch.sourceforge.net/mechanize/ http://pypi.python.org/pypi/mechanize"
+HOMEPAGE="http://wwwsearch.sourceforge.net/mechanize/ https://pypi.python.org/pypi/mechanize"
 SRC_URI="http://wwwsearch.sourceforge.net/${PN}/src/${P}.tar.gz"
 
 LICENSE="|| ( BSD ZPL )"
@@ -20,7 +20,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
 
 python_test() {
-	# Ignore warnings (http://github.com/jjlee/mechanize/issues/issue/13).
+	# Ignore warnings (https://github.com/jjlee/mechanize/issues/issue/13).
 	# https://github.com/jjlee/mechanize/issues/66
 	"${PYTHON}" -W ignore test.py
 }

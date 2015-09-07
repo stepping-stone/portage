@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dropbox-cli
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.15 2014/11/27 09:09:16 grozin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.17 2015/05/07 23:52:00 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -dropbox-cli-1.ebuild:
+  Remove old.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> dropbox-cli-1-r1.ebuild,
+  dropbox-cli-1.6.0.ebuild:
+  Drop old Python implementations
 
   27 Nov 2014; Andrey Grozin <grozin@gentoo.org> metadata.xml:
   Setting myself as the maintainer

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
-<maintainer>
-  <email>gentoo@necoro.eu</email>
-  <name>René Neumann</name>
-</maintainer>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">fuse</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.10 2013/02/24 21:15:34 ottxor Exp $
+# $Id$
 
 inherit eutils versionator multilib autotools
 
@@ -9,7 +9,7 @@ MY_PV="${PV/_}"
 MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Allows important system files to be stored in a fast database file rather than plain text"
-HOMEPAGE="http://sources.redhat.com/glibc/"
+HOMEPAGE="https://sources.redhat.com/glibc/"
 SRC_URI="ftp://sources.redhat.com/pub/glibc/old-releases/${MY_P}.tar.gz
 		 mirror://gentoo/${MY_P}-external.patch.bz2
 		 mirror://gentoo/${MY_P}-dbupgrade.patch.bz2
@@ -97,8 +97,7 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins db-Makefile
 
-	exeinto /usr/sbin
-	doexe "${FILESDIR}"/remake-all-db
+	dosbin "${FILESDIR}"/remake-all-db
 
 	dodoc AUTHORS COPYING* ChangeLog INSTALL NEWS README THANKS
 

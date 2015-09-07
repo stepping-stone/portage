@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.173 2015/01/12 23:17:14 polynomial-c Exp $
+# $Id$
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -56,7 +56,7 @@ inherit libtool
 # Do NOT change this variable in your ebuilds!
 # If you want to force a newer minor version, you can specify the correct
 # WANT value by using a colon:  <PV>:<WANT_AUTOMAKE>
-_LATEST_AUTOMAKE=( 1.13:1.13 1.15:1.15 )
+_LATEST_AUTOMAKE=( 1.15:1.15 )
 
 _automake_atom="sys-devel/automake"
 _autoconf_atom="sys-devel/autoconf"
@@ -336,7 +336,7 @@ eautoconf() {
 		echo
 		die "No configure.{ac,in} present!"
 	fi
-	if [[ -e configure.in ]] ; then
+	if [[ ${WANT_AUTOCONF} != "2.1" && -e configure.in ]] ; then
 		eqawarn "This package has a configure.in file which has long been deprecated.  Please"
 		eqawarn "update it to use configure.ac instead as newer versions of autotools will die"
 		eqawarn "when it finds this file.  See https://bugs.gentoo.org/426262 for details."
@@ -475,13 +475,14 @@ autotools_run_tool() {
 
 	autotools_env_setup
 
-	local STDERR_TARGET="${T}/$1.out"
+	# Allow people to pass in full paths. #549268
+	local STDERR_TARGET="${T}/${1##*/}.out"
 	# most of the time, there will only be one run, but if there are
 	# more, make sure we get unique log filenames
 	if [[ -e ${STDERR_TARGET} ]] ; then
 		local i=1
 		while :; do
-			STDERR_TARGET="${T}/$1-${i}.out"
+			STDERR_TARGET="${T}/${1##*/}-${i}.out"
 			[[ -e ${STDERR_TARGET} ]] || break
 			: $(( i++ ))
 		done
@@ -591,6 +592,17 @@ _autotools_m4dir_include() {
 	echo ${include_opts}
 }
 autotools_m4dir_include()    { _autotools_m4dir_include ${AT_M4DIR} ; }
-autotools_m4sysdir_include() { _autotools_m4dir_include $(eval echo ${AT_SYS_M4DIR}) ; }
+autotools_m4sysdir_include() {
+	# First try to use the paths the system integrator has set up.
+	local paths=( $(eval echo ${AT_SYS_M4DIR}) )
+
+	if [[ ${#paths[@]} -eq 0 && -n ${SYSROOT} ]] ; then
+		# If they didn't give us anything, then default to the SYSROOT.
+		# This helps when cross-compiling.
+		local path="${SYSROOT}/usr/share/aclocal"
+		[[ -d ${path} ]] && paths+=( "${path}" )
+	fi
+	_autotools_m4dir_include "${paths[@]}"
+}
 
 fi

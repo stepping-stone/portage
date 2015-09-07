@@ -1,6 +1,40 @@
 # ChangeLog for dev-libs/libgusb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.44 2015/01/24 13:11:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.54 2015/07/19 12:28:01 klausman Exp $
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org> libgusb-0.2.5.ebuild:
+  Stable on alpha, bug 553500
+
+  13 Jul 2015; Jeroen Roovers <jer@gentoo.org> libgusb-0.2.5.ebuild:
+  Stable for HPPA (bug #551814).
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libgusb-0.2.5.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> libgusb-0.2.5.ebuild:
+  amd64 stable wrt bug #551814
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*libgusb-0.2.5 (07 Jun 2015)
+
+  07 Jun 2015; Pacho Ramos <pacho@gentoo.org> +libgusb-0.2.5.ebuild,
+  -libgusb-0.1.6-r1.ebuild, -libgusb-0.1.6.ebuild, metadata.xml:
+  Version bump, drop old
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgusb-0.2.4.ebuild:
+  Fix dependencies: >=libusb-1.0.19 is needed, gudev is not.
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> libgusb-0.2.4.ebuild:
+  Stable for HPPA (bug #534012).
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> libgusb-0.2.4.ebuild:
+  x86 stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> libgusb-0.2.4.ebuild:
+  amd64 stable, bug 534012
 
 *libgusb-0.2.4 (24 Jan 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.21.1.ebuild,v 1.1 2015/02/17 17:13:07 mr_bones_ Exp $
+# $Id$
 
 # TODO: when physfs-2.1.0 hits the tree, set
 # -DPHYSFS_SYSTEM=ON
@@ -16,7 +16,7 @@ SRC_URI="http://download.gna.org/hedgewars/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 Apache-2.0 FDL-1.3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 QA_FLAGS_IGNORED=${GAMES_BINDIR}/hwengine # pascal sucks
 QA_PRESTRIPPED=${GAMES_BINDIR}/hwengine # pascal sucks
@@ -45,7 +45,7 @@ S=${WORKDIR}/${PN}-src-${PV%.*}
 src_configure() {
 	local mycmakeargs=(
 		-DMINIMAL_FLAGS=ON
-		-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}"
+		-DCMAKE_INSTALL_PREFIX="/usr"
 		-DDATA_INSTALL_DIR="${GAMES_DATADIR}/${PN}"
 		-Dtarget_binary_install_dir="${GAMES_BINDIR}"
 		-Dtarget_library_install_dir="$(games_get_libdir)"

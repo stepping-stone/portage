@@ -1,6 +1,36 @@
 # ChangeLog for net-dns/rbldnsd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.29 2014/10/04 17:58:35 mjo Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.37 2015/08/06 10:30:49 ago Exp $
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> rbldnsd-0.997a-r2.ebuild:
+  Stable for amd64, wrt bug #553528
+
+  18 Jul 2015; Jeroen Roovers <jer@gentoo.org> rbldnsd-0.997a-r1.ebuild:
+  Stable for HPPA (bug #553528).
+
+*rbldnsd-0.997a-r2 (29 Jun 2015)
+
+  29 Jun 2015; Michael Orlitzky <mjo@gentoo.org> +rbldnsd-0.997a-r2.ebuild,
+  files/confd-0.997a:
+  Fix comment in conf file and revbump to push it out, bug #553296.
+
+  29 Jun 2015; Michael Orlitzky <mjo@gentoo.org> -files/confd-0.997,
+  -files/initd-0.997:
+  Remove two now-unused init/conf files.
+
+  29 Jun 2015; Michael Orlitzky <mjo@gentoo.org> -rbldnsd-0.997.ebuild,
+  -rbldnsd-0.997a.ebuild:
+  Remove two old versions.
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> rbldnsd-0.997a-r1.ebuild:
+  x86 stable wrt bug #533610
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> rbldnsd-0.997.ebuild,
+  rbldnsd-0.997a-r1.ebuild, rbldnsd-0.997a.ebuild:
+  Drop old Python implementations
+
+  20 Feb 2015; Patrick Lauer <patrick@gentoo.org> rbldnsd-0.997a-r1.ebuild:
+  Stable for amd64 #533610
 
 *rbldnsd-0.997a-r1 (04 Oct 2014)
 

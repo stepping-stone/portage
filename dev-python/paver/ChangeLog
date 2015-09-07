@@ -1,6 +1,19 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.57 2015/01/02 12:24:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.60 2015/06/07 14:39:25 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  23 May 2015; Ian Delaney <idella4@gentoo.org> paver-1.2.3.ebuild,
+  paver-1.2.4.ebuild:
+  correction to dep mock
+
+*paver-1.2.4 (21 Mar 2015)
+
+  21 Mar 2015; Ian Delaney <idella4@gentoo.org> +paver-1.2.4.ebuild,
+  -paver-1.2.2.ebuild:
+  bump; update HOMEPAGE, note upstream issue filed re regression in testsuite
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> paver-1.2.3.ebuild:
   Stable for sparc, wrt bug #530546

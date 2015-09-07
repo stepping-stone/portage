@@ -1,6 +1,62 @@
 # ChangeLog for app-misc/elasticsearch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.9 2015/01/06 10:47:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.16 2015/08/03 10:22:57 chainsaw Exp $
+
+*elasticsearch-1.7.1 (03 Aug 2015)
+*elasticsearch-1.6.2 (03 Aug 2015)
+
+  03 Aug 2015; Tony Vroon <chainsaw@gentoo.org> -elasticsearch-1.6.1.ebuild,
+  +elasticsearch-1.6.2.ebuild, -elasticsearch-1.7.0.ebuild,
+  +elasticsearch-1.7.1.ebuild:
+  This fixes a data corruption bug, which means that all previous ebuilds are
+  withdrawn to enforce the upgrade. Ebuilds & research by Ferenc Erki, closes
+  bug #556222.
+
+*elasticsearch-1.7.0 (27 Jul 2015)
+*elasticsearch-1.6.1 (27 Jul 2015)
+
+  27 Jul 2015; Tony Vroon <chainsaw@gentoo.org> -elasticsearch-1.6.0.ebuild,
+  +elasticsearch-1.6.1.ebuild, +elasticsearch-1.7.0.ebuild,
+  -files/1.3.2-http_cors_disable.patch, -files/elasticsearch.init,
+  -files/elasticsearch.init2, -files/elasticsearch.init3,
+  -files/elasticsearch.service, -files/elasticsearch.service2,
+  -files/elasticsearch.service3, +files/elasticsearch.service4:
+  Updated ebuilds by Ferenc Erki address a systemd unit issue as reported by
+  neko259 in bug #553534 and address the security vulnerability reported by
+  Agostino "ago" Sarubbo in bug #555474. Clean-up of older patches and one
+  vulnerable ebuild.
+
+  29 Jun 2015; Tony Vroon <chainsaw@gentoo.org> elasticsearch-1.6.0.ebuild:
+  Also accept version 8 Java Runtime Environment, as per Ferenc Erki in bug
+  #551880.
+
+*elasticsearch-1.6.0 (11 Jun 2015)
+
+  11 Jun 2015; Tony Vroon <chainsaw@gentoo.org> -elasticsearch-1.4.4.ebuild,
+  -elasticsearch-1.5.0.ebuild, +elasticsearch-1.6.0.ebuild,
+  +files/elasticsearch.init4, +files/elasticsearch.service3, metadata.xml:
+  Security fix relating to an unspecified arbitrary file modification
+  vulnerability. Ebuild, init script and systemd service file by Ferenc Erki.
+  Closes bug #537314 by Austin M. Matherne and bug #547964 by Tomas Mozes.
+  Adding Ferenc Erki as proxy maintainer. Removing all vulnerable ebuilds for
+  security bug #551776.
+
+*elasticsearch-1.5.0 (01 Apr 2015)
+
+  01 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  +elasticsearch-1.5.0.ebuild:
+  Version bump.
+
+  23 Mar 2015; Tony Vroon <chainsaw@gentoo.org> -elasticsearch-1.3.2-r2.ebuild,
+  -elasticsearch-1.4.0.ebuild, -elasticsearch-1.4.2.ebuild:
+  Remove vulnerable ebuilds for security bug #539884.
+
+*elasticsearch-1.4.4 (18 Mar 2015)
+
+  18 Mar 2015; Tony Vroon <chainsaw@gentoo.org> +elasticsearch-1.4.4.ebuild:
+  Version bump, as requested by Tomas "hydrapolic" Mozes in bug #542580.
+  Testing by Amadeusz "aidecoe" Żołnowski suggests no changes to the ebuild
+  are required.
 
 *elasticsearch-1.4.2 (06 Jan 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty-rerun/tasty-rerun-1.1.3.ebuild,v 1.1 2014/12/17 13:19:03 gienah Exp $
+# $Id$
 
 EAPI=5
 
@@ -10,7 +10,7 @@ CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
 DESCRIPTION="Run tests by filtering the test tree depending on the result of previous test runs"
-HOMEPAGE="http://github.com/ocharles/tasty-rerun"
+HOMEPAGE="https://github.com/ocharles/tasty-rerun"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -31,3 +31,10 @@ RDEPEND=">=dev-haskell/mtl-2.1.2:=[profile?]
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.16.0
 "
+
+src_prepare() {
+	cabal_chdeps \
+		'base >=4.6 && <4.8' 'base >=4.6'
+	sed -e 's@LANGUAGE @LANGUAGE FlexibleContexts, @' \
+		-i "${S}/src/Test/Tasty/Ingredients/Rerun.hs" || die
+}

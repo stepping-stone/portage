@@ -1,6 +1,36 @@
 # ChangeLog for dev-python/pylibacl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.39 2014/12/25 23:08:56 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.49 2015/08/04 13:52:22 jlec Exp $
+
+  04 Aug 2015; Justin Lecher <jlec@gentoo.org> -pylibacl-0.5.0.ebuild:
+  Drop old, obsoletes bug #539272
+
+  04 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> pylibacl-0.5.0-r1.ebuild:
+  ia64 stable wrt bug #555934
+
+  31 Jul 2015; Patrice Clement <monsieurp@gentoo.org> pylibacl-0.5.0-r1.ebuild:
+  Stable for amd64.
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> pylibacl-0.5.0-r1.ebuild:
+  Stable for sparc, wrt bug #550260
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> pylibacl-0.5.0-r1.ebuild:
+  ppc stable wrt bug #550260
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> pylibacl-0.5.0-r1.ebuild:
+  Stable for alpha, wrt bug #550260
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> pylibacl-0.5.0-r1.ebuild:
+  Stable for x86, wrt bug #550260
+
+  21 Jun 2015; Markus Meier <maekke@gentoo.org> pylibacl-0.5.0-r1.ebuild:
+  arm stable, bug #550260
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  30 May 2015; Jeroen Roovers <jer@gentoo.org> pylibacl-0.5.0-r1.ebuild:
+  Stable for PPC64 (bug #550260).
 
 *pylibacl-0.5.0-r1 (25 Dec 2014)
 

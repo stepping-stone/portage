@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.2.ebuild,v 1.8 2015/02/04 17:39:58 grobian Exp $
+# $Id$
 
 EAPI="3"
 
@@ -21,8 +21,8 @@ SRC_URI="http://www.opensource.apple.com/tarballs/ld64/${LD64}.tar.gz
 	http://www.opensource.apple.com/tarballs/cctools/${CCTOOLS}.tar.gz
 	http://www.opensource.apple.com/tarballs/libunwind/${LIBUNWIND}.tar.gz
 	http://www.opensource.apple.com/tarballs/dyld/${DYLD}.tar.gz
-	http://www.gentoo.org/~grobian/distfiles/${UNWIND}.tar.xz
-	http://www.gentoo.org/~grobian/distfiles/libunwind-llvm-115426.tar.bz2"
+	https://www.gentoo.org/~grobian/distfiles/${UNWIND}.tar.xz
+	https://www.gentoo.org/~grobian/distfiles/libunwind-llvm-115426.tar.bz2"
 
 LICENSE="APSL-2"
 KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
@@ -36,8 +36,8 @@ DEPEND="${RDEPEND}
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
-	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-		export CTARGET=${CATEGORY/cross-}
+	if [[ ${CATEGORY} == cross-* ]] ; then
+		export CTARGET=${CATEGORY#cross-}
 	fi
 fi
 is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }

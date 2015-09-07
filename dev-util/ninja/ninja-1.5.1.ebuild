@@ -1,15 +1,15 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.5.1.ebuild,v 1.9 2014/11/04 09:23:53 ago Exp $
+# $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit bash-completion-r1 elisp-common python-any-r1 toolchain-funcs
 
 if [ "${PV}" = "999999" ]; then
-	EGIT_REPO_URI="git://github.com/martine/ninja.git http://github.com/martine/ninja.git"
+	EGIT_REPO_URI="git://github.com/martine/ninja.git https://github.com/martine/ninja.git"
 	inherit git-2
 	KEYWORDS=""
 else
@@ -18,7 +18,7 @@ else
 fi
 
 DESCRIPTION="A small build system similar to make"
-HOMEPAGE="http://github.com/martine/ninja"
+HOMEPAGE="https://github.com/martine/ninja"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -59,7 +59,7 @@ run_for_build() {
 src_compile() {
 	tc-export AR CXX
 
-	# configure.py uses CFLAGS instead of CXXFLAGS 
+	# configure.py uses CFLAGS instead of CXXFLAGS
 	export CFLAGS=${CXXFLAGS}
 
 	run_for_build "${PYTHON}" bootstrap.py --verbose || die

@@ -1,6 +1,47 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.228 2015/02/15 22:58:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.239 2015/05/12 19:56:33 mr_bones_ Exp $
+
+*libsdl-1.2.15-r9 (12 May 2015)
+
+  12 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/libsdl-1.2.15-SDL_EnableUNICODE.patch, +libsdl-1.2.15-r9.ebuild:
+  add backported patch from upstream report by Rafał Mużyło via bug #499180 to
+  fix input in some conditions
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  clean unused ps3 use flag
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.15-r8.ebuild:
+  mark stable for the fringe archs
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -libsdl-1.2.15-r4.ebuild:
+  old
+
+*libsdl-1.2.15-r4 (31 Mar 2015)
+
+  31 Mar 2015; Michał Górny <mgorny@gentoo.org> +libsdl-1.2.15-r4.ebuild:
+  Restore stable ebuild. Again.
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -libsdl-1.2.15-r4.ebuild:
+  old
+
+*libsdl-1.2.15-r4 (31 Mar 2015)
+
+  31 Mar 2015; Patrick Lauer <patrick@gentoo.org> +libsdl-1.2.15-r4.ebuild:
+  Restore stable
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -libsdl-1.2.15-r4.ebuild:
+  old
+
+  31 Mar 2015; <jmorgan@gentoo.org> libsdl-1.2.15-r8.ebuild:
+  ppc64 stable wrt #522270
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libsdl-1.2.15-r8.ebuild:
+  add arm64 support, tested on A53 board
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libsdl-1.2.15-r8.ebuild:
+  Stable for ppc, wrt bug #522270
 
   15 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   +files/libsdl-1.2.15-bsd-joystick.patch, libsdl-1.2.15-r8.ebuild:

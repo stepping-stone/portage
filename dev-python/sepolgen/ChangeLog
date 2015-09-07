@@ -1,6 +1,31 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.49 2015/02/04 17:56:33 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.56 2015/07/27 16:20:58 perfinion Exp $
+
+  27 Jul 2015; Jason Zaman <perfinion@gentoo.org> sepolgen-9999.ebuild:
+  dep on setools should only require python useflag if it exists, -9999 drops it
+
+  16 Jul 2015; Jason Zaman <perfinion@gentoo.org> sepolgen-1.2.2.ebuild,
+  sepolgen-9999.ebuild:
+  fix python_compat. live ebuild has python3 support, previous do not
+
+*sepolgen-9999 (09 Jun 2015)
+
+  09 Jun 2015; Sven Vermeulen <swift@gentoo.org> +sepolgen-9999.ebuild:
+  Adding sepolgen-9999 to better support upstream integrations
+
+  08 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Correct remote id
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  10 May 2015; Jason Zaman <perfinion@gentoo.org> sepolgen-1.2.2.ebuild:
+  stabilize selinux 2.4 userland
+
+  18 Apr 2015; Jason Zaman <perfinion@gentoo.org> -sepolgen-1.2.1.ebuild,
+  -sepolgen-1.2.2_rc6.ebuild, -sepolgen-1.2.2_rc7.ebuild:
+  Drop old RCs
 
 *sepolgen-1.2.2 (04 Feb 2015)
 

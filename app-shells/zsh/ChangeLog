@@ -1,6 +1,19 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.250 2015/01/04 01:34:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.253 2015/07/22 06:16:04 vapier Exp $
+
+  22 Jul 2015; Mike Frysinger <vapier@gentoo.org> zsh-5.0.5.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  22 Jul 2015; Mike Frysinger <vapier@gentoo.org> zsh-5.0.5.ebuild,
+  zsh-5.0.7-r1.ebuild, zsh-5.0.7-r2.ebuild, zsh-5.0.8.ebuild, zsh-9999.ebuild:
+  Add arm64/m68k love.
+
+*zsh-5.0.8 (21 Jun 2015)
+
+  21 Jun 2015; Tim Harder <radhermit@gentoo.org> +zsh-5.0.8.ebuild,
+  zsh-9999.ebuild:
+  Version bump, install header files (bug #538684).
 
   04 Jan 2015; Tim Harder <radhermit@gentoo.org> zsh-9999.ebuild:
   Update documentation URL (bug #534472).

@@ -1,6 +1,73 @@
 # ChangeLog for net-ftp/pure-ftpd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.154 2014/12/28 16:23:21 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.169 2015/07/28 13:23:15 polynomial-c Exp $
+
+*pure-ftpd-1.0.42 (28 Jul 2015)
+
+  28 Jul 2015; Lars Wendler <polynomial-c@gentoo.org> -pure-ftpd-1.0.36.ebuild,
+  +pure-ftpd-1.0.42.ebuild:
+  Version bump. Removed old.
+
+  22 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> pure-ftpd-1.0.40.ebuild:
+  ia64 stable wrt bug #552254
+
+  16 Jul 2015; Lars Wendler <polynomial-c@gentoo.org> pure-ftpd-1.0.40.ebuild,
+  pure-ftpd-1.0.41.ebuild:
+  We need openssl with bindist USE flag being disabled (bug #554568). Restored
+  ~alpha and ~sparc KEYWORDS for pure-ftpd-1.0.41.
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> pure-ftpd-1.0.40.ebuild:
+  Stable for sparc, wrt bug #552254
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> pure-ftpd-1.0.40.ebuild:
+  Stable for alpha, wrt bug #552254
+
+*pure-ftpd-1.0.41 (30 Jun 2015)
+
+  30 Jun 2015; Lars Wendler <polynomial-c@gentoo.org> -pure-ftpd-1.0.39.ebuild,
+  +pure-ftpd-1.0.41.ebuild:
+  Version bump. Removed old.
+
+  24 Jun 2015; Agostino Sarubbo <ago@gentoo.org> pure-ftpd-1.0.40.ebuild:
+  Stable for ppc, wrt bug #552254
+
+  21 Jun 2015; Markus Meier <maekke@gentoo.org> pure-ftpd-1.0.40.ebuild:
+  arm stable, bug #552254
+
+  20 Jun 2015; Jeroen Roovers <jer@gentoo.org> pure-ftpd-1.0.40.ebuild:
+  Stable for HPPA PPC64 (bug #552254).
+
+  16 Jun 2015; Agostino Sarubbo <ago@gentoo.org> pure-ftpd-1.0.40.ebuild:
+  Stable for x86, wrt bug #552254
+
+  16 Jun 2015; Agostino Sarubbo <ago@gentoo.org> pure-ftpd-1.0.40.ebuild:
+  Stable for amd64, wrt bug #552254
+
+*pure-ftpd-1.0.40 (16 Jun 2015)
+
+  16 Jun 2015; Lars Wendler <polynomial-c@gentoo.org> -pure-ftpd-1.0.38.ebuild,
+  +pure-ftpd-1.0.40.ebuild:
+  Version bump. Removed old.
+
+*pure-ftpd-1.0.39 (01 Jun 2015)
+
+  01 Jun 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -pure-ftpd-1.0.36-r1.ebuild, -pure-ftpd-1.0.37.ebuild,
+  +pure-ftpd-1.0.39.ebuild:
+  Version bump. Removed old.
+
+*pure-ftpd-1.0.38 (27 May 2015)
+
+  27 May 2015; Lars Wendler <polynomial-c@gentoo.org> +pure-ftpd-1.0.38.ebuild:
+  Version bump.
+
+*pure-ftpd-1.0.37 (16 Apr 2015)
+
+  16 Apr 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -pure-ftpd-1.0.29-r1.ebuild, pure-ftpd-1.0.36.ebuild,
+  pure-ftpd-1.0.36-r1.ebuild, +pure-ftpd-1.0.37.ebuild,
+  -files/pure-ftpd.conf_d-2, -files/pure-ftpd.rc10:
+  Version bump. Removed old. Adjusted openssl and postgresql slot dependency.
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   pure-ftpd-1.0.29-r1.ebuild, pure-ftpd-1.0.36.ebuild,

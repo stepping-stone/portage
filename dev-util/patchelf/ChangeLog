@@ -1,6 +1,20 @@
 # ChangeLog for dev-util/patchelf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchelf/ChangeLog,v 1.12 2015/01/05 08:31:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchelf/ChangeLog,v 1.16 2015/07/29 08:04:07 jlec Exp $
+
+  29 Jul 2015; Justin Lecher <jlec@gentoo.org> +files/patchelf-0.8-dash.patch,
+  patchelf-0.8.ebuild:
+  Backport patch for /bin/sh -> dash, bug #555360
+
+  24 Jun 2015; Agostino Sarubbo <ago@gentoo.org> patchelf-0.8.ebuild:
+  Stable for ppc, wrt bug #537940
+
+  22 May 2015; James Le Cuirot <chewi@gentoo.org> patchelf-0.8.ebuild:
+  ~ppc keyword.
+
+  01 Mar 2015; Zac Medico <zmedico@gentoo.org>
+  -files/patchelf-0.6-test-build.patch:
+  Remove unused patch since 0.6 was removed for bug 455454.
 
   05 Jan 2015; Justin Lecher <jlec@gentoo.org> -patchelf-0.6.ebuild,
   -patchelf-0.6-r1.ebuild:

@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-13.2.ebuild,v 1.3 2015/02/16 01:05:11 vapier Exp $
+# $Id$
 
 EAPI="5"
 
 # Does not work with py3 here
 # It might work with py:2.5 but I didn't test that
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
 
 inherit eutils python-single-r1 multiprocessing autotools
@@ -23,7 +23,7 @@ case ${PV} in
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI="https://github.com/xbmc/xbmc/archive/${MY_PV}.tar.gz -> ${P}.tar.gz
 		!java? ( mirror://gentoo/${P}-generated-addons.tar.xz )"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 	S=${WORKDIR}/${MY_P}
 	;;
 *|*_p*)
@@ -31,7 +31,7 @@ case ${PV} in
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI="http://mirrors.xbmc.org/releases/source/${MY_P}.tar.gz
 		http://mirrors.xbmc.org/releases/source/${MY_P}-generated-addons.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 
 	S=${WORKDIR}/${MY_P}-${CODENAME}
 	;;

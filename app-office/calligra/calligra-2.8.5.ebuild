@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.8.5.ebuild,v 1.7 2015/02/14 14:38:03 ago Exp $
+# $Id$
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -41,9 +41,9 @@ if [[ ${KDE_BUILD_TYPE} == release ]] ; then
 fi
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +glew +glib +gsf gsl
-import-filter +jpeg jpeg2k +kdcraw kde +kdepim +lcms marble mysql nepomuk
-+okular openexr +pdf postgres spacenav sybase test tiff +threads +truetype vc
-xbase +xml"
+import-filter +jpeg jpeg2k +kdcraw kde +kdepim +lcms marble mysql +okular
+openexr +pdf postgres spacenav sybase test tiff +threads +truetype vc xbase
++xml"
 
 # please do not sort here, order is same as in CMakeLists.txt
 CAL_FTS="words stage sheets author karbon krita kexi flow plan braindump"
@@ -73,8 +73,7 @@ RDEPEND="
 	!app-office/krita
 	!app-office/kspread
 	!app-office/kword
-	$(add_kdebase_dep kdelibs 'nepomuk?')
-	$(add_kdebase_dep knewstuff)
+	$(add_kdeapps_dep knewstuff)
 	dev-lang/perl
 	dev-libs/boost
 	dev-qt/qtcore:4[exceptions]
@@ -103,17 +102,16 @@ RDEPEND="
 	)
 	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/openjpeg:0 )
-	kdcraw? ( $(add_kdebase_dep libkdcraw) )
+	kdcraw? ( $(add_kdeapps_dep libkdcraw) )
 	kde? ( $(add_kdebase_dep kactivities) )
 	kdepim? ( $(add_kdebase_dep kdepimlibs) )
 	lcms? (
 		media-libs/lcms:2
 		x11-libs/libX11
 	)
-	marble? ( $(add_kdebase_dep marble) )
+	marble? ( $(add_kdeapps_dep marble) )
 	mysql? ( virtual/mysql )
-	nepomuk? ( dev-libs/soprano )
-	okular? ( $(add_kdebase_dep okular) )
+	okular? ( $(add_kdeapps_dep okular) )
 	opengl? ( virtual/glu )
 	openexr? ( media-libs/openexr )
 	pdf? (
@@ -174,6 +172,7 @@ src_configure() {
 		"-DBUILD_active=OFF"         # we dont support active gui, maybe arm could
 		"-DCREATIVEONLY=OFF"
 		"-DPACKAGERS_BUILD=OFF"
+		"-DWITH_Soprano=OFF"
 	)
 
 	# regular options
@@ -202,7 +201,6 @@ src_configure() {
 		$(cmake-utils_use_with lcms LCMS2)
 		$(cmake-utils_use_with marble Marble)
 		$(cmake-utils_use_with mysql MySQL)
-		$(cmake-utils_use_with nepomuk Soprano)
 		$(cmake-utils_use_with okular Okular)
 		$(cmake-utils_use_with openexr OpenEXR)
 		$(cmake-utils_use_with opengl OpenGL)

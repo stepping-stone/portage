@@ -1,6 +1,37 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.69 2015/02/18 17:58:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.78 2015/07/06 16:21:21 williamh Exp $
+
+  06 Jul 2015; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  re-add subslot. We do need this, and we will need all Go packages in the tree
+  to use it in DEPEND.
+
+  03 Jul 2015; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  remove subslot
+
+  23 Jun 2015; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  Add PV as a subslot to allow packages to be rebuilt when the go version
+  changes
+
+  09 Jun 2015; William Hubbs <williamh@gentoo.org> go-1.4.2.ebuild,
+  go-9999.ebuild:
+  stop warnings about writable and executable sections
+
+  02 Jun 2015; William Hubbs <williamh@gentoo.org>
+  -files/go-1.2-no-Werror.patch, -go-1.4.1.ebuild:
+  remove old version
+
+  02 Jun 2015; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  Remove include directory for #549814 thanks to Bohdan Trach
+
+  27 May 2015; Mikle Kolyada <zlogene@gentoo.org> go-1.4.2.ebuild:
+  arm stable wrt bug #543666
+
+  08 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> go-1.4.2.ebuild:
+  x86 stable wrt bug #543666
+
+  18 Mar 2015; William Hubbs <williamh@gentoo.org> go-1.4.2.ebuild:
+  amd64 stable for #543666
 
 *go-1.4.2 (18 Feb 2015)
 

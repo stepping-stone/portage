@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999-r3.ebuild,v 1.11 2015/02/06 16:58:57 polynomial-c Exp $
+# $Id$
 
 EAPI=5
 
 GENTOO_DEPEND_ON_PERL=no
 
 # bug #329479: git-remote-testgit is not multiple-version aware
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 [[ ${PV} == *9999 ]] && SCM="git-2"
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/git/git.git"
 EGIT_MASTER=pu
@@ -23,7 +23,7 @@ DESCRIPTION="GIT - the stupid content tracker, the revision control system heavi
 HOMEPAGE="http://www.git-scm.com/"
 if [[ ${PV} != *9999 ]]; then
 	SRC_URI_SUFFIX="xz"
-	SRC_URI_GOOG="http://git-core.googlecode.com/files"
+	SRC_URI_GOOG="https://git-core.googlecode.com/files"
 	SRC_URI_KORG="mirror://kernel/software/scm/git"
 	SRC_URI="${SRC_URI_GOOG}/${MY_P}.tar.${SRC_URI_SUFFIX}
 			${SRC_URI_KORG}/${MY_P}.tar.${SRC_URI_SUFFIX}
@@ -42,11 +42,11 @@ IUSE="+blksha1 +curl cgi doc emacs gnome-keyring +gpg gtk highlight +iconv media
 
 # Common to both DEPEND and RDEPEND
 CDEPEND="
-	dev-libs/openssl
+	dev-libs/openssl:0
 	sys-libs/zlib
 	pcre? ( dev-libs/libpcre )
 	perl? ( dev-lang/perl:=[-build(-)] )
-	tk? ( dev-lang/tk )
+	tk? ( dev-lang/tk:0 )
 	curl? (
 		net-misc/curl
 		webdav? ( dev-libs/expat )
@@ -63,7 +63,7 @@ RDEPEND="${CDEPEND}
 	perl? ( dev-perl/Error
 			dev-perl/Net-SMTP-SSL
 			dev-perl/Authen-SASL
-			cgi? ( virtual/perl-CGI highlight? ( app-text/highlight ) )
+			cgi? ( dev-perl/CGI highlight? ( app-text/highlight ) )
 			cvs? ( >=dev-vcs/cvsps-2.1:0 dev-perl/DBI dev-perl/DBD-SQLite )
 			subversion? ( dev-vcs/subversion[-dso,perl] dev-perl/libwww-perl dev-perl/TermReadKey )
 			)
@@ -188,6 +188,8 @@ exportmakeopts() {
 	fi
 	if [[ ${CHOST} == *-solaris* ]]; then
 		myopts="${myopts} NEEDS_LIBICONV=YesPlease"
+		myopts="${myopts} HAVE_CLOCK_MONOTONIC=1"
+		myopts="${myopts} HAVE_GETDELIM=1"
 	fi
 
 	has_version '>=app-text/asciidoc-8.0' \

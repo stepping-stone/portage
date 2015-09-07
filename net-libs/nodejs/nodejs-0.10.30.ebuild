@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.10.30.ebuild,v 1.3 2014/08/02 13:47:53 ago Exp $
+# $Id$
 
 EAPI=5
 
 # has known failures. sigh.
 RESTRICT="test"
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit python-any-r1 pax-utils toolchain-funcs
 
@@ -28,7 +28,7 @@ S=${WORKDIR}/node-v${PV}
 
 src_prepare() {
 	# fix compilation on Darwin
-	# http://code.google.com/p/gyp/issues/detail?id=260
+	# https://code.google.com/p/gyp/issues/detail?id=260
 	sed -i -e "/append('-arch/d" tools/gyp/pylib/gyp/xcode_emulation.py || die
 
 	# make sure we use python2.* while using gyp

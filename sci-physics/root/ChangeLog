@@ -1,6 +1,94 @@
 # ChangeLog for sci-physics/root
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.135 2014/12/28 16:55:15 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.153 2015/07/18 22:38:20 bircoph Exp $
+
+  18 Jul 2015; Andrew Savchenko <bircoph@gentoo.org> root-6.02.05-r2.ebuild:
+  Install README.md in the same directory as all other docs (ignores ).
+
+  18 Jul 2015; Andrew Savchenko <bircoph@gentoo.org> -root-5.34.28-r1.ebuild:
+  Remove old.
+
+*root-5.34.32 (18 Jul 2015)
+
+  18 Jul 2015; Andrew Savchenko <bircoph@gentoo.org> root-5.34.26.ebuild,
+  root-5.34.28-r1.ebuild, +root-5.34.32.ebuild:
+  Version bump. Purge unused DOC_URI.
+
+  18 Jul 2015; Andrew Savchenko <bircoph@gentoo.org> root-5.34.26.ebuild,
+  root-5.34.28-r1.ebuild:
+  Do not use usex for postgres to avoid pg_config unconditional
+  sourcing. See bug 555246.
+
+  16 Jul 2015; Andrew Savchenko <bircoph@gentoo.org> root-5.34.28-r1.ebuild:
+  root-5.34.xx can't be used with >=pythia-8.2, see
+  https://sft.its.cern.ch/jira/browse/ROOT-6862
+
+  16 Jul 2015; Andrew Savchenko <bircoph@gentoo.org> root-5.34.26.ebuild,
+  root-5.34.28-r1.ebuild, root-6.02.05-r2.ebuild:
+  Fix compiler version check for ICC and Clang. Reported by Dmitry
+  Kustov, dkustov@jinr.ru.
+
+  15 May 2015; Andrew Savchenko <bircoph@gentoo.org> root-6.02.05-r2.ebuild,
+  -files/root-6.02.05-dictpch.patch:
+  Temporarily disable PCH dictionary regeneration due to bug 548698:
+  root has too many hardcode paths for cling-related stuff, this
+  should be fixed first for dictionary to be regenerated on root
+  install.
+
+  01 May 2015; Andrew Savchenko <bircoph@gentoo.org> root-5.34.26.ebuild:
+  5.34.26 have no support for pythia-8.2
+
+  15 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> root-6.02.05-r2.ebuild:
+  Set ROOTSYS during make install, since a different value (e.g. from
+  older installed version) may broke make install.
+
+  12 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> -root-5.34.28.ebuild:
+  Remove old.
+
+*root-5.34.28-r1 (12 Apr 2015)
+
+  12 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> +root-5.34.28-r1.ebuild:
+  Add new USE flags, remove minimal USE flag, as it is useless now.
+  Fix conditional dependencies.
+
+  12 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> root-6.02.05-r2.ebuild:
+  Depend on shadow conditionally.
+
+*root-6.02.05-r2 (12 Apr 2015)
+
+  12 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> +root-6.02.05-r2.ebuild,
+  +files/root-6.00.01-dotfont.patch, +files/root-6.00.01-geocad.patch,
+  +files/root-6.00.01-llvm.patch, +files/root-6.00.01-nobyte-compile.patch,
+  +files/root-6.00.01-prop-flags.patch, +files/root-6.02.05-dictpch.patch,
+  +files/root-6.02.05-xrootd4.patch, metadata.xml:
+  Version bump from science overlay. Add new USE flags, remove
+  minimal USE flag.
+
+*root-5.34.28 (25 Mar 2015)
+
+  25 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> +root-5.34.28.ebuild:
+  Version bump.
+
+  25 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> root-5.34.26.ebuild:
+  Declare loop iterator as local.
+
+  17 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> root-5.34.26.ebuild,
+  +files/root-5.34.26-ldflags.patch:
+  Upstream is not interested in ldflags patch:
+  https://sft.its.cern.ch/jira/browse/ROOT-7106
+  so reverting to much simpler solution.
+
+  02 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> -root-5.34.18.ebuild,
+  -root-5.34.18-r1.ebuild, -files/root-5.32.00-prop-flags.patch,
+  -files/root-5.34.13-pythia8.patch:
+  Remove old and broken vensions.
+
+*root-5.34.26 (02 Mar 2015)
+
+  02 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> +root-5.34.26.ebuild,
+  files/root-5.32.00-chklib64.patch, metadata.xml:
+  Version bump (from science overlay). Rework compilers handling,
+  *flags handling. Add support for http, C++14. Fix html headers.
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> root-5.32.03-r2.ebuild,
   root-5.34.18.ebuild, root-5.34.18-r1.ebuild:

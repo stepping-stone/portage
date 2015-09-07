@@ -1,15 +1,15 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.34_pre805-r1.ebuild,v 1.2 2014/09/07 15:31:30 jmorgan Exp $
+# $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 DISTUTILS_IN_SOURCE_BUILD=1
 
 inherit bash-completion-r1 eutils linux-info distutils-r1 systemd
 
 DESCRIPTION="A program used to manage a netfilter firewall"
-HOMEPAGE="http://launchpad.net/ufw"
+HOMEPAGE="https://launchpad.net/ufw"
 SRC_URI="mirror://sabayon/${CATEGORY}/${P}.tar.gz"
 
 LICENSE="GPL-3"

@@ -1,6 +1,28 @@
 # ChangeLog for dev-ruby/httparty
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.34 2014/11/13 22:07:24 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.40 2015/07/21 05:03:32 graaff Exp $
+
+  21 Jul 2015; Hans de Graaff <graaff@gentoo.org> -httparty-0.13.3.ebuild:
+  Cleanup.
+
+*httparty-0.13.5 (31 May 2015)
+
+  31 May 2015; Hans de Graaff <graaff@gentoo.org> +httparty-0.13.5.ebuild:
+  Version bump.
+
+  16 May 2015; Hans de Graaff <graaff@gentoo.org> -httparty-0.13.1.ebuild:
+  Cleanup.
+
+*httparty-0.13.4 (16 May 2015)
+
+  16 May 2015; Hans de Graaff <graaff@gentoo.org> +httparty-0.13.4.ebuild:
+  Version bump.
+
+  18 Apr 2015; Hans de Graaff <graaff@gentoo.org> httparty-0.13.3.ebuild:
+  Avoid test dependency on dev-util/cucumber.
+
+  13 Apr 2015; Hans de Graaff <graaff@gentoo.org> httparty-0.13.1.ebuild:
+  Create stable candidate.
 
 *httparty-0.13.3 (13 Nov 2014)
 

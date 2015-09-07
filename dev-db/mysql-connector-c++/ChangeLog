@@ -1,6 +1,21 @@
 # ChangeLog for dev-db/mysql-connector-c++
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/ChangeLog,v 1.24 2014/10/29 09:37:29 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/ChangeLog,v 1.26 2015/07/21 15:09:32 grknight Exp $
+
+*mysql-connector-c++-1.1.6 (21 Jul 2015)
+
+  21 Jul 2015; Brian Evans <grknight@gentoo.org>
+  +files/mysql-connector-c++-1.1.6-fix-cmake.patch,
+  +mysql-connector-c++-1.1.6.ebuild, mysql-connector-c++-1.1.3.ebuild:
+  Version bump; fix repoman slot warning
+
+*mysql-connector-c++-1.1.5 (22 Feb 2015)
+
+  22 Feb 2015; Brian Evans <grknight@gentoo.org>
+  +files/mysql-connector-c++-1.1.5-fix-cmake.patch,
+  +files/mysql-connector-c++-1.1.5-fix-mariadb.patch,
+  +mysql-connector-c++-1.1.5.ebuild:
+  Version bump
 
   29 Oct 2014; Agostino Sarubbo <ago@gentoo.org>
   mysql-connector-c++-1.1.3.ebuild:

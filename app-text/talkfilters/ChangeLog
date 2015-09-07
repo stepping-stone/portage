@@ -1,6 +1,18 @@
 # ChangeLog for app-text/talkfilters
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.34 2011/01/06 16:24:20 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.37 2015/08/06 07:20:52 ago Exp $
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> talkfilters-2.3.8-r1.ebuild:
+  Stable for x86, wrt bug #556552
+
+  03 Aug 2015; Agostino Sarubbo <ago@gentoo.org> talkfilters-2.3.8-r1.ebuild:
+  Stable for amd64, wrt bug #556552
+
+*talkfilters-2.3.8-r1 (03 Jul 2015)
+
+  03 Jul 2015; Justin Lecher <jlec@gentoo.org>
+  +files/talkfilters-2.3.8-format-security.patch, +talkfilters-2.3.8-r1.ebuild:
+  fix problems with format-security, bug #521258
 
   06 Jan 2011; Justin Lecher <jlec@gentoo.org> talkfilters-2.3.8.ebuild:
   Some Clean up

@@ -1,6 +1,29 @@
 # ChangeLog for xfce-extra/xfce4-weather-plugin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.42 2014/11/05 09:18:08 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.47 2015/08/05 10:47:48 perfinion Exp $
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  xfce4-weather-plugin-0.8.6.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  xfce4-weather-plugin-0.8.6.ebuild:
+  x86 stable wrt bug #553500
+
+*xfce4-weather-plugin-0.8.6 (24 Jun 2015)
+
+  24 Jun 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-weather-plugin-0.8.6.ebuild:
+  Version bump with minor fixes.
+
+*xfce4-weather-plugin-0.8.5 (12 Apr 2015)
+
+  12 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-weather-plugin-0.8.5.ebuild:
+  Version bump with translation updates.
 
   05 Nov 2014; Samuli Suominen <ssuominen@gentoo.org>
   -xfce4-weather-plugin-0.8.3-r1.ebuild:

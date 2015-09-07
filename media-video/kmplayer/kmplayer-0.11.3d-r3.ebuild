@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3d-r3.ebuild,v 1.5 2014/12/31 13:27:30 kensington Exp $
+# $Id$
 
 EAPI=5
 
@@ -11,8 +11,8 @@ KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend"
-HOMEPAGE="http://kmplayer.kde.org/"
-SRC_URI="http://kmplayer.kde.org/pkgs/${P}.tar.bz2"
+HOMEPAGE="https://projects.kde.org/projects/extragear/multimedia/kmplayer"
+SRC_URI="https://kmplayer.kde.org/pkgs/${P}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2 LGPL-2.1"
 SLOT="4"
@@ -29,7 +29,7 @@ DEPEND="
 	)
 	npp? (
 		dev-libs/dbus-glib
-		$(add_kdebase_dep kreadconfig)
+		$(add_kdeapps_dep kreadconfig)
 		>=x11-libs/gtk+-2.10.14:2
 		www-plugins/adobe-flash
 	)
@@ -37,6 +37,8 @@ DEPEND="
 RDEPEND="${DEPEND}
 	media-video/mplayer
 "
+
+PATCHES=( "${FILESDIR}/${P}-kdelibs-4.14.11.patch" )
 
 src_prepare() {
 	use npp && epatch "${FILESDIR}/${PN}-flash.patch"

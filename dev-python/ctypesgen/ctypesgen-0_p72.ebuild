@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ctypesgen-0_p72.ebuild,v 1.21 2012/05/12 01:16:16 aballier Exp $
+# $Id$
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 inherit distutils
 
 DESCRIPTION="Python wrapper generator for ctypes"
-HOMEPAGE="http://code.google.com/p/ctypesgen/"
+HOMEPAGE="https://github.com/davidjamesca/ctypesgen"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"

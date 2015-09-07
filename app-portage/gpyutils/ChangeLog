@@ -1,6 +1,19 @@
 # ChangeLog for app-portage/gpyutils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gpyutils/ChangeLog,v 1.16 2014/12/27 00:18:11 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gpyutils/ChangeLog,v 1.19 2015/06/07 19:06:57 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add bitbucket to remote-id in metadata.xml
+
+*gpyutils-0.1.4 (08 Apr 2015)
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> +gpyutils-0.1.4.ebuild:
+  Version bump. Supports reporting stabilization candidates in gpy-upgrade-impl,
+  fixes to gpy-depcands and gpy-drop-dead-impls.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gpyutils-0.1.2.ebuild,
+  gpyutils-0.1.3.ebuild, gpyutils-0.1.ebuild, gpyutils-9999.ebuild:
+  Remove old Python implementations
 
   27 Dec 2014; Michał Górny <mgorny@gentoo.org> files/implementations.txt:
   Update impl status.

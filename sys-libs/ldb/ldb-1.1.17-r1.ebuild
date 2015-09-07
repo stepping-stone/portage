@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.17-r1.ebuild,v 1.7 2015/01/28 06:56:31 polynomial-c Exp $
+# $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="threads"
 
 inherit python-single-r1 waf-utils multilib
@@ -72,6 +72,6 @@ pkg_postinst() {
 	if has_version sys-auth/sssd; then
 		ewarn "You have sssd installed. It is known to break after ldb upgrades,"
 		ewarn "so please try to rebuild it before reporting bugs."
-		ewarn "See http://bugs.gentoo.org/404281"
+		ewarn "See https://bugs.gentoo.org/404281"
 	fi
 }

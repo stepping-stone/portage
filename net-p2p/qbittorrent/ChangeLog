@@ -1,6 +1,60 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.238 2015/02/17 19:15:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.252 2015/08/06 11:48:35 ago Exp $
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> qbittorrent-3.1.12.ebuild:
+  Stable for amd64, wrt bug #550078
+
+  25 Jul 2015; Markus Meier <maekke@gentoo.org> qbittorrent-3.1.9.2-r1.ebuild:
+  arm stable, bug #549076
+
+  04 Jun 2015; Davide Pesavento <pesa@gentoo.org> qbittorrent-3.2.0.ebuild,
+  qbittorrent-9999.ebuild:
+  Add missing dep wrt bug #550480
+
+*qbittorrent-3.2.0 (17 May 2015)
+
+  17 May 2015; Markos Chandras <hwoarang@gentoo.org> +qbittorrent-3.2.0.ebuild:
+  Version bump. Bug #549426
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> qbittorrent-3.1.12.ebuild,
+  qbittorrent-3.1.9.2-r1.ebuild, qbittorrent-9999.ebuild:
+  Add missing usedep for qtsingleapplication.
+
+  05 May 2015; Davide Pesavento <pesa@gentoo.org> -qbittorrent-3.0.11-r2.ebuild:
+  Remove old.
+
+  05 May 2015; Jeroen Roovers <jer@gentoo.org> qbittorrent-3.1.9.2-r1.ebuild,
+  qbittorrent-3.1.12.ebuild:
+  Mark ~ppc64 too.
+
+  19 Apr 2015; Markos Chandras <hwoarang@gentoo.org> -qbittorrent-3.1.10.ebuild,
+  -qbittorrent-3.1.11.ebuild, qbittorrent-3.0.11-r2.ebuild,
+  qbittorrent-3.1.12.ebuild, qbittorrent-3.1.9.2-r1.ebuild:
+  qbittorrent releases do not work with rb_libtorrent-1.0
+
+  19 Apr 2015; Markos Chandras <hwoarang@gentoo.org> qbittorrent-9999.ebuild:
+  A bit of cleanup and sync with regular ebuilds
+
+  19 Apr 2015; Markos Chandras <hwoarang@gentoo.org> qbittorrent-9999.ebuild:
+  Bump rb_libtorrent dep. Drop geoip support. Bug #546440
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> qbittorrent-3.0.11-r2.ebuild,
+  qbittorrent-3.1.10.ebuild, qbittorrent-3.1.11.ebuild,
+  qbittorrent-3.1.12.ebuild, qbittorrent-3.1.9.2-r1.ebuild:
+  Drop old Python implementations
+
+  01 Mar 2015; Markos Chandras <hwoarang@gentoo.org> qbittorrent-3.1.12.ebuild,
+  qbittorrent-9999.ebuild:
+  Add epatch_user. Bug #541690
+
+*qbittorrent-3.1.12 (27 Feb 2015)
+
+  27 Feb 2015; Markos Chandras <hwoarang@gentoo.org> +qbittorrent-3.1.12.ebuild:
+  Version bump. Bug #541386
+
+  23 Feb 2015; Markos Chandras <hwoarang@gentoo.org> qbittorrent-9999.ebuild:
+  Fix qtgui slot for Qt5
 
   17 Feb 2015; Ben de Groot <yngwin@gentoo.org> metadata.xml,
   qbittorrent-9999.ebuild:

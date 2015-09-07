@@ -1,6 +1,37 @@
 # ChangeLog for dev-python/netaddr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.27 2014/11/25 09:45:15 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.36 2015/07/02 08:16:10 jlec Exp $
+
+*netaddr-0.7.15 (02 Jul 2015)
+
+  02 Jul 2015; Justin Lecher <jlec@gentoo.org> +netaddr-0.7.15.ebuild:
+  Version Bump
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
+
+*netaddr-0.7.14 (27 May 2015)
+
+  27 May 2015; Justin Lecher <jlec@gentoo.org> +netaddr-0.7.14.ebuild:
+  Version Bump
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> netaddr-0.7.12.ebuild:
+  Drop old Python implementations
+
+*netaddr-0.7.13 (03 Apr 2015)
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> +netaddr-0.7.13.ebuild,
+  -netaddr-0.7.10-r1.ebuild, -netaddr-0.7.11.ebuild, metadata.xml:
+  Version Bump, #538432; remove old
+
+  09 Mar 2015; Pacho Ramos <pacho@gentoo.org> netaddr-0.7.12.ebuild:
+  x86 stable, bug 540290
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> netaddr-0.7.12.ebuild:
+  amd64 stable, bug 540290
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> netaddr-0.7.12.ebuild:
   Support python 3.4

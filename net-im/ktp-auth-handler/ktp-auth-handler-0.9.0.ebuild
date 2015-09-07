@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-auth-handler/ktp-auth-handler-0.9.0.ebuild,v 1.2 2015/01/29 00:45:46 johu Exp $
+# $Id$
 
 EAPI=5
 
@@ -10,7 +10,7 @@ sr@latin sv uk vi zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="KDE Telepathy authentication handler"
-HOMEPAGE="http://community.kde.org/Real-Time_Communication_and_Collaboration"
+HOMEPAGE="https://community.kde.org/Real-Time_Communication_and_Collaboration"
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/stable/kde-telepathy/${PV}/src/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
@@ -29,5 +29,5 @@ DEPEND="
 	>=net-libs/telepathy-qt-0.9.5[qt4]
 "
 RDEPEND="${DEPEND}
-	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
+	app-crypt/qca:2[openssl]
 "

@@ -1,6 +1,30 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.156 2015/01/19 09:36:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.163 2015/07/23 20:22:03 pacho Exp $
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> ibus-1.5.10.ebuild:
+  ppc stable wrt bug #551062
+
+  15 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> ibus-1.5.10.ebuild:
+  x86 stable wrt bug #551062
+
+  11 Jul 2015; Markus Meier <maekke@gentoo.org> ibus-1.5.10.ebuild:
+  arm stable, bug #551062
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> ibus-1.5.10.ebuild:
+  Stable for amd64, wrt bug #551062
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> ibus-1.5.5.ebuild:
+  Remove old Python implementations
+
+*ibus-1.5.10 (28 Feb 2015)
+
+  28 Feb 2015; Yixun Lan <dlan@gentoo.org> -ibus-1.5.9.ebuild,
+  +ibus-1.5.10.ebuild:
+  version bump, drop old
 
   19 Jan 2015; Pacho Ramos <pacho@gentoo.org> ibus-1.5.9-r1.ebuild:
   eautoreconf is needed (#536022 by OGINO Masanori), USE vala needs USE

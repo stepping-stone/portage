@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r91.ebuild,v 1.3 2014/10/27 14:13:13 mgorny Exp $
+# $Id$
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit versionator
 DESCRIPTION="Programmable Completion for bash"
 HOMEPAGE="http://bash-completion.alioth.debian.org/"
 SRC_URI="http://bash-completion.alioth.debian.org/files/${P}.tar.bz2
-	http://dev.gentoo.org/~mgorny/dist/bashcomp2-pre1.tar.gz"
+	https://dev.gentoo.org/~mgorny/dist/bashcomp2-pre1.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="|| ( >=app-shells/bash-4.1 app-shells/zsh )
 	sys-apps/miscfiles
-	!app-admin/eselect-bashcomp"
+	!app-eselect/eselect-bashcomp"
 
 # Remove unwanted completions.
 STRIP_COMPLETIONS=(

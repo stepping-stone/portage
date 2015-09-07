@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/edit-distance/edit-distance-0.2.1.2.ebuild,v 1.2 2013/07/21 17:29:16 ottxor Exp $
+# $Id$
 
 EAPI=5
 
@@ -10,7 +10,7 @@ CABAL_FEATURES="bin lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
 DESCRIPTION="Levenshtein and restricted Damerau-Levenshtein edit distances"
-HOMEPAGE="http://github.com/batterseapower/edit-distance"
+HOMEPAGE="https://github.com/batterseapower/edit-distance"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -22,6 +22,11 @@ RDEPEND=">=dev-haskell/random-1.0:=[profile?]
 		>=dev-lang/ghc-6.10.4:="
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.2"
+
+src_prepare() {
+	sed -e 's@LANGUAGE @LANGUAGE FlexibleContexts, @' \
+		-i "${S}/Text/EditDistance/STUArray.hs" || die
+}
 
 src_configure() {
 	haskell-cabal_src_configure \

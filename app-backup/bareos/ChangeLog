@@ -1,6 +1,35 @@
 # ChangeLog for app-backup/bareos
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/ChangeLog,v 1.14 2014/12/28 14:43:07 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/ChangeLog,v 1.21 2015/06/07 07:22:45 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  05 May 2015; Marc Schiffbauer <mschiff@gentoo.org> ChangeLog:
+  fix signature
+
+*bareos-13.2.4-r1 (05 May 2015)
+
+  05 May 2015; Marc Schiffbauer <mschiff@gentoo.org> bareos-12.4.5-r1.ebuild,
+  -bareos-13.2.3-r1.ebuild, -bareos-13.2.4.ebuild, +bareos-13.2.4-r1.ebuild,
+  bareos-14.2.1.ebuild:
+  Rename USE sqlite3 to sqlite, revbump 13.2.4. Fixes #548648.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> bareos-12.4.5-r1.ebuild,
+  bareos-13.2.3-r1.ebuild, bareos-13.2.4.ebuild, bareos-14.2.1.ebuild:
+  Remove old Python implementations
+
+  10 Mar 2015; Marc Schiffbauer <mschiff@gentoo.org> bareos-12.4.5-r1.ebuild,
+  bareos-13.2.3-r1.ebuild, bareos-13.2.4.ebuild, bareos-14.2.1.ebuild:
+  use :0 slot for gmp and readline depends
+
+  10 Mar 2015; Marc Schiffbauer <mschiff@gentoo.org> bareos-12.4.5-r1.ebuild,
+  bareos-13.2.3-r1.ebuild, bareos-13.2.4.ebuild, bareos-14.2.1.ebuild:
+  fix openssl dependency slot
+
+  10 Mar 2015; Marc Schiffbauer <mschiff@gentoo.org> bareos-12.4.5-r1.ebuild,
+  bareos-13.2.3-r1.ebuild, bareos-13.2.4.ebuild, bareos-14.2.1.ebuild:
+  fixed slotted dependencies
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   bareos-12.4.5-r1.ebuild, bareos-13.2.3-r1.ebuild, bareos-13.2.4.ebuild,

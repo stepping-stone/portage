@@ -1,6 +1,37 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.119 2015/02/08 21:05:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.128 2015/07/30 13:24:07 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libsoup-gnome-2.48.1.ebuild:
+  Stable for sparc, wrt bug #551814
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  libsoup-gnome-2.48.1.ebuild:
+  Stable on alpha, bug 551814
+
+  17 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libsoup-gnome-2.48.1.ebuild:
+  Stable for ia64, wrt bug #551814
+
+  07 Jul 2015; Markus Meier <maekke@gentoo.org> libsoup-gnome-2.48.1.ebuild:
+  arm stable, bug #551814
+
+*libsoup-gnome-2.50.0 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +libsoup-gnome-2.50.0.ebuild:
+  Version bump for Gnome 3.16.
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> libsoup-gnome-2.48.1.ebuild:
+  x86 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> libsoup-gnome-2.48.1.ebuild:
+  ppc64 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> libsoup-gnome-2.48.1.ebuild:
+  ppc stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> libsoup-gnome-2.48.1.ebuild:
+  amd64 stable, bug 534012
 
   08 Feb 2015; Markus Meier <maekke@gentoo.org> libsoup-gnome-2.46.0-r1.ebuild:
   arm stable, bug #536694

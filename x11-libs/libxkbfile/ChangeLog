@@ -1,6 +1,20 @@
 # ChangeLog for x11-libs/libxkbfile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbfile/ChangeLog,v 1.79 2013/02/25 08:29:30 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbfile/ChangeLog,v 1.83 2015/07/02 01:30:42 mrueg Exp $
+
+  02 Jul 2015; Manuel Rüger <mrueg@gentoo.org> libxkbfile-1.0.9.ebuild:
+  Update EAPI.
+
+*libxkbfile-1.0.9 (02 Jul 2015)
+
+  02 Jul 2015; Manuel Rüger <mrueg@gentoo.org> +libxkbfile-1.0.9.ebuild:
+  Version bump.
+
+  13 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -libxkbfile-1.0.7.ebuild:
+  Remove old.
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libxkbfile-1.0.8.ebuild:
+  add arm64 support, tested on A53 board
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> libxkbfile-1.0.8.ebuild:
   Add ~arm-linux keyword.

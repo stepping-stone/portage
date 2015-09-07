@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-2.1.5.ebuild,v 1.1 2015/02/12 11:19:04 pacho Exp $
+# $Id$
 
 EAPI=5
 GCONF_DEBUG=no
@@ -10,11 +10,11 @@ inherit gnome2 multilib python-single-r1
 
 DESCRIPTION="A simple audiofile converter application for the GNOME environment"
 HOMEPAGE="http://soundconverter.org/"
-SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.xz"
+SRC_URI="https://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="aac flac mp3 opus vorbis"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

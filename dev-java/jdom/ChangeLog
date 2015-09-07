@@ -1,6 +1,36 @@
 # ChangeLog for dev-java/jdom
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.74 2013/07/28 09:43:06 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.81 2015/07/11 09:22:02 chewi Exp $
+
+  11 Jul 2015; James Le Cuirot <chewi@gentoo.org> jdom-1.0-r4.ebuild:
+  Drop java on ia64.
+
+  16 Jun 2015; Patrice Clement <monsieurp@gentoo.org> jdom-1.1.3.ebuild,
+  jdom-2.0.6.ebuild:
+  Stable for ppc+ppc64 via ALLARCHES. Fix bug 548062 and bug 548062.
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> jdom-1.1.3.ebuild,
+  jdom-2.0.6.ebuild:
+  Stable for x86, wrt bug #548062
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> jdom-1.1.3.ebuild:
+  Stable for x86, wrt bug #548288
+
+  22 May 2015; Agostino Sarubbo <ago@gentoo.org> jdom-1.1.3.ebuild,
+  jdom-2.0.6.ebuild:
+  Stable for amd64, wrt bug #548062
+
+*jdom-2.0.6 (04 Apr 2015)
+
+  04 Apr 2015; Patrice Clement <monsieurp@gentoo.org> +jdom-2.0.6.ebuild:
+  Version bump courtesy of William L. Thomson Jr. <wlt@obsidian-studios.com>.
+  Fix bug 496986.
+
+*jdom-1.1.3 (04 Apr 2015)
+
+  04 Apr 2015; Patrice Clement <monsieurp@gentoo.org> +jdom-1.1.3.ebuild:
+  Version bump courtesy of William L. Thomson Jr. <wlt@obsidian-studios.com>.
+  Fix bug 215958.
 
   28 Jul 2013; Fabian Groffen <grobian@gentoo.org> jdom-1.0-r4.ebuild:
   Marked ~x64-macos, bug #435528

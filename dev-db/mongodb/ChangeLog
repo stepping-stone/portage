@@ -1,6 +1,100 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.105 2015/02/15 14:24:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.125 2015/08/07 14:07:27 ultrabug Exp $
+
+  07 Aug 2015; Ultrabug <ultrabug@gentoo.org> mongodb-2.6.8.ebuild,
+  -mongodb-2.6.9.ebuild:
+  fix stable version build with newer boost
+
+  05 Aug 2015; Ultrabug <ultrabug@gentoo.org> mongodb-3.0.5.ebuild:
+  ebuild cleanup and boost version dep fix
+
+*mongodb-3.0.5 (04 Aug 2015)
+
+  04 Aug 2015; Ultrabug <ultrabug@gentoo.org> +mongodb-3.0.5.ebuild:
+  version bump, 3.x shouldn't use system tcmalloc, fix #556548
+
+  03 Aug 2015; Ultrabug <ultrabug@gentoo.org> mongodb-2.6.10.ebuild,
+  +files/mongodb-2.6.10-fix-boost-1.57.patch:
+  fix #556272 build with boost-1.57 thx to Uros
+
+*mongodb-3.0.4 (16 Jun 2015)
+
+  16 Jun 2015; Ultrabug <ultrabug@gentoo.org> -mongodb-3.0.3.ebuild,
+  +mongodb-3.0.4.ebuild:
+  version bump, drop old
+
+  27 May 2015; Ultrabug <ultrabug@gentoo.org> mongodb-2.6.10.ebuild,
+  mongodb-3.0.3.ebuild:
+  bump pcre version dep
+
+*mongodb-2.6.10 (27 May 2015)
+
+  27 May 2015; Ultrabug <ultrabug@gentoo.org> +mongodb-2.6.10.ebuild,
+  mongodb-3.0.3.ebuild:
+  version bump fix #550350, fix 3.0 test dep #546346
+
+*mongodb-3.0.3 (13 May 2015)
+
+  13 May 2015; Ultrabug <ultrabug@gentoo.org> -mongodb-3.0.2.ebuild,
+  +mongodb-3.0.3.ebuild:
+  version bump, drop old
+
+*mongodb-2.4.14 (30 Apr 2015)
+
+  30 Apr 2015; Ultrabug <ultrabug@gentoo.org> +mongodb-2.4.14.ebuild:
+  version bump
+
+*mongodb-3.0.2 (09 Apr 2015)
+
+  09 Apr 2015; Ultrabug <ultrabug@gentoo.org> -mongodb-3.0.1.ebuild,
+  +mongodb-3.0.2.ebuild:
+  version bump, drop old
+
+  29 Mar 2015; Ultrabug <ultrabug@gentoo.org> -mongodb-2.4.6-r2.ebuild,
+  -mongodb-2.6.7.ebuild:
+  drop vulnerable wrt #542880
+
+  29 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mongodb-2.4.13.ebuild,
+  mongodb-2.6.8.ebuild:
+  Stable for x86, wrt bug #542880
+
+  26 Mar 2015; Ultrabug <ultrabug@gentoo.org> mongodb-3.0.1.ebuild:
+  fix tests #543760 thx to Tomas Mozes
+
+*mongodb-2.6.9 (24 Mar 2015)
+
+  24 Mar 2015; Ultrabug <ultrabug@gentoo.org> +mongodb-2.6.9.ebuild:
+  version bump
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mongodb-2.4.13.ebuild,
+  mongodb-2.6.8.ebuild:
+  Stable for amd64, wrt bug #542880
+
+*mongodb-3.0.1 (17 Mar 2015)
+
+  17 Mar 2015; Ultrabug <ultrabug@gentoo.org> +mongodb-3.0.1.ebuild,
+  +files/mongodb-3.0.0-fix-scons.patch, +files/mongodb.conf-r3, metadata.xml:
+  version bump, fix #540460
+
+  17 Mar 2015; Ultrabug <ultrabug@gentoo.org> -mongodb-2.4.12.ebuild,
+  -mongodb-2.6.6.ebuild, mongodb-2.6.8.ebuild:
+  drop old to prepare for 3.0.0
+
+*mongodb-2.6.8 (27 Feb 2015)
+*mongodb-2.4.13 (27 Feb 2015)
+
+  27 Feb 2015; Ultrabug <ultrabug@gentoo.org> +mongodb-2.4.13.ebuild,
+  +mongodb-2.6.8.ebuild:
+  version bump
+
+  23 Feb 2015; Ultrabug <ultrabug@gentoo.org> mongodb-2.4.12.ebuild,
+  +files/mongodb-2.4-fix-sasl.patch:
+  fix 2.4.x SASL support thx to Mike Limansky, fix #501744
+
+  23 Feb 2015; Ultrabug <ultrabug@gentoo.org> files/mongodb.conf-r2:
+  fix default config for non ssl enabled installations thx to Tomas Mozes, fix
+  #540364
 
   15 Feb 2015; Pacho Ramos <pacho@gentoo.org> mongodb-2.6.7.ebuild:
   x86 stable, bug #539324

@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/fuse-utils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.16 2014/07/23 23:21:11 neurogeek Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.18 2015/07/22 22:49:03 mrueg Exp $
+
+  22 Jul 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/fuse-utils-1.0.0-libgcrypt.patch, -fuse-utils-1.0.0.ebuild:
+  Remove old.
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *fuse-utils-1.1.1 (23 Jul 2014)
 

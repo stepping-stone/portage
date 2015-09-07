@@ -1,6 +1,51 @@
 # ChangeLog for www-apps/drupal
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.110 2014/11/20 11:45:49 jmbsvicetto Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.118 2015/06/18 13:54:33 jmbsvicetto Exp $
+
+*drupal-7.38 (18 Jun 2015)
+*drupal-6.36 (18 Jun 2015)
+*drupal-8.0.0_beta11 (18 Jun 2015)
+
+  18 Jun 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-6.36.ebuild, +drupal-7.38.ebuild, +drupal-8.0.0_beta11.ebuild,
+  -drupal-6.35.ebuild, -drupal-7.36.ebuild, -drupal-7.37.ebuild,
+  -drupal-8.0.0_beta10.ebuild, -drupal-8.0.0_beta9.ebuild:
+  Bump drupal to releases 7.38 and 6.36 - fixes bug 552416. Security bump -
+  CVE-2015-{3231,3232,3233,3234}. Add drupal-8.0.0_beta11 from my overlay.
+
+*drupal-8.0.0_beta10 (08 May 2015)
+*drupal-7.37 (08 May 2015)
+
+  08 May 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-7.37.ebuild, +drupal-8.0.0_beta10.ebuild:
+  Bump to releases 7.37 and 8.0.0_beta10.
+
+*drupal-7.36 (03 Apr 2015)
+*drupal-8.0.0_beta9 (03 Apr 2015)
+
+  03 Apr 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-7.36.ebuild, +drupal-8.0.0_beta9.ebuild, -drupal-7.35.ebuild,
+  -drupal-8.0.0_beta7.ebuild:
+  Bump to releases 7.36 and 8.0.0_beta9.
+
+*drupal-6.35 (21 Mar 2015)
+
+  21 Mar 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-6.35.ebuild, -drupal-6.34.ebuild:
+  Bump to 6.35 version that addresses SA-CORE-2015-001 - bug 543734.
+
+*drupal-7.35 (19 Mar 2015)
+
+  19 Mar 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-7.35.ebuild, -drupal-7.34.ebuild:
+  Bump to 7.35 version that addresses SA-CORE-2015-001.
+
+*drupal-8.0.0_beta7 (01 Mar 2015)
+
+  01 Mar 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-8.0.0_beta7.ebuild:
+  Add initial drupal 8.0 beta release from my overlay. I've been testing it
+  locally, but will leave it without keywords until there's more feedback.
 
 *drupal-6.34 (20 Nov 2014)
 *drupal-7.34 (20 Nov 2014)

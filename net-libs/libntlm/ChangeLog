@@ -1,6 +1,30 @@
 # ChangeLog for net-libs/libntlm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.40 2014/10/10 04:09:55 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.48 2015/08/04 11:56:53 zlogene Exp $
+
+  04 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> libntlm-1.4.ebuild:
+  ia64 stable wrt bug #535580
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libntlm-1.4.ebuild:
+  Stable for sparc, wrt bug #535580
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> libntlm-1.4.ebuild:
+  ppc stable wrt bug #535580
+
+  20 Jul 2015; Jeroen Roovers <jer@gentoo.org> libntlm-1.4.ebuild:
+  Stable for HPPA (bug #535580).
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libntlm-1.4.ebuild:
+  Stable for alpha, wrt bug #535580
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libntlm-1.4.ebuild:
+  Stable for x86, wrt bug #535580
+
+  11 Jun 2015; Markus Meier <maekke@gentoo.org> libntlm-1.4.ebuild:
+  arm stable, bug #535580
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libntlm-1.4.ebuild:
+  Stable for amd64, wrt bug #535580
 
 *libntlm-1.4 (10 Oct 2014)
 
@@ -134,4 +158,3 @@
   30 Sep 2007; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   +libntlm-0.4.0.ebuild:
   Initial import. Ebuild by hardcoiler <hardcoiler at gmail.com>.
-

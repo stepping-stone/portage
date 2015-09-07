@@ -1,6 +1,106 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.243 2015/02/15 02:54:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.268 2015/07/07 16:07:02 vapier Exp $
+
+*iproute2-4.1.1 (07 Jul 2015)
+
+  07 Jul 2015; Mike Frysinger <vapier@gentoo.org> +iproute2-4.1.1.ebuild:
+  Version bump and revise libmnl handling.
+
+  07 Jul 2015; Mike Frysinger <vapier@gentoo.org> iproute2-3.19.0.ebuild,
+  iproute2-4.0.0-r2.ebuild, iproute2-4.1.0.ebuild, iproute2-9999.ebuild:
+  Update /var/run sed to new file location; fix by Amey Deshpande from Chromium
+  OS crbug.com/504562.
+
+  06 Jul 2015; Mike Frysinger <vapier@gentoo.org> iproute2-4.1.0.ebuild:
+  Raise minimum kernel header version to match source requirements #553876 by
+  Mark.
+
+  30 Jun 2015; Lars Wendler <polynomial-c@gentoo.org> iproute2-4.1.0.ebuild:
+  Added net-libs/libmnl to RDEPEND (bug #553624).
+
+*iproute2-4.1.0 (30 Jun 2015)
+
+  30 Jun 2015; Lars Wendler <polynomial-c@gentoo.org> -iproute2-4.0.0.ebuild,
+  -iproute2-4.0.0-r1.ebuild, +iproute2-4.1.0.ebuild:
+  Version bump. Removed old.
+
+  24 May 2015; Mike Frysinger <vapier@gentoo.org> iproute2-4.0.0-r2.ebuild,
+  iproute2-9999.ebuild, metadata.xml:
+  Install `ip` with USE=minimal and document the flag #549988 by Mike Gilbert.
+
+*iproute2-4.0.0-r2 (21 May 2015)
+
+  21 May 2015; Mike Frysinger <vapier@gentoo.org> +iproute2-4.0.0-r2.ebuild:
+  Increase min kernel headers dep so we can enable ipset all the time #549948 by
+  Igor Vasilkov.
+
+  21 May 2015; Mike Frysinger <vapier@gentoo.org> iproute2-3.19.0.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  13 May 2015; Anthony G. Basile <blueness@gentoo.org> iproute2-3.19.0.ebuild:
+  Stable for arm.  Bug #543662.
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> iproute2-3.19.0.ebuild:
+  ppc stable wrt bug #543662
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> iproute2-3.19.0.ebuild:
+  sparc stable wrt bug #543662
+
+  01 May 2015; Mikle Kolyada <zlogene@gentoo.org> iproute2-3.19.0.ebuild:
+  alpha stable wrt bug #543662
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> iproute2-3.19.0.ebuild:
+  ia64 stable wrt bug #543662
+
+  25 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> iproute2-3.19.0.ebuild:
+  x86 stable wrt bug #543662
+
+  25 Apr 2015; Jeroen Roovers <jer@gentoo.org> iproute2-3.19.0.ebuild:
+  Stable for PPC64 (bug #543662).
+
+  21 Apr 2015; William Hubbs <williamh@gentoo.org> iproute2-3.19.0.ebuild:
+  amd64 stable wrt #543662
+
+*iproute2-4.0.0-r1 (20 Apr 2015)
+
+  20 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/iproute2-4.0.0-tc-show-buffer-overflow.patch,
+  +iproute2-4.0.0-r1.ebuild:
+  Add fix from upstream for buffer overflows when running `tc qdisc show`
+  #546928 by jamesrutledge.
+
+*iproute2-4.0.0 (15 Apr 2015)
+
+  15 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> +iproute2-4.0.0.ebuild:
+  Version bump.
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> iproute2-3.17.0.ebuild:
+  Mark arm64/m68k/sh stable.
+
+  28 Mar 2015; Jeroen Roovers <jer@gentoo.org> iproute2-3.19.0.ebuild:
+  Stable for HPPA (bug #543662).
+
+  21 Mar 2015; William Hubbs <williamh@gentoo.org> -iproute2-2.6.29.1-r1.ebuild,
+  -iproute2-2.6.35-r2.ebuild, -iproute2-2.6.35-r3.ebuild,
+  -iproute2-3.1.0.ebuild, -iproute2-3.10.0.ebuild, -iproute2-3.11.0.ebuild,
+  -iproute2-3.12.0.ebuild, -iproute2-3.14.0.ebuild, -iproute2-3.15.0.ebuild,
+  -iproute2-3.16.0-r1.ebuild, -iproute2-3.16.0.ebuild, -iproute2-3.18.0.ebuild,
+  -iproute2-3.4.0.ebuild, -iproute2-3.5.1.ebuild, -iproute2-3.6.0.ebuild,
+  -iproute2-3.7.0.ebuild, -iproute2-3.9.0.ebuild:
+  remove old versions
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> iproute2-3.17.0.ebuild:
+  Stable for ia64, wrt bug #535698
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> iproute2-3.17.0.ebuild:
+  Stable for sparc, wrt bug #535698
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> iproute2-3.17.0.ebuild:
+  Stable for alpha, wrt bug #535698
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> iproute2-3.17.0.ebuild:
+  Stable for ppc64, wrt bug #535698
 
 *iproute2-3.19.0 (15 Feb 2015)
 

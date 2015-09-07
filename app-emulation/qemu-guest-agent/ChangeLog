@@ -1,6 +1,24 @@
 # ChangeLog for app-emulation/qemu-guest-agent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.20 2015/02/15 01:28:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.24 2015/08/04 08:19:37 ago Exp $
+
+  04 Aug 2015; Agostino Sarubbo <ago@gentoo.org> qemu-guest-agent-2.3.0.ebuild:
+  Stable for x86, wrt bug #556630
+
+  04 Aug 2015; Agostino Sarubbo <ago@gentoo.org> qemu-guest-agent-2.3.0.ebuild:
+  Stable for amd64, wrt bug #556630
+
+*qemu-guest-agent-2.3.0 (28 Apr 2015)
+
+  28 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +qemu-guest-agent-2.3.0.ebuild:
+  Version bump.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  qemu-guest-agent-1.5.2-r2.ebuild, qemu-guest-agent-1.6.0-r1.ebuild,
+  qemu-guest-agent-2.0.0.ebuild, qemu-guest-agent-2.1.2.ebuild,
+  qemu-guest-agent-2.2.0.ebuild:
+  Remove old Python implementations
 
 *qemu-guest-agent-2.2.0 (15 Feb 2015)
 

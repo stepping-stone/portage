@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.6.ebuild,v 1.2 2015/01/31 02:33:23 patrick Exp $
+# $Id$
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ DESCRIPTION="Darwin assembler as(1) and static linker ld(1), Xcode Tools ${PV}"
 HOMEPAGE="http://www.opensource.apple.com/darwinsource/"
 SRC_URI="http://www.opensource.apple.com/tarballs/ld64/${LD64}.tar.gz
 	http://www.opensource.apple.com/tarballs/cctools/${CCTOOLS}.tar.gz
-	http://www.gentoo.org/~grobian/distfiles/${UNWIND}.tar.xz"
+	https://www.gentoo.org/~grobian/distfiles/${UNWIND}.tar.xz"
 
 LICENSE="APSL-2"
 KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
@@ -32,8 +32,8 @@ DEPEND="${RDEPEND}
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
-	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-		export CTARGET=${CATEGORY/cross-}
+	if [[ ${CATEGORY} == cross-* ]] ; then
+		export CTARGET=${CATEGORY#cross-}
 	fi
 fi
 is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }

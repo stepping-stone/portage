@@ -1,19 +1,19 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20120628.ebuild,v 1.3 2013/05/11 16:33:54 vapier Exp $
+# $Id$
 
 EAPI="4"
 
 inherit autotools eutils flag-o-matic
 
 DESCRIPTION="Modifies ELFs to avoid runtime symbol resolutions resulting in faster load times"
-HOMEPAGE="http://people.redhat.com/jakub/prelink"
+HOMEPAGE="https://people.redhat.com/jakub/prelink"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
-#SRC_URI="http://people.redhat.com/jakub/prelink/${P}.tar.bz2"
+#SRC_URI="https://people.redhat.com/jakub/prelink/${P}.tar.bz2"
 
 # if not available on jakub's dev space extract the distfile with rpm2tarbz2 from
-# http://mirrors.kernel.org/fedora/development/rawhide/source/SRPMS/prelink-[ver].src.rpm
+# https://mirrors.kernel.org/fedora/development/rawhide/source/SRPMS/prelink-[ver].src.rpm
 #
 # track http://pkgs.fedoraproject.org/cgit/prelink.git/ for updates
 
@@ -83,7 +83,7 @@ pkg_postinst() {
 	elog "You may wish to read the Gentoo Linux Prelink Guide, which can be"
 	elog "found online at:"
 	elog
-	elog "    http://www.gentoo.org/doc/en/prelink-howto.xml"
+	elog "    https://wiki.gentoo.org/wiki/Prelink"
 	elog
 	elog "Please edit /etc/conf.d/prelink to enable and configure prelink"
 	echo

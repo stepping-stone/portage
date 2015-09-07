@@ -1,6 +1,30 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.120 2015/01/21 10:17:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.126 2015/06/26 09:21:25 ago Exp $
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libgweather-3.14.4.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> libgweather-3.14.4.ebuild:
+  amd64 stable wrt bug #551814
+
+*libgweather-3.16.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgweather-3.12.3.ebuild, +libgweather-3.16.1.ebuild:
+  Version bump for Gnome 3.16. Clean up old revision.
+
+*libgweather-3.14.4 (19 Apr 2015)
+
+  19 Apr 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgweather-3.14.2.ebuild, +libgweather-3.14.4.ebuild:
+  Version bump. Drop old revision.
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> libgweather-3.14.3.ebuild:
+  x86 stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> libgweather-3.14.3.ebuild:
+  amd64 stable, bug 534012
 
 *libgweather-3.14.3 (21 Jan 2015)
 

@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/pdfcrack
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pdfcrack/ChangeLog,v 1.8 2014/10/11 20:50:54 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pdfcrack/ChangeLog,v 1.10 2015/06/09 09:33:46 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  17 May 2015; Manuel Rüger <mrueg@gentoo.org> -files/pdfcrack-0.10-build.patch,
+  -pdfcrack-0.11.ebuild:
+  Remove old.
 
 *pdfcrack-0.14 (11 Oct 2014)
 
@@ -40,4 +47,3 @@
   22 Mar 2008; Mike Frysinger <vapier@gentoo.org>
   +files/pdfcrack-0.9-build.patch, +metadata.xml, +pdfcrack-0.9.ebuild:
   Initial import #156516 by Aurélien Francillon, Fabio Rossi, and me.
-

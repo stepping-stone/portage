@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/mobile-broadband-provider-info
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/ChangeLog,v 1.27 2014/01/15 12:55:38 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/ChangeLog,v 1.29 2015/07/09 06:43:29 jer Exp $
+
+  09 Jul 2015; Jeroen Roovers <jer@gentoo.org>
+  mobile-broadband-provider-info-20120614.ebuild:
+  Stable for HPPA (bug #552008).
+
+  16 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  mobile-broadband-provider-info-20120614.ebuild:
+  Marked ~hppa (bug #543354).
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   mobile-broadband-provider-info-20120614.ebuild:

@@ -1,6 +1,84 @@
 # ChangeLog for sys-fs/udev
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1104 2014/12/17 17:22:22 williamh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1121 2015/08/02 17:47:09 williamh Exp $
+
+*udev-224 (02 Aug 2015)
+
+  02 Aug 2015; William Hubbs <williamh@gentoo.org> +udev-224.ebuild,
+  udev-9999.ebuild:
+  version bump
+
+  24 Jul 2015; Alexis Ballier <aballier@gentoo.org> udev-222.ebuild,
+  udev-9999.ebuild:
+  forcibly disable gnuefi as systemd-boot is not built and checking for gnuefi
+  in configure bails out when cross compiling
+
+  21 Jul 2015; Mike Gilbert <floppym@gentoo.org> udev-222.ebuild,
+  udev-9999.ebuild:
+  DEPEND on dev-util/intltool, bug 555382.
+
+  10 Jul 2015; Mike Gilbert <floppym@gentoo.org> udev-222.ebuild,
+  udev-9999.ebuild:
+  Add workaround for build failure with gcc-4.7, bug 554454 by Alexander Tsoy.
+
+  10 Jul 2015; William Hubbs <williamh@gentoo.org> udev-222.ebuild:
+  Fixes for bug #554408
+
+*udev-222 (09 Jul 2015)
+
+  09 Jul 2015; William Hubbs <williamh@gentoo.org> +udev-222.ebuild:
+  version bump
+
+*udev-220-r3 (17 Jun 2015)
+
+  17 Jun 2015; William Hubbs <williamh@gentoo.org> +udev-220-r3.ebuild:
+  rev bump to backport a patch that closes stdin/out/err unless we are in debug
+  mode
+
+  12 Jun 2015; William Hubbs <williamh@gentoo.org> udev-220-r2.ebuild:
+  Add one more patch to the udev-220 patchset so it will build correctly, thanks
+  to poly-c for pointing out the patch I needed.
+
+*udev-220-r2 (12 Jun 2015)
+
+  12 Jun 2015; William Hubbs <williamh@gentoo.org> +udev-220-r2.ebuild:
+  rev bump for #551808
+
+  10 Jun 2015; Mike Gilbert <floppym@gentoo.org> udev-208-r1.ebuild,
+  udev-216.ebuild, udev-217.ebuild, udev-218.ebuild, udev-219.ebuild,
+  udev-220-r1.ebuild:
+  Add blocker on dev-libs/libgudev.
+
+  10 Jun 2015; Mike Gilbert <floppym@gentoo.org> udev-9999.ebuild:
+  Remove references to gudev, gtk-doc, and gobject-introspection.
+
+  06 Jun 2015; William Hubbs <williamh@gentoo.org> -udev-220.ebuild,
+  udev-9999.ebuild:
+  remove broken version and sync live ebuild
+
+*udev-220-r1 (06 Jun 2015)
+
+  06 Jun 2015; William Hubbs <williamh@gentoo.org> +udev-220-r1.ebuild:
+  rev bump to re-install udev.pc, thanks to iamben for catching this.
+
+*udev-220 (05 Jun 2015)
+
+  05 Jun 2015; William Hubbs <williamh@gentoo.org> +udev-220.ebuild:
+  version bump
+
+  01 May 2015; Mike Gilbert <floppym@gentoo.org> udev-218.ebuild,
+  udev-219.ebuild, udev-9999.ebuild:
+  Fix build failure when libmount is not built for all multilib abis, bug
+  533724. Thanks to theprogrammernerd for the patch.
+
+  25 Apr 2015; William Hubbs <williamh@gentoo.org> udev-219.ebuild,
+  udev-9999.ebuild:
+  Bump linux-headers dependency to >=3.9 for #545448
+
+*udev-219 (20 Mar 2015)
+
+  20 Mar 2015; Anthony G. Basile <blueness@gentoo.org> +udev-219.ebuild:
+  Version bump.
 
   17 Dec 2014; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   sync live ebuild

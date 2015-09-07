@@ -1,6 +1,44 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.121 2015/01/02 12:10:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.132 2015/07/30 13:22:48 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libcanberra-0.30-r5.ebuild:
+  Stable for sparc, wrt bug #551814
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  libcanberra-0.30-r5.ebuild:
+  Stable on alpha, bug 551814
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> libcanberra-0.30-r5.ebuild:
+  ppc stable wrt bug #551814
+
+  17 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libcanberra-0.30-r5.ebuild:
+  Stable for ia64, wrt bug #551814
+
+  13 Jul 2015; Jeroen Roovers <jer@gentoo.org> libcanberra-0.30-r5.ebuild:
+  Stable for HPPA (bug #551814).
+
+  07 Jul 2015; Markus Meier <maekke@gentoo.org> libcanberra-0.30-r5.ebuild:
+  arm stable, bug #551814
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libcanberra-0.30-r5.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> libcanberra-0.30-r5.ebuild:
+  amd64 stable wrt bug #551814
+
+  21 Jun 2015; Jeroen Roovers <jer@gentoo.org> libcanberra-0.30-r5.ebuild:
+  Stable for PPC64 (bug #551814).
+
+*libcanberra-0.30-r5 (25 May 2015)
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libcanberra-0.30-r5.ebuild:
+  Add multilib support.
+
+  11 Apr 2015; Pacho Ramos <pacho@gentoo.org> -libcanberra-0.30-r1.ebuild,
+  libcanberra-0.30-r4.ebuild:
+  Needs dev-libs/libltdl and not full libtool (#545736 by Bruno), drop old
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libcanberra-0.30-r4.ebuild:
   Stable for alpha, wrt bug #529964

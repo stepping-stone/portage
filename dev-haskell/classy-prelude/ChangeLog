@@ -1,6 +1,20 @@
 # ChangeLog for dev-haskell/classy-prelude
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/classy-prelude/ChangeLog,v 1.7 2014/12/14 11:10:10 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/classy-prelude/ChangeLog,v 1.10 2015/08/02 11:40:45 slyfox Exp $
+
+  02 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  classy-prelude-0.5.9.ebuild, classy-prelude-0.6.0.ebuild:
+  Drop dev-haskell/deepseq depend. ghc bundles it for a long while and we are
+  using that version.
+
+*classy-prelude-0.12.0 (01 Aug 2015)
+
+  01 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +classy-prelude-0.12.0.ebuild:
+  Version bump.
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *classy-prelude-0.10.2 (14 Dec 2014)
 

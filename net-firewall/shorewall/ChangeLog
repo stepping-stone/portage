@@ -1,6 +1,75 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.277 2015/02/15 11:26:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.294 2015/08/02 18:39:30 ago Exp $
+
+  02 Aug 2015; Agostino Sarubbo <ago@gentoo.org> shorewall-4.6.10.1.ebuild:
+  Stable for x86, wrt bug #555188
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> shorewall-4.6.10.1.ebuild:
+  Stable for sparc, wrt bug #555188
+
+  29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> shorewall-4.6.10.1.ebuild:
+  amd64 stable wrt bug #555188
+
+  26 Jul 2015; Jeroen Roovers <jer@gentoo.org> shorewall-4.6.10.1.ebuild:
+  Stable for HPPA (bug #555188).
+
+*shorewall-4.6.11 (25 Jul 2015)
+
+  25 Jul 2015; Michał Górny <mgorny@gentoo.org> +shorewall-4.6.11.ebuild:
+  Version bump. https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/177
+  by Whissi.
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> shorewall-4.6.10.1.ebuild:
+  ppc stable wrt bug #555188
+
+  17 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  shorewall-4.6.10.1.ebuild:
+  Stable on alpha, bug 555188
+
+*shorewall-4.6.10.1 (15 Jun 2015)
+
+  15 Jun 2015; Michał Górny <mgorny@gentoo.org>
+  +files/4.6/shorewall-init-01_remove-ipset-functionality-r1.patch,
+  +shorewall-4.6.10.1.ebuild, -shorewall-4.6.9.ebuild:
+  Version bump. https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/151
+  by Whissi.
+
+*shorewall-4.6.9 (25 May 2015)
+
+  25 May 2015; Ian Delaney <idella4@gentoo.org> +shorewall-4.6.9.ebuild:
+  rename shorewall-4.6.8.1.ebuild to shorewall-4.6.9.ebuild closes bug #549070
+
+*shorewall-4.6.8.1 (22 Apr 2015)
+
+  22 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +files/4.6/shorewall-init.systemd-r1, +files/4.6/shorewall-lite.systemd-r1,
+  +files/4.6/shorewall.systemd-r1, +files/4.6/shorewall6-lite.systemd-r1,
+  +files/4.6/shorewall6.systemd-r1, +shorewall-4.6.8.1.ebuild,
+  -shorewall-4.6.5.3.ebuild, -shorewall-4.6.6.1.ebuild:
+  Version bump, drop old. https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/101 by Whissi.
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> shorewall-4.6.6.2.ebuild:
+  Stable for alpha, wrt bug #543450
+
+  01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> shorewall-4.6.6.2.ebuild:
+  Stable for sparc, wrt bug #543450
+
+  31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> shorewall-4.6.6.2.ebuild:
+  Stable for ppc64, wrt bug #543450
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> shorewall-4.6.6.2.ebuild:
+  Stable for ppc, wrt bug #543450
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> shorewall-4.6.6.2.ebuild:
+  Stable for x86, wrt bug #543450
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> shorewall-4.6.6.2.ebuild:
+  Stable for amd64, wrt bug #543450
+
+  19 Mar 2015; Jeroen Roovers <jer@gentoo.org> shorewall-4.6.6.2.ebuild:
+  Stable for HPPA (bug #543450).
 
   15 Feb 2015; Markos Chandras <hwoarang@gentoo.org> shorewall-4.6.6.2.ebuild:
   Version bump. Bug #539278

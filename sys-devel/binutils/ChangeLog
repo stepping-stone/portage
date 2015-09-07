@@ -1,6 +1,26 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.527 2015/02/15 08:06:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.532 2015/07/27 03:27:18 vapier Exp $
+
+*binutils-2.25.1 (27 Jul 2015)
+
+  27 Jul 2015; Mike Frysinger <vapier@gentoo.org> +binutils-2.25.1.ebuild:
+  Version bump.
+
+*binutils-2.25-r1 (25 May 2015)
+
+  25 May 2015; Mike Frysinger <vapier@gentoo.org> +binutils-2.25-r1.ebuild:
+  Add fix from upstream for gold and COPY relocs #549276 by Marcin Mirosław.
+
+  21 Apr 2015; Mike Frysinger <vapier@gentoo.org> binutils-2.25.ebuild:
+  Add fix from upstream for enabling mips/gold.
+
+  15 Mar 2015; Michał Górny <mgorny@gentoo.org> binutils-2.25.ebuild:
+  Mark ~amd64-fbsd, bug #499212. Tested by nigoro.
+
+  14 Mar 2015; Mike Frysinger <vapier@gentoo.org> -binutils-2.19.1-r1.ebuild,
+  -binutils-2.20.1-r1.ebuild, -binutils-2.24.90.ebuild:
+  Move old ebuilds to toolchain overlay.
 
   15 Feb 2015; Mike Frysinger <vapier@gentoo.org> binutils-2.25.ebuild:
   Move into ~arch.

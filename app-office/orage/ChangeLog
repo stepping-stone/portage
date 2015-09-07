@@ -1,6 +1,33 @@
 # ChangeLog for app-office/orage
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.82 2014/04/22 13:48:24 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.90 2015/08/05 11:04:55 perfinion Exp $
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> orage-4.12.1.ebuild:
+  ppc stable wrt bug #553500
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org> orage-4.12.1.ebuild:
+  Stable for PPC64 (bug #553500).
+
+  11 Jul 2015; Markus Meier <maekke@gentoo.org> orage-4.12.1.ebuild:
+  arm stable, bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> orage-4.12.1.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> orage-4.12.1.ebuild:
+  x86 stable wrt bug #553500
+
+  01 Jul 2015; Jeroen Roovers <jer@gentoo.org> orage-4.12.1.ebuild:
+  Stable for HPPA (bug #553500).
+
+*orage-4.12.1 (26 May 2015)
+
+  26 May 2015; Jason Zaman <perfinion@gentoo.org> +orage-4.12.1.ebuild,
+  orage-4.10.0.ebuild:
+  version bump, fix db slot dep
 
   22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> -orage-4.8.4.ebuild:
   old

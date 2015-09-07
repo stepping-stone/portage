@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libqtxdg/libqtxdg-1.1.0.ebuild,v 1.1 2015/02/10 10:38:37 yngwin Exp $
+# $Id$
 
 EAPI=5
 inherit cmake-utils
@@ -13,7 +13,7 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.lxde.org/git/lxde/${PN}.git"
 else
 	SRC_URI="http://downloads.lxqt.org/${PN}/${PV}/${P}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
 LICENSE="LGPL-2.1"
@@ -26,7 +26,6 @@ CDEPEND="
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtxml:5
-	dev-qt/linguist-tools:5
 "
 DEPEND="${CDEPEND}
 	test? ( dev-qt/qttest:5 )

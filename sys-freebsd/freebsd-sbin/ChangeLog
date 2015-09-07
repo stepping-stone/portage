@@ -1,6 +1,29 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.82 2014/07/24 01:58:41 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.86 2015/08/06 10:44:24 mgorny Exp $
+
+*freebsd-sbin-10.1-r1 (06 Aug 2015)
+
+  06 Aug 2015; Michał Górny <mgorny@gentoo.org> +freebsd-sbin-10.1-r1.ebuild,
+  -freebsd-sbin-10.1.ebuild:
+  Fix FreeBSD-SA-15:19.routed. https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/193 by nigoro.
+
+  05 Jun 2015; Michał Górny <mgorny@gentoo.org> freebsd-sbin-10.1.ebuild:
+  Bump to EAPI=5. Use upstream tarballs.
+
+  24 May 2015; Michał Górny <mgorny@gentoo.org> -freebsd-sbin-9.2.ebuild,
+  -freebsd-sbin-9.2_rc1.ebuild, -freebsd-sbin-9.2_rc2.ebuild,
+  -freebsd-sbin-9.2_rc3.ebuild:
+  Remove 9.2. Part of https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/126 by nigoro.
+
+*freebsd-sbin-10.1 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  +files/freebsd-sbin-10.0-zlib.patch, +freebsd-sbin-10.1.ebuild:
+  Add FreeBSD 10.1 ebuilds, https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/46 by nigoro.
 
   24 Jul 2014; Naohiro Aota <naota@gentoo.org> freebsd-sbin-8.2-r1.ebuild,
   freebsd-sbin-9.1.ebuild, freebsd-sbin-9.2.ebuild:

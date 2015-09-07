@@ -1,6 +1,73 @@
 # ChangeLog for dev-lang/ekopath
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.22 2015/01/04 15:29:10 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.32 2015/08/04 16:35:58 mgorny Exp $
+
+*ekopath-6.0.468_p20150803 (04 Aug 2015)
+
+  04 Aug 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-6.0.468_p20150803.ebuild:
+  New snapshot
+
+*ekopath-6.0.439_p20150707 (08 Jul 2015)
+
+  08 Jul 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-6.0.439_p20150707.ebuild:
+  Snapshot bump.
+
+*ekopath-6.0.430_p20150629 (30 Jun 2015)
+
+  30 Jun 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-6.0.430_p20150629.ebuild, -ekopath-5.0.1_pre20131115.ebuild,
+  -ekopath-5.0.5_pre20150226.ebuild, -ekopath-6.0.373_p20150519.ebuild,
+  -ekopath-6.0.396_p20150605.ebuild:
+  Bump. Remove old.
+
+*ekopath-6.0.396_p20150605 (06 Jun 2015)
+
+  06 Jun 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-6.0.396_p20150605.ebuild, -ekopath-6.0.357_p20150511.ebuild,
+  -ekopath-6.0.383_p20150526.ebuild:
+  Snapshot bump. Improve sanity checks a little.
+
+*ekopath-6.0.373_p20150526 (27 May 2015)
+*ekopath-6.0.383_p20150526 (27 May 2015)
+
+  27 May 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-6.0.373_p20150526.ebuild, +ekopath-6.0.383_p20150526.ebuild:
+  Snapshot bump
+
+*ekopath-6.0.373_p20150519 (23 May 2015)
+
+  23 May 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-6.0.373_p20150519.ebuild, -ekopath-6.0.334_p20150421.ebuild,
+  -ekopath-6.0.348_p20150502.ebuild:
+  Snapshot bump. Remove old.
+
+*ekopath-6.0.357_p20150511 (12 May 2015)
+
+  12 May 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-6.0.357_p20150511.ebuild:
+  Snapshot bump
+
+*ekopath-6.0.348_p20150502 (04 May 2015)
+
+  04 May 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-6.0.348_p20150502.ebuild:
+  Snapshot bump
+
+*ekopath-6.0.334_p20150421 (22 Apr 2015)
+
+  22 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-6.0.334_p20150421.ebuild, metadata.xml:
+  Version bump. Upstream fixed a few irritating bugs, including the sandbox
+  violations and lack of AMD k8 support. Cleaned up the ebuild a bit, added
+  RESTRICT=bindist per bug #536262.
+
+*ekopath-5.0.5_pre20150226 (28 Feb 2015)
+
+  28 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-5.0.5_pre20150226.ebuild:
+  Version bump. Correct LICENSE.
 
   04 Jan 2015;  <anarchy@gentoo.org> ekopath-5.0.1_pre20131115.ebuild:
   Use XT_PAX for marking the installer as EI_PAX is obsolete and PT_PAX breaks

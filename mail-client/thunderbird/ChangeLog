@@ -1,6 +1,136 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.315 2015/02/18 09:16:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.347 2015/08/02 18:57:40 ago Exp $
+
+  02 Aug 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-38.1.0.ebuild:
+  Stable for x86, wrt bug #555802
+
+  24 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> thunderbird-38.1.0.ebuild:
+  amd64 stable wrt bug #555802
+
+  21 Jul 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  -thunderbird-31.7.0.ebuild:
+  removed old for security bug 554036
+
+  20 Jul 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.8.0.ebuild:
+  Stable for ppc, wrt bug #554036
+
+  20 Jul 2015; Jeroen Roovers <jer@gentoo.org> thunderbird-31.8.0.ebuild:
+  Stable for PPC64 (bug #554036).
+
+  18 Jul 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.8.0.ebuild:
+  Stable for x86, wrt bug #554036
+
+  18 Jul 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.8.0.ebuild:
+  Stable for amd64, wrt bug #554036
+
+*thunderbird-31.8.0 (17 Jul 2015)
+
+  17 Jul 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thunderbird-31.8.0.ebuild, -thunderbird-31.7.0-r1.ebuild:
+  version bump 31.x ESR for security bug 554036, cleaned up old
+
+  16 Jul 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  thunderbird-24.8.0.ebuild:
+  added maximum version dep of libvpx to thunderbird-24.8.0, for bug 550984
+
+*thunderbird-38.1.0 (16 Jul 2015)
+
+  16 Jul 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thunderbird-38.1.0.ebuild, -thunderbird-31.6.0.ebuild,
+  -thunderbird-38.0.1-r1.ebuild, metadata.xml:
+  version bump, cleaned up old versions.  Put back USE=lightning to install
+  calendar and gdata-provider app-global, but it remains bundled if the flag is
+  not set the same as what upstream provides.  Updated MOZ_LANGS to include cy
+  and others that were previously missing (bug 555024).
+
+  24 Jun 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.7.0.ebuild:
+  Stable for ppc, wrt bug #549356
+
+  19 Jun 2015; Patrick Lauer <patrick@gentoo.org> thunderbird-38.0.1-r1.ebuild:
+  Whitespace
+
+*thunderbird-38.0.1-r1 (19 Jun 2015)
+
+  19 Jun 2015;  <anarchy@gentoo.org> +thunderbird-38.0.1-r1.ebuild,
+  -thunderbird-38.0.1.ebuild:
+  Fix bug #552180 and 552162
+
+  17 Jun 2015; Patrick Lauer <patrick@gentoo.org> thunderbird-38.0.1.ebuild:
+  Whitespace
+
+  14 Jun 2015;  <anarchy@gentoo.org> thunderbird-38.0.1.ebuild:
+  Fix nss/nspr dep, bug #552078
+
+*thunderbird-38.0.1 (14 Jun 2015)
+
+  14 Jun 2015;  <anarchy@gentoo.org> +thunderbird-38.0.1.ebuild, metadata.xml:
+  initial 38.0.1esr release, lightning now built automatically by default
+
+  10 Jun 2015;  <anarchy@gentoo.org> +files/thunderbird-31.7.0-gcc5-1.patch,
+  thunderbird-31.7.0-r1.ebuild:
+  Fix >=sys-devel/gcc-5 compilation
+
+  28 May 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
+
+*thunderbird-31.7.0-r1 (27 May 2015)
+
+  27 May 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thunderbird-31.7.0-r1.ebuild, metadata.xml:
+  patched to allow libvpx newer than 1.3, bug 550002
+
+  23 May 2015; Mikle Kolyada <zlogene@gentoo.org> thunderbird-31.7.0.ebuild:
+  x86 stable wrt bug #549356
+
+  18 May 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.7.0.ebuild:
+  Stable for amd64, wrt bug #549356
+
+  18 May 2015; Jeroen Roovers <jer@gentoo.org> thunderbird-31.7.0.ebuild:
+  Stable for PPC64 (bug #549356).
+
+*thunderbird-31.7.0 (15 May 2015)
+
+  15 May 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thunderbird-31.7.0.ebuild, -thunderbird-31.4.0.ebuild,
+  -thunderbird-31.5.0.ebuild:
+  version bump; removed old
+
+  29 Apr 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.6.0.ebuild:
+  Stable for ppc, wrt bug #545232
+
+  25 Apr 2015; Jeroen Roovers <jer@gentoo.org> thunderbird-31.6.0.ebuild:
+  Stable for PPC64 (bug #545232).
+
+  24 Apr 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.6.0.ebuild:
+  Stable for x86, wrt bug #545232
+
+  24 Apr 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.6.0.ebuild:
+  Stable for amd64, wrt bug #545232
+
+*thunderbird-31.6.0 (06 Apr 2015)
+
+  06 Apr 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -thunderbird-31.3.0.ebuild, +thunderbird-31.6.0.ebuild:
+  Version bump. Removed old.
+
+  31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.5.0.ebuild:
+  Stable for ppc64, wrt bug #541316
+
+  07 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> thunderbird-31.5.0.ebuild:
+  x86 stable wrt bug #541316
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.5.0.ebuild:
+  Stable for amd64, wrt bug #541316
+
+*thunderbird-31.5.0 (26 Feb 2015)
+
+  26 Feb 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thunderbird-31.5.0.ebuild, -thunderbird-17.0.9.ebuild, metadata.xml,
+  thunderbird-24.8.0.ebuild, thunderbird-31.3.0.ebuild,
+  thunderbird-31.4.0.ebuild:
+  version bump; fixed bug 541416; dropped 17.x as it has missing deps despite
+  being the only stable arm package
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.4.0.ebuild:
   Stable for ppc, wrt bug #536564

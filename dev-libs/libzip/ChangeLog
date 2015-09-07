@@ -1,6 +1,37 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.80 2015/01/27 12:25:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.89 2015/07/30 15:09:28 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libzip-1.0.1.ebuild:
+  Stable for sparc, wrt bug #530658
+
+  17 Jul 2015; Johannes Huber <johu@gentoo.org>
+  -files/libzip-0.11-fix_pkgconfig.patch, -libzip-0.11.2.ebuild:
+  Remove vulnerable version, bug #550922.
+
+  17 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> libzip-1.0.1.ebuild:
+  ia64 stable wrt bug #550922
+
+  24 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libzip-1.0.1.ebuild:
+  Stable for ppc, wrt bug #550922
+
+  04 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libzip-1.0.1.ebuild:
+  Stable for x86, wrt bug #550922
+
+  04 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libzip-1.0.1.ebuild:
+  Stable for amd64, wrt bug #550922
+
+  04 Jun 2015; Jeroen Roovers <jer@gentoo.org> libzip-1.0.1.ebuild:
+  Stable for HPPA PPC64 (bug #550922).
+
+*libzip-1.0.1 (04 Jun 2015)
+
+  04 Jun 2015; Christopher Reffett <2011creffett@gentoo.org>
+  +libzip-1.0.1.ebuild:
+  Bump wrt bug 550922
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libzip-0.11.2.ebuild:
+  Stable for ia64, wrt bug #530658
 
   27 Jan 2015; Michael Palimaka <kensington@gentoo.org>
   -files/libzip-0.10_rc1-fix_headers.patch, -libzip-0.11.1.ebuild:

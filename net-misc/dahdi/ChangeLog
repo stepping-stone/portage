@@ -1,6 +1,50 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.69 2015/02/12 16:09:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.77 2015/07/31 12:43:09 chainsaw Exp $
+
+  31 Jul 2015; Tony Vroon <chainsaw@gentoo.org> -dahdi-2.10.1-r1.ebuild,
+  dahdi-2.10.2-r2.ebuild:
+  Patching to address upstream kernel deprecation of IRQF_DISABLED as reported
+  by Toralf Förster and tested by Jaco Kroon.
+
+*dahdi-2.10.2-r2 (27 Jul 2015)
+
+  27 Jul 2015; Tony Vroon <chainsaw@gentoo.org> -dahdi-2.10.2-r1.ebuild,
+  +dahdi-2.10.2-r2.ebuild:
+  Update firmware versions and download URLs so that the build system does not
+  attempt network access during build. As pointed out by Toralf Förster in bug
+  #555154. Removing previous ebuild and enforcing rebuild, in case any
+  corrupted/truncated firmware made it into disk.
+
+*dahdi-2.10.2-r1 (07 Jul 2015)
+
+  07 Jul 2015; Tony Vroon <chainsaw@gentoo.org> -dahdi-2.10.2.ebuild,
+  +dahdi-2.10.2-r1.ebuild:
+  Include a further patch from Oliver Jaksch that I had initially overlooked.
+  Remove non-functional ebuild from tree.
+
+*dahdi-2.10.2 (29 Jun 2015)
+
+  29 Jun 2015; Tony Vroon <chainsaw@gentoo.org> +dahdi-2.10.2.ebuild:
+  Version bump, as requested by Oliver Jaksch in bug #553388.
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> dahdi-2.10.1.ebuild:
+  Stable for x86, wrt bug #544768
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> dahdi-2.10.1.ebuild:
+  Stable for amd64, wrt bug #544768
+
+*dahdi-2.10.1-r1 (14 May 2015)
+
+  14 May 2015; Tony Vroon <chainsaw@gentoo.org> +dahdi-2.10.1-r1.ebuild:
+  Two upstream patches as scavenged by Erich Seifert & Oliver Jaksch restore
+  compatibility with kernel 4.0 and higher. Closes bug #546530.
+
+*dahdi-2.10.1 (02 Mar 2015)
+
+  02 Mar 2015; Tony Vroon <chainsaw@gentoo.org> +dahdi-2.10.1.ebuild:
+  Version bump, reverting to earlier patchset as suggested by Oliver Jaksch in
+  bug #541006.
 
 *dahdi-2.10.0.1-r1 (12 Feb 2015)
 

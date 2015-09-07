@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20141203-r1.ebuild,v 1.2 2014/12/21 14:07:10 swift Exp $
+# $Id$
 EAPI="5"
 
 inherit eutils
 
 if [[ ${PV} == 9999* ]]; then
-	EGIT_REPO_URI="${SELINUX_GIT_REPO:-git://git.overlays.gentoo.org/proj/hardened-refpolicy.git https://git.overlays.gentoo.org/gitroot/proj/hardened-refpolicy.git}"
+	EGIT_REPO_URI="${SELINUX_GIT_REPO:-git://anongit.gentoo.org/proj/hardened-refpolicy.git https://anongit.gentoo.org/git/proj/hardened-refpolicy.git}"
 	EGIT_BRANCH="${SELINUX_GIT_BRANCH:-master}"
 	EGIT_SOURCEDIR="${WORKDIR}/refpolicy"
 
@@ -19,7 +19,7 @@ else
 fi
 else
 	SRC_URI="https://raw.githubusercontent.com/wiki/TresysTechnology/refpolicy/files/refpolicy-${PV}.tar.bz2
-			http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-${PVR}.tar.bz2"
+			https://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-${PVR}.tar.bz2"
 
 	KEYWORDS="amd64 x86"
 fi
@@ -27,7 +27,7 @@ fi
 IUSE="+peer_perms +open_perms +ubac +unconfined doc"
 
 DESCRIPTION="Gentoo base policy for SELinux"
-HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
+HOMEPAGE="https://www.gentoo.org/proj/en/hardened/selinux/"
 LICENSE="GPL-2"
 SLOT="0"
 

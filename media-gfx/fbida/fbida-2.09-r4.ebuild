@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r4.ebuild,v 1.9 2015/01/02 12:37:35 ago Exp $
+# $Id$
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -9,12 +9,12 @@ DESCRIPTION="Image viewers for the framebuffer console (fbi) and X11 (ida)"
 HOMEPAGE="http://www.kraxel.org/blog/linux/fbida/"
 SRC_URI="
 	http://www.kraxel.org/releases/${PN}/${P}.tar.gz
-	http://dev.gentoo.org/~jer/${P}-jpeg-9a.patch.bz2
+	https://dev.gentoo.org/~jer/${P}-jpeg-9a.patch.bz2
 	mirror://gentoo/ida.png.bz2
 "
 LICENSE="GPL-2 IJG"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ppc ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 ~sh sparc x86"
 IUSE="curl fbcon +gif lirc pdf +png scanner +tiff X +webp"
 REQUIRED_USE="
 	pdf? ( tiff )

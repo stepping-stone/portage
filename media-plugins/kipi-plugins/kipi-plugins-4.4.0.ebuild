@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-4.4.0.ebuild,v 1.6 2015/02/14 14:38:27 ago Exp $
+# $Id$
 
 EAPI=5
 
@@ -31,9 +31,9 @@ SLOT="4"
 IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki panorama redeyes scanner upnp videoslideshow vkontakte"
 
 COMMONDEPEND="
-	|| ( kde-apps/libkipi:4 $(add_kdebase_dep libkipi) )
-	|| ( kde-apps/libkdcraw:4= kde-base/libkdcraw:4= )
-	|| ( kde-apps/libkexiv2:4= kde-base/libkexiv2:4= )
+	kde-apps/libkipi:4
+	kde-apps/libkdcraw:4=
+	kde-apps/libkexiv2:4=
 	dev-libs/expat
 	dev-libs/kqoauth
 	dev-libs/libxml2
@@ -52,12 +52,12 @@ COMMONDEPEND="
 	mediawiki?	( >=net-libs/libmediawiki-3.0.0 )
 	redeyes?	( >=media-libs/opencv-2.4.9 )
 	scanner? 	(
-			|| ( kde-apps/libksane:4 $(add_kdebase_dep libksane) )
+			  $(add_kdeapps_dep libksane)
 			  media-gfx/sane-backends
 			)
 	upnp?		( media-libs/herqq )
 	videoslideshow?	(
-			  media-libs/qt-gstreamer
+			  media-libs/qt-gstreamer[qt4(+)]
 			  || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 			)
 	vkontakte?	( net-libs/libkvkontakte )

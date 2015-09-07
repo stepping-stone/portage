@@ -1,6 +1,24 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.164 2015/01/03 12:12:32 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.170 2015/08/06 07:07:55 jlec Exp $
+
+  06 Aug 2015; Justin Lecher <jlec@gentoo.org> munin-2.0.25-r1.ebuild:
+  Add missing dep for cgi support
+
+  31 Jul 2015; Michael Weber <xmw@gentoo.org> munin-2.0.25-r1.ebuild,
+  munin-2.1.9999.ebuild:
+  Install complete set of manpages if USE=minimal.
+
+  31 Jul 2015; Justin Lecher <jlec@gentoo.org> munin-2.0.25-r1.ebuild:
+  Drop unnesessary dep again
+
+  30 Jul 2015; Justin Lecher <jlec@gentoo.org> munin-2.0.25-r1.ebuild:
+  Add missing dep
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> munin-2.0.19-r1.ebuild,
+  munin-2.0.19.ebuild, munin-2.0.25-r1.ebuild, munin-2.0.25.ebuild,
+  munin-2.1.9999.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *munin-2.0.25-r1 (03 Jan 2015)
 
@@ -15,7 +33,7 @@
 *munin-2.0.25 (24 Dec 2014)
 
   24 Dec 2014; Justin Lecher <jlec@gentoo.org> +munin-2.0.25.ebuild:
-  Version BUmp, #512070
+  Version Bump, #512070
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> munin-2.0.19.ebuild,
   munin-2.0.19-r1.ebuild, munin-2.1.9999.ebuild:

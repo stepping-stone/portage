@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/kst-2.0.7.ebuild,v 1.1 2013/08/01 18:28:16 kensington Exp $
+# $Id$
 
 EAPI=4
 
@@ -9,7 +9,7 @@ MY_PN="Kst"
 inherit cmake-utils multilib
 
 DESCRIPTION="Fast real-time large-dataset viewing and plotting tool for KDE4"
-HOMEPAGE="http://kst.kde.org/"
+HOMEPAGE="https://kst.kde.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.2"
@@ -42,7 +42,7 @@ RDEPEND="
 	sci-libs/cfitsio
 	sci-libs/getdata
 	sci-libs/gsl
-	sci-libs/netcdf[cxx]
+	sci-libs/netcdf-cxx:3
 "
 DEPEND="${RDEPEND}
 	test? ( dev-qt/qttest:4 )

@@ -1,6 +1,18 @@
 # ChangeLog for app-cdr/brasero
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.169 2014/12/19 13:33:24 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.172 2015/06/26 09:20:46 ago Exp $
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> brasero-3.12.1.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> brasero-3.12.1.ebuild:
+  amd64 stable wrt bug #551814
+
+*brasero-3.12.1 (01 May 2015)
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org> -brasero-3.11.3.ebuild,
+  -brasero-3.11.4.ebuild, +brasero-3.12.1.ebuild:
+  Version bump. Clean up old revisions.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> brasero-3.12.0.ebuild:
   amd64 stable, bug 529964

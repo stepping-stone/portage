@@ -1,6 +1,22 @@
 # ChangeLog for dev-haskell/cgi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.37 2014/12/14 11:21:22 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.41 2015/08/01 16:08:30 slyfox Exp $
+
+  01 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org> cgi-3001.1.8.5.ebuild:
+  Export a knob for older ghcs.
+
+*cgi-3001.2.2.2 (26 Jul 2015)
+
+  26 Jul 2015; Sergei Trofimovich <slyfox@gentoo.org> +cgi-3001.2.2.2.ebuild:
+  Version bump.
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*cgi-3001.2.2.1 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +cgi-3001.2.2.1.ebuild:
+  Bump cgi to 3001.2.2.1
 
 *cgi-3001.2.2.0 (14 Dec 2014)
 

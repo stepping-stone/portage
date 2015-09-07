@@ -1,6 +1,35 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.64 2015/01/19 20:38:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.72 2015/08/05 09:46:38 zlogene Exp $
+
+  05 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> rubygems-10.ebuild:
+  x86 stable wrt bug #518094
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> rubygems-10.ebuild:
+  sparc stable wrt bug #518094
+
+  30 Jul 2015; Tobias Klausmann <klausman@gentoo.org> rubygems-10.ebuild:
+  Stable on alpha, bug 518094
+
+  29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> rubygems-10.ebuild:
+  amd64 stable wrt bug #518094
+
+  26 Jul 2015; Markus Meier <maekke@gentoo.org> rubygems-10.ebuild:
+  arm stable, bug #518094
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> rubygems-10.ebuild:
+  ppc stable wrt bug #518094
+
+*rubygems-11 (07 Jun 2015)
+
+  07 Jun 2015; Hans de Graaff <graaff@gentoo.org> rubygems-10.ebuild,
+  +rubygems-11.ebuild:
+  Create new version for ruby21.
+
+  14 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -rubygems-4.ebuild,
+  -rubygems-5.ebuild, -rubygems-6.ebuild, -rubygems-7.ebuild,
+  -rubygems-8.ebuild:
+  Remove old.
 
 *rubygems-10 (19 Jan 2015)
 *rubygems-9 (19 Jan 2015)

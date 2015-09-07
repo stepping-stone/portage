@@ -1,6 +1,21 @@
 # ChangeLog for dev-cpp/gflags
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.32 2014/10/25 16:43:46 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.36 2015/08/07 13:08:46 amynka Exp $
+
+*gflags-2.1.2 (07 Aug 2015)
+
+  07 Aug 2015;  <amy@gentoo.org> +gflags-2.1.2.ebuild, metadata.xml:
+  Version bump bug #556896. Add myself as maintainer.
+
+  22 Jul 2015; Mike Frysinger <vapier@gentoo.org> gflags-2.1.1-r1.ebuild,
+  gflags-9999.ebuild:
+  Add arm64 love.
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> gflags-2.1.1-r1.ebuild:
+  Stable for PPC64 (bug #540844).
 
   25 Oct 2014; Michael Palimaka <kensington@gentoo.org> -gflags-2.0-r1.ebuild,
   -gflags-2.0.ebuild:

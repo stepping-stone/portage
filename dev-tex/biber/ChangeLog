@@ -1,6 +1,18 @@
 # ChangeLog for dev-tex/biber
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biber/ChangeLog,v 1.7 2014/08/08 12:27:54 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biber/ChangeLog,v 1.10 2015/07/04 15:38:52 mrueg Exp $
+
+*biber-2.1 (04 Jul 2015)
+
+  04 Jul 2015; Manuel Rüger <mrueg@gentoo.org> +biber-2.1.ebuild,
+  +files/biber-2.1-drop-mozilla-ca.patch:
+  Version bump. Fixes bug #547466.
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> biber-1.9.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   08 Aug 2014; Manuel Rüger <mrueg@gentoo.org> -biber-1.8.ebuild,
   -files/biber-1.8-drop-mozilla-ca.patch:

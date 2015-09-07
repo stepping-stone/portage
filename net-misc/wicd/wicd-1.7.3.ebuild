@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.3.ebuild,v 1.2 2015/01/30 22:05:10 tomka Exp $
+# $Id$
 
 EAPI=5
 
@@ -11,13 +11,13 @@ inherit eutils distutils-r1 linux-info readme.gentoo systemd
 
 DESCRIPTION="A lightweight wired and wireless network manager for Linux"
 HOMEPAGE="https://launchpad.net/wicd"
-SRC_URI="http://launchpad.net/wicd/1.7/${PV}/+download/${P}.tar.gz
-	mac4lin? ( http://dev.gentoo.org/~anarchy/dist/wicd-mac4lin-icons.tar.xz )
+SRC_URI="https://launchpad.net/wicd/1.7/${PV}/+download/${P}.tar.gz
+	mac4lin? ( https://dev.gentoo.org/~anarchy/dist/wicd-mac4lin-icons.tar.xz )
 	ambiance? ( http://freetimesblog.altervista.org/blog/wp-content/uploads/downloads/2010/05/Icone-Wicd-Lucid.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~mips ppc ppc64 x86"
 IUSE="doc X ambiance +gtk ioctl libnotify mac4lin ncurses nls +pm-utils gnome-shell"
 
 DEPEND="nls? ( dev-python/Babel )"
@@ -28,7 +28,7 @@ RDEPEND="${PYTHON_DEPS}
 		|| (
 			x11-misc/ktsuss
 			x11-libs/gksu
-			kde-base/kdesu
+			kde-apps/kdesu
 			)
 	)
 	|| (

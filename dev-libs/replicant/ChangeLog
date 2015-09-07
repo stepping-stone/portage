@@ -1,6 +1,32 @@
 # ChangeLog for dev-libs/replicant
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/replicant/ChangeLog,v 1.14 2014/08/26 09:14:17 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/replicant/ChangeLog,v 1.19 2015/07/30 06:04:31 patrick Exp $
+
+*replicant-0.8.1 (30 Jul 2015)
+
+  30 Jul 2015; Patrick Lauer <patrick@gentoo.org> +replicant-0.8.1.ebuild:
+  Bump
+
+*replicant-0.8.0 (10 Jul 2015)
+
+  10 Jul 2015; Patrick Lauer <patrick@gentoo.org> +replicant-0.8.0.ebuild:
+  Bump
+
+  18 Jun 2015; Patrick Lauer <patrick@gentoo.org> -replicant-0.3.1.ebuild,
+  -replicant-0.4.0.ebuild, -replicant-0.5.0.ebuild, -replicant-0.6.0.ebuild,
+  -replicant-0.6.1.ebuild, -replicant-0.6.2.ebuild, -replicant-0.6.3.ebuild,
+  -replicant-0.7.0.ebuild:
+  Remove old
+
+*replicant-0.7.1 (18 Jun 2015)
+
+  18 Jun 2015; Patrick Lauer <patrick@gentoo.org> +replicant-0.7.1.ebuild:
+  Bump
+
+*replicant-0.7.0 (28 May 2015)
+
+  28 May 2015; Patrick Lauer <patrick@gentoo.org> +replicant-0.7.0.ebuild:
+  Bump
 
 *replicant-0.6.4 (26 Aug 2014)
 

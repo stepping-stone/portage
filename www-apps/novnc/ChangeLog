@@ -1,6 +1,19 @@
 # ChangeLog for www-apps/novnc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/ChangeLog,v 1.7 2014/10/12 19:28:51 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/ChangeLog,v 1.11 2015/07/29 18:01:43 zlogene Exp $
+
+  29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> novnc-0.5.ebuild:
+  x86 stable wrt bug #554284
+
+  18 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> novnc-0.5.ebuild:
+  amd64 stable wrt bug #554284
+
+  23 Jun 2015; Matthew Thode <prometheanfire@gentoo.org> -novnc-0.4.ebuild:
+  removing for bug 552750 CVE-2013-7436
+
+  18 Apr 2015; Sven Wegener <swegener@gentoo.org> novnc-0.4.ebuild,
+  novnc-0.5.ebuild:
+  Rename distfile to include package name.
 
 *novnc-0.5 (12 Oct 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.4-r1.ebuild,v 1.3 2014/09/08 16:32:37 nimiux Exp $
+# $Id$
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 hppa ppc ppc64 ~sparc x86"
 IUSE="cairo debug examples hunspell +minimal +pdf scripts templates tk"
 
 # a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}
@@ -40,7 +40,7 @@ COMMON_DEPEND="
 	media-libs/tiff:0
 	net-print/cups
 	sys-libs/zlib[minizip]
-	virtual/jpeg
+	virtual/jpeg:0=
 	cairo? ( x11-libs/cairo[X,svg] )
 	!cairo? ( media-libs/libart_lgpl )
 	hunspell? ( app-text/hunspell )
@@ -56,6 +56,7 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.4.2-docs.patch
 	"${FILESDIR}"/${PN}-1.4.0-minizip.patch
+	"${FILESDIR}"/${P}-ppc64-fpic.patch
 	)
 
 src_prepare() {
@@ -130,7 +131,7 @@ src_install() {
 	ln -sf html "${ED}"/usr/share/doc/${PF}/en || die
 	cat >> "${T}"/COPYING <<- EOF
 	${PN} is licensed under the "${LICENSE}".
-	Please visit http://www.gnu.org/licenses/gpl-2.0.html for the complete license text.
+	Please visit https://www.gnu.org/licenses/gpl-2.0.html for the complete license text.
 	EOF
 	dodoc "${T}"/COPYING
 	docompress -x /usr/share/doc/${PF}/en /usr/share/doc/${PF}/{AUTHORS,TRANSLATION,LINKS,COPYING}

@@ -4,6 +4,11 @@
 # Unmask arm arch specific flags
 -iwmmxt
 
+# Patrick Lauer <patrick@gentoo.org> (28 Apr 2015)
+# Dependencies not keyworded
+ayatana
+
+# Mike Frysinger <vapier@gentoo.org> (25 Feb 2013)
 # doomsday ebuild is not available on this architecture
 doomsday
 
@@ -65,7 +70,6 @@ dmi
 
 # Stuff we don't want
 chicken
-fuse
 R
 octave
 tracker
@@ -122,6 +126,7 @@ xanim
 fits
 tokyocabinet
 vaapi
+librtmp
 rtmp
 vpx
 iplayer
@@ -183,6 +188,7 @@ video_cards_voodoo
 
 # Matt Turner <mattst88@gentoo.org>
 # Mask more VIDEO_CARDs added with mesa-8.0
+video_cards_amdgpu
 video_cards_r100
 video_cards_r200
 video_cards_r300

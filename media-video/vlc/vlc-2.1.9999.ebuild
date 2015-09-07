@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.35 2015/02/16 08:48:37 dlan Exp $
+# $Id$
 
 EAPI="5"
 
@@ -45,7 +45,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode faad fdk
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libav libcaca libnotify
-	libsamplerate libtiger linsys libtar lirc live lua +macosx
+	+libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library cpu_flags_x86_mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opencv opengl optimisememory opus
@@ -115,7 +115,7 @@ RDEPEND="
 		mpeg? ( >=media-libs/libmpeg2-0.3.2:0 )
 		mtp? ( >=media-libs/libmtp-1.0.0:0 )
 		musepack? ( >=media-sound/musepack-tools-444:0 )
-		ncurses? ( sys-libs/ncurses:5[unicode] )
+		ncurses? ( sys-libs/ncurses:0=[unicode] )
 		ogg? ( media-libs/libogg:0 )
 		opencv? ( >media-libs/opencv-2.0:0 )
 		opengl? ( virtual/opengl:0 >=x11-libs/libX11-1.3.99.901:0 )
@@ -223,7 +223,7 @@ src_prepare() {
 	# config.h:792: warning: ignoring #pragma STDC FENV_ACCESS [-Wunknown-pragmas]
 	# config.h:793: warning: ignoring #pragma STDC FP_CONTRACT [-Wunknown-pragmas]
 	#
-	# http://gcc.gnu.org/c99status.html
+	# https://gcc.gnu.org/c99status.html
 	if [[ "$(tc-getCC)" == *"gcc"* ]] ; then
 		sed -i 's/ifndef __FAST_MATH__/if 0/g' configure.ac || die
 	fi

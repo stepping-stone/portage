@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.9-r2.ebuild,v 1.1 2015/02/07 21:24:15 floppym Exp $
+# $Id$
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -14,7 +14,7 @@ PATCHSET_VERSION="2.7.9-1"
 DESCRIPTION="An interpreted, interactive, object-oriented programming language"
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.xz
-	http://dev.gentoo.org/~floppym/python/python-gentoo-patches-${PATCHSET_VERSION}.tar.xz"
+	https://dev.gentoo.org/~floppym/python/python-gentoo-patches-${PATCHSET_VERSION}.tar.xz"
 
 LICENSE="PSF-2"
 SLOT="2.7"
@@ -65,7 +65,7 @@ DEPEND="${RDEPEND}
 	!sys-devel/gcc[libffi]"
 RDEPEND+=" !build? ( app-misc/mime-types )
 	doc? ( dev-python/python-docs:${SLOT} )"
-PDEPEND="app-admin/eselect-python
+PDEPEND="app-eselect/eselect-python
 	app-admin/python-updater"
 
 S="${WORKDIR}/${MY_P}"
@@ -99,6 +99,7 @@ src_prepare() {
 
 	# Fix for cross-compiling.
 	epatch "${FILESDIR}/python-2.7.5-nonfatal-compileall.patch"
+	epatch "${FILESDIR}/python-2.7.9-ncurses-pkg-config.patch"
 
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
 		Lib/distutils/command/install.py \

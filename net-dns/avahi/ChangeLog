@@ -1,6 +1,41 @@
 # ChangeLog for net-dns/avahi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.282 2014/11/22 23:32:32 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.292 2015/08/08 14:14:21 maekke Exp $
+
+  08 Aug 2015; Markus Meier <maekke@gentoo.org> avahi-0.6.31-r8.ebuild:
+  arm stable, bug #554784
+
+  06 Aug 2015; Tobias Klausmann <klausman@gentoo.org> avahi-0.6.31-r8.ebuild:
+  Stable on alpha, bug 554784
+
+  05 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> avahi-0.6.31-r8.ebuild:
+  ia64 stable wrt bug #554784
+
+  04 Aug 2015; Michał Górny <mgorny@gentoo.org> avahi-0.6.31-r8.ebuild:
+  Fix systemd service install directory, bug #556650 by Alexander Tsoy.
+
+  04 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> avahi-0.6.31-r8.ebuild:
+  x86 stable wrt bug #554784
+
+  03 Aug 2015; Agostino Sarubbo <ago@gentoo.org> avahi-0.6.31-r8.ebuild:
+  Stable for amd64, wrt bug #554784
+
+*avahi-0.6.31-r8 (13 Jul 2015)
+
+  13 Jul 2015; Pacho Ramos <pacho@gentoo.org> +avahi-0.6.31-r8.ebuild,
+  metadata.xml:
+  Add symlink needed for starting avahi properly on systemd (#537000)
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> avahi-0.6.31-r6.ebuild,
+  avahi-0.6.31-r7.ebuild:
+  Drop old Python implementations
+
+  08 Apr 2015; Mike Frysinger <vapier@gentoo.org> avahi-0.6.31-r6.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  02 Mar 2015; Anthony G. Basile <blueness@gentoo.org> -avahi-0.6.30-r3.ebuild,
+  -avahi-0.6.31-r2.ebuild, -avahi-0.6.31-r5.ebuild, avahi-0.6.31-r7.ebuild:
+  Add epatch_user, bug #525832.  Clean out older versions.
 
 *avahi-0.6.31-r7 (22 Nov 2014)
 

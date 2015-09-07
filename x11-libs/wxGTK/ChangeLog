@@ -1,6 +1,38 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.317 2015/02/02 16:26:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.324 2015/08/06 12:02:36 mgorny Exp $
+
+*wxGTK-3.0.2.0-r2 (06 Aug 2015)
+*wxGTK-2.8.12.1-r2 (06 Aug 2015)
+
+  06 Aug 2015; Michał Górny <mgorny@gentoo.org>
+  +files/wxGTK-2.8.12.1-autoconf.patch, +files/wxGTK-2.8.12.1-bakefile.patch,
+  +files/wxGTK-2.8.12.1-libdir.patch, +wxGTK-2.8.12.1-r2.ebuild,
+  +wxGTK-3.0.2.0-r2.ebuild:
+  Enable multilib support. Backport some build system patches.
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/142 by nE0sIghT.
+
+  30 Jul 2015; Markus Meier <maekke@gentoo.org> wxGTK-3.0.2.0-r1.ebuild:
+  arm stable, bug #547680
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> wxGTK-3.0.2.0-r1.ebuild:
+  Stable for sparc, wrt bug #547680
+
+  28 Jul 2015; Tobias Klausmann <klausman@gentoo.org> wxGTK-3.0.2.0-r1.ebuild:
+  Stable on alpha, bug 547680
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> wxGTK-3.0.2.0-r1.ebuild:
+  Stable for x86, wrt bug #547680
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> wxGTK-3.0.2.0-r1.ebuild:
+  Stable for amd64, wrt bug #547680
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> wxGTK-2.8.12.1-r1.ebuild,
+  wxGTK-2.9.4.1-r1.ebuild, wxGTK-3.0.0.0.ebuild, wxGTK-3.0.1.1.ebuild,
+  wxGTK-3.0.2.0.ebuild, wxGTK-3.0.2.0-r1.ebuild,
+  files/wxGTK-2.8.11-collision.patch, files/wxGTK-2.9.3.1-collision.patch,
+  files/wxGTK-2.9.4.1-collision.patch, files/wxGTK-3.0.0.0-collision.patch:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *wxGTK-3.0.2.0-r1 (02 Feb 2015)
 

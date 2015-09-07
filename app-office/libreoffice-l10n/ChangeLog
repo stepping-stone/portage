@@ -1,6 +1,79 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.132 2015/02/15 19:51:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.147 2015/08/04 20:28:58 dilfridge Exp $
+
+*libreoffice-l10n-4.4.5.2 (04 Aug 2015)
+
+  04 Aug 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-l10n-4.4.5.2.ebuild, -libreoffice-l10n-4.4.3.2.ebuild:
+  Version bump
+
+  22 Jul 2015; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-l10n-4.4.4.3.ebuild:
+  Stable for x86, wrt bug #555584
+
+  22 Jul 2015; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-l10n-4.4.4.3.ebuild:
+  Stable for amd64, wrt bug #555584
+
+*libreoffice-l10n-4.4.4.3 (12 Jul 2015)
+
+  12 Jul 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-l10n-4.4.4.3.ebuild:
+  Version bump
+
+  29 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -libreoffice-l10n-4.4.1.2.ebuild, -libreoffice-l10n-4.4.2.2.ebuild:
+  Drop old
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-l10n-4.4.3.2.ebuild:
+  Stable for x86, wrt bug #547900
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-l10n-4.4.3.2.ebuild:
+  Stable for amd64, wrt bug #547900
+
+*libreoffice-l10n-4.4.3.2 (11 May 2015)
+
+  11 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-l10n-4.4.3.2.ebuild:
+  Version bump
+
+  11 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libreoffice-l10n-4.3.5.2.ebuild, -libreoffice-l10n-4.3.6.2.ebuild,
+  -libreoffice-l10n-4.4.0.3.ebuild:
+  Remove old
+
+  09 Apr 2015; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-l10n-4.4.1.2.ebuild:
+  Stable for x86, wrt bug #545770
+
+  09 Apr 2015; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-l10n-4.4.1.2.ebuild:
+  Stable for amd64, wrt bug #545770
+
+*libreoffice-l10n-4.4.2.2 (03 Apr 2015)
+
+  03 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-l10n-4.4.2.2.ebuild:
+  Version bump
+
+  08 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-l10n-4.3.5.2.ebuild:
+  Update SRC_URI since our mirrors seem to be missing some files
+
+*libreoffice-l10n-4.4.1.2 (26 Feb 2015)
+
+  26 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-l10n-4.4.1.2.ebuild:
+  Version bump
+
+*libreoffice-l10n-4.3.6.2 (21 Feb 2015)
+
+  21 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-l10n-4.3.6.2.ebuild:
+  Version bump
 
   15 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-l10n-4.4.0.3.ebuild:

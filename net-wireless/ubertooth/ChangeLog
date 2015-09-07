@@ -1,6 +1,19 @@
 # ChangeLog for net-wireless/ubertooth
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.26 2014/08/26 01:33:17 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.30 2015/05/03 19:10:49 zerochaos Exp $
+
+  03 May 2015; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
+  update to distutils-r1
+
+  03 May 2015; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
+  changed from python dfu to C dfu implementation
+
+  19 Mar 2015; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
+  update pcap dep properly.  upstream should add some better flags for
+  controlling it soon but this mostly works
+
+  18 Mar 2015; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
+  update live ebuild for new udev installation method
 
   26 Aug 2014; Rick Farina <zerochaos@gentoo.org> ubertooth-2014.04.1-r1.ebuild,
   ubertooth-9999.ebuild:

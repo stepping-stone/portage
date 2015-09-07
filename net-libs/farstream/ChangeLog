@@ -1,6 +1,32 @@
 # ChangeLog for net-libs/farstream
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/ChangeLog,v 1.48 2015/02/16 10:28:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/ChangeLog,v 1.55 2015/05/01 12:51:19 eva Exp $
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  farstream-0.1.2-r1.ebuild, farstream-0.2.7.ebuild:
+  Clean up keywords of older 0.1 ebuild. Raise gstreamer dependencies in 0.2.7
+  as required by configure.
+
+  29 Mar 2015; Pacho Ramos <pacho@gentoo.org> -farstream-0.2.4.ebuild,
+  farstream-0.1.2-r2.ebuild, farstream-0.2.7.ebuild:
+  Drop msn USE as libmimic will be removed (#489552), drop old.
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> farstream-0.2.7.ebuild:
+  Stable for HPPA (bug #534012).
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> farstream-0.1.2-r2.ebuild,
+  farstream-0.2.7.ebuild:
+  x86 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> farstream-0.1.2-r2.ebuild:
+  ppc64 stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> farstream-0.1.2-r2.ebuild,
+  farstream-0.2.7.ebuild:
+  amd64 stable, bug 534012
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> farstream-0.1.2-r2.ebuild:
+  Stable for ppc, wrt bug #540648
 
   16 Feb 2015; Pacho Ramos <pacho@gentoo.org> farstream-0.2.7.ebuild:
   Allow fake access to /dev as upstream thinks this is not a bug and it depends

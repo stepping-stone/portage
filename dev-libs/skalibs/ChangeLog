@@ -1,6 +1,26 @@
 # ChangeLog for dev-libs/skalibs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/ChangeLog,v 1.17 2014/11/04 03:41:36 williamh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/ChangeLog,v 1.22 2015/06/24 16:15:26 williamh Exp $
+
+  24 Jun 2015; William Hubbs <williamh@gentoo.org> skalibs-2.3.2.0.ebuild:
+  stable on amd64 wrt #553160
+
+  19 Jun 2015; William Hubbs <williamh@gentoo.org> -skalibs-2.3.0.0.ebuild:
+  remove old version
+
+*skalibs-2.3.2.0 (16 Mar 2015)
+
+  16 Mar 2015; William Hubbs <williamh@gentoo.org> +skalibs-2.3.2.0.ebuild:
+  version bump
+
+  24 Feb 2015; William Hubbs <williamh@gentoo.org> -skalibs-1.4.1-r1.ebuild,
+  -skalibs-1.6.0.0.ebuild:
+  remove old versions
+
+*skalibs-2.3.0.0 (21 Feb 2015)
+
+  21 Feb 2015; William Hubbs <williamh@gentoo.org> +skalibs-2.3.0.0.ebuild:
+  Version bump for #540564
 
 *skalibs-1.6.0.0 (04 Nov 2014)
 

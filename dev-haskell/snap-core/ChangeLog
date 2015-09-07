@@ -1,6 +1,21 @@
 # ChangeLog for dev-haskell/snap-core
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/snap-core/ChangeLog,v 1.5 2015/01/01 09:44:01 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/snap-core/ChangeLog,v 1.8 2015/08/02 11:08:59 slyfox Exp $
+
+  02 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org> -snap-core-0.9.5.0.ebuild,
+  -snap-core-0.9.6.3-r1.ebuild, -snap-core-0.9.6.3.ebuild,
+  -snap-core-0.9.6.4.ebuild, -snap-core-0.9.7.0.ebuild:
+  Drop old.
+
+*snap-core-0.9.7.2 (17 Jul 2015)
+
+  17 Jul 2015; Mark Wright <gienah@gentoo.org> +snap-core-0.9.7.2.ebuild:
+  Bump snap-core to 0.9.7.2
+
+*snap-core-0.9.7.0 (05 Apr 2015)
+
+  05 Apr 2015; Mark Wright <gienah@gentoo.org> +snap-core-0.9.7.0.ebuild:
+  Bump snap-core to 0.9.7.0
 
 *snap-core-0.9.6.4 (01 Jan 2015)
 

@@ -1,6 +1,207 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.456 2015/02/18 06:57:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.495 2015/08/08 08:11:57 jer Exp $
+
+*youtube-dl-2015.08.06.1 (08 Aug 2015)
+
+  08 Aug 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.07.21.ebuild,
+  +youtube-dl-2015.08.06.1.ebuild:
+  Version bump.
+
+*youtube-dl-2015.07.28 (29 Jul 2015)
+
+  29 Jul 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.07.18.ebuild,
+  +youtube-dl-2015.07.28.ebuild:
+  Version bump.
+
+*youtube-dl-2015.07.21 (22 Jul 2015)
+
+  22 Jul 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.07.07.ebuild,
+  +youtube-dl-2015.07.21.ebuild:
+  Version bump.
+
+*youtube-dl-2015.07.18 (19 Jul 2015)
+
+  19 Jul 2015; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2015.07.18.ebuild:
+  Version bump.
+
+*youtube-dl-2015.07.07 (08 Jul 2015)
+
+  08 Jul 2015; Jeroen Roovers <jer@gentoo.org>
+  -youtube-dl-2015.06.15-r1.ebuild, -youtube-dl-2015.06.25-r1.ebuild,
+  -youtube-dl-2015.07.04.ebuild, +youtube-dl-2015.07.07.ebuild:
+  Version bump.
+
+*youtube-dl-2015.07.04 (05 Jul 2015)
+
+  05 Jul 2015; Jeroen Roovers <jer@gentoo.org> youtube-dl-2015.06.25-r1.ebuild,
+  +youtube-dl-2015.07.04.ebuild:
+  Version bump.
+
+*youtube-dl-2015.06.25-r1 (05 Jul 2015)
+
+  05 Jul 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.06.25.ebuild,
+  +youtube-dl-2015.06.25-r1.ebuild:
+  Fix USE=-offensive (bug #553668 by Vasco Gervasi).
+
+*youtube-dl-2015.06.25 (26 Jun 2015)
+
+  26 Jun 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.06.04.1.ebuild,
+  +youtube-dl-2015.06.25.ebuild:
+  Version bump.
+
+*youtube-dl-2015.06.15-r1 (23 Jun 2015)
+
+  23 Jun 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.06.15.ebuild,
+  +youtube-dl-2015.06.15-r1.ebuild:
+  Fix mxxx (bug #552216 by Nikoli).
+
+*youtube-dl-2015.06.15 (15 Jun 2015)
+
+  15 Jun 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.05.29.ebuild,
+  +youtube-dl-2015.06.15.ebuild:
+  Version bump.
+
+*youtube-dl-2015.06.04.1 (05 Jun 2015)
+
+  05 Jun 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.05.20.ebuild,
+  +youtube-dl-2015.06.04.1.ebuild:
+  Version bump.
+
+*youtube-dl-2015.05.29 (30 May 2015)
+
+  30 May 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.05.15.ebuild,
+  +youtube-dl-2015.05.29.ebuild:
+  Version bump.
+
+*youtube-dl-2015.05.20 (21 May 2015)
+
+  21 May 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.05.10.ebuild,
+  +youtube-dl-2015.05.20.ebuild:
+  Version bump.
+
+*youtube-dl-2015.05.15 (16 May 2015)
+
+  16 May 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.05.04.ebuild,
+  +youtube-dl-2015.05.15.ebuild:
+  Version bump.
+
+*youtube-dl-2015.05.10 (10 May 2015)
+
+  10 May 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.05.03.ebuild,
+  +youtube-dl-2015.05.10.ebuild:
+  Version bump.
+
+*youtube-dl-2015.05.04 (07 May 2015)
+
+  07 May 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.04.28.ebuild,
+  +youtube-dl-2015.05.04.ebuild:
+  Version bump.
+
+*youtube-dl-2015.05.03 (04 May 2015)
+
+  04 May 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.04.26.ebuild,
+  +youtube-dl-2015.05.03.ebuild:
+  Version bump.
+
+  02 May 2015; Jeroen Roovers <jer@gentoo.org> youtube-dl-2015.04.03.ebuild,
+  youtube-dl-2015.04.26.ebuild, youtube-dl-2015.04.28.ebuild:
+  Fix epatch_user.
+
+  01 May 2015; Mikle Kolyada <zlogene@gentoo.org> youtube-dl-2015.04.03.ebuild,
+  youtube-dl-2015.04.26.ebuild, youtube-dl-2015.04.28.ebuild:
+  Add epatch_user support (bug #546758)
+
+*youtube-dl-2015.04.28 (29 Apr 2015)
+
+  29 Apr 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.04.17.ebuild,
+  +youtube-dl-2015.04.28.ebuild:
+  Version bump.
+
+*youtube-dl-2015.04.26 (28 Apr 2015)
+
+  28 Apr 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.04.09.ebuild,
+  +youtube-dl-2015.04.26.ebuild:
+  Version bump.
+
+  26 Apr 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2014.11.02.1.ebuild:
+  Old.
+
+  26 Apr 2015; Jeroen Roovers <jer@gentoo.org> youtube-dl-2015.04.03.ebuild:
+  Stable for PPC64 (bug #545484).
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> youtube-dl-2015.04.03.ebuild:
+  ppc stable wrt bug #545484
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> youtube-dl-2015.04.03.ebuild:
+  Stable for x86, wrt bug #545484
+
+*youtube-dl-2015.04.17 (18 Apr 2015)
+
+  18 Apr 2015; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2015.04.17.ebuild:
+  Version bump.
+
+  09 Apr 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.03.28.ebuild:
+  Old.
+
+*youtube-dl-2015.04.09 (09 Apr 2015)
+
+  09 Apr 2015; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2015.04.09.ebuild:
+  Version bump.
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> youtube-dl-2015.04.03.ebuild:
+  Stable for amd64, wrt bug #545484
+
+  04 Apr 2015; Jeroen Roovers <jer@gentoo.org> youtube-dl-2015.04.03.ebuild:
+  Stable for HPPA (bug #545484).
+
+*youtube-dl-2015.04.03 (04 Apr 2015)
+
+  04 Apr 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.03.24.ebuild,
+  +youtube-dl-2015.04.03.ebuild:
+  Version bump.
+
+*youtube-dl-2015.03.28 (29 Mar 2015)
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.03.18.ebuild,
+  +youtube-dl-2015.03.28.ebuild:
+  Version bump.
+
+*youtube-dl-2015.03.24 (25 Mar 2015)
+
+  25 Mar 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.03.15.ebuild,
+  +youtube-dl-2015.03.24.ebuild:
+  Version bump.
+
+*youtube-dl-2015.03.18 (19 Mar 2015)
+
+  19 Mar 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.03.09.ebuild,
+  +youtube-dl-2015.03.18.ebuild:
+  Version bump.
+
+*youtube-dl-2015.03.15 (16 Mar 2015)
+
+  16 Mar 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.03.03.1.ebuild,
+  +youtube-dl-2015.03.15.ebuild:
+  Version bump.
+
+*youtube-dl-2015.03.09 (09 Mar 2015)
+
+  09 Mar 2015; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2015.03.09.ebuild:
+  Version bump.
+
+*youtube-dl-2015.03.03.1 (04 Mar 2015)
+
+  04 Mar 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.02.18.ebuild,
+  -youtube-dl-2015.02.20.ebuild, +youtube-dl-2015.03.03.1.ebuild:
+  Version bump. Fix multi-line python imports with USE=-offensive (bug #540988
+  by Erik).
+
+*youtube-dl-2015.02.20 (21 Feb 2015)
+
+  21 Feb 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.02.16.ebuild,
+  +youtube-dl-2015.02.20.ebuild:
+  Version bump.
 
 *youtube-dl-2015.02.18 (18 Feb 2015)
 

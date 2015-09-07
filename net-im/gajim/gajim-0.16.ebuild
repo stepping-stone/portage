@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16.ebuild,v 1.5 2015/01/17 19:58:46 maekke Exp $
+# $Id$
 
 EAPI=5
 
@@ -18,11 +18,11 @@ DESCRIPTION="Jabber client written in PyGTK"
 HOMEPAGE="http://www.gajim.org/"
 SRC_URI="
 	http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${MY_P}.tar.bz2"
-#	test? ( http://dev.gentoo.org/~jlec/distfiles/${PN}-tests-${PV}.tar.xz )"
+#	test? ( https://dev.gentoo.org/~jlec/distfiles/${PN}-tests-${PV}.tar.xz )"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd"
 IUSE="avahi crypt dbus gnome gnome-keyring kde idle jingle libnotify networkmanager nls spell +srv test X xhtml"
 
 REQUIRED_USE="
@@ -60,7 +60,7 @@ RDEPEND="${COMMON_DEPEND}
 	gnome-keyring? ( dev-python/gnome-keyring-python[${PYTHON_USEDEP}] )
 	idle? ( x11-libs/libXScrnSaver )
 	jingle? ( net-libs/farstream:0.1[python,${PYTHON_USEDEP}] )
-	kde? ( kde-base/kwalletmanager )
+	kde? ( kde-apps/kwalletmanager )
 	networkmanager? (
 			dev-python/dbus-python[${PYTHON_USEDEP}]
 			net-misc/networkmanager

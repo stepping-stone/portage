@@ -1,6 +1,49 @@
 # ChangeLog for dev-python/pycparser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.31 2015/02/07 15:35:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.42 2015/08/06 14:41:25 klausman Exp $
+
+  06 Aug 2015; Tobias Klausmann <klausman@gentoo.org> pycparser-2.14.ebuild:
+  Stable on alpha, bug 556428
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> pycparser-2.10.ebuild:
+  sparc stable wrt bug #530294
+
+  11 Jul 2015; Tobias Klausmann <klausman@gentoo.org> pycparser-2.10.ebuild:
+  Stable on alpha, bug 530294
+
+*pycparser-2.14 (15 Jun 2015)
+
+  15 Jun 2015; Justin Lecher <jlec@gentoo.org> +pycparser-2.14.ebuild:
+  Version Bump
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*pycparser-2.13 (15 May 2015)
+
+  15 May 2015; Justin Lecher <jlec@gentoo.org> +pycparser-2.13.ebuild:
+  Version Bump
+
+*pycparser-2.12 (06 May 2015)
+
+  06 May 2015; Mike Gilbert <floppym@gentoo.org> +pycparser-2.12.ebuild,
+  -pycparser-2.11.ebuild:
+  Version bump, should fix bug 548718.
+
+*pycparser-2.11 (05 May 2015)
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> +pycparser-2.11.ebuild,
+  -pycparser-2.09.1-r1.ebuild, metadata.xml:
+  Version Bump; drop old
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pycparser-2.09.1-r1.ebuild:
+  Drop old Python implementations
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> pycparser-2.10.ebuild:
+  Mark arm64/ia64/m68k/s390/sh stable.
+
+  01 Apr 2015; Tobias Klausmann <klausman@gentoo.org> pycparser-2.10.ebuild:
+  Keyworded on alpha, bug 503094
 
   07 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pycparser-2.10.ebuild:
   Stable for ppc, wrt bug #530592

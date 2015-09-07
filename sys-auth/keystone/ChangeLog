@@ -1,6 +1,80 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.87 2015/02/08 01:59:11 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.103 2015/08/05 02:39:41 prometheanfire Exp $
+
+  05 Aug 2015; Matthew Thode <prometheanfire@gentoo.org>
+  -files/CVE-2015-3646-2014.2.3.patch, -files/no_admin_token_auth-paste.ini,
+  -keystone-2014.2.9999.ebuild:
+  removing the old and jankey
+
+  29 Jul 2015; Matthew Thode <prometheanfire@gentoo.org>
+  keystone-2015.1.9999.ebuild:
+  updating stable/kilo deps
+
+*keystone-2015.1.1 (29 Jul 2015)
+
+  29 Jul 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +keystone-2015.1.1.ebuild:
+  bup
+
+  29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> keystone-2015.1.0.ebuild:
+  x86 stable wrt bug #554284
+
+  18 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> keystone-2015.1.0.ebuild:
+  amd64 stable wrt bug #554284
+
+  03 Jul 2015; Patrick Lauer <patrick@gentoo.org> -keystone-2014.2.3-r2.ebuild:
+  Remove old ebuild with unsatisfied dependencies
+
+*keystone-2014.2.3-r2 (05 May 2015)
+
+  05 May 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +files/CVE-2015-3646-2014.2.3.patch, +keystone-2014.2.3-r2.ebuild,
+  -keystone-2014.2.3-r1.ebuild:
+  fixing a new cve 0day :D
+
+  30 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  keystone-2015.1.0.ebuild:
+  removing unneeded inherit
+
+  30 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  keystone-2015.1.0.ebuild:
+  adding keywords
+
+*keystone-2015.1.0 (30 Apr 2015)
+*keystone-2015.1.9999 (30 Apr 2015)
+
+  30 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +keystone-2015.1.0.ebuild, +keystone-2015.1.9999.ebuild, metadata.xml:
+  kilo release
+
+  14 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  keystone-2014.2.9999.ebuild:
+  relaxing deps on the live version too
+
+*keystone-2014.2.3-r1 (14 Apr 2015)
+
+  14 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +keystone-2014.2.3-r1.ebuild, -keystone-2014.2.3.ebuild:
+  relaxing deps on keystone
+
+  13 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  keystone-2014.2.3.ebuild, keystone-2014.2.9999.ebuild:
+  updating some deps
+
+  13 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  keystone-2014.2.9999.ebuild:
+  syncing with stable/juno
+
+  11 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  keystone-2014.2.3.ebuild:
+  more stupidness
+
+*keystone-2014.2.3 (11 Apr 2015)
+
+  11 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +keystone-2014.2.3.ebuild, -keystone-2014.2.2.ebuild:
+  updating the crappyness
 
   08 Feb 2015; Matthew Thode <prometheanfire@gentoo.org> -keystone-9999.ebuild,
   keystone-2014.2.2.ebuild, keystone-2014.2.9999.ebuild:

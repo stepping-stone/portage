@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.9-r1.ebuild,v 1.3 2015/01/29 17:54:18 mgorny Exp $
+# $Id$
 
 EAPI=5
 
@@ -13,11 +13,11 @@ DESCRIPTION="A color management framework for visual effects and animation"
 HOMEPAGE="http://opencolorio.org/"
 SRC_URI="https://github.com/imageworks/OpenColorIO/archive/v${PV}.tar.gz \
 		-> ${P}.tar.gz
-	http://dev.gentoo.org/~pinkbyte/distfiles/patches/${P}-yaml-0.5-compat.patch.bz2"
+	https://dev.gentoo.org/~pinkbyte/distfiles/patches/${P}-yaml-0.5-compat.patch.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc opengl pdf python cpu_flags_x86_sse2 test"
 
 RDEPEND="opengl? (

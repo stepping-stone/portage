@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.84.ebuild,v 1.16 2015/01/03 10:04:57 grobian Exp $
+# $Id$
 
 EAPI="5"
 
@@ -178,7 +178,7 @@ src_configure() {
 		cat >> Makefile <<- EOC
 			LOOKUP_LDAP=yes
 			LDAP_LIB_TYPE=OPENLDAP2
-			LOOKUP_INCLUDE += -I${EROOT}usr/include/ldap
+			LOOKUP_INCLUDE += -I"${EROOT}"usr/include/ldap
 			LOOKUP_LIBS += -lldap -llber
 		EOC
 	fi
@@ -413,16 +413,13 @@ src_compile() {
 }
 
 src_install () {
-	cd "${S}"/build-exim-gentoo
-	exeinto /usr/sbin
-	doexe exim
+	cd "${S}"/build-exim-gentoo || die
+	dosbin exim
 	if use X; then
-		doexe eximon.bin
-		doexe eximon
+		dosbin eximon.bin
+		dosbin eximon
 	fi
 	fperms 4755 /usr/sbin/exim
-
-	dodir /usr/bin /usr/sbin /usr/lib
 
 	dosym exim /usr/sbin/sendmail
 	dosym exim /usr/sbin/rsmtp
@@ -431,12 +428,11 @@ src_install () {
 	dosym /usr/sbin/exim /usr/bin/newaliases
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
 
-	exeinto /usr/sbin
 	for i in exicyclog exim_dbmbuild exim_dumpdb exim_fixdb exim_lock \
 		exim_tidydb exinext exiwhat exigrep eximstats exiqsumm exiqgrep \
 		convert4r3 convert4r4 exipick
 	do
-		doexe $i
+		dosbin $i
 	done
 
 	dodoc "${S}"/doc/*
@@ -503,7 +499,7 @@ pkg_postinst() {
 		einfo "Starting from Exim 4.83, DSN support comes from upstream."
 		einfo "DSN support is an experimental feature.  If you used DSN"
 		einfo "support prior to 4.83, make sure to remove all dsn_process"
-		einfo "switches from your routers, see http://bugs.gentoo.org/511818"
+		einfo "switches from your routers, see https://bugs.gentoo.org/511818"
 	fi
 	einfo "Exim maintains some db files under its spool directory that need"
 	einfo "cleaning from time to time.  (${EROOT}var/spool/exim/db)"

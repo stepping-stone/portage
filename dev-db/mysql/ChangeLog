@@ -1,6 +1,110 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.724 2015/02/16 18:01:28 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.751 2015/08/07 05:03:22 jer Exp $
+
+  07 Aug 2015; Jeroen Roovers <jer@gentoo.org> mysql-5.6.26.ebuild:
+  Stable for HPPA PPC64 (bug #555478).
+
+  06 Aug 2015; Markus Meier <maekke@gentoo.org> mysql-5.6.26.ebuild:
+  arm stable, bug #555478
+
+  05 Aug 2015; Tobias Klausmann <klausman@gentoo.org> mysql-5.6.26.ebuild:
+  Stable on alpha, bug 555478
+
+  05 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> mysql-5.6.26.ebuild:
+  ia64 stable wrt bug #555478
+
+  04 Aug 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.26.ebuild:
+  Stable for x86, wrt bug #555478
+
+  03 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> mysql-5.6.26.ebuild:
+  amd64 stable wrt bug #555478
+
+  30 Jul 2015; Brian Evans <grknight@gentoo.org> mysql-5.6.26-r1.ebuild,
+  mysql-5.6.26.ebuild:
+  Use eclass variables to block the validate_password plugin wrt bug 556348
+
+*mysql-5.6.26 (30 Jul 2015)
+*mysql-5.6.26-r1 (30 Jul 2015)
+
+  30 Jul 2015; Brian Evans <grknight@gentoo.org> +mysql-5.6.26-r1.ebuild,
+  +mysql-5.6.26.ebuild:
+  Version bump for 5.6 series
+
+  29 Jul 2015; Brian Evans <grknight@gentoo.org> -mysql-5.5.43.ebuild:
+  Drop vulernable 5.5. version wrt Bug 555478
+
+*mysql-5.5.45 (29 Jul 2015)
+
+  29 Jul 2015; Brian Evans <grknight@gentoo.org> +mysql-5.5.45.ebuild:
+  Version bump for 5.5 series
+
+*mysql-5.6.25-r1 (28 Jul 2015)
+
+  28 Jul 2015; Brian Evans <grknight@gentoo.org> +mysql-5.6.25-r1.ebuild,
+  metadata.xml:
+  Revbumps for new mysql packaging splitting client and server
+
+*mysql-5.6.25 (01 Jun 2015)
+
+  01 Jun 2015; Brian Evans <grknight@gentoo.org> +mysql-5.6.25.ebuild:
+  Version bump for 5.6.25
+
+*mysql-5.5.44 (30 May 2015)
+
+  30 May 2015; Brian Evans <grknight@gentoo.org> +mysql-5.5.44.ebuild:
+  Version bump on 5.5 series.  Only kept for upgrades
+
+  27 May 2015; Brian Evans <grknight@gentoo.org> -mysql-5.5.42.ebuild,
+  -mysql-5.6.22.ebuild, -mysql-5.6.23.ebuild:
+  Drop vulnerable versions for security bug 546722
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.24.ebuild:
+  Stable for arm, wrt bug #546722
+
+  29 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.24.ebuild:
+  Stable for ppc, wrt bug #546722
+
+  28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.24.ebuild:
+  Stable for ia64, wrt bug #546722
+
+  28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.24.ebuild:
+  Stable for alpha, wrt bug #546722
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org> mysql-5.5.42.ebuild,
+  mysql-5.5.43.ebuild:
+  Replace links pointing at git.overlays.gentoo.org.
+
+  24 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> mysql-5.6.24.ebuild:
+  sparc stable wrt bug #546722
+
+  22 Apr 2015; Jeroen Roovers <jer@gentoo.org> mysql-5.6.24.ebuild:
+  Stable for PPC64 (bug #546722).
+
+  17 Apr 2015; Jeroen Roovers <jer@gentoo.org> mysql-5.6.24.ebuild:
+  Stable for HPPA (bug #546722).
+
+  17 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.24.ebuild:
+  Stable for x86, wrt bug #546722
+
+  17 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.24.ebuild:
+  Stable for amd64, wrt bug #546722
+
+*mysql-5.6.24 (10 Apr 2015)
+*mysql-5.5.43 (10 Apr 2015)
+
+  10 Apr 2015; Brian Evans <grknight@gentoo.org> +mysql-5.5.43.ebuild,
+  +mysql-5.6.24.ebuild:
+  Version bumps
+
+  15 Mar 2015; Brian Evans <grknight@gentoo.org> files/my.cnf-5.1,
+  files/my.cnf-5.5, files/my.cnf-5.6:
+  Remove commented value from the example config files that no longer exist in
+  MySQL server
+
+  19 Feb 2015; Brian Evans <grknight@gentoo.org> mysql-5.6.22.ebuild:
+  Update stable 5.6.22 patches to include the configure fix for openssl-1.0.2
+  detection
 
   16 Feb 2015; Brian Evans <grknight@gentoo.org> -mysql-5.5.40.ebuild:
   Drop security vulnerable version

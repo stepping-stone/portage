@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/PadWalker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PadWalker/ChangeLog,v 1.50 2015/01/31 14:18:19 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PadWalker/ChangeLog,v 1.52 2015/07/11 21:50:44 dilfridge Exp $
+
+*PadWalker-2.100.0 (11 Jul 2015)
+
+  11 Jul 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +PadWalker-2.100.0.ebuild:
+  Version bump
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> PadWalker-1.960.0-r1.ebuild:
+  Marked ~hppa (bug #544064).
 
   31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> PadWalker-1.960.0-r1.ebuild:
   Add ~x86-fbsd keyword

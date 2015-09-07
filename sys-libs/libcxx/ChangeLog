@@ -1,6 +1,22 @@
 # ChangeLog for sys-libs/libcxx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.41 2015/01/17 19:10:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.44 2015/07/21 09:02:41 aballier Exp $
+
+*libcxx-3.6.2 (21 Jul 2015)
+
+  21 Jul 2015; Alexis Ballier <aballier@gentoo.org> +libcxx-3.6.2.ebuild:
+  version bump
+
+*libcxx-3.6.1 (29 May 2015)
+
+  29 May 2015; Alexis Ballier <aballier@gentoo.org> +libcxx-3.6.1.ebuild:
+  bump to keep in sync with llvm releases; code is identical
+
+*libcxx-3.6.0 (23 Apr 2015)
+
+  23 Apr 2015; Alexis Ballier <aballier@gentoo.org> +libcxx-3.6.0.ebuild,
+  libcxx-9999.ebuild:
+  bump to current release, part of bug #538364
 
   17 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
   libcxx-0.0_p20130725.ebuild, libcxx-0.0_p20131222.ebuild,

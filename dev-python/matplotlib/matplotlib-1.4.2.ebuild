@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.4.2.ebuild,v 1.5 2015/02/16 13:46:58 pacho Exp $
+# $Id$
 
 EAPI=5
 
@@ -35,11 +35,11 @@ COMMON_DEPEND="
 	media-libs/libpng:0
 	media-libs/qhull
 	gtk? (
-		dev-libs/glib
+		dev-libs/glib:2=
 		x11-libs/gdk-pixbuf
-		x11-libs/gtk+:2
+		x11-libs/gtk+:2=
 		dev-python/pygtk[${PY2_USEDEP}] )
-	wxwidgets? ( >=dev-python/wxpython-2.8[${PY2_USEDEP}] )"
+	wxwidgets? ( >=dev-python/wxpython-2.8:*[${PY2_USEDEP}] )"
 
 # internal copy of pycxx highly patched
 #	dev-python/pycxx
@@ -149,6 +149,7 @@ python_prepare_all() {
 
 python_configure_all() {
 	append-flags -fno-strict-aliasing
+	append-cppflags -DNDEBUG  # or get old trying to do triangulation
 }
 
 python_configure() {

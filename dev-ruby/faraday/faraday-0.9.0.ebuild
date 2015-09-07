@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/faraday-0.9.0.ebuild,v 1.6 2014/08/15 14:03:56 blueness Exp $
+# $Id$
 
 EAPI=5
 
@@ -16,8 +16,8 @@ RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 inherit ruby-fakegem eutils
 
 DESCRIPTION="HTTP/REST API client library with pluggable components"
-HOMEPAGE="http://github.com/lostisland/faraday"
-SRC_URI="https://github.com/lostisland/faraday/archive/v${PV}.tar.gz"
+HOMEPAGE="https://github.com/lostisland/faraday"
+SRC_URI="https://github.com/lostisland/faraday/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

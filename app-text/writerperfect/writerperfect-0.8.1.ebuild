@@ -1,24 +1,24 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/writerperfect/writerperfect-0.8.1.ebuild,v 1.1 2013/05/13 12:16:06 scarabeus Exp $
+# $Id$
 
 EAPI=4
 
-DESCRIPTION="WordPerfect Document (wpd/wpg) to Open document (odt/odg) converter"
+DESCRIPTION="Various formats to Open document format converter"
 HOMEPAGE="http://libwpd.sf.net"
 SRC_URI="mirror://sourceforge/libwpd/writerperfect-${PV}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="amd64 ~ppc x86 ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE="debug gsf +visio +wpg +wps"
 
 RDEPEND="
 	app-text/libwpd:0.9
-	wpg? ( app-text/libwpg:0.2 )
-	wps? ( app-text/libwps )
-	visio? ( media-libs/libvisio )
 	gsf? ( gnome-extra/libgsf )
+	visio? ( media-libs/libvisio )
+	wpg? ( app-text/libwpg:0.2 )
+	wps? ( =app-text/libwps-0.2* )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

@@ -1,6 +1,30 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.132 2015/02/15 13:01:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.139 2015/08/02 09:24:33 pacho Exp $
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> pyopenssl-0.14.ebuild:
+  sparc stable wrt bug #530294
+
+  11 Jul 2015; Tobias Klausmann <klausman@gentoo.org> pyopenssl-0.14.ebuild:
+  Stable on alpha, bug 530294
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+*pyopenssl-0.15.1 (16 May 2015)
+
+  16 May 2015; Ian Delaney <idella4@gentoo.org> +pyopenssl-0.15.1.ebuild:
+  bump; update dep cryptography, re-intro fixed tests
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyopenssl-0.13.1-r1.ebuild,
+  pyopenssl-0.13.1.ebuild:
+  Drop old Python implementations
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> pyopenssl-0.14.ebuild:
+  Mark arm64/ia64/m68k/s390/sh stable.
+
+  01 Apr 2015; Tobias Klausmann <klausman@gentoo.org> pyopenssl-0.14.ebuild:
+  Keyworded on alpha, bug 503094
 
   15 Feb 2015; Pacho Ramos <pacho@gentoo.org> pyopenssl-0.14.ebuild:
   amd64/ppc/ppc64/x86 stable, bug #530294

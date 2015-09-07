@@ -1,6 +1,21 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.218 2015/01/07 21:26:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.223 2015/07/17 09:36:17 vapier Exp $
+
+  17 Jul 2015; Mike Frysinger <vapier@gentoo.org> automake-1.15.ebuild:
+  Mark stable for all #553738.
+
+  16 Jul 2015; Tobias Klausmann <klausman@gentoo.org> automake-1.15.ebuild:
+  Stable on alpha, bug 553738
+
+  20 May 2015; Mike Frysinger <vapier@gentoo.org> automake-1.14.1.ebuild:
+  Mark stable for all #547876.
+
+  20 May 2015; Matt Turner <mattst88@gentoo.org> automake-1.14.1.ebuild:
+  alpha stable, bug 547876.
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> automake-1.14.1.ebuild:
+  ppc stable wrt bug #547876
 
 *automake-1.15 (07 Jan 2015)
 

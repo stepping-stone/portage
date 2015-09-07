@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/gcube-0.4-r1.ebuild,v 1.10 2015/02/18 09:53:35 mr_bones_ Exp $
+# $Id$
 
 EAPI=5
 inherit eutils games
@@ -11,12 +11,12 @@ SRC_URI="http://gcube.exemu.net/downloads/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl
 	media-libs/libsdl[sound,joystick,video]
-	virtual/jpeg
+	virtual/jpeg:0
 	sys-libs/ncurses
 	sys-libs/zlib"
 RDEPEND="${DEPEND}"

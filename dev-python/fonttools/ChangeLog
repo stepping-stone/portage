@@ -1,6 +1,38 @@
 # ChangeLog for dev-python/fonttools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.31 2014/05/26 08:51:17 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.40 2015/06/21 08:50:20 jlec Exp $
+
+*fonttools-2.5 (21 Jun 2015)
+
+  21 Jun 2015; Justin Lecher <jlec@gentoo.org> +fonttools-2.5.ebuild,
+  fonttools-2.4.ebuild:
+  Version Bump, bug #552606
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  20 Apr 2015; Justin Lecher <jlec@gentoo.org> -fonttools-2.3-r1.ebuild,
+  -fonttools-2.3.ebuild, metadata.xml:
+  Drop old
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> fonttools-2.4.ebuild:
+  x86 stable wrt bug #535322
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> fonttools-2.4.ebuild:
+  Stable for ia64, wrt bug #535322
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> fonttools-2.3-r1.ebuild,
+  fonttools-2.4.ebuild:
+  Drop old Python implementations
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> fonttools-2.4.ebuild:
+  Stable for ppc, wrt bug #535322
+
+  28 Mar 2015; Markus Meier <maekke@gentoo.org> fonttools-2.4.ebuild:
+  arm stable, bug #535322
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> fonttools-2.4.ebuild:
+  Stable for amd64, wrt bug #535322
 
 *fonttools-2.4 (26 May 2014)
 

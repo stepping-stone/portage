@@ -1,6 +1,167 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.416 2015/02/15 15:34:59 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.442 2015/08/07 14:42:04 tamiko Exp $
+
+*libvirt-1.2.18 (07 Aug 2015)
+
+  07 Aug 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.18.ebuild:
+  version bump, bug #556904
+
+*libvirt-1.2.17-r4 (31 Jul 2015)
+
+  31 Jul 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.17-r4.ebuild,
+  -files/libvirtd.confd-r6, -files/libvirtd.init-r16, -libvirt-1.2.17-r3.ebuild,
+  libvirt-9999.ebuild:
+  on behalf of cardoe; revert all changes made to the openrc runscripts; as per
+  discussions on bug #555736 and on bug #551854
+
+*libvirt-1.2.17-r3 (29 Jul 2015)
+
+  29 Jul 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.17-r3.ebuild,
+  -libvirt-1.2.17-r2.ebuild, files/libvirt-1.2.17-fix_paths_for_apparmor.patch:
+  fix apparmor configuration, many thanks to aporilel, bug #544628
+
+*libvirt-1.2.17-r2 (28 Jul 2015)
+
+  28 Jul 2015; Matthias Maier <tamiko@gentoo.org>
+  +files/libvirt-1.2.17-fix_paths_for_apparmor.patch, +files/libvirtd.confd-r6,
+  +files/libvirtd.init-r16, +libvirt-1.2.17-r2.ebuild, -files/libvirtd.confd-r5,
+  -files/libvirtd.init-r15, -libvirt-1.2.17-r1.ebuild, libvirt-9999.ebuild:
+  Change default behavior for kvm guest in openrc runscript, bug #555736; fix
+  apparmor configuration, bug #554628; ebuild maintenance
+
+  25 Jul 2015; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.17-r1.ebuild,
+  libvirt-9999.ebuild:
+  cosmetic changes in README.gentoo
+
+*libvirt-1.2.17-r1 (25 Jul 2015)
+
+  25 Jul 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.17-r1.ebuild,
+  -libvirt-1.2.16-r2.ebuild, -libvirt-1.2.17.ebuild, libvirt-9999.ebuild,
+  metadata.xml:
+  drop old; use readme.gentoo for all elog messages; fix dependencies wrt
+  ebtables and iptables, bug #553120; add apparmor use flag, bug #554628
+
+  02 Jul 2015; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.15-r1.ebuild,
+  libvirt-1.2.16-r2.ebuild, libvirt-1.2.17.ebuild, libvirt-9999.ebuild:
+  remove RESOURCE_COUNTERS from kernel configure check
+
+*libvirt-1.2.17 (02 Jul 2015)
+
+  02 Jul 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.17.ebuild,
+  libvirt-9999.ebuild:
+  version bump
+
+*libvirt-1.2.16-r2 (24 Jun 2015)
+
+  24 Jun 2015; Matthias Maier <tamiko@gentoo.org>
+  +files/libvirt-1.2.16-fix_paths_in_libvirt-guests_sh.patch,
+  +libvirt-1.2.16-r2.ebuild, -libvirt-1.2.16-r1.ebuild, files/libvirtd.init-r14:
+  adjust paths in libvirt-guests.sh (fixed in 1.2.16-r2 only)
+
+*libvirt-1.2.16-r1 (24 Jun 2015)
+
+  24 Jun 2015; Matthias Maier <tamiko@gentoo.org> +files/libvirtd.confd-r5,
+  +files/libvirtd.init-r15, +libvirt-1.2.16-r1.ebuild, -libvirt-1.2.16.ebuild,
+  files/libvirtd.init-r14:
+  provide a configuration option for domains and network on restart, bug #551854
+
+  23 Jun 2015; Matthias Maier <tamiko@gentoo.org>
+  -files/libvirt-1.2.9-fix-firewalld-configuration.patch,
+  -files/libvirtd.init-r13, -files/virtlockd.init, -libvirt-1.2.10-r4.ebuild,
+  -libvirt-1.2.10-r6.ebuild, -libvirt-1.2.12-r2.ebuild, -libvirt-1.2.12.ebuild,
+  -libvirt-1.2.14-r2.ebuild, -libvirt-1.2.14-r3.ebuild:
+  cleanup
+
+  23 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-1.2.15-r1.ebuild:
+  Stable for x86, wrt bug #552272
+
+  20 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> libvirt-1.2.10-r6.ebuild,
+  libvirt-1.2.12-r2.ebuild, libvirt-1.2.14-r2.ebuild, libvirt-1.2.14-r3.ebuild,
+  libvirt-1.2.15-r1.ebuild:
+  amd64 stable wrt bug #552272
+
+*libvirt-1.2.16 (14 Jun 2015)
+
+  14 Jun 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.16.ebuild:
+  version bump, bug #550992, thanks to Thomas Stein for reporting
+
+*libvirt-1.2.15-r1 (24 May 2015)
+*libvirt-1.2.12-r2 (24 May 2015)
+*libvirt-1.2.14-r3 (24 May 2015)
+*libvirt-1.2.10-r6 (24 May 2015)
+
+  24 May 2015; Matthias Maier <tamiko@gentoo.org> +files/virtlockd.init-r1,
+  +libvirt-1.2.10-r6.ebuild, +libvirt-1.2.12-r2.ebuild,
+  +libvirt-1.2.14-r3.ebuild, +libvirt-1.2.15-r1.ebuild,
+  -libvirt-1.2.10-r5.ebuild, -libvirt-1.2.11-r4.ebuild,
+  -libvirt-1.2.12-r1.ebuild, -libvirt-1.2.13-r2.ebuild, -libvirt-1.2.15.ebuild,
+  libvirt-9999.ebuild:
+  Cleanup; update to latest upstream maintenance patches; ship virtlockd init
+  script with reload, bug #549990, thanks to Jason Zaman.
+
+  24 May 2015; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.10-r4.ebuild,
+  libvirt-1.2.10-r5.ebuild, libvirt-1.2.11-r4.ebuild, libvirt-1.2.12-r1.ebuild,
+  libvirt-1.2.12.ebuild, libvirt-1.2.13-r2.ebuild, libvirt-1.2.14-r2.ebuild,
+  libvirt-1.2.15.ebuild, libvirt-9999.ebuild:
+  rdepend on iptables[ipv6], bug #550116, thanks to Agostino Sarubbo; update
+  slot dependencies for 1.2.10-r4 and 1.2.12
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-1.2.14-r2.ebuild:
+  Stable for x86, wrt bug #548706
+
+  08 May 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-1.2.14-r2.ebuild:
+  Stable for amd64, wrt bug #548706
+
+*libvirt-1.2.15 (05 May 2015)
+
+  05 May 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.15.ebuild,
+  libvirt-1.2.10-r5.ebuild, libvirt-1.2.11-r4.ebuild, libvirt-1.2.12-r1.ebuild,
+  libvirt-1.2.13-r2.ebuild, libvirt-1.2.14-r2.ebuild, libvirt-9999.ebuild:
+  version bump, bug #548640, thanks to Thomas Stein.
+
+  03 May 2015; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.13-r2.ebuild,
+  libvirt-1.2.14-r2.ebuild:
+  reenable wireshark-plugins use flag
+
+*libvirt-1.2.14-r2 (19 Apr 2015)
+*libvirt-1.2.13-r2 (19 Apr 2015)
+
+  19 Apr 2015; Matthias Maier <tamiko@gentoo.org> +files/libvirtd.tmpfiles.conf,
+  +libvirt-1.2.13-r2.ebuild, +libvirt-1.2.14-r2.ebuild,
+  -libvirt-1.2.13-r1.ebuild, -libvirt-1.2.14-r1.ebuild, libvirt-9999.ebuild:
+  Manually create /run/libvirt/lxc on libvirtd startup (see
+  https://bugzilla.suse.com/show_bug.cgi?id=926153)
+
+*libvirt-1.2.13-r1 (17 Apr 2015)
+*libvirt-1.2.14-r1 (17 Apr 2015)
+*libvirt-1.2.12-r1 (17 Apr 2015)
+*libvirt-1.2.11-r4 (17 Apr 2015)
+*libvirt-1.2.10-r5 (17 Apr 2015)
+
+  17 Apr 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.10-r5.ebuild,
+  +libvirt-1.2.11-r4.ebuild, +libvirt-1.2.12-r1.ebuild,
+  +libvirt-1.2.13-r1.ebuild, +libvirt-1.2.14-r1.ebuild,
+  -libvirt-1.2.11-r3.ebuild, -libvirt-1.2.13.ebuild, -libvirt-1.2.14.ebuild,
+  libvirt-9999.ebuild:
+  Fix install location for libvirtd.service.d/00gentoo file; bug #545828, bug
+  #546168
+
+*libvirt-1.2.14 (05 Apr 2015)
+
+  05 Apr 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.14.ebuild:
+  version bump
+
+  13 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-1.2.12.ebuild:
+  Stable for x86, wrt bug #543044
+
+  13 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-1.2.12.ebuild:
+  Stable for amd64, wrt bug #543044
+
+*libvirt-1.2.13 (13 Mar 2015)
+
+  13 Mar 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.13.ebuild:
+  version bump, bug #542902
 
   15 Feb 2015; Matthias Maier <tamiko@gentoo.org> -libvirt-1.2.10-r3.ebuild:
   drop vulnerable, wrt bug #537956

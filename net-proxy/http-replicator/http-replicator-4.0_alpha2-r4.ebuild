@@ -1,10 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-4.0_alpha2-r4.ebuild,v 1.1 2013/12/22 11:07:28 pacho Exp $
+# $Id$
 
 EAPI="5"
 
-# Not 2.6, see bug #33907; not 3.0, see bug #411083.
 PYTHON_COMPAT=( python2_7 )
 
 inherit eutils python-r1 systemd
@@ -33,18 +32,13 @@ src_test() {
 }
 
 src_install(){
-	python_export python2_7 EPYTHON PYTHON PYTHON_SITEDIR
+	python_foreach_impl python_doscript http-replicator
 
-	python_scriptinto /usr/bin
-	python_doscript http-replicator
+	newbin "${FILESDIR}"/${PN}-3.0-callrepcacheman-0.1 repcacheman
 
-	exeinto /usr/bin
-	newexe "${FILESDIR}"/${PN}-3.0-callrepcacheman-0.1 repcacheman
+	python_foreach_impl python_domodule *.py
 
-	python_domodule *.py
-
-	cp "${FILESDIR}"/${PN}-3.0-repcacheman-0.44-r2 repcacheman.py || die
-	python_doscript repcacheman.py
+	python_foreach_impl python_newscript "${FILESDIR}"/${PN}-3.0-repcacheman-0.44-r2 repcacheman.py
 
 	newinitd "${FILESDIR}"/${PN}-4.0_alpha2-r3.init http-replicator
 	newconfd "${FILESDIR}"/${PN}-4.0_alpha2-r2.conf http-replicator
@@ -56,7 +50,7 @@ src_install(){
 }
 
 pkg_postinst() {
-	einfo
+	echo
 	einfo "Before starting ${PN}, please follow the next few steps:"
 	einfo
 	einfo "- Modify /etc/conf.d/${PN} if required."
@@ -68,8 +62,8 @@ pkg_postinst() {
 	einfo
 	einfo "For more information please refer to the following forum thread:"
 	einfo
-	einfo "  http://forums.gentoo.org/viewtopic-t-173226.html"
+	einfo "  https://forums.gentoo.org/viewtopic-t-173226.html"
 	einfo
 	einfo "Starting with 4.x releases, the conf.d parameters have changed."
-	einfo
+	echo
 }

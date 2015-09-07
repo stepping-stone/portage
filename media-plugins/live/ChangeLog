@@ -1,6 +1,30 @@
 # ChangeLog for media-plugins/live
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.165 2014/05/06 02:47:21 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.173 2015/08/04 11:58:42 zlogene Exp $
+
+  04 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> live-2013.02.11.ebuild:
+  ia64 stable wrt bug #539222
+
+  02 Aug 2015; Agostino Sarubbo <ago@gentoo.org> live-2013.02.11.ebuild:
+  Stable for x86, wrt bug #539222
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> live-2013.02.11.ebuild:
+  Stable for sparc, wrt bug #539222
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> live-2013.02.11.ebuild:
+  ppc stable wrt bug #539222
+
+  20 Jul 2015; Jeroen Roovers <jer@gentoo.org> live-2013.02.11.ebuild:
+  Stable for HPPA PPC64 (bug #539222).
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> live-2013.02.11.ebuild:
+  Stable for alpha, wrt bug #539222
+
+  27 Jun 2015; Agostino Sarubbo <ago@gentoo.org> live-2013.02.11.ebuild:
+  Stable for amd64, wrt bug #539222
+
+  11 Jun 2015; Markus Meier <maekke@gentoo.org> live-2013.02.11.ebuild:
+  arm stable, bug #539222
 
   06 May 2014; Patrick Lauer <patrick@gentoo.org> live-2012.01.07.ebuild,
   live-2012.09.13.ebuild, live-2013.02.11.ebuild:

@@ -1,6 +1,47 @@
 # ChangeLog for app-emulation/virtualbox-modules
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.158 2014/12/22 13:09:35 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.165 2015/07/14 14:29:30 polynomial-c Exp $
+
+*virtualbox-modules-5.0.0 (14 Jul 2015)
+*virtualbox-modules-4.3.30 (14 Jul 2015)
+
+  14 Jul 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-modules-4.3.18.ebuild, -virtualbox-modules-4.3.26.ebuild,
+  +virtualbox-modules-4.3.30.ebuild, +virtualbox-modules-5.0.0.ebuild:
+  Version bump. Removed old.
+
+  14 Jun 2015; Michał Górny <mgorny@gentoo.org>
+  virtualbox-modules-4.3.18.ebuild, virtualbox-modules-4.3.26.ebuild,
+  virtualbox-modules-4.3.28.ebuild:
+  Fix build with objtree!=srctree, bug #285866. https://github.com/gentoo
+  /gentoo-portage-rsync-mirror/pull/150 by nE0sIghT.
+
+  14 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
+  virtualbox-modules-4.3.28.ebuild:
+  x86 stable wrt bug #551866
+
+  12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
+  virtualbox-modules-4.3.28.ebuild:
+  amd64 stable wrt bug 51866
+
+*virtualbox-modules-4.3.28 (17 May 2015)
+
+  17 May 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-modules-4.3.24.ebuild, +virtualbox-modules-4.3.28.ebuild:
+  Version bump (bug #549466). Removed old.
+
+*virtualbox-modules-4.3.26 (17 Mar 2015)
+
+  17 Mar 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-modules-4.3.20.ebuild, +virtualbox-modules-4.3.26.ebuild:
+  Version bump. Removed old.
+
+*virtualbox-modules-4.3.24 (04 Mar 2015)
+
+  04 Mar 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-modules-4.2.24.ebuild, -virtualbox-modules-4.2.26.ebuild,
+  +virtualbox-modules-4.3.24.ebuild:
+  Version bump (bug #540128). Removed old.
 
   22 Dec 2014; Lars Wendler <polynomial-c@gentoo.org>
   -virtualbox-modules-4.3.16.ebuild, virtualbox-modules-4.3.18.ebuild:

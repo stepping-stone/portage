@@ -1,6 +1,30 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.390 2015/02/16 10:21:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.398 2015/05/24 11:35:12 blueness Exp $
+
+*busybox-1.23.2 (24 May 2015)
+
+  24 May 2015; Anthony G. Basile <blueness@gentoo.org> +busybox-1.23.2.ebuild:
+  Version bump.
+
+  30 Apr 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add CPE info via Chromium OS.
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> busybox-1.23.1-r1.ebuild:
+  Mark m68k/s390/sh stable.
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/busybox-1.23.1-trylink-flags.patch:
+  Respect CFLAGS/CPPFLAGS when testing the compiler #471118#1 by Alphat-PC.
+
+  28 Feb 2015;  <tgall@gentoo.org> busybox-1.23.1-r1.ebuild:
+  arm64, stable
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> busybox-1.23.1.ebuild:
+  Stable for alpha, wrt bug #537978
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> busybox-1.23.1.ebuild:
+  Stable for ia64, wrt bug #537978
 
   16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> busybox-1.23.1.ebuild:
   Stable for sparc, wrt bug #537978

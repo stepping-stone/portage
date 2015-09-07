@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.15.ebuild,v 1.12 2014/11/11 10:53:16 ago Exp $
+# $Id$
 
 EAPI=5
 
@@ -10,7 +10,7 @@ PYTHON_COMPAT=( python2_7 pypy )
 inherit distutils-r1 multilib
 
 DESCRIPTION="Various LDAP-related Python modules"
-HOMEPAGE="http://www.python-ldap.org http://pypi.python.org/pypi/python-ldap"
+HOMEPAGE="http://www.python-ldap.org https://pypi.python.org/pypi/python-ldap"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="PSF-2"

@@ -1,6 +1,138 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.567 2015/02/09 16:39:27 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.599 2015/07/30 12:54:44 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.1-r1.ebuild:
+  Stable for sparc, wrt bug #551084
+
+*postfix-3.0.2 (22 Jul 2015)
+*postfix-2.10.8 (22 Jul 2015)
+*postfix-3.1_pre20150721 (22 Jul 2015)
+*postfix-2.11.6 (22 Jul 2015)
+
+  22 Jul 2015; Eray Aslan <eras@gentoo.org> +postfix-2.10.8.ebuild,
+  +postfix-2.11.6.ebuild, +postfix-3.0.2.ebuild,
+  +postfix-3.1_pre20150721.ebuild, -postfix-2.10.7.ebuild,
+  -postfix-2.11.3.ebuild, -postfix-2.11.4.ebuild, -postfix-2.11.5.ebuild,
+  -postfix-3.1_pre20150712.ebuild:
+  Version bump
+
+*postfix-3.1_pre20150712 (20 Jul 2015)
+
+  20 Jul 2015; Eray Aslan <eras@gentoo.org> +postfix-3.1_pre20150712.ebuild,
+  -postfix-3.1_pre20150523.ebuild:
+  Version bump
+
+  28 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> postfix-3.0.1-r1.ebuild:
+  alpha stable wrt bug #551084
+
+  21 Jun 2015; Markus Meier <maekke@gentoo.org> postfix-3.0.1-r1.ebuild:
+  arm stable, bug #551084
+
+  17 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> postfix-3.0.1-r1.ebuild:
+  ia64 stable wrt bug #551084
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.1-r1.ebuild:
+  Stable for ppc, wrt bug #551084
+
+  09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.1-r1.ebuild:
+  Stable for x86, wrt bug #551084
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.1-r1.ebuild:
+  Stable for amd64, wrt bug #551084
+
+  01 Jun 2015; Eray Aslan <eras@gentoo.org> postfix-3.0.0.ebuild:
+  Fix building with linux-4.x kernel
+
+  28 May 2015; Eray Aslan <eras@gentoo.org> postfix-3.0.0.ebuild,
+  postfix-3.0.1-r1.ebuild, postfix-3.1_pre20150523.ebuild:
+  Fix dev-libs/icu dependency - bug #550546
+
+  28 May 2015; Eray Aslan <eras@gentoo.org> -postfix-3.0.1.ebuild:
+  Remove old
+
+*postfix-3.1_pre20150523 (25 May 2015)
+
+  25 May 2015; Eray Aslan <eras@gentoo.org> +postfix-3.1_pre20150523.ebuild,
+  -postfix-3.1_pre20150421.ebuild:
+  Version bump
+
+*postfix-3.1_pre20150421 (24 Apr 2015)
+
+  24 Apr 2015; Eray Aslan <eras@gentoo.org> +postfix-3.1_pre20150421.ebuild,
+  -postfix-3.1_pre20150330.ebuild:
+  Version bump
+
+  17 Apr 2015; Eray Aslan <eras@gentoo.org> -postfix-2.10.6.ebuild:
+  Remove old
+
+*postfix-3.0.1-r1 (17 Apr 2015)
+
+  17 Apr 2015; Eray Aslan <eras@gentoo.org> +files/postfix-linux4.patch,
+  +postfix-3.0.1-r1.ebuild:
+  Fix building with linux-4 - bug #544610
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.0.ebuild:
+  Stable for ia64, wrt bug #544248
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.0.ebuild:
+  Stable for alpha, wrt bug #544248
+
+*postfix-3.0.1 (13 Apr 2015)
+*postfix-2.11.5 (13 Apr 2015)
+*postfix-2.10.7 (13 Apr 2015)
+
+  13 Apr 2015; Eray Aslan <eras@gentoo.org> +postfix-2.10.7.ebuild,
+  +postfix-2.11.5.ebuild, +postfix-3.0.1.ebuild:
+  Version bump
+
+  09 Apr 2015; Markus Meier <maekke@gentoo.org> postfix-3.0.0.ebuild:
+  arm stable, bug #544248
+
+  02 Apr 2015; Jeroen Roovers <jer@gentoo.org> postfix-3.0.0.ebuild:
+  Stable for HPPA (bug #544248).
+
+  01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.0.ebuild:
+  Stable for sparc, wrt bug #544248
+
+  31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.0.ebuild:
+  Stable for ppc64, wrt bug #544248
+
+*postfix-3.1_pre20150330 (31 Mar 2015)
+
+  31 Mar 2015; Eray Aslan <eras@gentoo.org> +postfix-3.1_pre20150330.ebuild,
+  -postfix-3.1_pre20150329.ebuild:
+  Version bump
+
+*postfix-3.1_pre20150329 (30 Mar 2015)
+
+  30 Mar 2015; Eray Aslan <eras@gentoo.org> +postfix-3.1_pre20150329.ebuild,
+  -postfix-3.1_pre20150208.ebuild:
+  Version bump
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.0.ebuild:
+  Stable for ppc, wrt bug #544248
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.0.ebuild:
+  Stable for x86, wrt bug #544248
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.0.ebuild:
+  Stable for amd64, wrt bug #544248
+
+  02 Mar 2015; Eray Aslan <eras@gentoo.org> postfix-2.11.3.ebuild:
+  QA: add missing slot
+
+  02 Mar 2015; Eray Aslan <eras@gentoo.org> -postfix-2.10.2.ebuild,
+  -postfix-2.10.3.ebuild, -postfix-2.10.4.ebuild, -postfix-2.10.5.ebuild:
+  Remove old
+
+*postfix-2.10.6 (02 Mar 2015)
+
+  02 Mar 2015; Eray Aslan <eras@gentoo.org> +postfix-2.10.6.ebuild:
+  Version bump and remove keywords except mips and s390 - bug #498466
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> postfix-2.11.3.ebuild:
+  Stable for ia64, wrt bug #531430
 
 *postfix-3.1_pre20150208 (09 Feb 2015)
 *postfix-3.0.0 (09 Feb 2015)

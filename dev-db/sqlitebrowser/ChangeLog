@@ -1,6 +1,36 @@
 # ChangeLog for dev-db/sqlitebrowser
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.18 2014/09/29 07:30:52 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.25 2015/06/16 00:39:31 pesa Exp $
+
+  16 Jun 2015; Davide Pesavento <pesa@gentoo.org> sqlitebrowser-3.3.1.ebuild,
+  sqlitebrowser-3.5.1.ebuild, sqlitebrowser-3.6.0.ebuild:
+  Adjust dev-libs/qcustomplot USE deps.
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*sqlitebrowser-3.6.0 (02 Jun 2015)
+
+  02 Jun 2015; Michael Weber <xmw@gentoo.org>
+  +files/sqlitebrowser-3.6.0-unbundle-keep-qscintilla.patch,
+  +files/sqlitebrowser-3.6.0-unbundle.patch, +sqlitebrowser-3.6.0.ebuild:
+  Version bump (bug 550292 by Tomáš Chaloupka).
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/sqlitebrowser-3.5.1-unbundle.patch, sqlitebrowser-3.5.1.ebuild:
+  Fix tests
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> sqlitebrowser-3.3.1.ebuild,
+  sqlitebrowser-3.5.1.ebuild:
+  Remove unnecessary qt4-r2 eclass usage
+
+*sqlitebrowser-3.5.1 (21 Feb 2015)
+
+  21 Feb 2015; Justin Lecher <jlec@gentoo.org> +sqlitebrowser-3.5.1.ebuild,
+  -files/sqlitebrowser-2.0_beta1-gold.patch,
+  -files/sqlitebrowser-2.0_beta1-qt-4.7.0.patch,
+  -sqlitebrowser-2.0_beta1-r2.ebuild:
+  Drop old; Version Bump
 
   29 Sep 2014; Justin Lecher <jlec@gentoo.org> sqlitebrowser-3.3.1.ebuild:
   qcustomplot pkg move
@@ -9,7 +39,7 @@
 
   28 Sep 2014; Justin Lecher <jlec@gentoo.org> +sqlitebrowser-3.3.1.ebuild,
   +files/sqlitebrowser-3.3.1-unbundle.patch, metadata.xml:
-  Version BUmp, #516662
+  Version Bump, #516662
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   sqlitebrowser-2.0_beta1-r2.ebuild:

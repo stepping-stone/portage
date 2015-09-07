@@ -1,6 +1,43 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.195 2015/02/18 16:26:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.204 2015/07/25 12:05:57 pacho Exp $
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> blogilo-4.14.8.ebuild:
+  ppc stable wrt bug #550740
+
+  18 Jul 2015; Johannes Huber <johu@gentoo.org> -blogilo-4.14.6.ebuild:
+  Remove KDE PIM 4.14.6
+
+*blogilo-4.4.2015.06 (12 Jul 2015)
+
+  12 Jul 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +blogilo-4.4.2015.06.ebuild:
+  Version bump
+
+*blogilo-4.14.10 (11 Jul 2015)
+
+  11 Jul 2015; Johannes Huber <johu@gentoo.org> +blogilo-4.14.10.ebuild:
+  Version bump KDE PIM 4.14.10
+
+  13 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> blogilo-4.14.8.ebuild:
+  x86 stable wrt bug #550740
+
+  12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> blogilo-4.14.8.ebuild:
+  amd64 stable wrt bug #550740
+
+  08 Jun 2015; Johannes Huber <johu@gentoo.org> blogilo-4.14.3.ebuild,
+  blogilo-4.14.6.ebuild, blogilo-4.14.8.ebuild:
+  Pin net-libs/libkgapi to slot 4.
+
+*blogilo-4.14.8 (15 May 2015)
+
+  15 May 2015; Michael Palimaka <kensington@gentoo.org> +blogilo-4.14.8.ebuild:
+  Version bump.
+
+*blogilo-4.14.6 (29 Mar 2015)
+
+  29 Mar 2015; Johannes Huber <johu@gentoo.org> +blogilo-4.14.6.ebuild:
+  Version bump KDE PIM 4.14.6
 
   18 Feb 2015; Michał Górny <mgorny@gentoo.org> -blogilo-4.12.5.ebuild:
   Remove KDE SC 4.12

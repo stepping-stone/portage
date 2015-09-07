@@ -1,6 +1,85 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.311 2015/01/27 09:30:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.326 2015/07/31 03:21:24 tetromino Exp $
+
+  31 Jul 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -webkit-gtk-2.4.8.ebuild, -webkit-gtk-2.4.8-r200.ebuild,
+  -webkit-gtk-2.6.5.ebuild, webkit-gtk-2.6.6.ebuild, webkit-gtk-2.8.3.ebuild,
+  -files/webkit-gtk-2.4.7-disable-accelerated-compositing.patch,
+  -files/webkit-gtk-2.4.8-wayland-webkit2.patch:
+  Switch to ninja to significantly reduce build time (bug #546336, thanks to
+  Franz Fellner). Clean out old ebuilds.
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  webkit-gtk-2.4.9-r200.ebuild:
+  Revert alpha keyword to ~alpha (wxGTK's dep has been
+  package.use.stable.mask'd); bug 547680
+
+  28 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  webkit-gtk-2.4.9-r200.ebuild:
+  Stable on alpha, bug 547680
+
+  26 Jul 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  webkit-gtk-2.4.8.ebuild, webkit-gtk-2.4.8-r200.ebuild,
+  webkit-gtk-2.4.9.ebuild, webkit-gtk-2.4.9-r200.ebuild,
+  webkit-gtk-2.6.5.ebuild, webkit-gtk-2.6.6.ebuild, webkit-gtk-2.8.3.ebuild:
+  Don't check for c++11 support in pkg_pretend when installing binpkg (bug
+  #555374, thanks to Michał Górny). Check for disk space in pkg_setup under
+  the same conditions as in pkg_pretend (this logic was accidentally dropped in
+  the 2.6.x bump).
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> webkit-gtk-2.4.9-r200.ebuild,
+  webkit-gtk-2.4.9.ebuild, webkit-gtk-2.6.6.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> webkit-gtk-2.4.9-r200.ebuild,
+  webkit-gtk-2.4.9.ebuild, webkit-gtk-2.6.6.ebuild:
+  amd64 stable wrt bug #551814
+
+*webkit-gtk-2.8.3 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +webkit-gtk-2.8.3.ebuild,
+  +files/webkit-gtk-2.8.1-ia64-malloc.patch:
+  Version bump for Gnome 3.16.
+
+  25 May 2015; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.9-r200.ebuild,
+  webkit-gtk-2.4.9.ebuild:
+  nvidia_check stuff can be dropped, tests look to run ok too
+
+  24 May 2015; Gilles Dartiguelongue <eva@gentoo.org> webkit-gtk-2.4.9.ebuild,
+  webkit-gtk-2.4.9-r200.ebuild, webkit-gtk-2.6.6.ebuild:
+  Sync ebuilds. Add missing minimum version requirements, fix dependencies for
+  USE=X on slot 3 and USE=aqua on slot 2.
+
+*webkit-gtk-2.4.9-r200 (24 May 2015)
+*webkit-gtk-2.4.9 (24 May 2015)
+
+  24 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +webkit-gtk-2.4.9.ebuild, +webkit-gtk-2.4.9-r200.ebuild:
+  Version bump, see
+  http://webkitgtk.org/2015/05/20/webkitgtk2.4.9-released.html for the
+  announcement. Fixes build issues with glib-2.44 and gcc-5.1. Fixes bugs
+  #547324, #547638, #550178.
+
+  24 May 2015; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-2.6.4.ebuild:
+  drop old
+
+*webkit-gtk-2.6.6 (02 May 2015)
+
+  02 May 2015; Gilles Dartiguelongue <eva@gentoo.org> +webkit-gtk-2.6.6.ebuild:
+  Version bump. Fixes build with newer glib, bug #543066. Add support for
+  building with ruby 2.2, bug #534010. Add missing webgl? ( opengl )
+  constraint, bug #533704. Fix build with older glibc releases, bug #533976.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> webkit-gtk-2.4.8-r200.ebuild,
+  webkit-gtk-2.4.8.ebuild:
+  Drop old Python implementations
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.6.5.ebuild:
+  x86 stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.6.5.ebuild:
+  amd64 stable, bug 534012
 
   27 Jan 2015; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.8-r200.ebuild,
   webkit-gtk-2.4.8.ebuild:

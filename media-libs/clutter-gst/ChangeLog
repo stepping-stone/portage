@@ -1,6 +1,40 @@
 # ChangeLog for media-libs/clutter-gst
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.60 2015/02/07 12:23:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.68 2015/07/19 11:23:51 pacho Exp $
+
+*clutter-gst-3.0.8 (19 Jul 2015)
+
+  19 Jul 2015; Pacho Ramos <pacho@gentoo.org> +clutter-gst-3.0.8.ebuild,
+  -clutter-gst-2.0.14.ebuild:
+  Version bump, drop old
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> clutter-gst-2.0.16.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> clutter-gst-2.0.16.ebuild:
+  amd64 stable wrt bug #551814
+
+*clutter-gst-3.0.6 (08 Jun 2015)
+
+  08 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +clutter-gst-3.0.6.ebuild:
+  Version bump for Gnome 3.16.
+
+*clutter-gst-2.0.16 (25 May 2015)
+
+  25 May 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  -clutter-gst-2.0.12.ebuild, +clutter-gst-2.0.16.ebuild:
+  Version bump. Clean up old revision.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> clutter-gst-2.0.12.ebuild,
+  clutter-gst-2.0.14.ebuild:
+  Drop old Python implementations
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> clutter-gst-2.0.14.ebuild:
+  x86 stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> clutter-gst-2.0.14.ebuild:
+  amd64 stable, bug 534012
 
   07 Feb 2015; Pacho Ramos <pacho@gentoo.org> -clutter-gst-1.6.0-r1.ebuild,
   -files/clutter-gst-1.6.0-GL_TEXTURE_2D.patch,

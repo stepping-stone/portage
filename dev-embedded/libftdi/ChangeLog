@@ -1,6 +1,20 @@
 # ChangeLog for dev-embedded/libftdi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.66 2013/12/09 05:24:42 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.69 2015/06/27 22:35:53 mrueg Exp $
+
+  27 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -libftdi-0.17.ebuild,
+  -libftdi-0.18.ebuild:
+  Remove old.
+
+*libftdi-1.2 (13 May 2015)
+
+  13 May 2015; Mike Frysinger <vapier@gentoo.org> +libftdi-1.2.ebuild,
+  libftdi-9999.ebuild:
+  Version bump #530730 by Alexander Stein.
+
+  18 Apr 2015; Mike Frysinger <vapier@gentoo.org> libftdi-1.0.ebuild,
+  libftdi-9999.ebuild:
+  Add arm64/mips love.
 
   09 Dec 2013; Mike Frysinger <vapier@gentoo.org> libftdi-0.20.ebuild,
   libftdi-1.0.ebuild:

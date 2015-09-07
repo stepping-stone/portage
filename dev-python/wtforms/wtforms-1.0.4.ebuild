@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-1.0.4.ebuild,v 1.5 2014/03/31 20:54:48 mgorny Exp $
+# $Id$
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 
@@ -11,7 +11,7 @@ MY_PN="WTForms"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Flexible forms validation and rendering library for python web development"
-HOMEPAGE="http://wtforms.simplecodes.com/ http://pypi.python.org/pypi/WTForms"
+HOMEPAGE="http://wtforms.simplecodes.com/ https://pypi.python.org/pypi/WTForms"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 
 LICENSE="BSD"

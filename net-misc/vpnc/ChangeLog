@@ -1,6 +1,32 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.132 2015/01/05 12:55:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.139 2015/06/14 19:51:21 maekke Exp $
+
+  14 Jun 2015; Markus Meier <maekke@gentoo.org> vpnc-0.5.3_p550.ebuild:
+  arm stable, bug #549652
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> vpnc-0.5.3_p550.ebuild:
+  Stable for ppc, wrt bug #549652
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> vpnc-0.5.3_p550.ebuild:
+  sparc stable wrt bug #549652
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> vpnc-0.5.3_p550.ebuild:
+  Stable for x86, wrt bug #549652
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> vpnc-0.5.3_p550.ebuild:
+  Stable for amd64, wrt bug #549652
+
+  06 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  vpnc-0.5.3_p527-r1.ebuild, vpnc-0.5.3_p550.ebuild:
+  Adopt to recent aggreemant about how to handle bindist, #541450
+
+*vpnc-0.5.3_p550 (27 Feb 2015)
+
+  27 Feb 2015; Justin Lecher <jlec@gentoo.org> +vpnc-0.5.3_p550.ebuild,
+  vpnc-0.5.3_p527-r1.ebuild:
+  Restrict binary distribution with USE=-bindist, #541450; bump to latest svn
+  snapshot
 
   05 Jan 2015; Justin Lecher <jlec@gentoo.org> vpnc-0.5.3_p527-r1.ebuild:
   Fix documentation URL, #534490

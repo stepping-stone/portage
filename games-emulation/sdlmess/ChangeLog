@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/sdlmess
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmess/ChangeLog,v 1.6 2015/01/30 18:25:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmess/ChangeLog,v 1.8 2015/06/02 04:36:18 mr_bones_ Exp $
+
+  02 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> sdlmess-0.148_p1.ebuild,
+  sdlmess-0.149.ebuild:
+  add slot dep for repoman
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sdlmess-0.148_p1.ebuild,
+  sdlmess-0.149.ebuild:
+  Drop old Python implementations
 
   30 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> sdlmess-0.148_p1.ebuild,
   sdlmess-0.149.ebuild:

@@ -1,6 +1,134 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.577 2015/02/18 17:42:40 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.608 2015/07/01 15:20:57 k_f Exp $
+
+*gnupg-2.1.6 (01 Jul 2015)
+
+  01 Jul 2015; Kristian Fiskerstrand <k_f@gentoo.org> +gnupg-2.1.6.ebuild,
+  -gnupg-2.1.5.ebuild:
+  Version bump to gnupg 2.1.6
+
+*gnupg-2.1.5 (12 Jun 2015)
+
+  12 Jun 2015; Kristian Fiskerstrand <k_f@gentoo.org> +gnupg-2.1.5.ebuild,
+  -gnupg-2.1.4.ebuild:
+  New upstream version 2.1.5
+
+*gnupg-2.0.28 (07 Jun 2015)
+
+  07 Jun 2015; Kristian Fiskerstrand <k_f@gentoo.org> +gnupg-2.0.28.ebuild:
+  New upstream version 2.0.28
+
+  01 Jun 2015; Fabian Groffen <grobian@gentoo.org> gnupg-2.0.27-r1.ebuild,
+  gnupg-2.1.4.ebuild:
+  Fix compilation using Clang
+
+  21 May 2015; Matt Turner <mattst88@gentoo.org> gnupg-2.1.4.ebuild:
+  added ~alpha, bug 546478.
+
+*gnupg-2.1.4 (13 May 2015)
+
+  13 May 2015; Kristian Fiskerstrand <k_f@gentoo.org> +gnupg-2.1.4.ebuild,
+  -files/gnupg-2.1.1-misc-cve.patch,
+  -files/gnupg-2.1.3-dirmngr-Fix-segfault-in-ldap-engine.patch,
+  -files/gnupg-2.1.3-dirmngr-no-ldap.patch,
+  -files/gnupg-2.1.3-gpg-fix-null-segv.patch, -gnupg-2.1.3-r3.ebuild:
+  New upstream version 2.1.4, cleanup old files
+
+  11 May 2015; Kristian Fiskerstrand <k_f@gentoo.org> -gnupg-1.4.18.ebuild:
+  Remove vulnerable version c.f bug #541568
+
+  26 Apr 2015; Anthony G. Basile <blueness@gentoo.org> gnupg-2.1.3-r3.ebuild:
+  Keyword ~arm and ~mips.  Bug #546478.
+
+  25 Apr 2015; Anthony G. Basile <blueness@gentoo.org> gnupg-2.1.3-r3.ebuild:
+  Keyword ~ppc ~ppc64.  Bug #546478.
+
+*gnupg-2.0.27-r1 (19 Apr 2015)
+*gnupg-2.1.3-r3 (19 Apr 2015)
+
+  19 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org> +gnupg-2.0.27-r1.ebuild,
+  +gnupg-2.1.3-r3.ebuild, -gnupg-2.1.3-r2.ebuild:
+  Add large-secmem by default
+
+  17 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> gnupg-2.1.3-r2.ebuild:
+  Add ~x86 keyword wrt bug #546478
+
+  17 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> gnupg-2.1.3-r2.ebuild:
+  Whitespace
+
+*gnupg-2.1.3-r2 (17 Apr 2015)
+
+  17 Apr 2015; Kristian Fiskerstrand <k_f@gentoo.org> +gnupg-2.1.3-r2.ebuild,
+  -gnupg-2.1.3-r1.ebuild:
+  Remove the warning about being a developer version that showed up due to the
+  LDAP fix
+
+  14 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> gnupg-2.1.3-r1.ebuild:
+  Add ~amd64 keyword wrt bug #546478
+
+  14 Apr 2015; Jeroen Roovers <jer@gentoo.org> gnupg-2.1.3-r1.ebuild:
+  Marked ~hppa (bug #546478).
+
+*gnupg-2.1.3-r1 (13 Apr 2015)
+
+  13 Apr 2015; Kristian Fiskerstrand <k_f@gentoo.org>
+  +files/gnupg-2.1.3-gpg-fix-null-segv.patch, +gnupg-2.1.3-r1.ebuild,
+  -gnupg-2.1.3.ebuild:
+  Add fix for NULL-segv due to invalid imported data, reported by Hanno Böck.
+
+  13 Apr 2015; Kristian Fiskerstrand <k_f@gentoo.org>
+  +files/gnupg-2.1.3-dirmngr-no-ldap.patch, gnupg-2.1.3.ebuild:
+  Fix build when ldap useflag is not set, bug #546348
+
+  12 Apr 2015; Kristian Fiskerstrand <k_f@gentoo.org> gnupg-2.1.3.ebuild:
+  Remove --enable-agent from ebuild as this is a hard requirement in 2.1 and the
+  option is removed
+
+*gnupg-2.1.3 (11 Apr 2015)
+
+  11 Apr 2015; Kristian Fiskerstrand <k_f@gentoo.org>
+  +files/gnupg-2.1.3-dirmngr-Fix-segfault-in-ldap-engine.patch,
+  +gnupg-2.1.3.ebuild, -gnupg-2.1.2.ebuild:
+  New upstream release 2.1.3
+
+  30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.19.ebuild:
+  Stable for alpha, wrt bug #541568
+
+  30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.19.ebuild:
+  Stable for sparc, wrt bug #541568
+
+  30 Mar 2015;  <tgall@gentoo.org> gnupg-2.0.26-r3.ebuild:
+  stable on arm64
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.19.ebuild:
+  Stable for ppc64, wrt bug #541568
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.19.ebuild:
+  Stable for ppc, wrt bug #541568
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.19.ebuild:
+  Stable for ia64, wrt bug #541568
+
+  06 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> gnupg-1.4.19.ebuild:
+  x86 stable wrt bug #541568
+
+  04 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.19.ebuild:
+  Stable for amd64, wrt bug #541568
+
+  03 Mar 2015; Markus Meier <maekke@gentoo.org> gnupg-1.4.19.ebuild:
+  arm stable, bug #541568
+
+  02 Mar 2015; Jeroen Roovers <jer@gentoo.org> gnupg-1.4.19.ebuild:
+  Stable for HPPA (bug #541568).
+
+  01 Mar 2015; Alon Bar-Lev <alonbl@gentoo.org> gnupg-1.4.19.ebuild:
+  Remove russian man page, bug#541788
+
+*gnupg-1.4.19 (27 Feb 2015)
+
+  27 Feb 2015; Kristian Fiskerstrand <k_f@gentoo.org> +gnupg-1.4.19.ebuild:
+  Version bump of 1.4 series. This release mitigates two new side channel
 
 *gnupg-2.0.27 (18 Feb 2015)
 

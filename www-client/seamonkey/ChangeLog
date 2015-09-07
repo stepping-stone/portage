@@ -1,6 +1,47 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.509 2015/02/07 23:52:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.519 2015/06/16 07:27:55 polynomial-c Exp $
+
+  16 Jun 2015; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.32.ebuild,
+  -seamonkey-2.33.ebuild, seamonkey-2.33.1-r1.ebuild:
+  Removed old versions. Fixed compilation with >=media-libs/freetype-2.6
+
+*seamonkey-2.33.1-r1 (06 May 2015)
+
+  06 May 2015; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.33.1.ebuild,
+  +seamonkey-2.33.1-r1.ebuild:
+  Bump enigmail to latest available release (bug #548724). Committed straight
+  to stable.
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.33.1.ebuild:
+  Stable for x86, wrt bug #544056
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.33.1.ebuild:
+  Stable for amd64, wrt bug #544056
+
+  26 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.33.1.ebuild:
+  Fix previous change.
+
+  26 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.33.1.ebuild:
+  Enable jit support unconditionally (bug #544436).
+
+  26 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.33.1.ebuild:
+  jit support is no longer optional (bug #544436).
+
+*seamonkey-2.33.1 (24 Mar 2015)
+
+  24 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.32.1.ebuild,
+  +seamonkey-2.33.1.ebuild:
+  Version bump. Removed old.
+
+  11 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.33.ebuild:
+  Use correct mozconfig eclass.
+
+*seamonkey-2.33 (11 Mar 2015)
+
+  11 Mar 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -seamonkey-2.31-r1.ebuild, +seamonkey-2.33.ebuild:
+  Version bump. Removed old.
 
 *seamonkey-2.32.1 (07 Feb 2015)
 

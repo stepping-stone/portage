@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-4.1.3.ebuild,v 1.9 2012/12/27 10:57:06 armin76 Exp $
+# $Id$
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ MY_PN="${PN}4"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Provides pythonic idioms for iterating, searching, and modifying an HTML/XML parse tree"
 HOMEPAGE="http://www.crummy.com/software/BeautifulSoup/
-	http://pypi.python.org/pypi/beautifulsoup4"
+	https://pypi.python.org/pypi/beautifulsoup4"
 SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"

@@ -1,6 +1,103 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.145 2015/01/16 03:35:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.167 2015/07/27 08:08:57 patrick Exp $
+
+*sqlalchemy-1.0.8 (27 Jul 2015)
+
+  27 Jul 2015; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-1.0.8.ebuild:
+  Bump
+
+*sqlalchemy-0.7.10 (15 Jul 2015)
+
+  15 Jul 2015; Mike Gilbert <floppym@gentoo.org> +sqlalchemy-0.7.10.ebuild:
+  Restore for buildbot (again).
+
+  07 Jul 2015; Ian Delaney <idella4@gentoo.org> -sqlalchemy-0.7.10.ebuild,
+  -sqlalchemy-0.7.9.ebuild, -sqlalchemy-0.8.0.ebuild, -sqlalchemy-0.8.1.ebuild,
+  -sqlalchemy-0.8.2-r1.ebuild, -sqlalchemy-0.8.2.ebuild,
+  -sqlalchemy-0.8.3.ebuild, -sqlalchemy-0.8.4.ebuild:
+  rm old, assist from NP-Hardass in selecting old versions
+
+*sqlalchemy-1.0.6 (29 Jun 2015)
+
+  29 Jun 2015; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-1.0.6.ebuild,
+  -sqlalchemy-0.9.7.ebuild, -sqlalchemy-1.0.0.ebuild, -sqlalchemy-1.0.3.ebuild,
+  -sqlalchemy-1.0.4.ebuild:
+  Bump, remove old
+
+*sqlalchemy-1.0.5 (17 Jun 2015)
+
+  17 Jun 2015; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-1.0.5.ebuild:
+  Bump
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> sqlalchemy-0.9.8.ebuild:
+  sparc stable wrt bug #540290
+
+*sqlalchemy-1.0.4 (26 May 2015)
+
+  26 May 2015; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-1.0.4.ebuild:
+  Bump
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> sqlalchemy-0.7.10.ebuild:
+  x86 stable wrt bug #530600
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> sqlalchemy-0.7.10.ebuild:
+  ppc64 stable wrt bug #530600
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> sqlalchemy-0.7.10.ebuild:
+  ppc stable wrt bug #530600
+
+*sqlalchemy-1.0.3 (05 May 2015)
+
+  05 May 2015; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-1.0.3.ebuild:
+  Bump
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> sqlalchemy-0.9.2.ebuild:
+  ppc64 stable wrt bug #505840
+
+*sqlalchemy-1.0.0 (17 Apr 2015)
+
+  17 Apr 2015; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-1.0.0.ebuild,
+  -sqlalchemy-1.0.0_beta3.ebuild:
+  Bump
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> sqlalchemy-0.9.8.ebuild:
+  Stable for ia64, wrt bug #540290
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> sqlalchemy-0.7.10.ebuild,
+  sqlalchemy-0.9.8.ebuild:
+  Stable for alpha, wrt bug #530600
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sqlalchemy-0.7.10.ebuild,
+  sqlalchemy-0.8.0.ebuild, sqlalchemy-0.8.1.ebuild, sqlalchemy-0.8.2-r1.ebuild,
+  sqlalchemy-0.8.2.ebuild, sqlalchemy-0.8.3.ebuild, sqlalchemy-0.8.4.ebuild,
+  sqlalchemy-0.9.2.ebuild:
+  Drop old Python implementations
+
+*sqlalchemy-1.0.0_beta3 (23 Mar 2015)
+
+  23 Mar 2015; Patrick Lauer <patrick@gentoo.org>
+  +sqlalchemy-1.0.0_beta3.ebuild:
+  Bump
+
+  20 Mar 2015; Ian Delaney <idella4@gentoo.org> -sqlalchemy-0.7.9-r1.ebuild,
+  -sqlalchemy-0.9.1.ebuild, -sqlalchemy-0.9.4.ebuild, -sqlalchemy-0.9.6.ebuild,
+  sqlalchemy-0.9.7.ebuild, sqlalchemy-0.9.8.ebuild, sqlalchemy-0.9.9.ebuild:
+  drop some old, clean old impl  nd tidy dep 'mock' in some new
+
+*sqlalchemy-0.9.9 (11 Mar 2015)
+
+  11 Mar 2015; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-0.9.9.ebuild:
+  Bump
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> sqlalchemy-0.9.8.ebuild:
+  ppc stable, bug 540290
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> sqlalchemy-0.9.8.ebuild:
+  ppc64 stable, bug 540290
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> sqlalchemy-0.9.2.ebuild:
+  Stable for ppc, wrt bug #505840
 
   16 Jan 2015; Patrick Lauer <patrick@gentoo.org> sqlalchemy-0.9.8.ebuild:
   Stable on amd64 and x86 for 527558

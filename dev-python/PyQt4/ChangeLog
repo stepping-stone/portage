@@ -1,6 +1,43 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.283 2015/02/17 11:09:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.293 2015/07/25 00:00:51 pesa Exp $
+
+  25 Jul 2015; Davide Pesavento <pesa@gentoo.org> PyQt4-4.11.1.ebuild,
+  PyQt4-4.11.4.ebuild:
+  Update HOMEPAGE.
+
+  29 Jun 2015; Davide Pesavento <pesa@gentoo.org> -PyQt4-4.10.3-r2.ebuild:
+  Drop old version. As of now, sparc no longer has a stable PyQt4, see bug
+  #523322 comment #15.
+
+  17 Jun 2015; Davide Pesavento <pesa@gentoo.org> -PyQt4-4.11.3.ebuild:
+  Drop version that is not going to get stabilized.
+
+  14 Jun 2015; Davide Pesavento <pesa@gentoo.org> PyQt4-4.11.4.ebuild:
+  Use the new --no-python-dbus configure option.
+
+  14 Jun 2015; Davide Pesavento <pesa@gentoo.org> PyQt4-4.11.4.ebuild:
+  PyQt4 became GPL-3 only.
+
+*PyQt4-4.11.4 (14 Jun 2015)
+
+  14 Jun 2015; Davide Pesavento <pesa@gentoo.org> +PyQt4-4.11.4.ebuild:
+  Version bump.
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  11 May 2015; Davide Pesavento <pesa@gentoo.org> -PyQt4-4.11.2.ebuild,
+  PyQt4-4.11.3.ebuild:
+  Enable tracing with USE=debug; enable configure verbose output to get useful
+  build logs in bug reports; stop passing deprecated --no-timestamp option; use
+  qt4_get_bindir().
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> PyQt4-4.11.1.ebuild:
+  Stable for ia64, wrt bug #523322
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> PyQt4-4.10.3-r2.ebuild:
+  Drop old Python implementations
 
   17 Feb 2015; Agostino Sarubbo <ago@gentoo.org> PyQt4-4.11.1.ebuild:
   Stable for ppc64, wrt bug #517344

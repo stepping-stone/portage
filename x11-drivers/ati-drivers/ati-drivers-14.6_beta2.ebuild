@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.6_beta2.ebuild,v 1.1 2014/09/01 14:57:18 chithanh Exp $
+# $Id$
 
 EAPI=5
 
@@ -25,8 +25,8 @@ RESTRICT="bindist test"
 
 RDEPEND="
 	<=x11-base/xorg-server-1.15.49[-minimal]
-	>=app-admin/eselect-opengl-1.0.7
-	app-admin/eselect-opencl
+	>=app-eselect/eselect-opengl-1.0.7
+	app-eselect/eselect-opencl
 	sys-power/acpid
 	x11-apps/xauth
 	x11-libs/libX11
@@ -36,20 +36,12 @@ RDEPEND="
 	x11-libs/libXrender
 	virtual/glu
 	multilib? (
-			|| (
-				virtual/glu[abi_x86_32]
-				app-emulation/emul-linux-x86-opengl
-			)
-			|| (
-				(
-					x11-libs/libX11[abi_x86_32]
-					x11-libs/libXext[abi_x86_32]
-					x11-libs/libXinerama[abi_x86_32]
-					x11-libs/libXrandr[abi_x86_32]
-					x11-libs/libXrender[abi_x86_32]
-				)
-				app-emulation/emul-linux-x86-xlibs
-			)
+			virtual/glu[abi_x86_32]
+			x11-libs/libX11[abi_x86_32]
+			x11-libs/libXext[abi_x86_32]
+			x11-libs/libXinerama[abi_x86_32]
+			x11-libs/libXrandr[abi_x86_32]
+			x11-libs/libXrender[abi_x86_32]
 	)
 	qt4? (
 			x11-libs/libICE
@@ -235,7 +227,7 @@ pkg_setup() {
 	elog
 	elog "If your card is older then use ${CATEGORY}/xf86-video-ati"
 	elog "For migration informations please refer to:"
-	elog "http://www.gentoo.org/proj/en/desktop/x/x11/ati-migration-guide.xml"
+	elog "https://www.gentoo.org/proj/en/desktop/x/x11/ati-migration-guide.xml"
 	einfo
 }
 
@@ -388,7 +380,7 @@ src_install() {
 
 	# There used to be some code here that tried to detect running
 	# under a "native multilib" portage ((precursor of)
-	# http://dev.gentoo.org/~kanaka/auto-multilib/). I removed that, it
+	# https://dev.gentoo.org/~kanaka/auto-multilib/). I removed that, it
 	# should just work (only doing some duplicate work). --marienz
 	if has_multilib_profile; then
 		local OABI=${ABI}

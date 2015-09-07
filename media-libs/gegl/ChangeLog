@@ -1,6 +1,42 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.107 2015/01/29 17:33:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.115 2015/08/02 09:02:36 pacho Exp $
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> gegl-0.3.0.ebuild:
+  sparc stable wrt bug #552006
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> gegl-0.3.0.ebuild:
+  ppc stable wrt bug #552006
+
+  19 Jul 2015; Markus Meier <maekke@gentoo.org> gegl-0.3.0.ebuild:
+  arm stable, bug #552006
+
+  18 Jul 2015; Jeroen Roovers <jer@gentoo.org> gegl-0.3.0.ebuild:
+  Stable for HPPA PPC64 (bug #552006).
+
+  16 Jul 2015; Tobias Klausmann <klausman@gentoo.org> gegl-0.3.0.ebuild:
+  Stable on alpha, bug 552006
+
+*gegl-0.3.0 (09 Jun 2015)
+
+  09 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gegl-0.3.0_pre20150304.ebuild, +gegl-0.3.0.ebuild, gegl-9999.ebuild:
+  Bump for the 0.3.0 official release, punt pre-release. See
+  http://permalink.gmane.org/gmane.comp.video.gegl.devel/1521 for the
+  announcement. Acked by sping.
+
+*gegl-0.3.0_pre20150304 (25 May 2015)
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gegl-0.2.0-r2.ebuild, +gegl-0.3.0_pre20150304.ebuild, gegl-9999.ebuild,
+  metadata.xml:
+  Non-maintainer version bump from the gnome overlay, needed for gnome-3.16
+  (bug #550108). Update live ebuild. Slotify deps.
+
+  26 Feb 2015; Michał Górny <mgorny@gentoo.org> gegl-0.2.0-r2.ebuild,
+  gegl-9999.ebuild:
+  Switch to USE=libav. https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/60 by Nikoli.
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> gegl-0.2.0-r2.ebuild,
   gegl-9999.ebuild:

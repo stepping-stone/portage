@@ -1,6 +1,48 @@
 # ChangeLog for dev-libs/libixion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/ChangeLog,v 1.16 2015/02/15 14:58:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/ChangeLog,v 1.26 2015/07/25 21:23:20 dilfridge Exp $
+
+  25 Jul 2015; Andreas K. Huettel <dilfridge@gentoo.org> libixion-0.9.1.ebuild,
+  libixion-9999.ebuild:
+  Add missing pkg_setup
+
+  19 Jul 2015; Andreas K. Huettel <dilfridge@gentoo.org> libixion-0.7.0.ebuild,
+  libixion-0.9.0.ebuild, libixion-0.9.1.ebuild:
+  Require boost threads library also in releases
+
+  19 Jul 2015; Andreas K. Huettel <dilfridge@gentoo.org> libixion-9999.ebuild:
+  Require boost threads library
+
+  21 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/libixion-0.9.1-python-optional.patch, +files/libixion-0.9.1-typo.patch,
+  libixion-0.9.1.ebuild, libixion-9999.ebuild:
+  Version bump; make python support optional
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> libixion-0.9.0.ebuild:
+  Stable for x86, wrt bug #547900
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> libixion-0.9.0.ebuild:
+  Stable for amd64, wrt bug #547900
+
+*libixion-0.9.1 (22 May 2015)
+
+  22 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libixion-0.9.1.ebuild:
+  Version bump
+
+  06 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> libixion-0.9.0.ebuild,
+  libixion-9999.ebuild:
+  Rekeyword, add subslot, disable python-3 for now, bug 545562
+
+*libixion-0.9.0 (05 Apr 2015)
+
+  05 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libixion-0.5.0.ebuild, +libixion-0.9.0.ebuild, libixion-9999.ebuild:
+  Version bump; remove old
+
+  04 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> libixion-0.5.0.ebuild,
+  libixion-0.7.0.ebuild, libixion-9999.ebuild:
+  Package moved to gitlab, bug 544834
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libixion-0.7.0.ebuild:
   Stable for x86, wrt bug #534684

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.233 2015/02/16 02:16:22 dlan Exp $
+# $Id$
 
 EAPI="5"
 
@@ -32,7 +32,7 @@ else
 fi
 
 LICENSE="LGPL-2.1 GPL-2"
-SLOT="0/5-7" # vlc - vlccore
+SLOT="0/5-8" # vlc - vlccore
 
 if [ "${PV%9999}" = "${PV}" ] ; then
 	KEYWORDS="~amd64 ~arm ~ppc -sparc ~x86 ~x86-fbsd"
@@ -40,19 +40,19 @@ else
 	KEYWORDS=""
 fi
 
-IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
+IUSE="a52 aalib alsa altivec atmo +audioqueue +avcodec
 	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc +encode faad fdk
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 jack jpeg kate kde libass libav libcaca libnotify
-	libsamplerate libtiger linsys libtar lirc live lua
+	+libsamplerate libtiger linsys libtar lirc live lua
 	macosx-dialog-provider macosx-eyetv macosx-quartztext macosx-qtkit
 	matroska media-library cpu_flags_x86_mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opencv opengl optimisememory opus
 	png +postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shout sid skins speex cpu_flags_x86_sse svg +swscale
 	taglib theora tremor truetype twolame udev upnp vaapi v4l vcdx vdpau
-	vlm vnc vorbis vpx wma-fixed +X x264 x265 +xcb xml xv zvbi"
+	vlm vnc vorbis vpx wma-fixed +X x264 x265 +xcb xml xv zvbi zeroconf"
 
 RDEPEND="
 		!<media-video/ffmpeg-1.2:0
@@ -63,7 +63,6 @@ RDEPEND="
 		a52? ( >=media-libs/a52dec-0.7.4-r3:0 )
 		aalib? ( media-libs/aalib:0 )
 		alsa? ( >=media-libs/alsa-lib-1.0.24:0 )
-		avahi? ( >=net-dns/avahi-0.6:0[dbus] )
 		avcodec? (
 			!libav? ( media-video/ffmpeg:0= )
 			libav? ( media-video/libav:0= )
@@ -80,8 +79,8 @@ RDEPEND="
 		dc1394? ( >=sys-libs/libraw1394-2.0.1:0 >=media-libs/libdc1394-2.1:2 )
 		directfb? ( dev-libs/DirectFB:0 sys-libs/zlib:0 )
 		dts? ( >=media-libs/libdca-0.0.5:0 )
-		dvbpsi? ( >=media-libs/libdvbpsi-0.2.1:0 )
-		dvd? ( >=media-libs/libdvdread-4.9:0 >=media-libs/libdvdnav-4.9.0:0 )
+		dvbpsi? ( >=media-libs/libdvbpsi-1.0.0:0= )
+		dvd? ( >=media-libs/libdvdread-4.9:0 >=media-libs/libdvdnav-4.9:0 )
 		elibc_glibc? ( >=sys-libs/glibc-2.8:2.2 )
 		faad? ( >=media-libs/faad2-2.6.1:0 )
 		fdk? ( media-libs/fdk-aac:0 )
@@ -112,14 +111,14 @@ RDEPEND="
 		mpeg? ( >=media-libs/libmpeg2-0.3.2:0 )
 		mtp? ( >=media-libs/libmtp-1:0 )
 		musepack? ( >=media-sound/musepack-tools-444:0 )
-		ncurses? ( sys-libs/ncurses:5[unicode] )
+		ncurses? ( sys-libs/ncurses:0=[unicode] )
 		ogg? ( >=media-libs/libogg-1:0 )
 		opencv? ( >media-libs/opencv-2:0 )
 		opengl? ( virtual/opengl:0 >=x11-libs/libX11-1.3.99.901:0 )
 		opus? ( >=media-libs/opus-1.0.3:0 )
 		png? ( media-libs/libpng:0= sys-libs/zlib:0 )
 		postproc? (
-			!libav? ( >=media-video/ffmpeg-1.2:0= )
+			!libav? ( >=media-video/ffmpeg-2.2:0= )
 			libav? ( media-libs/libpostproc:0= )
 		)
 		projectm? ( media-libs/libprojectm:0 media-fonts/dejavu:0 )
@@ -155,14 +154,16 @@ RDEPEND="
 			!libav? ( media-video/ffmpeg:0=[vaapi] )
 			libav? ( media-video/libav:0=[vaapi] )
 		)
-		vcdx? ( >=dev-libs/libcdio-0.78.2:0 >=media-video/vcdimager-0.7.22:0 )"
+		vcdx? ( >=dev-libs/libcdio-0.78.2:0 >=media-video/vcdimager-0.7.22:0 )
+		zeroconf? ( >=net-dns/avahi-0.6:0[dbus] )
+"
 
 # Temporarily block non-live FFMPEG versions as they break vdpau, 9999 works;
 # thus we'll have to wait for a new release there.
 RDEPEND="${RDEPEND}
 		vdpau? (
 			>=x11-libs/libvdpau-0.6:0
-			!libav? ( >=media-video/ffmpeg-1.2:0= )
+			!libav? ( >=media-video/ffmpeg-2.2:0= )
 			libav? ( >=media-video/libav-10:0= )
 		)
 		vnc? ( >=net-libs/libvncserver-0.9.9:0 )
@@ -232,7 +233,7 @@ src_prepare() {
 	# config.h:792: warning: ignoring #pragma STDC FENV_ACCESS [-Wunknown-pragmas]
 	# config.h:793: warning: ignoring #pragma STDC FP_CONTRACT [-Wunknown-pragmas]
 	#
-	# http://gcc.gnu.org/c99status.html
+	# https://gcc.gnu.org/c99status.html
 	if [[ "$(tc-getCC)" == *"gcc"* ]] ; then
 		sed -i 's/ifndef __FAST_MATH__/if 0/g' configure.ac || die
 	fi
@@ -318,7 +319,6 @@ src_configure() {
 		$(use_enable altivec) \
 		$(use_enable atmo) \
 		$(use_enable audioqueue) \
-		$(use_enable avahi bonjour) \
 		$(use_enable avcodec) \
 		$(use_enable avformat) \
 		$(use_enable bidi fribidi) \
@@ -379,7 +379,7 @@ src_configure() {
 		$(use_enable omxil) \
 		$(use_enable omxil omxil-vout) \
 		$(use_enable opencv) \
-		$(use_enable opengl glx) $(use_enable opengl glspectrum) \
+		$(use_enable opengl glspectrum) \
 		$(use_enable opus) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable png) \
@@ -425,6 +425,7 @@ src_configure() {
 		$(use_enable xml libxml2) \
 		$(use_enable xv xvideo) \
 		$(use_enable x265) \
+		$(use_enable zeroconf bonjour) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
 		--disable-asdcp \
 		--disable-coverage \

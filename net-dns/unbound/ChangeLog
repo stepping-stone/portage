@@ -1,6 +1,52 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.87 2015/01/19 14:09:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.99 2015/08/03 13:59:35 mschiff Exp $
+
+*unbound-1.5.4 (03 Aug 2015)
+
+  03 Aug 2015; Marc Schiffbauer <mschiff@gentoo.org> +unbound-1.5.4.ebuild,
+  -unbound-1.5.2.ebuild, -unbound-1.5.3.ebuild:
+  bumped version, removed old unstable versions
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org> unbound-1.5.1-r2.ebuild:
+  Keyworded on alpha, bug 531068
+
+  19 Jun 2015; Markus Meier <maekke@gentoo.org> unbound-1.5.1-r2.ebuild,
+  unbound-1.5.2.ebuild, unbound-1.5.3.ebuild:
+  add ~arm, bug #531068
+
+  20 May 2015; Marc Schiffbauer <mschiff@gentoo.org> ChangeLog:
+  Added myself as maintainer
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> unbound-1.5.1-r2.ebuild,
+  unbound-1.5.2.ebuild, unbound-1.5.3.ebuild:
+  ppc/ppc64 stable, bug #532000
+
+  05 May 2015; Mike Gilbert <floppym@gentoo.org> unbound-1.5.1-r2.ebuild,
+  unbound-1.5.2.ebuild, unbound-1.5.3.ebuild:
+  Disable -flto via configure, bug 530928.
+
+  04 May 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
+
+*unbound-1.5.3 (04 May 2015)
+
+  04 May 2015; Ian Delaney <idella4@gentoo.org> +unbound-1.5.3.ebuild:
+  bump wrt bug #546450
+
+  09 Apr 2015; Agostino Sarubbo <ago@gentoo.org> unbound-1.5.1-r2.ebuild:
+  Stable for x86, wrt bug #532000
+
+  09 Apr 2015; Agostino Sarubbo <ago@gentoo.org> unbound-1.5.1-r2.ebuild:
+  Stable for amd64, wrt bug #532000
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> unbound-1.4.22-r1.ebuild:
+  Drop old Python implementations
+
+*unbound-1.5.2 (20 Feb 2015)
+
+  20 Feb 2015; Tim Harder <radhermit@gentoo.org> +unbound-1.5.2.ebuild:
+  Version bump.
 
   19 Jan 2015; Tim Harder <radhermit@gentoo.org> -unbound-1.4.21-r1.ebuild,
   -unbound-1.4.21-r2.ebuild, -unbound-1.5.0.ebuild, -unbound-1.5.0-r1.ebuild,

@@ -1,6 +1,53 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.101 2015/01/08 21:00:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.111 2015/07/08 07:17:28 graaff Exp $
+
+  08 Jul 2015; Hans de Graaff <graaff@gentoo.org> activemodel-4.1.12.ebuild:
+  Add ~x86 keyword.
+
+  07 Jul 2015; Hans de Graaff <graaff@gentoo.org> -activemodel-3.2.21.ebuild,
+  -activemodel-4.1.10.ebuild, -activemodel-4.2.1.ebuild:
+  Cleanup vulnerable versions.
+
+*activemodel-4.2.3 (26 Jun 2015)
+
+  26 Jun 2015; Hans de Graaff <graaff@gentoo.org> +activemodel-4.2.3.ebuild:
+  Version bump.
+
+*activemodel-4.1.12 (26 Jun 2015)
+
+  26 Jun 2015; Hans de Graaff <graaff@gentoo.org> +activemodel-4.1.12.ebuild:
+  Version bump.
+
+*activemodel-4.2.2 (16 Jun 2015)
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +activemodel-4.2.2.ebuild:
+  Version bump.
+
+*activemodel-4.1.11 (16 Jun 2015)
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +activemodel-4.1.11.ebuild:
+  Version bump.
+
+*activemodel-3.2.22 (16 Jun 2015)
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +activemodel-3.2.22.ebuild:
+  Version bump.
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  24 May 2015; Hans de Graaff <graaff@gentoo.org> -activemodel-4.0.12.ebuild,
+  -activemodel-4.1.8.ebuild, -activemodel-4.1.9.ebuild,
+  -activemodel-4.2.0.ebuild:
+  Cleanup.
+
+*activemodel-4.2.1 (19 Mar 2015)
+*activemodel-4.1.10 (19 Mar 2015)
+
+  19 Mar 2015; Hans de Graaff <graaff@gentoo.org> +activemodel-4.1.10.ebuild,
+  +activemodel-4.2.1.ebuild:
+  Version bump.
 
   08 Jan 2015; Markus Meier <maekke@gentoo.org> activemodel-4.2.0.ebuild:
   add ~arm, bug #534186

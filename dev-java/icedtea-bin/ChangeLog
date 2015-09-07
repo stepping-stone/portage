@@ -1,6 +1,53 @@
 # ChangeLog for dev-java/icedtea-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.77 2014/12/05 14:20:35 caster Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.85 2015/06/28 22:58:52 chewi Exp $
+
+*icedtea-bin-6.1.13.7-r1 (28 Jun 2015)
+*icedtea-bin-7.2.5.5-r1 (28 Jun 2015)
+
+  28 Jun 2015; James Le Cuirot <chewi@gentoo.org>
+  +icedtea-bin-6.1.13.7-r1.ebuild, +icedtea-bin-7.2.5.5-r1.ebuild,
+  -files/fontconfig.Gentoo.properties.src, -icedtea-bin-6.1.13.5.ebuild,
+  -icedtea-bin-7.2.5.3.ebuild:
+  Remove vulnerable versions wrt bug #537940. Restore PAX marking because
+  previous assertion that this is no longer required was wrong. The latest
+  tarballs have legacy markings when they shouldn't but this shouldn't do any
+  harm and they'll be removed next time. Closes bug #552100.
+
+  24 Jun 2015; Agostino Sarubbo <ago@gentoo.org> icedtea-bin-6.1.13.7.ebuild,
+  icedtea-bin-7.2.5.5.ebuild:
+  Stable for ppc, wrt bug #537940
+
+  13 Jun 2015; Agostino Sarubbo <ago@gentoo.org> icedtea-bin-6.1.13.7.ebuild,
+  icedtea-bin-7.2.5.5.ebuild:
+  Stable for amd64, wrt bug #537940
+
+  13 Jun 2015; Agostino Sarubbo <ago@gentoo.org> icedtea-bin-6.1.13.7.ebuild,
+  icedtea-bin-7.2.5.5.ebuild:
+  Stable for x86, wrt bug #537940
+
+  24 May 2015; James Le Cuirot <chewi@gentoo.org> icedtea-bin-7.2.5.5.ebuild:
+  Mask has now been applied in non-armv7a profiles so no need to do an awkward
+  pkg_pretend check except for hardfloat.
+
+  23 May 2015; James Le Cuirot <chewi@gentoo.org> icedtea-bin-6.1.13.7.ebuild,
+  icedtea-bin-7.2.5.5.ebuild:
+  ~arm (7) and ~ppc (6 and 7) keywords. Unfortunately patchelf doesn't work on
+  arm.
+
+*icedtea-bin-6.1.13.7 (10 May 2015)
+*icedtea-bin-7.2.5.5 (10 May 2015)
+
+  10 May 2015; James Le Cuirot <chewi@gentoo.org> +icedtea-bin-6.1.13.7.ebuild,
+  +icedtea-bin-7.2.5.5.ebuild, files/fontconfig.Gentoo.properties.src:
+  Version bump wrt #524560, #537940, #546702, #546914 and probably more.
+  Unfortunately determining accurate dependency versions is largely guesswork.
+  Depend on gsettings-desktop-schemas for proxy support wrt #431972. Fix RPATHs
+  to avoid the problem mentioned in #543658. Also fix Asian fonts for older
+  versions wrt #390663.
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> icedtea-bin-7.2.5.3.ebuild:
+  amd64/x86 stable, bug #546902
 
   05 Dec 2014; Vlastimil Babka <caster@gentoo.org>
   -icedtea-bin-6.1.13.3-r3.ebuild, -icedtea-bin-6.1.13.3-r4.ebuild,

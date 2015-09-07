@@ -1,6 +1,23 @@
 # ChangeLog for media-plugins/grilo-plugins
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.46 2014/12/19 13:40:28 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.50 2015/08/07 15:03:27 klausman Exp $
+
+  07 Aug 2015; Tobias Klausmann <klausman@gentoo.org>
+  grilo-plugins-0.2.13.ebuild:
+  Keyworded on alpha, bug 521972
+
+*grilo-plugins-0.2.14 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +grilo-plugins-0.2.14.ebuild, metadata.xml:
+  Version bump for Gnome 3.16.
+
+  14 May 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  grilo-plugins-0.2.12.ebuild, grilo-plugins-0.2.13.ebuild:
+  Pin libmediaart dependency to 1.0 slot.
+
+  23 Feb 2015; Pacho Ramos <pacho@gentoo.org> grilo-plugins-0.2.13.ebuild:
+  ppc/ppc64 keyword, bug #521972
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> grilo-plugins-0.2.13.ebuild:
   amd64 stable, bug 529964

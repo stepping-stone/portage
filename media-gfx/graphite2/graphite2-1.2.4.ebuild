@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4.ebuild,v 1.5 2014/12/13 21:01:33 dilfridge Exp $
+# $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 GENTOO_DEPEND_ON_PERL="no"
 inherit base eutils cmake-utils perl-module python-any-r1
@@ -22,7 +22,7 @@ RDEPEND="
 	perl? ( dev-lang/perl:= )
 "
 DEPEND="${RDEPEND}
-	perl? ( virtual/perl-Module-Build )
+	perl? ( dev-perl/Module-Build )
 	test? (
 		dev-libs/glib:2
 		media-libs/fontconfig

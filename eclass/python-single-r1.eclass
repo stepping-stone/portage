@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.31 2015/01/04 22:18:12 mgorny Exp $
+# $Id$
 
-# @ECLASS: python-single-r1
+# @ECLASS: python-single-r1.eclass
 # @MAINTAINER:
 # Python team <python@gentoo.org>
 # @AUTHOR:
@@ -28,15 +28,35 @@
 # in the packages using python-single-r1, and there is no need ever
 # to inherit both.
 #
-# For more information, please see the python-r1 Developer's Guide:
-# http://www.gentoo.org/proj/en/Python/python-r1/dev-guide.xml
+# For more information, please see the wiki:
+# https://wiki.gentoo.org/wiki/Project:Python/python-single-r1
 
 case "${EAPI:-0}" in
 	0|1|2|3)
 		die "Unsupported EAPI=${EAPI:-0} (too old) for ${ECLASS}"
 		;;
-	4|5)
-		# EAPI=4 is required for USE default deps on USE_EXPAND flags
+	4)
+		# EAPI=4 is only allowed on legacy packages
+		if [[ ${CATEGORY}/${P} == app-arch/threadzip-1.2 ]]; then
+			:
+		elif [[ ${CATEGORY}/${P} == media-libs/lv2-1.8.0 ]]; then
+			:
+		elif [[ ${CATEGORY}/${P} == media-libs/lv2-1.10.0 ]]; then
+			:
+		elif [[ ${CATEGORY}/${P} == sys-apps/paludis-1* ]]; then
+			:
+		elif [[ ${CATEGORY}/${P} == sys-apps/paludis-2.[02].0 ]]; then
+			:
+		elif [[ ${CATEGORY}/${P} == sys-apps/util-linux-2.2[456]* ]]; then
+			:
+		elif [[ ${CATEGORY}/${P} == */gdb-7.[78]* ]]; then
+			:
+		else
+			die "Unsupported EAPI=${EAPI:-4} (too old, allowed only on restricted set of packages) for ${ECLASS}"
+		fi
+		;;
+	5)
+		# EAPI=5 is required for sane USE_EXPAND dependencies
 		;;
 	*)
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
@@ -68,7 +88,12 @@ if [[ ! ${_PYTHON_SINGLE_R1} ]]; then
 #
 # Example:
 # @CODE
-# PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+# PYTHON_COMPAT=( python2_7 python3_3 python3_4} )
+# @CODE
+#
+# Please note that you can also use bash brace expansion if you like:
+# @CODE
+# PYTHON_COMPAT=( python2_7 python3_{3,4} )
 # @CODE
 if ! declare -p PYTHON_COMPAT &>/dev/null; then
 	die 'PYTHON_COMPAT not declared.'
@@ -111,8 +136,8 @@ fi
 # Example value:
 # @CODE
 # dev-lang/python-exec:=
-# python_single_target_python2_6? ( dev-lang/python:2.6[gdbm] )
 # python_single_target_python2_7? ( dev-lang/python:2.7[gdbm] )
+# python_single_target_pypy? ( virtual/pypy[gdbm] )
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_USEDEP
@@ -132,7 +157,7 @@ fi
 #
 # Example value:
 # @CODE
-# python_targets_python2_7(-)?,python_single_target_python2_7(+)?
+# python_targets_python2_7(-)?,python_single_target_python3_4(+)?
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_REQUIRED_USE
@@ -152,9 +177,9 @@ fi
 #
 # Example value:
 # @CODE
-# python_single_target_python2_6? ( python_targets_python2_6 )
 # python_single_target_python2_7? ( python_targets_python2_7 )
-# ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
+# python_single_target_python3_3? ( python_targets_python3_3 )
+# ^^ ( python_single_target_python2_7 python_single_target_python3_3 )
 # @CODE
 
 _python_single_set_globals() {
@@ -219,9 +244,9 @@ _python_single_set_globals() {
 	# 3) use whichever python-exec slot installed in EAPI 5. For EAPI 4,
 	# just fix :2 since := deps are not supported.
 	if [[ ${_PYTHON_WANT_PYTHON_EXEC2} == 0 ]]; then
-		PYTHON_DEPS+="dev-lang/python-exec:0[${PYTHON_USEDEP}]"
+		die "python-exec:0 is no longer supported, please fix your ebuild to work with python-exec:2"
 	elif [[ ${EAPI} != 4 ]]; then
-		PYTHON_DEPS+="dev-lang/python-exec:=[${PYTHON_USEDEP}]"
+		PYTHON_DEPS+=">=dev-lang/python-exec-2:=[${PYTHON_USEDEP}]"
 	else
 		PYTHON_DEPS+="dev-lang/python-exec:2[${PYTHON_USEDEP}]"
 	fi
@@ -329,17 +354,17 @@ python_gen_useflags() {
 #
 # Example:
 # @CODE
-# PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+# PYTHON_COMPAT=( python{2_7,3_{3,4}} pypy )
 # RDEPEND="$(python_gen_cond_dep \
-#   'dev-python/unittest2[${PYTHON_USEDEP}]' python{2_5,2_6})"
+#   'dev-python/unittest2[${PYTHON_USEDEP}]' python2_7 pypy )"
 # @CODE
 #
 # It will cause the variable to look like:
 # @CODE
-# RDEPEND="python_single_target_python2_5? (
-#     dev-python/unittest2[python_targets_python2_5(-)?,...] )
-#	python_single_target_python2_6? (
-#     dev-python/unittest2[python_targets_python2_6(-)?,...] )"
+# RDEPEND="python_single_target_python2_7? (
+#     dev-python/unittest2[python_targets_python2_7(-)?,...] )
+#	python_single_target_pypy? (
+#     dev-python/unittest2[python_targets_pypy(-)?,...] )"
 # @CODE
 python_gen_cond_dep() {
 	debug-print-function ${FUNCNAME} "${@}"

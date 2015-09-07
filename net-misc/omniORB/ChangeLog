@@ -1,6 +1,28 @@
 # ChangeLog for net-misc/omniORB
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.71 2012/02/05 01:53:54 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.77 2015/05/18 06:31:25 jlec Exp $
+
+  18 May 2015; Justin Lecher <jlec@gentoo.org> -omniORB-4.1.4-r1.ebuild:
+  Drop old
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> omniORB-4.1.4-r2.ebuild:
+  ppc64 stable wrt bug #549246
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> omniORB-4.1.4-r2.ebuild:
+  ppc stable wrt bug #549246
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> omniORB-4.1.4-r2.ebuild:
+  Stable for x86, wrt bug #549246
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> omniORB-4.1.4-r2.ebuild:
+  Stable for amd64, wrt bug #549246
+
+*omniORB-4.1.4-r2 (08 Apr 2015)
+
+  08 Apr 2015; Justin Lecher <jlec@gentoo.org>
+  +files/omniORB-4.1.4-format-security.patch, +omniORB-4.1.4-r2.ebuild,
+  metadata.xml, omniORB-4.1.4-r1.ebuild:
+  Bump EAPI and python support; fix for format-security, bug #520590
 
   05 Feb 2012; Mike Gilbert <floppym@gentoo.org> omniORB-4.1.4-r1.ebuild:
   Inherit multilib.
@@ -301,4 +323,3 @@
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> omniORB-304.ebuild :
   Added KEYWORDS, LICENSE, SLOT.
-

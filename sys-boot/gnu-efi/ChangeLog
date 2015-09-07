@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/gnu-efi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.25 2014/06/28 15:46:39 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.27 2015/06/18 19:30:56 radhermit Exp $
+
+  18 Jun 2015; Tim Harder <radhermit@gentoo.org> gnu-efi-3.0.2.ebuild:
+  Update HOMEPAGE.
+
+*gnu-efi-3.0.2 (13 Apr 2015)
+
+  13 Apr 2015; Mike Frysinger <vapier@gentoo.org> +gnu-efi-3.0.2.ebuild:
+  Version bump #537550 by David Holm.
 
   28 Jun 2014; Raúl Porcel <armin76@gentoo.org> gnu-efi-3.0s.ebuild:
   Add the fix from 3.0u to 3.0s since its stable, bug #503210

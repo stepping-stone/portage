@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.14.ebuild,v 1.2 2015/02/18 18:32:34 grozin Exp $
+# $Id$
 
 EAPI=5
 
@@ -11,7 +11,7 @@ PYTHON_REQ_USE="ncurses"
 inherit distutils-r1
 
 DESCRIPTION="Syntax highlighting and autocompletion for the Python interpreter"
-HOMEPAGE="http://www.bpython-interpreter.org/ https://bitbucket.org/bobf/bpython/ http://pypi.python.org/pypi/bpython"
+HOMEPAGE="http://www.bpython-interpreter.org/ https://bitbucket.org/bobf/bpython/ https://pypi.python.org/pypi/bpython"
 SRC_URI="
 	http://www.bpython-interpreter.org/releases/${P}.tar.gz
 	mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
@@ -20,7 +20,7 @@ SRC_URI="
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc gtk test"
+IUSE="doc test"
 
 RDEPEND="
 	dev-python/curtsies[${PYTHON_USEDEP}]
@@ -32,10 +32,6 @@ RDEPEND="
 	>=dev-python/six-1.4[${PYTHON_USEDEP}]
 	dev-python/urwid[${PYTHON_USEDEP}]
 	dev-python/watchdog[${PYTHON_USEDEP}]
-	gtk? (
-		dev-python/pygobject:2[$(python_gen_usedep python2_7)]
-		dev-python/pygtk[$(python_gen_usedep python2_7)]
-		)
 	"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
@@ -57,20 +53,8 @@ python_compile_all() {
 	fi
 }
 
-python_install() {
-	distutils-r1_python_install
-	if ! use gtk; then
-		rm -f "${D}"usr/bin/bpython-gtk*
-		# delete_unneeded_modules() {
-		rm -f "${D}$(python_get_sitedir)/bpython/gtk_.py"
-	fi
-}
-
 python_test() {
 	pushd build/lib > /dev/null
-	# https://bitbucket.org/bobf/bpython/issue/289/test-failures-in-latest-release-py27-py33
-	sed -e s':test_enter:_&:' -i bpython/test/test_repl.py || die
-
 	"${PYTHON}" -m unittest discover || die
 	popd > /dev/null
 }

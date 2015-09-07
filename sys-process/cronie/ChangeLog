@@ -1,6 +1,53 @@
 # ChangeLog for sys-process/cronie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.62 2015/01/16 11:44:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.75 2015/07/30 12:56:13 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> cronie-1.5.0.ebuild:
+  Stable for sparc, wrt bug #552496
+
+  23 Jul 2015; Mike Frysinger <vapier@gentoo.org> cronie-1.5.0-r1.ebuild:
+  Add m68k/sh love.
+
+  16 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> cronie-1.5.0.ebuild:
+  ia64 stable wrt bug #552496
+
+*cronie-1.5.0-r1 (16 Jul 2015)
+
+  16 Jul 2015; Mike Gilbert <floppym@gentoo.org> +cronie-1.5.0-r1.ebuild:
+  Revbump for bug 554664.
+
+  13 Jul 2015; Mike Gilbert <floppym@gentoo.org> +files/cronie-systemd.patch,
+  cronie-1.5.0.ebuild:
+  systemd: Eliminate EnvironmentFile, bug 554664. Switch to forking mode so we
+  can detect startup errors.
+
+  25 Jun 2015; Jeroen Roovers <jer@gentoo.org> cronie-1.5.0.ebuild:
+  Stable for HPPA (bug #552496).
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> cronie-1.5.0.ebuild:
+  alpha stable wrt bug #552496
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> cronie-1.5.0.ebuild:
+  x86 stable wrt bug #552496
+
+  20 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> cronie-1.5.0.ebuild:
+  amd64 stable wrt bug #552496
+
+  19 Jun 2015; Anthony G. Basile <blueness@gentoo.org> cronie-1.5.0.ebuild:
+  Stable for arm, ppc and ppc64.  Bug #552496.
+
+*cronie-1.5.0 (29 May 2015)
+
+  29 May 2015; Lars Wendler <polynomial-c@gentoo.org> -cronie-1.4.11-r1.ebuild,
+  -cronie-1.4.11-r3.ebuild, +cronie-1.5.0.ebuild, -files/anacron-1.0-initd,
+  -files/cronie-1.2-crontab:
+  Version bump (bug #550706). Removed old.
+
+  28 Feb 2015;  <tgall@gentoo.org> cronie-1.4.12.ebuild:
+  stable on arm64
+
+  25 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> cronie-1.4.12.ebuild:
+  alpha/ia64/sparc stable wrt bug #533276
 
   16 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> cronie-1.4.12.ebuild:
   Stable on ppc/ppc64/x86, wrt bug #533276

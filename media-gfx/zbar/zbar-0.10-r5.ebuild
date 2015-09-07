@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r5.ebuild,v 1.3 2014/12/03 12:18:37 mgorny Exp $
+# $Id$
 
 EAPI=5
 
@@ -14,20 +14,21 @@ SRC_URI="mirror://sourceforge/zbar/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="gtk imagemagick jpeg python qt4 static-libs +threads v4l X xv"
 
 RDEPEND="gtk? ( dev-libs/glib:2 x11-libs/gtk+:2 )
 	imagemagick? (
 		|| ( media-gfx/imagemagick
 		media-gfx/graphicsmagick[imagemagick] ) )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	python? ( ${PYTHON_DEPS}
 		gtk? ( >=dev-python/pygtk-2[${PYTHON_USEDEP}] ) )
 	qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )
 	X? ( x11-libs/libXext
 		xv? ( x11-libs/libXv ) )"
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	virtual/pkgconfig"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
@@ -37,9 +38,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-no-v4l1-check.patch
-	epatch "${FILESDIR}"/${P}-errors.patch
-	epatch "${FILESDIR}"/${P}-python-crash.patch
+	epatch "${FILESDIR}"/${P}-no-v4l1-check.patch \
+		"${FILESDIR}"/${P}-errors.patch \
+		"${FILESDIR}"/${P}-python-crash.patch \
+		"${FILESDIR}"/${P}-v4l2-uvcvideo.patch
 
 	use python && python_fix_shebang examples/upcrpc.py test/*.py
 

@@ -1,6 +1,44 @@
 # ChangeLog for net-misc/spice-gtk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.90 2014/12/28 18:00:09 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.101 2015/08/02 10:04:52 pacho Exp $
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> spice-gtk-0.25-r1.ebuild:
+  sparc stable wrt bug #542890
+
+  15 Jul 2015; Tobias Klausmann <klausman@gentoo.org> spice-gtk-0.25-r1.ebuild:
+  Stable on alpha, bug 542890
+
+  13 Jun 2015; Pacho Ramos <pacho@gentoo.org> spice-gtk-0.28.ebuild:
+  Rekeyword on ia64 and sparc (#513108)
+
+*spice-gtk-0.28 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +spice-gtk-0.28.ebuild,
+  metadata.xml:
+  Version bump for Gnome 3.16, bug #551112.
+
+  08 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> spice-gtk-0.25-r1.ebuild:
+  Pin phodav to 1.0 slot, bug #551460.
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> spice-gtk-0.25-r1.ebuild:
+  ppc stable wrt bug #542890
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> spice-gtk-0.25-r1.ebuild:
+  Stable for PPC64 (bug #542890).
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> spice-gtk-0.20-r1.ebuild,
+  spice-gtk-0.21.ebuild, spice-gtk-0.25-r1.ebuild:
+  Drop old Python implementations
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> spice-gtk-0.25-r1.ebuild:
+  arm stable, bug #542890
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> spice-gtk-0.25-r1.ebuild:
+  Stable for amd64, wrt bug #542890
+
+  22 Mar 2015; Andreas Schuerch <nativemad@gentoo.org>
+  spice-gtk-0.25-r1.ebuild:
+  ~x86 keyworded, see bug 513108
 
   28 Dec 2014; Mike Gilbert <floppym@gentoo.org> spice-gtk-0.20-r1.ebuild,
   spice-gtk-0.21.ebuild:

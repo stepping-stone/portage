@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.98.1091.ebuild,v 1.1 2014/12/06 12:32:01 gienah Exp $
+# $Id$
 
 EAPI=5
 
@@ -31,9 +31,9 @@ SRC_URI="https://github.com/rstudio/rstudio/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://s3.amazonaws.com/rstudio-buildtools/selenium-server-standalone-${SELENIUMVER}.jar
 	https://s3.amazonaws.com/rstudio-buildtools/chromedriver-linux
 	https://s3.amazonaws.com/rstudio-dictionaries/core-dictionaries.zip
-	http://dev.gentoo.org/~gienah/distfiles/packrat-${PACKRAT_VER}.tar.gz
-	http://dev.gentoo.org/~gienah/distfiles/rmarkdown-${RMARKDOWN_VER}.tar.gz
-	http://dev.gentoo.org/~gienah/distfiles/shinyapps-${SHINYAPPS_VER}.tar.gz"
+	https://dev.gentoo.org/~gienah/distfiles/packrat-${PACKRAT_VER}.tar.gz
+	https://dev.gentoo.org/~gienah/distfiles/rmarkdown-${RMARKDOWN_VER}.tar.gz
+	https://dev.gentoo.org/~gienah/distfiles/shinyapps-${SHINYAPPS_VER}.tar.gz"
 
 LICENSE="AGPL-3"
 SLOT="0"
@@ -51,7 +51,7 @@ RDEPEND="
 	dev-libs/openssl:0
 	sys-apps/util-linux
 	sys-libs/zlib
-	>=virtual/jre-1.5
+	>=virtual/jre-1.5:=
 	x11-libs/pango
 	!dedicated? (
 		>=dev-qt/qtcore-${QTVER}:${QTSLOT}
@@ -107,7 +107,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.98.490-prefs.patch \
 		"${FILESDIR}"/${PN}-0.98.932-paths.patch \
 		"${FILESDIR}"/${PN}-0.98.1091-pandoc.patch \
-		"${FILESDIR}"/${PN}-0.98.490-linker_flags.patch
+		"${FILESDIR}"/${PN}-0.98.490-linker_flags.patch \
+		"${FILESDIR}"/${PN}-0.98.1091-boost-1.57.patch
 
 	# Adding -DDISTRO_SHARE=... to append-flags breaks cmake so using
 	# this sed hack for now. ~RMH

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-1.1.1.ebuild,v 1.1 2015/01/26 20:02:33 radhermit Exp $
+# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/weechat/weechat.git"
 else
 	SRC_URI="http://${PN}.org/files/src/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="Portable and multi-interface IRC client"
@@ -34,15 +34,15 @@ RDEPEND="
 	sys-libs/ncurses
 	sys-libs/zlib
 	charset? ( virtual/libiconv )
-	guile? ( dev-scheme/guile )
-	lua? ( dev-lang/lua[deprecated] )
+	guile? ( dev-scheme/guile:12 )
+	lua? ( dev-lang/lua:0[deprecated] )
 	nls? ( virtual/libintl )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
 	ruby? ( >=dev-lang/ruby-1.9 )
 	ssl? ( net-libs/gnutls )
 	spell? ( app-text/aspell )
-	tcl? ( >=dev-lang/tcl-8.4.15 )
+	tcl? ( >=dev-lang/tcl-8.4.15:0= )
 "
 #	ncurses? ( sys-libs/ncurses )
 #	gtk? ( x11-libs/gtk+:2 )
@@ -122,6 +122,7 @@ src_configure() {
 		$(cmake-utils_use_enable trigger)
 		$(cmake-utils_use_enable xfer)
 	)
+	[[ ${EPYTHON} == python3* ]] && mycmakeargs+=( $(cmake-utils_use_enable python PYTHON3) )
 
 	cmake-utils_src_configure
 }

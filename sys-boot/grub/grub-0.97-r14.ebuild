@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r14.ebuild,v 1.6 2015/02/16 18:06:05 zlogene Exp $
+# $Id$
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -22,7 +22,7 @@ inherit eutils mount-boot toolchain-funcs linux-info flag-o-matic autotools pax-
 
 PATCHVER="1.14" # Should match the revision ideally
 DESCRIPTION="GNU GRUB Legacy boot loader"
-HOMEPAGE="http://www.gnu.org/software/grub/"
+HOMEPAGE="https://www.gnu.org/software/grub/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
 	mirror://gnu-alpha/${PN}/${P}.tar.gz
 	mirror://gentoo/splash.xpm.gz
@@ -35,26 +35,11 @@ IUSE="custom-cflags ncurses netboot static"
 
 LIB_DEPEND="ncurses? (
 		>=sys-libs/ncurses-5.9-r3[static-libs(+)]
-		amd64? ( || (
-			>=sys-libs/ncurses-5.9-r3[abi_x86_32(-)]
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-		) )
+		amd64? ( >=sys-libs/ncurses-5.9-r3[abi_x86_32(-)] )
 	)"
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)\]/} )"
 DEPEND="${RDEPEND}
 	static? ( ${LIB_DEPEND} )"
-
-pkg_pretend() {
-	if [[ ${MERGE_TYPE} != binary ]]; then
-		# Bugs 526348 , 466536
-		if ! test-flags-CC -fuse-ld=bfd &>/dev/null &&
-			$(tc-getLD) --version | grep -q "GNU gold"; then
-			eerror "GRUB does not function correctly when built with the gold linker."
-			eerror "Please select the bfd linker with binutils-config."
-			die "GNU gold detected"
-		fi
-	fi
-}
 
 pkg_setup() {
 	case $(tc-arch) in
@@ -110,22 +95,17 @@ src_configure() {
 	# -fno-stack-protector detected by configure, removed from netboot's emake.
 	use custom-cflags || unset CFLAGS
 
-	# Force ld.bfd if we can set it, bug 466536
-	append-ldflags $(test-flags-CC -fuse-ld=bfd)
+	tc-ld-disable-gold #439082 #466536 #526348
 
 	export grub_cv_prog_objcopy_absolute=yes #79734
 	use static && append-ldflags -static
 
-	# Per bug 216625, the emul packages do not provide .a libs for performing
-	# suitable static linking
 	if use amd64 && use static ; then
 		if [[ -n ${GRUB_STATIC_PACKAGE_BUILDING} ]] ; then
 			eerror "You have set GRUB_STATIC_PACKAGE_BUILDING. This"
 			eerror "is specifically intended for building the tarballs for the"
 			eerror "grub-static package via USE='static -ncurses'."
 			eerror "All bets are now off."
-		elif use ncurses && ! has_version ">=sys-libs/ncurses-5.9-r3[abi_x86_32,static-libs]"; then
-			die "You must use the grub-static package if you want a static Grub on amd64!"
 		fi
 	fi
 
@@ -234,7 +214,7 @@ setup_boot_dir() {
 		ewarn "root/setup manually."
 		ewarn
 		ewarn "For more help, see the handbook:"
-		ewarn "http://www.gentoo.org/doc/en/handbook/handbook-${ARCH}.xml?part=1&chap=10#grub-install-auto"
+		ewarn "https://www.gentoo.org/doc/en/handbook/handbook-${ARCH}.xml?part=1&chap=10#grub-install-auto"
 		echo
 	fi
 

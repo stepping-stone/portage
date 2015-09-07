@@ -1,6 +1,36 @@
 # ChangeLog for app-shells/sash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.54 2015/02/10 12:09:31 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.64 2015/07/31 10:46:15 kensington Exp $
+
+  31 Jul 2015; Michael Palimaka <kensington@gentoo.org> -sash-3.7-r3.ebuild:
+  Remove old.
+
+  31 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> sash-3.8.ebuild:
+  ia64 stable wrt bug #534898
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> sash-3.8.ebuild:
+  Stable for sparc, wrt bug #534898
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> sash-3.8.ebuild:
+  ppc stable wrt bug #534898
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> sash-3.8.ebuild:
+  Stable for alpha, wrt bug #534898
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> sash-3.8.ebuild:
+  Stable for x86, wrt bug #534898
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> sash-3.8.ebuild:
+  Stable for amd64, wrt bug #534898
+
+  09 Jun 2015; Jeroen Roovers <jer@gentoo.org> sash-3.8.ebuild:
+  Stable for HPPA PPC64 (bug #534898).
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> sash-3.8.ebuild:
+  arm stable, bug #534898
+
+  05 Jun 2015; Jeroen Roovers <jer@gentoo.org> sash-3.8.ebuild:
+  Do not strip.
 
   10 Feb 2015; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
   Drop myself from metadata, add maintainer-needed

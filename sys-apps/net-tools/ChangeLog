@@ -1,6 +1,32 @@
 # ChangeLog for sys-apps/net-tools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.153 2014/11/01 08:44:30 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.157 2015/08/06 16:41:53 vapier Exp $
+
+  06 Aug 2015; Mike Frysinger <vapier@gentoo.org> net-tools-9999.ebuild:
+  Update to EAPI=4 and drop custom patchsets as all changes are merged upstream
+  now.
+
+  21 Jul 2015; Manuel Rüger <mrueg@gentoo.org>
+  -net-tools-1.60_p20110409135728.ebuild,
+  -net-tools-1.60_p20111120203157.ebuild,
+  -net-tools-1.60_p20120127084908.ebuild:
+  Remove old.
+
+*net-tools-1.60_p20141019041918-r1 (15 Jul 2015)
+*net-tools-1.60_p20130513023548-r2 (15 Jul 2015)
+
+  15 Jul 2015; Sven Vermeulen <swift@gentoo.org>
+  +net-tools-1.60_p20130513023548-r2.ebuild,
+  +net-tools-1.60_p20141019041918-r1.ebuild:
+  Fix bug #520700 - Properly enable SELinux support
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  net-tools-1.60_p20110409135728.ebuild, net-tools-1.60_p20111120203157.ebuild,
+  net-tools-1.60_p20120127084908.ebuild,
+  net-tools-1.60_p20130513023548-r1.ebuild,
+  net-tools-1.60_p20130513023548.ebuild, net-tools-1.60_p20141019041918.ebuild,
+  net-tools-9999.ebuild:
+  Replace links pointing at git.overlays.gentoo.org.
 
   01 Nov 2014; Sven Vermeulen <swift@gentoo.org> net-tools-9999.ebuild:
   Enable SELinux support in net-tools (bug #520700)

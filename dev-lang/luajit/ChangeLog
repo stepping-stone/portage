@@ -1,6 +1,28 @@
 # ChangeLog for dev-lang/luajit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.23 2015/02/16 16:56:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.29 2015/06/27 12:41:48 zlogene Exp $
+
+  27 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> luajit-2.0.3-r1.ebuild:
+  x86 stable wrt bug #537370
+
+  27 Jun 2015; Agostino Sarubbo <ago@gentoo.org> luajit-2.0.3-r1.ebuild:
+  Stable for amd64, wrt bug #537370
+
+  11 Jun 2015; Markus Meier <maekke@gentoo.org> luajit-2.0.3-r1.ebuild:
+  arm stable, bug #537370
+
+*luajit-2.0.4 (21 May 2015)
+
+  21 May 2015; Patrice Clement <monsieurp@gentoo.org> +luajit-2.0.4.ebuild:
+  Version bump.
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> luajit-2.0.2.ebuild:
+  arm stable, bug #538720
+
+*luajit-2.0.3-r1 (17 Mar 2015)
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> +luajit-2.0.3-r1.ebuild:
+  Fix multilib handling #533686 by Thomas Sachau.
 
   16 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/LuaJIT-2.0.0-beta10-gentoo.patch,

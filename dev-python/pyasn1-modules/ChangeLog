@@ -1,6 +1,20 @@
 # ChangeLog for dev-python/pyasn1-modules
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.42 2015/02/01 17:31:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.45 2015/08/07 07:47:42 patrick Exp $
+
+*pyasn1-modules-0.0.7 (07 Aug 2015)
+
+  07 Aug 2015; Patrick Lauer <patrick@gentoo.org> +pyasn1-modules-0.0.7.ebuild:
+  Bump
+
+*pyasn1-modules-0.0.6 (26 Jun 2015)
+
+  26 Jun 2015; Patrick Lauer <patrick@gentoo.org> +pyasn1-modules-0.0.6.ebuild:
+  Bump
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  pyasn1-modules-0.0.5-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pyasn1-modules-0.0.1a.ebuild,
   -pyasn1-modules-0.0.2.ebuild, -pyasn1-modules-0.0.3.ebuild,

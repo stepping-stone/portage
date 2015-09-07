@@ -1,6 +1,19 @@
 # ChangeLog for games-action/powermanga
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.34 2015/02/07 06:49:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.37 2015/07/13 04:00:02 mr_bones_ Exp $
+
+*powermanga-0.93.1 (13 Jul 2015)
+
+  13 Jul 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/powermanga-0.93.1-flags.patch, +powermanga-0.93.1.ebuild,
+  files/powermanga-0.93-flags.patch:
+  version bump (bug #554642)
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> powermanga-0.93.ebuild:
+  Stable for x86, wrt bug #542718
+
+  12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> powermanga-0.93.ebuild:
+  Stable for amd64, wrt bug #542718
 
 *powermanga-0.93 (07 Feb 2015)
 

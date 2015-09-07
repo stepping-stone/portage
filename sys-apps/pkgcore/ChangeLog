@@ -1,6 +1,60 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.180 2015/02/17 00:04:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.195 2015/08/07 19:13:22 radhermit Exp $
+
+  07 Aug 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Conditionalize sphinx build dep.
+
+  03 Aug 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Update docs build command.
+
+  23 Jul 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Simplify building and installing docs.
+
+  23 Jul 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Add setuptools dep.
+
+  18 Jul 2015; Tim Harder <radhermit@gentoo.org> -pkgcore-0.9.ebuild,
+  pkgcore-9999.ebuild:
+  Remove old.
+
+  18 Jul 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Enable py3 targets.
+
+  12 Jul 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Install zsh completions.
+
+*pkgcore-0.9.1 (28 Jun 2015)
+
+  28 Jun 2015; Tim Harder <radhermit@gentoo.org> +pkgcore-0.9.1.ebuild:
+  Version bump.
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
+
+  02 Apr 2015; Tim Harder <radhermit@gentoo.org> -pkgcore-0.8.6.ebuild:
+  Remove old.
+
+*pkgcore-0.9 (02 Apr 2015)
+
+  02 Apr 2015; Tim Harder <radhermit@gentoo.org> +pkgcore-0.9.ebuild,
+  pkgcore-9999.ebuild:
+  Version bump.
+
+*pkgcore-0.8.6 (24 Mar 2015)
+
+  24 Mar 2015; Patrick Lauer <patrick@gentoo.org> +pkgcore-0.8.6.ebuild:
+  Restore last release
+
+  24 Mar 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Update homepage and add dev-python/mock test dep (conditional for when py3
+  support is re-enabled).
+
+  24 Mar 2015; Tim Harder <radhermit@gentoo.org> -pkgcore-0.8.6.ebuild:
+  Remove old.
+
+  19 Feb 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Bump to EAPI 5.
 
   17 Feb 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
   Use https git repo.

@@ -1,6 +1,55 @@
 # ChangeLog for dev-python/python-glanceclient
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-glanceclient/ChangeLog,v 1.14 2014/11/18 22:34:42 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-glanceclient/ChangeLog,v 1.24 2015/08/01 13:24:35 patrick Exp $
+
+  01 Aug 2015; Patrick Lauer <patrick@gentoo.org>
+  python-glanceclient-0.19.0-r1.ebuild:
+  Add py3.4 hugs
+
+*python-glanceclient-0.19.0-r1 (21 Jul 2015)
+
+  21 Jul 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +python-glanceclient-0.19.0-r1.ebuild:
+  removing argparse from requirements.txt
+
+*python-glanceclient-0.17.2 (17 Jul 2015)
+
+  17 Jul 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +python-glanceclient-0.17.2.ebuild:
+  bup
+
+  08 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  python-glanceclient-0.17.1.ebuild:
+  x86 stable wrt bug #554114
+
+  07 Jul 2015; Mikle Kolyada <zlogene@gentoo.org>
+  python-glanceclient-0.17.1.ebuild:
+  amd64 stable wrt bug #554114
+
+*python-glanceclient-0.19.0 (11 Jun 2015)
+
+  11 Jun 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +python-glanceclient-0.19.0.ebuild:
+  bup
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
+
+*python-glanceclient-0.17.1 (22 Apr 2015)
+*python-glanceclient-0.18.0 (22 Apr 2015)
+
+  22 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +python-glanceclient-0.17.1.ebuild, +python-glanceclient-0.18.0.ebuild:
+  double bup
+
+*python-glanceclient-0.17.0 (05 Apr 2015)
+
+  05 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +python-glanceclient-0.17.0.ebuild:
+  bumping for bug 545110
 
 *python-glanceclient-0.14.2 (18 Nov 2014)
 

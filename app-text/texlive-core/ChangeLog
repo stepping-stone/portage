@@ -1,6 +1,69 @@
 # ChangeLog for app-text/texlive-core
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.218 2014/11/04 10:50:58 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.231 2015/07/30 15:50:29 aballier Exp $
+
+  30 Jul 2015; Alexis Ballier <aballier@gentoo.org> texlive-core-2015.ebuild,
+  metadata.xml:
+  make luajittex optional, bug #542620
+
+  22 Jul 2015; Anthony G. Basile <blueness@gentoo.org>
+  texlive-core-2014-r4.ebuild:
+  Stable for ppc, bug #550840.
+
+  16 Jul 2015; Alexis Ballier <aballier@gentoo.org> texlive-core-2015.ebuild:
+  disable more cjk stuff that need ptexenc with its useflag, bug #555068
+
+  16 Jul 2015; Alexis Ballier <aballier@gentoo.org> texlive-core-2015.ebuild:
+  raise deps on split packages to texlive 2015 ones
+
+*texlive-core-2015 (16 Jul 2015)
+
+  16 Jul 2015; Alexis Ballier <aballier@gentoo.org> +texlive-core-2015.ebuild:
+  bump to texlive 2015
+
+  15 Jul 2015; Alexis Ballier <aballier@gentoo.org>
+  texlive-core-2014-r4.ebuild:
+  fix build with kpathsea from texlive 2015
+
+  12 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> texlive-core-2014-r4.ebuild:
+  x86 stable wrt bug #550840
+
+  12 Jul 2015; Agostino Sarubbo <ago@gentoo.org> texlive-core-2014-r4.ebuild:
+  Stable for amd64, wrt bug #550840
+
+*texlive-core-2014-r4 (28 Apr 2015)
+*texlive-core-2012-r3 (28 Apr 2015)
+*texlive-core-2013-r3 (28 Apr 2015)
+
+  28 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  +texlive-core-2012-r3.ebuild, +texlive-core-2013-r3.ebuild,
+  +texlive-core-2014-r4.ebuild, -texlive-core-2012-r2.ebuild,
+  -texlive-core-2013-r2.ebuild, -texlive-core-2014-r2.ebuild:
+  Fix bump 2012/2013/2014 for bug #510770.
+
+  11 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  -files/texlive-core-2014-format-security.patch, texlive-core-2014-r3.ebuild:
+  Move format-security patch into patch tarball
+
+*texlive-core-2014-r3 (09 Mar 2015)
+
+  09 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/texlive-core-2014-format-security.patch, +texlive-core-2014-r3.ebuild:
+  Drop incomplete installation of pythontex and import fedora patch for format-
+  security, #512410
+
+  09 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  texlive-core-2014-r2.ebuild:
+  Drop unnecessary die usage
+
+*texlive-core-2014-r2 (28 Feb 2015)
+*texlive-core-2013-r2 (28 Feb 2015)
+*texlive-core-2012-r2 (28 Feb 2015)
+
+  28 Feb 2015; Anthony G. Basile <blueness@gentoo.org>
+  +texlive-core-2012-r2.ebuild, +texlive-core-2013-r2.ebuild,
+  +texlive-core-2014-r2.ebuild:
+  Bump 2012/2013/2014 for bug #510770
 
   04 Nov 2014; Alexis Ballier <aballier@gentoo.org>
   -texlive-core-2011-r6.ebuild, -texlive-core-2011-r7.ebuild:

@@ -1,6 +1,36 @@
 # ChangeLog for sys-kernel/genkernel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.399 2014/11/26 09:37:54 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.405 2015/07/31 23:34:15 zerochaos Exp $
+
+*genkernel-3.4.51.4 (31 Jul 2015)
+
+  31 Jul 2015; Rick Farina <zerochaos@gentoo.org> +genkernel-3.4.51.4.ebuild,
+  -genkernel-3.4.51.3.ebuild:
+  3.4.51.1 and 3.4.51.2 were accidently released from a branch instead of being
+  merged into master so 3.4.51.3 was missing those changes.  3.4.51.4 is the
+  minor change that was expected in 3.4.51.3 plus the missing commits that were
+  not merged to master
+
+  30 Jul 2015; Rick Farina <zerochaos@gentoo.org> genkernel-3.4.51.3.ebuild:
+  fix unpack and distfile
+
+*genkernel-3.4.51.3 (30 Jul 2015)
+
+  30 Jul 2015; Rick Farina <zerochaos@gentoo.org> +genkernel-3.4.51.3.ebuild:
+  version bump to fix bugs #522176 #534266 #554202
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> genkernel-3.4.49.2.ebuild:
+  ppc64 stable wrt bug #511992
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org> genkernel-3.4.45.1.ebuild,
+  genkernel-3.4.48.ebuild, genkernel-3.4.49.1.ebuild, genkernel-3.4.49.2.ebuild,
+  genkernel-3.4.49.ebuild, genkernel-3.4.50.ebuild, genkernel-3.4.51.1.ebuild,
+  genkernel-3.4.51.2.ebuild, genkernel-3.4.51.ebuild, genkernel-9999-r1.ebuild,
+  genkernel-9999.ebuild:
+  Replace links pointing at git.overlays.gentoo.org.
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> genkernel-3.4.49.2.ebuild:
+  Stable for ppc, wrt bug #511992
 
   26 Nov 2014; Raúl Porcel <armin76@gentoo.org> genkernel-3.4.49.2.ebuild,
   genkernel-3.4.50.ebuild, genkernel-3.4.51.ebuild, genkernel-3.4.51.1.ebuild,

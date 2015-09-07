@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.9.0-r1.ebuild,v 1.2 2015/02/06 21:01:28 mr_bones_ Exp $
+# $Id$
 
 EAPI=5
 CMAKE_REMOVE_MODULES="yes"
@@ -14,7 +14,7 @@ SRC_URI="https://bitbucket.org/sinbad/ogre/get/v${PV//./-}.tar.bz2 -> ${P}.tar.b
 
 LICENSE="MIT public-domain"
 SLOT="0/1.9.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~arm x86"
 
 # gles1 currently broken wrt bug #418201
 # gles1 does not even build wrt bug #506058
@@ -68,8 +68,10 @@ src_prepare() {
 	rm -f Tools/XMLConverter/{include,src}/tiny*.*
 
 	# Fix some path issues
-	epatch "${FILESDIR}/${P}-remove_resource_path_to_bindir.patch" \
-		"${FILESDIR}/${P}-remove_media_path_to_bindir.patch"
+	epatch \
+		"${FILESDIR}/${P}-remove_resource_path_to_bindir.patch" \
+		"${FILESDIR}/${P}-remove_media_path_to_bindir.patch" \
+		"${FILESDIR}/${P}-gcc52.patch"
 }
 
 src_configure() {

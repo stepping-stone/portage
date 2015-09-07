@@ -1,6 +1,115 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.75 2015/01/24 10:34:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.108 2015/08/06 14:06:25 zlogene Exp $
+
+  06 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> bundler-1.8.9.ebuild:
+  ia64 stable wrt bug #553894
+
+  06 Aug 2015; Tobias Klausmann <klausman@gentoo.org> bundler-1.8.9.ebuild:
+  Stable on alpha, bug 553894
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> bundler-1.8.9.ebuild:
+  Stable for x86, wrt bug #553894
+
+  06 Aug 2015; Markus Meier <maekke@gentoo.org> bundler-1.8.9.ebuild:
+  arm stable, bug #553894
+
+  03 Aug 2015; Agostino Sarubbo <ago@gentoo.org> bundler-1.8.9.ebuild:
+  Stable for amd64, wrt bug #553894
+
+  25 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> bundler-1.7.13.ebuild:
+  sparc stable wrt bug #542574
+
+  04 Jul 2015; Hans de Graaff <graaff@gentoo.org> bundler-1.8.9.ebuild:
+  Create stable candidate.
+
+  03 Jul 2015; Manuel Rüger <mrueg@gentoo.org> -bundler-1.7.3.ebuild:
+  Remove old.
+
+  03 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> bundler-1.7.13.ebuild:
+  arm stable wrt bug #550314
+
+*bundler-1.9.10 (29 Jun 2015)
+
+  29 Jun 2015; Hans de Graaff <graaff@gentoo.org> +bundler-1.9.10.ebuild:
+  Version bump.
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> bundler-1.7.13.ebuild:
+  alpha stable wrt bug #550314
+
+  17 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> bundler-1.7.13.ebuild:
+  ia64 stable wrt bug #550314
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> bundler-1.7.13.ebuild:
+  Stable for ppc, wrt bug #550314
+
+  09 Jun 2015; Jeroen Roovers <jer@gentoo.org> bundler-1.7.13.ebuild:
+  Stable for HPPA PPC64 (bug #550314).
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  31 May 2015; Markus Meier <maekke@gentoo.org> bundler-1.7.3.ebuild:
+  arm stable, bug #542574
+
+*bundler-1.9.9 (31 May 2015)
+
+  31 May 2015; Hans de Graaff <graaff@gentoo.org> +bundler-1.9.9.ebuild:
+  Version bump. Fixes bug 544394.
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> bundler-1.7.13.ebuild:
+  Stable for x86, wrt bug #550314
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> bundler-1.7.13.ebuild:
+  Stable for amd64, wrt bug #550314
+
+  24 May 2015; Hans de Graaff <graaff@gentoo.org> bundler-1.7.13.ebuild:
+  Create stable candidate.
+
+  24 May 2015; Hans de Graaff <graaff@gentoo.org> -bundler-1.7.4.ebuild,
+  -bundler-1.8.7.ebuild, -bundler-1.8.8.ebuild:
+  Cleanup.
+
+*bundler-1.8.9 (11 May 2015)
+
+  11 May 2015; Hans de Graaff <graaff@gentoo.org> +bundler-1.8.9.ebuild:
+  Version bump. Install man pages with USE=doc, bug 549194.
+
+*bundler-1.8.8 (03 May 2015)
+
+  03 May 2015; Hans de Graaff <graaff@gentoo.org> +bundler-1.8.8.ebuild:
+  Version bump. 
+
+  03 May 2015; Jeroen Roovers <jer@gentoo.org> bundler-1.7.3.ebuild:
+  Stable for PPC64 (bug #542574).
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> bundler-1.7.3.ebuild:
+  ppc stable wrt bug #542574
+
+*bundler-1.8.7 (24 Apr 2015)
+
+  24 Apr 2015; Hans de Graaff <graaff@gentoo.org> +bundler-1.8.7.ebuild:
+  Version bump.
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> bundler-1.7.3.ebuild:
+  Stable for ia64, wrt bug #542574
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> bundler-1.7.3.ebuild:
+  Stable for alpha, wrt bug #542574
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org> bundler-1.7.13.ebuild:
+  Add ruby22.
+
+  13 Mar 2015; Jeroen Roovers <jer@gentoo.org> bundler-1.7.3.ebuild:
+  Stable for HPPA (bug #542574).
+
+  25 Feb 2015; Hans de Graaff <graaff@gentoo.org> bundler-1.7.13.ebuild:
+  Restrict tests since they use the network.
+
+*bundler-1.7.13 (25 Feb 2015)
+
+  25 Feb 2015; Hans de Graaff <graaff@gentoo.org> +bundler-1.7.13.ebuild:
+  Version bump.
 
   24 Jan 2015; Hans de Graaff <graaff@gentoo.org> -bundler-1.3.5.ebuild:
   Cleanup vulnerable version for bug 523798.

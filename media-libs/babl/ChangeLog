@@ -1,6 +1,28 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.63 2015/01/29 17:27:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.69 2015/08/02 09:02:45 pacho Exp $
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> babl-0.1.12.ebuild:
+  sparc stable wrt bug #552006
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> babl-0.1.12.ebuild:
+  ppc stable wrt bug #552006
+
+  18 Jul 2015; Jeroen Roovers <jer@gentoo.org> babl-0.1.12.ebuild:
+  Stable for HPPA PPC64 (bug #552006).
+
+  16 Jul 2015; Tobias Klausmann <klausman@gentoo.org> babl-0.1.12.ebuild:
+  Stable on alpha, bug 552006
+
+  11 Jul 2015; Markus Meier <maekke@gentoo.org> babl-0.1.12.ebuild:
+  arm stable, bug #552006
+
+*babl-0.1.12 (25 May 2015)
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org> +babl-0.1.12.ebuild,
+  babl-9999.ebuild, metadata.xml:
+  Non-maintainer version bump from the gnome overlay, needed for gegl-0.3 (bug
+  #550108). Update live ebuild. Remove unused flag descriptions.
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> babl-0.1.10-r1.ebuild,
   babl-9999.ebuild:

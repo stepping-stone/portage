@@ -1,6 +1,22 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.66 2015/01/08 19:44:14 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.69 2015/07/04 12:25:30 dilfridge Exp $
+
+*Inline-0.800.0 (04 Jul 2015)
+
+  04 Jul 2015; Andreas K. Huettel <dilfridge@gentoo.org> +Inline-0.800.0.ebuild,
+  -Inline-0.530.0.ebuild:
+  Version bump
+
+  25 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Inline-0.780.0.ebuild:
+  Remove old
+
+*Inline-0.790.0 (25 Feb 2015)
+
+  25 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Inline-0.510.0-r1.ebuild, +Inline-0.790.0.ebuild:
+  Version bump
 
 *Inline-0.780.0 (08 Jan 2015)
 

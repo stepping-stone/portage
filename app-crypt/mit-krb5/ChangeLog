@@ -1,6 +1,56 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.450 2015/02/18 09:17:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.465 2015/07/31 05:25:25 eras Exp $
+
+  31 Jul 2015; Eray Aslan <eras@gentoo.org> -files/2015-001-patch-r113.patch,
+  -files/mit-krb5-CVE-2014-5353.patch, -files/mit-krb5-CVE-2014-5354.patch,
+  -mit-krb5-1.13-r1.ebuild, -mit-krb5-1.13.1.ebuild:
+  Remove old
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.13.2.ebuild:
+  Stable for sparc, wrt bug #548026
+
+  28 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> mit-krb5-1.13.2.ebuild:
+  alpha stable wrt bug #548026
+
+  28 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> mit-krb5-1.13.2.ebuild:
+  ia64 stable wrt bug #548026
+
+  27 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> mit-krb5-1.13.2.ebuild:
+  arm stable wrt bug #548026
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.13.2.ebuild:
+  Stable for x86, wrt bug #548026
+
+  26 Jun 2015; Jeroen Roovers <jer@gentoo.org> mit-krb5-1.13.2.ebuild:
+  Stable for HPPA (bug #548026).
+
+  25 Jun 2015; Jeroen Roovers <jer@gentoo.org> mit-krb5-1.13.2.ebuild:
+  Stable for PPC64 (bug #548026).
+
+  24 Jun 2015; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.13.2.ebuild:
+  Stable for ppc, wrt bug #548026
+
+  23 Jun 2015; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.13.2.ebuild:
+  Stable for amd64, wrt bug #548026
+
+*mit-krb5-1.13.2 (12 May 2015)
+
+  12 May 2015; Eray Aslan <eras@gentoo.org> +mit-krb5-1.13.2.ebuild:
+  Version bump
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> mit-krb5-1.13-r1.ebuild,
+  mit-krb5-1.13.1.ebuild:
+  Fix tcl/tk slotting
+
+  25 Feb 2015; Eray Aslan <eras@gentoo.org> -mit-krb5-1.13.ebuild:
+  Remove old
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.13-r1.ebuild:
+  Stable for alpha, wrt bug #538842
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.13-r1.ebuild:
+  Stable for ia64, wrt bug #538842
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.13-r1.ebuild:
   Stable for ppc, wrt bug #538842

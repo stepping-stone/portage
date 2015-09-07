@@ -1,6 +1,59 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.214 2015/01/02 12:09:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.228 2015/07/30 13:22:10 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> gtk-doc-1.24.ebuild:
+  Stable for sparc, wrt bug #551814
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org> gtk-doc-1.24.ebuild:
+  Stable on alpha, bug 551814
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> gtk-doc-1.24.ebuild:
+  ppc stable wrt bug #551814
+
+  17 Jul 2015; Agostino Sarubbo <ago@gentoo.org> gtk-doc-1.24.ebuild:
+  Stable for ia64, wrt bug #551814
+
+  13 Jul 2015; Jeroen Roovers <jer@gentoo.org> gtk-doc-1.24.ebuild:
+  Stable for HPPA (bug #551814).
+
+  07 Jul 2015; Markus Meier <maekke@gentoo.org> gtk-doc-1.24.ebuild:
+  arm stable, bug #551814
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> gtk-doc-1.24.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> gtk-doc-1.24.ebuild:
+  amd64 stable wrt bug #551814
+
+  21 Jun 2015; Jeroen Roovers <jer@gentoo.org> gtk-doc-1.24.ebuild:
+  Stable for PPC64 (bug #551814).
+
+*gtk-doc-1.24 (30 May 2015)
+
+  30 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gtk-doc-1.23.ebuild, +gtk-doc-1.24.ebuild:
+  Version bump, fixes missing xml namespace in devhelp2 files. Drop broken 1.23
+  version.
+
+*gtk-doc-1.23 (17 May 2015)
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> +gtk-doc-1.23.ebuild,
+  -gtk-doc-1.22.ebuild:
+  Version bump, drop old
+
+*gtk-doc-1.22 (12 May 2015)
+
+  12 May 2015; Gilles Dartiguelongue <eva@gentoo.org> -gtk-doc-1.20.ebuild,
+  +gtk-doc-1.22.ebuild:
+  Version bump. Clean up old revision.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gtk-doc-1.20.ebuild,
+  gtk-doc-1.21.ebuild:
+  Drop old Python implementations
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> gtk-doc-1.21.ebuild:
+  Add arm64/s390 love & mark m68k/sh stable.
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gtk-doc-1.21.ebuild:
   Stable for alpha, wrt bug #529964

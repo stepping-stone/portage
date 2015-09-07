@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>games</herd>
 	<use>
-		<flag name="qt4">Use qt4 gui instead of gtk+</flag>
+		<flag name="pic">disable optimized assembly code that is not PIC friendly</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">yabause</remote-id>
+	</upstream>
 </pkgmetadata>

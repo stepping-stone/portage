@@ -1,6 +1,64 @@
 # ChangeLog for dev-qt/qthelp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.35 2015/02/03 11:04:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.49 2015/08/06 13:56:34 zlogene Exp $
+
+  06 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> qthelp-4.8.6-r3.ebuild:
+  ia64 stable wrt bug #530238
+
+  05 Jul 2015; Tobias Klausmann <klausman@gentoo.org> qthelp-4.8.6-r3.ebuild:
+  Stable on alpha, bug 530238
+
+*qthelp-5.4.2 (17 Jun 2015)
+
+  17 Jun 2015; Davide Pesavento <pesa@gentoo.org> +qthelp-5.4.2.ebuild,
+  -qthelp-5.4.1.ebuild, metadata.xml:
+  Version bump.
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> qthelp-4.8.6-r3.ebuild:
+  arm stable, bug #530238
+
+*qthelp-4.8.7 (26 May 2015)
+
+  26 May 2015; Davide Pesavento <pesa@gentoo.org> +qthelp-4.8.7.ebuild:
+  Version bump.
+
+  16 May 2015; Pacho Ramos <pacho@gentoo.org> qthelp-4.8.6-r3.ebuild:
+  ppc stable wrt bug #530238
+
+  16 May 2015; Jeroen Roovers <jer@gentoo.org> qthelp-5.4.1.ebuild:
+  Mark ~ppc64 too.
+
+  16 May 2015; Jeroen Roovers <jer@gentoo.org> qthelp-4.8.6-r3.ebuild:
+  Stable for PPC64 (bug #530238).
+
+  15 May 2015; Mikle Kolyada <zlogene@gentoo.org> qthelp-4.8.6-r3.ebuild:
+  x86 stable wrt bug #530238
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> qthelp-4.8.6-r3.ebuild:
+  amd64 stable wrt bug #530238
+
+  07 May 2015; Davide Pesavento <pesa@gentoo.org> qthelp-4.8.5-r2.ebuild,
+  qthelp-4.8.6-r3.ebuild:
+  Remove executable bit from compat headers. Update SRC_URI of compat source
+  package.
+
+*qthelp-4.8.6-r3 (06 May 2015)
+
+  06 May 2015; Davide Pesavento <pesa@gentoo.org>
+  +files/qthelp-4.8.6-compat-install.patch,
+  +files/qthelp-4.8.6-compat-syncqt.patch, +qthelp-4.8.6-r3.ebuild,
+  -files/qthelp-4.8.6-fix-compat.patch, -qthelp-4.8.6-r2.ebuild:
+  Properly fix building with USE=compat by teaching syncqt how to generate
+  QtAssistant forwarding headers. Finally solves bug 529398.
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qthelp-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
+
+*qthelp-5.4.1 (24 Feb 2015)
+
+  24 Feb 2015; Davide Pesavento <pesa@gentoo.org> +qthelp-5.4.1.ebuild,
+  -qthelp-5.4.0.ebuild:
+  Version bump.
 
   03 Feb 2015; Jeroen Roovers <jer@gentoo.org> qthelp-5.4.0.ebuild:
   Marked ~hppa too.

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.4.0.ebuild,v 1.13 2014/11/30 21:24:44 dilfridge Exp $
+# $Id$
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="+berkdb qmail ssl doc ldap mysql postgres sqlite ipv6"
 
 REQUIRED_USE="|| ( berkdb mysql postgres sqlite )"
@@ -81,7 +81,7 @@ src_configure() {
 	# Set the path to the Perl executable explictly.  This will be used to
 	# create the initial sharpbang line in the scripts and might cause
 	# a versioned app name end in there, see
-	# <http://bugs.gentoo.org/show_bug.cgi?id=62276>
+	# <https://bugs.gentoo.org/show_bug.cgi?id=62276>
 	myconf+=" PERL_BIN=${EPREFIX}/usr/bin/perl"
 
 	# Add Gentoo tag to make it easy for the upstream devs to spot

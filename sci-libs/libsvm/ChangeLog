@@ -1,6 +1,30 @@
 # ChangeLog for sci-libs/libsvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.37 2015/02/02 08:09:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.44 2015/07/28 14:06:52 jlec Exp $
+
+  28 Jul 2015; Justin Lecher <jlec@gentoo.org> -files/2.90-fpic.patch,
+  -files/2.90-ldflags.patch, -files/2.90-python3.patch,
+  -files/3.12-makefile.patch:
+  Drop obsolete patches
+
+  28 May 2015; Justin Lecher <jlec@gentoo.org> -libsvm-3.17.ebuild:
+  Drop old
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> libsvm-3.17-r1.ebuild:
+  Stable for x86, wrt bug #538508
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> libsvm-3.17-r1.ebuild:
+  Stable for amd64, wrt bug #538508
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> libsvm-3.17-r1.ebuild:
+  ppc64 stable wrt bug #538508
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> libsvm-3.17-r1.ebuild:
+  ppc stable wrt bug #538508
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libsvm-3.17-r1.ebuild,
+  libsvm-3.17.ebuild:
+  Drop old Python implementations
 
 *libsvm-3.17-r1 (02 Feb 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-1.5.6.ebuild,v 1.12 2012/07/08 15:12:27 armin76 Exp $
+# $Id$
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 inherit distutils eutils
 
 DESCRIPTION="pyparsing is an easy-to-use Python module for text parsing"
-HOMEPAGE="http://pyparsing.wikispaces.com/ http://pypi.python.org/pypi/pyparsing"
+HOMEPAGE="http://pyparsing.wikispaces.com/ https://pypi.python.org/pypi/pyparsing"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"

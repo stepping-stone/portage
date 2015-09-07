@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.5.1.ebuild,v 1.4 2015/01/29 01:20:50 johu Exp $
+# $Id$
 
 EAPI=5
 
@@ -11,7 +11,7 @@ KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="A user friendly IRC Client for KDE4"
-HOMEPAGE="http://kde.org/applications/internet/konversation/ http://konversation.kde.org"
+HOMEPAGE="https://kde.org/applications/internet/konversation/ https://konversation.kde.org"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
 
 LICENSE="GPL-2 handbook? ( FDL-1.2 )"
@@ -25,7 +25,7 @@ DEPEND="
 	crypt? ( app-crypt/qca:2[qt4(+)] )
 "
 RDEPEND="${DEPEND}
-	crypt? ( || ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )
+	crypt? ( app-crypt/qca:2[openssl] )
 "
 
 src_configure() {

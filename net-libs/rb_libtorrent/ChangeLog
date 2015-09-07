@@ -1,6 +1,83 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.183 2015/01/16 09:53:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.200 2015/07/18 14:22:50 pacho Exp $
+
+  18 Jul 2015; Pacho Ramos <pacho@gentoo.org> rb_libtorrent-1.0.5.ebuild:
+  Needs to be rebuilt when libboost_python so version changes
+
+  09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -rb_libtorrent-0.16.10.ebuild:
+  Remove old.
+
+  19 May 2015; Markos Chandras <hwoarang@gentoo.org> rb_libtorrent-1.0.4.ebuild,
+  rb_libtorrent-1.0.5.ebuild:
+  Use absolute path to install html docs. Bug #549870
+
+*rb_libtorrent-1.0.5 (17 May 2015)
+
+  17 May 2015; Markos Chandras <hwoarang@gentoo.org>
+  +rb_libtorrent-1.0.5.ebuild, -rb_libtorrent-1.0.3.ebuild:
+  Version bump. Bug #549390
+
+  05 May 2015; Jeroen Roovers <jer@gentoo.org> rb_libtorrent-0.16.17.ebuild:
+  Stable for PPC64 (bug #522764).
+
+*rb_libtorrent-1.0.4 (19 Apr 2015)
+
+  19 Apr 2015; Markos Chandras <hwoarang@gentoo.org>
+  +rb_libtorrent-1.0.4.ebuild:
+  Version bump
+
+  12 Apr 2015; Justin Lecher <jlec@gentoo.org> -rb_libtorrent-0.16.17-r1.ebuild,
+  -rb_libtorrent-1.0.2.ebuild, rb_libtorrent-0.16.17-r2.ebuild,
+  rb_libtorrent-0.16.19.ebuild, rb_libtorrent-1.0.3.ebuild:
+  Export best python version before configure, #545354
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  files/rb_libtorrent-1.0.2-python.patch:
+  Fix broken configure patch, #544612
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  files/rb_libtorrent-0.16.17-python.patch:
+  Fix broken configure patch, #544612
+
+  23 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/rb_libtorrent-0.16.17-python.patch,
+  +files/rb_libtorrent-1.0.2-python.patch, metadata.xml,
+  rb_libtorrent-0.16.17-r2.ebuild, rb_libtorrent-0.16.19.ebuild,
+  rb_libtorrent-1.0.2.ebuild, rb_libtorrent-1.0.3.ebuild:
+  Fix python stuff, bug #542434
+
+*rb_libtorrent-0.16.19 (17 Mar 2015)
+
+  17 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  +rb_libtorrent-0.16.19.ebuild:
+  Version bump. Bug #542196
+
+  17 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  rb_libtorrent-0.16.17-r2.ebuild:
+  Really fix the broken commit by Ian Delaney. Bug #539368 again
+
+  11 Mar 2015; Ian Delaney <idella4@gentoo.org> rb_libtorrent-0.16.17-r2.ebuild:
+  revert DEPEND RDEPEND to reflect the state in the -r1
+
+*rb_libtorrent-0.16.17-r2.ebuild (05 Mar 2015)
+
+  05 Mar 2015; Ian Delaney <idella4@gentoo.org>
+  +rb_libtorrent-0.16.17-r2.ebuild:
+  revbump; conversion to python-r1 modelled on conversions of
+  rb_libtorrent-1*, consent by maintainer provided in Bug 541958,
+  fixes said bug
+
+  03 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  rb_libtorrent-0.16.17-r1.ebuild, rb_libtorrent-1.0.3.ebuild:
+  Fix openssl deps and move libtool to DEPEND. Bug #539368
+
+  03 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  rb_libtorrent-0.16.17-r1.ebuild, rb_libtorrent-1.0.3.ebuild:
+  Add epatch_user. Bug #541690
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rb_libtorrent-0.16.17.ebuild:
+  Stable for ppc, wrt bug #522764
 
   16 Jan 2015; Raúl Porcel <armin76@gentoo.org> rb_libtorrent-0.16.17.ebuild:
   sparc stable wrt #522764

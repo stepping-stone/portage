@@ -1,6 +1,30 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.69 2015/01/07 15:14:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.77 2015/07/15 20:47:58 zlogene Exp $
+
+  15 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> dmalloc-5.5.2-r6.ebuild:
+  ia64 stable wrt bug #547248
+
+  30 May 2015; Mikle Kolyada <zlogene@gentoo.org> dmalloc-5.5.2-r6.ebuild:
+  arm stable wrt bug #547248
+
+  21 May 2015; Matt Turner <mattst88@gentoo.org> dmalloc-5.5.2-r6.ebuild:
+  alpha stable, bug 547248.
+
+  28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> dmalloc-5.5.2-r6.ebuild:
+  Stable for sparc, wrt bug #547248
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> dmalloc-5.5.2-r6.ebuild:
+  ppc stable wrt bug #547248
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> dmalloc-5.5.2-r6.ebuild:
+  amd64/x86 stable wrt bug #547248
+
+  22 Apr 2015; Jeroen Roovers <jer@gentoo.org> dmalloc-5.5.2-r6.ebuild:
+  Stable for PPC64 (bug #547248).
+
+  22 Apr 2015; Jeroen Roovers <jer@gentoo.org> dmalloc-5.5.2-r6.ebuild:
+  Stable for HPPA (bug #547248).
 
 *dmalloc-5.5.2-r6 (07 Jan 2015)
 

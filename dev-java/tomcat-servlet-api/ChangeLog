@@ -1,6 +1,82 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.176 2015/02/10 12:16:27 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.188 2015/07/11 09:20:21 chewi Exp $
+
+  11 Jul 2015; James Le Cuirot <chewi@gentoo.org> tomcat-servlet-api-3.ebuild,
+  tomcat-servlet-api-4.1.36.ebuild, tomcat-servlet-api-5.5.27-r1.ebuild,
+  tomcat-servlet-api-5.5.34.ebuild, tomcat-servlet-api-6.0.44.ebuild,
+  tomcat-servlet-api-7.0.59.ebuild, -tomcat-servlet-api-8.0.22.ebuild,
+  tomcat-servlet-api-8.0.23.ebuild:
+  Drop java on ia64 and also drop old version.
+
+  15 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  -tomcat-servlet-api-6.0.41.ebuild, -tomcat-servlet-api-6.0.43.ebuild,
+  -tomcat-servlet-api-7.0.56.ebuild, -tomcat-servlet-api-7.0.57.ebuild:
+  Remove vulnerable versions. Fix security bug 549536.
+
+*tomcat-servlet-api-7.0.56 (03 Jun 2015)
+*tomcat-servlet-api-6.0.43 (03 Jun 2015)
+*tomcat-servlet-api-7.0.57 (03 Jun 2015)
+*tomcat-servlet-api-6.0.41 (03 Jun 2015)
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +tomcat-servlet-api-6.0.41.ebuild, +tomcat-servlet-api-6.0.43.ebuild,
+  +tomcat-servlet-api-7.0.56.ebuild, +tomcat-servlet-api-7.0.57.ebuild,
+  tomcat-servlet-api-6.0.44.ebuild, tomcat-servlet-api-7.0.59.ebuild,
+  tomcat-servlet-api-8.0.23.ebuild:
+  Restore vulnerable ebuilds until security team stabilise the the new version.
+  See bug 549536.
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  -tomcat-servlet-api-7.0.56.ebuild, -tomcat-servlet-api-7.0.57.ebuild:
+  Remove vulnerable versions < Tomcat 7.0.59. Fix security bug 549536.
+
+*tomcat-servlet-api-6.0.44 (03 Jun 2015)
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +tomcat-servlet-api-6.0.44.ebuild, -tomcat-servlet-api-6.0.41.ebuild,
+  -tomcat-servlet-api-6.0.43.ebuild:
+  Tomcat 6.0.44 version bump. Remove vulnerable versions. Fix security bug
+  549536.
+
+*tomcat-servlet-api-8.0.23 (26 May 2015)
+
+  26 May 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  +tomcat-servlet-api-8.0.23.ebuild:
+  version bump
+
+  26 May 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  -tomcat-servlet-api-8.0.18.ebuild, -tomcat-servlet-api-8.0.20.ebuild,
+  -tomcat-servlet-api-8.0.21.ebuild:
+  removed obsolete ebuilds
+
+*tomcat-servlet-api-8.0.22 (07 May 2015)
+
+  07 May 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  +tomcat-servlet-api-8.0.22.ebuild:
+  version bump
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> tomcat-servlet-api-7.0.57.ebuild:
+  x86 stable wrt bug #539596
+
+*tomcat-servlet-api-8.0.21 (28 Mar 2015)
+
+  28 Mar 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  +tomcat-servlet-api-8.0.21.ebuild:
+  version bump
+
+*tomcat-servlet-api-8.0.20 (24 Feb 2015)
+
+  24 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  +tomcat-servlet-api-8.0.20.ebuild:
+  version bump
+
+*tomcat-servlet-api-8.0.18 (19 Feb 2015)
+
+  19 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  +tomcat-servlet-api-8.0.18.ebuild, +files/3.1-build.xml:
+  version bump (per bug #540694, ebuild by William L. Thomson Jr.
+  <wlt@obsidian-studios.com>)
 
 *tomcat-servlet-api-6.0.43 (10 Feb 2015)
 

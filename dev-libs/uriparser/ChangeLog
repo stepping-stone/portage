@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/uriparser
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.49 2014/11/21 17:04:09 sping Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.52 2015/06/09 14:54:24 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  05 May 2015; Manuel Rüger <mrueg@gentoo.org> -uriparser-0.7.5.ebuild,
+  -uriparser-0.7.6.ebuild, -uriparser-0.7.7.ebuild:
+  Remove old.
+
+*uriparser-0.8.2 (27 Apr 2015)
+
+  27 Apr 2015; Sebastian Pipping <sping@gentoo.org> +uriparser-0.8.2.ebuild:
+  Bump to 0.8.2
 
   21 Nov 2014; Sebastian Pipping <sping@gentoo.org> uriparser-0.8.1.ebuild,
   +files/uriparser-0.8.1-doc-install.patch:

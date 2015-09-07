@@ -1,48 +1,25 @@
-# Copyright 2010-2014 Gentoo Foundation
+# Copyright 2010-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-9999.ebuild,v 1.2 2014/11/21 12:14:47 blueness Exp $
+# $Id$
 
-EAPI=4
+EAPI=5
 
-DB_VER="4.8"
-
-inherit autotools bash-completion-r1 db-use eutils git-2 user versionator systemd
-
-MyPV="${PV/_/}"
-MyPN="bitcoin"
-MyP="${MyPN}-${MyPV}"
+BITCOINCORE_IUSE="examples logrotate test upnp +wallet"
+BITCOINCORE_NEED_LEVELDB=1
+BITCOINCORE_NEED_LIBSECP256K1=1
+inherit bash-completion-r1 bitcoincore user systemd
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
-HOMEPAGE="http://bitcoin.org/"
-SRC_URI="
-"
-EGIT_PROJECT='bitcoin'
-EGIT_REPO_URI="git://github.com/bitcoin/bitcoin.git https://github.com/bitcoin/bitcoin.git"
-
-LICENSE="MIT ISC GPL-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
-IUSE="examples logrotate test upnp +wallet"
 
 RDEPEND="
-	>=dev-libs/boost-1.52.0[threads(+)]
-	dev-libs/openssl:0[-bindist]
 	logrotate? (
 		app-admin/logrotate
 	)
-	upnp? (
-		net-libs/miniupnpc
-	)
-	wallet? (
-		sys-libs/db:$(db_ver_to_slot "${DB_VER}")[cxx]
-	)
-	virtual/bitcoin-leveldb
-	dev-libs/libsecp256k1
 "
-DEPEND="${RDEPEND}
-	>=app-shells/bash-4.1
-	sys-apps/sed
-"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	local UG='bitcoin'
@@ -51,40 +28,25 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/0.9.0-sys_leveldb.patch"
-	epatch "${FILESDIR}/${PV}-sys_libsecp256k1.patch"
-	rm -r src/leveldb src/secp256k1
-	eautoreconf
+	sed -i 's/have bitcoind &&//;s/^\(complete -F _bitcoind bitcoind\) bitcoin-cli$/\1/' contrib/${PN}.bash-completion
+	bitcoincore_src_prepare
 }
 
 src_configure() {
-	econf \
-		--disable-ccache \
-		$(use_with upnp miniupnpc) $(use_enable upnp upnp-default) \
-		$(use_enable test tests)  \
-		$(use_enable wallet)  \
-		--with-system-leveldb  \
-		--without-libs \
-		--without-utils  \
-		--without-gui
-}
-
-src_test() {
-	emake check
+	bitcoincore_conf \
+		--with-daemon
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
-	rm "${D}/usr/bin/test_bitcoin"
+	bitcoincore_src_install
 
 	insinto /etc/bitcoin
 	newins "${FILESDIR}/bitcoin.conf" bitcoin.conf
 	fowners bitcoin:bitcoin /etc/bitcoin/bitcoin.conf
 	fperms 600 /etc/bitcoin/bitcoin.conf
 
-	newconfd "${FILESDIR}/bitcoin.confd" ${PN}
-	newinitd "${FILESDIR}/bitcoin.initd-r1" ${PN}
+	newconfd "contrib/init/bitcoind.openrcconf" ${PN}
+	newinitd "contrib/init/bitcoind.openrc" ${PN}
 	systemd_dounit "${FILESDIR}/bitcoind.service"
 
 	keepdir /var/lib/bitcoin/.bitcoin
@@ -93,19 +55,18 @@ src_install() {
 	fowners bitcoin:bitcoin /var/lib/bitcoin/.bitcoin
 	dosym /etc/bitcoin/bitcoin.conf /var/lib/bitcoin/.bitcoin/bitcoin.conf
 
-	dodoc doc/README.md doc/release-notes.md
-	dodoc doc/assets-attribution.md doc/tor.md
+	dodoc doc/assets-attribution.md doc/bips.md doc/tor.md
 	doman contrib/debian/manpages/{bitcoind.1,bitcoin.conf.5}
 
 	newbashcomp contrib/${PN}.bash-completion ${PN}
 
 	if use examples; then
 		docinto examples
-		dodoc -r contrib/{bitrpc,pyminer,qos,spendfrom,tidy_datadir.sh}
+		dodoc -r contrib/{bitrpc,qos,spendfrom,tidy_datadir.sh}
 	fi
 
 	if use logrotate; then
 		insinto /etc/logrotate.d
-		newins "${FILESDIR}/bitcoind.logrotate" bitcoind
+		newins "${FILESDIR}/bitcoind.logrotate-r1" bitcoind
 	fi
 }

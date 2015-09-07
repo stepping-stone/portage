@@ -1,6 +1,36 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.244 2015/02/11 10:05:36 pacho Exp $
+# $Id$
+
+# Ben de Groot <yngwin@gentoo.org> (03 May 2015)
+# media-libs/rubberband lacks arm keyword, bug 548446
+media-video/mpv rubberband
+
+# Patrick Lauer <patrick@gentoo.org> (20 Apr 2015)
+# qt5/kf5 not keyworded on arm
+net-irc/quassel qt5
+
+# Markos Chandras <hwoarang@gentoo.org> (18 Apr 2015)
+# samba-4 not keyworded on arm
+sys-auth/sssd samba
+
+# Markus Meier <maekke@gentoo.org> (03 Apr 2015)
+# Deps not yet stable or keyworded
+=media-libs/libsdl2-2.0.3-r200 fusionsound
+
+# Alexis Ballier <aballier@gentoo.org> (02 Apr 2015)
+# Needs ilmbase (openexr), which does not build and is masked on arm.
+media-libs/freeimage tiff
+
+# Markus Meier <maekke@gentoo.org> (03 Mar 2015)
+# Unkeyworded deps, bug #540540
+sys-auth/sssd augeas
+
+# Michał Górny <mgorny@gentoo.org> (21 Feb 2015)
+# The external QCA plugins are not keyworded on this arch. Since
+# this is only a temporary measure and nothing depends on them,
+# just masking them until the new version goes stable.
+<app-crypt/qca-2.1 logger pkcs11 sasl
 
 # Jason A. Donenfeld <zx2c4@gentoo.org> (09 Feb 2015)
 # Google does not distribute the widevine plugin for ARM. It must be extracted from a Chromebook,
@@ -106,9 +136,9 @@ media-video/mpv sdl
 
 # Johannes Huber <johu@gentoo.org> (16 Apr 2014)
 # unkeyworded deps
-kde-base/gwenview semantic-desktop
-kde-base/okular dpi
-kde-base/nepomuk-core migrator
+kde-apps/gwenview semantic-desktop
+kde-apps/okular dpi
+kde-apps/nepomuk-core migrator
 
 # Yixun Lan <dlan@gentoo.org> (12 Apr 2014)
 # app-emulation/qemu is not keyworded on arm arch.
@@ -121,7 +151,7 @@ app-emulation/xen-tools system-qemu
 =media-video/mplayer2-2.0_p20130428-r1 quvi
 
 # Markus Meier <maekke@gentoo.org> (23 Feb 2014)
-# unkeyworded dep, bug #499974
+# Needs sci-physics/bullet tested #499974
 dev-libs/efl physics
 
 # Jason A. Donenfeld <zx2c4@gentoo.org> (27 Jan 2014)
@@ -174,7 +204,7 @@ dev-python/ipython nbconvert
 
 # Johannes Huber <johu@gentoo.org> (15 Sep 2013)
 # Depends on kde-misc/networkmanagement, not keyworded yet.
-kde-base/solid-runtime networkmanager
+kde-apps/solid-runtime networkmanager
 
 # Sergey Popov <pinkbyte@gentoo.org> (06 Sep 2013)
 # sci-libs/hdf does not build properly on arm
@@ -208,10 +238,6 @@ media-libs/phonon zeitgeist
 # Patrick Lauer <patrick@gentoo.org> (31 May 2013)
 # no stable jdk+java-config
 net-misc/tightvnc java
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 May 2013)
-# depends on sys-devel/llvm[video_cards_radeon]
-media-libs/mesa r600-llvm-compiler
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (27 May 2013)
 # Firmware loader not keyworded yet
@@ -251,11 +277,12 @@ dev-libs/xapian-bindings java
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (20 Feb 2013)
 # Mask flags of calligra and dependencies due to lack of keywords
-app-office/calligra openexr postgres spacenav vc
+app-office/calligra color-management openexr postgres spacenav vc
 media-gfx/pstoedit emf
 
 # Rick Farina <zerochaos@gentoo.org> (05 Feb 2013)
 # masking all stable packages with java use flag
+net-misc/openconnect java
 dev-util/oprofile java
 =dev-db/qdbm-1.8.78-r1 java
 =dev-libs/beecrypt-4.2.1 java
@@ -312,14 +339,14 @@ app-accessibility/speech-dispatcher flite
 
 # Markus Meier <maekke@gentoo.org> (23 Dec 2012)
 # mask kde-base/* flags due to unkeyworded dependencies
-kde-base/kalzium editor solver
-kde-base/krdc rdesktop
-kde-base/kopete jingle msn sms
+kde-apps/kalzium editor solver
+kde-apps/krdc rdesktop
+kde-apps/kopete jingle msn sms
 kde-base/kdeplasma-addons fcitx oauth qwt scim
-kde-base/okular ebook chm
-kde-base/kstars indi
-kde-base/kdeutils-meta floppy
-kde-base/kdenetwork-meta ppp
+kde-apps/okular ebook chm
+kde-apps/kstars indi
+kde-apps/kdeutils-meta floppy
+kde-apps/kdenetwork-meta ppp
 kde-base/smokeqt qscintilla qwt
 kde-base/qtruby qscintilla qwt
 kde-base/perlqt qscintilla qwt
@@ -363,8 +390,9 @@ app-admin/syslog-ng json
 net-misc/tinc vde
 
 # Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
-# JavaScriptCore JIT is supported only on amd64/arm/x86,
-# so it's masked in base profile and unmasked here.
+# The QML (V4) and JSC JITs are supported only on amd64/arm/x86,
+# so the flag is masked in the base profile and unmasked here.
+dev-qt/qtdeclarative -jit
 dev-qt/qtscript -jit
 dev-qt/qtwebkit -jit
 

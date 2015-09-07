@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmateweather/libmateweather-1.8.0.ebuild,v 1.5 2014/12/20 10:34:32 tamiko Exp $
+# $Id$
 
 EAPI="5"
 
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools gnome2 python-r1 versionator
 
@@ -40,7 +40,7 @@ RDEPEND=">=dev-libs/glib-2.13:2[${PYTHON_USEDEP}]
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.3:*
-	>=mate-base/mate-common-1.6:0
+	>=mate-base/mate-common-1.8:0
 	sys-devel/gettext:*
 	virtual/pkgconfig:*"
 

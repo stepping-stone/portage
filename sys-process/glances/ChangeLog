@@ -1,6 +1,17 @@
 # ChangeLog for sys-process/glances
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.24 2014/12/31 04:03:30 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.26 2015/07/10 07:55:04 idella4 Exp $
+
+*glances-2.4.2 (10 Jul 2015)
+
+  10 Jul 2015; Ian Delaney <idella4@gentoo.org> +files/2.4.2-setup-data.patch,
+  +glances-2.4.2.ebuild:
+  bump; patch to set correct install of prebuilt docs
+
+*glances-2.3 (05 Apr 2015)
+
+  05 Apr 2015; Patrick Lauer <patrick@gentoo.org> +glances-2.3.ebuild:
+  Bump
 
 *glances-2.2.1 (31 Dec 2014)
 

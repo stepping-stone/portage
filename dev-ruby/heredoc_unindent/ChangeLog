@@ -1,6 +1,23 @@
 # ChangeLog for dev-ruby/heredoc_unindent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heredoc_unindent/ChangeLog,v 1.13 2015/02/05 10:16:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heredoc_unindent/ChangeLog,v 1.17 2015/07/29 18:20:31 grobian Exp $
+
+  29 Jul 2015; Fabian Groffen <grobian@gentoo.org>
+  heredoc_unindent-1.2.0.ebuild:
+  Keyworded for *-solaris, *-macos, ~x86-linux, bug #491822
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*heredoc_unindent-1.2.0 (20 Apr 2015)
+
+  20 Apr 2015; Hans de Graaff <graaff@gentoo.org>
+  +heredoc_unindent-1.2.0.ebuild:
+  Version bump.
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org>
+  heredoc_unindent-1.1.2-r4.ebuild:
+  Add ruby22.
 
   05 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   heredoc_unindent-1.1.2-r3.ebuild:

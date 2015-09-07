@@ -1,6 +1,19 @@
 # ChangeLog for dev-haskell/resourcet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/resourcet/ChangeLog,v 1.11 2014/12/21 10:21:14 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/resourcet/ChangeLog,v 1.14 2015/08/01 14:36:05 slyfox Exp $
+
+*resourcet-1.1.6 (01 Aug 2015)
+
+  01 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org> +resourcet-1.1.6.ebuild:
+  Version bump.
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*resourcet-1.1.4.1 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +resourcet-1.1.4.1.ebuild:
+  Bump resourcet to 1.1.4.1
 
 *resourcet-1.1.3.3 (21 Dec 2014)
 

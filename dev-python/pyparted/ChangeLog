@@ -1,6 +1,57 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.91 2015/01/20 16:14:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.105 2015/08/08 06:56:00 jer Exp $
+
+  08 Aug 2015; Jeroen Roovers <jer@gentoo.org> -pyparted-3.10.ebuild,
+  -pyparted-3.10-r1.ebuild, -pyparted-3.10.2.ebuild, -pyparted-3.10.3.ebuild:
+  Old.
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> pyparted-3.10.3-r1.ebuild:
+  Stable for sparc, wrt bug #543038
+
+  06 Jun 2015; Jeroen Roovers <jer@gentoo.org> pyparted-3.10.5.ebuild:
+  Update HOMEPAGE.
+
+*pyparted-3.10.5 (06 Jun 2015)
+
+  06 Jun 2015; Jeroen Roovers <jer@gentoo.org> +pyparted-3.10.5.ebuild:
+  Version bump.
+
+*pyparted-3.10.4 (09 May 2015)
+
+  09 May 2015; Jeroen Roovers <jer@gentoo.org> +pyparted-3.10.4.ebuild:
+  Version bump.
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pyparted-3.10.3-r1.ebuild:
+  Stable for ia64, wrt bug #543038
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pyparted-3.10.3-r1.ebuild:
+  Stable for alpha, wrt bug #543038
+
+  31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> pyparted-3.10.3-r1.ebuild:
+  Stable for ppc64, wrt bug #543038
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> pyparted-3.10.3-r1.ebuild:
+  Stable for ppc, wrt bug #543038
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> pyparted-3.10.3-r1.ebuild:
+  Stable for x86, wrt bug #543038
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> pyparted-3.10.3-r1.ebuild:
+  Stable for amd64, wrt bug #543038
+
+  15 Mar 2015; Jeroen Roovers <jer@gentoo.org> pyparted-3.10.3-r1.ebuild:
+  Stable for HPPA (bug #543038).
+
+*pyparted-3.10.3-r1 (12 Mar 2015)
+
+  12 Mar 2015; Jeroen Roovers <jer@gentoo.org> +pyparted-3.10.3-r1.ebuild,
+  +files/pyparted-3.10.3-greater.patch,
+  +files/pyparted-3.10.3-sbin-parted.patch:
+  Fix tests (bug #416519).
+
+  12 Mar 2015; Jeroen Roovers <jer@gentoo.org> pyparted-3.10.3.ebuild:
+  Drop unneeded dependency on sys-libs/ncurses.
 
 *pyparted-3.10.3 (20 Jan 2015)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/PDL
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.120 2014/11/19 19:33:13 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.122 2015/07/18 09:10:26 zlogene Exp $
+
+  18 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> PDL-2.4.11.ebuild:
+  Use default CPAN HOMPAGE comes from perl-module.eclass, (sourforge one is
+  dead)
+
+  08 May 2015; Justin Lecher <jlec@gentoo.org> PDL-2.4.11.ebuild:
+  Make compatible with latest plplot
 
   19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> PDL-2.4.11.ebuild:
   Replace perl-module_pkg_setup with perl_set_version

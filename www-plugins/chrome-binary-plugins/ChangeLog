@@ -1,6 +1,433 @@
 # ChangeLog for www-plugins/chrome-binary-plugins
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.226 2015/02/12 15:18:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.278 2015/08/07 20:46:39 floppym Exp $
+
+*chrome-binary-plugins-45.0.2454.26_beta1 (07 Aug 2015)
+
+  07 Aug 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-45.0.2454.26_beta1.ebuild,
+  -chrome-binary-plugins-45.0.2454.15_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-46.0.2471.2_alpha1 (05 Aug 2015)
+*chrome-binary-plugins-44.0.2403.130_p1 (05 Aug 2015)
+
+  05 Aug 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.130_p1.ebuild,
+  +chrome-binary-plugins-46.0.2471.2_alpha1.ebuild,
+  -chrome-binary-plugins-44.0.2403.125_p1.ebuild,
+  -chrome-binary-plugins-46.0.2467.2_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-46.0.2467.2_alpha1 (01 Aug 2015)
+
+  01 Aug 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-46.0.2467.2_alpha1.ebuild,
+  -chrome-binary-plugins-45.0.2454.15_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.125_p1 (29 Jul 2015)
+
+  29 Jul 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.125_p1.ebuild,
+  -chrome-binary-plugins-44.0.2403.107_p1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-45.0.2454.15_beta1 (28 Jul 2015)
+
+  28 Jul 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-45.0.2454.15_beta1.ebuild,
+  -chrome-binary-plugins-44.0.2403.89_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.107_p1 (24 Jul 2015)
+*chrome-binary-plugins-45.0.2454.15_alpha1 (24 Jul 2015)
+
+  24 Jul 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.107_p1.ebuild,
+  +chrome-binary-plugins-45.0.2454.15_alpha1.ebuild,
+  -chrome-binary-plugins-44.0.2403.89_p1.ebuild,
+  -chrome-binary-plugins-45.0.2454.12_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.89_p1 (22 Jul 2015)
+*chrome-binary-plugins-45.0.2454.12_alpha1 (22 Jul 2015)
+
+  22 Jul 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.89_p1.ebuild,
+  +chrome-binary-plugins-45.0.2454.12_alpha1.ebuild,
+  -chrome-binary-plugins-43.0.2357.134_p1.ebuild,
+  -chrome-binary-plugins-45.0.2454.7_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-45.0.2454.7_alpha1 (16 Jul 2015)
+
+  16 Jul 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-45.0.2454.7_alpha1.ebuild,
+  -chrome-binary-plugins-45.0.2454.6_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.89_beta1 (15 Jul 2015)
+
+  15 Jul 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.89_beta1.ebuild,
+  -chrome-binary-plugins-44.0.2403.81_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-45.0.2454.6_alpha1 (15 Jul 2015)
+*chrome-binary-plugins-43.0.2357.134_p1 (15 Jul 2015)
+
+  15 Jul 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.134_p1.ebuild,
+  +chrome-binary-plugins-45.0.2454.6_alpha1.ebuild,
+  -chrome-binary-plugins-43.0.2357.132_p1.ebuild,
+  -chrome-binary-plugins-45.0.2453.0_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-45.0.2453.0_alpha1 (10 Jul 2015)
+
+  10 Jul 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-45.0.2453.0_alpha1.ebuild,
+  -chrome-binary-plugins-45.0.2438.3_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.81_beta1 (10 Jul 2015)
+
+  10 Jul 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.81_beta1.ebuild,
+  -chrome-binary-plugins-44.0.2403.61_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2357.132_p1 (07 Jul 2015)
+
+  07 Jul 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.132_p1.ebuild,
+  -chrome-binary-plugins-43.0.2357.130_p1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.61_beta1 (25 Jun 2015)
+
+  25 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.61_beta1.ebuild,
+  -chrome-binary-plugins-44.0.2403.52_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-45.0.2438.3_alpha1 (24 Jun 2015)
+
+  24 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-45.0.2438.3_alpha1.ebuild,
+  -chrome-binary-plugins-45.0.2431.0_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2357.130_p1 (23 Jun 2015)
+
+  23 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.130_p1.ebuild,
+  -chrome-binary-plugins-43.0.2357.125_p1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.52_beta1 (19 Jun 2015)
+
+  19 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.52_beta1.ebuild,
+  -chrome-binary-plugins-44.0.2403.39_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-45.0.2431.0_alpha1 (17 Jun 2015)
+
+  17 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-45.0.2431.0_alpha1.ebuild,
+  -chrome-binary-plugins-45.0.2427.7_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2357.125_p1 (13 Jun 2015)
+*chrome-binary-plugins-45.0.2427.7_alpha1 (13 Jun 2015)
+
+  13 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.125_p1.ebuild,
+  +chrome-binary-plugins-45.0.2427.7_alpha1.ebuild,
+  -chrome-binary-plugins-43.0.2357.124_p1.ebuild,
+  -chrome-binary-plugins-45.0.2421.0_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.39_beta1 (11 Jun 2015)
+
+  11 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.39_beta1.ebuild,
+  -chrome-binary-plugins-44.0.2403.30_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2357.124_p1 (09 Jun 2015)
+
+  09 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.124_p1.ebuild,
+  -chrome-binary-plugins-43.0.2357.81_p1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-45.0.2421.0_alpha1 (05 Jun 2015)
+
+  05 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-45.0.2421.0_alpha1.ebuild,
+  -chrome-binary-plugins-45.0.2414.0_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.30_beta1 (04 Jun 2015)
+
+  04 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.30_beta1.ebuild,
+  -chrome-binary-plugins-44.0.2403.18_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-45.0.2414.0_alpha1 (29 May 2015)
+
+  29 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-45.0.2414.0_alpha1.ebuild,
+  -chrome-binary-plugins-44.0.2403.9_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.18_beta1 (28 May 2015)
+
+  28 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.18_beta1.ebuild,
+  -chrome-binary-plugins-43.0.2357.73_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2357.81_p1 (25 May 2015)
+
+  25 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.81_p1.ebuild,
+  -chrome-binary-plugins-43.0.2357.65_p1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.9_alpha1 (23 May 2015)
+
+  23 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2403.9_alpha1.ebuild,
+  -chrome-binary-plugins-44.0.2403.4_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2403.4_alpha1 (20 May 2015)
+*chrome-binary-plugins-43.0.2357.65_p1 (20 May 2015)
+*chrome-binary-plugins-43.0.2357.73_beta1 (20 May 2015)
+
+  20 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.65_p1.ebuild,
+  +chrome-binary-plugins-43.0.2357.73_beta1.ebuild,
+  +chrome-binary-plugins-44.0.2403.4_alpha1.ebuild,
+  -chrome-binary-plugins-42.0.2311.152_p1.ebuild,
+  -chrome-binary-plugins-43.0.2357.65_beta1.ebuild,
+  -chrome-binary-plugins-44.0.2398.0_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2357.65_beta1 (14 May 2015)
+*chrome-binary-plugins-42.0.2311.152_p1 (14 May 2015)
+*chrome-binary-plugins-44.0.2398.0_alpha1 (14 May 2015)
+
+  14 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-42.0.2311.152_p1.ebuild,
+  +chrome-binary-plugins-43.0.2357.65_beta1.ebuild,
+  +chrome-binary-plugins-44.0.2398.0_alpha1.ebuild,
+  -chrome-binary-plugins-42.0.2311.135_p1.ebuild,
+  -chrome-binary-plugins-43.0.2357.52_beta1.ebuild,
+  -chrome-binary-plugins-44.0.2391.0_alpha1.ebuild:
+  Bump
+
+*chrome-binary-plugins-43.0.2357.52_beta1 (06 May 2015)
+
+  06 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.52_beta1.ebuild,
+  -chrome-binary-plugins-43.0.2357.45_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2391.0_alpha1 (06 May 2015)
+
+  06 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-44.0.2391.0_alpha1.ebuild,
+  -chrome-binary-plugins-44.0.2383.0_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2357.45_beta1 (30 Apr 2015)
+
+  30 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.45_beta1.ebuild,
+  -chrome-binary-plugins-43.0.2357.37_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-42.0.2311.135_p1 (29 Apr 2015)
+*chrome-binary-plugins-44.0.2383.0_alpha1 (29 Apr 2015)
+
+  29 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-42.0.2311.135_p1.ebuild,
+  +chrome-binary-plugins-44.0.2383.0_alpha1.ebuild,
+  -chrome-binary-plugins-42.0.2311.90_p1.ebuild,
+  -chrome-binary-plugins-44.0.2376.0_alpha1.ebuild:
+  Bump.
+
+*chrome-binary-plugins-43.0.2357.37_beta1 (22 Apr 2015)
+
+  22 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.37_beta1.ebuild,
+  -chrome-binary-plugins-43.0.2357.18_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-44.0.2376.0_alpha1 (22 Apr 2015)
+*chrome-binary-plugins-43.0.2357.18_beta1 (22 Apr 2015)
+
+  22 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.18_beta1.ebuild,
+  +chrome-binary-plugins-44.0.2376.0_alpha1.ebuild,
+  -chrome-binary-plugins-42.0.2311.82_beta1.ebuild,
+  -chrome-binary-plugins-43.0.2357.18_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2357.18_alpha1 (15 Apr 2015)
+
+  15 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.18_alpha1.ebuild,
+  -chrome-binary-plugins-43.0.2357.10_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-42.0.2311.90_p1 (14 Apr 2015)
+
+  14 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-42.0.2311.90_p1.ebuild,
+  -chrome-binary-plugins-41.0.2272.118_p1.ebuild:
+  Bump.
+
+*chrome-binary-plugins-42.0.2311.82_beta1 (09 Apr 2015)
+*chrome-binary-plugins-43.0.2357.10_alpha1 (09 Apr 2015)
+
+  09 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-42.0.2311.82_beta1.ebuild,
+  +chrome-binary-plugins-43.0.2357.10_alpha1.ebuild,
+  -chrome-binary-plugins-42.0.2311.68_beta1.ebuild,
+  -chrome-binary-plugins-43.0.2357.2_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2357.2_alpha1 (07 Apr 2015)
+
+  07 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2357.2_alpha1.ebuild,
+  -chrome-binary-plugins-43.0.2351.3_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-42.0.2311.68_beta1 (02 Apr 2015)
+*chrome-binary-plugins-41.0.2272.118_p1 (02 Apr 2015)
+
+  02 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-41.0.2272.118_p1.ebuild,
+  +chrome-binary-plugins-42.0.2311.68_beta1.ebuild,
+  -chrome-binary-plugins-41.0.2272.101_p1.ebuild,
+  -chrome-binary-plugins-42.0.2311.60_beta1.ebuild:
+  Bump.
+
+*chrome-binary-plugins-43.0.2351.3_alpha1 (01 Apr 2015)
+
+  01 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-43.0.2351.3_alpha1.ebuild,
+  -chrome-binary-plugins-43.0.2334.0_alpha1.ebuild,
+  -chrome-binary-plugins-43.0.2342.2_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2342.2_alpha1 (25 Mar 2015)
+*chrome-binary-plugins-43.0.2334.0_alpha1 (25 Mar 2015)
+*chrome-binary-plugins-42.0.2311.60_beta1 (25 Mar 2015)
+
+  25 Mar 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-42.0.2311.60_beta1.ebuild,
+  +chrome-binary-plugins-43.0.2334.0_alpha1.ebuild,
+  +chrome-binary-plugins-43.0.2342.2_alpha1.ebuild,
+  -chrome-binary-plugins-42.0.2311.50_beta1.ebuild,
+  -chrome-binary-plugins-43.0.2327.5_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-41.0.2272.101_p1 (20 Mar 2015)
+
+  20 Mar 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-41.0.2272.101_p1.ebuild,
+  -chrome-binary-plugins-41.0.2272.89_p1.ebuild:
+  Bump.
+
+*chrome-binary-plugins-42.0.2311.50_beta1 (19 Mar 2015)
+
+  19 Mar 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-42.0.2311.50_beta1.ebuild,
+  -chrome-binary-plugins-42.0.2311.39_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-43.0.2327.5_alpha1 (12 Mar 2015)
+*chrome-binary-plugins-42.0.2311.39_beta1 (12 Mar 2015)
+*chrome-binary-plugins-41.0.2272.89_p1 (12 Mar 2015)
+
+  12 Mar 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-41.0.2272.89_p1.ebuild,
+  +chrome-binary-plugins-42.0.2311.39_beta1.ebuild,
+  +chrome-binary-plugins-43.0.2327.5_alpha1.ebuild,
+  -chrome-binary-plugins-41.0.2272.76_p1.ebuild,
+  -chrome-binary-plugins-42.0.2311.22_alpha1.ebuild,
+  -chrome-binary-plugins-42.0.2311.22_beta1.ebuild:
+  Bump.
+
+*chrome-binary-plugins-42.0.2311.22_beta1 (09 Mar 2015)
+
+  09 Mar 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-42.0.2311.22_beta1.ebuild,
+  -chrome-binary-plugins-41.0.2272.74_beta1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-42.0.2311.22_alpha1 (06 Mar 2015)
+
+  06 Mar 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-42.0.2311.22_alpha1.ebuild,
+  -chrome-binary-plugins-42.0.2311.15_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-42.0.2311.15_alpha1 (04 Mar 2015)
+*chrome-binary-plugins-41.0.2272.76_p1 (04 Mar 2015)
+
+  04 Mar 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-41.0.2272.76_p1.ebuild,
+  +chrome-binary-plugins-42.0.2311.15_alpha1.ebuild,
+  -chrome-binary-plugins-40.0.2214.115_p1.ebuild,
+  -chrome-binary-plugins-42.0.2311.11_alpha1.ebuild:
+  Bump.
+
+*chrome-binary-plugins-42.0.2311.11_alpha1 (26 Feb 2015)
+*chrome-binary-plugins-41.0.2272.74_beta1 (26 Feb 2015)
+
+  26 Feb 2015; Michael Weber <xmw@gentoo.org>
+  +chrome-binary-plugins-41.0.2272.74_beta1.ebuild,
+  +chrome-binary-plugins-42.0.2311.11_alpha1.ebuild,
+  -chrome-binary-plugins-41.0.2272.64_beta1.ebuild,
+  -chrome-binary-plugins-42.0.2311.4_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-42.0.2311.4_alpha1 (25 Feb 2015)
+
+  25 Feb 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-42.0.2311.4_alpha1.ebuild,
+  -chrome-binary-plugins-42.0.2305.3_alpha1.ebuild:
+  Automated update.
+
+*chrome-binary-plugins-40.0.2214.115_p1 (21 Feb 2015)
+*chrome-binary-plugins-41.0.2272.64_beta1 (21 Feb 2015)
+
+  21 Feb 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-40.0.2214.115_p1.ebuild,
+  +chrome-binary-plugins-41.0.2272.64_beta1.ebuild,
+  -chrome-binary-plugins-40.0.2214.111_p1.ebuild,
+  -chrome-binary-plugins-41.0.2272.63_beta1.ebuild:
+  Bump.
+
+*chrome-binary-plugins-42.0.2305.3_alpha1 (19 Feb 2015)
+*chrome-binary-plugins-41.0.2272.63_beta1 (19 Feb 2015)
+
+  19 Feb 2015; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-41.0.2272.63_beta1.ebuild,
+  +chrome-binary-plugins-42.0.2305.3_alpha1.ebuild,
+  -chrome-binary-plugins-41.0.2272.53_beta1.ebuild,
+  -chrome-binary-plugins-42.0.2298.0_alpha1.ebuild:
+  Automated update.
 
 *chrome-binary-plugins-41.0.2272.53_beta1 (12 Feb 2015)
 

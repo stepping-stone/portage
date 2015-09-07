@@ -1,6 +1,25 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.46 2015/02/05 14:59:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.50 2015/06/09 14:08:12 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  10 May 2015; Justin Lecher <jlec@gentoo.org> +files/0.9.5-plplot.patch,
+  -files/0.9.5-testsuite.patch, gdl-0.9.5.ebuild:
+  Add fedora patch for compatibility to plplot-5.11, bug #548902
+
+*gdl-0.9.5 (07 May 2015)
+
+  07 May 2015; Justin Lecher <jlec@gentoo.org> +files/0.9.4-plplot.patch,
+  +files/0.9.4-python2.patch, +files/0.9.5-antlr.patch, +files/0.9.5-png.patch,
+  +files/0.9.5-proj4.patch, +files/0.9.5-testsuite.patch, +gdl-0.9.5.ebuild,
+  gdl-0.9.4.ebuild, metadata.xml:
+  Version Bump; fix compatibility with latest plplot, bug #547380; fix python
+  support bug #530774
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gdl-0.9.4.ebuild:
+  Drop old Python implementations
 
   05 Feb 2015; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Fix USE=eigen description.

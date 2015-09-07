@@ -1,20 +1,20 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.9.1.ebuild,v 1.1 2015/01/21 15:25:13 tamiko Exp $
+# $Id$
 
 EAPI=4
-PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit eutils fdo-mime flag-o-matic python-any-r1 qt4-r2 toolchain-funcs
 
 DESCRIPTION="Documentation system for most programming languages"
 HOMEPAGE="http://www.doxygen.org/"
 SRC_URI="http://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
-	http://dev.gentoo.org/~xarthisius/distfiles/doxywizard.png"
+	https://dev.gentoo.org/~xarthisius/distfiles/doxywizard.png"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="alpha amd64 arm ~arm64 ~hppa ia64 ~mips ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE="clang debug doc dot doxysearch qt4 latex sqlite"
 
 #missing SerbianCyrilic, JapaneseEn, KoreanEn, Chinesetraditional

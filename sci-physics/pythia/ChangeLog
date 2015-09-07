@@ -1,6 +1,47 @@
 # ChangeLog for sci-physics/pythia
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.56 2014/09/02 21:31:28 jauhien Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.66 2015/07/17 23:38:21 bircoph Exp $
+
+  17 Jul 2015; Andrew Savchenko <bircoph@gentoo.org> -pythia-8.2.09-r1.ebuild:
+  Remove old.
+
+*pythia-8.2.10 (17 Jul 2015)
+
+  17 Jul 2015; Andrew Savchenko <bircoph@gentoo.org> +pythia-8.2.10.ebuild:
+  Version bump.
+
+*pythia-8.2.09-r1 (05 Jun 2015)
+
+  05 Jun 2015; Andrew Savchenko <bircoph@gentoo.org> +pythia-8.2.09-r1.ebuild,
+  +files/pythia8209-root-noninteractive.patch,
+  +files/pythia8209-run-tests.patch, metadata.xml:
+  Version bump. Add new deps. Fix tests, they can be run in parallel
+  now using standard emake. Imported from the science overlay.
+
+*pythia-8.1.86-r1 (27 May 2015)
+
+  27 May 2015; Andrew Savchenko <bircoph@gentoo.org> +pythia-8.1.86-r1.ebuild:
+  Install additional docs.
+
+  27 May 2015; Andrew Savchenko <bircoph@gentoo.org> -pythia-8.1.45.ebuild:
+  Remove old, fixes bug 478636.
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> pythia-8.1.86.ebuild:
+  Stable for x86, wrt bug #546256
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> pythia-8.1.86.ebuild:
+  Stable for amd64, wrt bug #546256
+
+  20 Apr 2015; Justin Lecher <jlec@gentoo.org> -pythia-6.4.24.ebuild,
+  -pythia-8.1.80.ebuild, -pythia-8.1.83.ebuild, -pythia-8.1.85.ebuild,
+  metadata.xml:
+  Drop old
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pythia-6.4.28.ebuild:
+  Stable for x86, wrt bug #546254
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pythia-6.4.28.ebuild:
+  Stable for amd64, wrt bug #546254
 
 *pythia-8.1.86 (02 Sep 2014)
 

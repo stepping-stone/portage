@@ -1,6 +1,27 @@
 # ChangeLog for net-mail/offlineimap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.98 2014/10/06 12:34:17 tomka Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.104 2015/08/03 17:26:50 radhermit Exp $
+
+  03 Aug 2015; Tim Harder <radhermit@gentoo.org> offlineimap-6.5.7.ebuild:
+  Fix man page building and installation (bug #556344).
+
+*offlineimap-6.5.7 (30 Jun 2015)
+
+  30 Jun 2015; Tim Harder <radhermit@gentoo.org> +offlineimap-6.5.7.ebuild:
+  Version bump (bug #549632).
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> offlineimap-6.5.6.ebuild:
+  Stable for ppc, wrt bug #535590
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> offlineimap-6.5.6.ebuild:
+  Stable for x86, wrt bug #535590
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> offlineimap-6.5.6.ebuild:
+  Stable for amd64, wrt bug #535590
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> offlineimap-6.5.5.ebuild,
+  offlineimap-6.5.6.ebuild:
+  Drop old Python implementations
 
   06 Oct 2014; Thomas Kahle <tomka@gentoo.org> metadata.xml:
   Remove me from metadata.xml

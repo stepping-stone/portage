@@ -1,6 +1,21 @@
 # ChangeLog for app-text/acroread
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.206 2014/12/16 13:25:37 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.210 2015/06/14 16:28:20 ulm Exp $
+
+  14 Jun 2015; Ulrich Müller <ulm@gentoo.org> acroread-9.5.5-r3.ebuild:
+  [QA] Remove emul-linux-x86-* from dependencies.
+
+  13 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -acroread-9.5.5-r2.ebuild:
+  Remove old.
+
+  08 Jun 2015; Pacho Ramos <pacho@gentoo.org> acroread-9.5.5-r3.ebuild:
+  amd64/x86 stable, bug #550590
+
+*acroread-9.5.5-r3 (09 May 2015)
+
+  09 May 2015; Pacho Ramos <pacho@gentoo.org> +acroread-9.5.5-r3.ebuild,
+  -acroread-9.5.5.ebuild:
+  Don't create bogus file (#412051), fix .desktop file (#476096 and #543592)
 
   16 Dec 2014; Pacho Ramos <pacho@gentoo.org> acroread-9.5.5-r2.ebuild:
   amd64/x86 stable, bug #528596

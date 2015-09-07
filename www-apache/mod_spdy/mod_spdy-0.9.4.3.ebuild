@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-0.9.4.3.ebuild,v 1.1 2014/06/06 02:32:39 vapier Exp $
+# $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+PYTHON_COMPAT=(  python2_7 )
 inherit apache-module eutils python-any-r1
 
 if [[ ${PV} == 9999 ]] ; then
-	ESVN_REPO_URI="http://mod-spdy.googlecode.com/svn/trunk/src"
+	ESVN_REPO_URI="https://mod-spdy.googlecode.com/svn/trunk/src"
 	ESVN_RESTRICT="export"
 	EGIT_REPO_URI="https://chromium.googlesource.com/chromium/tools/depot_tools.git"
 	EGIT_SOURCEDIR="${WORKDIR}/depot_tools"
@@ -19,7 +19,7 @@ else
 fi
 
 DESCRIPTION="Apache module for rewriting web pages to reduce latency and bandwidth"
-HOMEPAGE="http://code.google.com/p/mod-spdy"
+HOMEPAGE="https://code.google.com/p/mod-spdy/"
 
 LICENSE="Apache-2.0"
 SLOT="0"

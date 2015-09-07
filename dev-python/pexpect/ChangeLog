@@ -1,6 +1,20 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.87 2015/01/31 07:02:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.91 2015/06/07 15:14:31 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  28 May 2015; Jack Morgan <jmorgan@gentoo.org> pexpect-3.0.ebuild:
+  sparc stable wrt bug #506042
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pexpect-2.4-r1.ebuild,
+  pexpect-3.0.ebuild, pexpect-3.1.ebuild, pexpect-3.2.ebuild,
+  pexpect-3.3.ebuild:
+  Drop old Python implementations
+
+  07 Mar 2015; Mike Frysinger <vapier@gentoo.org> pexpect-3.3.ebuild:
+  Mark arm64/s390/sh stable.
 
   31 Jan 2015; Mike Frysinger <vapier@gentoo.org> pexpect-3.3.ebuild:
   Add mips love.

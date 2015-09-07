@@ -1,6 +1,60 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.145 2014/12/22 13:12:45 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.155 2015/07/14 14:32:42 polynomial-c Exp $
+
+*xf86-video-virtualbox-5.0.0 (14 Jul 2015)
+*xf86-video-virtualbox-4.3.30 (14 Jul 2015)
+
+  14 Jul 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -xf86-video-virtualbox-4.3.18.ebuild, -xf86-video-virtualbox-4.3.26.ebuild,
+  +xf86-video-virtualbox-4.3.30.ebuild, +xf86-video-virtualbox-5.0.0.ebuild,
+  +files/xf86-video-virtualbox-5.0.0_beta3-configure_checks.patch,
+  +files/xf86-video-virtualbox-5-localconfig:
+  Version bump. Removed old.
+
+  14 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
+  xf86-video-virtualbox-4.3.28.ebuild:
+  x86 stable wrt bug #551866
+
+  12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
+  xf86-video-virtualbox-4.3.28.ebuild:
+  amd64 stable wrt bug 51866
+
+*xf86-video-virtualbox-4.3.28 (17 May 2015)
+
+  17 May 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -xf86-video-virtualbox-4.3.24.ebuild, +xf86-video-virtualbox-4.3.28.ebuild:
+  Version bump (bug #549466). Removed old.
+
+  01 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  xf86-video-virtualbox-4.3.26.ebuild:
+  Respect the user's CC/CXX/CFLAGS/CPPFLAGS settings.
+
+  01 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  xf86-video-virtualbox-4.3.26.ebuild:
+  Log the configure command we run.
+
+  01 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  xf86-video-virtualbox-4.3.26.ebuild:
+  Fixes by Maxim Kammerer and Tomoh K. to pass in the right kernel build dir
+  that the user set up #424816.
+
+  01 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  xf86-video-virtualbox-4.3.26.ebuild:
+  Add --target for cross-compiling #410553 by Liam McLoughlin.
+
+*xf86-video-virtualbox-4.3.26 (17 Mar 2015)
+
+  17 Mar 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -xf86-video-virtualbox-4.3.20.ebuild, +xf86-video-virtualbox-4.3.26.ebuild:
+  Version bump. Removed old.
+
+*xf86-video-virtualbox-4.3.24 (04 Mar 2015)
+
+  04 Mar 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -xf86-video-virtualbox-4.2.24.ebuild, -xf86-video-virtualbox-4.2.26.ebuild,
+  +xf86-video-virtualbox-4.3.24.ebuild:
+  Version bump (bug #540128). Removed old.
 
   22 Dec 2014; Lars Wendler <polynomial-c@gentoo.org>
   -xf86-video-virtualbox-4.3.16.ebuild, xf86-video-virtualbox-4.3.18.ebuild:

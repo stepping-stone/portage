@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.14.1-r3.ebuild,v 1.26 2014/03/14 09:11:35 vapier Exp $
+# $Id$
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
-HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
+HOMEPAGE="https://www.gnu.org/software/libc/libc.html"
 
 LICENSE="LGPL-2.1+ BSD HPND inner-net"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86"
@@ -107,7 +107,7 @@ SRC_URI=$(
 	}
 	gentoo_uris() {
 		local devspace="HTTP~vapier/dist/URI HTTP~azarah/glibc/URI"
-		devspace=${devspace//HTTP/http://dev.gentoo.org/}
+		devspace=${devspace//HTTP/https://dev.gentoo.org/}
 		echo mirror://gentoo/$1 ${devspace//URI/$1}
 	}
 

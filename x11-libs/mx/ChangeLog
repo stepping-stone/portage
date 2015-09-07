@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/mx
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/ChangeLog,v 1.21 2014/04/18 08:37:51 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/ChangeLog,v 1.24 2015/06/26 09:24:17 ago Exp $
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> mx-1.4.7-r2.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> mx-1.4.7-r2.ebuild:
+  amd64 stable wrt bug #551814
+
+*mx-1.4.7-r2 (06 Jun 2015)
+
+  06 Jun 2015; Pacho Ramos <pacho@gentoo.org> +mx-1.4.7-r2.ebuild:
+  Drop obsolete glade support (#551292)
 
   18 Apr 2014; Pacho Ramos <pacho@gentoo.org> -mx-1.4.7.ebuild:
   Drop old

@@ -1,6 +1,107 @@
 # ChangeLog for dev-python/m2crypto
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.81 2014/10/17 16:50:52 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.105 2015/07/30 17:55:01 jlec Exp $
+
+  30 Jul 2015; Justin Lecher <jlec@gentoo.org> -files/0.21.1-packaging.patch,
+  -files/m2crypto-0.21.1-cross-compile.patch,
+  -files/m2crypto-0.22.3-cross-compile.patch, -m2crypto-0.21.1-r2.ebuild,
+  -m2crypto-0.21.1-r3.ebuild, -m2crypto-0.22.3-r3.ebuild:
+  Drop old
+
+  16 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  ia64 stable wrt bug #545606
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  alpha stable wrt bug #545606
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  Stable for ppc, wrt bug #545606
+
+  09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  Stable for x86, wrt bug #545606
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  Stable for amd64, wrt bug #545606
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> m2crypto-0.21.1-r2.ebuild,
+  m2crypto-0.22.3-r3.ebuild:
+  Use eclass correctly
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  07 Jun 2015; Jeroen Roovers <jer@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  Stable for HPPA (bug #545606).
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  sparc stable wrt bug #543930
+
+  31 May 2015; Mikle Kolyada <zlogene@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  arm stable wrt bug #545606
+
+  30 May 2015; Jeroen Roovers <jer@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  Stable for PPC64 (bug #545606).
+
+  27 May 2015; Mike Gilbert <floppym@gentoo.org> files/0.21.1-packaging.patch,
+  files/0.22.3-packaging.patch:
+  Update patches.
+
+  26 May 2015; Mike Gilbert <floppym@gentoo.org> m2crypto-0.21.1-r3.ebuild,
+  m2crypto-0.22.3-r4.ebuild:
+  Remove misleading comment.
+
+  26 May 2015; Mike Gilbert <floppym@gentoo.org>
+  -files/0.21.1-0001-Fixed-invalid-variable-name.patch,
+  -files/0.21.1-0002-Fixing-memory-leaks-in-the-SWIG-wrapper.patch,
+  -files/0.21.1-0003-Use-swig-generated-python-loader.patch,
+  m2crypto-0.21.1-r3.ebuild:
+  Move patches to a tarball to avoid QA warning.
+
+  26 May 2015; Mike Gilbert <floppym@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  Whitespace.
+
+  26 May 2015; Mike Gilbert <floppym@gentoo.org> m2crypto-0.21.1-r3.ebuild:
+  Unpin swig.
+
+  25 May 2015; Mike Gilbert <floppym@gentoo.org> m2crypto-0.22.3-r3.ebuild,
+  m2crypto-0.22.3-r4.ebuild:
+  Update HOMEPAGE and cleanup src_prepare.
+
+*m2crypto-0.21.1-r3 (25 May 2015)
+
+  25 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +files/0.21.1-0001-Fixed-invalid-variable-name.patch,
+  +files/0.21.1-0002-Fixing-memory-leaks-in-the-SWIG-wrapper.patch,
+  +files/0.21.1-0003-Use-swig-generated-python-loader.patch,
+  +files/0.21.1-packaging.patch, +m2crypto-0.21.1-r3.ebuild:
+  Resolve issues with swig-3.0.5 in the older 0.21 fork as well.
+
+*m2crypto-0.22.3-r4 (25 May 2015)
+
+  25 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +files/0.22.3-Use-swig-generated-python-loader.patch,
+  +files/0.22.3-packaging.patch, +m2crypto-0.22.3-r4.ebuild:
+  Resolve issues with swig-3.0.5, bug 538920.
+
+  15 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/m2crypto-0.21.1-cross-compile.patch,
+  +files/m2crypto-0.22.3-cross-compile.patch, m2crypto-0.21.1-r2.ebuild,
+  m2crypto-0.22.3-r3.ebuild:
+  Fix for cross-compiling from Chromium OS.
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> m2crypto-0.21.1-r2.ebuild,
+  m2crypto-0.22.3-r3.ebuild:
+  Drop old Python implementations
+
+*m2crypto-0.22.3-r3 (14 Mar 2015)
+
+  14 Mar 2015; Michał Górny <mgorny@gentoo.org> +m2crypto-0.22.3-r3.ebuild,
+  -m2crypto-0.22.3-r2.ebuild, m2crypto-0.21.1-r2.ebuild:
+  Require swig < 3.0.5 as a workaround for bug #538920 (broken constants in
+  modules).
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> m2crypto-0.22.3-r2.ebuild:
+  add arm64 support, tested on A53 board
 
 *m2crypto-0.22.3-r2 (17 Oct 2014)
 

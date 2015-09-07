@@ -1,6 +1,59 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.137 2015/02/18 19:29:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.152 2015/08/02 08:55:08 pacho Exp $
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> boost-build-1.56.0.ebuild:
+  sparc stable wrt bug #554712
+
+  30 Jul 2015; Markus Meier <maekke@gentoo.org> boost-build-1.56.0.ebuild:
+  arm stable, bug #554712
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> boost-build-1.56.0.ebuild:
+  ppc stable wrt bug #554712
+
+  17 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> boost-build-1.56.0.ebuild:
+  ia64 syable wrt bug #554712
+
+  17 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  boost-build-1.56.0.ebuild:
+  Stable on alpha, bug 554712
+
+  17 Jul 2015; Jeroen Roovers <jer@gentoo.org> boost-build-1.56.0.ebuild:
+  Stable for HPPA PPC64 (bug #554712).
+
+  15 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> boost-build-1.56.0.ebuild:
+  x86 stable wrt bug #554712
+
+  13 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> boost-build-1.56.0.ebuild:
+  amd64 stable wrt bug #554712
+
+*boost-build-1.58.0 (13 Jul 2015)
+
+  13 Jul 2015; Sergey Popov <pinkbyte@gentoo.org> +boost-build-1.58.0.ebuild:
+  Version bump, wrt bug #549138
+
+  16 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> boost-build-1.55.0.ebuild:
+  sparc stable wrt bug #525286
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> boost-build-1.55.0.ebuild:
+  Stable for ia64, wrt bug #525286
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> boost-build-1.55.0.ebuild:
+  Stable for alpha, wrt bug #525286
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> boost-build-1.55.0-r1.ebuild,
+  boost-build-1.55.0.ebuild, boost-build-1.56.0.ebuild,
+  boost-build-1.57.0.ebuild:
+  Expand arm64 keywords.
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> boost-build-1.56.0.ebuild:
+  add arm64 support, tested on A53 board
+
+  27 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> boost-build-1.55.0.ebuild,
+  boost-build-1.55.0-r1.ebuild, boost-build-1.56.0.ebuild,
+  boost-build-1.57.0.ebuild, +files/boost-build-1.55.0-ppc-aix.patch:
+  Fix building on Gentoo Prefix on AIX, wrt bug #515102. Thanks to Michael
+  Haubenwallner
 
 *boost-build-1.57.0 (18 Feb 2015)
 

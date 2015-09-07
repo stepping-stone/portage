@@ -1,6 +1,61 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.68 2015/02/03 06:37:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.83 2015/08/07 04:45:11 graaff Exp $
+
+*ruby_parser-3.7.1 (07 Aug 2015)
+
+  07 Aug 2015; Hans de Graaff <graaff@gentoo.org> +ruby_parser-3.7.1.ebuild:
+  Version bump.
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> ruby_parser-3.6.6.ebuild:
+  Stable for sparc, wrt bug #552244
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> ruby_parser-3.6.6.ebuild:
+  ppc stable wrt bug #552244
+
+  20 Jul 2015; Jeroen Roovers <jer@gentoo.org> ruby_parser-3.6.6.ebuild:
+  Stable for HPPA (bug #552244).
+
+  17 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> ruby_parser-3.6.6.ebuild:
+  ia64 stable wrt bug #552244
+
+  16 Jul 2015; Tobias Klausmann <klausman@gentoo.org> ruby_parser-3.6.6.ebuild:
+  Stable on alpha, bug 552244
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> ruby_parser-3.6.6.ebuild:
+  Stable for x86, wrt bug #552244
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> ruby_parser-3.6.6.ebuild:
+  Stable for amd64, wrt bug #552244
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> ruby_parser-3.6.6.ebuild:
+  Create stable candidate.
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> -ruby_parser-3.6.4.ebuild,
+  -ruby_parser-3.6.5.ebuild:
+  Cleanup.
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*ruby_parser-3.7.0 (07 Jun 2015)
+
+  07 Jun 2015; Hans de Graaff <graaff@gentoo.org> +ruby_parser-3.7.0.ebuild:
+  Version bump.
+
+*ruby_parser-3.6.6 (16 Apr 2015)
+
+  16 Apr 2015; Hans de Graaff <graaff@gentoo.org> +ruby_parser-3.6.6.ebuild:
+  Version bump.
+
+*ruby_parser-3.6.5 (19 Mar 2015)
+
+  19 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +ruby_parser-3.6.5.ebuild,
+  -ruby_parser-3.6.3.ebuild:
+  Version bump. Remove old.
+
+  19 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -ruby_parser-2.3.1-r1.ebuild:
+  Remove masked slot 0
 
   03 Feb 2015; Hans de Graaff <graaff@gentoo.org> ruby_parser-3.6.4.ebuild:
   Add ruby22.

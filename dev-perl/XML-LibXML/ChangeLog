@@ -1,6 +1,22 @@
 # ChangeLog for dev-perl/XML-LibXML
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.159 2014/10/26 15:53:58 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.163 2015/06/04 13:18:51 zlogene Exp $
+
+  04 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> -XML-LibXML-2.1.400-r1.ebuild,
+  XML-LibXML-2.12.100.ebuild:
+  Stable for all (security bug #548032)
+
+*XML-LibXML-2.12.100 (04 Jun 2015)
+
+  04 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +XML-LibXML-2.12.100.ebuild:
+  Version bump. Fix security bug 548032.
+
+  05 Apr 2015; Mike Frysinger <vapier@gentoo.org> XML-LibXML-2.1.400-r1.ebuild:
+  Mark arm64/s390/sh stable.
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> XML-LibXML-2.1.400-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   26 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -XML-LibXML-1.900.0.ebuild:

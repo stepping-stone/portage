@@ -1,6 +1,33 @@
 # ChangeLog for dev-ruby/temple
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/ChangeLog,v 1.24 2015/01/16 05:00:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/ChangeLog,v 1.31 2015/08/06 05:26:45 graaff Exp $
+
+  06 Aug 2015; Hans de Graaff <graaff@gentoo.org> temple-0.6.10.ebuild,
+  temple-0.7.6.ebuild:
+  Version bump.
+
+  06 Aug 2015; Hans de Graaff <graaff@gentoo.org> -temple-0.6.8.ebuild,
+  -temple-0.7.5.ebuild:
+  Cleanup.
+
+*temple-0.6.10 (09 Jun 2015)
+
+  09 Jun 2015; Hans de Graaff <graaff@gentoo.org> +temple-0.6.10.ebuild:
+  Version bump.
+
+  09 Jun 2015; Hans de Graaff <graaff@gentoo.org> temple-0.7.5.ebuild:
+  Update SLOT.
+
+  09 Jun 2015; Hans de Graaff <graaff@gentoo.org> -temple-0.7.4.ebuild:
+  Cleanup.
+
+*temple-0.7.6 (09 Jun 2015)
+
+  09 Jun 2015; Hans de Graaff <graaff@gentoo.org> +temple-0.7.6.ebuild:
+  Version bump. Use slot 0.7 to match dev-ruby/slim expectations.
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   16 Jan 2015; Manuel Rüger <mrueg@gentoo.org> temple-0.7.5.ebuild:
   Add missed dep on dev-ruby/erubis.

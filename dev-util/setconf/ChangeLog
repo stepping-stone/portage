@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/setconf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/ChangeLog,v 1.8 2014/12/08 11:41:55 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/ChangeLog,v 1.10 2015/07/11 00:47:28 idella4 Exp $
+
+*setconf-0.6.7 (11 Jul 2015)
+
+  11 Jul 2015; Ian Delaney <idella4@gentoo.org> +setconf-0.6.7.ebuild,
+  -setconf-0.6.4.ebuild:
+  bump one rm one
+
+*setconf-0.6.6 (17 Mar 2015)
+
+  17 Mar 2015; Patrick Lauer <patrick@gentoo.org> +setconf-0.6.6.ebuild:
+  Bump
 
 *setconf-0.6.4 (08 Dec 2014)
 

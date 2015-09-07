@@ -1,6 +1,39 @@
 # ChangeLog for net-misc/owncloud-client
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/ChangeLog,v 1.21 2014/12/18 15:58:54 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/ChangeLog,v 1.26 2015/08/03 07:58:27 voyageur Exp $
+
+*owncloud-client-1.8.4 (03 Aug 2015)
+
+  03 Aug 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  -owncloud-client-1.7.0.ebuild, -owncloud-client-1.7.1.ebuild,
+  +owncloud-client-1.8.4.ebuild:
+  Version bump, drop some old versions
+
+  26 Jun 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  owncloud-client-1.8.3.ebuild:
+  New dependency on dev-qt/qtconcurrent:5, thanks Felix Leif Keppmann
+  <felix.leif@keppmann.de> in bug #553336
+
+*owncloud-client-1.8.3 (26 Jun 2015)
+
+  26 Jun 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +owncloud-client-1.8.3.ebuild:
+  Version bump (1.8.2 was retracted upstream), restore ChangeLog
+
+*owncloud-client-1.8.1 (07 May 2015)
+
+  07 May 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  -owncloud-client-1.6.1.ebuild, -owncloud-client-1.6.2.ebuild,
+  -owncloud-client-1.6.3.ebuild, -owncloud-client-1.6.4.ebuild,
+  +owncloud-client-1.8.1.ebuild,
+  -files/owncloud-client-1.5.3-man-page-location-fix.patch:
+  Version bump, drop 1.6.x versions
+
+*owncloud-client-1.8.0 (17 Mar 2015)
+
+  17 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +owncloud-client-1.8.0.ebuild:
+  Version bump, default to qt5 as recommended upstream
 
 *owncloud-client-1.7.1 (18 Dec 2014)
 

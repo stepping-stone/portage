@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/mate-menus-1.8.0.ebuild,v 1.4 2014/07/02 09:46:44 pacho Exp $
+# $Id$
 
 EAPI="5"
 
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit gnome2 python-r1
 
@@ -34,7 +34,7 @@ RDEPEND=">=dev-libs/glib-2.15.2:2
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40:*
-	>=mate-base/mate-common-1.6:0
+	>=mate-base/mate-common-1.8:0
 	sys-devel/gettext:*
 	virtual/pkgconfig:*"
 
@@ -51,7 +51,7 @@ src_configure() {
 		$(use_enable python) \
 		$(use_enable introspection)"
 
-	# Do NOT compile with --disable-debug/--enable-debug=no as it disables API 
+	# Do NOT compile with --disable-debug/--enable-debug=no as it disables API
 	# usage checks.
 	if ! use debug ; then
 		G2CONF="${G2CONF} --enable-debug=minimum"

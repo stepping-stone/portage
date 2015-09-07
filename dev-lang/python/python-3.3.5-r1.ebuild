@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.5-r1.ebuild,v 1.10 2014/09/10 08:33:04 vapier Exp $
+# $Id$
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -14,7 +14,7 @@ PATCHSET_VERSION="${PV}-0"
 DESCRIPTION="An interpreted, interactive, object-oriented programming language"
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.xz
-	http://dev.gentoo.org/~floppym/python/python-gentoo-patches-${PATCHSET_VERSION}.tar.xz
+	https://dev.gentoo.org/~floppym/python/python-gentoo-patches-${PATCHSET_VERSION}.tar.xz
 	mirror://gentoo/python-gentoo-patches-${PATCHSET_VERSION}.tar.xz"
 
 LICENSE="PSF-2"
@@ -54,7 +54,7 @@ DEPEND="${RDEPEND}
 	!sys-devel/gcc[libffi]"
 RDEPEND+=" !build? ( app-misc/mime-types )
 	doc? ( dev-python/python-docs:${SLOT} )"
-PDEPEND="app-admin/eselect-python
+PDEPEND="app-eselect/eselect-python
 	app-admin/python-updater"
 
 S="${WORKDIR}/${MY_P}"
@@ -71,6 +71,7 @@ src_prepare() {
 	fi
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+	epatch "${FILESDIR}/${PN}-3.3.5-ncurses-pkg-config.patch"
 
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
 		Lib/distutils/command/install.py \

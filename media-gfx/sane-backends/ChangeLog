@@ -1,6 +1,44 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.269 2015/01/27 23:51:57 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.277 2015/08/06 05:47:07 vapier Exp $
+
+  06 Aug 2015; Mike Frysinger <vapier@gentoo.org>
+  sane-backends-1.0.25_pre20150628.ebuild:
+  Add USE=nls to control translations, and clean up $LINGUAS processing.
+
+  30 Jul 2015; Mike Frysinger <vapier@gentoo.org>
+  sane-backends-1.0.25_pre20150628.ebuild:
+  Move libsane.usermap hacking after we generate the files when cross-compiling
+
+  30 Jul 2015; Mike Frysinger <vapier@gentoo.org>
+  sane-backends-1.0.25_pre20150628.ebuild:
+  Add arm64/m68k/mips/s390/sh love.
+
+*sane-backends-1.0.25_pre20150628 (08 Jul 2015)
+
+  08 Jul 2015; Mike Frysinger <vapier@gentoo.org>
+  +sane-backends-1.0.25_pre20150628.ebuild:
+  Add a git snapshot #545130 by hfk22.
+
+  08 Jul 2015; Mike Frysinger <vapier@gentoo.org>
+  files/sane-backends-1.0.24-automagic_systemd.patch,
+  files/sane-backends-1.0.24-cross-compile.patch,
+  files/sane-backends-1.0.24-kodakaio_avahi.patch,
+  files/sane-backends-1.0.24-systemd_pkgconfig.patch,
+  files/sane-backends-1.0.24-unused-cups.patch:
+  Document provenance of the various patches we use.
+
+  15 May 2015; Mike Frysinger <vapier@gentoo.org>
+  files/sane-backends-1.0.24-cross-compile.patch:
+  document the patch
+
+  15 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/sane-backends-1.0.24-cross-compile.patch,
+  sane-backends-1.0.24-r5.ebuild:
+  Fix from Chromium OS for cross-compiling.
+
+  12 Apr 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to bug #353756
 
   27 Jan 2015; Christopher Brannon <teiresias@gentoo.org>
   -sane-backends-1.0.23.ebuild, -sane-backends-1.0.23-r1.ebuild,

@@ -1,6 +1,44 @@
 # ChangeLog for sys-apps/gentoo-functions
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.26 2015/01/05 09:49:11 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.36 2015/08/08 14:13:12 maekke Exp $
+
+  08 Aug 2015; Markus Meier <maekke@gentoo.org> gentoo-functions-0.10.ebuild:
+  arm stable, bug #556154
+
+  04 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> gentoo-functions-0.10.ebuild:
+  ia64 stable wrt bug #556154
+
+  30 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  gentoo-functions-0.10.ebuild:
+  Stable on alpha, bug 556154
+
+  29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> gentoo-functions-0.10.ebuild:
+  x86 stable wrt bug #556154
+
+  29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> gentoo-functions-0.10.ebuild:
+  amd64 stable wrt bug #556154
+
+  26 May 2015; Mike Frysinger <vapier@gentoo.org> gentoo-functions-0.10.ebuild,
+  gentoo-functions-9999.ebuild:
+  Build with LFS flags #471102.
+
+*gentoo-functions-0.10 (12 May 2015)
+
+  12 May 2015; William Hubbs <williamh@gentoo.org>
+  +gentoo-functions-0.10.ebuild, gentoo-functions-9999.ebuild:
+  version bump
+
+  18 Mar 2015; Paul Varner <fuzzyray@gentoo.org> gentoo-functions-0.9.ebuild,
+  gentoo-functions-9999.ebuild:
+  Fix ebuilds to install files to prefix filesystem. (Bug 543710)
+
+*gentoo-functions-0.9 (17 Mar 2015)
+
+  17 Mar 2015; William Hubbs <williamh@gentoo.org> +gentoo-functions-0.9.ebuild:
+  version bump
+
+  28 Feb 2015; Fabian Groffen <grobian@gentoo.org> gentoo-functions-0.8.ebuild:
+  Fix compilation/installation on at least Solaris
 
   05 Jan 2015; Benda Xu <heroxbd@gentoo.org> gentoo-functions-0.8.ebuild:
   Prefix support, bug 533980.

@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.91 2015/02/01 11:58:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.93 2015/07/22 22:48:12 mrueg Exp $
+
+  22 Jul 2015; Manuel Rüger <mrueg@gentoo.org> -bochs-2.4.1.ebuild,
+  -bochs-2.4.5.ebuild:
+  Remove old.
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   01 Feb 2015; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Localize and update USE=3dnow,avx for the flags refer to emulated CPU, not the

@@ -1,6 +1,35 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.488 2015/01/26 17:17:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.494 2015/06/18 05:48:43 patrick Exp $
+
+*eix-0.30.11 (18 Jun 2015)
+
+  18 Jun 2015; Patrick Lauer <patrick@gentoo.org> +eix-0.30.11.ebuild:
+  Bump
+
+  07 Jun 2015; Sebastian Pipping <sping@gentoo.org> eix-0.30.4.ebuild,
+  eix-0.30.7.ebuild, eix-0.30.8.ebuild, eix-0.30.10.ebuild:
+  Move HOMEPAGE from http:// to https:// as suggested by upstream
+
+*eix-0.30.10 (07 Jun 2015)
+
+  07 Jun 2015; Sebastian Pipping <sping@gentoo.org> +eix-0.30.10.ebuild:
+  Dare to copy-bump myself, looked trivial
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*eix-0.30.8 (13 Apr 2015)
+
+  13 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +eix-0.30.8.ebuild:
+  version bump; minor fixes, and treatment of /etc/portage/package.* has become
+  more compatible to portage (concerning sorting); also, users of eix-remote
+  will need to upgrade to avoid strange errors and incomplete data from zugaina.
+
+*eix-0.30.7 (16 Mar 2015)
+
+  16 Mar 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +eix-0.30.7.ebuild:
+  version bump
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Drop unused USE description.

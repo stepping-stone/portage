@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.4.2-r1.ebuild,v 1.6 2015/02/14 14:38:44 ago Exp $
+# $Id$
 
 EAPI=5
 
@@ -12,21 +12,17 @@ KDE_MINIMAL="4.13.1"
 inherit kde4-base
 
 DESCRIPTION="A browser based on qtwebkit"
-HOMEPAGE="http://rekonq.kde.org/"
+HOMEPAGE="https://rekonq.kde.org/"
 [[ ${PV} != *9999* ]] && SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="4"
 KEYWORDS="amd64 x86"
-IUSE="debug kde nepomuk opera"
+IUSE="debug kde opera"
 
 DEPEND="
-	$(add_kdebase_dep kdelibs 'nepomuk?')
+	$(add_kdebase_dep kdelibs)
 	kde? ( $(add_kdebase_dep kactivities) )
-	nepomuk? (
-		$(add_kdebase_dep nepomuk-core)
-		dev-libs/soprano
-	)
 	opera? (
 		app-crypt/qca:2[qt4(+)]
 		dev-libs/qoauth
@@ -34,16 +30,17 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
-	$(add_kdebase_dep kdebase-kioslaves)
-	$(add_kdebase_dep keditbookmarks)
+	$(add_kdeapps_dep kdebase-kioslaves)
+	$(add_kdeapps_dep keditbookmarks)
 "
 
 src_configure() {
 	local mycmakeargs=(
+		-DCMAKE_DISABLE_FIND_PACKAGE_NepomukCore=ON
+		-DCMAKE_DISABLE_FIND_PACKAGE_Soprano=ON
 		$(cmake-utils_use_with kde KActivities)
 		$(cmake-utils_use_with opera QCA2)
 		$(cmake-utils_use_with opera QtOAuth)
-		$(cmake-utils_use_find_package nepomuk NepomukCore)
 	)
 
 	kde4-base_src_configure

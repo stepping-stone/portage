@@ -1,6 +1,42 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.295 2015/01/26 17:47:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.302 2015/06/26 09:24:28 ago Exp $
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> gnome-terminal-3.14.3.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> gnome-terminal-3.14.3.ebuild:
+  amd64 stable wrt bug #551814
+
+*gnome-terminal-3.16.2-r2 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-terminal-3.16.2-r2.ebuild,
+  +files/gnome-terminal-3.16.2-restore-dark.patch,
+  +files/gnome-terminal-3.16.2-restore-transparency.patch:
+  Version bump for Gnome 3.16.
+
+  19 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-terminal-3.14.2-r2.ebuild, gnome-terminal-3.14.3.ebuild:
+  Fix missing deps, misleading comments (see bug #549304).
+
+*gnome-terminal-3.14.3 (28 Mar 2015)
+
+  28 Mar 2015; Pacho Ramos <pacho@gentoo.org> +gnome-terminal-3.14.3.ebuild,
+  -files/gnome-terminal-3.12.0-fallback-title-1.patch,
+  -files/gnome-terminal-3.12.0-fallback-title-2.patch,
+  -files/gnome-terminal-3.12.0-remove-set-title-feature-0.patch,
+  -files/gnome-terminal-3.12.0-remove-set-title-feature-1.patch,
+  -files/gnome-terminal-3.12.0-remove-set-title-feature-2.patch,
+  -files/gnome-terminal-3.12.0-remove-set-title-feature-3.patch,
+  -gnome-terminal-3.12.3.ebuild:
+  Version bump, drop old
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.14.2-r2.ebuild:
+  x86 stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.14.2-r2.ebuild:
+  amd64 stable, bug 534012
 
 *gnome-terminal-3.14.2-r2 (26 Jan 2015)
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.4.ebuild,v 1.1 2015/02/04 17:49:56 perfinion Exp $
+# $Id$
 
 EAPI="5"
-PYTHON_COMPAT=( python2_7 python3_2 python3_3 python3_4 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 USE_RUBY="ruby19 ruby20"
 
 # No, I am not calling ruby-ng
@@ -18,7 +18,7 @@ SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/rel
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="python ruby static-libs ruby_targets_ruby19 ruby_targets_ruby20"
 
@@ -67,6 +67,8 @@ multilib_src_compile() {
 				PYTHONLIBDIR="${PYTHON_LIBPATH}" \
 				PYPREFIX="${EPYTHON##*/}" \
 				LDFLAGS="-fPIC ${LDFLAGS} -lpthread" \
+				LIBDIR="\$(PREFIX)/$(get_libdir)" \
+				SHLIBDIR="\$(DESTDIR)/$(get_libdir)" \
 				pywrap
 		}
 		python_foreach_impl building
@@ -82,6 +84,8 @@ multilib_src_compile() {
 				RUBY=${1} \
 				RUBYINSTALL=$(${1} -e 'print RbConfig::CONFIG["vendorarchdir"]') \
 				LDFLAGS="-fPIC ${LDFLAGS} -lpthread" \
+				LIBDIR="\$(PREFIX)/$(get_libdir)" \
+				SHLIBDIR="\$(DESTDIR)/$(get_libdir)" \
 				rubywrap
 		}
 		for RUBYTARGET in ${USE_RUBY}; do

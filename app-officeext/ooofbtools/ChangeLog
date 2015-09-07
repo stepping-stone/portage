@@ -1,6 +1,48 @@
 # ChangeLog for app-officeext/ooofbtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ChangeLog,v 1.16 2015/02/08 19:07:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ChangeLog,v 1.26 2015/07/01 10:45:17 pinkbyte Exp $
+
+*ooofbtools-2.36 (01 Jul 2015)
+
+  01 Jul 2015; Sergey Popov <pinkbyte@gentoo.org> +ooofbtools-2.36.ebuild:
+  Version bump, wrt bug #552258
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+*ooofbtools-2.35 (20 May 2015)
+
+  20 May 2015; Sergey Popov <pinkbyte@gentoo.org> +ooofbtools-2.35.ebuild:
+  Version bump, wrt bug #549158, thanks to Sergey Starikoff <Ikonta AT
+  yandex.ru>
+
+  13 May 2015; Sergey Popov <pinkbyte@gentoo.org> -ooofbtools-2.30.ebuild,
+  -ooofbtools-2.31.ebuild:
+  Drop old
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> ooofbtools-2.34.ebuild:
+  Stable for x86, wrt bug #548662
+
+  08 May 2015; Agostino Sarubbo <ago@gentoo.org> ooofbtools-2.34.ebuild:
+  Stable for amd64, wrt bug #548662
+
+*ooofbtools-2.34 (01 Apr 2015)
+
+  01 Apr 2015; Alexander Vershilov <qnikst@gentoo.org> +ooofbtools-2.34.ebuild,
+  -ooofbtools-2.33.ebuild:
+  bump up to 2.34
+
+*ooofbtools-2.33 (24 Mar 2015)
+
+  24 Mar 2015; Alexander Vershilov <qnikst@gentoo.org> +ooofbtools-2.33.ebuild,
+  -ooofbtools-2.32.ebuild:
+  app-officeext/ooofbtools: bump up to 2.33
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ooofbtools-2.31.ebuild:
+  Stable for x86, wrt bug #540268
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ooofbtools-2.31.ebuild:
+  Stable for amd64, wrt bug #540268
 
 *ooofbtools-2.32 (08 Feb 2015)
 

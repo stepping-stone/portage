@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.9 2015/01/31 19:48:12 grobian Exp $
+# $Id$
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
 	clang? ( http://llvm.org/releases/${PV}/compiler-rt-3.4.src.tar.gz
 		http://llvm.org/releases/${PV}/cfe-${PV}.src.tar.gz
 		http://llvm.org/releases/${PV}/clang-tools-extra-3.4.src.tar.gz )
-	!doc? ( http://dev.gentoo.org/~mgorny/dist/${PN}-3.4-manpages.tar.bz2 )"
+	!doc? ( https://dev.gentoo.org/~mgorny/dist/${PN}-3.4-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
 SLOT="0/3.4"
@@ -39,7 +39,7 @@ COMMON_DEPEND="
 	)
 	gold? ( >=sys-devel/binutils-2.22:*[cxx] )
 	libffi? ( >=virtual/libffi-3.0.13-r1:0=[${MULTILIB_USEDEP}] )
-	ncurses? ( >=sys-libs/ncurses-5.9-r3:5=[${MULTILIB_USEDEP}] )
+	ncurses? ( >=sys-libs/ncurses-5.9-r3:0=[${MULTILIB_USEDEP}] )
 	ocaml? ( dev-lang/ocaml:0= )
 	udis86? ( >=dev-libs/udis86-1.7-r2:0=[pic(+),${MULTILIB_USEDEP}] )"
 DEPEND="${COMMON_DEPEND}
@@ -47,7 +47,7 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-devel/make-3.81
 	>=sys-devel/flex-2.5.4
 	>=sys-devel/bison-1.875d
-	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1
+	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 >=sys-devel/llvm-3.3
 		( >=sys-freebsd/freebsd-lib-9.1-r10 sys-libs/libcxx )
 	)
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-5.1 )
@@ -56,7 +56,7 @@ DEPEND="${COMMON_DEPEND}
 	libffi? ( virtual/pkgconfig )
 	${PYTHON_DEPS}"
 RDEPEND="${COMMON_DEPEND}
-	clang? ( !<=sys-devel/clang-3.4-r99
+	clang? ( !<=sys-devel/clang-${PV}-r99
 		!>=sys-devel/clang-9999 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
@@ -98,7 +98,7 @@ pkg_pretend() {
 		ewarn
 
 		(( build_size *= 14 ))
-	elif is-flagq -g || is-flagq -ggdb; then
+	elif is-flagq '-g?(gdb)?([1-9])'; then
 		ewarn "The C++ compiler -g option is known to increase the size of the package"
 		ewarn "considerably. If you run out of space, please consider removing it."
 		ewarn

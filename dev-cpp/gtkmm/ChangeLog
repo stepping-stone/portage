@@ -1,6 +1,69 @@
 # ChangeLog for dev-cpp/gtkmm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.290 2014/12/21 12:21:54 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.303 2015/07/30 13:21:28 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> gtkmm-2.24.4-r1.ebuild,
+  gtkmm-3.14.0-r1.ebuild:
+  Stable for sparc, wrt bug #551814
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org> gtkmm-2.24.4-r1.ebuild,
+  gtkmm-3.14.0-r1.ebuild:
+  Stable on alpha, bug 551814
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org> gtkmm-3.14.0-r1.ebuild:
+  Stable on alpha, bug 551814
+
+  17 Jul 2015; Agostino Sarubbo <ago@gentoo.org> gtkmm-2.24.4-r1.ebuild,
+  gtkmm-3.14.0-r1.ebuild:
+  Stable for ia64, wrt bug #551814
+
+*gtkmm-2.24.4-r2 (07 Jul 2015)
+
+  07 Jul 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/gtkmm-2.24.4-missing-includes.patch,
+  +files/gtkmm-2.24.4-newer-glibmm.patch, +files/gtkmm-2.24.4-papersize.patch,
+  +gtkmm-2.24.4-r2.ebuild:
+  Apply some upstream fixes to old slot
+
+*gtkmm-3.16.0 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> -gtkmm-3.14.0.ebuild,
+  +gtkmm-3.16.0.ebuild:
+  Version bump for Gnome 3.16. Clean up old revision.
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> gtkmm-2.24.4-r1.ebuild:
+  arm stable, bug #534012
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> gtkmm-3.14.0-r1.ebuild:
+  arm stable, bug #534012
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> gtkmm-2.24.4-r1.ebuild,
+  gtkmm-3.14.0-r1.ebuild:
+  Stable for HPPA (bug #534012).
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtkmm-2.24.4-r1.ebuild,
+  gtkmm-3.14.0-r1.ebuild:
+  x86 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtkmm-2.24.4-r1.ebuild,
+  gtkmm-3.14.0-r1.ebuild:
+  ppc64 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtkmm-2.24.4-r1.ebuild,
+  gtkmm-3.14.0-r1.ebuild:
+  ppc stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtkmm-2.24.4-r1.ebuild,
+  gtkmm-3.14.0-r1.ebuild:
+  amd64 stable, bug 534012
+
+*gtkmm-3.14.0-r1 (06 Mar 2015)
+*gtkmm-2.24.4-r1 (06 Mar 2015)
+
+  06 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtkmm-2.24.4-r1.ebuild, gtkmm-3.12.0.ebuild, gtkmm-3.14.0.ebuild,
+  +gtkmm-3.14.0-r1.ebuild:
+  Add multilib support. Update license.
 
 *gtkmm-3.14.0 (21 Dec 2014)
 

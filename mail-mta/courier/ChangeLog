@@ -1,6 +1,51 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.181 2015/01/15 08:46:07 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.194 2015/07/31 10:27:14 zlogene Exp $
+
+  31 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> courier-0.75.0.ebuild:
+  ia64 stable wrt bug #553660
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> courier-0.75.0.ebuild:
+  Stable for sparc, wrt bug #553660
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> courier-0.75.0.ebuild:
+  Stable for ppc, wrt bug #553660
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> courier-0.75.0.ebuild:
+  Stable for alpha, wrt bug #553660
+
+  02 Jul 2015; Jeroen Roovers <jer@gentoo.org> courier-0.75.0.ebuild:
+  Stable for HPPA (bug #553660).
+
+  01 Jul 2015; Agostino Sarubbo <ago@gentoo.org> courier-0.75.0.ebuild:
+  Stable for x86, wrt bug #553660
+
+  01 Jul 2015; Agostino Sarubbo <ago@gentoo.org> courier-0.75.0.ebuild:
+  Stable for amd64, wrt bug #553660
+
+*courier-0.75.0 (29 Jun 2015)
+
+  29 Jun 2015; Hanno Boeck <hanno@gentoo.org> +courier-0.75.0.ebuild:
+  Bump, port to EAPI 5. Fixes potential security issues.
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> courier-0.74.1-r1.ebuild:
+  ppc stable wrt bug #548176
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> courier-0.74.1-r1.ebuild:
+  Stable for amd64, wrt bug #548176
+
+  03 May 2015; Jeroen Roovers <jer@gentoo.org> courier-0.74.1-r1.ebuild:
+  Stable for HPPA (bug #548176).
+
+  24 Mar 2015; Markus Meier <maekke@gentoo.org> courier-0.74.1-r1.ebuild:
+  add ~arm, bug #532520
+
+*courier-0.74.1-r1 (21 Feb 2015)
+
+  21 Feb 2015; <hanno@gentoo.org> +courier-0.74.1-r1.ebuild,
+  +files/courier-0.74.1-fix-implicit-declaration-warning.diff,
+  +files/courier-0.74.1-fix-testsuite.diff:
+  Fix compiler warning, testsuite, dodoc issue and /var/run.
 
   15 Jan 2015; Andreas Schuerch <nativemad@gentoo.org> courier-0.74.0.ebuild,
   courier-0.74.1.ebuild:

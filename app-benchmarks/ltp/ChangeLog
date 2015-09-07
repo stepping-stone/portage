@@ -1,6 +1,19 @@
 # ChangeLog for app-benchmarks/ltp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.27 2014/09/06 08:19:33 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.30 2015/06/13 18:55:44 hwoarang Exp $
+
+*ltp-20150420 (13 Jun 2015)
+
+  13 Jun 2015; Markos Chandras <hwoarang@gentoo.org> +ltp-20150420.ebuild:
+  version bump
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+*ltp-20150119 (03 Mar 2015)
+
+  03 Mar 2015; Markos Chandras <hwoarang@gentoo.org> +ltp-20150119.ebuild:
+  Version bump
 
   06 Sep 2014; Markos Chandras <hwoarang@gentoo.org> ltp-20140828.ebuild:
   Fix dodoc. Bug #522156

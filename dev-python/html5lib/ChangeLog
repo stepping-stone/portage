@@ -1,6 +1,48 @@
 # ChangeLog for dev-python/html5lib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.32 2015/02/16 16:32:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.45 2015/08/06 15:59:40 klausman Exp $
+
+  06 Aug 2015; Tobias Klausmann <klausman@gentoo.org> html5lib-0.99999.ebuild:
+  Stable on alpha, bug 556820
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> html5lib-0.99999.ebuild:
+  Stable for amd64, wrt bug #556820
+
+*html5lib-0.999999 (06 Aug 2015)
+
+  06 Aug 2015; Ian Delaney <idella4@gentoo.org> +html5lib-0.999999.ebuild:
+  bump
+
+  01 Aug 2015; Ian Delaney <idella4@gentoo.org> html5lib-0.99999.ebuild:
+  add pypy3 support
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> html5lib-0.999.ebuild:
+  arm stable, bug #540290
+
+*html5lib-0.99999 (27 May 2015)
+
+  27 May 2015; Justin Lecher <jlec@gentoo.org> +html5lib-0.99999.ebuild,
+  metadata.xml:
+  Version Bump
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> html5lib-0.999.ebuild:
+  Stable for alpha, wrt bug #540290
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> html5lib-0.999.ebuild:
+  Drop old Python implementations
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> html5lib-0.999.ebuild:
+  ppc stable, bug 540290
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> html5lib-0.999.ebuild:
+  ppc64 stable, bug 540290
+
+  19 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -html5lib-0.90.ebuild,
+  -html5lib-0.95-r1.ebuild, -html5lib-0.95.ebuild:
+  Remove old.
 
   16 Feb 2015; Pacho Ramos <pacho@gentoo.org> html5lib-0.999.ebuild:
   amd64/x86 stable, bug #530324

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.1_pre11.ebuild,v 1.1 2014/12/27 12:34:07 blueness Exp $
+# $Id$
 
 EAPI="5"
 
@@ -16,13 +16,13 @@ SRC_URI="http://www.tinc-vpn.org/packages/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~arm64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+lzo +ncurses +openssl gcrypt gui +readline uml vde +zlib"
 
-DEPEND="dev-libs/openssl
+DEPEND="dev-libs/openssl:=
 	lzo? ( dev-libs/lzo:2 )
 	ncurses? ( sys-libs/ncurses )
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline:= )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	vde? ( net-misc/vde )

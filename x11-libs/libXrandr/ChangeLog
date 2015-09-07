@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/libXrandr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.115 2014/06/18 21:10:00 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.117 2015/07/04 15:46:56 mrueg Exp $
+
+*libXrandr-1.5.0 (04 Jul 2015)
+
+  04 Jul 2015; Manuel Rüger <mrueg@gentoo.org> +libXrandr-1.5.0.ebuild:
+  Version bump. Fixes bug #553756.
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libXrandr-1.4.2.ebuild:
+  add arm64 support, tested on A53 board
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXrandr-1.4.2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

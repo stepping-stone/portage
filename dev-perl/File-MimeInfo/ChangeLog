@@ -1,6 +1,31 @@
 # ChangeLog for dev-perl/File-MimeInfo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.92 2015/01/09 15:09:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.98 2015/06/13 22:47:54 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  File-MimeInfo-0.210.0.ebuild, File-MimeInfo-0.260.0.ebuild,
+  File-MimeInfo-0.270.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  File-MimeInfo-0.270.0.ebuild:
+  Add back dependencies in RDEPEND and DEPEND. Fix bug 549888.
+
+*File-MimeInfo-0.270.0 (18 May 2015)
+
+  18 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -File-MimeInfo-0.170.0-r1.ebuild, +File-MimeInfo-0.270.0.ebuild:
+  Version bump
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> File-MimeInfo-0.210.0.ebuild:
+  Mark s390/sh stable.
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> File-MimeInfo-0.210.0.ebuild,
+  File-MimeInfo-0.260.0.ebuild:
+  Add arm64/m68k love.
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> File-MimeInfo-0.210.0.ebuild:
+  add arm64 support, tested on A53 board
 
   09 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> File-MimeInfo-0.210.0.ebuild:
   Stable for all wrt bug #535176

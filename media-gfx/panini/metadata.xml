@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>graphics</herd>
-	<maintainer>
-		<email>radhermit@gentoo.org</email>
-		<name>Tim Harder</name>
-	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">pvqt</remote-id>
+	</upstream>
 </pkgmetadata>

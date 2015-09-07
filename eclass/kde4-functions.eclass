@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.75 2015/02/11 04:29:06 patrick Exp $
+# $Id$
 
 # @ECLASS: kde4-functions.eclass
 # @MAINTAINER:
@@ -17,9 +17,9 @@ inherit versionator
 
 # @ECLASS-VARIABLE: EAPI
 # @DESCRIPTION:
-# Currently kde4 eclasses support EAPI 4 and 5.
+# Currently kde4 eclasses support EAPI 5.
 case ${EAPI} in
-	4|5) : ;;
+	5) : ;;
 	*) die "EAPI=${EAPI:-0} is not supported" ;;
 esac
 
@@ -292,10 +292,10 @@ add_kdeapps_dep() {
 		ver=${KDE_OVERRIDE_MINIMAL}
 	elif [[ ${KDEBASE} != kde-base ]]; then
 		ver=${KDE_MINIMAL}
-	# if building stable-live version depend just on the raw KDE version
-	# to allow merging packages against more stable basic stuff
-	elif [[ ${PV} == *.9999 ]]; then
-		ver=$(get_kde_version)
+	# if building kde-apps, live master or stable-live branch,
+	# use the final SC version since there are no further general releases.
+	elif [[ ${CATEGORY} == kde-apps || ${PV} == *9999 ]]; then
+		ver=4.14.3
 	else
 		ver=${PV}
 	fi
@@ -325,16 +325,15 @@ add_kdebase_dep() {
 		ver=${3}
 	elif [[ -n ${KDE_OVERRIDE_MINIMAL} ]]; then
 		ver=${KDE_OVERRIDE_MINIMAL}
-	elif [[ -n ${KDE_MINIMAL} ]]; then
+	elif [[ ${KDEBASE} != kde-base ]]; then
 		ver=${KDE_MINIMAL}
-	# if building live version depend on the final release since there will
-	# not be any more major development. this solves dep errors as not all
-	# packages have kde-base live versions now
-
-	# depend on the last sane released version where the normal >=${PV} dep
-	# is not possible
-	elif [[ ${CATEGORY} == kde-apps || ${PV} == *9999 ]]; then
+	# if building live master or kde-apps, use the final SC version
+	# since there are no further general releases.
+	elif [[ ${CATEGORY} == kde-apps || ${PV} == 9999 ]]; then
 		ver=4.14.3
+	# if building a live version branch (eg. 4.11.49.9999) use the major version
+	elif [[ ${PV} == *.9999 ]]; then
+		ver=$(get_kde_version)
 	else
 		ver=${PV}
 	fi

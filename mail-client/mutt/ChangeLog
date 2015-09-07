@@ -1,6 +1,61 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.274 2015/02/11 20:42:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.291 2015/08/04 05:35:01 vapier Exp $
+
+  04 Aug 2015; Mike Frysinger <vapier@gentoo.org> mutt-1.5.23-r7.ebuild:
+  Only show quickstart link on first install.
+
+  02 Aug 2015; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.23-r7.ebuild:
+  Stable for x86, wrt bug #556042
+
+  30 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> mutt-1.5.23-r7.ebuild:
+  ia64 stable wrt bug #556042
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.23-r7.ebuild:
+  Stable for sparc, wrt bug #556042
+
+  29 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> mutt-1.5.23-r7.ebuild:
+  amd64 stable wrt bug #556042
+
+  28 Jul 2015; Tobias Klausmann <klausman@gentoo.org> mutt-1.5.23-r7.ebuild:
+  Stable on alpha, bug 556042
+
+*mutt-1.5.23-r7 (28 Jun 2015)
+
+  28 Jun 2015; Fabian Groffen <grobian@gentoo.org> +mutt-1.5.23-r7.ebuild:
+  Revbump for some features and fixes from upstream
+
+  23 Apr 2015; Fabian Groffen <grobian@gentoo.org>
+  -files/mutt-1.5.22-cve-2014-0567.patch, -mutt-1.5.22-r3.ebuild:
+  Drop vulnerable version
+
+  30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.23-r5.ebuild:
+  Stable for alpha, wrt bug #530842
+
+  30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.23-r5.ebuild:
+  Stable for sparc, wrt bug #530842
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.23-r5.ebuild:
+  Stable for ppc64, wrt bug #530842
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.23-r5.ebuild:
+  Stable for ppc, wrt bug #530842
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.23-r5.ebuild:
+  Stable for ia64, wrt bug #530842
+
+  24 Feb 2015; Fabian Groffen <grobian@gentoo.org> mutt-1.5.22-r3.ebuild,
+  mutt-1.5.23-r5.ebuild, mutt-1.5.23-r6.ebuild:
+  Update link to quickstart guide, bug #534476
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.23-r5.ebuild:
+  Stable for amd64, wrt bug #530842
+
+  23 Feb 2015; Andreas Schuerch <nativemad@gentoo.org> mutt-1.5.23-r5.ebuild:
+  x86 stable, see bug 530842
+
+  22 Feb 2015; Jeroen Roovers <jer@gentoo.org> mutt-1.5.23-r5.ebuild:
+  Stable for HPPA (bug #530842).
 
 *mutt-1.5.23-r6 (11 Feb 2015)
 

@@ -1,17 +1,17 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.10.ebuild,v 1.13 2015/02/09 14:36:40 mrueg Exp $
+# $Id$
 
 EAPI=5
 
 GENTOO_DEPEND_ON_PERL=no
-PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
+PYTHON_COMPAT=( python2_7 python3_3 )
 inherit autotools flag-o-matic eutils toolchain-funcs multilib perl-app gnome2 python-single-r1
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://pidgin.im/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
-	http://dev.gentoo.org/~polynomial-c/${PN}-eds-3.6.patch.bz2"
+	https://dev.gentoo.org/~polynomial-c/${PN}-eds-3.6.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -56,8 +56,8 @@ RDEPEND="
 	!gnutls? ( >=dev-libs/nss-3.15.4 )
 	meanwhile? ( net-libs/meanwhile )
 	silc? ( >=net-im/silc-toolkit-1.0.1 )
-	tcl? ( dev-lang/tcl )
-	tk? ( dev-lang/tk )
+	tcl? ( dev-lang/tcl:0= )
+	tk? ( dev-lang/tk:0= )
 	sasl? ( dev-libs/cyrus-sasl:2 )
 	networkmanager? ( net-misc/networkmanager )
 	idn? ( net-dns/libidn )

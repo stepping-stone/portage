@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/iniparser
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.43 2014/10/11 12:03:34 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.47 2015/06/23 15:10:32 haubi Exp $
+
+  23 Jun 2015; Michael Haubenwallner <haubi@gentoo.org>
+  iniparser-3.1-r1.ebuild:
+  add ~ppc-aix prefix keyword
+
+  09 Jun 2015; Fabian Groffen <grobian@gentoo.org> iniparser-3.1-r1.ebuild:
+  Add Prefix keywords to unbreak the Prefix bootstrap
+
+  03 Jun 2015; Mike Frysinger <vapier@gentoo.org> iniparser-3.1-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> iniparser-3.1-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> iniparser-3.1-r1.ebuild:
   arm stable, bug #512012

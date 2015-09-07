@@ -1,6 +1,109 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.159 2015/02/08 23:24:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.185 2015/07/18 16:36:21 blueness Exp $
+
+  18 Jul 2015; Anthony G. Basile <blueness@gentoo.org> ipython-3.2.0.ebuild,
+  ipython-3.2.1.ebuild:
+  Keyword ~ppc.  Bug #541628.
+
+*ipython-3.2.1 (18 Jul 2015)
+
+  18 Jul 2015; Ian Delaney <idella4@gentoo.org> +ipython-3.2.1.ebuild:
+  bump wrt security bug #541628, minor tidy to ebuild in deps
+
+  29 Jun 2015; Justin Lecher <jlec@gentoo.org> ipython-3.2.0.ebuild:
+  Fix sandbox violation
+
+  28 Jun 2015; Justin Lecher <jlec@gentoo.org> ipython-3.2.0.ebuild:
+  Prevent double PREFIX on PREFIX, bug #553344
+
+  28 Jun 2015; Justin Lecher <jlec@gentoo.org> -ipython-2.2.0.ebuild:
+  Drop vulnerable version, bug #552816
+
+  27 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> ipython-2.2.0-r1.ebuild:
+  arm stable wrt bug #552816
+
+  27 Jun 2015; Jeroen Roovers <jer@gentoo.org> ipython-2.2.0-r1.ebuild:
+  Stable for PPC64 (bug #552816).
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> ipython-2.2.0-r1.ebuild:
+  Stable for x86, wrt bug #552816
+
+  24 Jun 2015; Agostino Sarubbo <ago@gentoo.org> ipython-2.2.0-r1.ebuild:
+  Stable for ppc, wrt bug #552816
+
+  23 Jun 2015; Agostino Sarubbo <ago@gentoo.org> ipython-2.2.0-r1.ebuild:
+  Stable for amd64, wrt bug #552816
+
+*ipython-3.2.0 (22 Jun 2015)
+*ipython-2.2.0-r1 (22 Jun 2015)
+
+  22 Jun 2015; Justin Lecher <jlec@gentoo.org>
+  +files/ipython-2.2.0-login-backport.patch, +ipython-2.2.0-r1.ebuild,
+  +ipython-3.2.0.ebuild, -ipython-2.4.1.ebuild, -ipython-3.0.0.ebuild,
+  -ipython-3.1.0.ebuild:
+  Backport vulnerability fix, bug #552816; drop vulnerable versions; create
+  mathjax symlink USE dependent, bug #481726
+
+  21 Jun 2015; Markus Meier <maekke@gentoo.org> ipython-3.1.0.ebuild:
+  add ~arm, bug #541628
+
+  02 Jun 2015; Justin Lecher <jlec@gentoo.org> ipython-3.1.0.ebuild:
+  Fix Version of pyzmq in deps; thanks Marius Brehler for the work
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/138
+
+  20 May 2015; Jeroen Roovers <jer@gentoo.org> ipython-3.0.0.ebuild,
+  ipython-3.1.0.ebuild:
+  Mark ~ppc64 (bug #541628).
+
+  13 May 2015; Justin Lecher <jlec@gentoo.org> ipython-3.1.0.ebuild:
+  Add missing USE dep and PyQt5 support, bug #548440
+
+*ipython-3.1.0 (04 Apr 2015)
+
+  04 Apr 2015; Justin Lecher <jlec@gentoo.org> +ipython-3.1.0.ebuild:
+  Version Bump
+
+  20 Mar 2015; Patrick Lauer <patrick@gentoo.org> ipython-3.0.0.ebuild:
+  Add missing test dep
+
+  19 Mar 2015; Justin Lecher <jlec@gentoo.org> ipython-3.0.0.ebuild:
+  Require all features for test run, bug #543752
+
+*ipython-2.4.1 (13 Mar 2015)
+
+  13 Mar 2015; Justin Lecher <jlec@gentoo.org> +ipython-2.4.1.ebuild,
+  -files/62ipython-gentoo.el, -files/ipython-0.12-globalpath.patch,
+  -files/ipython-0.13-umlaut.patch, -files/ipython-0.9.1-globalpath.patch,
+  -files/ipython-1.0.0-setuptools.patch, -ipython-0.10.2.ebuild,
+  -ipython-1.0.0.ebuild, -ipython-1.2.1.ebuild, -ipython-2.4.0.ebuild,
+  ipython-2.2.0.ebuild, ipython-3.0.0.ebuild:
+  Version Bump, bug #539578; fix SLOT operators loosen USE constraints for
+  USE=doc, bug #542426; don't build API docs for iypthon-3 due to missing
+  buildtime deps, bug #541832; drop old fixes CVE-2014-3429 bug #517222 and
+  obsolets bug #486880, bug #489372, bug #489384, bug #428170, bug #407823, bug
+  #407715, bug #490166, bug #456960, bug #483580, bug #530324, bug #536386 and
+  bug #481726
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> ipython-2.2.0.ebuild:
+  x86 stable, bug 540290
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> ipython-2.2.0.ebuild:
+  ppc stable, bug 540290
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> ipython-2.2.0.ebuild:
+  ppc64 stable, bug 540290
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> ipython-2.2.0.ebuild:
+  amd64 stable, bug 540290
+
+*ipython-3.0.0 (28 Feb 2015)
+
+  28 Feb 2015; Justin Lecher <jlec@gentoo.org> +ipython-3.0.0.ebuild,
+  -ipython-0.12-r1.ebuild, -ipython-0.13.2.ebuild, -ipython-1.1.0-r1.ebuild,
+  -ipython-1.1.0-r2.ebuild, -ipython-1.1.0.ebuild, -ipython-1.2.0.ebuild,
+  -ipython-2.1.0.ebuild, -ipython-2.3.0.ebuild, -ipython-2.3.1.ebuild:
+  Version Bump; drop old
 
   08 Feb 2015; Kacper Kowalik <xarthisius@gentoo.org> ipython-2.4.0.ebuild:
   Simplify check if pandoc is installed. Thanks to Arfrever for a suggestion
@@ -108,7 +211,7 @@
 
   21 Feb 2014; Justin Lecher <jlec@gentoo.org> +ipython-1.2.0.ebuild,
   metadata.xml:
-  Version BUmp, tests fail with py3.3
+  Version Bump, tests fail with py3.3
   https://github.com/ipython/ipython/issues/5182
 
   16 Feb 2014; Mike Frysinger <vapier@gentoo.org> ipython-1.0.0.ebuild:

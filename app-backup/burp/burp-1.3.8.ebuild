@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/burp/burp-1.3.8.ebuild,v 1.1 2014/12/01 16:28:47 aidecoe Exp $
+# $Id$
 
 EAPI=5
 
@@ -13,18 +13,18 @@ SRC_URI="http://burp.grke.org/downloads/${P}/${P}.tar.bz2"
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="acl afs nls ssl tcpd xattr"
+IUSE="acl afs nls tcpd xattr"
 
 DEPEND="
+	dev-libs/openssl:0
 	dev-libs/uthash
 	sys-libs/libcap
 	net-libs/librsync
-	sys-libs/ncurses
+	sys-libs/ncurses:0=
 	sys-libs/zlib
 	acl? ( sys-apps/acl )
 	afs? ( net-fs/openafs )
 	nls? ( sys-devel/gettext )
-	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xattr? ( sys-apps/attr )
 	"
@@ -33,7 +33,10 @@ RDEPEND="${DEPEND}
 	"
 
 DOCS=( CONTRIBUTORS DONATIONS UPGRADING )
-PATCHES=( "${FILESDIR}/${PV}-bedup-conf-path.patch" )
+PATCHES=(
+	"${FILESDIR}/${PV}-bedup-conf-path.patch"
+	"${FILESDIR}/${PV}-0001-Set-default_md-sha256-in-CA.cnf.patch"
+	)
 S="${WORKDIR}/burp"
 
 pkg_setup() {
@@ -50,7 +53,6 @@ src_configure() {
 		--sbindir=/usr/sbin
 		--sysconfdir=/etc/burp
 		--enable-largefile
-		$(use_with ssl openssl)
 		$(use_enable acl)
 		$(use_enable afs)
 		$(use_enable nls)
@@ -70,14 +72,6 @@ src_install() {
 	fowners root:burp /etc/burp/burp-server.conf
 	fperms 0640 /etc/burp/burp-server.conf
 
-	if use ssl; then
-		# The server will create this directory if it doesn't exist, but the
-		# client won't.  It must be writable by both.
-		dodir /etc/burp/CA
-		fowners root:burp /etc/burp/CA
-		fperms 0775 /etc/burp/CA
-	fi
-
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	dodoc docs/*
 
@@ -88,7 +82,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use ssl && [ ! -e /etc/burp/CA/index.txt ]; then
+	if [[ ! -e /etc/burp/CA/index.txt ]]; then
 		elog "At first run burp server will generate DH parameters and SSL"
 		elog "certificates.  You should adjust configuration before."
 		elog "Server configuration is located at"

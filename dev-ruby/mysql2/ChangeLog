@@ -1,6 +1,22 @@
 # ChangeLog for dev-ruby/mysql2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.32 2015/01/30 07:04:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.36 2015/07/31 05:17:30 graaff Exp $
+
+*mysql2-0.3.19 (31 Jul 2015)
+
+  31 Jul 2015; Hans de Graaff <graaff@gentoo.org> +mysql2-0.3.19.ebuild:
+  Version bump. Depend on virtual/libmysqlclient.
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  27 Apr 2015; Hans de Graaff <graaff@gentoo.org> mysql2-0.3.18.ebuild:
+  Make sure mysql2 is recompiled when the virtual/mysql (sub)slot changes.
+
+*mysql2-0.3.18 (03 Mar 2015)
+
+  03 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +mysql2-0.3.18.ebuild:
+  Version bump.
 
   30 Jan 2015; Hans de Graaff <graaff@gentoo.org> mysql2-0.3.17.ebuild:
   Add ruby22.

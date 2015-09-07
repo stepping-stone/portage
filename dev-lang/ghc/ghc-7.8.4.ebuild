@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.4.ebuild,v 1.9 2015/01/19 09:02:02 slyfox Exp $
+# $Id$
 
 EAPI=5
 
@@ -63,7 +63,7 @@ SRC_URI="!binary? ( http://downloads.haskell.org/~ghc/${PV/_rc/-rc}/${GHC_P}-src
 S="${WORKDIR}"/${GHC_P}
 
 [[ -n $arch_binaries ]] && SRC_URI+=" !ghcbootstrap? ( $arch_binaries )"
-SRC_URI+=" http://dev.gentoo.org/~slyfox/distfiles/${P}-ia64-CLOSUREs-regenerated.patch.gz"
+SRC_URI+=" https://dev.gentoo.org/~slyfox/distfiles/${P}-ia64-CLOSUREs-regenerated.patch.gz"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
@@ -611,4 +611,8 @@ pkg_prerm() {
 	rm -rf "${PKGCACHE}"
 
 	cp -p "${PKGCACHE}"{.shipped,}
+}
+
+pkg_postrm() {
+	ghc-package_pkg_postrm
 }

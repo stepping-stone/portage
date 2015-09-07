@@ -1,6 +1,92 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.442 2015/02/09 16:28:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.464 2015/07/13 13:29:10 mrueg Exp $
+
+*poppler-0.34.0 (13 Jul 2015)
+
+  13 Jul 2015; Manuel Rüger <mrueg@gentoo.org> +poppler-0.34.0.ebuild:
+  Version bump.
+
+  21 Jun 2015; Johannes Huber <johu@gentoo.org> -poppler-0.33.0.ebuild,
+  poppler-0.33.0-r1.ebuild, poppler-9999.ebuild:
+  Replace nonfatal usage with live version check, bug #551158. Sync live. Remove
+  old.
+
+  01 Jun 2015; Fabian Groffen <grobian@gentoo.org> poppler-0.33.0-r1.ebuild:
+  Fix compilation with Clang
+
+  29 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org>
+  poppler-0.33.0-r1.ebuild, poppler-9999.ebuild:
+  Add slot operator for openjpeg
+
+  25 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  poppler-0.33.0-r1.ebuild, poppler-9999.ebuild:
+  Using openjpeg instead of the internal jpeg2k decoder is recommended by
+  upstream, so enable it by default
+
+*poppler-0.33.0-r1 (24 May 2015)
+
+  24 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +poppler-0.33.0-r1.ebuild, poppler-9999.ebuild,
+  +files/poppler-0.33.0-openjpeg2.patch:
+  Use libopenjpeg:2 and workaround broken slotting
+
+*poppler-0.33.0 (18 May 2015)
+
+  18 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org> +poppler-0.33.0.ebuild,
+  poppler-9999.ebuild:
+  Minor updates to live ebuild; version bump
+
+  18 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org> -poppler-0.24.5.ebuild,
+  -poppler-0.26.5.ebuild:
+  Remove old
+
+  29 Apr 2015; Agostino Sarubbo <ago@gentoo.org> poppler-0.32.0.ebuild:
+  Stable for sparc, wrt bug #542220
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> poppler-0.32.0.ebuild:
+  ppc stable wrt bug #542220
+
+  17 Apr 2015; Agostino Sarubbo <ago@gentoo.org> poppler-0.32.0.ebuild:
+  Stable for ppc64, wrt bug #542220
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> poppler-0.32.0.ebuild:
+  Stable for ia64, wrt bug #542220
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> poppler-0.32.0.ebuild:
+  Stable for alpha, wrt bug #542220
+
+  09 Apr 2015; Markus Meier <maekke@gentoo.org> poppler-0.32.0.ebuild:
+  arm stable, bug #542220
+
+  09 Apr 2015; Agostino Sarubbo <ago@gentoo.org> poppler-0.32.0.ebuild:
+  Stable for x86, wrt bug #542220
+
+  07 Apr 2015; Jeroen Roovers <jer@gentoo.org> poppler-0.32.0.ebuild:
+  Stable for HPPA (bug #542220).
+
+  04 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> poppler-0.32.0.ebuild:
+  amd64 stable wrt bug #542220
+
+  04 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -poppler-0.30.0.ebuild, -poppler-0.31.0.ebuild:
+  Remove old
+
+  20 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org> poppler-0.32.0.ebuild,
+  poppler-9999.ebuild:
+  Correctly build against libopenjpeg-1 (for now), bug 538282
+
+*poppler-0.32.0 (13 Mar 2015)
+
+  13 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +poppler-0.32.0.ebuild:
+  Version bump.
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> poppler-0.26.5.ebuild:
+  Stable for ppc, wrt bug #523164
+
+  25 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -poppler-0.28.1.ebuild, -poppler-0.29.0.ebuild:
+  Remove old
 
 *poppler-0.31.0 (09 Feb 2015)
 

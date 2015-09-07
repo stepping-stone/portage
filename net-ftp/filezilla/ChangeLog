@@ -1,6 +1,62 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.120 2015/02/03 00:08:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.129 2015/07/09 22:10:16 voyageur Exp $
+
+*filezilla-3.12.0.2 (09 Jul 2015)
+
+  09 Jul 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  -filezilla-3.12.0.1.ebuild, +filezilla-3.12.0.2.ebuild:
+  Another bugfix bump: fix regression on servers that have MLSD facts disabled
+  by default
+
+*filezilla-3.12.0.1 (09 Jul 2015)
+
+  09 Jul 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  -filezilla-3.12.0.ebuild, +filezilla-3.12.0.1.ebuild:
+  Bugfix bump
+
+*filezilla-3.12.0 (08 Jul 2015)
+
+  08 Jul 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  -filezilla-3.9.0.5.ebuild, -filezilla-3.10.2.ebuild,
+  -filezilla-3.10.3.ebuild, -filezilla-3.11.0.ebuild, +filezilla-3.12.0.ebuild:
+  Version bump, clean some old versions
+
+*filezilla-3.11.0.2 (03 Jun 2015)
+
+  03 Jun 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +filezilla-3.11.0.2.ebuild:
+  Version bump
+
+*filezilla-3.11.0.1 (22 May 2015)
+
+  22 May 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +filezilla-3.11.0.1.ebuild:
+  Version bump, rejects Diffie-Hellman Groups smaller than 1024 bits when using
+  FTP over TLS (Logjam vulnerability)
+
+*filezilla-3.11.0 (20 May 2015)
+
+  20 May 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +filezilla-3.11.0.ebuild:
+  Version bump
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> filezilla-3.7.3.ebuild,
+  filezilla-3.8.1.ebuild, filezilla-3.9.0.5.ebuild, filezilla-3.9.0.6.ebuild,
+  filezilla-3.10.1.1.ebuild, filezilla-3.10.2.ebuild, filezilla-3.10.3.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
+
+*filezilla-3.10.3 (30 Mar 2015)
+
+  30 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +filezilla-3.10.3.ebuild:
+  Version bump
+
+*filezilla-3.10.2 (03 Mar 2015)
+
+  03 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +filezilla-3.10.2.ebuild, +files/filezilla-3.10.2-debug.patch:
+  Version bump
 
 *filezilla-3.10.1.1 (02 Feb 2015)
 

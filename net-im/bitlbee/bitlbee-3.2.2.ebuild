@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.2.2.ebuild,v 1.2 2014/11/02 08:58:11 swift Exp $
+# $Id$
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils multilib user python-single-r1 systemd
 
@@ -13,8 +13,8 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="debug gnutls ipv6 +jabber libevent msn nss +oscar otr +plugins purple selinux
+KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
+IUSE="debug gnutls ipv6 +xmpp libevent msn nss +oscar otr +plugins purple selinux
 skype ssl test twitter +yahoo xinetd"
 
 COMMON_DEPEND="
@@ -42,12 +42,12 @@ RDEPEND="${COMMON_DEPEND}
 	)
 	xinetd? ( sys-apps/xinetd )"
 
-REQUIRED_USE="|| ( purple jabber msn oscar yahoo )
+REQUIRED_USE="|| ( purple xmpp msn oscar yahoo )
 	msn? ( || ( gnutls nss ssl ) )
-	jabber? ( !nss )"
+	xmpp? ( !nss )"
 
 pkg_setup() {
-	if use jabber && ! use gnutls && ! use ssl ; then
+	if use xmpp && ! use gnutls && ! use ssl ; then
 		einfo
 		elog "You have enabled support for Jabber but do not have SSL"
 		elog "support enabled.  This *will* prevent bitlbee from being"
@@ -81,7 +81,8 @@ src_prepare() {
 
 src_configure() {
 	# setup plugins, protocol, ipv6 and debug
-	for flag in debug ipv6 msn jabber oscar plugins purple skype twitter yahoo ; do
+	use xmpp && myconf="${myconf} --jabber=1"
+	for flag in debug ipv6 msn oscar plugins purple skype twitter yahoo ; do
 		if use ${flag} ; then
 			myconf="${myconf} --${flag}=1"
 		else

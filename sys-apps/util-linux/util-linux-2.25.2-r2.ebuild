@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.25.2-r2.ebuild,v 1.1 2015/01/17 23:21:08 floppym Exp $
+# $Id$
 
 EAPI="4"
 
-PYTHON_COMPAT=( python2_7 python3_{2,3,4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
 inherit eutils toolchain-funcs libtool flag-o-matic bash-completion-r1 \
 	python-single-r1 multilib-minimal systemd
@@ -16,12 +16,12 @@ if [[ ${PV} == 9999 ]] ; then
 	inherit git-2 autotools
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
 	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.xz"
 fi
 
 DESCRIPTION="Various useful Linux utilities"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
+HOMEPAGE="https://www.kernel.org/pub/linux/utils/util-linux/"
 
 LICENSE="GPL-2 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
@@ -42,7 +42,7 @@ RDEPEND="!sys-process/schedutils
 	selinux? ( >=sys-libs/libselinux-2.2.2-r4[${MULTILIB_USEDEP}] )
 	slang? ( sys-libs/slang )
 	systemd? ( sys-apps/systemd )
-	udev? ( virtual/udev )
+	udev? ( virtual/libudev )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140406-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32]
@@ -63,6 +63,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-runuser-bash-completion.patch #522288
+	epatch "${FILESDIR}"/${PN}-2.25-parallel-setarch.patch #511812
 	if [[ ${PV} == 9999 ]] ; then
 		po/update-potfiles
 		eautoreconf
@@ -85,6 +86,10 @@ lfs_fallocate_test() {
 
 multilib_src_configure() {
 	lfs_fallocate_test
+	# The scanf test in a run-time test which fails while cross-compiling.
+	# Blindly assume a POSIX setup since we require libmount, and libmount
+	# itself fails when the scanf test fails. #531856
+	tc-is-cross-compiler && export scanf_cv_alloc_modifier=ms
 	export ac_cv_header_security_pam_misc_h=$(multilib_native_usex pam) #485486
 	# We manually set --libdir to the default since on prefix, econf will set it to
 	# a value which the configure script does not recognize.  This makes it set the

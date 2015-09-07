@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.21-r1.ebuild,v 1.1 2015/01/04 18:07:48 floppym Exp $
+# $Id$
 
 EAPI=5
 
@@ -9,12 +9,12 @@ PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 inherit distutils-r1 eutils multilib-minimal
 
 DESCRIPTION="A streaming protocol for test results"
-HOMEPAGE="https://launchpad.net/subunit http://pypi.python.org/pypi/python-subunit"
-SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
+HOMEPAGE="https://launchpad.net/subunit https://pypi.python.org/pypi/python-subunit"
+SRC_URI="https://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0 BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 x86 ~x86-fbsd"
 IUSE="static-libs test"
 
 RDEPEND=">=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]

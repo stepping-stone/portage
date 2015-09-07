@@ -1,6 +1,39 @@
 # ChangeLog for net-firewall/firewalld
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.14 2014/06/17 12:50:57 dev-zero Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.22 2015/08/02 18:55:25 ago Exp $
+
+  02 Aug 2015; Agostino Sarubbo <ago@gentoo.org> firewalld-0.3.13.ebuild:
+  Stable for x86, wrt bug #552924
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> firewalld-0.3.13.ebuild:
+  Stable for amd64, wrt bug #552924
+
+*firewalld-0.3.14.2 (23 Jun 2015)
+
+  23 Jun 2015; Matthias Maier <tamiko@gentoo.org> +firewalld-0.3.14.2.ebuild,
+  -firewalld-0.2.12.ebuild, -firewalld-0.2.9-r1.ebuild:
+  cleanup; version bump, thanks to Denis Schridde, bug #552832
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> firewalld-0.3.10.ebuild:
+  Stable for x86, wrt bug #549270
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> firewalld-0.3.10.ebuild:
+  Stable for amd64, wrt bug #549270
+
+*firewalld-0.3.13 (25 May 2015)
+
+  25 May 2015; Matthias Maier <tamiko@gentoo.org> +firewalld-0.3.13.ebuild,
+  firewalld-0.3.10.ebuild, metadata.xml:
+  co-maintain package; version bump; also install man pages, bug #540108
+  reported by 'dE', also thanks to Jeroen Roovers
+
+  13 Apr 2015; Ian Delaney <idella4@gentoo.org> firewalld-0.3.10.ebuild:
+  add py3.4 support, update python_export_best to python_setup, no need for
+  revbump, fixes Bug 530996 by pacho
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> firewalld-0.2.12.ebuild,
+  firewalld-0.2.9-r1.ebuild:
+  Drop old Python implementations
 
 *firewalld-0.3.10 (17 Jun 2014)
 

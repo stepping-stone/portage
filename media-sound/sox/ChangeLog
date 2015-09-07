@@ -1,6 +1,48 @@
 # ChangeLog for media-sound/sox
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.156 2014/10/11 10:22:49 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.169 2015/07/17 15:19:43 ago Exp $
+
+  17 Jul 2015; Agostino Sarubbo <ago@gentoo.org> sox-14.4.2.ebuild:
+  Stable for x86, wrt bug #511778
+
+  17 Jul 2015; Agostino Sarubbo <ago@gentoo.org> sox-14.4.2.ebuild:
+  Stable for ia64, wrt bug #511778
+
+  04 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> sox-14.4.2.ebuild:
+  amd64 stable wrt bug #511778
+
+  04 Jul 2015; Tobias Klausmann <klausman@gentoo.org> sox-14.4.2.ebuild:
+  Stable on alpha, bug 511778
+
+  31 May 2015; Markus Meier <maekke@gentoo.org> sox-14.4.2.ebuild:
+  arm stable, bug #511778
+
+  28 May 2015; Jack Morgan <jmorgan@gentoo.org> sox-14.4.2.ebuild:
+  ppc stable wrt bug #511778
+
+  28 May 2015; Jack Morgan <jmorgan@gentoo.org> sox-14.4.2.ebuild:
+  sparc stable wrt bug #511778
+
+  28 May 2015; Jack Morgan <jmorgan@gentoo.org> sox-14.4.2.ebuild:
+  adding ~sparc for Bug 511778
+
+  27 May 2015; Jeroen Roovers <jer@gentoo.org> sox-14.4.2.ebuild:
+  Stable for HPPA (bug #511778).
+
+  24 May 2015; Jeroen Roovers <jer@gentoo.org> sox-14.4.2.ebuild:
+  Stable for PPC64 (bug #511778).
+
+  25 Apr 2015; Jeroen Roovers <jer@gentoo.org> sox-14.4.2.ebuild:
+  Marked ~ppc64 (bug #543524).
+
+*sox-14.4.2 (16 Mar 2015)
+
+  16 Mar 2015; Alexis Ballier <aballier@gentoo.org> +sox-14.4.2.ebuild,
+  metadata.xml:
+  version bump
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> sox-14.4.1.ebuild:
+  add arm64 support, tested on A53 board
 
   11 Oct 2014; Alexis Ballier <aballier@gentoo.org> sox-14.4.1.ebuild,
   +files/sox-14.4.1-ffmpeg24.patch:

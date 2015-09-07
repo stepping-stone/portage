@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.8.4-r1.ebuild,v 1.2 2014/10/23 15:31:09 aballier Exp $
+# $Id$
 
 EAPI=5
 
@@ -10,11 +10,11 @@ DESCRIPTION="Library for performing fast approximate nearest neighbor searches i
 HOMEPAGE="http://www.cs.ubc.ca/research/flann/"
 SRC_URI="
 	http://people.cs.ubc.ca/~mariusm/uploads/FLANN/${P}-src.zip
-	test? ( http://dev.gentoo.org/~bicatali/distfiles/${P}-testdata.tar.xz )"
+	test? ( https://dev.gentoo.org/~bicatali/distfiles/${P}-testdata.tar.xz )"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="cuda doc examples mpi openmp octave static-libs test"
 
 RDEPEND="

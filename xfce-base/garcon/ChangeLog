@@ -1,6 +1,65 @@
 # ChangeLog for xfce-base/garcon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.68 2014/04/22 13:46:56 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.84 2015/08/06 14:45:26 zlogene Exp $
+
+  06 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> garcon-0.5.0-r1.ebuild:
+  ia64 stable wrt bug #553500
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> garcon-0.5.0-r1.ebuild:
+  ppc stable wrt bug #553500
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org> garcon-0.5.0-r2.ebuild:
+  Stable on alpha, bug 553500
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org> garcon-0.5.0-r1.ebuild:
+  Stable for PPC64 (bug #553500).
+
+  11 Jul 2015; Markus Meier <maekke@gentoo.org> garcon-0.5.0-r1.ebuild:
+  arm stable, bug #553500
+
+  04 Jul 2015; Jason Zaman <perfinion@gentoo.org> garcon-0.5.0-r2.ebuild:
+  add gtk-doc-am DEP
+
+*garcon-0.5.0-r2 (04 Jul 2015)
+
+  04 Jul 2015; Jason Zaman <perfinion@gentoo.org> +garcon-0.5.0-r2.ebuild:
+  revbump to fix gtk-doc QA issue
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> garcon-0.5.0-r1.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> garcon-0.5.0-r1.ebuild:
+  x86 stable wrt bug #553500
+
+  01 Jul 2015; Jeroen Roovers <jer@gentoo.org> garcon-0.5.0-r1.ebuild:
+  Stable for HPPA (bug #553500).
+
+*garcon-0.5.0-r1 (11 May 2015)
+
+  11 May 2015; Michał Górny <mgorny@gentoo.org> +garcon-0.5.0-r1.ebuild,
+  -garcon-0.5.0.ebuild:
+  Future-update dep on libxfce4ui to [gtk3(+)].
+
+  22 Apr 2015; Denis Dupeyron <calchan@gentoo.org> -garcon-0.3.0.ebuild,
+  -garcon-0.4.0.ebuild:
+  Cleanup.
+
+*garcon-0.5.0 (05 Apr 2015)
+
+  05 Apr 2015; Michał Górny <mgorny@gentoo.org> +garcon-0.5.0.ebuild:
+  Version bump. The new version brings GTK+3 support.
+
+*garcon-0.4.0 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +garcon-0.4.0.ebuild:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> garcon-0.3.0.ebuild:
+  add arm64 support, tested on A53 board
 
   22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> -garcon-0.2.0.ebuild:
   old

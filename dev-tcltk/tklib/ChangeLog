@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tklib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tklib/ChangeLog,v 1.4 2013/06/09 10:26:38 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tklib/ChangeLog,v 1.6 2015/05/06 06:55:44 jlec Exp $
+
+*tklib-0.6-r2 (06 May 2015)
+
+  06 May 2015; Justin Lecher <jlec@gentoo.org> +tklib-0.6-r2.ebuild,
+  -tklib-0.5-r1.ebuild, -tklib-0.5.ebuild, tklib-0.6-r1.ebuild:
+  Fix file collision, bug #547890; drop old
 
 *tklib-0.6-r1 (09 Jun 2013)
 
@@ -12,7 +18,7 @@
 
   06 Jun 2013; Justin Lecher <jlec@gentoo.org> tklib-0.5.ebuild,
   tklib-0.5-r1.ebuild, +tklib-0.6.ebuild, metadata.xml:
-  Version BUmp, fix file collision, #472336
+  Version Bump, fix file collision, #472336
 
 *tklib-0.5-r1 (02 Aug 2010)
 
@@ -24,4 +30,3 @@
   29 Mar 2010; Justin Lecher <jlec@gentoo.org> +tklib-0.5.ebuild,
   +metadata.xml:
   new ebuild per 311845
-

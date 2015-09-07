@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-5.1.ebuild,v 1.3 2015/02/04 17:39:58 grobian Exp $
+# $Id$
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ IUSE="lto test libcxx"
 
 RDEPEND="sys-devel/binutils-config
 	lto? ( sys-devel/llvm )
-	libcxx? ( sys-libs/libcxx-apple )"
+	libcxx? ( sys-libs/libcxx )"
 DEPEND="${RDEPEND}
 	test? ( >=dev-lang/perl-5.8.8 )
 	|| ( >=sys-devel/gcc-apple-4.2.1 sys-devel/llvm )
@@ -33,8 +33,8 @@ DEPEND="${RDEPEND}
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
-	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-		export CTARGET=${CATEGORY/cross-}
+	if [[ ${CATEGORY} == cross-* ]] ; then
+		export CTARGET=${CATEGORY#cross-}
 	fi
 fi
 is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }

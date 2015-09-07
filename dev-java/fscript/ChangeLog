@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/fscript
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/ChangeLog,v 1.18 2014/09/06 16:33:20 ercpe Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/ChangeLog,v 1.22 2015/08/01 21:42:52 mrueg Exp $
+
+  01 Aug 2015; Manuel Rüger <mrueg@gentoo.org> -fscript-1.17.ebuild:
+  Remove old.
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> fscript-1.17-r1.ebuild:
+  Stable for x86, wrt bug #535056
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> fscript-1.17-r1.ebuild:
+  Stable for amd64, wrt bug #535056
 
 *fscript-1.17-r1 (06 Sep 2014)
 

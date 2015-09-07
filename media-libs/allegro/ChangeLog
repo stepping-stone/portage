@@ -1,6 +1,34 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.150 2015/01/26 09:46:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.158 2015/08/06 07:17:17 ago Exp $
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> allegro-5.0.11.ebuild:
+  Stable for x86, wrt bug #554288
+
+  03 Aug 2015; Agostino Sarubbo <ago@gentoo.org> allegro-5.0.11.ebuild:
+  Stable for amd64, wrt bug #554288
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> allegro-5.0.11.ebuild:
+  ppc stable wrt bug #554288
+
+*allegro-5.0.11 (04 Jun 2015)
+
+  04 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> +allegro-5.0.11.ebuild,
+  allegro-4.4.2-r1.ebuild, allegro-5.0.8-r1.ebuild:
+  version bump; remove unneeded nonfatal (bug #551178)
+
+  01 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> allegro-4.4.2-r1.ebuild,
+  allegro-5.0.8-r1.ebuild:
+  add some slot deps for repoman
+
+  30 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -allegro-5.0.8.ebuild:
+  old
+
+  30 Apr 2015; Jeroen Roovers <jer@gentoo.org> allegro-5.0.8-r1.ebuild:
+  Stable for PPC64 (bug #526068).
+
+  21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> allegro-5.0.8-r1.ebuild:
+  Stable for ppc, wrt bug #526068
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> allegro-5.0.8-r1.ebuild:
   Stable for x86, wrt bug #526068

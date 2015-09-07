@@ -1,6 +1,19 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.55 2015/01/15 10:28:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.59 2015/06/09 12:17:07 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  02 May 2015; Michael Palimaka <kensington@gentoo.org>
+  -docbook2X-0.8.8-r2.ebuild, -docbook2X-0.8.8-r3.ebuild:
+  Remove old.
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> docbook2X-0.8.8-r4.ebuild:
+  Stable for PPC64 (bug #520860).
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> docbook2X-0.8.8-r4.ebuild:
+  Stable for ppc, wrt bug #520860
 
   15 Jan 2015; Raúl Porcel <armin76@gentoo.org> docbook2X-0.8.8-r4.ebuild:
   ia64/s390/sh/sparc/x86 stable wrt #520860

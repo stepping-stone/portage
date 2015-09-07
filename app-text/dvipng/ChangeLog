@@ -1,6 +1,17 @@
 # ChangeLog for app-text/dvipng
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.88 2014/11/01 17:07:08 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.91 2015/07/15 09:17:37 aballier Exp $
+
+  15 Jul 2015; Alexis Ballier <aballier@gentoo.org> dvipng-1.15.ebuild:
+  fix build with kpathsea from texlive 2015; := dep on kpathsea
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+*dvipng-1.15 (09 Mar 2015)
+
+  09 Mar 2015; Alexis Ballier <aballier@gentoo.org> +dvipng-1.15.ebuild:
+  version bump
 
   01 Nov 2014; Ulrich Müller <ulm@gentoo.org> dvipng-1.14.ebuild:
   Specify LICENSE more precisely. Update ebuild to EAPI 5.
@@ -303,4 +314,3 @@
   +dvipng-1.5.ebuild:
   Initial import. Ebuild submitted by Marti Raudsepp <integor@gmail.com>;
   bug #76046.
-

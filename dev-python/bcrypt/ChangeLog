@@ -1,6 +1,43 @@
 # ChangeLog for dev-python/bcrypt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/ChangeLog,v 1.8 2015/02/17 11:14:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/ChangeLog,v 1.18 2015/08/06 11:47:49 ago Exp $
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> bcrypt-1.1.1.ebuild:
+  Stable for amd64, wrt bug #556428
+
+*bcrypt-2.0.0 (01 Aug 2015)
+
+  01 Aug 2015; Ian Delaney <idella4@gentoo.org> +bcrypt-2.0.0.ebuild,
+  -bcrypt-1.1.0.ebuild, bcrypt-1.1.1.ebuild:
+  bump; general tidy and update to deps, test phase removed due to absence of
+  testsuite in tarball, rm old
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
+
+*bcrypt-1.1.1 (26 May 2015)
+
+  26 May 2015; Justin Lecher <jlec@gentoo.org> +bcrypt-1.1.1.ebuild:
+  Version Bump
+
+  18 May 2015; Jeroen Roovers <jer@gentoo.org> bcrypt-1.1.0.ebuild:
+  Mark ~ppc64 (bug #541682).
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> bcrypt-1.0.2-r1.ebuild,
+  bcrypt-1.1.0.ebuild:
+  Drop old Python implementations
+
+  24 Mar 2015; Mike Gilbert <floppym@gentoo.org> bcrypt-1.1.0.ebuild:
+  cffi is also a build-time dep.
+
+  23 Mar 2015; Mike Gilbert <floppym@gentoo.org> bcrypt-1.1.0.ebuild:
+  Using virtual/python-cffi breaks subslot rebuilds, so don't use it.
+
+  23 Mar 2015; Justin Lecher <jlec@gentoo.org> bcrypt-1.1.0.ebuild:
+  Convert to virtual/python-cffi
 
 *bcrypt-1.1.0 (17 Feb 2015)
 

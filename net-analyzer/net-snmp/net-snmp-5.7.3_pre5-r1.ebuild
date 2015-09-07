@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.3_pre5-r1.ebuild,v 1.12 2014/11/16 20:27:36 dilfridge Exp $
+# $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=yesplz
 DISTUTILS_OPTIONAL=yesplz
 WANT_AUTOMAKE=none
@@ -15,7 +15,7 @@ DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
 SRC_URI="
 	mirror://sourceforge/${PN}/${PN}/${PV/_pre*/}-pre-releases/${P/_pre*/}.${PV/*_}.tar.gz
-	http://dev.gentoo.org/~jer/${PN}-5.7.3-patches-${PATCHSET}.tar.xz
+	https://dev.gentoo.org/~jer/${PN}-5.7.3-patches-${PATCHSET}.tar.xz
 "
 
 S=${WORKDIR}/${P/_/.}
@@ -23,7 +23,7 @@ S=${WORKDIR}/${P/_/.}
 # GPL-2 for the init scripts
 LICENSE="HPND BSD GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="bzip2 doc elf ipv6 mfd-rewrites minimal perl python rpm selinux ssl tcpd X zlib lm_sensors ucd-compat pci netlink mysql"
 
 COMMON="ssl? ( >=dev-libs/openssl-0.9.6d )

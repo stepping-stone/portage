@@ -1,6 +1,24 @@
 # ChangeLog for dev-java/blowfishj
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/ChangeLog,v 1.15 2014/07/14 08:30:52 ercpe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/ChangeLog,v 1.20 2015/08/01 22:33:00 monsieurp Exp $
+
+*blowfishj-2.14-r3 (01 Aug 2015)
+
+  01 Aug 2015; Patrice Clement <monsieurp@gentoo.org> +blowfishj-2.14-r3.ebuild:
+  Get rid of src_unpack() and wrap the prep logic in java_prepare(). Update and
+  fix test dependencies.
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> blowfishj-2.14-r2.ebuild:
+  ppc stable wrt bug #535032
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> blowfishj-2.14-r2.ebuild:
+  Stable for x86, wrt bug #535032
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> blowfishj-2.14-r2.ebuild:
+  Stable for amd64, wrt bug #535032
 
 *blowfishj-2.14-r2 (14 Jul 2014)
 

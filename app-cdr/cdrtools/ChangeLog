@@ -1,6 +1,48 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.349 2015/02/18 15:33:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.358 2015/07/31 14:34:19 billie Exp $
+
+  31 Jul 2015; Daniel Pielmeier <billie@gentoo.org>
+  -cdrtools-3.01_alpha28.ebuild, -cdrtools-3.01_alpha29.ebuild:
+  Remove old.
+
+*cdrtools-3.01_alpha30 (12 Jul 2015)
+
+  12 Jul 2015; Daniel Pielmeier <billie@gentoo.org>
+  +cdrtools-3.01_alpha30.ebuild:
+  Version bump.
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+*cdrtools-3.01_alpha29 (04 Jun 2015)
+
+  04 Jun 2015; Daniel Pielmeier <billie@gentoo.org>
+  +cdrtools-3.01_alpha29.ebuild:
+  Version bump.
+
+  25 Apr 2015; Daniel Pielmeier <billie@gentoo.org>
+  -cdrtools-3.01_alpha27.ebuild:
+  Remove old.
+
+*cdrtools-3.01_alpha28 (03 Apr 2015)
+
+  03 Apr 2015; Daniel Pielmeier <billie@gentoo.org>
+  +cdrtools-3.01_alpha28.ebuild:
+  Version bump.
+
+  25 Feb 2015; Mike Frysinger <vapier@gentoo.org> cdrtools-3.01_alpha27.ebuild:
+  Enable verbose building so we can see the exact compile/link lines.
+
+  25 Feb 2015; Mike Frysinger <vapier@gentoo.org> cdrtools-3.01_alpha24.ebuild,
+  cdrtools-3.01_alpha27.ebuild:
+  Do not hardcode -L/usr/lib when linking -- it is both unnecessary and wrong as
+  it breaks cross-compiling badly.
+
+  19 Feb 2015; Mike Gilbert <floppym@gentoo.org> cdrtools-3.01_alpha17.ebuild,
+  cdrtools-3.01_alpha24.ebuild, cdrtools-3.01_alpha27.ebuild:
+  Use 'caps' use flag to toggle linkage against libcap. Fixup automagic linkage
+  of libacl and libcap in 3.01_alpha27.
 
   18 Feb 2015; Rick Farina <zerochaos@gentoo.org> cdrtools-3.01_alpha17.ebuild,
   cdrtools-3.01_alpha24.ebuild, cdrtools-3.01_alpha27.ebuild:

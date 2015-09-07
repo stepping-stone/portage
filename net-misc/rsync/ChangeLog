@@ -1,6 +1,27 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.259 2015/02/14 13:20:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.267 2015/05/15 12:03:06 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> rsync-3.1.1.ebuild:
+  ppc stable wrt bug #540000
+
+  30 Apr 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add CPE info via Chromium OS.
+
+  28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> rsync-3.1.1.ebuild:
+  Stable for alpha, wrt bug #540000
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> rsync-3.1.1.ebuild:
+  sparc stable wrt bug #540000
+
+  21 Apr 2015; Jeroen Roovers <jer@gentoo.org> rsync-3.1.1.ebuild:
+  Stable for PPC64 (bug #540000).
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org> rsync-3.1.1.ebuild:
+  Mark arm64/ia64/m68k/s390/sh stable.
+
+  26 Feb 2015; Markus Meier <maekke@gentoo.org> rsync-3.1.1.ebuild:
+  arm stable, bug #540000
 
   14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rsync-3.1.1.ebuild:
   Stable for x86, wrt bug #540000

@@ -1,6 +1,41 @@
 # ChangeLog for x11-libs/gtkglext
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.96 2014/11/21 09:31:00 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.106 2015/07/30 13:24:17 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> gtkglext-1.2.0-r3.ebuild:
+  Stable for sparc, wrt bug #551814
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org> gtkglext-1.2.0-r3.ebuild:
+  Stable on alpha, bug 551814
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> gtkglext-1.2.0-r3.ebuild:
+  ppc stable wrt bug #551814
+
+  17 Jul 2015; Agostino Sarubbo <ago@gentoo.org> gtkglext-1.2.0-r3.ebuild:
+  Stable for ia64, wrt bug #551814
+
+  13 Jul 2015; Jeroen Roovers <jer@gentoo.org> gtkglext-1.2.0-r3.ebuild:
+  Stable for HPPA (bug #551814).
+
+  07 Jul 2015; Markus Meier <maekke@gentoo.org> gtkglext-1.2.0-r3.ebuild:
+  arm stable, bug #551814
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> gtkglext-1.2.0-r3.ebuild:
+  Stable for x86, wrt bug #551814
+
+  21 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> gtkglext-1.2.0-r3.ebuild:
+  amd64 stable wrt bug #551814
+
+  21 Jun 2015; Jeroen Roovers <jer@gentoo.org> gtkglext-1.2.0-r3.ebuild:
+  Stable for PPC64 (bug #551814).
+
+*gtkglext-1.2.0-r3 (15 Mar 2015)
+
+  15 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtkglext-1.2.0-r2.ebuild, +gtkglext-1.2.0-r3.ebuild,
+  +files/gtkglext-1.2.0-gl-configure.patch:
+  Fix broken multilib gl and glu detection (bug #543050, thanks to Bertrand
+  Jacquin). Update license.
 
   21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gtkglext-1.2.0-r1.ebuild:
   Drop old

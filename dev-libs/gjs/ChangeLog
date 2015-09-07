@@ -1,6 +1,37 @@
 # ChangeLog for dev-libs/gjs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.63 2015/01/02 12:08:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.72 2015/07/30 13:21:41 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> gjs-1.42.0.ebuild:
+  Stable for sparc, wrt bug #551814
+
+  29 Jul 2015; Tobias Klausmann <klausman@gentoo.org> gjs-1.42.0.ebuild:
+  Stable on alpha, bug 551814
+
+  17 Jul 2015; Agostino Sarubbo <ago@gentoo.org> gjs-1.42.0.ebuild:
+  Stable for ia64, wrt bug #551814
+
+*gjs-1.43.3 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> -gjs-1.40.1.ebuild,
+  +gjs-1.43.3.ebuild, +files/gjs-1.43.3-disable-unittest-1.patch,
+  +files/gjs-1.43.3-disable-unittest-2.patch:
+  Version bump for Gnome 3.16. Clean up old revision.
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> gjs-1.42.0.ebuild:
+  arm stable, bug #534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gjs-1.42.0.ebuild:
+  x86 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gjs-1.42.0.ebuild:
+  ppc64 stable, bug 534012
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gjs-1.42.0.ebuild:
+  ppc stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gjs-1.42.0.ebuild:
+  amd64 stable, bug 534012
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gjs-1.40.1-r1.ebuild:
   Stable for alpha, wrt bug #529964

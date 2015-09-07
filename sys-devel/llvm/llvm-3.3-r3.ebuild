@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r3.ebuild,v 1.12 2014/07/14 14:53:52 axs Exp $
+# $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit cmake-utils eutils flag-o-matic multilib multilib-minimal \
 	python-r1 toolchain-funcs pax-utils check-reqs
@@ -14,7 +14,7 @@ HOMEPAGE="http://llvm.org/"
 SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
 	clang? ( http://llvm.org/releases/${PV}/compiler-rt-${PV}.src.tar.gz
 		http://llvm.org/releases/${PV}/cfe-${PV}.src.tar.gz )
-	!doc? ( http://dev.gentoo.org/~voyageur/distfiles/${P}-manpages.tar.bz2 )"
+	!doc? ( https://dev.gentoo.org/~voyageur/distfiles/${P}-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
@@ -88,7 +88,7 @@ pkg_pretend() {
 		ewarn
 
 		(( build_size *= 14 ))
-	elif is-flagq -g || is-flagq -ggdb; then
+	elif is-flagq '-g?(gdb)?([1-9])'; then
 		ewarn "The C++ compiler -g option is known to increase the size of the package"
 		ewarn "considerably. If you run out of space, please consider removing it."
 		ewarn

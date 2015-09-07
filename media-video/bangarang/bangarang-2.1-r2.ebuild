@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1-r2.ebuild,v 1.4 2015/02/14 14:38:32 ago Exp $
+# $Id$
 
 EAPI=5
 
@@ -11,8 +11,7 @@ inherit kde4-base
 
 DESCRIPTION="Media player for KDE utilizing Nepomuk for tagging"
 HOMEPAGE="http://bangarangkde.wordpress.com"
-EGIT_REPO_URI="git://gitorious.org/bangarang/bangarang.git"
-[[ ${PV} == 9999 ]] || SRC_URI="http://bangarangissuetracking.googlecode.com/files/${P}.tar.gz"
+[[ ${PV} == 9999 ]] || SRC_URI="https://bangarangissuetracking.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 KEYWORDS="amd64 x86"
@@ -22,8 +21,8 @@ IUSE="debug"
 RDEPEND="
 	dev-libs/soprano
 	$(add_kdebase_dep kdelibs 'nepomuk')
-	$(add_kdebase_dep nepomuk)
-	$(add_kdebase_dep audiocd-kio)
+	$(add_kdeapps_dep nepomuk)
+	$(add_kdeapps_dep audiocd-kio)
 	media-libs/taglib
 	media-libs/phonon[qt4]
 	dev-qt/qtscript:4

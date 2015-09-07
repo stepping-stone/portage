@@ -1,6 +1,56 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.145 2015/02/17 14:36:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.160 2015/08/02 11:00:59 jlec Exp $
+
+  02 Aug 2015; Justin Lecher <jlec@gentoo.org> -cython-0.19.1-r1.ebuild,
+  -cython-0.21.1.ebuild, -cython-0.21.2.ebuild, -cython-0.21.ebuild,
+  -files/cython-0.20.1-backport-test-fix.patch:
+  Dropl old
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> cython-0.21.1.ebuild:
+  sparc stable wrt bug #530280
+
+  15 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> cython-0.21.1.ebuild:
+  ia64 stable wrt bug #530280
+
+  28 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> cython-0.21.1.ebuild:
+  alpha stable wrt bug #530280
+
+*cython-0.22.1 (21 Jun 2015)
+
+  21 Jun 2015; Justin Lecher <jlec@gentoo.org> +cython-0.22.1.ebuild:
+  Version Bump
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> cython-0.22.ebuild:
+  sparc stable wrt bug #540290
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> cython-0.22.ebuild:
+  Stable for alpha, wrt bug #540290
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> cython-0.19.1-r1.ebuild,
+  cython-0.21.ebuild:
+  Drop old Python implementations
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> cython-0.22.ebuild:
+  Mark arm/arm64/ia64/s390/sh stable.
+
+  21 Mar 2015; Jeroen Roovers <jer@gentoo.org> cython-0.22.ebuild:
+  Stable for HPPA (bug #540290).
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> cython-0.22.ebuild:
+  x86 stable, bug 540290
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> cython-0.22.ebuild:
+  ppc stable, bug 540290
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> cython-0.22.ebuild:
+  ppc64 stable, bug 540290
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> cython-0.22.ebuild:
+  amd64 stable, bug 540290
+
+  26 Feb 2015; Markus Meier <maekke@gentoo.org> cython-0.21.1.ebuild:
+  arm stable, bug #530280
 
   17 Feb 2015; Jeroen Roovers <jer@gentoo.org> cython-0.21.1.ebuild:
   Stable for HPPA (bug #530280).

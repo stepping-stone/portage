@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-transport/netty-transport-4.0.21-r1.ebuild,v 1.1 2014/11/20 08:30:11 ercpe Exp $
+# $Id$
 
 EAPI="5"
 
@@ -16,15 +16,15 @@ SRC_URI="https://github.com/${MY_PN}/${MY_PN}/archive/${MY_P}.Final.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 CDEPEND="dev-java/${MY_PN}-buffer:0
 	dev-java/${MY_PN}-common:0"
 
-RDEPEND=">=virtual/jre-1.6
+RDEPEND=">=virtual/jre-1.7
 	${CDEPEND}"
 
-DEPEND=">=virtual/jdk-1.6
+DEPEND=">=virtual/jdk-1.7
 	${CDEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${MY_P}.Final/${PN/${MY_PN}-}"

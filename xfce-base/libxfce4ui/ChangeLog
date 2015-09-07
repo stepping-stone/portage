@@ -1,6 +1,72 @@
 # ChangeLog for xfce-base/libxfce4ui
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.53 2014/03/11 13:23:19 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.70 2015/08/06 14:45:03 zlogene Exp $
+
+  06 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> libxfce4ui-4.12.1-r2.ebuild:
+  ia64 stable wrt bug #553500
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> libxfce4ui-4.12.1-r2.ebuild:
+  ppc stable wrt bug #553500
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  libxfce4ui-4.12.1-r2.ebuild:
+  Stable on alpha, bug 553500
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org> libxfce4ui-4.12.1-r2.ebuild:
+  Stable for PPC64 (bug #553500).
+
+  11 Jul 2015; Markus Meier <maekke@gentoo.org> libxfce4ui-4.12.1-r2.ebuild:
+  arm stable, bug #553500
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> libxfce4ui-4.12.1-r2.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Jason Zaman <perfinion@gentoo.org> -libxfce4ui-4.11.1.ebuild,
+  -libxfce4ui-4.12.1-r1.ebuild:
+  drop old
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> libxfce4ui-4.12.1-r2.ebuild:
+  x86 stable wrt bug #553500
+
+  01 Jul 2015; Jeroen Roovers <jer@gentoo.org> libxfce4ui-4.12.1-r2.ebuild:
+  Stable for HPPA (bug #553500).
+
+  20 Jun 2015; Michał Górny <mgorny@gentoo.org> libxfce4ui-4.12.1-r2.ebuild:
+  Fix gtk-doc install location
+
+  20 Jun 2015; Michał Górny <mgorny@gentoo.org> libxfce4ui-4.12.1-r1.ebuild:
+  Restore USE=glade in the older ebuild, removal was accidental.
+
+*libxfce4ui-4.12.1-r2 (20 Jun 2015)
+
+  20 Jun 2015; Michał Górny <mgorny@gentoo.org> +libxfce4ui-4.12.1-r2.ebuild,
+  -libxfce4ui-4.12.1.ebuild, libxfce4ui-4.12.1-r1.ebuild:
+  Drop USE=glade as it uses deprecated glade:3, bug #551296.
+
+*libxfce4ui-4.12.1-r1 (11 May 2015)
+
+  11 May 2015; Michał Górny <mgorny@gentoo.org> +libxfce4ui-4.12.1-r1.ebuild,
+  metadata.xml:
+  Add gtk3 USE flag. Bug #547270, PR https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/112. Big thanks to Karl Lindén and brakarov.
+
+*libxfce4ui-4.12.1 (15 Mar 2015)
+
+  15 Mar 2015; Michał Górny <mgorny@gentoo.org> +libxfce4ui-4.12.1.ebuild,
+  -libxfce4ui-4.12.0.ebuild:
+  Version bump with bugfixes. Remove the buggy version.
+
+*libxfce4ui-4.12.0 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +libxfce4ui-4.12.0.ebuild:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libxfce4ui-4.11.1.ebuild:
+  add arm64 support, tested on A53 board
 
 *libxfce4ui-4.11.1 (11 Mar 2014)
 

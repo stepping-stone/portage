@@ -1,6 +1,157 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.340 2015/02/10 12:17:43 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.368 2015/08/04 08:35:30 monsieurp Exp $
+
+  04 Aug 2015; Patrice Clement <monsieurp@gentoo.org> -tomcat-6.0.44.ebuild,
+  -tomcat-7.0.59-r1.ebuild, -tomcat-7.0.59.ebuild, -tomcat-8.0.23-r1.ebuild,
+  -tomcat-8.0.23.ebuild:
+  Remove vulnerable versions. Fixes security bug 458890.
+
+  04 Aug 2015; Agostino Sarubbo <ago@gentoo.org> tomcat-6.0.44-r0.ebuild,
+  tomcat-7.0.59-r2.ebuild:
+  Stable for ppc64, wrt bug #458890
+
+  04 Aug 2015; Agostino Sarubbo <ago@gentoo.org> tomcat-6.0.44-r0.ebuild,
+  tomcat-7.0.59-r2.ebuild:
+  Stable for ppc, wrt bug #458890
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> tomcat-6.0.44-r0.ebuild,
+  tomcat-7.0.59-r2.ebuild, tomcat-8.0.23-r2.ebuild:
+  Stable for x86, wrt bug #458890
+
+  23 Jul 2015; Agostino Sarubbo <ago@gentoo.org> tomcat-6.0.44-r0.ebuild,
+  tomcat-7.0.59-r2.ebuild, tomcat-8.0.23-r2.ebuild:
+  Stable for amd64, wrt bug #458890
+
+  22 Jul 2015; Patrice Clement <monsieurp@gentoo.org> tomcat-7.0.59-r1.ebuild,
+  tomcat-7.0.59-r2.ebuild, tomcat-7.0.59.ebuild:
+  Override java.7.home property unconditionally. This was causing tomcat's
+  javadoc generation to fail.
+
+  22 Jul 2015; Patrice Clement <monsieurp@gentoo.org> tomcat-6.0.44-r0.ebuild,
+  tomcat-7.0.59-r2.ebuild, tomcat-8.0.23-r2.ebuild:
+  Feed dodir and fperms functions with the ${dest} variable. This variable is
+  already formatted with the $CATALINA_BASE full path. Fix security bug 458890.
+
+*tomcat-6.0.44-r0 (21 Jul 2015)
+*tomcat-7.0.59-r2 (21 Jul 2015)
+*tomcat-8.0.23-r2 (21 Jul 2015)
+
+  21 Jul 2015; Patrice Clement <monsieurp@gentoo.org> +tomcat-6.0.44-r0.ebuild,
+  +tomcat-7.0.59-r2.ebuild, +tomcat-8.0.23-r2.ebuild:
+  Create logs directory in $CATALINA_BASE and set up perms to 0750. Fix security
+  bug 458890.
+
+  12 Jul 2015; Patrick Lauer <patrick@gentoo.org> -tomcat-8.0.22-r1.ebuild,
+  -tomcat-8.0.22.ebuild:
+  Remove versions with unsatisfiable dependencies
+
+  15 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  -files/tomcat-6.0.41-build.xml.patch, -files/tomcat-6.0.43-build.xml.patch,
+  -files/tomcat-7.0.56-build.xml.patch, -files/tomcat-7.0.57-build.xml.patch,
+  -tomcat-6.0.41.ebuild, -tomcat-6.0.43.ebuild, -tomcat-7.0.56.ebuild,
+  -tomcat-7.0.57.ebuild:
+  Remove old.
+
+  15 Jun 2015; Agostino Sarubbo <ago@gentoo.org> tomcat-6.0.44.ebuild,
+  tomcat-7.0.59.ebuild:
+  Stable for ppc, wrt bug #549536
+
+  10 Jun 2015; Agostino Sarubbo <ago@gentoo.org> tomcat-6.0.44.ebuild,
+  tomcat-7.0.59.ebuild:
+  Stable for ppc64, wrt bug #549536
+
+*tomcat-8.0.22-r1 (09 Jun 2015)
+*tomcat-7.0.59-r1 (09 Jun 2015)
+*tomcat-8.0.23-r1 (09 Jun 2015)
+
+  09 Jun 2015; Patrice Clement <monsieurp@gentoo.org> +tomcat-7.0.59-r1.ebuild,
+  +tomcat-8.0.22-r1.ebuild, +tomcat-8.0.23-r1.ebuild:
+  Remove jakarta-jstl dependency. Fix bug 551032.
+
+  08 Jun 2015; Patrice Clement <monsieurp@gentoo.org> tomcat-7.0.59.ebuild:
+  Add back ~ppc and ~ppc64 keywords to make repoman happy.
+
+  05 Jun 2015; Agostino Sarubbo <ago@gentoo.org> tomcat-6.0.44.ebuild,
+  tomcat-7.0.59.ebuild:
+  Stable for x86, wrt bug #549536
+
+  05 Jun 2015; Agostino Sarubbo <ago@gentoo.org> tomcat-6.0.44.ebuild,
+  tomcat-7.0.59.ebuild:
+  Stable for amd64, wrt bug #549536
+
+*tomcat-7.0.57 (03 Jun 2015)
+*tomcat-7.0.56 (03 Jun 2015)
+*tomcat-6.0.41 (03 Jun 2015)
+*tomcat-6.0.43 (03 Jun 2015)
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +files/tomcat-6.0.41-build.xml.patch, +files/tomcat-6.0.43-build.xml.patch,
+  +files/tomcat-7.0.56-build.xml.patch, +files/tomcat-7.0.57-build.xml.patch,
+  +tomcat-6.0.41.ebuild, +tomcat-6.0.43.ebuild, +tomcat-7.0.56.ebuild,
+  +tomcat-7.0.57.ebuild:
+  Restore vulnerable ebuilds until security team stabilise the new version. See
+  bug 549536.
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  -files/tomcat-7.0.56-build.xml.patch, -files/tomcat-7.0.57-build.xml.patch,
+  -tomcat-7.0.56.ebuild, -tomcat-7.0.57.ebuild:
+  Remove vulnerable versions < Tomcat 7.0.59. Fix security bug 549536.
+
+*tomcat-6.0.44 (03 Jun 2015)
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +files/tomcat-6.0.44-build.xml.patch, +tomcat-6.0.44.ebuild,
+  -files/tomcat-6.0.41-build.xml.patch, -files/tomcat-6.0.43-build.xml.patch,
+  -tomcat-6.0.41.ebuild, -tomcat-6.0.43.ebuild:
+  Tomcat 6.0.44 version bump. EAPI 5 bump. Remove vulnerable versions. Fix
+  security bug 549536.
+
+  26 May 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/tomcat-8.0.20-build.xml.patch, -files/tomcat-8.0.21-build.xml.patch:
+  removed obsolete files
+
+*tomcat-8.0.23 (26 May 2015)
+
+  26 May 2015; Miroslav Šulc <fordfrog@gentoo.org> +tomcat-8.0.23.ebuild,
+  +files/tomcat-8.0.23-build.xml.patch:
+  version bump
+
+  26 May 2015; Miroslav Šulc <fordfrog@gentoo.org> -tomcat-8.0.18.ebuild,
+  -tomcat-8.0.20.ebuild, -tomcat-8.0.21.ebuild,
+  -files/tomcat-8.0.18-build.xml.patch:
+  removed obsolete ebuilds
+
+*tomcat-8.0.22 (07 May 2015)
+
+  07 May 2015; Miroslav Šulc <fordfrog@gentoo.org> +tomcat-8.0.22.ebuild,
+  +files/tomcat-8.0.22-build.xml.patch:
+  version bump
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> tomcat-7.0.57.ebuild:
+  x86 stable wrt bug #539596
+
+*tomcat-8.0.21 (28 Mar 2015)
+
+  28 Mar 2015; Miroslav Šulc <fordfrog@gentoo.org> +tomcat-8.0.21.ebuild,
+  +files/tomcat-8.0.21-build.xml.patch:
+  version bump
+
+*tomcat-8.0.20 (24 Feb 2015)
+
+  24 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> +tomcat-8.0.20.ebuild,
+  +files/tomcat-8.0.20-build.xml.patch:
+  version bump
+
+  20 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> tomcat-8.0.18.ebuild:
+  changed to eapi 5, simplified find command
+
+*tomcat-8.0.18 (20 Feb 2015)
+
+  20 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> +tomcat-8.0.18.ebuild,
+  +files/tomcat-8.0.18-build.xml.patch:
+  version bump (per bug #540696, ebuild by William L. Thomson Jr.
+  <wlt@obsidian-studios.com>)
 
 *tomcat-6.0.43 (10 Feb 2015)
 

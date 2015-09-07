@@ -1,6 +1,78 @@
 # ChangeLog for dev-python/pandas
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.39 2014/12/21 18:29:37 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.56 2015/08/03 07:07:46 jlec Exp $
+
+  03 Aug 2015; Justin Lecher <jlec@gentoo.org>
+  -files/pandas-0.16.1-zoneinfo.patch, -files/pandas-9999-zoneinfo.patch,
+  -pandas-0.16.1-r1.ebuild:
+  Drop old
+
+  02 Aug 2015; Agostino Sarubbo <ago@gentoo.org> pandas-0.16.2.ebuild:
+  Stable for x86, wrt bug #556040
+
+  31 Jul 2015; Agostino Sarubbo <ago@gentoo.org> pandas-0.16.2.ebuild:
+  Stable for amd64, wrt bug #556040
+
+  28 Jun 2015; Justin Lecher <jlec@gentoo.org>
+  -files/pandas-0.13.1-backport-test-fix.patch,
+  -files/pandas-0.15.0-backport-GH8587.patch,
+  -files/pandas-0.15.1-datetutil-2.3.patch,
+  -files/pandas-0.15.1-enconding.patch, -files/pandas-0.15.1-skip-tz-test.patch,
+  -files/pandas-0.15.2-zoneinfo.patch, -pandas-0.15.2.ebuild,
+  -pandas-0.16.0.ebuild, pandas-9999.ebuild:
+  Drop old
+
+  28 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> pandas-0.16.1-r1.ebuild:
+  x86 stable wrt bug #552220
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> pandas-0.16.1-r1.ebuild:
+  Stable for amd64, wrt bug #552220
+
+  22 Jun 2015; Justin Lecher <jlec@gentoo.org> pandas-0.16.2.ebuild:
+  Prefer dev-python/xlsxwriter over dev-python/openyxl
+
+*pandas-0.16.2 (15 Jun 2015)
+
+  15 Jun 2015; Justin Lecher <jlec@gentoo.org> +pandas-0.16.2.ebuild:
+  Versio Bump
+
+*pandas-0.16.1-r1 (15 May 2015)
+
+  15 May 2015; Justin Lecher <jlec@gentoo.org> +pandas-0.16.1-r1.ebuild,
+  -pandas-0.16.1.ebuild, files/pandas-0.16.1-zoneinfo.patch,
+  files/pandas-9999-zoneinfo.patch, pandas-9999.ebuild:
+  Fix python-dateutil compatibility
+
+*pandas-0.16.1 (13 May 2015)
+
+  13 May 2015; Justin Lecher <jlec@gentoo.org>
+  +files/pandas-0.16.1-zoneinfo.patch, +pandas-0.16.1.ebuild,
+  pandas-9999.ebuild:
+  Version Bump
+
+  13 May 2015; Justin Lecher <jlec@gentoo.org>
+  +files/pandas-9999-zoneinfo.patch, pandas-9999.ebuild:
+  Update zoneinfo patch for HEAD
+
+  15 Apr 2015; Justin Lecher <jlec@gentoo.org> pandas-0.16.0.ebuild,
+  pandas-9999.ebuild:
+  Drop examples as they aren't present anymore, #545938
+
+*pandas-0.16.0 (07 Apr 2015)
+
+  07 Apr 2015; Justin Lecher <jlec@gentoo.org> +pandas-0.16.0.ebuild,
+  pandas-0.15.2.ebuild, pandas-9999.ebuild:
+  Version Bump
+
+  19 Mar 2015; Justin Lecher <jlec@gentoo.org> -pandas-0.15.0.ebuild,
+  -pandas-0.15.1.ebuild, pandas-0.15.2.ebuild, pandas-9999.ebuild:
+  Drop old
+
+  09 Mar 2015; Pacho Ramos <pacho@gentoo.org> pandas-0.15.2.ebuild:
+  x86 stable, bug 540290
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> pandas-0.15.2.ebuild:
+  amd64 stable, bug 540290
 
 *pandas-0.15.2 (21 Dec 2014)
 
@@ -42,7 +114,7 @@
   -pandas-0.14.1.ebuild, pandas-0.15.0.ebuild, +pandas-0.15.1.ebuild,
   +pandas-9999.ebuild, +files/pandas-0.15.0-backport-GH8587.patch,
   +files/pandas-0.15.1-skip-tz-test.patch:
-  Drop old; Version BUmp; backport testsuite patch, #521880
+  Drop old; Version Bump; backport testsuite patch, #521880
 
 *pandas-0.15.0 (26 Oct 2014)
 
@@ -81,7 +153,7 @@
 
   21 Feb 2014; Justin Lecher <jlec@gentoo.org> +pandas-0.13.1.ebuild,
   +files/pandas-0.13.1-backport-test-fix.patch:
-  Version BUmp
+  Version Bump
 
   22 Jan 2014; Justin Lecher <jlec@gentoo.org> pandas-0.13.0.ebuild:
   Doesn't build docs correctly with <sphinx-1.2.1, #498856

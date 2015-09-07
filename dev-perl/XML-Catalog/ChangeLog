@@ -1,6 +1,16 @@
 # ChangeLog for dev-perl/XML-Catalog
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Catalog/ChangeLog,v 1.25 2014/08/24 02:07:58 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Catalog/ChangeLog,v 1.27 2015/06/13 22:53:03 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  XML-Catalog-1.03.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
+
+*XML-Catalog-1.03.0 (04 Mar 2015)
+
+  04 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
+  +XML-Catalog-1.03.0.ebuild:
+  Version bump.
 
 *XML-Catalog-0.20.0-r1 (24 Aug 2014)
 

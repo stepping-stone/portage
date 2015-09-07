@@ -1,6 +1,63 @@
 # ChangeLog for dev-ruby/sexp_processor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/ChangeLog,v 1.38 2015/01/18 03:10:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/ChangeLog,v 1.53 2015/07/30 15:16:47 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> sexp_processor-4.4.4.ebuild:
+  Stable for sparc, wrt bug #552244
+
+  23 Jul 2015; Manuel Rüger <mrueg@gentoo.org> -sexp_processor-3.2.0-r1.ebuild,
+  -sexp_processor-3.2.0.ebuild:
+  Remove old slot. Nothing depends on it anymore.
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> sexp_processor-4.4.4.ebuild:
+  ppc stable wrt bug #552244
+
+  20 Jul 2015; Jeroen Roovers <jer@gentoo.org> sexp_processor-4.4.4.ebuild:
+  Stable for HPPA (bug #552244).
+
+  17 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> sexp_processor-4.4.4.ebuild:
+  ia64 stable wrt bug #552244
+
+  16 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  sexp_processor-4.4.4.ebuild:
+  Stable on alpha, bug 552244
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> sexp_processor-4.4.4.ebuild:
+  Stable for x86, wrt bug #552244
+
+  26 Jun 2015; Agostino Sarubbo <ago@gentoo.org> sexp_processor-4.4.4.ebuild:
+  Stable for amd64, wrt bug #552244
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +sexp_processor-4.4.4.ebuild:
+  Create stable candidate.
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +sexp_processor-4.4.4.ebuild,
+  sexp_processor-4.4.5.ebuild:
+  Restore this version since it does not need a newer minitest stable yet.
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> sexp_processor-4.4.5.ebuild:
+  Create stable candidate.
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> -sexp_processor-4.4.4.ebuild:
+  Cleanup.
+
+*sexp_processor-4.6.0 (07 Jun 2015)
+
+  07 Jun 2015; Hans de Graaff <graaff@gentoo.org> +sexp_processor-4.6.0.ebuild:
+  Version bump.
+
+  28 Apr 2015; Hans de Graaff <graaff@gentoo.org>
+  sexp_processor-3.2.0-r1.ebuild:
+  Add ruby22.
+
+  28 Apr 2015; Hans de Graaff <graaff@gentoo.org> -sexp_processor-4.4.3.ebuild,
+  -sexp_processor-4.4.3-r1.ebuild:
+  Cleanup.
+
+*sexp_processor-4.5.1 (28 Apr 2015)
+
+  28 Apr 2015; Hans de Graaff <graaff@gentoo.org> +sexp_processor-4.5.1.ebuild:
+  Version bump.
 
 *sexp_processor-4.4.5 (18 Jan 2015)
 

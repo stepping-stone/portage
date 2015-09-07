@@ -1,6 +1,89 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.343 2015/01/05 17:58:25 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.365 2015/08/02 08:54:57 pacho Exp $
+
+  02 Aug 2015; Pacho Ramos <pacho@gentoo.org> boost-1.56.0-r1.ebuild:
+  sparc stable wrt bug #554712
+
+  30 Jul 2015; Markus Meier <maekke@gentoo.org> boost-1.56.0-r1.ebuild:
+  arm stable, bug #554712
+
+*boost-1.58.0-r1 (27 Jul 2015)
+
+  27 Jul 2015; Sergey Popov <pinkbyte@gentoo.org> -boost-1.58.0.ebuild,
+  +boost-1.58.0-r1.ebuild,
+  +files/boost-1.58.0-fix-non-constexpr-types-regression.patch:
+  Revision bump: backport upstream patch, that fixes regression in
+  Boost.Fusion, drop python 3.3 support. Drop old revision
+
+  27 Jul 2015; Sergey Popov <pinkbyte@gentoo.org> boost-1.55.0-r2.ebuild,
+  boost-1.56.0-r1.ebuild, +files/boost-1.55.0-variadic-templates.patch:
+  Fix building with USE=context and GCC 5.1 and higher, wrt bugs #546882 and
+  #555580
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> boost-1.56.0-r1.ebuild:
+  ppc stable wrt bug #554712
+
+  17 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> boost-1.56.0-r1.ebuild:
+  ia64 syable wrt bug #554712
+
+  17 Jul 2015; Tobias Klausmann <klausman@gentoo.org> boost-1.56.0-r1.ebuild:
+  Stable on alpha, bug 554712
+
+  17 Jul 2015; Jeroen Roovers <jer@gentoo.org> boost-1.56.0-r1.ebuild:
+  Stable for HPPA PPC64 (bug #554712).
+
+  15 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> boost-1.56.0-r1.ebuild:
+  x86 stable wrt bug #554712
+
+  13 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> boost-1.56.0-r1.ebuild:
+  amd64 stable wrt bug #554712
+
+*boost-1.58.0 (13 Jul 2015)
+
+  13 Jul 2015; Sergey Popov <pinkbyte@gentoo.org> +boost-1.58.0.ebuild:
+  Version bump, wrt bug #549138
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  03 Jun 2015; Sergey Popov <pinkbyte@gentoo.org> boost-1.52.0-r7.ebuild,
+  boost-1.53.0-r1.ebuild, boost-1.54.0-r1.ebuild:
+  Transfer older Boost ebuilds to virtual/mpi to resolve bug #547212
+
+  27 Apr 2015; Sergey Popov <pinkbyte@gentoo.org> -boost-1.52.0-r6.ebuild,
+  boost-1.52.0-r7.ebuild:
+  Transfer stable keywords to newer revision, drop really old one
+
+  16 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> boost-1.55.0-r2.ebuild:
+  sparc stable wrt bug #525286
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> boost-1.55.0-r2.ebuild:
+  Stable for ia64, wrt bug #525286
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> boost-1.55.0-r2.ebuild:
+  Stable for alpha, wrt bug #525286
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> boost-1.52.0-r6.ebuild,
+  boost-1.52.0-r7.ebuild, boost-1.53.0-r1.ebuild, boost-1.54.0-r1.ebuild,
+  boost-1.55.0-r2.ebuild, boost-1.56.0-r1.ebuild, boost-1.57.0.ebuild:
+  Drop old Python implementations
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> boost-1.55.0-r2.ebuild,
+  boost-1.57.0.ebuild:
+  Expand arm64 keywords.
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> boost-1.56.0-r1.ebuild:
+  add arm64 support, tested on A53 board
+
+  27 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> boost-1.55.0-r2.ebuild,
+  boost-1.56.0-r1.ebuild, boost-1.57.0.ebuild:
+  Set MPI dependency to virtual/mpi, wrt bug #525596
+
+*boost-1.57.0 (27 Feb 2015)
+
+  27 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> +boost-1.57.0.ebuild:
+  Version bump, wrt bug #528204
 
   05 Jan 2015; Christoph Junghans <ottxor@gentoo.org> boost-1.56.0-r1.ebuild:
   added prefix keywords (ebuild does not differ from prefix overlay)

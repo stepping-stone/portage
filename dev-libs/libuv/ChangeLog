@@ -1,6 +1,49 @@
 # ChangeLog for dev-libs/libuv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.32 2015/02/16 17:47:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.42 2015/07/30 12:35:30 ago Exp $
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libuv-1.4.2.ebuild:
+  Stable for sparc, wrt bug #555182
+
+  28 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libuv-1.4.2.ebuild:
+  Stable for x86, wrt bug #555182
+
+  28 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libuv-1.4.2.ebuild:
+  Stable for amd64, wrt bug #555182
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> libuv-1.4.2.ebuild:
+  ppc stable wrt bug #555182
+
+*libuv-1.6.1 (15 Jun 2015)
+
+  15 Jun 2015; Michał Górny <mgorny@gentoo.org> +libuv-1.6.1.ebuild:
+  Version bump. https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/141
+  by jbergstroem.
+
+*libuv-1.5.0 (18 May 2015)
+
+  18 May 2015; Michał Górny <mgorny@gentoo.org> +libuv-1.5.0.ebuild:
+  Version bump. https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/115
+  by jbergstroem.
+
+*libuv-1.1.0 (05 Mar 2015)
+
+  05 Mar 2015; Patrick Lauer <patrick@gentoo.org> +libuv-1.1.0.ebuild:
+  Restore version needed by nodejs
+
+  05 Mar 2015; Julian Ospald <hasufell@gentoo.org> libuv-0.11.25-r1.ebuild,
+  libuv-0.11.29.ebuild, metadata.xml:
+  update HOMEPAGE, SRC_URI and metadata.xml
+
+  05 Mar 2015; Julian Ospald <hasufell@gentoo.org> -libuv-0.11.26.ebuild,
+  -libuv-0.11.27.ebuild, -libuv-1.1.0.ebuild, -libuv-1.2.1-r1.ebuild,
+  -libuv-1.4.0.ebuild:
+  rm old
+
+*libuv-1.4.2 (05 Mar 2015)
+
+  05 Mar 2015; Julian Ospald <hasufell@gentoo.org> +libuv-1.4.2.ebuild:
+  version bump
 
 *libuv-1.4.0 (16 Feb 2015)
 

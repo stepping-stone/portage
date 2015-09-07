@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/pluma/pluma-1.8.1.ebuild,v 1.6 2014/12/10 09:25:06 tamiko Exp $
+# $Id$
 
 EAPI="5"
 
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit gnome2 multilib python-single-r1 versionator virtualx
 
@@ -61,7 +61,7 @@ DEPEND="${RDEPEND}
 	app-text/yelp-tools:0
 	>=dev-util/intltool-0.40:*
 	>=sys-devel/libtool-2.2.6:2
-	>=mate-base/mate-common-1.6:0
+	>=mate-base/mate-common-1.8:0
 	>=sys-devel/gettext-0.17:*
 	virtual/pkgconfig:*"
 

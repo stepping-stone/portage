@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.5.14-r1.ebuild,v 1.1 2014/09/08 23:14:34 vapier Exp $
+# $Id$
 
 EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="GNU utilities for finding files"
-HOMEPAGE="http://www.gnu.org/software/findutils/"
+HOMEPAGE="https://www.gnu.org/software/findutils/"
 SRC_URI="mirror://gnu-alpha/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3+"
@@ -21,9 +21,15 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-test-bashisms.patch #531020
 	# Don't build or install locate because it conflicts with slocate,
 	# which is a secure version of locate.  See bug 18729
 	sed -i '/^SUBDIRS/s/locate//' Makefile.in
+
+	# Disable gnulib build test that has no impact on the source.
+	# Re-enable w/next version bump (and gnulib is updated). #554728
+	[[ ${PV} != "4.5.14" ]] && die "re-enable test #554728"
+	echo 'exit 0' > tests/test-update-copyright.sh || die
 }
 
 src_configure() {
@@ -33,7 +39,7 @@ src_configure() {
 	econf \
 		--with-packager="Gentoo" \
 		--with-packager-version="${PVR}" \
-		--with-packager-bug-reports="http://bugs.gentoo.org/" \
+		--with-packager-bug-reports="https://bugs.gentoo.org/" \
 		--program-prefix=${program_prefix} \
 		$(use_enable debug) \
 		$(use_enable nls) \

@@ -1,6 +1,30 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.89 2015/02/10 12:23:02 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.96 2015/08/08 14:16:14 maekke Exp $
+
+  08 Aug 2015; Markus Meier <maekke@gentoo.org> denyhosts-2.9.ebuild:
+  arm stable, bug #556522
+
+  06 Aug 2015; Tobias Klausmann <klausman@gentoo.org> denyhosts-2.9.ebuild:
+  Stable on alpha, bug 556522
+
+  06 Aug 2015; Agostino Sarubbo <ago@gentoo.org> denyhosts-2.9.ebuild:
+  Stable for x86, wrt bug #556522
+
+  03 Aug 2015; Agostino Sarubbo <ago@gentoo.org> denyhosts-2.9.ebuild:
+  Stable for amd64, wrt bug #556522
+
+*denyhosts-3.0 (02 Aug 2015)
+
+  02 Aug 2015; Christoph Junghans <ottxor@gentoo.org> +denyhosts-3.0.ebuild:
+  version bump
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> denyhosts-2.6-r10.ebuild,
+  denyhosts-2.6-r9.ebuild:
+  Remove old Python implementations
 
   10 Feb 2015; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
   Drop myself from metadata

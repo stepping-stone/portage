@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-340.76.ebuild,v 1.3 2015/02/09 07:35:58 jer Exp $
+# $Id$
 
 EAPI=5
 
@@ -30,10 +30,10 @@ RESTRICT="bindist mirror strip"
 EMULTILIB_PKG="true"
 
 COMMON="
-	app-admin/eselect-opencl
+	app-eselect/eselect-opencl
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	X? (
-		>=app-admin/eselect-opengl-1.0.9
+		>=app-eselect/eselect-opengl-1.0.9
 	)
 "
 DEPEND="
@@ -46,7 +46,7 @@ RDEPEND="
 	acpi? ( sys-power/acpid )
 	tools? (
 		dev-libs/atk
-		dev-libs/glib
+		dev-libs/glib:2
 		x11-libs/gdk-pixbuf
 		>=x11-libs/gtk+-2.4:2
 		x11-libs/libX11
@@ -57,13 +57,8 @@ RDEPEND="
 		<x11-base/xorg-server-1.17.99:=
 		>=x11-libs/libvdpau-0.3-r1
 		multilib? (
-			|| (
-				 (
-					>=x11-libs/libX11-1.6.2[abi_x86_32]
-					>=x11-libs/libXext-1.3.2[abi_x86_32]
-				 )
-				app-emulation/emul-linux-x86-xlibs
-			)
+			>=x11-libs/libX11-1.6.2[abi_x86_32]
+			>=x11-libs/libXext-1.3.2[abi_x86_32]
 		)
 	)
 "
@@ -341,8 +336,7 @@ src_install() {
 		newins nvidia-application-profiles-${PV}-rc nvidia-application-profiles-rc
 	fi
 
-	exeinto /usr/bin/
-	doexe ${NV_OBJ}/nvidia-bug-report.sh
+	dobin ${NV_OBJ}/nvidia-bug-report.sh
 
 	# Desktop entries for nvidia-settings
 	if use tools ; then

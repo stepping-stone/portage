@@ -1,6 +1,37 @@
 # ChangeLog for media-libs/libdvbpsi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.65 2014/04/16 17:54:05 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.74 2015/08/02 18:45:11 ago Exp $
+
+  02 Aug 2015; Agostino Sarubbo <ago@gentoo.org> libdvbpsi-1.2.0.ebuild:
+  Stable for x86, wrt bug #530316
+
+  30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libdvbpsi-1.2.0.ebuild:
+  Stable for sparc, wrt bug #530316
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> libdvbpsi-1.2.0.ebuild:
+  ppc stable wrt bug #530316
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libdvbpsi-1.2.0.ebuild:
+  Stable for alpha, wrt bug #530316
+
+*libdvbpsi-1.3.0-r1 (29 Jun 2015)
+
+  29 Jun 2015; Alexis Ballier <aballier@gentoo.org> +libdvbpsi-1.3.0-r1.ebuild:
+  eapi5 and define subslot as libdvbpsi.so major
+
+  27 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libdvbpsi-1.2.0.ebuild:
+  Stable for amd64, wrt bug #530316
+
+*libdvbpsi-1.3.0 (25 Jun 2015)
+
+  25 Jun 2015; Alexis Ballier <aballier@gentoo.org> +libdvbpsi-1.3.0.ebuild:
+  version bump
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> libdvbpsi-1.2.0.ebuild:
+  arm stable, bug #530316
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libdvbpsi-1.2.0.ebuild:
+  add arm64 support, tested on A53 board
 
 *libdvbpsi-1.2.0 (16 Apr 2014)
 

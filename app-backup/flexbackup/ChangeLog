@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/flexbackup
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/flexbackup/ChangeLog,v 1.51 2014/03/05 15:35:50 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/flexbackup/ChangeLog,v 1.53 2015/06/09 09:03:34 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
+  19 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -flexbackup-1.2.1-r11.ebuild:
+  Remove old.
 
   05 Mar 2014; Jeroen Roovers <jer@gentoo.org> flexbackup-1.2.1-r12.ebuild:
   Stable for HPPA (bug #502610).

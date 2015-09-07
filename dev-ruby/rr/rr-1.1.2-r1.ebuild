@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-1.1.2-r1.ebuild,v 1.5 2014/12/28 08:56:22 graaff Exp $
+# $Id$
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 
@@ -15,7 +15,7 @@ inherit ruby-fakegem
 
 DESCRIPTION="A double framework that features a rich selection of double techniques and a terse syntax"
 HOMEPAGE="http://pivotallabs.com/"
-SRC_URI="http://github.com/rr/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/rr/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

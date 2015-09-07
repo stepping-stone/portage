@@ -23,16 +23,11 @@ amd64           default/linux/amd64/13.0/desktop/gnome             stable
 amd64           default/linux/amd64/13.0/desktop/gnome/systemd     stable
 amd64           default/linux/amd64/13.0/desktop/kde               stable
 amd64           default/linux/amd64/13.0/desktop/kde/systemd       stable
+amd64           default/linux/amd64/13.0/desktop/plasma            stable
+amd64           default/linux/amd64/13.0/desktop/plasma/systemd    stable
 amd64           default/linux/amd64/13.0/developer                 stable
-amd64           default/linux/amd64/13.0/no-emul-linux-x86                           dev
-amd64           default/linux/amd64/13.0/no-emul-linux-x86/desktop                   dev
-amd64           default/linux/amd64/13.0/no-emul-linux-x86/desktop/gnome             dev
-amd64           default/linux/amd64/13.0/no-emul-linux-x86/desktop/gnome/systemd     dev
-amd64           default/linux/amd64/13.0/no-emul-linux-x86/desktop/kde               dev
-amd64           default/linux/amd64/13.0/no-emul-linux-x86/desktop/kde/systemd       dev
-amd64           default/linux/amd64/13.0/no-emul-linux-x86/developer                 dev
-amd64           default/linux/amd64/13.0/no-emul-linux-x86/selinux                   dev
 amd64           default/linux/amd64/13.0/no-multilib               dev
+amd64           default/linux/amd64/13.0/systemd                   stable
 amd64           default/linux/amd64/13.0/x32                       dev
 
 # ARM Profiles
@@ -109,6 +104,9 @@ mips            default/linux/mips/13.0/mipsel/multilib/o32     dev
 mips            default/linux/mips/13.0/mipsel/multilib/n32     dev
 mips            default/linux/mips/13.0/mipsel/multilib/n64     exp
 
+# Nios II Profiles
+nios2           default/linux/nios2/13.0                        exp
+
 # PPC32 Profiles
 ppc             default/linux/powerpc/ppc32/13.0                       stable
 ppc             default/linux/powerpc/ppc32/13.0/desktop               stable
@@ -133,6 +131,9 @@ ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/desktop/gnome/sy
 ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/desktop/kde             stable
 ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/desktop/kde/systemd     stable
 ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/developer               stable
+
+# RISC-V Profiles
+riscv           default/linux/riscv/13.0                        exp
 
 # S390 Profiles
 s390            default/linux/s390/13.0                         exp
@@ -162,16 +163,24 @@ x86             default/linux/x86/13.0/desktop/gnome            stable
 x86             default/linux/x86/13.0/desktop/gnome/systemd    stable
 x86             default/linux/x86/13.0/desktop/kde              stable
 x86             default/linux/x86/13.0/desktop/kde/systemd      stable
+x86             default/linux/x86/13.0/desktop/plasma           stable
+x86             default/linux/x86/13.0/desktop/plasma/systemd   stable
 x86             default/linux/x86/13.0/developer                stable
 
 # Gentoo/FreeBSD Profiles
 amd64-fbsd	default/bsd/fbsd/amd64/9.1			dev
 amd64-fbsd	default/bsd/fbsd/amd64/9.2			dev
+amd64-fbsd	default/bsd/fbsd/amd64/10.1			dev
+amd64-fbsd	default/bsd/fbsd/amd64/10.2			dev
 amd64-fbsd	default/bsd/fbsd/amd64/9.1/clang		exp
 amd64-fbsd	default/bsd/fbsd/amd64/9.2/clang		exp
+amd64-fbsd	default/bsd/fbsd/amd64/10.1/clang		exp
+amd64-fbsd	default/bsd/fbsd/amd64/10.2/clang		exp
 sparc-fbsd      default/bsd/fbsd/sparc/8.2                      exp
 x86-fbsd	default/bsd/fbsd/x86/9.1			dev
 x86-fbsd	default/bsd/fbsd/x86/9.2			dev
+x86-fbsd	default/bsd/fbsd/x86/10.1			dev
+x86-fbsd	default/bsd/fbsd/x86/10.2			dev
 
 # Hardened Profiles
 amd64		hardened/linux/amd64					stable
@@ -180,6 +189,7 @@ amd64		hardened/linux/amd64/no-multilib			stable
 amd64		hardened/linux/amd64/no-multilib/selinux		stable
 amd64		hardened/linux/amd64/x32				dev
 amd64		hardened/linux/musl/amd64				exp
+amd64		hardened/linux/musl/amd64/x32				exp
 arm		hardened/linux/arm/armv7a				dev
 arm		hardened/linux/arm/armv6j				dev
 arm		hardened/linux/musl/arm/armv7a				exp
@@ -284,6 +294,8 @@ x86-winnt		prefix/windows/winnt/6.1/x86			exp
 
 # Cygwin Profiles
 x86-cygwin		prefix/windows/cygwin/1.7/x86			exp
+x86-cygwin		prefix/windows/cygwin/2.0/x86			exp
+x64-cygwin		prefix/windows/cygwin/2.0/x64			exp
 
 # HP-UX Profiles
 ia64-hpux		prefix/hpux/B.11.23/ia64			exp

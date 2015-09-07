@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/clusterssh
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/ChangeLog,v 1.22 2014/12/11 14:32:13 ultrabug Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/ChangeLog,v 1.27 2015/06/13 19:40:09 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  clusterssh-4.03.03.ebuild, clusterssh-9999.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> -clusterssh-4.01.05.ebuild:
+  Drop old
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> clusterssh-4.03.03.ebuild:
+  Stable for x86, wrt bug #542636
+
+  09 Mar 2015; Agostino Sarubbo <ago@gentoo.org> clusterssh-4.03.03.ebuild:
+  Stable for amd64, wrt bug #542636
 
 *clusterssh-4.03.03 (11 Dec 2014)
 
@@ -31,7 +44,7 @@
 
   16 Mar 2013; Justin Lecher <jlec@gentoo.org> clusterssh-4.01.01.ebuild,
   +clusterssh-4.01.05.ebuild, clusterssh-9999.ebuild:
-  Version BUmp
+  Version Bump
 
   14 Jan 2013; Justin Lecher <jlec@gentoo.org> -clusterssh-3.28.ebuild:
   Drop old, fix #426810

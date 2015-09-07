@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/libsfml
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/ChangeLog,v 1.15 2014/12/11 18:31:44 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/ChangeLog,v 1.18 2015/06/04 20:39:51 mr_bones_ Exp $
+
+  04 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> libsfml-2.2.ebuild:
+  add patch from Palmer Dabbelt to install pkgconfig files (bug #548364)
+
+  22 Mar 2015; Tim Harder <radhermit@gentoo.org> libsfml-1.6-r1.ebuild,
+  libsfml-2.2.ebuild:
+  Update homepage.
+
+  22 Mar 2015; Tim Harder <radhermit@gentoo.org> -libsfml-2.0.ebuild,
+  -libsfml-2.1.ebuild, -files/libsfml-2.0_pre20121126-no-docs.patch,
+  -files/libsfml-2.0_pre20121126-shared-glew.patch:
+  Remove old.
 
 *libsfml-2.2 (11 Dec 2014)
 
@@ -73,4 +85,3 @@
   +files/libsfml-1.6-deps-and-flags.patch, +files/libsfml-1.6-destdir.patch,
   +metadata.xml:
   Initial import for bug #258895. Ebuild by me.
-

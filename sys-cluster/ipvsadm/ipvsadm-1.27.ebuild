@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.27.ebuild,v 1.1 2013/11/02 06:40:02 robbat2 Exp $
+# $Id$
 
 EAPI=4
 
@@ -31,7 +31,7 @@ pkg_pretend() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.27-buildsystem.patch
 	# Merged upstream in 1.27
-	#epatch "${FILESDIR}"/${PN}-1.26-stack_smashing.patch # bug 371903 
+	#epatch "${FILESDIR}"/${PN}-1.26-stack_smashing.patch # bug 371903
 
 	use static-libs && export STATIC=1
 }

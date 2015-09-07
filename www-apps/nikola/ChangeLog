@@ -1,6 +1,44 @@
 # ChangeLog for www-apps/nikola
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.24 2015/01/31 09:42:30 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.32 2015/08/04 14:29:16 yngwin Exp $
+
+*nikola-7.6.2 (04 Aug 2015)
+
+  04 Aug 2015; Ben de Groot <yngwin@gentoo.org> +nikola-7.6.2.ebuild:
+  version bump
+
+  27 Jul 2015; Ben de Groot <yngwin@gentoo.org> nikola-7.2.0.ebuild,
+  nikola-7.6.0.ebuild, nikola-7.6.1.ebuild:
+  fix ekeyword snafu
+
+*nikola-7.6.1 (27 Jul 2015)
+
+  27 Jul 2015; Ben de Groot <yngwin@gentoo.org> +nikola-7.6.1.ebuild,
+  -nikola-7.3.1.ebuild, -nikola-7.5.1.ebuild, nikola-7.6.0.ebuild:
+  Version bump. Remove older non-stable versions.
+
+*nikola-7.6.0 (08 Jul 2015)
+
+  08 Jul 2015; Ben de Groot <yngwin@gentoo.org> +nikola-7.6.0.ebuild,
+  metadata.xml:
+  Version bump. Fix licensing issues (bug #552372).
+
+*nikola-7.5.1 (17 Jun 2015)
+
+  17 Jun 2015; Ben de Groot <yngwin@gentoo.org> +nikola-7.5.1.ebuild,
+  -nikola-7.3.0.ebuild, nikola-7.3.1.ebuild:
+  Update deps in 7.3.1. Version bump to 7.5.1 (bug #551006).
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
+
+*nikola-7.3.1 (25 Mar 2015)
+
+  25 Mar 2015; Ben de Groot <yngwin@gentoo.org> +nikola-7.3.1.ebuild:
+  version bump
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> nikola-7.2.0.ebuild:
+  amd64 stable, bug 540290
 
 *nikola-7.3.0 (31 Jan 2015)
 

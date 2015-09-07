@@ -1,6 +1,47 @@
 # ChangeLog for sci-libs/armadillo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.29 2015/01/05 16:30:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.36 2015/07/25 20:53:53 dilfridge Exp $
+
+*armadillo-5.200.2 (25 Jul 2015)
+
+  25 Jul 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +armadillo-5.200.2.ebuild:
+  Version bump
+
+  21 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -armadillo-4.600.4.ebuild, -armadillo-4.650.2.ebuild:
+  Remove old
+
+*armadillo-5.100.2 (21 May 2015)
+
+  21 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +armadillo-5.100.2.ebuild, metadata.xml:
+  Version bump
+
+  04 May 2015; Justin Lecher <jlec@gentoo.org> armadillo-4.600.4.ebuild,
+  armadillo-4.650.2.ebuild, armadillo-4.650.4.ebuild, metadata.xml:
+  Remove atlas support, fixes bug #541524, fixes https://github.com/gentoo
+  /gentoo-portage-rsync-mirror/pull/108; thanks Marius Brehler
+
+*armadillo-4.650.4 (03 Apr 2015)
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> +armadillo-4.650.4.ebuild,
+  metadata.xml:
+  Version Bump, fixes https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/79; thanks Marius Brehler for the bump
+
+*armadillo-4.650.2 (27 Feb 2015)
+
+  27 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +armadillo-4.650.2.ebuild:
+  Version bump
+
+*armadillo-4.600.4 (27 Feb 2015)
+
+  27 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +armadillo-4.600.4.ebuild, -armadillo-3.6.0.ebuild, -armadillo-3.6.1.ebuild,
+  metadata.xml:
+  Version bump from science overlay
 
   05 Jan 2015; Alexis Ballier <aballier@gentoo.org> armadillo-3.6.2.ebuild:
   keyword ~arm

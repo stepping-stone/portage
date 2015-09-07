@@ -1,20 +1,20 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.14.1.ebuild,v 1.10 2014/12/28 15:45:53 titanofold Exp $
+# $Id$
 
 EAPI=4
 USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
-RUBY_FAKEGEM_TASK_DOC="redocs"
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="ChangeLog Contributors.rdoc README.rdoc History.rdoc"
 
 inherit ruby-fakegem
 
 DESCRIPTION="Ruby extension library providing an API to PostgreSQL"
-HOMEPAGE="http://bitbucket.org/ged/ruby-pg/"
+HOMEPAGE="https://bitbucket.org/ged/ruby-pg/"
 
 LICENSE="|| ( GPL-2 Ruby )"
 SLOT="0"

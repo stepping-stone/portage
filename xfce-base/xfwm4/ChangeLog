@@ -1,6 +1,71 @@
 # ChangeLog for xfce-base/xfwm4
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.228 2014/08/22 14:30:03 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.245 2015/08/06 14:54:19 zlogene Exp $
+
+  06 Aug 2015; Mikle Kolyada <zlogene@gentoo.org> xfwm4-4.12.3.ebuild:
+  ia64 stable wrt bug #553500
+
+  05 Aug 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  Replace herd with xfce@g.o
+
+  25 Jul 2015; Pacho Ramos <pacho@gentoo.org> xfwm4-4.12.3.ebuild:
+  ppc stable wrt bug #553500
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org> xfwm4-4.12.3-r1.ebuild:
+  Stable on alpha, bug 553500
+
+  12 Jul 2015; Jeroen Roovers <jer@gentoo.org> xfwm4-4.12.3.ebuild:
+  Stable for PPC64 (bug #553500).
+
+  11 Jul 2015; Markus Meier <maekke@gentoo.org> xfwm4-4.12.3.ebuild:
+  arm stable, bug #553500
+
+*xfwm4-4.12.3-r1 (04 Jul 2015)
+
+  04 Jul 2015; Jason Zaman <perfinion@gentoo.org>
+  +files/xfwm4-4.12-touchscreen-subwindow-fix.patch, +xfwm4-4.12.3-r1.ebuild:
+  fix bug 527662, respond to touchscreen
+
+  04 Jul 2015; Jason Zaman <perfinion@gentoo.org> xfwm4-4.12.3.ebuild:
+  bug 553816, libxfce4ui dep was not specific enough
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> xfwm4-4.12.3.ebuild:
+  amd64 stable wrt bug #553500
+
+  01 Jul 2015; Jason Zaman <perfinion@gentoo.org> -xfwm4-4.11.2.ebuild,
+  -xfwm4-4.12.0.ebuild, -xfwm4-4.12.2.ebuild:
+  drop old
+
+  01 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> xfwm4-4.12.3.ebuild:
+  x86 stable wrt bug #553500
+
+  01 Jul 2015; Jeroen Roovers <jer@gentoo.org> xfwm4-4.12.3.ebuild:
+  Stable for HPPA (bug #553500).
+
+*xfwm4-4.12.3 (17 May 2015)
+
+  17 May 2015; Michał Górny <mgorny@gentoo.org> +xfwm4-4.12.3.ebuild:
+  Version bump with bugfixes. Add slot operators. Fix dependencies.
+
+*xfwm4-4.12.2 (15 Mar 2015)
+
+  15 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfwm4-4.12.2.ebuild,
+  -xfwm4-4.12.1.ebuild:
+  Version bump for bugfix.
+
+*xfwm4-4.12.1 (15 Mar 2015)
+
+  15 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfwm4-4.12.1.ebuild:
+  Version bump with some fixes.
+
+*xfwm4-4.12.0 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfwm4-4.12.0.ebuild:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> xfwm4-4.11.2.ebuild:
+  add arm64 support, tested on A53 board
 
   22 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> -xfwm4-4.11.1.ebuild:
   old

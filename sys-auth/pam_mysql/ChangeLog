@@ -1,6 +1,21 @@
 # ChangeLog for sys-auth/pam_mysql
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.25 2014/10/09 20:22:41 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.30 2015/06/28 17:57:34 zlogene Exp $
+
+  28 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> pam_mysql-0.7_rc1-r5.ebuild:
+  alpha stable wrt bug #544120
+
+  13 May 2015; Mikle Kolyada <zlogene@gentoo.org> pam_mysql-0.7_rc1-r5.ebuild:
+  sparc stable wrt bug #544120
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> pam_mysql-0.7_rc1-r5.ebuild:
+  amd64 stable wrt bug #544120
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> pam_mysql-0.7_rc1-r5.ebuild:
+  ppc stable wrt bug #544120
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> pam_mysql-0.7_rc1-r5.ebuild:
+  x86 stable wrt bug #544120
 
 *pam_mysql-0.7_rc1-r5 (19 Aug 2014)
 

@@ -1,8 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20150119112900.ebuild,v 1.1 2015/02/11 23:41:59 rafaelmartins Exp $
+# $Id$
 
 EAPI=5
+
 MY_P=${PN}-src-${PV}
 
 inherit toolchain-funcs
@@ -13,14 +14,15 @@ SRC_URI="http://www.fossil-scm.org/download/${MY_P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="json +lineedit sqlite +ssl tcl"
 
-DEPEND="sys-libs/zlib
-		lineedit? ( || ( sys-libs/readline:0 dev-libs/libedit ) )
-		ssl? ( dev-libs/openssl )
-		sqlite? ( dev-db/sqlite:3 )
-		tcl? ( dev-lang/tcl )
+DEPEND="
+	sys-libs/zlib
+	lineedit? ( || ( sys-libs/readline:0 dev-libs/libedit ) )
+	ssl? ( dev-libs/openssl:0 )
+	sqlite? ( dev-db/sqlite:3 )
+	tcl? ( dev-lang/tcl:0= )
 "
 RDEPEND="${DEPEND}"
 

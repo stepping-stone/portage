@@ -1,6 +1,19 @@
 # ChangeLog for dev-haskell/wai-extra
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-extra/ChangeLog,v 1.9 2014/12/22 08:15:57 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-extra/ChangeLog,v 1.12 2015/08/01 15:04:22 slyfox Exp $
+
+*wai-extra-3.0.10 (01 Aug 2015)
+
+  01 Aug 2015; Sergei Trofimovich <slyfox@gentoo.org> +wai-extra-3.0.10.ebuild:
+  Version bump.
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
+
+*wai-extra-3.0.6.1 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +wai-extra-3.0.6.1.ebuild:
+  Bump wai-extra to 3.0.6.1
 
 *wai-extra-3.0.3.1 (22 Dec 2014)
 

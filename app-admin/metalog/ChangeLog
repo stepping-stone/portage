@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/metalog
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.123 2014/01/18 04:33:54 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.125 2015/07/23 12:31:42 mrueg Exp $
+
+  23 Jul 2015; Manuel Rüger <mrueg@gentoo.org> -files/metalog-2-no-gets.patch,
+  -files/metalog.service, -metalog-1.ebuild, -metalog-2.ebuild,
+  -metalog-3.ebuild:
+  Remove old.
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> metalog-3-r1.ebuild:
   Add arm64 love.

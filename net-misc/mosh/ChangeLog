@@ -1,6 +1,26 @@
 # ChangeLog for net-misc/mosh
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.47 2014/04/06 11:41:31 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.52 2015/07/31 07:59:15 monsieurp Exp $
+
+*mosh-1.2.5-r1 (31 Jul 2015)
+
+  31 Jul 2015; Patrice Clement <monsieurp@gentoo.org> +mosh-1.2.5-r1.ebuild:
+  EAPI 5 bump.
+
+*mosh-1.2.5 (26 Jul 2015)
+
+  26 Jul 2015; Michael Weber <xmw@gentoo.org>
+  +files/mosh-1.2.5-git-version.patch, +mosh-1.2.5.ebuild:
+  Version bump (bug 555794, thanks DrSlony for reminding me).
+
+  26 Jun 2015; Manuel Rüger <mrueg@gentoo.org> mosh-9999.ebuild:
+  Update location of bash completion
+
+  24 Jun 2015; Manuel Rüger <mrueg@gentoo.org> mosh-9999.ebuild:
+  Upstream reverted the bash-completion fix.
+
+  22 Jun 2015; Manuel Rüger <mrueg@gentoo.org> mosh-9999.ebuild:
+  Migrate to git-r3, upstream respects bash-completion dir.
 
   06 Apr 2014; Fabian Groffen <grobian@gentoo.org> mosh-1.2.4.ebuild:
   Keyworded ~x64-macos, bug #506494

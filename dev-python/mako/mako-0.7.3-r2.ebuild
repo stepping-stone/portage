@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.7.3-r2.ebuild,v 1.14 2014/12/12 05:43:54 idella4 Exp $
+# $Id$
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit readme.gentoo versionator distutils-r1
 MY_P="Mako-${PV}"
 
 DESCRIPTION="A Python templating language"
-HOMEPAGE="http://www.makotemplates.org/ http://pypi.python.org/pypi/Mako"
+HOMEPAGE="http://www.makotemplates.org/ https://pypi.python.org/pypi/Mako"
 SRC_URI="http://www.makotemplates.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="MIT"

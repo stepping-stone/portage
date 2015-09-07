@@ -1,6 +1,29 @@
 # ChangeLog for virtual/httpd-basic
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.10 2014/03/06 16:03:03 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.16 2015/08/02 22:08:40 monsieurp Exp $
+
+  02 Aug 2015; Patrice Clement <monsieurp@gentoo.org> -httpd-basic-0.ebuild:
+  Remove old.
+
+  02 Aug 2015; Patrice Clement <monsieurp@gentoo.org> httpd-basic-0-r1.ebuild,
+  httpd-basic-0.ebuild:
+  Stable for amd64. Retroactively mark the remaining arches stable with
+  ALLARCHES. Fixes bug 556542.
+
+  02 Aug 2015; Patrice Clement <monsieurp@gentoo.org> httpd-basic-0-r1.ebuild:
+  Remove unknown dependency and clear QA warning.
+
+  02 Aug 2015; Patrice Clement <monsieurp@gentoo.org> httpd-basic-0-r1.ebuild:
+  EAPI 5 bump.
+
+*httpd-basic-0-r1 (02 Aug 2015)
+
+  02 Aug 2015; Patrice Clement <monsieurp@gentoo.org> +httpd-basic-0-r1.ebuild:
+  Prep skunkweb's removal and remove it from the list of runtime dependencies.
+  See bug 451790.
+
+  22 Mar 2015; Pacho Ramos <pacho@gentoo.org> httpd-basic-0.ebuild:
+  publicfile is going to be removed (#531270)
 
   06 Mar 2014; Manuel Rüger <mrueg@gentoo.org> httpd-basic-0.ebuild:
   Drop www-servers/mongrel.

@@ -1,6 +1,35 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.84 2015/01/15 10:49:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.93 2015/07/25 00:25:01 idella4 Exp $
+
+  25 Jul 2015; Ian Delaney <idella4@gentoo.org> -eyeD3-0.7.4-r2.ebuild,
+  eyeD3-0.7.5.ebuild:
+  remove redundant ref to instances of this package of SLOT 0, clean old version
+  wrt bug #548966
+
+  16 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> eyeD3-0.7.5.ebuild:
+  ia64 stable wrt bug #500960
+
+  03 Jul 2015; Agostino Sarubbo <ago@gentoo.org> eyeD3-0.7.5.ebuild:
+  Stable for alpha, wrt bug #500960
+
+  24 Jun 2015; Agostino Sarubbo <ago@gentoo.org> eyeD3-0.7.5.ebuild:
+  Stable for ppc, wrt bug #500960
+
+  19 Jun 2015; Markus Meier <maekke@gentoo.org> eyeD3-0.7.5.ebuild:
+  arm stable, bug #500960
+
+  17 Jun 2015; Agostino Sarubbo <ago@gentoo.org> eyeD3-0.7.5.ebuild:
+  Stable for sparc, wrt bug #500960
+
+  13 Jun 2015; Jeroen Roovers <jer@gentoo.org> eyeD3-0.7.5.ebuild:
+  Stable for HPPA PPC64 (bug #500960).
+
+  13 Jun 2015; Agostino Sarubbo <ago@gentoo.org> eyeD3-0.7.5.ebuild:
+  Stable for x86, wrt bug #500960
+
+  13 Jun 2015; Agostino Sarubbo <ago@gentoo.org> eyeD3-0.7.5.ebuild:
+  Stable for amd64, wrt bug #500960
 
   15 Jan 2015; Raúl Porcel <armin76@gentoo.org> eyeD3-0.7.4-r2.ebuild:
   ia64/sparc stable wrt #523136

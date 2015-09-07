@@ -1,6 +1,23 @@
 # ChangeLog for app-forensics/lynis
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/ChangeLog,v 1.56 2014/11/16 13:23:33 idl0r Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/ChangeLog,v 1.60 2015/07/30 08:57:55 patrick Exp $
+
+*lynis-2.1.1 (30 Jul 2015)
+
+  30 Jul 2015; Patrick Lauer <patrick@gentoo.org> +lynis-2.1.1.ebuild:
+  Bump
+
+*lynis-2.1.0 (29 Jun 2015)
+
+  29 Jun 2015; Christian Ruppert <idl0r@gentoo.org> -lynis-1.3.0.ebuild,
+  -lynis-1.6.3.ebuild, +lynis-2.1.0.ebuild:
+  Version bump, bug 547874
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> lynis-1.6.4.ebuild:
+  Stable for x86, wrt bug #534854
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> lynis-1.6.4.ebuild:
+  Stable for amd64, wrt bug #534854
 
 *lynis-1.6.4 (16 Nov 2014)
 

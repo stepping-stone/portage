@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.3.ebuild,v 1.18 2014/07/25 12:22:39 blueness Exp $
+# $Id$
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
 	inherit git-2
 else
-	SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.tar.gz"
+	SRC_URI="https://dev.gentoo.org/~blueness/${PN}/${P}.tar.gz"
 	KEYWORDS="ia64"
 fi
 
@@ -52,7 +52,8 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-apps/systemd
 	!<sys-fs/lvm2-2.02.97
 	!sys-fs/device-mapper
-	!<sys-fs/udev-init-scripts-18"
+	!<sys-fs/udev-init-scripts-18
+	gudev? ( !dev-libs/libgudev )"
 
 PDEPEND="hwdb? ( >=sys-apps/hwids-20130717-r1[udev] )
 	keymap? ( >=sys-apps/hwids-20130717-r1[udev] )
@@ -273,6 +274,6 @@ pkg_postinst()
 	elog
 	elog "For more information on eudev on Gentoo, writing udev rules, and"
 	elog "fixing known issues visit:"
-	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
+	elog "         https://www.gentoo.org/doc/en/udev-guide.xml"
 	elog
 }

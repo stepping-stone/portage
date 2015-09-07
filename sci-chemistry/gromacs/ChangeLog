@@ -1,6 +1,38 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.151 2015/01/31 20:31:16 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.159 2015/08/02 21:43:22 alexxy Exp $
+
+*gromacs-5.0.6 (02 Aug 2015)
+
+  02 Aug 2015; Alexey Shvetsov <alexxy@gentoo.org> +gromacs-5.0.6.ebuild:
+  Version bump. This one seems to be last version for 5.0.x series
+
+*gromacs-5.0.5 (21 Jun 2015)
+
+  21 Jun 2015; Christoph Junghans <ottxor@gentoo.org> +gromacs-5.0.5.ebuild:
+  version bump
+
+  08 Mar 2015; Christoph Junghans <ottxor@gentoo.org> -gromacs-4.6.5.ebuild,
+  -gromacs-4.6.7.ebuild, metadata.xml:
+  remove old
+
+*gromacs-5.0.4-r1 (06 Mar 2015)
+
+  06 Mar 2015; Justin Lecher <jlec@gentoo.org> +gromacs-5.0.4-r1.ebuild,
+  metadata.xml:
+  Install missing header
+
+  26 Feb 2015; Markus Meier <maekke@gentoo.org> gromacs-5.0.4.ebuild:
+  arm stable, bug #538370
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gromacs-5.0.4.ebuild:
+  Stable for x86, wrt bug #538370
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gromacs-5.0.4.ebuild:
+  Stable for ppc64, wrt bug #538370
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gromacs-5.0.4.ebuild:
+  Stable for amd64, wrt bug #538370
 
   31 Jan 2015; Christoph Junghans <ottxor@gentoo.org> -gromacs-4.6.6.ebuild,
   -gromacs-5.0.1.ebuild, -gromacs-5.0.2-r1.ebuild, -gromacs-5.0.2.ebuild,

@@ -1,6 +1,32 @@
 # ChangeLog for media-libs/cogl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.53 2014/12/23 22:25:58 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.60 2015/07/27 13:29:46 tetromino Exp $
+
+  27 Jul 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  cogl-1.18.2-r1.ebuild, cogl-1.20.0.ebuild:
+  Cogl cannot be built with USE="-gles2 -opengl" (bug #556018, thanks to Toralf
+  Förster).
+
+  14 Jun 2015; Pacho Ramos <pacho@gentoo.org> cogl-1.20.0.ebuild, metadata.xml:
+  Stop using clutter.eclass
+
+  11 Jun 2015; Pacho Ramos <pacho@gentoo.org> -cogl-1.18.2.ebuild:
+  Drop old
+
+*cogl-1.20.0 (08 Jun 2015)
+
+  08 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +cogl-1.20.0.ebuild:
+  Version bump for Gnome 3.16.
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> cogl-1.18.2.ebuild,
+  cogl-1.18.2-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> cogl-1.18.2-r1.ebuild:
+  x86 stable, bug 534012
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> cogl-1.18.2-r1.ebuild:
+  amd64 stable, bug 534012
 
 *cogl-1.18.2-r1 (23 Dec 2014)
 

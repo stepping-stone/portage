@@ -1,17 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.3.3.ebuild,v 1.2 2014/08/05 10:13:50 dlan Exp $
+# $Id$
 
 EAPI="5"
 inherit cmake-utils eutils multilib
 
 DESCRIPTION="Qt IBus library and Qt input method plugin"
-HOMEPAGE="http://code.google.com/p/ibus/"
+HOMEPAGE="https://github.com/ibus/ibus/wiki"
 SRC_URI="https://github.com/ibus/ibus-qt/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 RDEPEND=">=app-i18n/ibus-1.3.7

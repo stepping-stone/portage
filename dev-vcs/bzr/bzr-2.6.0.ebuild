@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.6.0.ebuild,v 1.2 2014/08/10 21:22:22 slyfox Exp $
+# $Id$
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="threads,ssl,xml"
 
 inherit bash-completion-r1 distutils-r1 eutils flag-o-matic versionator
@@ -13,7 +13,7 @@ SERIES=$(get_version_component_range 1-2)
 
 DESCRIPTION="Bazaar is a next generation distributed version control system"
 HOMEPAGE="http://bazaar-vcs.org/"
-SRC_URI="http://launchpad.net/bzr/${SERIES}/${PV}/+download/${MY_P}.tar.gz"
+SRC_URI="https://launchpad.net/bzr/${SERIES}/${PV}/+download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

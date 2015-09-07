@@ -1,9 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/pry-0.10.1.ebuild,v 1.1 2015/01/24 22:35:11 mrueg Exp $
+# $Id$
 
 EAPI=5
 
+# ruby22 -> test failure
 USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_DOC="yard"
@@ -20,7 +21,7 @@ IUSE=""
 SLOT="ruby19"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
 
 ruby_add_rdepend "
 	>=dev-ruby/coderay-1.1.0
