@@ -28,7 +28,7 @@ else
 	SRC_URI+=" ${BACKPORTS:+
 		https://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz
 		https://dev.gentoo.org/~tamiko/distfiles/${P}-${BACKPORTS}.tar.xz}"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 	SLOT="0/${PV}"
 fi
 S="${WORKDIR}/${P%_rc*}"
@@ -325,8 +325,8 @@ src_configure() {
 	myconf+=" $(use_with lvm storage-lvm)"
 	myconf+=" $(use_with iscsi storage-iscsi)"
 	myconf+=" $(use_with parted storage-disk)"
-	mycond+=" $(use_with glusterfs)"
-	mycond+=" $(use_with glusterfs storage-gluster)"
+	myconf+=" $(use_with glusterfs)"
+	myconf+=" $(use_with glusterfs storage-gluster)"
 	myconf+=" $(use_with lvm storage-mpath)"
 	myconf+=" $(use_with rbd storage-rbd)"
 	myconf+=" $(use_with numa numactl)"

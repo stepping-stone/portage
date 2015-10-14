@@ -1513,6 +1513,10 @@
     <email>bicatali@gentoo.org</email>
     <name>Sebastien Fabbro</name>
   </maintainer>
+  <maintainer>
+    <email>bircoph@gentoo.org</email>
+    <name>Andrew Savchenko</name>
+  </maintainer>
 </herd>
 <herd>
   <name>postgresql</name>
@@ -1777,12 +1781,9 @@
   </maintainer>
 </herd>
 <herd>
-  <name>openoffice</name>
-  <email>openoffice@gentoo.org</email>
-  <description>Openoffice related packages</description>
-  <maintainer>
-    <email>suka@gentoo.org</email>
-  </maintainer>
+  <name>office</name>
+  <email>office@gentoo.org</email>
+  <description>Office related packages</description>
   <maintainer>
     <email>dilfridge@gentoo.org</email>
   </maintainer>
@@ -2348,10 +2349,6 @@
   <name>tcltk</name>
   <email>tcltk@gentoo.org</email>
   <description>TCL / TK Packages</description>
-  <maintainer>
-    <email>jlec@gentoo.org</email>
-    <name>Justin Lecher</name>
-  </maintainer>
 </herd>
 <herd>
   <name>media-optical</name>
@@ -2664,34 +2661,48 @@
     <email>proxy-maint@gentoo.org</email>
     <description>Orphaned packages maintained by Gentoo's proxy-maintainers team</description>
   <maintainer>
-    <email>pinkbyte@gentoo.org</email>
+    <email>amynka@gentoo.org</email>
+    <name>Amy Winston</name>
+  </maintainer>
+  <maintainer>
+    <email>dlan@gentoo.org</email>
   </maintainer>
   <maintainer>
     <email>hwoarang@gentoo.org</email>
+    <name>Markos Chandros</name>
+  </maintainer>
+  <maintainer>
+    <email>idella4@gentoo.org</email>
+    <name>Ian Delaney</name>
   </maintainer>
   <maintainer>
     <email>maksbotan@gentoo.org</email>
+    <name>Maxim Koltsov</name>
   </maintainer>
   <maintainer>
-    <email>titanofold@gentoo.org</email>
+    <email>monsieurp>@gentoo.org</email>
+    <name>Partice Clement</name>
+  </maintainer>
+  <maintainer>
+    <email>mrueg@gentoo.org</email>
+    <name>Manuel Rüger</name>
   </maintainer>
   <maintainer>
     <email>qnikst@gentoo.org</email>
   </maintainer>
   <maintainer>
-    <email>yngwin@gentoo.org</email>
+    <email>swift@gentoo.org</email>
+  </maintainer>
+  <maintainer>
+    <email>titanofold@gentoo.org</email>
   </maintainer>
   <maintainer>
     <email>xmw@gentoo.org</email>
+    <name>Michael Weber</name>
   </maintainer>
   <maintainer>
-    <email>mrueg@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-    <email>tomwij@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-    <email>idella4@gentoo.org</email>
+    <email>yngwin@gentoo.org</email>
+    <name>Ben de Groot</name>
   </maintainer>
   <maintainer>
     <email>zlogene@gentoo.org</email>
@@ -2776,6 +2787,14 @@
   <maintainer>
     <email>fox2mike@gentoo.org</email>
   </maintainer>
+</herd>
+<herd>
+    <name>ros</name>
+    <email>ros@gentoo.org</email>
+    <description>ROS and assimilated packages</description>
+    <maintainer>
+        <email>aballier@gentoo.org</email>
+    </maintainer>
 </herd>
 </herds>
 

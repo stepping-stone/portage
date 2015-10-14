@@ -1,11 +1,5 @@
-# Base eclass for Java packages
-#
-# Copyright (c) 2004-2005, Thomas Matthijs <axxo@gentoo.org>
-# Copyright (c) 2004, Karl Trygve Kalleberg <karltk@gentoo.org>
-# Copyright (c) 2004-2015, Gentoo Foundation
-#
-# Licensed under the GNU General Public License, v2
-#
+# Copyright 2004-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 # @ECLASS: java-utils-2.eclass
@@ -2102,7 +2096,7 @@ java-pkg_init() {
 	}
 
 	# People do all kinds of weird things.
-	# http://forums.gentoo.org/viewtopic-p-3943166.html
+	# https://forums.gentoo.org/viewtopic-p-3943166.html
 	local silence="${SILENCE_JAVA_OPTIONS_WARNING}"
 	local accept="${I_WANT_GLOBAL_JAVA_OPTIONS}"
 	if [[ -n ${_JAVA_OPTIONS} && -z ${accept} && -z ${silence} ]]; then
@@ -2765,7 +2759,7 @@ java-pkg_ensure-dep() {
 			eqawarn "java-pkg_ensure-dep: ${dev_error}"
 #			eerror "Because you have ${target_pkg} installed,"
 #			eerror "the package will build without problems, but please"
-#			eerror "report this to http://bugs.gentoo.org."
+#			eerror "report this to https://bugs.gentoo.org."
 #		fi
 	elif [[ ${limit_to} != build && ! ( "${RDEPEND}${PDEPEND}" =~ ${stripped_pkg} ) ]]; then
 		dev_error="The ebuild is attempting to use ${target_pkg}, which is not "
@@ -2776,7 +2770,7 @@ java-pkg_ensure-dep() {
 			eqawarn "java-pkg_ensure-dep: ${dev_error}"
 #			eerror "The package will build without problems, but may fail to run"
 #			eerror "if you don't have ${target_pkg} installed,"
-#			eerror "so please report this to http://bugs.gentoo.org."
+#			eerror "so please report this to https://bugs.gentoo.org."
 #		fi
 	fi
 }
@@ -2823,4 +2817,14 @@ increment-qa-violations() {
 is-java-strict() {
 	[[ -n ${JAVA_PKG_STRICT} ]]
 	return $?
+}
+
+# @FUNCTION: java-pkg_clean
+# @DESCRIPTION:
+# Java package cleaner function. This will remove all *.class and *.jar
+# files, removing any bundled dependencies.
+java-pkg_clean() {
+	if [[ -z "${JAVA_PKG_NO_CLEAN}" ]]; then
+		find "${@}" '(' -name '*.class' -o -name '*.jar' ')' -type f -delete -print || die
+	fi
 }

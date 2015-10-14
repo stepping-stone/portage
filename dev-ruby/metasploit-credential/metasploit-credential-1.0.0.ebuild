@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: Exp $
+# $Id$
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -24,5 +24,4 @@ ruby_add_rdepend ">=dev-ruby/metasploit-concern-1.0.0:1.0
 	dev-ruby/rubyzip:1
 	dev-ruby/rubyntlm
 	>=dev-ruby/railties-4.0.9:4.0
-	dev-ruby/net-ssh
 	dev-ruby/pg"

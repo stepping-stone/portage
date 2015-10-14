@@ -11,5 +11,6 @@
   </maintainer>
   <upstream>
     <remote-id type="sourceforge">retext</remote-id>
+    <remote-id type="github">retext-project/retext</remote-id>
   </upstream>
 </pkgmetadata>

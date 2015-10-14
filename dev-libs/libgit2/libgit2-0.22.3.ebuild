@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86 ~ppc-macos"
+	KEYWORDS="amd64 x86 ~ppc-macos"
 fi
 
 DESCRIPTION="A linkable library for Git"
@@ -68,7 +68,7 @@ src_install() {
 	cmake-utils_src_install
 
 	if use examples ; then
-		find examples -name .gitignore -delete || die
+		find examples -name .gitignore -delete || die
 		dodoc -r examples
 		docompress -x /usr/share/doc/${PF}/examples
 	fi

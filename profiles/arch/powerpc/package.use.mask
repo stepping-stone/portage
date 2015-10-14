@@ -127,10 +127,6 @@ kde-apps/gwenview semantic-desktop
 kde-apps/okular dpi
 kde-base/nepomuk-core migrator
 
-# Pacho Ramos <pacho@gentoo.org> (12 Apr 2014)
-# Missing keywords, bug #507490
-net-misc/modemmanager mbim
-
 # Pacho Ramos <pacho@gentoo.org> (22 Feb 2013)
 # Missing keywords, bug #495250
 >=gnome-base/gnome-extra-apps-3.10 tracker
@@ -317,10 +313,6 @@ dev-java/icedtea systemtap
 # Alexey Shvetsov <alexxy@gentoo.org> (22 Aug 2010)
 # sci-chemistry/msms not available for this arch
 sci-chemistry/vmd msms
-
-# Justin Lecher <jlec@gentoo.org> (13 Aug 2010)
-# MKL not available on this arch
-media-gfx/povray mkl
 
 # Bernard Cafarelli <voyageur@gentoo.org> (26 Apr 2010)
 # This is for x86/amd64 only
