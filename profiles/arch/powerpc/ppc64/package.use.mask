@@ -2,9 +2,33 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-# James Le Cuirot <chewi@gentoo.org> (15 Aug 2015)
-# Java 7+ is required for websocket support.
-www-servers/tomcat websockets
+# Patrice Clement <monsieurp@gentoo.org> (08 Feb 2016)
+# I would need to keyword an awful lot of packages on ppc64
+# that would need Java 7 otherwise.
+dev-java/batik python
+dev-java/bsf python
+dev-java/ant-apache-bsf python
+
+# Michael Weber <xmw@gentoo.org> (09 Jan 2016)
+# no ppc64 support in media-libs/glfw
+app-text/mupdf opengl
+
+# Ian Delaney <idella4@gentoo.org> (05 Jan 2016)
+# on behalf of Ilya Tumaykin <itumaykin+gentoo@gmail.com>
+# dev-lang/luajit lacks ppc64 keyword. See bug #488318.
+media-video/mpv luajit
+
+# Jeroen Roovers <jer@gentoo.org> (26 Dec 2015)
+# Mask until >sys-cluster/ceph-0.94 goes stable
+net-analyzer/rrdtool rados
+
+# Justin Lecher <jlec@gentoo.org> (3 Dec 2015)
+# Missing keywords on deps #567458
+kde-apps/kalzium editor
+
+# Michael Palimaka <kensington@gentoo.org> (17 Oct 2015)
+# Unkeyworded dependencies
+dev-qt/qtwebkit webchannel
 
 # Ben de Groot <yngwin@gentoo.org> (20 Jul 2015)
 # missing keywords
@@ -30,10 +54,6 @@ xfce-extra/xfce4-power-manager lxpanel
 # Matthias Maier <tamiko@gentoo.org> (24 Dec 2014)
 # sys-devel/clang is not keyworded
 app-doc/doxygen clang
-
-# Pacho Ramos <pacho@gentoo.org> (12 Apr 2014)
-# Missing keywords, bug #507490
-net-misc/modemmanager mbim
 
 # Michael Sterrett <mr_bones_@gentoo.org (12 Nov 2013)
 # Mask openmedia use flag because the content generation tools
@@ -92,10 +112,6 @@ app-arch/p7zip kde
 dev-vcs/subversion kde
 media-video/vlc kde
 net-libs/libproxy kde
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (06 June 2010)
-# requires more keywording per bug #323003
-kde-base/kde-meta sdk
 
 # Kacper Kowalik <xarthisius@gentoo.org> (30 May 2010)
 # quesoglc is not keyworded

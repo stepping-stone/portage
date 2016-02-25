@@ -2,6 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
+# Mike Frysinger <vapier@gentoo.org> 21 Feb 2016
+# Needs arch love for elementary. #575322
+media-libs/elementary javascript
+
+# Sergey Popov <pinkbyte@gentoo.org> (24 Oct 2015)
+# Not tested
+net-mail/dovecot lz4
+
 # Mike Frysinger <vapier@gentoo.org> (16 Mar 2015)
 # Needs sci-physics/bullet tested #499974
 dev-libs/efl physics

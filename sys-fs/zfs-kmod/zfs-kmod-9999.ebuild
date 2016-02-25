@@ -1,24 +1,20 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="4"
+EAPI="5"
 
-AT_M4DIR="config"
-AUTOTOOLS_AUTORECONF="1"
-AUTOTOOLS_IN_SOURCE_BUILD="1"
-
-inherit flag-o-matic linux-info linux-mod toolchain-funcs autotools-utils
-
-if [ ${PV} == "9999" ] ; then
-	inherit git-2
+if [ ${PV} == "9999" ]; then
+	AUTOTOOLS_AUTORECONF="1"
 	EGIT_REPO_URI="https://github.com/zfsonlinux/zfs.git"
+	inherit git-r3
 else
-	inherit eutils versionator
-	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${PV}.tar.gz"
-	S="${WORKDIR}/zfs-zfs-${PV}"
+	SRC_URI="https://github.com/zfsonlinux/zfs/releases/download/zfs-${PV}/zfs-${PV}.tar.gz"
+	S="${WORKDIR}/zfs-${PV}"
 	KEYWORDS="~amd64 ~arm ~ppc ~ppc64"
 fi
+
+inherit flag-o-matic linux-info linux-mod toolchain-funcs autotools-utils
 
 DESCRIPTION="Linux ZFS kernel module for sys-fs/zfs"
 HOMEPAGE="http://zfsonlinux.org/"
@@ -38,6 +34,11 @@ RDEPEND="${DEPEND}
 	!sys-fs/zfs-fuse
 "
 
+AT_M4DIR="config"
+AUTOTOOLS_IN_SOURCE_BUILD="1"
+
+DOCS=( AUTHORS COPYRIGHT DISCLAIMER README.markdown )
+
 pkg_setup() {
 	linux-info_pkg_setup
 	CONFIG_CHECK="!DEBUG_LOCK_ALLOC
@@ -45,7 +46,6 @@ pkg_setup() {
 		IOSCHED_NOOP
 		MODULES
 		!PAX_KERNEXEC_PLUGIN_METHOD_OR
-		!PAX_USERCOPY_SLABS
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"
@@ -103,7 +103,6 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install INSTALL_MOD_PATH="${INSTALL_MOD_PATH:-$EROOT}"
-	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
 }
 
 pkg_postinst() {

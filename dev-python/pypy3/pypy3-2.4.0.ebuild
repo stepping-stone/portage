@@ -16,7 +16,7 @@ SRC_URI="https://bitbucket.org/pypy/pypy/downloads/${P}-src.tar.bz2"
 LICENSE="MIT"
 SLOT="0/$(get_version_component_range 1-2 ${PV})"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="bzip2 gdbm +jit libressl low-memory ncurses sandbox shadowstack sqlite cpu_flags_x86_sse2 tk"
+IUSE="bzip2 gdbm +jit libressl low-memory ncurses sandbox +shadowstack sqlite cpu_flags_x86_sse2 tk"
 
 RDEPEND=">=sys-libs/zlib-1.1.3:0=
 	virtual/libffi:0=
@@ -192,11 +192,14 @@ src_install() {
 
 	einfo "Generating caches and byte-compiling ..."
 
-	python_export pypy3 EPYTHON PYTHON PYTHON_SITEDIR
-	local PYTHON=${ED%/}${INSDESTTREE}/pypy-c
+	local -x PYTHON=${ED%/}${INSDESTTREE}/pypy-c
 	local -x LD_LIBRARY_PATH="${ED%/}${INSDESTTREE}"
+	# we can't use eclass function since PyPy is dumb and always gives
+	# paths relative to the interpreter
+	local PYTHON_SITEDIR=${EPREFIX}/usr/$(get_libdir)/pypy3/site-packages
+	python_export pypy3 EPYTHON
 
-	echo "EPYTHON='${EPYTHON}'" > epython.py
+	echo "EPYTHON='${EPYTHON}'" > epython.py || die
 	python_domodule epython.py
 
 	# Generate Grammar and PatternGrammar pickles.

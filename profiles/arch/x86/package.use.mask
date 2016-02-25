@@ -4,6 +4,16 @@
 
 # This file requires >=portage-2.1.1
 
+# Ian Delaney <idella4@gentoo.org> (28 Dec 2015)
+# proxy maintainer excludes dep uchardet from the build
+# of mpv temporarily but does not require masking in x86
+media-video/mpv -uchardet
+
+# Ian Delaney <idella4@gentoo.org> (02 Dec 2015)
+# mask revdeps of xen that emply a hypervisor in arch x86
+app-emulation/libvirt xen
+app-emulation/ganeti xen
+
 # Nathan Phillip Brink <binki@gentoo.org> (26 Sep 2015)
 # git useflag requires dev-libs/libgit2 which few arches support
 dev-util/geany-plugins -git
@@ -20,10 +30,6 @@ sys-apps/systemd -gnuefi
 # JavaFX and the browser plugin are included on x86 Linux.
 dev-java/oracle-jdk-bin -javafx -nsplugin
 dev-java/oracle-jre-bin -javafx -nsplugin
-
-# Gilles Dartiguelongue <eva@gentoo.org> (10 Jun 2015)
-# net-libs/dleyna-connector-dbus lack x86 keyword, bug #551634
->=media-plugins/grilo-plugins-0.2.14 upnp-av
 
 # Ben de Groot <yngwin@gentoo.org> (15 Mar 2015)
 # media-libs/libbdplus is keyworded on x86, so unmask the useflag

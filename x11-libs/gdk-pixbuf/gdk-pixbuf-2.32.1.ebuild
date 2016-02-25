@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -6,14 +6,14 @@ EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils flag-o-matic gnome2 multilib libtool multilib-minimal
+inherit autotools eutils flag-o-matic gnome2 multilib libtool multilib-minimal
 
 DESCRIPTION="Image loading library for GTK+"
 HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2+"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+X debug +introspection jpeg jpeg2k tiff test"
 
 COMMON_DEPEND="
@@ -49,6 +49,8 @@ MULTILIB_CHOST_TOOLS=(
 src_prepare() {
 	# Upstream patches from 2.32.x
 	epatch "${FILESDIR}"/${P}-gint64-shift-overflow.patch
+	epatch "${FILESDIR}"/${P}-lowmem-test-glibc.patch #563052, needs eautoreconf
+	eautoreconf
 
 	# This will avoid polluting the pkg-config file with versioned libpng,
 	# which is causing problems with libpng14 -> libpng15 upgrade
@@ -119,7 +121,7 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_pkg_postrm
 
-	if [[ -z ${REPLACED_BY_VERSIONS} ]]; then
+	if [[ -z ${REPLACED_BY_VERSION} ]]; then
 		rm -f "${EROOT}"usr/lib*/${PN}-2.0/2.10.0/loaders.cache
 	fi
 }

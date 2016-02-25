@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -17,15 +17,13 @@ HOMEPAGE="
 SRC_URI="https://github.com/pypa/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE="doc test"
 
-RDEPEND="
-	>=dev-python/pip-7.1.2[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	"
+RDEPEND=""
 DEPEND="${RDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
 		dev-python/mock[${PYTHON_USEDEP}]
@@ -37,6 +35,7 @@ DOCS=( docs/index.rst docs/changes.rst )
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.8.2-no-versioned-script.patch
 	"${FILESDIR}"/${PN}-12.1.1-skip-broken-test.patch
+	"${FILESDIR}"/${P}-PYTHONPATH-backport.patch
 )
 
 python_compile_all() {
@@ -44,7 +43,7 @@ python_compile_all() {
 }
 
 python_test() {
-	py.test -vvx || die "Tests fail with ${EPYTHON}"
+	py.test -v -v || die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {

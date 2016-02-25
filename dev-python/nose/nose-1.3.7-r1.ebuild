@@ -1,14 +1,15 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 python3_{3,4,5} pypy pypy3 )
+PYTHON_REQ_USE="threads(+)"
 
 inherit distutils-r1
 
-DESCRIPTION="A unittest extension offering automatic test suite discovery and easy test authoring"
+DESCRIPTION="Unittest extension with automatic test suite discovery and easy test authoring"
 HOMEPAGE="
 	https://pypi.python.org/pypi/nose
 	http://readthedocs.org/docs/nose/
@@ -17,8 +18,11 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc examples test"
+
+REQUIRED_USE="
+	doc? ( || ( $(python_gen_useflags 'python2*') ) )"
 
 RDEPEND="
 	dev-python/coverage[${PYTHON_USEDEP}]
@@ -26,6 +30,12 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.6[${PYTHON_USEDEP}] )
 	test? ( $(python_gen_cond_dep 'dev-python/twisted-core[${PYTHON_USEDEP}]' python2_7) )"
+
+PATCHES=( "${FILESDIR}"/${P}-python-3.5-backport.patch )
+
+pkg_setup() {
+	use doc && DISTUTILS_ALL_SUBPHASE_IMPLS=( 'python2*' )
+}
 
 python_prepare_all() {
 	# Tests need to be converted, and they don't respect BUILD_DIR.
@@ -63,14 +73,6 @@ python_compile_all() {
 	use doc && emake -C doc html
 }
 
-src_test() {
-	# nosetests use heavy multiprocessing during the tests.
-	# this shall make them less likely to kill your system or timeout.
-	local DISTUTILS_NO_PARALLEL_BUILD=1
-
-	distutils-r1_src_test
-}
-
 python_test() {
 	"${PYTHON}" selftest.py -v || die "Tests fail with ${EPYTHON}"
 }
@@ -81,9 +83,6 @@ python_install() {
 
 python_install_all() {
 	use examples && local EXAMPLES=( examples/. )
+	use doc && HTML_DOCS=( doc/.build/html/. )
 	distutils-r1_python_install_all
-
-	if use doc; then
-		dohtml -r -A txt doc/.build/html/.
-	fi
 }

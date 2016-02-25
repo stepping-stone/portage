@@ -1,14 +1,14 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 : ${CMAKE_MAKEFILE_GENERATOR:=ninja}
-PYTHON_COMPAT=( python2_7 pypy )
+PYTHON_COMPAT=( python2_7 )
 
 inherit check-reqs cmake-utils eutils flag-o-matic git-r3 multilib \
-	multilib-minimal python-r1 toolchain-funcs pax-utils
+	multilib-minimal python-single-r1 toolchain-funcs pax-utils
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
@@ -20,24 +20,22 @@ LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="clang debug +doc gold libedit +libffi lldb multitarget ncurses ocaml
-	python +static-analyzer test xml video_cards_radeon kernel_Darwin"
+	python +static-analyzer test xml video_cards_radeon
+	kernel_Darwin kernel_FreeBSD"
 
 COMMON_DEPEND="
 	sys-libs/zlib:0=
 	clang? (
-		python? ( ${PYTHON_DEPS} )
-		static-analyzer? (
-			dev-lang/perl:*
-			${PYTHON_DEPS}
-		)
+		static-analyzer? ( dev-lang/perl:* )
 		xml? ( dev-libs/libxml2:2=[${MULTILIB_USEDEP}] )
+		${PYTHON_DEPS}
 	)
 	gold? ( >=sys-devel/binutils-2.22:*[cxx] )
 	libedit? ( dev-libs/libedit:0=[${MULTILIB_USEDEP}] )
 	libffi? ( >=virtual/libffi-3.0.13-r1:0=[${MULTILIB_USEDEP}] )
 	ncurses? ( >=sys-libs/ncurses-5.9-r3:0=[${MULTILIB_USEDEP}] )
 	ocaml? (
-		dev-lang/ocaml:0=
+		>=dev-lang/ocaml-4.00.0:0=
 		dev-ml/findlib
 		dev-ml/ocaml-ctypes )"
 # configparser-3.2 breaks the build (3.3 or none at all are fine)
@@ -50,9 +48,10 @@ DEPEND="${COMMON_DEPEND}
 		( >=sys-freebsd/freebsd-lib-9.1-r10 sys-libs/libcxx )
 	)
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-5.1 )
-	kernel_Darwin? ( sys-libs/libcxx )
+	kernel_Darwin? ( <sys-libs/libcxx-${PV%_rc*}.9999 )
 	clang? ( xml? ( virtual/pkgconfig ) )
 	doc? ( dev-python/sphinx )
+	gold? ( sys-libs/binutils-libs )
 	libffi? ( virtual/pkgconfig )
 	lldb? ( dev-lang/swig )
 	!!<dev-python/configparser-3.3.0.2
@@ -67,8 +66,7 @@ PDEPEND="clang? ( =sys-devel/clang-${PV}-r100 )"
 # pypy gives me around 1700 unresolved tests due to open file limit
 # being exceeded. probably GC does not close them fast enough.
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
-	lldb? ( clang )
-	test? ( || ( $(python_gen_useflags 'python*') ) )"
+	lldb? ( clang xml )"
 
 pkg_pretend() {
 	# in megs
@@ -104,18 +102,6 @@ pkg_pretend() {
 
 	local CHECKREQS_DISK_BUILD=${build_size}M
 	check-reqs_pkg_pretend
-
-	if [[ ${MERGE_TYPE} != binary ]]; then
-		echo 'int main() {return 0;}' > "${T}"/test.cxx || die
-		ebegin "Trying to build a C++11 test program"
-		if ! $(tc-getCXX) -std=c++11 -o /dev/null "${T}"/test.cxx; then
-			eerror "LLVM-${PV} requires C++11-capable C++ compiler. Your current compiler"
-			eerror "does not seem to support -std=c++11 option. Please upgrade your compiler"
-			eerror "to gcc-4.7 or an equivalent version supporting C++11."
-			die "Currently active compiler does not support -std=c++11"
-		fi
-		eend ${?}
-	fi
 }
 
 pkg_setup() {
@@ -156,41 +142,45 @@ src_prepare() {
 	# Make ocaml warnings non-fatal, bug #537308
 	sed -e "/RUN/s/-warn-error A//" -i test/Bindings/OCaml/*ml  || die
 	# Fix libdir for ocaml bindings install, bug #559134
-	epatch "${FILESDIR}"/cmake/${PN}-3.7.0-ocaml-multilib.patch
+	eapply "${FILESDIR}"/cmake/${PN}-3.7.0-ocaml-multilib.patch
+	# Do not build/install ocaml docs with USE=-doc, bug #562008
+	eapply "${FILESDIR}"/cmake/${PN}-3.7.0-ocaml-build_doc.patch
 
 	# Make it possible to override Sphinx HTML install dirs
 	# https://llvm.org/bugs/show_bug.cgi?id=23780
-	epatch "${FILESDIR}"/cmake/0002-cmake-Support-overriding-Sphinx-HTML-doc-install-dir.patch
+	eapply "${FILESDIR}"/cmake/0002-cmake-Support-overriding-Sphinx-HTML-doc-install-dir.patch
 
 	# Prevent race conditions with parallel Sphinx runs
 	# https://llvm.org/bugs/show_bug.cgi?id=23781
-	epatch "${FILESDIR}"/cmake/0003-cmake-Add-an-ordering-dep-between-HTML-man-Sphinx-ta.patch
+	eapply "${FILESDIR}"/cmake/0003-cmake-Add-an-ordering-dep-between-HTML-man-Sphinx-ta.patch
 
 	# Prevent installing libgtest
 	# https://llvm.org/bugs/show_bug.cgi?id=18341
-	epatch "${FILESDIR}"/cmake/0004-cmake-Do-not-install-libgtest.patch
+	eapply "${FILESDIR}"/cmake/0004-cmake-Do-not-install-libgtest.patch
 
 	# Allow custom cmake build types (like 'Gentoo')
-	epatch "${FILESDIR}"/cmake/${PN}-3.8-allow_custom_cmake_build_types.patch
+	eapply "${FILESDIR}"/cmake/${PN}-3.8-allow_custom_cmake_build_types.patch
+
+	# Fix llvm-config for shared linking and sane flags
+	# https://bugs.gentoo.org/show_bug.cgi?id=565358
+	eapply "${FILESDIR}"/llvm-3.9-llvm-config.patch
+
+	# disable use of SDK on OSX, bug #568758
+	sed -i -e 's/xcrun/false/' utils/lit/lit/util.py || die
 
 	if use clang; then
 		# Automatically select active system GCC's libraries, bugs #406163 and #417913
-		epatch "${FILESDIR}"/clang-3.5-gentoo-runtime-gcc-detection-v3.patch
-
-		epatch "${FILESDIR}"/clang-3.6-gentoo-install.patch
-
-		sed -i -e "s^@EPREFIX@^${EPREFIX}^" \
-			tools/clang/tools/scan-build/scan-build || die
+		eapply "${FILESDIR}"/clang-3.5-gentoo-runtime-gcc-detection-v3.patch
 
 		# Install clang runtime into /usr/lib/clang
 		# https://llvm.org/bugs/show_bug.cgi?id=23792
-		epatch "${FILESDIR}"/cmake/clang-0001-Install-clang-runtime-into-usr-lib-without-suffix-3.8.patch
-		epatch "${FILESDIR}"/cmake/compiler-rt-0001-cmake-Install-compiler-rt-into-usr-lib-without-suffi.patch
+		eapply "${FILESDIR}"/cmake/clang-0001-Install-clang-runtime-into-usr-lib-without-suffix-3.8.patch
+		eapply "${FILESDIR}"/cmake/compiler-rt-0001-cmake-Install-compiler-rt-into-usr-lib-without-suffi.patch
 
 		# Make it possible to override CLANG_LIBDIR_SUFFIX
 		# (that is used only to find LLVMgold.so)
 		# https://llvm.org/bugs/show_bug.cgi?id=23793
-		epatch "${FILESDIR}"/cmake/clang-0002-cmake-Make-CLANG_LIBDIR_SUFFIX-overridable.patch
+		eapply "${FILESDIR}"/cmake/clang-0002-cmake-Make-CLANG_LIBDIR_SUFFIX-overridable.patch
 
 		# Fix WX sections, bug #421527
 		find "${S}"/projects/compiler-rt/lib/builtins -type f -name \*.S -exec sed \
@@ -206,7 +196,7 @@ src_prepare() {
 	fi
 
 	# User patches
-	epatch_user
+	eapply_user
 
 	python_setup
 
@@ -219,7 +209,7 @@ multilib_src_configure() {
 	if use multitarget; then
 		targets=all
 	else
-		targets='host;CppBackend'
+		targets='host;BPF;CppBackend'
 		use video_cards_radeon && targets+=';AMDGPU'
 	fi
 
@@ -231,10 +221,9 @@ multilib_src_configure() {
 
 	local libdir=$(get_libdir)
 	local mycmakeargs=(
-		"${mycmakeargs[@]}"
 		-DLLVM_LIBDIR_SUFFIX=${libdir#lib}
 
-		-DBUILD_SHARED_LIBS=ON
+		-DLLVM_LINK_LLVM_DYLIB=ON
 		-DLLVM_ENABLE_TIMESTAMPS=OFF
 		-DLLVM_TARGETS_TO_BUILD="${targets}"
 		-DLLVM_BUILD_TESTS=$(usex test)
@@ -254,6 +243,15 @@ multilib_src_configure() {
 
 		-DHAVE_HISTEDIT_H=$(usex libedit)
 	)
+
+	if use clang; then
+		mycmakeargs+=(
+			-DCMAKE_DISABLE_FIND_PACKAGE_LibXml2=$(usex !xml)
+			# libgomp support fails to find headers without explicit -I
+			# furthermore, it provides only syntax checking
+			-DCLANG_DEFAULT_OPENMP_RUNTIME=libomp
+		)
+	fi
 
 	if use lldb; then
 		mycmakeargs+=(
@@ -378,7 +376,7 @@ src_install() {
 
 	if use clang; then
 		# note: magic applied in multilib_src_install()!
-		CLANG_VERSION=3.8
+		CLANG_VERSION=3.9
 
 		MULTILIB_CHOST_TOOLS+=(
 			/usr/bin/clang
@@ -395,6 +393,11 @@ src_install() {
 	fi
 
 	multilib-minimal_src_install
+
+	# Remove unnecessary headers on FreeBSD, bug #417171
+	if use kernel_FreeBSD && use clang; then
+		rm "${ED}"usr/lib/clang/${PV}/include/{std,float,iso,limits,tgmath,varargs}*.h || die
+	fi
 }
 
 multilib_src_install() {
@@ -450,59 +453,36 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	insinto /usr/share/vim/vimfiles
-	doins -r utils/vim/*/
+	doins -r utils/vim/*/.
 	# some users may find it useful
 	dodoc utils/vim/vimrc
 
 	if use clang; then
 		pushd tools/clang >/dev/null || die
 
-		if use static-analyzer ; then
-			pushd tools/scan-build >/dev/null || die
+		if use python ; then
+			pushd bindings/python/clang >/dev/null || die
 
-			dobin ccc-analyzer scan-build
-			dosym ccc-analyzer /usr/bin/c++-analyzer
-			doman scan-build.1
-
-			insinto /usr/share/llvm
-			doins scanview.css sorttable.js
+			python_moduleinto clang
+			python_domodule *.py
 
 			popd >/dev/null || die
 		fi
 
-		python_inst() {
-			if use static-analyzer ; then
-				pushd tools/scan-view >/dev/null || die
+		# AddressSanitizer symbolizer (currently separate)
+		dobin "${S}"/projects/compiler-rt/lib/asan/scripts/asan_symbolize.py
 
-				python_doscript scan-view
-
-				touch __init__.py || die
-				python_moduleinto clang
-				python_domodule *.py Resources
-
-				popd >/dev/null || die
-			fi
-
-			if use python ; then
-				pushd bindings/python/clang >/dev/null || die
-
-				python_moduleinto clang
-				python_domodule *.py
-
-				popd >/dev/null || die
-			fi
-
-			# AddressSanitizer symbolizer (currently separate)
-			python_doscript "${S}"/projects/compiler-rt/lib/asan/scripts/asan_symbolize.py
-		}
-		python_foreach_impl python_inst
 		popd >/dev/null || die
+
+		python_fix_shebang "${ED}"
+		if use static-analyzer; then
+			python_optimize "${ED}"usr/share/scan-view
+		fi
 	fi
 }
 
 pkg_postinst() {
-	if use clang; then
-		elog "To enable OpenMP support in clang, install sys-libs/libomp"
-		elog "and use the '-fopenmp=libomp' command line option"
+	if use clang && ! has_version 'sys-libs/libomp'; then
+		elog "To enable OpenMP support in clang, install sys-libs/libomp."
 	fi
 }

@@ -1,6 +1,67 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
+
+# Justin Lecher <jlec@gentoo.org> (22 Feb 2016)
+# Missing test deps keyword #575366
+dev-cpp/eigen test
+
+# Mike Frysinger <vapier@gentoo.org> (21 Feb 2016)
+# Needs arch love for elementary. #575322
+media-libs/elementary javascript
+
+# Tobias Klausmann <klausman@gentoo.org> 04 Feb 2016
+# sys-cluster/ceph is not broken per se, but a maintenance burden.
+net-analyzer/rrdtool rados
+
+# James Le Cuirot <chewi@gentoo.org) (30 Jan 2016)
+# scrollview requires Java, which is unsupported on Alpha.
+app-text/tesseract scrollview
+
+# Michael Weber <xmw@gentoo.org> (09 Jan 2016)
+# no alpha support in media-libs/glfw
+app-text/mupdf opengl
+
+# Ian Delaney <idella4@gentoo.org> (05 Jan 2016)
+# on behalf of Ilya Tumaykin <itumaykin+gentoo@gmail.com>
+# dev-lang/luajit lacks alpha keyword. See bug #488318.
+media-video/mpv luajit
+
+# Ian Delaney <idella4@gentoo.org> (28 Dec 2015)
+# dep of testsuite dev-util/cmocka requires keywording for alpha
+# via Bug 569558, then this can be taken out
+media-video/mpv test
+
+# Mike Frysinger <vapier@gentoo.org> (22 Dec 2015)
+# Needs keywording. #569254
+net-firewall/iptables nftables
+
+# Justin Lecher <jlec@gentoo.org> (18 Nov 2015)
+# requires dev-python/restkit which requires
+# dev-python/socketpool which requires dev-python/gevent which requires
+# dev-python/greenlet which has not been ported to ALPHA
+dev-python/wsgiproxy2 test
+dev-python/pyquery test
+
+# Matt Turner <mattst88@gentoo.org> (15 Nov 2015)
+# Missing keywords
+dev-util/perf numa
+
+# Pacho Ramos <pacho@gentoo.org> (15 Nov 2015)
+# Missing keywords
+media-sound/rhythmbox upnp-av
+
+# Pacho Ramos <pacho@gentoo.org> (15 Nov 2015)
+# Missing keywords
+>=media-plugins/grilo-plugins-0.2.14 upnp-av
+
+# Davide Pesavento <pesa@gentoo.org> (26 Oct 2015)
+# Tests require non-keyworded qt5
+dev-qt/qtchooser test
+
+# Justin Lecher <jlec@gentoo.org> (14 Oct 2015)
+# Requires dev-python/ipython which triggers a long dep chain
+dev-python/restkit cli
 
 # Tobias Klausmann <klausman@gentoo.org> (19 Sep 2015)
 # app-portage/g-sorcery pulls in pymongo and a whole host of deps that don't
@@ -16,10 +77,6 @@ dev-db/percona-server tokudb tokudb-backup-plugin
 # compile on alpha. The version specified does not have the USE flag, but that
 # version of sudo has the optional functionality.
 >=app-admin/sudo-1.8.6 sssd
-
-# Brian Evans <grknight@gentoo.org> (14 Sep 2015)
-# Mask new USE flags for mariadb which all arches do not yet have dependencies
->=dev-db/mariadb-10.1.0 innodb-snappy
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (10 Sep 2015)
 # Requires wifi USE flag, which is masked for this arch
@@ -127,10 +184,6 @@ media-video/ffmpeg x265
 # Missing keywords on dev-python/rst2pdf, bug #515222
 media-video/mpv doc-pdf
 
-# Julian Ospald <hasufell@gentoo.org> (20 Apr 2014)
-# Missing keywords, bug #508226
-media-video/mpv sdl
-
 # Pacho Ramos <pacho@gentoo.org> (15 Mar 2014)
 # Missing keywords, bug #504672
 >=net-misc/vinagre-3.10 rdp
@@ -157,10 +210,6 @@ net-im/telepathy-connection-managers sipe
 # Mark Wright <gienah@gentoo.org> (26 Oct 2013)
 # template-haskell not yet available
 dev-haskell/dataenc test
-
-# Tom Wijsman <TomWij@gentoo.org> (16 Oct 2013)
-# Mask luajit on ~media-video/mpv-0.2.0 because it only has amd64 x86 keywords. See bug #488318.
->=media-video/mpv-0.2.0 luajit
 
 # Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
 # Keywords pending, bug #476710

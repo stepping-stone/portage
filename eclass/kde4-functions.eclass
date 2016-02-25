@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -36,7 +36,7 @@ esac
 # @DESCRIPTION:
 # This gets set to a non-zero value when a package is considered a kde or
 # kdevelop ebuild.
-if [[ ${CATEGORY} = kde-base || ${CATEGORY} = kde-apps ]]; then
+if [[ ${CATEGORY} = kde-base || ${CATEGORY} = kde-apps || ${CATEGORY} = kde-frameworks ]]; then
 	debug-print "${ECLASS}: KDEBASE ebuild recognized"
 	KDEBASE=kde-base
 elif [[ ${KMNAME-${PN}} = kdevelop ]]; then
@@ -294,7 +294,8 @@ add_kdeapps_dep() {
 		ver=${KDE_MINIMAL}
 	# if building kde-apps, live master or stable-live branch,
 	# use the final SC version since there are no further general releases.
-	elif [[ ${CATEGORY} == kde-apps || ${PV} == *9999 ]]; then
+	# except when it is kdepim split packages, which rely on same-version deps
+	elif [[ ${CATEGORY} == kde-apps || ${PV} == *9999 ]] && [[ ${KMNAME} != "kdepim" ]]; then
 		ver=4.14.3
 	else
 		ver=${PV}
@@ -351,7 +352,7 @@ _enable_selected_linguas_dir() {
 
 	[[ -d  ${dir} ]] || die "linguas dir \"${dir}\" does not exist"
 	comment_all_add_subdirectory "${dir}"
-	pushd "${dir}" > /dev/null
+	pushd "${dir}" > /dev/null || die
 
 	# fix all various crazy sr@Latn variations
 	# this part is only ease for ebuilds, so there wont be any die when this
@@ -390,7 +391,7 @@ _enable_selected_linguas_dir() {
 	done
 	[[ -n ${linguas} ]] && echo ">>> Enabling languages: ${linguas}"
 
-	popd > /dev/null
+	popd > /dev/null || die
 }
 
 # @FUNCTION: get_kde_version

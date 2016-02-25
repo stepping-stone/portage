@@ -4,8 +4,8 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_{3,4} )
-PYTHON_REQ_USE='readline,sqlite'
+PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
+PYTHON_REQ_USE='readline,sqlite,threads(+)'
 
 inherit distutils-r1 eutils virtualx
 
@@ -114,12 +114,12 @@ python_test() {
 	# Failure of some modules only in python3.4 
 	local fail
 	run_tests() {
-		pushd ${TEST_DIR} > /dev/null
+		pushd ${TEST_DIR} > /dev/null || die
 		"${PYTHON}" -m IPython.testing.iptestcontroller --all || fail=1
-		popd > /dev/null
+		popd > /dev/null || die
 	}
 	VIRTUALX_COMMAND=run_tests virtualmake
-		[[ ${fail} ]] && die "Tests fail with ${EPYTHON}"
+	[[ ${fail} ]] && die "Tests fail with ${EPYTHON}"
 }
 
 python_install() {
@@ -145,6 +145,8 @@ python_install_all() {
 pkg_postinst() {
 	optfeature "sympyprinting" dev-python/sympy
 	optfeature "cythonmagic" dev-python/cython
+	optfeature "%lprun magic command" dev-python/line_profiler
+	optfeature "%mprun magic command" dev-python/memory_profiler
 	if use nbconvert; then
 		if ! has_version app-text/pandoc ; then
 			einfo "Node.js will be used to convert notebooks to other formats"

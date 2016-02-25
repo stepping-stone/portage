@@ -18,10 +18,10 @@ HOMEPAGE="http://wayland.freedesktop.org/"
 
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
-	KEYWORDS=""
+	KEYWORDS="arm hppa ppc64"
 else
 	SRC_URI="http://wayland.freedesktop.org/releases/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
 fi
 
 LICENSE="MIT"
@@ -45,7 +45,7 @@ src_configure() {
 		$(use_enable doc documentation)
 	)
 	if tc-is-cross-compiler ; then
-		myeconfargs+=( --disable-scanner )
+		myeconfargs+=( --with-host-scanner )
 	fi
 	if ! multilib_is_native_abi; then
 		myeconfargs+=( --disable-documentation )

@@ -6,11 +6,11 @@ EAPI=5
 
 inherit versionator linux-info eutils flag-o-matic toolchain-funcs
 
-MY_PV="${PN}-$(replace_version_separator 2 "-" $MY_PV)"
+MY_P="${PN}-$(replace_version_separator 2 "-")"
 
 DESCRIPTION="Open-iSCSI is a high performance, transport independent, multi-platform implementation of RFC3720"
 HOMEPAGE="http://www.open-iscsi.org/"
-SRC_URI="http://www.open-iscsi.org/bits/${MY_PV}.tar.gz"
+SRC_URI="http://www.open-iscsi.org/bits/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,11 +19,10 @@ IUSE="debug slp"
 
 DEPEND="slp? ( net-libs/openslp )"
 RDEPEND="${DEPEND}
-	virtual/udev
 	sys-fs/lsscsi
 	sys-apps/util-linux"
 
-S="${WORKDIR}/${MY_PV}"
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	linux-info_pkg_setup
@@ -70,7 +69,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" sbindir="${ROOT}usr/sbin/" install
+	emake DESTDIR="${ED}" sbindir="/usr/sbin" install
 
 	dodoc README THANKS
 
@@ -79,13 +78,12 @@ src_install() {
 
 	insinto /etc/iscsi
 	newins "${FILESDIR}"/initiatorname.iscsi initiatorname.iscsi.example
+
 	# udev pieces
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/99-iscsi.rules
-	insopts -m0755
-	insinto /etc/udev/scripts
-	doins "${FILESDIR}"/iscsidev.sh
-	insopts -m0644
+	exeinto /etc/udev/scripts
+	doexe "${FILESDIR}"/iscsidev.sh
 
 	newconfd "${FILESDIR}"/iscsid-conf.d iscsid
 	newinitd "${FILESDIR}"/iscsid-init.d iscsid

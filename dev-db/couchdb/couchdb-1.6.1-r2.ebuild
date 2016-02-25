@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils multilib pax-utils user
+inherit autotools eutils multilib pax-utils user
 
 DESCRIPTION="Apache CouchDB is a distributed, fault-tolerant and schema-free document-oriented database."
 HOMEPAGE="http://couchdb.apache.org/"
@@ -23,7 +23,8 @@ RDEPEND=">=dev-libs/icu-4.3.1:=
 		<dev-lang/spidermonkey-1.8.7
 		selinux? ( sec-policy/selinux-couchdb )"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+		sys-devel/autoconf-archive"
 RESTRICT=test
 
 S="${WORKDIR}/apache-${P}"

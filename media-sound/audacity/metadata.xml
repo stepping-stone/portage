@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>proaudio</herd>
-  <maintainer>
+  <maintainer type="person">
     <email>richard@audacityteam.org</email>
     <name>Richard Ash</name>
     <description>Upstream - please CC on bugs that concerns upstream</description>
   </maintainer>
+  <maintainer type="project">
+    <email>proaudio@gentoo.org</email>
+    <name>Gentoo ProAudio Project</name>
+  </maintainer>
   <use>
     <flag name="id3tag">Enables ID3 tagging with id3tag library</flag>
     <flag name="libsoxr">
-      Uses <pkg>media-libs/soxr</pkg> as audio resampling library: Better
-      quality than the included resampler and much faster than libsamplerate
-      while keeping almost the same quality.
+      Uses <pkg>media-libs/soxr</pkg> as audio resampling library: Higher
+      quality and much faster than both the included resampler and
+      libsamplerate.
+    </flag>
+    <flag name="libsamplerate">
+      Uses <pkg>media-libs/libsamplerate</pkg> as audio resampling library:
+      Higher quality than the included resampler but lower quality and much
+      slower than libsoxr.
     </flag>
     <flag name="lv2">Add support for Ladspa V2</flag>
     <flag name="midi">Enables MIDI support</flag>

@@ -14,7 +14,7 @@ if [[ "${PV}" == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://www.openprinting.org/download/${PN}/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~m68k-mint"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~m68k-mint"
 fi
 DESCRIPTION="Cups PDF filters"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"
@@ -24,8 +24,8 @@ SLOT="0"
 IUSE="dbus +foomatic jpeg perl png static-libs tiff zeroconf"
 
 RDEPEND="
-	>=app-text/ghostscript-gpl-9.09
-	app-text/poppler:=[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
+	>=app-text/ghostscript-gpl-9.09[cups]
+	app-text/poppler:=[cxx,jpeg?,lcms,tiff?,utils,xpdf-headers(+)]
 	>=app-text/qpdf-3.0.2:=
 	media-libs/fontconfig
 	media-libs/freetype:2

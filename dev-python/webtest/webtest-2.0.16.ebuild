@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ppc ppc64 x86"
+KEYWORDS="alpha amd64 arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86"
 IUSE="doc test"
 
 #nose<1.3.0
@@ -54,10 +54,6 @@ python_compile_all() {
 	if use doc; then
 		sphinx-build docs html || die
 	fi
-}
-
-src_test() {
-	DISTUTILS_NO_PARALLEL_BUILD=1 distutils-r1_src_test
 }
 
 python_test() {

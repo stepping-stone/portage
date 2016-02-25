@@ -20,6 +20,7 @@
 #  * ruby20 - Ruby (MRI) 2.0.x
 #  * ruby21 - Ruby (MRI) 2.1.x
 #  * ruby22 - Ruby (MRI) 2.2.x
+#  * ruby23 - Ruby (MRI) 2.3.x
 #  * ree18  - Ruby Enterprise Edition 1.8.x
 #  * jruby  - JRuby
 #  * rbx    - Rubinius
@@ -324,9 +325,9 @@ _ruby_invoke_environment() {
 				eqawarn "Using * expansion of S is deprecated. Use EAPI and RUBY_S instead."
 				;;
 		esac
-		pushd "${WORKDIR}"/all &>/dev/null
+		pushd "${WORKDIR}"/all &>/dev/null || die
 		sub_S=$(eval ls -d "${sub_S}" 2>/dev/null)
-		popd &>/dev/null
+		popd &>/dev/null || die
 	fi
 
 	environment=$1; shift
@@ -335,16 +336,16 @@ _ruby_invoke_environment() {
 	S="${my_WORKDIR}"/"${sub_S}"
 
 	if [[ -d "${S}" ]]; then
-		pushd "$S" &>/dev/null
+		pushd "$S" &>/dev/null || die
 	elif [[ -d "${my_WORKDIR}" ]]; then
-		pushd "${my_WORKDIR}" &>/dev/null
+		pushd "${my_WORKDIR}" &>/dev/null || die
 	else
-		pushd "${WORKDIR}" &>/dev/null
+		pushd "${WORKDIR}" &>/dev/null || die
 	fi
 
 	ebegin "Running ${_PHASE:-${EBUILD_PHASE}} phase for $environment"
 	"$@"
-	popd &>/dev/null
+	popd &>/dev/null || die
 
 	S=${old_S}
 }
@@ -392,7 +393,7 @@ ruby-ng_pkg_setup() {
 # Unpack the source archive.
 ruby-ng_src_unpack() {
 	mkdir "${WORKDIR}"/all
-	pushd "${WORKDIR}"/all &>/dev/null
+	pushd "${WORKDIR}"/all &>/dev/null || die
 
 	# We don't support an each-unpack, it's either all or nothing!
 	if type all_ruby_unpack &>/dev/null; then
@@ -401,7 +402,7 @@ ruby-ng_src_unpack() {
 		[[ -n ${A} ]] && unpack ${A}
 	fi
 
-	popd &>/dev/null
+	popd &>/dev/null || die
 }
 
 _ruby_apply_patches() {

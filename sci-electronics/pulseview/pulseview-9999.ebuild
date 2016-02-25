@@ -9,7 +9,7 @@ inherit eutils cmake-utils python-single-r1
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://sigrok.org/${PN}"
-	inherit git-2
+	inherit git-r3
 else
 	SRC_URI="http://sigrok.org/download/source/${PN}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
@@ -20,15 +20,26 @@ HOMEPAGE="http://sigrok.org/wiki/PulseView"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="+decode static"
-REQUIRED_USE="decode? ( ${PYTHON_REQUIRED_USE} )"
+IUSE="+decode qt4 qt5 static"
+REQUIRED_USE="decode? ( ${PYTHON_REQUIRED_USE} ) ^^ ( qt4 qt5 )"
 
-RDEPEND=">=dev-libs/glib-2.28.0
-	>=sci-libs/libsigrok-0.3.0
-	dev-qt/qtgui:4
-	>=dev-libs/boost-1.42
+RDEPEND="
+	dev-libs/boost:0=
+	dev-libs/glib:2
+	>=sci-libs/libsigrok-0.4.0[cxx]
+	qt4? (
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
+		dev-qt/qtsvg:4
+	)
+	qt5? (
+		dev-qt/qtcore:5
+		dev-qt/qtgui:5
+		dev-qt/qtwidgets:5
+		dev-qt/qtsvg:5
+	)
 	decode? (
-		>=sci-libs/libsigrokdecode-0.3.0
+		>=sci-libs/libsigrokdecode-0.4.0
 		${PYTHON_DEPS}
 	)"
 DEPEND="${RDEPEND}
@@ -41,6 +52,7 @@ src_configure() {
 		-DDISABLE_WERROR=TRUE
 		$(cmake-utils_use_enable decode DECODE)
 		$(cmake-utils_use_enable static STATIC_PKGDEPS_LIBS)
+		$(cmake-utils_use qt4 FORCE_QT4)
 	)
 	cmake-utils_src_configure
 }

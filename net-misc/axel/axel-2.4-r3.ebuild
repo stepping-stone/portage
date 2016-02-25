@@ -14,7 +14,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/${DOWNLOAD_ID}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc64-solaris"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc64-solaris"
 IUSE="debug nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
@@ -35,7 +35,7 @@ src_configure() {
 	local myconf=()
 
 	use debug && myconf+=( --debug=1 )
-	use nls && myconf+=( --i18n=$(usex nls 1 0) )
+	myconf+=( --i18n=$(usex nls 1 0) )
 	econf \
 		--strip=0 \
 		${myconf[@]}

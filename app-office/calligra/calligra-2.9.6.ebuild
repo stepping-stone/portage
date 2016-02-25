@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -93,7 +93,7 @@ RDEPEND="
 	jpeg2k? ( media-libs/openjpeg:0 )
 	kdcraw? ( $(add_kdeapps_dep libkdcraw) )
 	kde? ( $(add_kdebase_dep kactivities) )
-	kdepim? ( $(add_kdebase_dep kdepimlibs) )
+	kdepim? ( $(add_kdeapps_dep kdepimlibs) )
 	lcms? (
 		media-libs/lcms:2
 		x11-libs/libX11
@@ -118,7 +118,7 @@ RDEPEND="
 	sybase? ( dev-db/freetds )
 	tiff? ( media-libs/tiff:0 )
 	truetype? ( media-libs/freetype:2 )
-	vc? ( dev-libs/vc )
+	vc? ( <dev-libs/vc-1.0.0 )
 	xbase? ( dev-db/xbase )
 	calligra_features_kexi? (
 		>=dev-db/sqlite-3.8.7:3[extensions(+)]
@@ -160,7 +160,10 @@ src_configure() {
 
 	# applications
 	for cal_ft in ${CAL_FTS}; do
-		use calligra_features_${cal_ft} && myproducts+=( ${cal_ft^^} )
+		# Switch to ^^ when we switch to EAPI=6.
+		#local prod=${cal_ft^^}
+		local prod=$(tr '[:lower:]' '[:upper:]' <<<"${cal_ft}")
+		use calligra_features_${cal_ft} && myproducts+=( "${prod}" )
 	done
 
 	local mycmakeargs=( -DPRODUCTSET="${myproducts[*]}" )

@@ -22,7 +22,7 @@ if [[ ${PV} == 9999 ]] ; then
 	S="${WORKDIR}/${MY_P}/${PN}"
 else
 	SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/${MY_RELEASEDATE}/${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~mips ~x86"
 	S="${WORKDIR}/${MY_P}"
 fi
 
@@ -146,7 +146,10 @@ pkg_postinst() {
 		touch /etc/selinux/${POLTYPE}/contexts/files/file_contexts.local || die
 		# Fix bug 516608
 		for EXPRFILE in file_contexts file_contexts.homedirs file_contexts.local ; do
-			sefcontext_compile /etc/selinux/${POLTYPE}/contexts/files/${EXPRFILE} || die "Failed to recompile contexts"
+			if [[ -f ${EXPRFILE} ]]; then
+				sefcontext_compile /etc/selinux/${POLTYPE}/contexts/files/${EXPRFILE} \
+				|| die "Failed to recompile contexts"
+			fi
 		done
 	done
 }

@@ -2,6 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
+# prometheanfire <prometheanfire@gentoo.org> (24 Jan 2016)
+# studio support is best effort only
+net-analyzer/icinga2 studio
+
+# NP-Hardass <np-hardass@gentoo.org> (19 Nov 2015)
+# Temporarily masking due to user requests in #565884
+=app-emulation/wine-1.7.54 gstreamer
+
 # Jason Zaman <perfinion@gentoo.org> (06 Sep 2015)
 # This is masked in base/package.use.mask as Linux only.
 sys-auth/consolekit -cgroups
@@ -37,10 +45,6 @@ net-p2p/fms frost
 # The polarssl use flag may go away if the rtmpdump
 # upstream will not fix this problem soon
 media-video/rtmpdump polarssl
-
-# Anthony G. Basile <blueness@gentoo.org> (10 Aug 2013)
-# mask php and mono bindings pending more testing
-=dev-libs/xapian-bindings-1.3.1 php mono
 
 # Diego Elio Pettenò (27 Aug 2012)
 # The libpci access is only used for linux.

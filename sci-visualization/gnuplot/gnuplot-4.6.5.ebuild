@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -33,19 +33,19 @@ RDEPEND="
 	cairo? (
 		x11-libs/cairo
 		x11-libs/pango )
-	gd? ( >=media-libs/gd-2.0.35-r3[png] )
+	gd? ( >=media-libs/gd-2.0.35-r3:2=[png] )
 	ggi? ( media-libs/libggi )
 	latex? (
 		virtual/latex-base
 		lua? (
 			dev-tex/pgf
 			>=dev-texlive/texlive-latexrecommended-2008-r2 ) )
-	lua? ( dev-lang/lua )
+	lua? ( dev-lang/lua:0 )
 	plotutils? ( media-libs/plotutils )
 	qt4? ( >=dev-qt/qtcore-4.5:4
 		>=dev-qt/qtgui-4.5:4
 		>=dev-qt/qtsvg-4.5:4 )
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline:0 )
 	svga? ( media-libs/svgalib )
 	wxwidgets? (
 		x11-libs/wxGTK:2.8[X]
@@ -104,6 +104,13 @@ src_prepare() {
 		distributed separately; the gnuplot ebuild no longer installs it.
 		Emerge app-emacs/gnuplot-mode for Emacs support.'
 	has_version "${CATEGORY}/${PN}[emacs(-)]" && FORCE_PRINT_ELOG=1
+
+	# Make sure we don't mix build & host flags.
+	sed -i \
+		-e 's:@CPPFLAGS@:$(BUILD_CPPFLAGS):' \
+		-e 's:@CFLAGS@:$(BUILD_CFLAGS):' \
+		-e 's:@LDFLAGS@:$(BUILD_LDFLAGS):' \
+		docs/Makefile.in || die
 }
 
 src_configure() {
@@ -117,6 +124,8 @@ src_configure() {
 	fi
 
 	tc-export CC CXX			#453174
+	tc-export_build_env BUILD_CC
+	export CC_FOR_BUILD=${BUILD_CC}
 
 	econf \
 		--without-pdf \
@@ -143,7 +152,7 @@ src_configure() {
 
 src_compile() {
 	# Prevent access violations, see bug 201871
-	VARTEXFONTS="${T}/fonts"
+	export VARTEXFONTS="${T}/fonts"
 
 	# We believe that the following line is no longer needed.
 	# In case of problems file a bug report at bugs.gentoo.org.

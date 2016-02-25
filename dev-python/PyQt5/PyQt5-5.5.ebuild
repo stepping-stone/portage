@@ -3,7 +3,8 @@
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+
+PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
 
 inherit eutils multibuild multilib python-r1 qmake-utils
 
@@ -28,6 +29,8 @@ KEYWORDS="amd64 arm ~x86"
 IUSE="dbus debug declarative designer doc examples gles2 gui help multimedia
 	network opengl positioning printsupport sensors serialport sql svg
 	testlib webchannel webkit websockets widgets x11extras xmlpatterns"
+
+# The requirements below were extracted from configure.py
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	positioning? ( gui )

@@ -11,7 +11,7 @@ SRC_URI="https://launchpad.net/${PN}/${PV%.*}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="test"
 
 RDEPEND=">=dev-libs/glib-2.22[${MULTILIB_USEDEP}]
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-util/dbus-test-runner )"
 
 src_prepare() {
+	# https://bugs.launchpad.net/libindicator/+bug/1502925
 	epatch "${FILESDIR}"/${PN}-ldflags-spacing.patch
 	eautoreconf
 }

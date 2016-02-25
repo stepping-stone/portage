@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
-IUSE="acl apparmor audit cryptsetup curl elfutils gcrypt gnuefi http
+IUSE="acl apparmor audit cryptsetup curl elfutils +gcrypt gnuefi http
 	idn importd +kdbus +kmod +lz4 lzma nat pam policykit
 	qrcode +seccomp selinux ssl sysv-utils test vanilla xkb"
 
@@ -28,7 +28,7 @@ REQUIRED_USE="importd? ( curl gcrypt lzma )"
 
 MINKV="3.11"
 
-COMMON_DEPEND=">=sys-apps/util-linux-2.27:0=[${MULTILIB_USEDEP}]
+COMMON_DEPEND=">=sys-apps/util-linux-2.27.1:0=[${MULTILIB_USEDEP}]
 	sys-libs/libcap:0=[${MULTILIB_USEDEP}]
 	!<sys-libs/glibc-2.16
 	acl? ( sys-apps/acl:0= )
@@ -48,7 +48,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.27:0=[${MULTILIB_USEDEP}]
 		sys-libs/zlib:0=
 	)
 	kmod? ( >=sys-apps/kmod-15:0= )
-	lz4? ( >=app-arch/lz4-0_p119:0=[${MULTILIB_USEDEP}] )
+	lz4? ( >=app-arch/lz4-0_p131:0=[${MULTILIB_USEDEP}] )
 	lzma? ( >=app-arch/xz-utils-5.0.5-r1:0=[${MULTILIB_USEDEP}] )
 	nat? ( net-firewall/iptables:0= )
 	pam? ( virtual/pam:= )
@@ -145,7 +145,7 @@ src_prepare() {
 	# Bug 463376
 	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 	epatch "${FILESDIR}/218-Dont-enable-audit-by-default.patch"
-	epatch "${FILESDIR}/226-noclean-tmp.patch"
+	epatch "${FILESDIR}/228-noclean-tmp.patch"
 	epatch_user
 	eautoreconf
 }
@@ -167,6 +167,11 @@ multilib_src_configure() {
 		# disable -flto since it is an optimization flag
 		# and makes distcc less effective
 		cc_cv_CFLAGS__flto=no
+		# disable -fuse-ld=gold since Gentoo supports explicit linker
+		# choice and forcing gold is undesired, #539998
+		# ld.gold may collide with user's LDFLAGS, #545168
+		# ld.gold breaks sparc, #573874
+		cc_cv_LDFLAGS__Wl__fuse_ld_gold=no
 
 		# Workaround for gcc-4.7, bug 554454.
 		cc_cv_CFLAGS__Werror_shadow=no
@@ -329,7 +334,7 @@ multilib_src_install_all() {
 	# If we install these symlinks, there is no way for the sysadmin to remove them
 	# permanently.
 	rm "${D}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service || die
-	rm "${D}"/etc/systemd/system/multi-user.target.wants/systemd-resolved.service || die
+	rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-resolved.service || die
 	rm -r "${D}"/etc/systemd/system/network-online.target.wants || die
 	rm -r "${D}"/etc/systemd/system/sockets.target.wants || die
 	rm -r "${D}"/etc/systemd/system/sysinit.target.wants || die
@@ -424,6 +429,7 @@ pkg_postinst() {
 	enewgroup input
 	enewgroup systemd-journal
 	newusergroup systemd-bus-proxy
+	newusergroup systemd-coredump
 	newusergroup systemd-journal-gateway
 	newusergroup systemd-journal-remote
 	newusergroup systemd-journal-upload

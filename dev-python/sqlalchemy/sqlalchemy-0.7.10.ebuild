@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc examples firebird mssql mysql postgres +sqlite test"
 
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
@@ -33,8 +33,6 @@ DEPEND="${RDEPEND}
 		>=dev-python/nose-0.10.4[${PYTHON_USEDEP}]
 	)"
 
-# py26 tests needs
-DISTUTILS_NO_PARALLEL_BUILD=1
 S="${WORKDIR}/${MY_P}"
 
 PATCHES=( "${FILESDIR}/${PN}-0.7-logging.handlers.patch" )

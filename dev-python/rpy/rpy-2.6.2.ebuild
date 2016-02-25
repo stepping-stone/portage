@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
 PYTHON_REQ_USE="sqlite"
 
 inherit distutils-r1 flag-o-matic
@@ -29,8 +29,7 @@ RDEPEND="
 	virtual/python-singledispatch[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( $(python_gen_cond_dep 'dev-python/singledispatch[${PYTHON_USEDEP}]' python2_7 python3_3) )"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 PDEPEND="dev-python/ipython[${PYTHON_USEDEP}]"
 
 # ggplot2 is an optional test dep but not in portage

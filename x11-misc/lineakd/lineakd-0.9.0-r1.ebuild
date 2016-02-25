@@ -7,7 +7,7 @@ inherit eutils multilib
 
 MY_P=${P/.0/}
 
-DESCRIPTION="Linux support for Easy Access and Internet Keyboards features X11 support"
+DESCRIPTION="Linux support for Easy Access and Internet Keyboards"
 HOMEPAGE="http://lineak.sourceforge.net"
 SRC_URI="mirror://sourceforge/lineak/${MY_P}.tar.gz"
 
@@ -56,6 +56,6 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "evtest utility has not been installed. evtest can be found"
-	elog "in games-util/joystick."
+	elog "in app-misc/evtest."
 	elog
 }

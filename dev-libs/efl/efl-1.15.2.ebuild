@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -15,10 +15,10 @@ elif [[ *"${PV}" == *"_pre"* ]] ; then
 	EKEY_STATE="snap"
 else
 	SRC_URI="https://download.enlightenment.org/rel/libs/${PN}/${MY_P}.tar.xz"
-	EKEY_STATE="snap"
+	EKEY_STATE="release"
 fi
 
-inherit enlightenment
+inherit enlightenment pax-utils
 
 DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 
@@ -50,7 +50,7 @@ RDEPEND="
 	gnutls? ( net-libs/gnutls )
 	!gnutls? (
 		ssl? (
-			!libressl? ( dev-libs/openssl:0 )
+			!libressl? ( dev-libs/openssl:0= )
 			libressl? ( dev-libs/libressl )
 		)
 	)
@@ -62,7 +62,7 @@ RDEPEND="
 	ibus? ( app-i18n/ibus )
 	jpeg2k? ( media-libs/openjpeg:0 )
 	!oldlua? ( >=dev-lang/luajit-2.0.0 )
-	oldlua? ( dev-lang/lua )
+	oldlua? ( dev-lang/lua:* )
 	physics? ( >=sci-physics/bullet-2.80 )
 	pixman? ( x11-libs/pixman )
 	png? ( media-libs/libpng:0= )
@@ -74,7 +74,7 @@ RDEPEND="
 	)
 	sound? ( media-libs/libsndfile )
 	systemd? ( sys-apps/systemd )
-	tiff? ( media-libs/tiff:0 )
+	tiff? ( media-libs/tiff:0= )
 	tslib? ( x11-libs/tslib )
 	valgrind? ( dev-util/valgrind )
 	wayland? (
@@ -115,7 +115,7 @@ RDEPEND="
 	sys-apps/dbus
 	>=sys-apps/util-linux-2.20.0
 	sys-libs/zlib
-	virtual/jpeg
+	virtual/jpeg:0=
 
 	!dev-libs/ecore
 	!dev-libs/edbus
@@ -162,6 +162,17 @@ DEPEND="
 "
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	enlightenment_src_prepare
+
+	# Remove stupid sleep command.
+	# Also back out gnu make hack that causes regen of Makefiles.
+	sed -i \
+		-e '/sleep 10/d' \
+		-e '/^#### Work around bug in automake check macro$/,/^#### Info$/d' \
+		configure || die
+}
 
 src_configure() {
 	if use ssl && use gnutls ; then
@@ -243,6 +254,18 @@ src_configure() {
 	)
 
 	enlightenment_src_configure
+}
+
+src_compile() {
+	if host-is-pax && ! use oldlua ; then
+		# We need to build the lua code first so we can pax-mark it. #547076
+		local target='_e_built_sources_target_gogogo_'
+		printf '%s: $(BUILT_SOURCES)\n' "${target}" >> src/Makefile || die
+		emake -C src "${target}"
+		emake -C src bin/elua/elua
+		pax-mark m src/bin/elua/.libs/elua
+	fi
+	enlightenment_src_compile
 }
 
 src_install() {

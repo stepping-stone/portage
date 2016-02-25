@@ -104,6 +104,7 @@ INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${LIBPATH}/include}
 
 if is_crosscompile ; then
 	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CHOST}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
+	HOSTLIBPATH=${PREFIX}/${CHOST}/${CTARGET}/lib/${GCC_CONFIG_VER}
 else
 	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
 fi
@@ -152,13 +153,14 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	# the older versions, we don't want to bother supporting it.  #448024
 	tc_version_is_at_least 4.8 && IUSE+=" graphite" IUSE_DEF+=( sanitize )
 	tc_version_is_at_least 4.9 && IUSE+=" cilk"
+	tc_version_is_at_least 5.0 && IUSE+=" jit"
 	tc_version_is_at_least 6.0 && IUSE+=" pie +ssp"
 fi
 
 IUSE+=" ${IUSE_DEF[*]/#/+}"
 
 # Support upgrade paths here or people get pissed
-if ! tc_version_is_at_least 4.7 || is_crosscompile || use multislot || [[ ${GCC_PV} == *_alpha* ]] ; then
+if ! tc_version_is_at_least 4.8 || is_crosscompile || use multislot || [[ ${GCC_PV} == *_alpha* ]] ; then
 	SLOT="${GCC_CONFIG_VER}"
 elif ! tc_version_is_at_least 5.0 ; then
 	SLOT="${GCC_BRANCH_VER}"
@@ -659,7 +661,7 @@ make_gcc_hard() {
 			ewarn "PIE has not been enabled by default"
 			gcc_hard_flags+=" -DEFAULT_SSP"
 		else
-			# do nothing if hardened is't supported, but don't die either
+			# do nothing if hardened isn't supported, but don't die either
 			ewarn "hardened is not supported for this arch in this gcc version"
 			return 0
 		fi
@@ -841,6 +843,7 @@ toolchain_src_configure() {
 	is_d   && GCC_LANG+=",d"
 	is_gcj && GCC_LANG+=",java"
 	is_go  && GCC_LANG+=",go"
+	is_jit && GCC_LANG+=",jit"
 	if is_objc || is_objcxx ; then
 		GCC_LANG+=",objc"
 		if tc_version_is_at_least 4 ; then
@@ -903,6 +906,9 @@ toolchain_src_configure() {
 	if tc_version_is_at_least 4.4 && is_cxx ; then
 		confgcc+=( --enable-libstdcxx-time )
 	fi
+
+	# The jit language requires this.
+	is_jit && confgcc+=( --enable-host-shared )
 
 	# # Turn on the -Wl,--build-id flag by default for ELF targets. #525942
 	# # This helps with locating debug files.
@@ -1505,7 +1511,7 @@ toolchain_src_compile() {
 
 	# Do not make manpages if we do not have perl ...
 	[[ ! -x /usr/bin/perl ]] \
-		&& find "${WORKDIR}"/build -name '*.[17]' | xargs touch
+		&& find "${WORKDIR}"/build -name '*.[17]' -exec touch {} +
 
 	gcc_do_make ${GCC_MAKE_TARGET}
 }
@@ -1663,7 +1669,12 @@ toolchain_src_install() {
 	for x in cpp gcc g++ c++ gcov g77 gcj gcjh gfortran gccgo ; do
 		# For some reason, g77 gets made instead of ${CTARGET}-g77...
 		# this should take care of that
-		[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
+		if [[ -f ${x} ]] ; then
+			# In case they're hardlinks, clear out the target first
+			# otherwise the mv below will complain.
+			rm -f ${CTARGET}-${x}
+			mv ${x} ${CTARGET}-${x}
+		fi
 
 		if [[ -f ${CTARGET}-${x} ]] ; then
 			if ! is_crosscompile ; then
@@ -1681,9 +1692,16 @@ toolchain_src_install() {
 			ln -sf ${CTARGET}-${x} ${CTARGET}-${x}-${GCC_CONFIG_VER}
 		fi
 	done
+	# Clear out the main go binaries as we don't want to clobber dev-lang/go
+	# when gcc-config runs. #567806
+	if tc_version_is_at_least 5 && is_go ; then
+		rm -f go gofmt
+	fi
 
 	# Now do the fun stripping stuff
 	env RESTRICT="" CHOST=${CHOST} prepstrip "${D}${BINPATH}"
+	is_crosscompile && \
+		env RESTRICT="" CHOST=${CHOST} prepstrip "${D}/${HOSTLIBPATH}"
 	env RESTRICT="" CHOST=${CTARGET} prepstrip "${D}${LIBPATH}"
 	# gcc used to install helper binaries in lib/ but then moved to libexec/
 	[[ -d ${D}${PREFIX}/libexec/gcc ]] && \
@@ -1713,9 +1731,8 @@ toolchain_src_install() {
 	# install testsuite results
 	if use regression-test; then
 		docinto testsuite
-		find "${WORKDIR}"/build -type f -name "*.sum" -print0 | xargs -0 dodoc
-		find "${WORKDIR}"/build -type f -path "*/testsuite/*.log" -print0 \
-			| xargs -0 dodoc
+		find "${WORKDIR}"/build -type f -name "*.sum" -exec dodoc {} +
+		find "${WORKDIR}"/build -type f -path "*/testsuite/*.log" -exec dodoc {} +
 	fi
 
 	# Rather install the script, else portage with changing $FILESDIR
@@ -1765,6 +1782,17 @@ gcc_movelibs() {
 	# older versions of gcc did not support --print-multi-os-directory
 	tc_version_is_at_least 3.2 || return 0
 
+	# For non-target libs which are for CHOST and not CTARGET, we want to
+	# move them to the compiler-specific CHOST internal dir.  This is stuff
+	# that you want to link against when building tools rather than building
+	# code to run on the target.
+	if tc_version_is_at_least 5 && is_crosscompile ; then
+		dodir "${HOSTLIBPATH}"
+		mv "${D}"/usr/$(get_libdir)/libcc1* "${D}${HOSTLIBPATH}" || die
+	fi
+
+	# For all the libs that are built for CTARGET, move them into the
+	# compiler-specific CTARGET internal dir.
 	local x multiarg removedirs=""
 	for multiarg in $($(XGCC) -print-multi-lib) ; do
 		multiarg=${multiarg#*;}
@@ -1810,7 +1838,7 @@ gcc_movelibs() {
 	for FROMDIR in ${removedirs} ; do
 		rmdir "${D}"${FROMDIR} >& /dev/null
 	done
-	find "${D}" -type d | xargs rmdir >& /dev/null
+	find -depth "${D}" -type d -exec rmdir {} + >& /dev/null
 }
 
 # make sure the libtool archives have libdir set to where they actually
@@ -2144,6 +2172,11 @@ is_gcj() {
 is_go() {
 	gcc-lang-supported go || return 1
 	use cxx && use_if_iuse go
+}
+
+is_jit() {
+	gcc-lang-supported jit || return 1
+	use_if_iuse jit
 }
 
 is_multilib() {

@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -19,7 +19,7 @@ _KDE5_ECLASS=1
 # for tests you should proceed with setting VIRTUALX_REQUIRED=test.
 : ${VIRTUALX_REQUIRED:=manual}
 
-inherit kde5-functions fdo-mime flag-o-matic gnome2-utils versionator virtualx eutils cmake-utils
+inherit cmake-utils eutils flag-o-matic gnome2-utils kde5-functions versionator virtualx xdg
 
 if [[ ${KDE_BUILD_TYPE} = live ]]; then
 	case ${KDE_SCM} in
@@ -64,6 +64,11 @@ else
 	: ${KDE_DOXYGEN:=false}
 fi
 
+# @ECLASS-VARIABLE: KDE_DOX_DIR
+# @DESCRIPTION:
+# Defaults to ".". Otherwise, use alternative KDE doxygen path.
+: ${KDE_DOX_DIR:=.}
+
 # @ECLASS-VARIABLE: KDE_EXAMPLES
 # @DESCRIPTION:
 # If set to "false", unconditionally ignore a top-level examples subdirectory.
@@ -75,6 +80,8 @@ fi
 # If set to "false", do nothing.
 # Otherwise, add "+handbook" to IUSE, add the appropriate dependency, and
 # generate and install KDE handbook.
+# If set to "forceoptional", remove a KF5DocTools dependency from the root
+# CMakeLists.txt in addition to the above.
 : ${KDE_HANDBOOK:=false}
 
 # @ECLASS-VARIABLE: KDE_DOC_DIR
@@ -86,6 +93,8 @@ fi
 # @DESCRIPTION:
 # If set to "false", do nothing.
 # For any other value, add test to IUSE and add a dependency on dev-qt/qttest:5.
+# If set to "forceoptional", remove a Qt5Test dependency from the root
+# CMakeLists.txt in addition to the above.
 if [[ ${CATEGORY} = kde-frameworks ]]; then
 	: ${KDE_TEST:=true}
 else
@@ -249,15 +258,17 @@ _calculate_src_uri() {
 		kde-frameworks)
 			SRC_URI="mirror://kde/stable/frameworks/${PV%.*}/${_kmname}-${PV}.tar.xz" ;;
 		kde-plasma)
+			local plasmapv=$(get_version_component_range 1-3)
+
 			case ${PV} in
 				5.?.[6-9]? )
 					# Plasma 5 beta releases
-					SRC_URI="mirror://kde/unstable/plasma/${PV}/${_kmname}-${PV}.tar.xz"
+					SRC_URI="mirror://kde/unstable/plasma/${plasmapv}/${_kmname}-${PV}.tar.xz"
 					RESTRICT+=" mirror"
 					;;
 				*)
 					# Plasma 5 stable releases
-					SRC_URI="mirror://kde/stable/plasma/${PV}/${_kmname}-${PV}.tar.xz" ;;
+					SRC_URI="mirror://kde/stable/plasma/${plasmapv}/${_kmname}-${PV}.tar.xz" ;;
 			esac
 			;;
 	esac
@@ -317,6 +328,10 @@ _calculate_live_repo() {
 				_kmname=${KMNAME}
 			else
 				_kmname=${PN}
+			fi
+
+			if [[ ${PV} == ??.??.49.9999 && ${CATEGORY} = kde-apps ]]; then
+				EGIT_BRANCH="Applications/$(get_version_component_range 1-2)"
 			fi
 
 			if [[ ${PV} != 9999 && ${CATEGORY} = kde-plasma ]]; then
@@ -381,60 +396,56 @@ kde5_src_unpack() {
 kde5_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
 
+	cmake-utils_src_prepare
+
 	# only build examples when required
 	if ! use_if_iuse examples || ! use examples ; then
-		comment_add_subdirectory examples
+		cmake_comment_add_subdirectory examples
 	fi
 
 	# only enable handbook when required
 	if ! use_if_iuse handbook ; then
-		comment_add_subdirectory ${KDE_DOC_DIR}
+		cmake_comment_add_subdirectory ${KDE_DOC_DIR}
+
+		if [[ ${KDE_HANDBOOK} = forceoptional ]] ; then
+			punt_bogus_dep KF5 DocTools
+		fi
 	fi
 
 	# enable only the requested translations
 	# when required
 	if [[ ${KDE_BUILD_TYPE} = release ]] ; then
 		if [[ -d po ]] ; then
-			pushd po > /dev/null
+			pushd po > /dev/null || die
 			for lang in *; do
 				if ! has ${lang} ${LINGUAS} ; then
 					if [[ ${lang} != CMakeLists.txt ]] ; then
 						rm -rf ${lang}
 					fi
 					if [[ -e CMakeLists.txt ]] ; then
-						comment_add_subdirectory ${lang}
+						cmake_comment_add_subdirectory ${lang}
 					fi
 				fi
 			done
-			popd > /dev/null
+			popd > /dev/null || die
 		fi
 
-		if [[ ${KDE_HANDBOOK} = true && -d ${KDE_DOC_DIR} && ${CATEGORY} != kde-apps ]] ; then
-			pushd ${KDE_DOC_DIR} > /dev/null
+		if [[ ${KDE_HANDBOOK} != false && -d ${KDE_DOC_DIR} && ${CATEGORY} != kde-apps ]] ; then
+			pushd ${KDE_DOC_DIR} > /dev/null || die
 			for lang in *; do
 				if ! has ${lang} ${LINGUAS} ; then
-					comment_add_subdirectory ${lang}
+					cmake_comment_add_subdirectory ${lang}
 				fi
 			done
-			popd > /dev/null
+			popd > /dev/null || die
 		fi
 	else
 		rm -rf po
 	fi
 
-	# in frameworks, tests = manual tests so never
-	# build them
+	# in frameworks, tests = manual tests so never build them
 	if [[ ${CATEGORY} = kde-frameworks ]]; then
-		comment_add_subdirectory tests
-	fi
-
-	if [[ ${CATEGORY} = kde-frameworks || ${CATEGORY} = kde-plasma || ${CATEGORY} = kde-apps ]] ; then
-		# only build unit tests when required
-		if ! use_if_iuse test ; then
-			comment_add_subdirectory autotests
-			comment_add_subdirectory test
-			comment_add_subdirectory tests
-		fi
+		cmake_comment_add_subdirectory tests
 	fi
 
 	case ${KDE_PUNT_BOGUS_DEPS} in
@@ -449,7 +460,20 @@ kde5_src_prepare() {
 			;;
 	esac
 
-	cmake-utils_src_prepare
+	# only build unit tests when required
+	if ! use_if_iuse test ; then
+		if [[ ${KDE_TEST} = forceoptional ]] ; then
+			punt_bogus_dep Qt5 Test
+			# if forceoptional, also cover non-kde categories
+			cmake_comment_add_subdirectory autotests
+			cmake_comment_add_subdirectory test
+			cmake_comment_add_subdirectory tests
+		elif [[ ${CATEGORY} = kde-frameworks || ${CATEGORY} = kde-plasma || ${CATEGORY} = kde-apps ]] ; then
+			cmake_comment_add_subdirectory autotests
+			cmake_comment_add_subdirectory test
+			cmake_comment_add_subdirectory tests
+		fi
+	fi
 }
 
 # @FUNCTION: kde5_src_configure
@@ -488,7 +512,7 @@ kde5_src_compile() {
 
 	# Build doxygen documentation if applicable
 	if use_if_iuse doc ; then
-		kgenapidox . || die
+		kgenapidox ${KDE_DOX_DIR} || die
 	fi
 }
 
@@ -513,7 +537,7 @@ kde5_src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS DBUS_SESSION_BUS_PID
 
 	if [[ ${VIRTUALX_REQUIRED} = always || ${VIRTUALX_REQUIRED} = test ]]; then
-		VIRTUALX_COMMAND="_test_runner" virtualmake
+		virtx _test_runner
 	else
 		_test_runner
 	fi
@@ -550,6 +574,7 @@ kde5_pkg_preinst() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	gnome2_icon_savelist
+	xdg_pkg_preinst
 }
 
 # @FUNCTION: kde5_pkg_postinst
@@ -559,7 +584,7 @@ kde5_pkg_postinst() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	gnome2_icon_cache_update
-	fdo-mime_desktop_database_update
+	xdg_pkg_postinst
 }
 
 # @FUNCTION: kde5_pkg_postrm
@@ -569,7 +594,7 @@ kde5_pkg_postrm() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	gnome2_icon_cache_update
-	fdo-mime_desktop_database_update
+	xdg_pkg_postrm
 }
 
 fi

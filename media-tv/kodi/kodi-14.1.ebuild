@@ -22,7 +22,7 @@ case ${PV} in
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI="http://mirrors.kodi.tv/releases/source/${MY_PV}-${CODENAME}.tar.gz -> ${P}.tar.gz
 		http://mirrors.kodi.tv/releases/source/${MY_P}-generated-addons.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 
 	S=${WORKDIR}/xbmc-${PV}-${CODENAME}
 	;;
@@ -34,7 +34,10 @@ HOMEPAGE="http://kodi.tv/ http://kodi.wiki/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="airplay avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick midi mysql nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba sdl sftp test +texturepacker udisks upnp upower +usb vaapi vdpau webserver +X +xrandr"
+# gles/vaapi: http://trac.kodi.tv/ticket/10552 #464306
 REQUIRED_USE="
+	gles? ( !vaapi )
+	vaapi? ( !gles )
 	pvr? ( mysql )
 	rsxs? ( X )
 	xrandr? ( X )

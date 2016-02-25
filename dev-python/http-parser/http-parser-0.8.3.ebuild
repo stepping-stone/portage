@@ -14,20 +14,13 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~s390 x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~s390 ~sparc x86 ~x86-fbsd"
 IUSE="examples"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]"
-
-cython_dep() {
-	local flag
-	for flag in $(python_gen_useflags 'python*'); do
-		DEPEND+=" ${flag}? ( dev-python/cython[${flag}(-)] )"
-	done
-}
-cython_dep
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep 'dev-python/cython[${PYTHON_USEDEP}]' 'python*')"
 
 python_compile() {
 	if [[ ${EPYTHON} != python3* ]]; then

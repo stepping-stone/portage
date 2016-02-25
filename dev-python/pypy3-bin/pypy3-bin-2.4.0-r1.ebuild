@@ -50,7 +50,7 @@ REQUIRED_USE="!jit? ( !shadowstack )
 LICENSE="MIT"
 SLOT="0/$(get_version_component_range 1-2 ${PV})"
 KEYWORDS="~amd64 ~x86"
-IUSE="gdbm +jit shadowstack sqlite cpu_flags_x86_sse2 test tk"
+IUSE="gdbm +jit +shadowstack sqlite cpu_flags_x86_sse2 test tk"
 
 # yep, world would be easier if people started filling subslots...
 RDEPEND="
@@ -139,11 +139,14 @@ src_install() {
 
 	einfo "Generating caches and byte-compiling ..."
 
-	python_export pypy3 EPYTHON PYTHON PYTHON_SITEDIR
-	local PYTHON=${ED%/}${INSDESTTREE}/pypy-c
+	local -x PYTHON=${ED%/}${INSDESTTREE}/pypy-c
 	local -x LD_LIBRARY_PATH="${ED%/}${INSDESTTREE}"
+	# we can't use eclass function since PyPy is dumb and always gives
+	# paths relative to the interpreter
+	local PYTHON_SITEDIR=${EPREFIX}/usr/$(get_libdir)/pypy3/site-packages
+	python_export pypy3 EPYTHON
 
-	echo "EPYTHON='${EPYTHON}'" > epython.py
+	echo "EPYTHON='${EPYTHON}'" > epython.py || die
 	python_domodule epython.py
 
 	# Generate Grammar and PatternGrammar pickles.

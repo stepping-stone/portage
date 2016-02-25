@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -26,7 +26,7 @@ fi
 
 LICENSE="vim"
 SLOT="0"
-IUSE="acl cscope debug lua luajit nls perl python racket ruby"
+IUSE="acl cscope debug lua luajit lto nls perl python racket ruby"
 
 REQUIRED_USE="luajit? ( lua )
 	python? ( ${PYTHON_REQUIRED_USE} )"
@@ -45,7 +45,7 @@ RDEPEND="
 	perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )
 	racket? ( dev-scheme/racket )
-	ruby? ( || ( dev-lang/ruby:2.0 dev-lang/ruby:1.9 ) )"
+	ruby? ( dev-lang/ruby:2.0 )"
 DEPEND="${RDEPEND}
 	dev-util/ctags
 	sys-devel/autoconf
@@ -63,6 +63,11 @@ src_prepare() {
 }
 
 src_configure() {
+	if use lto ; then
+		LDFLAGS_OLD="$LDFLAGS"
+		local LDFLAGS="${LDFLAGS} -fno-lto -fno-use-linker-plugin"
+	fi
+
 	use debug && append-flags "-DDEBUG"
 
 	local myconf="--with-features=huge --disable-gpm --enable-multibyte"
@@ -95,6 +100,11 @@ src_configure() {
 	fi
 
 	econf ${myconf} --enable-gui=qt --with-vim-name=qvim --with-modified-by=Gentoo-${PVR}
+
+	if use lto ; then
+		LDFLAGS="${LDFLAGS_OLD}"
+		sed -i -e "s|-fno-lto -fno-use-linker-plugin||g" src/auto/config.mk
+	fi
 }
 
 src_install() {

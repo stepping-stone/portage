@@ -11,12 +11,13 @@ if [[ ${PV} == *9999* ]]; then
 	S="${WORKDIR}/${PN}"
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
+		https://dev.gentoo.org/~dolsen/releases/catalyst/${P}.tar.bz2
 		https://dev.gentoo.org/~jmbsvicetto/distfiles/${P}.tar.bz2
 		https://dev.gentoo.org/~zerochaos/distfiles/${P}.tar.bz2"
 	KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 fi
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_4,3_5} )
 
 inherit distutils-r1 multilib ${SRC_ECLASS}
 
@@ -29,10 +30,10 @@ IUSE="ccache doc kernel_linux"
 
 DEPEND="
 	app-text/asciidoc
-	>=dev-python/snakeoil-0.5.2
+	>=dev-python/snakeoil-0.6.5[${PYTHON_USEDEP}]
 "
 RDEPEND="
-	=dev-python/pydecomp-9999
+	=dev-python/pydecomp-9999[${PYTHON_USEDEP}]
 	app-arch/lbzip2
 	app-crypt/shash
 	app-arch/tar[xattr]
@@ -45,7 +46,6 @@ RDEPEND="
 "
 
 python_prepare_all() {
-	python_export_best
 	echo VERSION="${PV}" "${PYTHON}" setup.py set_version
 	VERSION="${PV}" "${PYTHON}" setup.py set_version
 }
@@ -55,7 +55,7 @@ python_compile_all() {
 	emake
 }
 
-python_install_all(){
+python_install_all() {
 	distutils-r1_python_install_all
 	if use doc; then
 		dodoc files/HOWTO.html files/docbook-xsl.css

@@ -1,13 +1,14 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 ruby22"
+USE_RUBY="ruby20 ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_TASK_TEST=""
-RUBY_FAKEGEM_TASK_DOC=""
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
+RUBY_FAKEGEM_TASK_DOC="doc"
 
 RUBY_FAKEGEM_EXTRADOC="ChangeLog.txt README.rdoc TODO.rdoc"
 
@@ -31,7 +32,10 @@ each_ruby_test() {
 all_ruby_install() {
 	all_fakegem_install
 
-	pushd doc &>/dev/null
-	dohtml -r .
-	popd &>/dev/null
+	if use doc; then
+		# If the doc build fails, the doc directory might not exist
+		pushd doc &>/dev/null || die "pushd doc failed"
+		dohtml -r .
+		popd &>/dev/null
+	fi
 }

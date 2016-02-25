@@ -40,11 +40,11 @@ COMMONDEPEND="
 	dev-libs/libxslt
 	dev-libs/qjson
 	dev-qt/qtxmlpatterns:4
-	gpssync? ( || ( >=kde-apps/libkgeomap-14.12.0:4 >=media-libs/libkgeomap-4.12.0 ) )
+	gpssync? ( >=kde-apps/libkgeomap-4.12.0:4 )
 	media-libs/libpng:0=
 	media-libs/tiff:0
 	virtual/jpeg:0
-	calendar? ( $(add_kdebase_dep kdepimlibs) )
+	calendar? ( $(add_kdeapps_dep kdepimlibs) )
 	crypt? ( app-crypt/qca:2[qt4(+)] )
 	ipod? (
 		media-libs/libgpod

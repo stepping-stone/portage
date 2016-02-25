@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -32,8 +32,8 @@ RDEPEND="dev-libs/atk
 	media-libs/alsa-lib
 	media-libs/fontconfig
 	media-libs/freetype
-	media-libs/gst-plugins-base
-	media-libs/gstreamer
+	media-libs/gst-plugins-base:0.10
+	media-libs/gstreamer:0.10
 	media-libs/libcanberra[gtk]
 	media-libs/libogg
 	media-libs/libpng:1.2
@@ -54,17 +54,21 @@ RDEPEND="dev-libs/atk
 	x11-terms/xterm"
 DEPEND=""
 
-if use amd64 ; then
-	ICAARCH=linuxx64
-elif use x86 ; then
-	ICAARCH=linuxx86
-fi
-S="${WORKDIR}/${ICAARCH}/${ICAARCH}.cor"
-
 pkg_nofetch() {
 	elog "Download the client file ${A} from
-	http://www.citrix.com/downloads/citrix-receiver/linux/receiver-for-linux-13-2.html"
+	https://www.citrix.com/downloads/citrix-receiver/legacy-receiver-for-linux/receiver-for-linux-13-2.html"
 	elog "and place it in ${DISTDIR:-/usr/portage/distfiles}."
+}
+
+src_unpack() {
+	default
+
+	if use amd64 ; then
+		ICAARCH=linuxx64
+	elif use x86 ; then
+		ICAARCH=linuxx86
+	fi
+	S="${WORKDIR}/${ICAARCH}/${ICAARCH}.cor"
 }
 
 src_install() {

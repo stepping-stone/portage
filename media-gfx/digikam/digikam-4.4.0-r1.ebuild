@@ -33,13 +33,13 @@ CDEPEND="
 	kde-apps/kdebase-kioslaves:4
 	kde-apps/libkdcraw:4=
 	kde-apps/libkexiv2:4=
+	<=kde-apps/libkface-4.4.0
+	kde-apps/libkgeomap:4
 	kde-apps/libkipi:4
 	kde-apps/marble:4=[plasma]
 	media-libs/jasper
 	media-libs/lcms:2
 	media-libs/lensfun
-	|| ( kde-apps/libkface:4 <=media-libs/libkface-4.4.0 )
-	media-libs/libkgeomap
 	media-libs/liblqr
 	>=media-libs/libpgf-6.12.27
 	media-libs/libpng:0=
@@ -48,7 +48,7 @@ CDEPEND="
 	virtual/jpeg
 	dev-qt/qtgui:4
 	|| ( dev-qt/qtsql:4[mysql] dev-qt/qtsql:4[sqlite] )
-	addressbook? ( $(add_kdebase_dep kdepimlibs) )
+	addressbook? ( $(add_kdeapps_dep kdepimlibs) )
 	gphoto2? ( media-libs/libgphoto2:= )
 	mysql? ( virtual/mysql )
 	semantic-desktop? (
@@ -82,6 +82,7 @@ RESTRICT=test
 PATCHES=(
 	"${FILESDIR}/${P}-libkexiv2.patch"
 	"${FILESDIR}/${P}-hang.patch"
+	"${FILESDIR}/${PN}-4.14.0-lensfun.patch" # bug 566624
 )
 
 src_prepare() {

@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -14,17 +14,18 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
-IUSE="doc test"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
+IUSE="test"
 
-CDEPEND="$(python_gen_cond_dep 'dev-python/funcsigs[${PYTHON_USEDEP}]' 'python2_7')
-	>=dev-python/pbr-1.3[${PYTHON_USEDEP}]"
+CDEPEND="
+	>=dev-python/pbr-1.3[${PYTHON_USEDEP}]
+	virtual/python-funcsigs[${PYTHON_USEDEP}]"
 DEPEND="
 	>=dev-python/setuptools-17.1[${PYTHON_USEDEP}]
 	test? (
 		${CDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
-		$(python_gen_cond_dep '>=dev-python/unittest2-1.1.0[${PYTHON_USEDEP}]' python{2_7,3_3} pypy)
+		>=dev-python/unittest2-1.1.0[${PYTHON_USEDEP}]
 	)"
 RDEPEND="
 	${CDEPEND}
@@ -32,11 +33,11 @@ RDEPEND="
 "
 
 python_test() {
-	nosetests || die "tests fail under ${EPYTHON}"
+	nosetests --verbose || die "tests fail under ${EPYTHON}"
 }
 
 python_install_all() {
-	use doc && local DOCS=( docs/*.txt )
+	local DOCS=( docs/{conf.py,index.txt} AUTHORS ChangeLog NEWS README.rst )
 
 	distutils-r1_python_install_all
 }

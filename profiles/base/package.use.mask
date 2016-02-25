@@ -5,9 +5,60 @@
 # This file requires >=portage-2.1.1
 # New entries go on top.
 
+# James Le Cuirot <chewi@gentoo.org> (2 Jan 2016)
+# Incorrectly depends on gjdoc, which is going to be
+# last-rited. Doesn't actually install the javadocs in this ebuild
+# version anyway. Unfortunately this will also prevent the other HTML
+# docs from installing. Sorry about that.
+=net-dns/libidn-1.30 doc
+
+# NP-Hardass <NP-Hardass@gentoo.org> (1 Jan 2016)
+# USE flag is renamed to postscript, mask the old flag #564422
+# to notify users.  This entry may be removed after 30 days
+app-text/atril ps
+
+# Ian Delaney <idella4@gentoo.org> (28 Dec 2015)
+# proxy maintainer excludes dep uchardet from the build
+# of mpv temporarily
+media-video/mpv uchardet
+
+# Manuel Rüger <mrueg@gentoo.org> (24 Dec 2015)
+# media-tv/xawtv is masked for removal
+net-im/ayttm webcam
+
+# Brian Evans <grknight@gentoo.org> (17 Dec 2015)
+# Drizzle is slated for removal
+sys-cluster/gearmand drizzle
+
+# Sergey Popov <pinkbyte@gentoo.org> (7 Dec 2015)
+# IPoE driver does not build properly
+net-dialup/accel-ppp ipoe
+
+# Michael Palimaka <kensington@gentoo.org> (6 Dev 2015)
+# Requires unreleased dependencies
+=kde-apps/gwenview-15.08* kipi raw
+
+# Patrice Clement <monsieurp@gentoo.org> (27 Nov 2015)
+# Unsastified dependencies are upsetting repoman. Needs investigation.
+app-arch/cfv bittorrent
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (19 Nov 2015)
+# GN build for Chromium is still experimental.
+www-client/chromium gn
+
+# Alexis Ballier <aballier@gentoo.org> (14 Nov 2015)
+# MMAL is only available on the Raspberry Pi:
+# Mask it globally, unmask it on arm.
+media-video/ffmpeg mmal
+
+# Michael Palimaka <kensington@gentoo.org> (13 Nov 2015)
+# Requires unreleased dependencies
+kde-frameworks/knotifications speech
+kde-frameworks/ktextwidgets speech
+
 # Rick Farina <zerochaos@gentoo.org> (06 Oct 2015)
 # forward porting this patch is non-trivial, mask for now
-=net-wireless/wpa_supplicant-2.5 wimax
+>=net-wireless/wpa_supplicant-2.5 wimax
 
 # Nathan Phillip Brink <binki@gentoo.org> (26 Sep 2015)
 # git useflag requires dev-libs/libgit2 which few arches support
@@ -57,10 +108,6 @@ sci-libs/gdal ruby
 # See bug #480574
 media-libs/mlt ruby
 
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (02 Sep 2015)
-# x11-drivers/xf86-video-amdgpu is not keyworded on most arches
-x11-base/xorg-drivers video_cards_amdgpu
-
 # Andreas K. Huettel <dilfridge@gentoo.org> (1 Sep 2015)
 # Currently broken upstream. We still hope it will get fixed.
 app-office/libreoffice telepathy
@@ -77,7 +124,7 @@ kde-apps/kaccounts-integration kdepim
 
 # Michael Palimaka <kensington@gentoo.org> (27 Aug 2015)
 # Unreleased dependencies
-kde-apps/dolphin:5 thumbnail
+=kde-apps/dolphin-15.08* thumbnail
 
 # James Le Cuirot <chewi@gentoo.org> (18 Aug 2015)
 # gcc[awt] is only used by gcj-jdk[awt] and that isn't needed by
@@ -97,17 +144,9 @@ app-office/akonadi-server qt5
 # Gentoo bug: 554484
 >=dev-lang/mono-3.12.1 doc
 
-# Michael Palimaka <kensington@gentoo.org> (12 Aug 2015)
-# Requires unreleased dependency
-kde-frameworks/kwallet gpg
-
 # Ben de Groot <yngwin@gentoo.org> (12 Aug 2015)
 # Seems to link correctly, but fails to run. Bug #557354.
 =media-sound/qsampler-0.3.1 libgig
-
-# Justin Lecher <jlec@gentoo.org> (04 Aug 2015)
-# USE mask unsupported python implementations in django
-dev-python/south python_targets_python3_3 python_targets_python3_4 python_targets_pypy
 
 # James Le Cuirot <chewi@gentoo.org> (29 Jul 2015)
 # JavaFX and the browser plugin are not included on some platforms.
@@ -118,11 +157,6 @@ dev-java/oracle-jre-bin javafx nsplugin
 # app-text/migemo is masked because it fails for ruby20
 app-text/cmigemo emacs
 www-client/w3m migemo
-
-# Anthony G. Basile <blueness@gentoo.org> (04 Jul 2015)
-# USE=http2 depends on net-libs/nghttp2 which was recently
-# added to the tree and is still not stable.  Bug #552618.
-net-misc/curl http2
 
 # Gilles Dartiguelongue <eva@gentoo.org> (25 May 2015)
 # webkit fails to build with USE=wayland, bug #549228
@@ -155,10 +189,6 @@ www-apps/venus test
 # James Le Cuirot <chewi@gentoo.org> (05 Apr 2015)
 # dev-java/sun-j2me-bin is going away.
 dev-java/proguard j2me
-
-# Christoph Junghans <ottxor@gentoo.org> (03 Apr 2015)
-# >=~sys-devel/dragonegg-3.6 is broken (bug #543644)
-sys-devel/byfl dragonegg
 
 # Lars Wendler <polynomial-c@gentoo.org> (19 Mar 2015)
 # >=games-strategy/freeciv-2.5.0 requires >=dev-lang/lua-5.2
@@ -327,9 +357,10 @@ net-im/climm otr
 # Needs hardmasked lua-5.2
 >=media-plugins/grilo-plugins-0.2.12 lua
 
-# Rick Farina <zerochaos@gentoo.org> (22 May 2014)
-# mask test use flag for metasploit since tests do not pass
-net-analyzer/metasploit test
+# Rick Farina <zerochaos@gentoo.org> (30 Dec 2015)
+# mask test use flag since tests do not pass
+# mask development use flag since most of it isn't packaged (or useful)
+net-analyzer/metasploit development test
 
 # Tom Wijsman <TomWij@gentoo.org> (14 May 2014)
 # Documentation generation needs APIviz which is not in the Portage tree yet.
@@ -854,7 +885,3 @@ media-video/vlc direct2d directx dshow dxva2 waveout wingdi
 media-video/vlc audioqueue ios-vout macosx macosx-audio macosx-dialog-provider macosx-eyetv macosx-quartztext macosx-qtkit macosx-vout
 # media-library does not build
 media-video/vlc media-library
-
-# Alexis Ballier <aballier@gentoo.org> <28 Apr 2011>
-# Requires ~arch libcelt and keywording
-<media-video/ffmpeg-2.0 celt

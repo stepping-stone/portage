@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_{3,4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
 
 inherit distutils-r1 flag-o-matic
 
@@ -30,6 +30,10 @@ DEPEND="${RDEPEND}
 		>=dev-python/sphinx-1.3.1[${PYTHON_USEDEP}]
 		)
 	mpi? ( dev-python/mpi4py[${PYTHON_USEDEP}] )"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-mpi4py2.backport
+)
 
 pkg_setup() {
 	use mpi && export CC=mpicc

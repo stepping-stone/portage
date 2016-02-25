@@ -1,0 +1,72 @@
+# ChangeLog for www-apps/icingaweb2
+# Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
+# (auto-generated from git log)
+
+*icingaweb2-2.0.0 (05 Oct 2015)
+
+  05 Oct 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +icingaweb2-2.0.0.ebuild, +metadata.xml:
+  adding
+
+  Package-Manager: portage-2.2.20.1
+
+  05 Oct 2015; Matthew Thode <prometheanfire@gentoo.org>
+  icingaweb2-2.0.0.ebuild:
+  adding x86 keyword
+
+  Package-Manager: portage-2.2.20.1
+
+  06 Oct 2015; Mikle Kolyada <zlogene@gentoo.org> icingaweb2-2.0.0.ebuild:
+  specify version  for emerge --config
+
+  Package-Manager: portage-2.2.20.1
+
+*icingaweb2-2.0.0-r1 (22 Nov 2015)
+
+  22 Nov 2015; Matthew Thode <prometheanfire@gentoo.org>
+  -icingaweb2-2.0.0.ebuild, +icingaweb2-2.0.0-r1.ebuild:
+  fixing bug 566556
+
+  Package-Manager: portage-2.2.20.1
+
+*icingaweb2-2.1.0 (15 Dec 2015)
+
+  15 Dec 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +icingaweb2-2.1.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.24
+
+*icingaweb2-2.1.1 (24 Dec 2015)
+
+  24 Dec 2015; Matthew Thode <prometheanfire@gentoo.org>
+  -icingaweb2-2.0.0-r1.ebuild, +icingaweb2-2.1.1.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.24
+
+*icingaweb2-2.1.2 (24 Dec 2015)
+
+  24 Dec 2015; Matthew Thode <prometheanfire@gentoo.org>
+  -icingaweb2-2.1.1.ebuild, +icingaweb2-2.1.2.ebuild:
+  re-bup
+
+  Package-Manager: portage-2.2.24
+
+  24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Set appropriate maintainer types in metadata.xml (GLEP 67)
+
+  24 Jan 2016; Matthew Thode <prometheanfire@gentoo.org>
+  icingaweb2-2.1.2.ebuild:
+  clean up apache2 usage for bug 572776
+
+  Package-Manager: portage-2.2.26
+
+*icingaweb2-9999 (28 Jan 2016)
+
+  28 Jan 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +icingaweb2-9999.ebuild:
+  adding 9999 version
+
+  Package-Manager: portage-2.2.26
+

@@ -18,14 +18,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
-RDEPEND="virtual/python-imaging
+RDEPEND="dev-python/pillow
 	media-fonts/ttf-bitstream-vera
 	media-libs/libart_lgpl
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
-
-DISTUTILS_NO_PARALLEL_BUILD=1
 
 src_unpack() {
 	unpack ${P}.tar.gz

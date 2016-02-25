@@ -120,6 +120,16 @@ JAVA_PKG_ALLOW_VM_CHANGE=${JAVA_PKG_ALLOW_VM_CHANGE:="yes"}
 #	JAVA_PKG_WANT_TARGET=1.3 emerge bar
 # @CODE
 
+# @ECLASS-VARIABLE: JAVA_PKG_DEBUG
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# A variable to be set with "yes" or "y", or ANY string of length non equal to
+# zero. When set, verbosity across java eclasses is increased and extra
+# logging is displayed.
+# @CODE
+#	JAVA_PKG_DEBUG="yes"
+# @CODE
+
 # @ECLASS-VARIABLE: JAVA_RM_FILES
 # @DEFAULT_UNSET
 # @DESCRIPTION:
@@ -252,7 +262,7 @@ java-pkg_addres() {
 	shift 2
 
 	pushd "${dir}" > /dev/null || die "pushd ${dir} failed"
-	find -L -type f ! -path "./target/*" ! -path "./sources.lst" ! -name "MANIFEST.MF" ! -regex ".*\.\(class\|jar\|java\)" "${@}" -print0 | xargs -0 jar uf "${jar}" || die "jar failed"
+	find -L -type f ! -path "./target/*" ! -path "./sources.lst" ! -name "MANIFEST.MF" ! -regex ".*\.\(class\|jar\|java\)" "${@}" -print0 | xargs -r0 jar uf "${jar}" || die "jar failed"
 	popd > /dev/null || die "popd failed"
 }
 
@@ -353,6 +363,15 @@ java-pkg_dojar() {
 			die "${jar} does not exist"
 		fi
 	done
+
+	# Extra logging if enabled.
+	if [[ -n ${JAVA_PKG_DEBUG} ]]; then
+		einfo "Verbose logging for \"${FUNCNAME}\" function"
+		einfo "Jar file(s) destination: ${JAVA_PKG_JARDEST}"
+		einfo "Jar file(s) created: ${@}"
+		einfo "Complete command:"
+		einfo "${FUNCNAME} ${@}"
+	fi
 
 	java-pkg_do_write_
 }
@@ -632,7 +651,6 @@ java-pkg_dojavadoc() {
 	fi
 
 	# Actual installation
-
 	java-pkg_dohtml -r "${dir_to_install}"
 
 	# Let's make a symlink to the directory we have everything else under
@@ -641,6 +659,15 @@ java-pkg_dojavadoc() {
 	if [[ ${symlink} ]]; then
 		debug-print "symlinking ${dest}/{api,${symlink}}"
 		dosym ${dest}/{api,${symlink}} || die
+	fi
+
+	# Extra logging if enabled.
+	if [[ -n ${JAVA_PKG_DEBUG} ]]; then
+		einfo "Verbose logging for \"${FUNCNAME}\" function"
+		einfo "Documentation destination: ${dest}"
+		einfo "Directory to install: ${dir_to_install}"
+		einfo "Complete command:"
+		einfo "${FUNCNAME} ${@}"
 	fi
 }
 
@@ -693,7 +720,7 @@ java-pkg_dosrc() {
 		if [[ ${result} != 12 && ${result} != 0 ]]; then
 			die "failed to zip ${dir_name}"
 		fi
-		popd >/dev/null
+		popd >/dev/null || die
 	done
 
 	# Install the zip
@@ -701,6 +728,17 @@ java-pkg_dosrc() {
 		doins ${zip_path} || die "Failed to install source"
 
 	JAVA_SOURCES="${JAVA_PKG_SOURCESPATH}/${zip_name}"
+
+	# Extra logging if enabled.
+	if [[ -n ${JAVA_PKG_DEBUG} ]]; then
+		einfo "Verbose logging for \"${FUNCNAME}\" function"
+		einfo "Zip filename created: ${zip_name}"
+		einfo "Zip file destination: ${JAVA_PKG_SOURCESPATH}"
+		einfo "Directories zipped: ${@}"
+		einfo "Complete command:"
+		einfo "${FUNCNAME} ${@}"
+	fi
+
 	java-pkg_do_write_
 }
 
@@ -995,11 +1033,11 @@ java-pkg_jar-from() {
 					java-pkg_record-jar_ --build-only "${target_pkg}" "${jar}"
 				fi
 			fi
-			popd > /dev/null
+			popd > /dev/null || die
 			return 0
 		fi
 	done
-	popd > /dev/null
+	popd > /dev/null || die
 	# if no target was specified, we're ok
 	if [[ -z "${target_jar}" ]] ; then
 		return 0
@@ -1764,8 +1802,8 @@ ejunit_() {
 	if [[ "${junit}" == "junit-4" ]] ; then
 		runner=org.junit.runner.JUnitCore
 	fi
-	debug-print "Calling: java -cp \"${cp}\" -Djava.awt.headless=true ${runner} ${@}"
-	java -cp "${cp}" -Djava.awt.headless=true ${runner} "${@}" || die "Running junit failed"
+	debug-print "Calling: java -cp \"${cp}\" -Djava.io.tmpdir=\"${T}\" -Djava.awt.headless=true ${runner} ${@}"
+	java -cp "${cp}" -Djava.io.tmpdir="${T}/" -Djava.awt.headless=true ${runner} "${@}" || die "Running junit failed"
 }
 
 # @FUNCTION: ejunit
@@ -2001,7 +2039,15 @@ ejavac() {
 	local javac_args
 	javac_args="$(java-pkg_javac-args)"
 
-	[[ -n ${JAVA_PKG_DEBUG} ]] && echo ${compiler_executable} ${javac_args} "${@}"
+	if [[ -n ${JAVA_PKG_DEBUG} ]]; then
+		einfo "Verbose logging for \"${FUNCNAME}\" function"
+		einfo "Compiler executable: ${compiler_executable}"
+		einfo "Extra arguments: ${javac_args}"
+		einfo "Complete command:"
+		einfo "${compiler_executable} ${javac_args} ${@}"
+	fi
+
+	ebegin "Compiling"
 	${compiler_executable} ${javac_args} "${@}" || die "ejavac failed"
 }
 
@@ -2019,6 +2065,15 @@ ejavadoc() {
 		javadoc_args="-Xdoclint:none"
 	fi
 
+	if [[ -n ${JAVA_PKG_DEBUG} ]]; then
+		einfo "Verbose logging for \"${FUNCNAME}\" function"
+		einfo "Javadoc executable: javadoc"
+		einfo "Extra arguments: ${javadoc_args}"
+		einfo "Complete command:"
+		einfo "javadoc ${javadoc_args} ${@}"
+	fi
+
+	ebegin "Generating JavaDoc"
 	javadoc ${javadoc_args} "${@}" || die "ejavadoc failed"
 }
 
@@ -2297,62 +2352,54 @@ java-pkg_do_write_() {
 	java-pkg_init_paths_
 	# Create directory for package.env
 	dodir "${JAVA_PKG_SHAREPATH}"
-	if [[ -n "${JAVA_PKG_CLASSPATH}" || -n "${JAVA_PKG_LIBRARY}" || -f \
-			"${JAVA_PKG_DEPEND_FILE}" || -f \
-			"${JAVA_PKG_OPTIONAL_DEPEND_FILE}" ]]; then
-		# Create package.env
-		(
-			echo "DESCRIPTION=\"${DESCRIPTION}\""
-			echo "GENERATION=\"2\""
-			echo "SLOT=\"${SLOT}\""
-			echo "CATEGORY=\"${CATEGORY}\""
-			echo "PVR=\"${PVR}\""
 
-			[[ -n "${JAVA_PKG_CLASSPATH}" ]] && echo "CLASSPATH=\"${JAVA_PKG_CLASSPATH}\""
-			[[ -n "${JAVA_PKG_LIBRARY}" ]] && echo "LIBRARY_PATH=\"${JAVA_PKG_LIBRARY}\""
-			[[ -n "${JAVA_PROVIDE}" ]] && echo "PROVIDES=\"${JAVA_PROVIDE}\""
-			[[ -f "${JAVA_PKG_DEPEND_FILE}" ]] \
-				&& echo "DEPEND=\"$(sort -u "${JAVA_PKG_DEPEND_FILE}" | tr '\n' ':')\""
-			[[ -f "${JAVA_PKG_OPTIONAL_DEPEND_FILE}" ]] \
-				&& echo "OPTIONAL_DEPEND=\"$(sort -u "${JAVA_PKG_OPTIONAL_DEPEND_FILE}" | tr '\n' ':')\""
-			echo "VM=\"$(echo ${RDEPEND} ${DEPEND} | sed -e 's/ /\n/g' | sed -n -e '/virtual\/\(jre\|jdk\)/ { p;q }')\"" # TODO cleanup !
-			[[ -f "${JAVA_PKG_BUILD_DEPEND_FILE}" ]] \
-				&& echo "BUILD_DEPEND=\"$(sort -u "${JAVA_PKG_BUILD_DEPEND_FILE}" | tr '\n' ':')\""
-		) > "${JAVA_PKG_ENV}"
+	# Create package.env
+	(
+		echo "DESCRIPTION=\"${DESCRIPTION}\""
+		echo "GENERATION=\"2\""
+		echo "SLOT=\"${SLOT}\""
+		echo "CATEGORY=\"${CATEGORY}\""
+		echo "PVR=\"${PVR}\""
 
-		# register target/source
-		local target="$(java-pkg_get-target)"
-		local source="$(java-pkg_get-source)"
-		[[ -n ${target} ]] && echo "TARGET=\"${target}\"" >> "${JAVA_PKG_ENV}"
-		[[ -n ${source} ]] && echo "SOURCE=\"${source}\"" >> "${JAVA_PKG_ENV}"
+		[[ -n "${JAVA_PKG_CLASSPATH}" ]] && echo "CLASSPATH=\"${JAVA_PKG_CLASSPATH}\""
+		[[ -n "${JAVA_PKG_LIBRARY}" ]] && echo "LIBRARY_PATH=\"${JAVA_PKG_LIBRARY}\""
+		[[ -n "${JAVA_PROVIDE}" ]] && echo "PROVIDES=\"${JAVA_PROVIDE}\""
+		[[ -f "${JAVA_PKG_DEPEND_FILE}" ]] \
+			&& echo "DEPEND=\"$(sort -u "${JAVA_PKG_DEPEND_FILE}" | tr '\n' ':')\""
+		[[ -f "${JAVA_PKG_OPTIONAL_DEPEND_FILE}" ]] \
+			&& echo "OPTIONAL_DEPEND=\"$(sort -u "${JAVA_PKG_OPTIONAL_DEPEND_FILE}" | tr '\n' ':')\""
+		echo "VM=\"$(echo ${RDEPEND} ${DEPEND} | sed -e 's/ /\n/g' | sed -n -e '/virtual\/\(jre\|jdk\)/ { p;q }')\"" # TODO cleanup !
+		[[ -f "${JAVA_PKG_BUILD_DEPEND_FILE}" ]] \
+			&& echo "BUILD_DEPEND=\"$(sort -u "${JAVA_PKG_BUILD_DEPEND_FILE}" | tr '\n' ':')\""
+	) > "${JAVA_PKG_ENV}"
 
-		# register javadoc info
-		[[ -n ${JAVADOC_PATH} ]] && echo "JAVADOC_PATH=\"${JAVADOC_PATH}\"" \
-			>> ${JAVA_PKG_ENV}
-		# register source archives
-		[[ -n ${JAVA_SOURCES} ]] && echo "JAVA_SOURCES=\"${JAVA_SOURCES}\"" \
-			>> ${JAVA_PKG_ENV}
+	# register target/source
+	local target="$(java-pkg_get-target)"
+	local source="$(java-pkg_get-source)"
+	[[ -n ${target} ]] && echo "TARGET=\"${target}\"" >> "${JAVA_PKG_ENV}"
+	[[ -n ${source} ]] && echo "SOURCE=\"${source}\"" >> "${JAVA_PKG_ENV}"
 
+	# register javadoc info
+	[[ -n ${JAVADOC_PATH} ]] && echo "JAVADOC_PATH=\"${JAVADOC_PATH}\"" \
+		>> ${JAVA_PKG_ENV}
+	# register source archives
+	[[ -n ${JAVA_SOURCES} ]] && echo "JAVA_SOURCES=\"${JAVA_SOURCES}\"" \
+		>> ${JAVA_PKG_ENV}
 
-		echo "MERGE_VM=\"${GENTOO_VM}\"" >> "${JAVA_PKG_ENV}"
-		[[ -n ${GENTOO_COMPILER} ]] && echo "MERGE_COMPILER=\"${GENTOO_COMPILER}\"" >> "${JAVA_PKG_ENV}"
+	echo "MERGE_VM=\"${GENTOO_VM}\"" >> "${JAVA_PKG_ENV}"
+	[[ -n ${GENTOO_COMPILER} ]] && echo "MERGE_COMPILER=\"${GENTOO_COMPILER}\"" >> "${JAVA_PKG_ENV}"
 
-		# extra env variables
-		if [[ -n "${JAVA_PKG_EXTRA_ENV_VARS}" ]]; then
-			cat "${JAVA_PKG_EXTRA_ENV}" >> "${JAVA_PKG_ENV}" || die
-			# nested echo to remove leading/trailing spaces
-			echo "ENV_VARS=\"$(echo ${JAVA_PKG_EXTRA_ENV_VARS})\"" \
-				>> "${JAVA_PKG_ENV}" || die
-		fi
-
-		# Strip unnecessary leading and trailing colons
-		# TODO try to cleanup if possible
-		sed -e "s/=\":/=\"/" -e "s/:\"$/\"/" -i "${JAVA_PKG_ENV}" || die "Did you forget to call java_init ?"
-	else
-		debug-print "JAVA_PKG_CLASSPATH, JAVA_PKG_LIBRARY, JAVA_PKG_DEPEND_FILE"
-		debug-print "or JAVA_PKG_OPTIONAL_DEPEND_FILE not defined so can't"
-		debug-print "write package.env."
+	# extra env variables
+	if [[ -n "${JAVA_PKG_EXTRA_ENV_VARS}" ]]; then
+		cat "${JAVA_PKG_EXTRA_ENV}" >> "${JAVA_PKG_ENV}" || die
+		# nested echo to remove leading/trailing spaces
+		echo "ENV_VARS=\"$(echo ${JAVA_PKG_EXTRA_ENV_VARS})\"" \
+			>> "${JAVA_PKG_ENV}" || die
 	fi
+
+	# Strip unnecessary leading and trailing colons
+	# TODO try to cleanup if possible
+	sed -e "s/=\":/=\"/" -e "s/:\"$/\"/" -i "${JAVA_PKG_ENV}" || die "Did you forget to call java_init ?"
 }
 
 # @FUNCTION: java-pkg_record-jar_
@@ -2432,9 +2479,9 @@ java-pkg_append_() {
 # @CODE
 # @RETURN: path to $1's parent directory
 java-pkg_expand_dir_() {
-	pushd "$(dirname "${1}")" >/dev/null 2>&1
+	pushd "$(dirname "${1}")" >/dev/null 2>&1 || die
 	pwd
-	popd >/dev/null 2>&1
+	popd >/dev/null 2>&1 || die
 }
 
 # @FUNCTION: java-pkg_func-exists

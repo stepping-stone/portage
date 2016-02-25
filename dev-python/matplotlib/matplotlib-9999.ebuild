@@ -1,14 +1,14 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
 
-PYTHON_REQ_USE='tk?'
+PYTHON_REQ_USE='tk?,threads(+)'
 
-inherit distutils-r1 eutils flag-o-matic git-r3 virtualx toolchain-funcs
+inherit distutils-r1 eutils flag-o-matic git-r3 multiprocessing virtualx toolchain-funcs
 
 DESCRIPTION="Pure python plotting library with matlab like syntax"
 HOMEPAGE="http://matplotlib.org/"
@@ -22,11 +22,24 @@ SLOT="0"
 # Fonts: BitstreamVera, OFL-1.1
 LICENSE="BitstreamVera BSD matplotlib MIT OFL-1.1"
 KEYWORDS=""
-IUSE="cairo doc excel examples fltk gtk gtk3 latex pyside qt4 qt5 test tk wxwidgets"
+IUSE="cairo doc excel examples fltk gtk2 gtk3 latex pyside qt4 qt5 test tk wxwidgets"
+
+PY2_FLAGS="|| ( $(python_gen_useflags python2_7) )"
+REQUIRED_USE="
+	doc? ( ${PY2_FLAGS} )
+	excel? ( ${PY2_FLAGS} )
+	fltk? ( ${PY2_FLAGS} )
+	gtk2? ( ${PY2_FLAGS} )
+	wxwidgets? ( ${PY2_FLAGS} )
+	test? (
+		cairo fltk latex pyside qt5 qt4 tk wxwidgets
+		|| ( gtk2 gtk3 )
+		)"
 
 # #456704 -- a lot of py2-only deps
 PY2_USEDEP=$(python_gen_usedep python2_7)
 COMMON_DEPEND="
+	dev-python/cycler[${PYTHON_USEDEP}]
 	>=dev-python/numpy-1.6[${PYTHON_USEDEP}]
 	dev-python/python-dateutil:0[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]
@@ -35,7 +48,13 @@ COMMON_DEPEND="
 	media-libs/freetype:2
 	media-libs/libpng:0
 	media-libs/qhull
-	gtk? (
+	cairo? (
+		|| (
+			dev-python/pycairo[${PYTHON_USEDEP}]
+			dev-python/cairocffi[${PYTHON_USEDEP}]
+			)
+		)
+	gtk2? (
 		dev-libs/glib:2=
 		x11-libs/gdk-pixbuf
 		x11-libs/gtk+:2
@@ -46,14 +65,18 @@ COMMON_DEPEND="
 #	dev-python/pycxx
 
 DEPEND="${COMMON_DEPEND}
+	dev-python/versioneer[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	virtual/pkgconfig
 	doc? (
 		app-text/dvipng
-		virtual/python-imaging[${PYTHON_USEDEP}]
+		dev-python/pillow[${PYTHON_USEDEP}]
 		dev-python/ipython[${PYTHON_USEDEP}]
+		dev-python/mock[${PY2_USEDEP}]
 		dev-python/numpydoc[${PYTHON_USEDEP}]
-		dev-python/xlwt[${PY2_USEDEP}]
 		dev-python/sphinx[${PYTHON_USEDEP}]
+		!~dev-python/sphinx-1.3.4
+		dev-python/xlwt[${PYTHON_USEDEP}]
 		dev-texlive/texlive-latexextra
 		dev-texlive/texlive-fontsrecommended
 		dev-texlive/texlive-latexrecommended
@@ -66,14 +89,8 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	>=dev-python/pyparsing-1.5.6[${PYTHON_USEDEP}]
-	cairo? (
-		|| (
-			dev-python/pycairo[${PYTHON_USEDEP}]
-			dev-python/cairocffi[${PYTHON_USEDEP}]
-			)
-		)
-	excel? ( dev-python/xlwt[${PY2_USEDEP}] )
-	fltk? ( dev-python/pyfltk[${PY2_USEDEP}] )
+	excel? ( dev-python/xlwt[${PYTHON_USEDEP}] )
+	fltk? ( dev-python/pyfltk[${PYTHON_USEDEP}] )
 	gtk3? (
 		dev-python/pygobject:3[${PYTHON_USEDEP}]
 		x11-libs/gtk+:3[introspection] )
@@ -91,26 +108,13 @@ RDEPEND="${COMMON_DEPEND}
 	qt5? ( dev-python/PyQt5[gui,widgets,${PYTHON_USEDEP}] )
 	"
 
-PY2_FLAGS="|| ( $(python_gen_useflags python2_7) )"
-REQUIRED_USE="
-	doc? ( ${PY2_FLAGS} )
-	excel? ( ${PY2_FLAGS} )
-	fltk? ( ${PY2_FLAGS} )
-	gtk? ( ${PY2_FLAGS} )
-	wxwidgets? ( ${PY2_FLAGS} )
-	test? (
-		cairo fltk latex pyside qt5 qt4 tk wxwidgets
-		|| ( gtk gtk3 )
-		)"
-
-RESTRICT="mirror"
-
 # A few C++ source files are written to srcdir.
 # Other than that, the ebuild shall be fit for out-of-source build.
 DISTUTILS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	unset DISPLAY # bug #278524
+	use doc && DISTUTILS_ALL_SUBPHASE_IMPLS=( python2.7 )
 }
 
 use_setup() {
@@ -133,15 +137,20 @@ python_prepare_all() {
 #	rm -r agg24 CXX || die
 #	rm -r agg24 || die
 
+#	cat > lib/${PN}/externals/six.py <<-EOF
+#	from __future__ import absolute_import
+#	from six import *
+#	EOF
+
 	sed \
 		-e 's/matplotlib.pyparsing_py[23]/pyparsing/g' \
 		-i lib/matplotlib/{mathtext,fontconfig_pattern}.py \
 		|| die "sed pyparsing failed"
 
 	# suggested by upstream
-	sed \
-		-e '/tol/s:32:35:g' \
-		-i lib/matplotlib/tests/test_mathtext.py || die
+#	sed \
+#		-e '/tol/s:32:35:g' \
+#		-i lib/matplotlib/tests/test_mathtext.py || die
 
 	sed \
 		-e "s:/usr/:${EPREFIX}/usr/:g" \
@@ -201,7 +210,7 @@ python_configure() {
 		cat >> "${BUILD_DIR}"/setup.cfg <<-EOF
 			six = False
 			$(use_setup fltk)
-			$(use_setup gtk)
+			$(use_setup gtk2 gtk)
 			$(use_setup gtk3)
 			$(use_setup wxwidgets wx)
 		EOF
@@ -211,6 +220,7 @@ python_configure() {
 wrap_setup() {
 	local MPLSETUPCFG=${BUILD_DIR}/setup.cfg
 	export MPLSETUPCFG
+	unset DISPLAY
 
 	# Note: remove build... if switching to out-of-source build
 	"${@}" build --build-lib="${BUILD_DIR}"/build/lib
@@ -235,10 +245,11 @@ python_compile_all() {
 python_test() {
 	wrap_setup distutils_install_for_testing
 
-	cd "${TMPDIR}" || die
-	VIRTUALX_COMMAND="${PYTHON}"
-	virtualmake -c "import sys, matplotlib as m; sys.exit(0 if m.test(verbosity=2) else 1)" || \
-		die "Tests fail with ${EPYTHON}"
+	virtx ${PYTHON} tests.py \
+		--no-pep8 \
+		--no-network \
+		--verbose \
+		--processes=$(makeopts_jobs)
 }
 
 python_install() {

@@ -1,10 +1,11 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_{3,4,5}} pypy )
+PYTHON_REQ_USE="threads(+)"
 
 inherit distutils-r1 versionator
 
@@ -38,12 +39,6 @@ python_prepare_all() {
 		-i testtools/tests/test_distutilscmd.py || die
 
 	distutils-r1_python_prepare_all
-}
-
-src_test() {
-	 # Required to allow / ensure all impls to pass run of testsuite
-	local DISTUTILS_NO_PARALLEL_BUILD=1
-	distutils-r1_src_test
 }
 
 python_test() {

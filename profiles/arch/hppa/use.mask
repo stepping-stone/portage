@@ -3,10 +3,17 @@
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
-# Julian Ospald <hasufell@gentoo.org> (20 Sep 2015)
-# no LibreSSL support yet
-curl_ssl_libressl
-libressl
+# Jeroen Roovers <jer@gentoo.org> (31 Jan 2016)
+# USE=xwidgets requires net-libs/webkit-gtk
+xwidgets
+
+# Daniel Kuehn <lejonet@gentoo.org> (13 Nov 2015)
+# bugs 540540 and 525674
+-sssd
+
+# Jeroen Roovers <jer@gentoo.org> (16 Oct 2015)
+# HPPA has no NUMA support in the kernel
+numa
 
 # Jeroen Roovers <jer@gentoo.org> (3 Feb 2015)
 # app-misc/geoclue has not been tested on HPPA
@@ -125,6 +132,7 @@ libnotify
 gconf
 gnome
 gnome-keyring
+gnome-online-accounts
 
 # Jeroen Roovers <jer@gentoo.org> (19 Jul 2010)
 # Masked because of missing gnome-base/gnome-panel
@@ -351,7 +359,7 @@ h323
 # Doug Goldstein <cardoe@gentoo.org> (27 Apr 2007)
 # Dell does not ship or sell HPPA systems
 dell
-
+p
 # Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
 # mask d3d since we don't have wine
 d3d

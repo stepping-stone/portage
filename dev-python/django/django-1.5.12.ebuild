@@ -4,7 +4,7 @@
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3} pypy )
-PYTHON_REQ_USE='sqlite?'
+PYTHON_REQ_USE='sqlite?,threads(+)'
 WEBAPP_NO_AUTO_INSTALL="yes"
 
 inherit bash-completion-r1 distutils-r1 versionator webapp
@@ -22,12 +22,12 @@ IUSE="doc mysql postgres sqlite test"
 
 PY2_USEDEP=$(python_gen_usedep python2_7)
 PY23_USEDEP=$(python_gen_usedep python2_7 'python{3_3,3_4}')
-RDEPEND="virtual/python-imaging[${PYTHON_USEDEP}]
+RDEPEND="dev-python/pillow[${PYTHON_USEDEP}]
 	postgres? ( dev-python/psycopg:2[${PY23_USEDEP}] )
 	mysql? ( >=dev-python/mysql-python-1.2.3[${PY2_USEDEP}] )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.7[${PYTHON_USEDEP}] )
-	test? ( ${PYTHON_DEPS//sqlite?/sqlite} )"
+	test? ( $(python_gen_impl_dep sqlite) )"
 
 REQUIRED_USE="mysql? ( $(python_gen_useflags python2_7) )
 		postgres? ( || ( $(python_gen_useflags 'python{2_7,3_2,3_3}') ) )"
@@ -51,12 +51,6 @@ python_test() {
 	# https://code.djangoproject.com/ticket/20514
 	PYTHONPATH=. "${PYTHON}" tests/runtests.py --settings=test_sqlite -v1 \
 		|| die "Tests fail with ${EPYTHON}"
-}
-
-src_test() {
-	# Port conflict in django.test.testcases.LiveServerTestCase.
-	# Several other races with temp files.
-	DISTUTILS_NO_PARALLEL_BUILD=1 distutils-r1_src_test
 }
 
 src_install() {

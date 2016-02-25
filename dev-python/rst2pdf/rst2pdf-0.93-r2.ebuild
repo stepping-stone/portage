@@ -3,6 +3,7 @@
 # $Id$
 
 EAPI=5
+
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
@@ -13,11 +14,11 @@ SRC_URI="https://rst2pdf.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 sparc x86"
 IUSE="svg"
 
 DEPEND="dev-python/docutils[${PYTHON_USEDEP}]
-	virtual/python-imaging[${PYTHON_USEDEP}]
+	dev-python/pillow[${PYTHON_USEDEP}]
 	dev-python/pdfrw[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 	>=dev-python/reportlab-2.6[${PYTHON_USEDEP}]
@@ -26,10 +27,7 @@ DEPEND="dev-python/docutils[${PYTHON_USEDEP}]
 RDEPEND="${DEPEND}"
 # >=reportlab-2.6: https://code.google.com/p/rst2pdf/issues/detail?id=474
 
-python_prepare_all() {
-	epatch "${FILESDIR}/${P}-fix-logging.patch"
-	distutils-r1_python_prepare_all
-}
+PATCHES=( "${FILESDIR}/${P}-fix-logging.patch" )
 
 python_install_all() {
 	dodoc doc/*.pdf

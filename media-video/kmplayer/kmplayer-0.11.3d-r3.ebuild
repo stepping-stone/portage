@@ -10,7 +10,7 @@ zh_CN zh_TW"
 KDE_HANDBOOK="optional"
 inherit kde4-base
 
-DESCRIPTION="Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend"
+DESCRIPTION="Video player plugin for Konqueror and basic MPlayer frontend"
 HOMEPAGE="https://projects.kde.org/projects/extragear/multimedia/kmplayer"
 SRC_URI="https://kmplayer.kde.org/pkgs/${P}.tar.bz2"
 
@@ -38,7 +38,10 @@ RDEPEND="${DEPEND}
 	media-video/mplayer
 "
 
-PATCHES=( "${FILESDIR}/${P}-kdelibs-4.14.11.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-cmake34.patch"
+	"${FILESDIR}/${P}-kdelibs-4.14.11.patch"
+)
 
 src_prepare() {
 	use npp && epatch "${FILESDIR}/${PN}-flash.patch"

@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -8,7 +8,7 @@ AUTOTOOLS_AUTORECONF=1
 PLOCALES="ar bg ca cs da de el en en_US eo es fa fi fr he hi hr hu it ja ko lt ml nb_NO nl or pa pl pt_BR pt_PT rm ro ru sk sl sr_RS@cyrillic sr_RS@latin sv te th tr uk wa zh_CN zh_TW"
 PLOCALE_BACKUP="en"
 
-inherit autotools-utils eutils fdo-mime flag-o-matic gnome2-utils l10n multilib multilib-minimal pax-utils toolchain-funcs virtualx
+inherit autotools-utils eutils fdo-mime flag-o-matic gnome2-utils l10n multilib multilib-minimal pax-utils toolchain-funcs virtualx versionator
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://source.winehq.org/git/wine.git http://source.winehq.org/git/wine.git"
@@ -17,10 +17,9 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 	#KEYWORDS=""
 else
-	MY_P="${PN}-${PV/_/-}"
-	SRC_URI="mirror://sourceforge/${PN}/Source/${MY_P}.tar.bz2"
+	MAJOR_V=$(get_version_component_range 1-2)
+	SRC_URI="https://dl.winehq.org/wine/source/${MAJOR_V}/${P}.tar.bz2"
 	KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
-	S=${WORKDIR}/${MY_P}
 fi
 
 GV="2.40"
@@ -28,29 +27,28 @@ MV="4.5.6"
 STAGING_P="wine-staging-${PV}"
 STAGING_DIR="${WORKDIR}/${STAGING_P}"
 WINE_GENTOO="wine-gentoo-2015.03.07"
-GST_P="wine-1.7.34-gstreamer-v5"
+GST_P="wine-1.7.55-gstreamer-v5"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}
 	gecko? (
-		abi_x86_32? ( mirror://sourceforge/${PN}/Wine%20Gecko/${GV}/wine_gecko-${GV}-x86.msi )
-		abi_x86_64? ( mirror://sourceforge/${PN}/Wine%20Gecko/${GV}/wine_gecko-${GV}-x86_64.msi )
+		abi_x86_32? ( https://dl.winehq.org/wine/wine-gecko/${GV}/wine_gecko-${GV}-x86.msi )
+		abi_x86_64? ( https://dl.winehq.org/wine/wine-gecko/${GV}/wine_gecko-${GV}-x86_64.msi )
 	)
-	mono? ( mirror://sourceforge/${PN}/Wine%20Mono/${MV}/wine-mono-${MV}.msi )
-	gstreamer? ( https://dev.gentoo.org/~tetromino/distfiles/${PN}/${GST_P}.patch.bz2 )
+	mono? ( https://dl.winehq.org/wine/wine-mono/${MV}/wine-mono-${MV}.msi )
+	gstreamer? ( https://dev.gentoo.org/~np-hardass/distfiles/${PN}/${GST_P}.patch.bz2 )
 	https://dev.gentoo.org/~tetromino/distfiles/${PN}/${WINE_GENTOO}.tar.bz2"
 
 if [[ ${PV} == "9999" ]] ; then
 	STAGING_EGIT_REPO_URI="git://github.com/wine-compholio/wine-staging.git"
 else
 	SRC_URI="${SRC_URI}
-	staging? ( https://github.com/wine-compholio/wine-staging/archive/v${PV}.tar.gz -> ${STAGING_P}.tar.gz )
-	pulseaudio? ( https://github.com/wine-compholio/wine-staging/archive/v${PV}.tar.gz -> ${STAGING_P}.tar.gz )"
+	staging? ( https://github.com/wine-compholio/wine-staging/archive/v${PV}.tar.gz -> ${STAGING_P}.tar.gz )"
 fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags dos elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg +lcms ldap +mono mp3 ncurses netapi nls odbc openal opencl +opengl osmesa oss +perl pcap pipelight +png +prelink pulseaudio +realtime +run-exes s3tc samba scanner selinux +ssl staging test +threads +truetype +udisks v4l vaapi +X +xcomposite xinerama +xml"
+IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags dos elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg +lcms ldap +mono mp3 ncurses netapi nls odbc openal opencl +opengl osmesa oss +perl pcap pipelight +png prelink pulseaudio +realtime +run-exes s3tc samba scanner selinux +ssl staging test +threads +truetype +udisks v4l vaapi +X +xcomposite xinerama +xml"
 REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 	test? ( abi_x86_32 )
 	elibc_glibc? ( threads )
@@ -58,8 +56,8 @@ REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 	pipelight? ( staging )
 	s3tc? ( staging )
 	vaapi? ( staging )
-	?? ( gstreamer staging )
 	osmesa? ( opengl )" #286560
+	#?? ( gstreamer staging ) #Should be fixed by pre/post patchset
 
 # FIXME: the test suite is unsuitable for us; many tests require net access
 # or fail due to Xvfb's opengl limitations.
@@ -205,14 +203,26 @@ pkg_setup() {
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
 		git-r3_src_unpack
-		if use staging || use pulseaudio; then
+		if use staging; then
+			local WINE_COMMIT=${EGIT_VERSION}
+
 			EGIT_REPO_URI=${STAGING_EGIT_REPO_URI}
 			unset ${PN}_LIVE_REPO;
+			unset EGIT_COMMIT;
+
 			EGIT_CHECKOUT_DIR=${STAGING_DIR} git-r3_src_unpack
+
+			local STAGING_COMMIT=$("${STAGING_DIR}/patches/patchinstall.sh" --upstream-commit) || die
+
+			if [[ "${WINE_COMMIT}" != "${STAGING_COMMIT}" ]]; then
+				einfo "The current Staging patchset is not guaranteed to apply on this WINE commit."
+				einfo "If src_prepare fails, try emerging with the env var EGIT_COMMIT."
+				einfo "Example: EGIT_COMMIT=${STAGING_COMMIT} emerge -1 wine"
+			fi
 		fi
 	else
-		unpack ${MY_P}.tar.bz2
-		use staging || use pulseaudio && unpack "${STAGING_P}.tar.gz"
+		unpack ${P}.tar.bz2
+		use staging && unpack "${STAGING_P}.tar.gz"
 	fi
 
 	unpack "${WINE_GENTOO}.tar.bz2"
@@ -242,17 +252,16 @@ src_prepare() {
 		# patch on top.
 		if use staging; then
 			PATCHES+=(
-				"${FILESDIR}/${PN}-1.7.39-gstreamer-v5-staging-pre.patch"
+				"${FILESDIR}/${PN}-1.7.55-gstreamer-v5-staging-pre.patch"
 				"${WORKDIR}/${GST_P}.patch"
-				"${FILESDIR}/${PN}-1.7.39-gstreamer-v5-staging-post.patch" )
+				"${FILESDIR}/${PN}-1.7.55-gstreamer-v5-staging-post.patch" )
 		else
 			PATCHES+=( "${WORKDIR}/${GST_P}.patch" )
 		fi
 	fi
 	if use staging; then
-		ewarn "Applying the unofficial Wine-Staging patchset which is unsupported"
-		ewarn "by Wine developers. Please don't report bugs to Wine bugzilla"
-		ewarn "unless you can reproduce them with USE=-staging"
+		ewarn "Applying the Wine-Staging patchset. Any bug reports to the"
+		ewarn "Wine bugzilla should explicitly state that staging was used."
 
 		local STAGING_EXCLUDE=""
 		use pipelight || STAGING_EXCLUDE="${STAGING_EXCLUDE} -W Pipelight"
@@ -265,8 +274,6 @@ src_prepare() {
 			source "${STAGING_DIR}/patches/patchinstall.sh"
 		)
 		eend $?
-	elif use pulseaudio; then
-		PATCHES+=( "${STAGING_DIR}/patches/winepulse-PulseAudio_Support"/*.patch )
 	fi
 	autotools-utils_src_prepare
 
@@ -277,7 +284,7 @@ src_prepare() {
 	fi
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in || die
 	if ! use run-exes; then
-		sed -i '/^MimeType/d' tools/wine.desktop || die #117785
+		sed -i '/^MimeType/d' loader/wine.desktop || die #117785
 	fi
 
 	# hi-res default icon, #472990, http://bugs.winehq.org/show_bug.cgi?id=24652
@@ -322,6 +329,7 @@ multilib_src_configure() {
 		$(use_with oss)
 		$(use_with pcap)
 		$(use_with png)
+		$(use_with pulseaudio pulse)
 		$(use_with threads pthread)
 		$(use_with scanner sane)
 		$(use_enable test tests)
@@ -334,9 +342,6 @@ multilib_src_configure() {
 		$(use_with xml xslt)
 	)
 
-	if use pulseaudio || use staging; then
-		myconf+=( $(use_with pulseaudio pulse) )
-	fi
 	use staging && myconf+=(
 		--with-xattr
 		$(use_with vaapi va)

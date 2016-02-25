@@ -60,14 +60,14 @@ RDEPEND+="
 	sys-libs/ncurses:0=
 	app-arch/bzip2
 	sys-libs/zlib
-	>=media-video/ffmpeg-2.8:0=[vdpau?]
+	>=media-video/ffmpeg-3.0:0=[vdpau?]
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	bidi? ( dev-libs/fribidi )
 	bluray? ( >=media-libs/libbluray-0.2.1 )
 	bs2b? ( media-libs/libbs2b )
-	cdio? ( dev-libs/libcdio )
+	cdio? ( dev-libs/libcdio dev-libs/libcdio-paranoia )
 	cdparanoia? ( !cdio? ( media-sound/cdparanoia ) )
 	dga? ( x11-libs/libXxf86dga )
 	directfb? ( dev-libs/DirectFB )

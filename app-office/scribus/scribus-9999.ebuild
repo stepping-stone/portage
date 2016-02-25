@@ -65,8 +65,8 @@ COMMON_DEPEND="
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	osg? ( dev-games/openscenegraph )
 	pdf? ( app-text/podofo )
-	scripts? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
-	tk? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
+	scripts? ( dev-python/pillow[tk?,${PYTHON_USEDEP}] )
+	tk? ( dev-python/pillow[tk?,${PYTHON_USEDEP}] )
 "
 RDEPEND="${COMMON_DEPEND}
 	app-text/ghostscript-gpl"
@@ -74,10 +74,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-qt/linguist-tools:5
 	virtual/pkgconfig"
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-1.5.0-docdir.patch
-	"${FILESDIR}"/${PN}-1.5.0-fpic.patch
-	)
+PATCHES=( "${FILESDIR}"/${PN}-1.5.0-docdir.patch )
 
 src_prepare() {
 	rm -r codegen/cheetah || die

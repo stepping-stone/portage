@@ -74,6 +74,7 @@ src_configure() {
 		local dbuildflags="-Wl,-rpath,${WORKDIR}/lib"
 		case ${CHOST} in
 			*-darwin*)  dbuildflags=     ;;
+			*-aix*)     dbuildflags=     ;;
 		esac
 		echo "int main() {}" | \
 			$(tc-getCC) -o x -x c - ${lbuildflags} -pipe >& /dev/null \
@@ -165,7 +166,12 @@ do_configure() {
 		conf+=( --without-{pthread,reentrant} )
 	fi
 	# Make sure each variant goes in a unique location.
-	if [[ ${target} != "ncurses" ]] ; then
+	if [[ ${target} == "ncurses" ]] ; then
+		# "ncurses" variant goes into "${EPREFIX}"/usr/include
+		# It is needed on Prefix because the configure script appends
+		# "ncurses" to "${prefix}/include" if "${prefix}" is not /usr.
+		conf+=( --enable-overwrite )
+	else
 		conf+=( --includedir="${EPREFIX}"/usr/include/${target} )
 	fi
 	# See comments in src_configure.
@@ -176,14 +182,14 @@ do_configure() {
 
 	# Force bash until upstream rebuilds the configure script with a newer
 	# version of autotools. #545532
-	CONFIG_SHELL=${EPREFIX}/bin/bash \
+	CONFIG_SHELL=${BASH} \
 	ECONF_SOURCE=${S} \
 	econf "${conf[@]}" "$@"
 }
 
 src_compile() {
 	# See comments in src_configure.
-	if ! ROOT=/ has_version "~sys-libs/${P}" ; then
+	if ! ROOT=/ has_version "~sys-libs/${P}:0" ; then
 		BUILD_DIR="${WORKDIR}" \
 		do_compile cross -C progs tic
 	fi

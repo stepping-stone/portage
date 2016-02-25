@@ -6,7 +6,6 @@ EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE=( gdbm )
-DISTUTILS_NO_PARALLEL_BUILD=1
 
 inherit distutils-r1 gnome2-utils vcs-snapshot
 
@@ -30,7 +29,7 @@ RDEPEND="${PYTHON_DEPS}
 	dev-python/oauth2[${PYTHON_USEDEP}]
 	dev-python/pycurl[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
-	dev-python/socksipy[${PYTHON_USEDEP}]"
+	dev-python/PySocks[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 python_prepare_all() {

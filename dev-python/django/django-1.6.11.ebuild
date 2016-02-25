@@ -6,7 +6,7 @@ EAPI=5
 
 PYTHON_COMPAT=( python2_7 python3_{3,4} pypy )
 
-PYTHON_REQ_USE='sqlite?'
+PYTHON_REQ_USE='sqlite?,threads(+)'
 WEBAPP_NO_AUTO_INSTALL="yes"
 
 inherit bash-completion-r1 distutils-r1 eutils versionator webapp
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( >=dev-python/sphinx-1.0.7[${PYTHON_USEDEP}] )
 	test? (
-		${PYTHON_DEPS//sqlite?/sqlite}
+		$(python_gen_impl_dep sqlite)
 		dev-python/docutils[${PYTHON_USEDEP}]
 		<dev-python/numpy-1.9[$(python_gen_usedep 'python*')]
 		dev-python/pillow[${PYTHON_USEDEP}]
@@ -80,7 +80,7 @@ src_install() {
 	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysql-connector-python
 	optfeature "PostgreSQL backend support" dev-python/psycopg:2
 	optfeature "Memcached support" dev-python/pylibmc dev-python/python-memcached
-	optfeature "ImageField Support" virtual/python-imaging
+	optfeature "ImageField Support" dev-python/pillow
 	echo ""
 }
 

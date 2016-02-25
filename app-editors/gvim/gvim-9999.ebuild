@@ -1,10 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
 VIM_VERSION="7.4"
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5} )
 PYTHON_REQ_USE=threads
 inherit eutils vim-doc flag-o-matic fdo-mime versionator bash-completion-r1 prefix python-r1
 
@@ -19,7 +19,7 @@ else
 fi
 
 DESCRIPTION="GUI version of the Vim text editor"
-HOMEPAGE="http://www.vim.org/"
+HOMEPAGE="http://www.vim.org/ https://github.com/vim/vim"
 
 SLOT="0"
 LICENSE="vim"
@@ -36,7 +36,7 @@ REQUIRED_USE="
 RDEPEND="
 	~app-editors/vim-core-${PV}
 	>=app-eselect/eselect-vi-1.1
-	>=sys-libs/ncurses-5.2-r2
+	>=sys-libs/ncurses-5.2-r2:=
 	x11-libs/libXext
 	x11-libs/libXt
 	acl? ( kernel_linux? ( sys-apps/acl ) )
@@ -63,7 +63,7 @@ RDEPEND="
 	perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )
 	racket? ( dev-scheme/racket )
-	ruby? ( || ( dev-lang/ruby:2.2 dev-lang/ruby:2.1 dev-lang/ruby:2.0 ) )
+	ruby? ( || ( dev-lang/ruby:2.3 dev-lang/ruby:2.2 dev-lang/ruby:2.1 dev-lang/ruby:2.0 ) )
 	selinux? ( sys-libs/libselinux )
 	session? ( x11-libs/libSM )
 	tcl? ( dev-lang/tcl:0= )
@@ -384,19 +384,6 @@ pkg_postinst() {
 
 	# Update fdo mime stuff, bug #78394
 	fdo-mime_mime_database_update
-
-	if [[ -z ${REPLACING_VERSIONS} ]] ; then
-		echo
-		elog "Vim 7 includes an integrated spell checker. You need to install"
-		elog "word list files before you can use it. There are ebuilds for"
-		elog "some of these named app-vim/vim-spell-*. If your language of"
-		elog "choice is not included, please consult vim-spell.eclass for"
-		elog "instructions on how to make a package."
-		echo
-		ewarn "Note that the English word lists are no longer installed by"
-		ewarn "default."
-		echo
-	fi
 
 	# Make convenience symlinks
 	update_vim_symlinks

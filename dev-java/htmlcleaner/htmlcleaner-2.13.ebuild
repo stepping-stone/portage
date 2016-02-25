@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -19,14 +19,16 @@ IUSE="test"
 
 CDEPEND="dev-java/jdom:2"
 
-DEPEND="${CDEPEND}
-	>=virtual/jdk-1.5
+RDEPEND="
+	${CDEPEND}
+	>=virtual/jre-1.5"
+
+DEPEND="
+	${CDEPEND}
 	app-arch/unzip
 	dev-java/ant-core:0
-	test? ( dev-java/junit:4 )"
-
-RDEPEND="${CDEPEND}
-	>=virtual/jre-1.5"
+	test? ( dev-java/junit:4 )
+	>=virtual/jdk-1.5"
 
 JAVA_SRC_DIR="src/main/java"
 JAVA_GENTOO_CLASSPATH="jdom-2"
@@ -38,7 +40,7 @@ src_prepare() {
 }
 
 src_configure() {
-	JAVA_CLASSPATH_EXTRA=$(java-pkg_getjars --build-only ant-core)
+	JAVA_GENTOO_CLASSPATH_EXTRA=$(java-pkg_getjars --build-only ant-core)
 }
 
 src_install() {

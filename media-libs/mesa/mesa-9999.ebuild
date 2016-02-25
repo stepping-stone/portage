@@ -64,10 +64,11 @@ REQUIRED_USE="
 	video_cards_i965?   ( classic )
 	video_cards_ilo?    ( gallium )
 	video_cards_nouveau? ( || ( classic gallium ) )
-	video_cards_radeon? ( || ( classic gallium ) )
+	video_cards_radeon? ( || ( classic gallium )
+						  gallium? ( x86? ( llvm ) amd64? ( llvm ) ) )
 	video_cards_r100?   ( classic )
 	video_cards_r200?   ( classic )
-	video_cards_r300?   ( gallium llvm )
+	video_cards_r300?   ( gallium x86? ( llvm ) amd64? ( llvm ) )
 	video_cards_r600?   ( gallium )
 	video_cards_radeonsi?   ( gallium llvm )
 	video_cards_vmware? ( gallium )
@@ -86,8 +87,6 @@ RDEPEND="
 	>=app-eselect/eselect-opengl-1.3.0
 	udev? ( kernel_linux? ( >=virtual/libudev-215:=[${MULTILIB_USEDEP}] ) )
 	>=dev-libs/expat-2.1.0-r3:=[${MULTILIB_USEDEP}]
-	gbm? ( >=virtual/libudev-215:=[${MULTILIB_USEDEP}] )
-	dri3? ( >=virtual/libudev-215:=[${MULTILIB_USEDEP}] )
 	>=x11-libs/libX11-1.6.2:=[${MULTILIB_USEDEP}]
 	>=x11-libs/libxshmfence-1.1:=[${MULTILIB_USEDEP}]
 	>=x11-libs/libXdamage-1.1.4-r1:=[${MULTILIB_USEDEP}]
@@ -117,7 +116,7 @@ RDEPEND="
 				) )
 			)
 	openmax? ( >=media-libs/libomxil-bellagio-0.9.3:=[${MULTILIB_USEDEP}] )
-	vaapi? ( >=x11-libs/libva-0.35.0:=[${MULTILIB_USEDEP}] )
+	vaapi? ( >=x11-libs/libva-1.6.0:=[${MULTILIB_USEDEP}] )
 	vdpau? ( >=x11-libs/libvdpau-1.1:=[${MULTILIB_USEDEP}] )
 	wayland? ( >=dev-libs/wayland-1.2.0:=[${MULTILIB_USEDEP}] )
 	xvmc? ( >=x11-libs/libXvMC-1.0.8:=[${MULTILIB_USEDEP}] )
@@ -222,7 +221,7 @@ multilib_src_configure() {
 	fi
 
 	if use egl; then
-		myconf+="--with-egl-platforms=x11$(use wayland && echo ",wayland")$(use gbm && echo ",drm") "
+		myconf+=" --with-egl-platforms=x11$(use wayland && echo ",wayland")$(use gbm && echo ",drm")"
 	fi
 
 	if use gallium; then
@@ -235,7 +234,7 @@ multilib_src_configure() {
 			$(use_enable xa)
 			$(use_enable xvmc)
 		"
-		use vaapi && myconf+="--with-va-libdir=/usr/$(get_libdir)/va/drivers"
+		use vaapi && myconf+=" --with-va-libdir=/usr/$(get_libdir)/va/drivers"
 
 		gallium_enable swrast
 		gallium_enable video_cards_vmware svga
@@ -267,12 +266,18 @@ multilib_src_configure() {
 
 	# x86 hardened pax_kernel needs glx-rts, bug 240956
 	if [[ ${ABI} == x86 ]]; then
-		myconf+="$(use_enable pax_kernel glx-read-only-text)"
+		myconf+=" $(use_enable pax_kernel glx-read-only-text)"
 	fi
 
 	# on abi_x86_32 hardened we need to have asm disable
 	if [[ ${ABI} == x86* ]] && use pic; then
 		myconf+=" --disable-asm"
+	fi
+
+	if use gallium; then
+		myconf+=" $(use_enable osmesa gallium-osmesa)"
+	else
+		myconf+=" $(use_enable osmesa)"
 	fi
 
 	# build fails with BSD indent, bug #428112
@@ -293,7 +298,6 @@ multilib_src_configure() {
 		$(use_enable gles1) \
 		$(use_enable gles2) \
 		$(use_enable nptl glx-tls) \
-		$(use_enable osmesa) \
 		$(use_enable !udev sysfs) \
 		--enable-llvm-shared-libs \
 		--with-dri-drivers=${DRI_DRIVERS} \

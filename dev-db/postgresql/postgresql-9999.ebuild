@@ -112,6 +112,11 @@ src_prepare() {
 	sed "s|\(PGSOCKET_DIR\s\+\)\"/tmp\"|\1\"${EPREFIX}/run/postgresql\"|" \
 		-i src/include/pg_config_manual.h || die
 
+	# Rely on $PATH being in the proper order so that the correct
+	# install program is used for modules utilizing PGXS in both
+	# hardened and non-hardened environments. (Bug #528786)
+	sed 's/@install_bin@/install -c/' -i src/Makefile.global.in || die
+
 	if use pam ; then
 		sed -e "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
 			-i src/backend/libpq/auth.c || \
@@ -186,8 +191,6 @@ src_install() {
 		"${FILESDIR}/${PN}.service" | \
 		systemd_newunit - ${PN}-${SLOT}.service
 
-	systemd_newtmpfilesd "${FILESDIR}"/${PN}.tmpfilesd ${PN}-${SLOT}.conf
-
 	newbin "${FILESDIR}"/${PN}-check-db-dir ${PN}-${SLOT}-check-db-dir
 
 	use pam && pamd_mimic system-auth ${PN}-${SLOT} auth account session
@@ -208,7 +211,7 @@ pkg_postinst() {
 		elog
 		elog "It looks like this is your first time installing PostgreSQL. Run the"
 		elog "following command in all active shells to pick up changes to the default"
-		elog "environemnt:"
+		elog "environment:"
 		elog "    source /etc/profile"
 	fi
 

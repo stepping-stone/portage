@@ -34,7 +34,7 @@ LICENSE="LGPL-2.1"
 IUSE="apparmor audit avahi +caps firewalld fuse glusterfs iscsi +libvirtd lvm \
 	lxc +macvtap nfs nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
 	selinux systemd +udev uml +vepa virtualbox virt-network wireshark-plugins \
-	xen elibc_glibc"
+	xen"
 
 REQUIRED_USE="
 	firewalld? ( virt-network )
@@ -109,13 +109,12 @@ RDEPEND="
 	wireshark-plugins? ( net-analyzer/wireshark:= )
 	xen? (
 		app-emulation/xen
-		app-emulation/xen-tools
+		app-emulation/xen-tools:=
 	)
 	udev? (
 		virtual/udev
 		>=x11-libs/libpciaccess-0.10.9
-	)
-	elibc_glibc? ( || ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 ) )"
+	)"
 
 DEPEND="${RDEPEND}
 	app-text/xhtml1
@@ -219,9 +218,9 @@ src_prepare() {
 	fi
 
 	epatch \
-		"${FILESDIR}"/${PN}-1.2.9-do_not_use_sysconf.patch \
+		"${FILESDIR}"/${PN}-1.3.0-do_not_use_sysconf.patch \
 		"${FILESDIR}"/${PN}-1.2.16-fix_paths_in_libvirt-guests_sh.patch \
-		"${FILESDIR}"/${PN}-1.2.17-fix_paths_for_apparmor.patch
+		"${FILESDIR}"/${PN}-1.3.1-fix_paths_for_apparmor.patch
 
 	[[ -n ${BACKPORTS} ]] &&
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" \
@@ -296,8 +295,7 @@ src_configure() {
 		--disable-static
 		--disable-werror
 
-		--docdir=/usr/share/doc/${PF}
-		--htmldir=/usr/share/doc/${PF}/html
+		--with-html-subdir=${PF}/html
 		--localstatedir=/var
 	)
 
@@ -347,6 +345,7 @@ src_install() {
 	newinitd "${S}/libvirtd.init" libvirtd || die
 	newinitd "${FILESDIR}/libvirt-guests.init-r1" libvirt-guests || die
 	newinitd "${FILESDIR}/virtlockd.init-r1" virtlockd || die
+	newinitd "${FILESDIR}/virtlogd.init-r1" virtlogd || die
 
 	newconfd "${FILESDIR}/libvirtd.confd-r5" libvirtd || die
 	newconfd "${FILESDIR}/libvirt-guests.confd" libvirt-guests || die

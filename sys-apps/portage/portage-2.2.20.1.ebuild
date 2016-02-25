@@ -9,7 +9,6 @@ PYTHON_COMPAT=(
 	python3_3 python3_4
 	python2_7
 )
-# Note: substituted below
 PYTHON_REQ_USE='bzip2(+)'
 
 inherit distutils-r1 multilib
@@ -18,11 +17,11 @@ DESCRIPTION="Portage is the package management and distribution system for Gento
 HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Portage"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
 IUSE="build doc epydoc +ipc linguas_ru selinux xattr"
 
-DEPEND="!build? ( ${PYTHON_DEPS//bzip2(+)/ssl(+),bzip2(+)} )
+DEPEND="!build? ( $(python_gen_impl_dep 'ssl(+)') )
 	>=app-arch/tar-1.27
 	dev-lang/python-exec:2
 	>=sys-apps/sed-4.0.5 sys-devel/patch
@@ -359,7 +358,7 @@ pkg_postinst() {
 	einfo "This release of portage removed the new squashfs sync module "
 	einfo "introduced in portage-2.2.19."
 	einfo "Look for it to be released as an installable portage module soon."
-	einfo "This will allow it to develop at it's own pace partially independant"
-	einfo "of portage"
+	einfo "This will allow it to develop at its own pace partially independent"
+	einfo "of portage."
 	einfo ""
 }
