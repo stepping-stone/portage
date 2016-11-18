@@ -63,3 +63,20 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  01 Apr 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  app-emulation/fuse: minor tidy to metadata.xml
+
+  Package-Manager: portage-2.2.28
+
+  19 Jun 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Multiple metadata.xml: reorder to make sure assignee goes first
+
+  Reorder all metadata.xml files with explicit descriptions requesting
+  particular bug assignment/CC to ensure that the requested assignee
+  always goes first, in order to match the bug wrangling policies.
+
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #231477
+
+  Package-Manager: portage-2.3.0
+

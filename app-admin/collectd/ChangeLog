@@ -138,3 +138,308 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*collectd-5.5.1 (23 Feb 2016)
+
+  23 Feb 2016; Thomas D <whissi@whissi.de> +collectd-5.5.1.ebuild,
+  +files/collectd-5.5.1-libocci.patch, +files/collectd-5.5.1-lt.patch,
+  +files/collectd-5.5.1-nohal.patch, +files/collectd.confd-r1,
+  +files/collectd.initd-r1, metadata.xml:
+  Bumped to v5.5.1
+
+  - New upstream version (Closes #570766, #517060)
+
+  - Bumped to EAPI=6
+
+  - Non-functional mongodb plugin disabled in ebuild (see upstream
+    issue #492, closes #524400)
+
+  - Multiple dependency problems fixed
+
+  - linux-info eclass usage fixed (Closes #570778)
+
+  - Support for new plugins added (amqp, genericjmx, ipvs, modbus, sigrok,
+    tail_csv, vserver, write_riemann)
+
+  - PYTHON_SINGLE_TARGET support for Python 3.4 and 3.5 enabled
+
+  - Documentation improved (USE flag description, elogs)
+
+  - Linux capabilities usage expanded to improve running collectd as
+    unprivileged user (disable via filecaps USE flag)
+
+  - Runscript rewritten
+
+    - Runscript now supports OpenRC's default status function
+
+    - Runscript now guarantees service shutdown
+
+    - Validating configuration before (re)starting daemon
+
+  29 Feb 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag descriptions from metadata.xml
+
+  Package-Manager: portage-2.2.27
+
+  01 Mar 2016; Thomas D <whissi@whissi.de> collectd-5.4.1-r2.ebuild,
+  collectd-5.5.0.ebuild, collectd-5.5.1.ebuild:
+  Adjust dependency on sys-power/nut (#540750)
+
+  Bug: https://bugs.gentoo.org/show_bug.cgi?id=540750
+
+  Package-Manager: portage-2.2.27
+
+  23 Mar 2016; Ian Delaney <idella4@gentoo.org> -collectd-5.4.1-r2.ebuild,
+  -collectd-5.5.0.ebuild, collectd-5.5.1.ebuild,
+  -files/collectd-5.4.1-libocci.patch, -files/collectd-5.4.1-libperl.patch,
+  -files/collectd-5.4.1-lt.patch, -files/collectd-5.4.1-nohal.patch,
+  -files/collectd-5.5.0-lt.patch, -files/collectd.confd,
+  -files/collectd.initd, +files/collectd.logrotate, -files/logrotate,
+  metadata.xml:
+  Dropped old
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1101
+
+*collectd-5.5.1-r1 (23 Mar 2016)
+
+  23 Mar 2016; Ian Delaney <idella4@gentoo.org> -collectd-5.5.1.ebuild,
+  +collectd-5.5.1-r1.ebuild, metadata.xml:
+  Revbump to vn. 5.5.1-r1
+
+  add write_kafka plugin
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1101
+
+  24 Mar 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
+
+  Package-Manager: portage-2.2.28
+
+*collectd-5.5.1-r2 (29 Mar 2016)
+
+  29 Mar 2016; Ian Delaney <idella4@gentoo.org> -collectd-5.5.1-r1.ebuild,
+  +collectd-5.5.1-r2.ebuild, +files/collectd-5.5.1-issue-1637.patch,
+  metadata.xml:
+  Revbump to fix multiple issues
+
+  - Fix building with sys-fs/xfsprogs-4.5.0 (upstream issues #1637)
+
+  - Workaround for bug #577846 applied
+
+    We are now enforcing <=sys-kernel/linux-headers-4.4 when building
+    collectd_plugins_iptables until the problem gets fixed in
+    non-collectd upstram.
+
+  - virtual/udev dependency is now optional for disk plugin
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1156
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  29 Mar 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag descriptions from metadata.xml
+
+  Package-Manager: portage-2.2.28
+
+  31 Mar 2016; Sam Jorna <wraeth@gentoo.org> collectd-5.5.1-r2.ebuild:
+  Fix REQUIRED_USE
+
+  REQUIRED_USE of "udev" is only required when smart plugin was selected by
+  the user (forgotten "?").
+
+  Closes: https://github.com/gentoo/gentoo/pull/1171
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Sam Jorna <wraeth@gentoo.org>
+
+  02 Apr 2016; Alexis Ballier <aballier@gentoo.org> collectd-5.5.1-r2.ebuild:
+  do not RDEPEND on libtool but rather on libltdl.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+  03 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  collectd-5.5.1-r2.ebuild:
+  Fix CGROUP kernel config check
+
+  Package-Manager: portage-2.2.28
+
+*collectd-5.5.1-r3 (03 Apr 2016)
+
+  03 Apr 2016; James Le Cuirot <chewi@gentoo.org> -collectd-5.5.1-r2.ebuild,
+  +collectd-5.5.1-r3.ebuild:
+  Remove java-config-wrapper dependency (again)
+
+  I made this change for a reason and asked for feedback (bug #558310)
+  before I did so. Please do me the same courtesy by at least asking
+  before you undo my changes. java-config-wrapper is being masked so
+  this has to change now.
+
+  Package-Manager: portage-2.2.28
+
+  04 Apr 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  reset description for user in metadata.xml with a general update
+
+  Package-Manager: portage-2.2.28
+
+  04 Apr 2016; Alexis Ballier <aballier@gentoo.org> files/collectd.initd-r1:
+  Fix oracle configuration check in init script _checkconfig.
+
+  Do not match if oracle plugin is not enabled, simplify a bit the expression
+  and use wc -l instead of grep --count so that it works with busybox too.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+*collectd-5.5.1-r4 (26 Apr 2016)
+
+  26 Apr 2016; Patrice Clement <monsieurp@gentoo.org>
+  -collectd-5.5.1-r3.ebuild, +collectd-5.5.1-r4.ebuild:
+  Multiple sub slot operators (deps) set
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1349
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  11 Jun 2016; Mikle Kolyada <zlogene@gentoo.org> collectd-5.5.1-r4.ebuild:
+  Add ~arm keyword
+
+  Package-Manager: portage-2.2.28
+
+  10 Aug 2016; Thomas Deutschmann <whissi@gentoo.org> metadata.xml:
+  Updating maintainer details
+
+  Updating my own maintainer details to reflect that I am now a Gentoo
+  developer.
+
+  Gentoo-Bug: 581174
+
+  Package-Manager: portage-2.3.0
+
+  10 Aug 2016; Thomas Deutschmann <whissi@gentoo.org> metadata.xml:
+  Removing proxy-maintainer
+
+  Now that I am a Gentoo developer this package is no longer maintained
+  through proxy-maintainer project.
+
+  Package-Manager: portage-2.3.0
+
+  10 Aug 2016; Thomas Deutschmann <whissi@gentoo.org>
+  collectd-5.5.1-r4.ebuild:
+  Adjust depedency on sci-libs/libsigrok
+
+  Requiring <sci-libs/libsigrok-0.4 when building sigrok plugin because
+  plugin doesn't build against recent sci-libs/libsigrok.
+
+  Bug: https://github.com/collectd/collectd/issues/1574
+
+  Package-Manager: portage-2.3.0
+
+*collectd-5.5.2 (11 Aug 2016)
+
+  11 Aug 2016; Thomas Deutschmann <whissi@gentoo.org> +collectd-5.5.2.ebuild,
+  +files/collectd-5.5.2-issue-1870.patch,
+  +files/collectd-5.5.2-issue-1877.patch, metadata.xml:
+  Bump to v5.5.2
+
+    - New upstream release (Fixes CVE-2016-6254)
+
+    - Dependency on sys-fs/xfsprogs atom can now be controlled using the
+      new "xfs" USE flag.
+      If you don't enable "xfs" USE flag the df plugin will be unable to
+      filter on XFS partitions.
+
+    - Fixes build issues with sys-fs/xfsprogs-4.7.0 (#590998)
+
+    - Cherry-picked patches for upstream issue "network plugin causes core
+      dumps" (#1870)
+
+  Gentoo-Bug: https://bugs.gentoo.org/590998
+
+  Package-Manager: portage-2.3.0
+
+  11 Aug 2016; Thomas Deutschmann <whissi@gentoo.org>
+  -collectd-5.5.1-r4.ebuild, -files/collectd-5.5.1-issue-1637.patch:
+  Drop old security vulnerable version
+
+  Package-Manager: portage-2.3.0
+
+*collectd-5.6.0 (21 Sep 2016)
+
+  21 Sep 2016; Thomas Deutschmann <whissi@gentoo.org> +collectd-5.6.0.ebuild,
+  +files/collectd-5.6.0-fix-apache-plugin.patch,
+  +files/collectd-5.6.0-gentoo.patch, +files/collectd-5.6.0-issue-1896.patch,
+  metadata.xml:
+  Bump to v5.6.0
+
+  New plugins:
+   - chrony
+   - cpusleep
+   - gps
+   - lua
+   - mqtt
+   - notify_nagios
+   - xencpu
+
+  Package-Manager: portage-2.3.1
+
+  22 Sep 2016; Thomas Deutschmann <whissi@gentoo.org> collectd-5.6.0.ebuild:
+  Fix systemd unit name
+
+  Package-Manager: portage-2.3.1
+
+  25 Sep 2016; Thomas Deutschmann <whissi@gentoo.org> metadata.xml:
+  Move collectd_plugins_* flags from metadata.xml to collectd_plugins.desc
+
+  Gentoo-Bug: https://bugs.gentoo.org/588250
+
+  Package-Manager: portage-2.3.1
+
+*collectd-5.6.1 (07 Oct 2016)
+
+  07 Oct 2016; Thomas Deutschmann <whissi@gentoo.org> +collectd-5.6.1.ebuild:
+  Bump to v5.6.1
+
+  Package-Manager: portage-2.3.1
+
+  11 Oct 2016; Thomas Deutschmann <whissi@gentoo.org> collectd-5.5.2.ebuild,
+  collectd-5.6.0.ebuild, collectd-5.6.1.ebuild:
+  Update file capabilities
+
+  Add missing capabilities for ceph, dns, exec and turbostat plugin when
+  "filecaps" USE flag is used.
+
+  Package-Manager: portage-2.3.1
+
+*collectd-5.6.1-r1 (13 Oct 2016)
+
+  13 Oct 2016; Thomas Deutschmann <whissi@gentoo.org> -collectd-5.6.0.ebuild,
+  -collectd-5.6.1.ebuild, +collectd-5.6.1-r1.ebuild,
+  -files/collectd-5.6.0-fix-apache-plugin.patch,
+  -files/collectd-5.6.0-issue-1896.patch,
+  +files/collectd-5.6.0-use-_LINUX_CAPABILITY_VERSION_3.patch:
+  Revision bump to address multiple issues
+
+   - When collectd was emerged with "filecaps" USE flag set and at least one
+     chosen plugin required special capabilities systemd was unable to start
+     collectd because CapabilityBoundingSet option in collectd's systemd unit
+     file did not match with the capabilities actual set for
+     "/usr/sbin/collectd". (bug #596852)
+
+   - Cherry picked upstream commit 5e4f2ae61d to get rid of
+
+       > capability: warning: `collectd' uses 32-bit capabilities (legacy
+  support in use)
+
+     message.
+
+  Gentoo-Bug: https://bugs.gentoo.org/596852
+
+  Package-Manager: portage-2.3.2
+
+  03 Nov 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  remove proxied maintainer per his request
+
+  Package-Manager: portage-2.2.28
+

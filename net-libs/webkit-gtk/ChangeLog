@@ -270,3 +270,214 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> webkit-gtk-2.10.7.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+*webkit-gtk-2.10.8 (15 Mar 2016)
+
+  15 Mar 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +webkit-gtk-2.10.8.ebuild:
+  Security bump to version 2.10.8 (bug #577068).
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-2.10.4-r1.ebuild,
+  -webkit-gtk-2.10.8.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+*webkit-gtk-2.10.9 (03 Apr 2016)
+*webkit-gtk-2.4.10-r200 (03 Apr 2016)
+*webkit-gtk-2.4.10 (03 Apr 2016)
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> +webkit-gtk-2.4.10.ebuild,
+  +webkit-gtk-2.4.10-r200.ebuild, +webkit-gtk-2.10.9.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  08 Apr 2016; Agostino Sarubbo <ago@gentoo.org> webkit-gtk-2.10.9.ebuild:
+  amd64 stable wrt bug #577068
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Apr 2016; Agostino Sarubbo <ago@gentoo.org> webkit-gtk-2.4.10.ebuild,
+  webkit-gtk-2.4.10-r200.ebuild:
+  amd64 stable wrt bug #570034
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org> webkit-gtk-2.10.9.ebuild:
+  x86 stable wrt bug #577068
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org> webkit-gtk-2.4.10.ebuild,
+  webkit-gtk-2.4.10-r200.ebuild:
+  x86 stable wrt bug #570034
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*webkit-gtk-2.4.11-r200 (29 May 2016)
+*webkit-gtk-2.4.11 (29 May 2016)
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org>
+  files/webkit-gtk-1.11.90-gtk-docize-fix.patch,
+  +files/webkit-gtk-2.4.11-video-web-audio.patch,
+  files/webkit-gtk-2.4.4-atomic-ppc.patch,
+  files/webkit-gtk-2.4.4-jpeg-9a.patch, +webkit-gtk-2.4.11.ebuild,
+  +webkit-gtk-2.4.11-r200.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.11-r200.ebuild:
+  Make repoman more happy
+
+  Package-Manager: portage-2.3.0_rc1
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-2.4.9.ebuild,
+  -webkit-gtk-2.4.9-r200.ebuild, -webkit-gtk-2.10.7.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+  30 May 2016; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.11.ebuild,
+  webkit-gtk-2.4.11-r200.ebuild:
+  Fix virtualx.eclass usage
+
+  Package-Manager: portage-2.3.0_rc1
+
+  07 Jun 2016; Tobias Klausmann <klausman@gentoo.org>
+  webkit-gtk-2.10.9.ebuild:
+  2.10.9-r0: add ~alpha keyword
+
+  Gentoo-Bug: 566270
+
+  Package-Manager: portage-2.3.0_rc1
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.11.ebuild,
+  webkit-gtk-2.4.11-r200.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.11.ebuild,
+  webkit-gtk-2.4.11-r200.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  03 Jul 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml,
+  -webkit-gtk-2.4.10.ebuild, -webkit-gtk-2.4.10-r200.ebuild,
+  -webkit-gtk-2.8.5.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*webkit-gtk-2.12.3 (03 Jul 2016)
+
+  03 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  files/webkit-gtk-2.8.5-fix-alpha-build.patch,
+  files/webkit-gtk-2.8.5-webkit2gtkinjectedbundle-j1.patch,
+  +webkit-gtk-2.12.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  30 Jul 2016; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.12.3.ebuild:
+  ACCELERATED_2D_CANVAS is not compatible with gles2 (#588698 by skobk.in)
+
+  Package-Manager: portage-2.3.0
+
+*webkit-gtk-2.4.11-r1 (06 Aug 2016)
+
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> +webkit-gtk-2.4.11-r1.ebuild:
+  Rename geoloc to geolocation USE (#588168), ensure gtk+-3.20 is used to fix
+  theming (https://bugzilla.gnome.org/show_bug.cgi?id=757503).
+
+  Package-Manager: portage-2.3.0
+
+  27 Aug 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/webkit-gtk-2.4.9-gcc-6.patch, webkit-gtk-2.4.11.ebuild,
+  webkit-gtk-2.4.11-r1.ebuild, webkit-gtk-2.4.11-r200.ebuild:
+  tweak for gcc-6, bug #592048
+
+  Adopt Fedora patch to build successfully against gcc-6.1.0.
+
+  Bug: https://bugs.gentoo.org/show_bug.cgi?id=592048
+  Bug: https://bugs.webkit.org/show_bug.cgi?id=159124
+
+  Package-Manager: portage-2.3.0
+
+  05 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  webkit-gtk-2.12.3.ebuild:
+  raise gst-plugins-bad to 1.6
+
+  Per .cmake, needed for gst-plugins-gl.
+
+  Package-Manager: portage-2.3.0
+
+*webkit-gtk-2.12.5 (11 Sep 2016)
+
+  11 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +webkit-gtk-2.12.5.ebuild:
+  version bump 2.12.3 → 2.12.5
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.11-r1.ebuild,
+  webkit-gtk-2.12.5.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.11-r1.ebuild,
+  webkit-gtk-2.12.5.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*webkit-gtk-2.14.1 (26 Oct 2016)
+
+  26 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +webkit-gtk-2.14.1.ebuild:
+  version bump 2.12.5 → 2.14.1
+
+  Package-Manager: portage-2.3.2
+
+  26 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -webkit-gtk-2.4.11.ebuild, -webkit-gtk-2.10.9.ebuild,
+  -webkit-gtk-2.12.3.ebuild:
+  cleanup old revisions
+
+  Package-Manager: portage-2.3.2
+
+*webkit-gtk-2.14.2 (11 Nov 2016)
+
+  11 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +webkit-gtk-2.14.2.ebuild:
+  add webkit-gtk-2.14.2.ebuild
+
+  Simple bump from 2.14.1, no relevant changes when comparing 2.14.2 and
+  2.14.1 tarballs
+  Closes: https://github.com/gentoo/gentoo/pull/2788
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+

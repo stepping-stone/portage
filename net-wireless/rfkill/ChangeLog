@@ -70,3 +70,26 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  27 Sep 2016; Tony Vroon <chainsaw@gentoo.org> rfkill-0.5.ebuild:
+  Do not set toolchain variables in global scope; closes bug #593408 by Michał
+  Górny.
+
+  Package-Manager: portage-2.3.1
+
+  05 Oct 2016; Jeroen Roovers <jer@gentoo.org> rfkill-0.5.ebuild:
+  Stable for PPC PPC64 (bug #596152).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*rfkill-0.5-r1 (14 Oct 2016)
+
+  14 Oct 2016; Patrice Clement <monsieurp@gentoo.org> +rfkill-0.5-r1.ebuild:
+  remove git polling.
+
+  Acked-by: Tony Vroon <chainsaw@gentoo.org>
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2525
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

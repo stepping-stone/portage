@@ -116,3 +116,23 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --ignore-arches
 
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> qrupdate-1.1.2-r1.ebuild:
+  ppc64 stable wrt bug #570060
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Apr 2016; Justin Lecher <jlec@gentoo.org>
+  -files/qrupdate-1.0.1-makefile.patch, -qrupdate-1.1.0.ebuild,
+  -qrupdate-1.1.1.ebuild, -qrupdate-1.1.2.ebuild:
+  Drop old
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=478616
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org> qrupdate-1.1.2-r1.ebuild:
+  sourceforge: switch to https:// URIs
+

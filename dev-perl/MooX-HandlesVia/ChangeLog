@@ -63,3 +63,56 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*MooX-HandlesVia-0.1.8 (27 Feb 2016)
+
+  27 Feb 2016; Kent Fredric <kentfredric@gmail.com>
+  +MooX-HandlesVia-0.1.8.ebuild:
+  Bump to version 0.1.8
+
+  - use EAPI6
+
+  Upstream:
+  - removed hidden dependency on strictures
+  - avoids bug in inheriting from Non-Moo based classes
+
+  Package-Manager: portage-2.2.27
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> MooX-HandlesVia-0.1.7.ebuild:
+  amd64 stable wrt bug #573536
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> MooX-HandlesVia-0.1.7.ebuild:
+  x86 stable wrt bug #573536
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> MooX-HandlesVia-0.1.7.ebuild:
+  ppc stable wrt bug #573536
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Apr 2016; Agostino Sarubbo <ago@gentoo.org> MooX-HandlesVia-0.1.8.ebuild:
+  amd64/ppc/x86 stable, (ALLARCHES policy) wrt bug #578640
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -MooX-HandlesVia-0.1.7.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  13 Aug 2016; Jeroen Roovers <jer@gentoo.org> MooX-HandlesVia-0.1.8.ebuild:
+  Stable for HPPA (bug #573536).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+

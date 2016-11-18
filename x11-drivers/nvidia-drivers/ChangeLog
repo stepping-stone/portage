@@ -613,3 +613,249 @@
 
   Package-Manager: portage-2.2.27
 
+*nvidia-drivers-364.12 (22 Mar 2016)
+
+  22 Mar 2016; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-364.12.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  22 Mar 2016; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-352.79.ebuild,
+  nvidia-drivers-361.28.ebuild:
+  Stable for AMD64 x86 too.
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  22 Mar 2016; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-364.12.ebuild:
+  Add USE=wayland.
+
+  Package-Manager: portage-2.2.28
+
+  24 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/nvidia-drivers-361.28-pax.patch, nvidia-drivers-361.28.ebuild,
+  nvidia-drivers-361.28-r2.ebuild, nvidia-drivers-364.12.ebuild:
+  Update PaX patch on behalf of the Hardened team (bug #571662).
+
+  Package-Manager: portage-2.2.28
+
+  24 Mar 2016; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-364.12.ebuild:
+  Install nvidia-drm.ko by Timo Rothenpieler (bug #578014).
+
+  Package-Manager: portage-2.2.28
+
+*nvidia-drivers-364.12-r1 (24 Mar 2016)
+
+  24 Mar 2016; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-364.12.ebuild,
+  +nvidia-drivers-364.12-r1.ebuild:
+  Install /etc/vulkan/icd.d/nvidia_icd.json by Jason Borden (bug #578040).
+
+  Package-Manager: portage-2.2.28
+
+  25 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/nvidia-drivers-364.12-pax.patch, nvidia-drivers-364.12-r1.ebuild:
+  Add 364 PaX patch.
+
+  Package-Manager: portage-2.2.28
+
+  25 Mar 2016; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add hardened team.
+
+  Package-Manager: portage-2.2.28
+
+*nvidia-drivers-364.15 (07 Apr 2016)
+*nvidia-drivers-361.42 (07 Apr 2016)
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-361.42.ebuild,
+  +nvidia-drivers-364.15.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  12 Apr 2016; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-352.63.ebuild,
+  nvidia-drivers-352.79.ebuild, nvidia-drivers-352.79-r4.ebuild,
+  nvidia-drivers-355.00.27.ebuild, nvidia-drivers-355.11-r2.ebuild,
+  nvidia-drivers-355.11-r4.ebuild, nvidia-drivers-358.16-r1.ebuild,
+  nvidia-drivers-358.16-r5.ebuild, nvidia-drivers-361.28.ebuild,
+  nvidia-drivers-361.28-r2.ebuild, nvidia-drivers-361.42.ebuild,
+  nvidia-drivers-364.12-r1.ebuild, nvidia-drivers-364.15.ebuild:
+  Raise minimum x11-libs/libvdpau dependency (bug #579628 by nobody).
+
+  Package-Manager: portage-2.2.28
+
+  13 Apr 2016; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-364.15.ebuild:
+  Update maximum kernel version.
+
+  Package-Manager: portage-2.2.28
+
+  18 Apr 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  Fix metadata.xml file.
+
+  Package-Manager: portage-2.2.26
+
+*nvidia-drivers-364.19 (23 Apr 2016)
+
+  23 Apr 2016; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-364.19.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/nvidia-persistenced.init, files/nvidia-smi.init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*nvidia-drivers-367.18 (24 May 2016)
+
+  24 May 2016; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-367.18.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  24 May 2016; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-367.18.ebuild:
+  Update compatible kernel version.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*nvidia-drivers-361.45.11 (31 May 2016)
+
+  31 May 2016; Jeroen Roovers <jer@gentoo.org>
+  +nvidia-drivers-361.45.11.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*nvidia-drivers-367.27 (15 Jun 2016)
+
+  15 Jun 2016; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-367.27.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*nvidia-drivers-361.45.18 (05 Jul 2016)
+
+  05 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  +nvidia-drivers-361.45.18.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+*nvidia-drivers-367.35 (16 Jul 2016)
+
+  16 Jul 2016; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-367.27.ebuild,
+  +nvidia-drivers-367.35.ebuild:
+  Version bump. Add ARM resources to SRC_URI (bug #588864).
+
+  Package-Manager: portage-2.3.0
+
+*nvidia-drivers-367.35-r1 (24 Jul 2016)
+
+  24 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/nvidia-drivers-367.35-profiles-rc.patch,
+  +nvidia-drivers-367.35-r1.ebuild:
+  Patch nvidia-settings profiles by oleg (bug #589590).
+
+  Package-Manager: portage-2.3.0
+
+  24 Jul 2016; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-367.35.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*nvidia-drivers-370.23 (17 Aug 2016)
+
+  17 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/nvidia-drivers-370.23-profiles-rc.patch,
+  +nvidia-drivers-370.23.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  17 Aug 2016; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-370.23.ebuild:
+  Raise kernel version compatibility.
+
+  Package-Manager: portage-2.3.0
+
+*nvidia-drivers-367.44 (28 Aug 2016)
+
+  28 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/nvidia-drivers-367.44-profiles-rc.patch,
+  +nvidia-drivers-367.44.ebuild:
+  Version bump (bug #592254 by josef.95).
+
+  Package-Manager: portage-2.3.0
+
+*nvidia-drivers-370.28 (10 Sep 2016)
+
+  10 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/nvidia-drivers-370.28-profiles-rc.patch,
+  +nvidia-drivers-370.28.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  10 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  -files/nvidia-drivers-370.23-profiles-rc.patch,
+  -nvidia-drivers-370.23.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*nvidia-drivers-367.57 (11 Oct 2016)
+*nvidia-drivers-340.98 (11 Oct 2016)
+*nvidia-drivers-304.132 (11 Oct 2016)
+
+  11 Oct 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/nvidia-drivers-367.57-profiles-rc.patch,
+  +nvidia-drivers-304.132.ebuild, +nvidia-drivers-340.98.ebuild,
+  +nvidia-drivers-367.57.ebuild:
+  Version bump (bug #596588).
+
+  Package-Manager: portage-2.3.1
+
+  25 Oct 2016; Zero_Chaos <zerochaos@gentoo.org>
+  +files/nvidia-drivers-367.35-pax.patch,
+  +files/nvidia-drivers-367.57-pax.patch, nvidia-drivers-367.57.ebuild,
+  nvidia-drivers-370.28.ebuild:
+  fix pax patch for 367.57/370.28
+
+  Package-Manager: portage-2.3.2
+
+*nvidia-drivers-375.10 (02 Nov 2016)
+
+  02 Nov 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/nvidia-drivers-375.10-profiles-rc.patch,
+  +nvidia-drivers-375.10.ebuild:
+  Version bump (bug #597998).
+
+  Package-Manager: portage-2.3.2
+
+  02 Nov 2016; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-375.10.ebuild:
+  Copy nvml.h to the right path by Sven B. (bug #597998).
+
+  Package-Manager: portage-2.3.2
+
+*nvidia-drivers-375.10-r1 (03 Nov 2016)
+*nvidia-drivers-370.28-r1 (03 Nov 2016)
+*nvidia-drivers-367.57-r1 (03 Nov 2016)
+*nvidia-drivers-364.19-r1 (03 Nov 2016)
+
+  03 Nov 2016; Jeroen Roovers <jer@gentoo.org>
+  +nvidia-drivers-364.19-r1.ebuild, +nvidia-drivers-367.57-r1.ebuild,
+  +nvidia-drivers-370.28-r1.ebuild, +nvidia-drivers-375.10-r1.ebuild:
+  Install Vulkan configuration file when USE=X (bug #596486 by Timo
+  Rothenpieler).
+
+  Package-Manager: portage-2.3.2
+
+  03 Nov 2016; Jeroen Roovers <jer@gentoo.org>
+  -nvidia-drivers-355.00.27.ebuild:
+  Drop Vulkan beta ebuild.
+
+  Package-Manager: portage-2.3.2
+
+  11 Nov 2016; Jeroen Roovers <jer@gentoo.org>
+  nvidia-drivers-375.10-r1.ebuild:
+  Set up libnvidia-ml.so symlinks (bug #598874).
+
+  Package-Manager: portage-2.3.2
+

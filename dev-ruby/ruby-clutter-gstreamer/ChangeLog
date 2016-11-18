@@ -93,3 +93,36 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*ruby-clutter-gstreamer-3.0.8 (25 Jun 2016)
+
+  25 Jun 2016; Hans de Graaff <graaff@gentoo.org>
+  +ruby-clutter-gstreamer-3.0.8.ebuild:
+  add 3.0.8
+
+  Package-Manager: portage-2.2.28
+
+  22 Jul 2016; Hans de Graaff <graaff@gentoo.org>
+  ruby-clutter-gstreamer-2.2.3.ebuild:
+  drop ruby19
+
+  Package-Manager: portage-2.2.28
+
+  06 Nov 2016; Hans de Graaff <graaff@gentoo.org>
+  -ruby-clutter-gstreamer-2.2.3-r1.ebuild,
+  -ruby-clutter-gstreamer-2.2.5.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+
+  06 Nov 2016; Hans de Graaff <graaff@gentoo.org>
+  ruby-clutter-gstreamer-3.0.7.ebuild:
+  amd64 stable, bug 587024
+
+  Package-Manager: portage-2.3.0
+
+  13 Nov 2016; Hans de Graaff <graaff@gentoo.org>
+  -ruby-clutter-gstreamer-2.2.3.ebuild:
+  cleanup; drops x86 stable keyword, bug 587024
+
+  Package-Manager: portage-2.3.0
+

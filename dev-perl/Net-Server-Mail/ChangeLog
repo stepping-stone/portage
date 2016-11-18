@@ -63,3 +63,32 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Net-Server-Mail-0.230.0 (05 Mar 2016)
+
+  05 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +Net-Server-Mail-0.230.0.ebuild:
+  Bump to version 0.230.0
+
+  - EAPI6
+  - License change
+  - Tests work
+
+  Upstream:
+  - Bugs fixed in LMTP multi-callback and tests
+
+  Package-Manager: portage-2.2.27
+
+  02 Apr 2016; Agostino Sarubbo <ago@gentoo.org>
+  Net-Server-Mail-0.230.0.ebuild:
+  amd64 stable wrt bug #578710
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Net-Server-Mail-0.210.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+

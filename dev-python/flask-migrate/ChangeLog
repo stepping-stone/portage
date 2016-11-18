@@ -74,3 +74,37 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*flask-migrate-1.8.0 (02 Mar 2016)
+
+  02 Mar 2016; Patrick Lauer <patrick@gentoo.org> +flask-migrate-1.8.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+  15 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  flask-migrate-1.2.0.ebuild, flask-migrate-1.3.0.ebuild,
+  flask-migrate-1.3.1.ebuild, flask-migrate-1.4.0.ebuild,
+  flask-migrate-1.7.0.ebuild, flask-migrate-1.8.0.ebuild:
+  update HOMEPAGE.
+
+  Gentoo-Bug: https://bugs.gentoo.org/587906
+
+  Package-Manager: portage-2.2.28
+
+*flask-migrate-2.0.0 (06 Nov 2016)
+
+  06 Nov 2016; Tiziano Müller <dev-zero@gentoo.org>
+  +flask-migrate-2.0.0.ebuild:
+  version bump, includes EAPI bump and py-3 support
+
+  Also fixes dependencies, see bug #588188
+
+  Package-Manager: portage-2.3.0
+
+  06 Nov 2016; Tiziano Müller <dev-zero@gentoo.org>
+  -flask-migrate-1.2.0.ebuild, -flask-migrate-1.3.1.ebuild,
+  -flask-migrate-1.4.0.ebuild, -flask-migrate-1.7.0.ebuild:
+  drop old versions
+
+  Package-Manager: portage-2.3.0
+

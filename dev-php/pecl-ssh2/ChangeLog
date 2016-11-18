@@ -98,3 +98,24 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*pecl-ssh2-1.0 (25 Jul 2016)
+*pecl-ssh2-0.13 (25 Jul 2016)
+
+  25 Jul 2016; Brian Evans <grknight@gentoo.org> +pecl-ssh2-0.13.ebuild,
+  +pecl-ssh2-1.0.ebuild:
+  Version bumps
+
+  Package-Manager: portage-2.3.0
+
+  23 Aug 2016; Brian Evans <grknight@gentoo.org> pecl-ssh2-1.0.ebuild:
+  Fix EAPI6 build error when php7-0 is off
+
+  Package-Manager: portage-2.3.0
+
+*pecl-ssh2-9999 (15 Nov 2016)
+
+  15 Nov 2016; Brian Evans <grknight@gentoo.org> +pecl-ssh2-9999.ebuild:
+  Add live ebuild wrt bug 599750
+
+  Package-Manager: portage-2.3.2
+

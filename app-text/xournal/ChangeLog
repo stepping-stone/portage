@@ -60,3 +60,22 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  17 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/xournal-0.4.7-am113-2.patch, -files/xournal-0.4.7-am113.patch,
+  -files/xournal-0.4.7-ar.patch:
+  remove unused patches
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Oct 2016; Sven Wegener <swegener@gentoo.org> xournal-0.4.8.ebuild,
+  xournal-9999.ebuild:
+  Update SourceForge GIT URLs
+
+  Package-Manager: portage-2.3.0
+
+  30 Oct 2016; Sven Wegener <swegener@gentoo.org> xournal-0.4.8.ebuild,
+  xournal-9999.ebuild:
+  Add EGIT_BOOTSTRAP
+
+  Package-Manager: portage-2.3.0
+

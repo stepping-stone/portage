@@ -152,3 +152,145 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*mc-4.8.16 (13 Mar 2016)
+
+  13 Mar 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +files/mc-4.8.15-ebuild_syntax_EAPI-6.patch, +mc-4.8.16.ebuild:
+  Bump to version 4.8.16
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  14 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mc-4.8.15.ebuild:
+  amd64 stable wrt bug #577314
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mc-4.8.15.ebuild:
+  x86 stable wrt bug #577314
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mc-4.8.15.ebuild:
+  ppc stable wrt bug #577314
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mc-4.8.15.ebuild:
+  ppc64 stable wrt bug #577314
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mc-4.8.15.ebuild:
+  sparc stable wrt bug #577314
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mc-4.8.15.ebuild:
+  ia64 stable wrt bug #577314
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  23 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> mc-4.8.16.ebuild:
+  Move S variable above src_* functions.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  30 Mar 2016; Markus Meier <maekke@gentoo.org> mc-4.8.15.ebuild:
+  arm stable, bug #577314
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  05 Apr 2016; Jeroen Roovers <jer@gentoo.org> mc-4.8.15.ebuild:
+  Stable for HPPA (bug #577314).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  13 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/mc-4.8.16-makedev.patch, mc-4.8.16.ebuild:
+  fix build failure against glibc-2.23, bug #579858
+
+  Reported-by: Thomas D.
+  Bug: https://bugs.gentoo.org/579858
+
+  Package-Manager: portage-2.2.28
+
+  16 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org> mc-4.8.14.ebuild,
+  mc-4.8.15.ebuild:
+  apply glibc-2.23 fix for all older ebuilds
+
+  Package-Manager: portage-2.2.28
+
+  16 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org> mc-4.8.15.ebuild:
+  alpha stable, bug #577314
+
+  Bug: https://bugs.gentoo.org/577314
+
+  Package-Manager: portage-2.2.28
+
+*mc-4.8.17 (08 May 2016)
+
+  08 May 2016; Sergei Trofimovich <slyfox@gentoo.org> +mc-4.8.17.ebuild,
+  mc-9999.ebuild:
+  bump up to 4.8.17
+
+  Package-Manager: portage-2.2.28
+
+  08 May 2016; Sergei Trofimovich <slyfox@gentoo.org> mc-4.8.17.ebuild,
+  mc-9999.ebuild:
+  remove dep on cvs from mc-4.8.17.ebuild & mc-9999.ebuild
+
+  Dependency on cvs should be no longer necessary, as we have upgraded to
+  a new enough version of gettext (0.18.1).
+
+  Signed-off-by: Yury V. Zaytsev <yury@shurup.com>
+  Signed-off-by: Sergei Trofimovich <slyfox@gentoo.org>
+
+  08 May 2016; Sergei Trofimovich <slyfox@gentoo.org> mc-4.8.17.ebuild,
+  mc-9999.ebuild:
+  require glib-2.26.0:2 or higher
+
+  Signed-off-by: Yury V. Zaytsev <yury@shurup.com>
+  Signed-off-by: Sergei Trofimovich <slyfox@gentoo.org>
+
+  09 May 2016; Sergei Trofimovich <slyfox@gentoo.org> mc-9999.ebuild:
+  fix git repository url in mc-9999.ebuild
+
+  Signed-off-by: Yury V. Zaytsev <yury.zaytsev@traveltainment.de>
+  Signed-off-by: Sergei Trofimovich <slyfox@gentoo.org>
+
+  07 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #269977
+
+  Package-Manager: portage-2.3.0
+
+*mc-4.8.18 (02 Oct 2016)
+
+  02 Oct 2016; Yury V. Zaytsev <yury@shurup.com> +mc-4.8.18.ebuild:
+  bump up to 4.8.18
+
+    * Fix SRC_URI (use OSU OSL)
+    * Drop upstreamed EAPI 6 patch
+
+  Signed-off-by: Yury V. Zaytsev <yury@shurup.com>
+
+  02 Oct 2016; Yury V. Zaytsev <yury@shurup.com> mc-9999.ebuild:
+  fix SRC_URI (use OSU OSL) in mc-9999.ebuild
+
+  Signed-off-by: Yury V. Zaytsev <yury@shurup.com>
+

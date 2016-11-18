@@ -90,3 +90,43 @@
 
   Package-Manager: portage-2.2.27
 
+*whois-5.2.12 (30 Mar 2016)
+
+  30 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> +whois-5.2.12.ebuild:
+  Bump to version 5.2.12
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  30 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> -whois-5.2.10.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*whois-5.2.13 (31 Oct 2016)
+
+  31 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> +whois-5.2.13.ebuild:
+  Bump to version 5.2.13
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  31 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> -whois-5.0.25.ebuild,
+  -whois-5.0.26.ebuild, -whois-5.2.11.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  08 Nov 2016; Jeroen Roovers <jer@gentoo.org> whois-5.2.12.ebuild:
+  Stable for HPPA PPC64 (bug #598657).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+  15 Nov 2016; Tobias Klausmann <klausman@gentoo.org> whois-5.2.12.ebuild:
+  5.2.12-r0: stable on alpha
+
+  Gentoo-Bug: 598657
+

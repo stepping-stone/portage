@@ -102,3 +102,87 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*rofi-1.0.0 (20 Apr 2016)
+
+  20 Apr 2016; Jeroen Roovers <jer@gentoo.org> +rofi-1.0.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  20 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  -files/rofi-0.15.4-Werror.patch, -rofi-0.15.11.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+  20 Apr 2016; Jeroen Roovers <jer@gentoo.org> rofi-1.0.0.ebuild:
+  Add x11-libs/libxcb dependency.
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Jeroen Roovers <jer@gentoo.org> rofi-1.0.0.ebuild:
+  Add missing dependency (bug #580638 by Toralf Förster).
+
+  Package-Manager: portage-2.2.28
+
+  28 Apr 2016; Jeroen Roovers <jer@gentoo.org> rofi-1.0.0.ebuild:
+  Depend on x11-libs/cairo[xcb] (bug #581312 by Oleg).
+
+  Package-Manager: portage-2.2.28
+
+  28 Apr 2016; Jeroen Roovers <jer@gentoo.org> rofi-1.0.0.ebuild:
+  Really depend on x11-libs/cairo[xcb] (bug #581312 by Oleg).
+
+  Package-Manager: portage-2.2.28
+
+*rofi-1.0.1 (05 May 2016)
+
+  05 May 2016; Jeroen Roovers <jer@gentoo.org> +rofi-1.0.1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  05 May 2016; Jeroen Roovers <jer@gentoo.org> -rofi-0.15.12.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+  27 May 2016; Jeroen Roovers <jer@gentoo.org> -rofi-1.0.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*rofi-1.1.0 (26 Jun 2016)
+
+  26 Jun 2016; Jeroen Roovers <jer@gentoo.org> +rofi-1.1.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+*rofi-1.2.0 (15 Aug 2016)
+
+  15 Aug 2016; Jeroen Roovers <jer@gentoo.org> +rofi-1.2.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  01 Sep 2016; Jeroen Roovers <jer@gentoo.org> rofi-1.2.0.ebuild:
+  Drop USE=i3 (bug #592674 by Mykyta Holubakha).
+
+  Package-Manager: portage-2.3.0
+
+  01 Sep 2016; Jeroen Roovers <jer@gentoo.org> -rofi-1.0.1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+  10 Nov 2016; Jeroen Roovers <jer@gentoo.org> -rofi-1.1.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+  10 Nov 2016; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove unused USE flag description.
+
+  Package-Manager: portage-2.3.2
+

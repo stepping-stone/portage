@@ -62,3 +62,38 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*blassic-0.10.3 (20 Apr 2016)
+
+  20 Apr 2016; Michael Sterrett <mr_bones_@gentoo.org> +blassic-0.10.3.ebuild,
+  +files/blassic-0.10.3-tinfo.patch:
+  version bump
+
+  Package-Manager: portage-2.2.26
+
+  10 Jun 2016; Agostino Sarubbo <ago@gentoo.org> blassic-0.10.3.ebuild:
+  amd64 stable wrt bug #583820
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> blassic-0.10.3.ebuild:
+  x86 stable wrt bug #583820
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> blassic-0.10.3.ebuild:
+  ppc stable wrt bug #583820
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> blassic-0.10.3.ebuild:
+  Stable for HPPA (bug #583820).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+

@@ -74,3 +74,69 @@
 
   Package-Manager: portage-2.2.26
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  mate-control-center-1.8.3.ebuild:
+  amd64 stable wrt bug #573048
+
+  Package-Manager: portage-2.2.26
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  mate-control-center-1.8.3.ebuild:
+  x86 stable wrt bug #573048
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Mar 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  -mate-control-center-1.8.1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.26
+
+  30 May 2016; Mikle Kolyada <zlogene@gentoo.org>
+  mate-control-center-1.10.2.ebuild:
+  Add ~arm keyword wrt bug #508072
+
+  Package-Manager: portage-2.2.28
+
+  25 Jul 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  mate-control-center-1.10.2.ebuild:
+  amd64 x86 stable wrt bug #579644
+
+  Package-Manager: portage-2.2.28
+
+  06 Aug 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  -mate-control-center-1.8.3.ebuild:
+  Drop 1.8.x
+
+  Package-Manager: portage-2.2.26
+
+*mate-control-center-1.12.1-r1 (12 Aug 2016)
+
+  12 Aug 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  +mate-control-center-1.12.1-r1.ebuild, metadata.xml:
+  1.12.x vbump, add gtk3, import from project repo
+
+  Package-Manager: portage-2.3.0
+
+  12 Aug 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  +files/mate-control-center-1.12.1-backport-appindicator-configure.patch:
+  Add missing patch
+
+  Package-Manager: portage-2.3.0
+
+  15 Oct 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  mate-control-center-1.12.1-r1.ebuild:
+  Stable on amd64 keyword wrt #596998
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: NP-Hardass <NP-Hardass@gentoo.org>
+
+  15 Oct 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  mate-control-center-1.12.1-r1.ebuild:
+  Stable on x86 keyword wrt #596998
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: NP-Hardass <NP-Hardass@gentoo.org>
+

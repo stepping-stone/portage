@@ -127,3 +127,42 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*inspircd-2.0.21 (26 Mar 2016)
+
+  26 Mar 2016; Ian Delaney <idella4@gentoo.org>
+  +files/inspircd-2.0.21-fix-path-builds.patch, +files/inspircd-2.0.21-init,
+  +inspircd-2.0.21.ebuild:
+  bump to vn. 2.0.21
+
+  patches to bump ebuild and fix build paths sunbmitted by
+  the proxy maintainer via the gentoo bug. Keyword arm
+  intially tested fine however requires keywording in
+  required dep, held back for later.
+
+  Gentoo bug: #575956
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/inspircd-2.0.21-init, files/inspircd-init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  29 May 2016; Anthony Ryan <anthonyryan1@gmail.com> inspircd-2.0.20.ebuild,
+  inspircd-2.0.21.ebuild:
+  HTTPS (and canonicalize domain) for github.com
+
+  All links to www.github.com were changed to github.com (preferred by
+  GitHub).
+
+  During the automated testing of all modified packages the following SRC_URIs
+  were discovered to have changed upstream. Upon closer inspection they were
+  all confirmed to not be regressions. They will all continue to work when
+  served from the mirrors.
+
+  * dev-python/catkin_pkg-0.2.10 (upstream tarball changed)
+  * dev-python/rosdistro-0.4.4 (upstream tarball changed)
+  * dev-util/rosdep-0.11.4 (upstream tarball changed)
+  * dev-util/wstool-0.1.12 (upstream tarball changed)
+  * dev-util/wstool-0.1.13 (upstream tarball changed)
+  * dev-util/rosdep-0.11.5 (upstream tarball deleted)
+

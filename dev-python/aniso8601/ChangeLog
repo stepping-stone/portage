@@ -75,3 +75,22 @@
 
   Package-Manager: portage-2.2.27
 
+*aniso8601-1.1.0-r1 (15 Mar 2016)
+
+  15 Mar 2016; Tim Harder <radhermit@gentoo.org> +aniso8601-1.1.0-r1.ebuild:
+  add missing python-dateutil rdep and py35 support
+
+*aniso8601-1.2.0 (30 Oct 2016)
+
+  30 Oct 2016; Tim Harder <radhermit@gentoo.org> +aniso8601-1.2.0.ebuild:
+  version bump to 1.2.0
+
+  30 Oct 2016; Tim Harder <radhermit@gentoo.org> -aniso8601-0.82.ebuild,
+  -aniso8601-0.90.ebuild, -aniso8601-0.92.ebuild, -aniso8601-1.0.0.ebuild,
+  -aniso8601-1.1.0.ebuild:
+  remove old
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> aniso8601-0.83.ebuild,
+  aniso8601-1.1.0-r1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

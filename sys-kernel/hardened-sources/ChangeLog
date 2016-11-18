@@ -797,3 +797,751 @@
   Package-Manager: portage-2.2.26
   RepoMan-Options: --force
 
+  28 Feb 2016; Anthony G. Basile <blueness@gentoo.org>
+  hardened-sources-4.4.2.ebuild:
+  4.4.2 stable on amd64 and x86
+
+  Package-Manager: portage-2.2.26
+
+  28 Feb 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.2.7.ebuild, -hardened-sources-4.3.5-r2.ebuild:
+  remove older unstable versions
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.3 (29 Feb 2016)
+
+  29 Feb 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.3.ebuild:
+  version bump to 4.4.3
+
+  vanilla-4.4.3 + genpatches-4.4-5 + grsecurity-3.1-4.4.3-201602282149
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.3-r1 (03 Mar 2016)
+
+  03 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.3-r1.ebuild:
+  version bump to 4.4.3
+
+  vanilla-4.4.3 + genpatches-4.4-5 + grsecurity-3.1-4.4.3-201603012143
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.4 (04 Mar 2016)
+
+  04 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.4.ebuild:
+  version bump to 4.4.4
+
+  vanilla-4.4.4 + genpatches-4.4-5 + grsecurity-3.1-4.4.4-201603032158
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.5 (11 Mar 2016)
+
+  11 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.5.ebuild:
+  version bump to 4.4.5
+
+  vanilla-4.4.5 + genpatches-4.4-6 + grsecurity-3.1-4.4.5-201603102309
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.5-r1 (14 Mar 2016)
+
+  14 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.5-r1.ebuild:
+  version bump to 4.4.5-r1
+
+  vanilla-4.4.5 + genpatches-4.4-7 + grsecurity-3.1-4.4.5-201603131305
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.5-r2 (15 Mar 2016)
+
+  15 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.5-r2.ebuild:
+  version bump to 4.4.5-r2
+
+  vanilla-4.4.5 + genpatches-4.4-7 + grsecurity-3.1-4.4.5-201603142220
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.6 (23 Mar 2016)
+
+  23 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.6.ebuild:
+  version bump to 4.4.6
+
+  vanilla-4.4.6 + genpatches-4.4-8 + grsecurity-3.1-4.4.6-201603221748
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.6-r1 (03 Apr 2016)
+
+  03 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.6-r1.ebuild:
+  version bump to 4.4.6
+
+  vanilla-4.4.6 + genpatches-4.4-8 + grsecurity-3.1-4.4.6-201604021734.patch
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.6-r2 (11 Apr 2016)
+
+  11 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.6-r2.ebuild:
+  version bump to 4.4.6-r2
+
+  vanilla-4.4.6 + genpatches-4.4-8 + grsecurity-3.1-4.4.6-201604100830
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.7 (16 Apr 2016)
+
+  16 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.7.ebuild:
+  version bump to 4.4.7
+
+  vanilla-4.4.7 + genpatches-4.4-9 + grsecurity-3.1-4.4.7-201604152208
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.8 (21 Apr 2016)
+
+  21 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.8.ebuild:
+  version bump to 4.4.8
+
+  vanilla-4.4.8 + genpatches-4.4-9 + grsecurity-3.1-4.4.8-201604201957
+
+  Package-Manager: portage-2.2.26
+
+  21 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.4.3.ebuild, -hardened-sources-4.4.3-r1.ebuild,
+  -hardened-sources-4.4.4.ebuild, -hardened-sources-4.4.5.ebuild,
+  -hardened-sources-4.4.5-r1.ebuild, -hardened-sources-4.4.5-r2.ebuild,
+  -hardened-sources-4.4.6.ebuild, -hardened-sources-4.4.6-r1.ebuild:
+  remove older unstable versions
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.4.8-r1 (26 Apr 2016)
+
+  26 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.4.8-r1.ebuild:
+  version bump to 4.4.8-r1
+
+  vanilla-4.4.8 + genpatches-4.4-9 + grsecurity-3.1-4.4.8-201604252206
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.5.2 (30 Apr 2016)
+
+  30 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.2.ebuild:
+  version bump to 4.5.2
+
+  vanilla-4.5.2 + genpatches-4.5-3 + grsecurity-3.1-4.5.2-201604282058
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.5.2-r1 (30 Apr 2016)
+
+  30 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.5.2.ebuild, +hardened-sources-4.5.2-r1.ebuild:
+  version bump to 4.5.2-r1, remove 4.5.2
+
+  vanilla-4.5.2 + genpatches-4.5-3 + grsecurity-3.1-4.5.2-201604290633
+
+  Package-Manager: portage-2.2.26
+
+  30 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  hardened-sources-4.4.8-r1.ebuild:
+  4.4.8-r1 stable on amd64 and x86
+
+  Package-Manager: portage-2.2.26
+
+  30 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.4.6-r2.ebuild, -hardened-sources-4.4.7.ebuild,
+  -hardened-sources-4.4.8.ebuild:
+  remove older unstable versions
+
+  Package-Manager: portage-2.2.26
+
+  30 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.1.7-r1.ebuild:
+  remove oldest stable version
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.5.3 (08 May 2016)
+
+  08 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.3.ebuild:
+  version bump to 4.5.3
+
+  vanilla-4.5.3 + genpatches-4.5-5 + grsecurity-3.1-4.5.3-201605080858
+
+  Package-Manager: portage-2.2.26
+
+  08 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.5.2-r1.ebuild:
+  remove 4.5.2-r1
+
+  This had broken user.pax.flags xattr namespace on tmpfs.
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.5.3-r1 (11 May 2016)
+
+  11 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.3-r1.ebuild:
+  version bump to 4.5.3-r1
+
+  vanilla-4.5.3 + genpatches-4.5-5 + grsecurity-3.1-4.5.3-201605102138
+
+  Package-Manager: portage-2.2.26
+
+  11 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.5.3.ebuild:
+  remove older unstable
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.5.4 (12 May 2016)
+
+  12 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.4.ebuild:
+  version bump to 4.5.4
+
+  vanilla-4.5.4 + genpatches-4.5-5 + grsecurity-3.1-4.5.4-201605112030
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.5.4-r1 (13 May 2016)
+
+  13 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.4-r1.ebuild:
+  version bump to 4.5.4-r1
+
+  vanilla-4.5.4 + genpatches-4.5-5 + grsecurity-3.1-4.5.4-201605122039
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.5.4-r2 (14 May 2016)
+
+  14 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.4-r2.ebuild:
+  version bump to 4.5.4-r2
+
+  vanilla-4.5.4 + genpatches-4.5-5 + grsecurity-3.1-4.5.4-201605131918
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.5.5 (21 May 2016)
+
+  21 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.5.ebuild:
+  version bump to 4.5.5
+
+  vanilla-4.5.5 + genpatches-4.5-7 + grsecurity-3.1-4.5.5-201605202102
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.5.5-r1 (22 May 2016)
+
+  22 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.5-r1.ebuild:
+  version bump to 4.5.5
+
+  vanilla-4.5.5 + genpatches-4.5-7 + grsecurity-3.1-4.5.5-201605211442
+
+  Package-Manager: portage-2.2.26
+
+  22 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.5.3-r1.ebuild, -hardened-sources-4.5.4.ebuild,
+  -hardened-sources-4.5.4-r1.ebuild, -hardened-sources-4.5.4-r2.ebuild,
+  -hardened-sources-4.5.5.ebuild:
+  remove older unstable versions
+
+  Package-Manager: portage-2.2.26
+
+*hardened-sources-4.5.5-r2 (30 May 2016)
+
+  30 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.5-r2.ebuild:
+  version bump to 4.5.5-r2
+
+  vanilla-4.5.5 + genpatches-4.5-7 + grsecurity-3.1-4.5.5-201605291201
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.5.6 (06 Jun 2016)
+
+  06 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.6.ebuild:
+  version bump to 4.5.6
+
+  vanilla-4.5.6 + genpatches-4.5-8 + grsecurity-3.1-4.5.6-201606051644
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.5.7 (10 Jun 2016)
+
+  10 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.7.ebuild:
+  version bump to 4.5.7
+
+  vanilla-4.5.7 + genpatches-4.5-9 + grsecurity-3.1-4.5.7-201606080852
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.5.7-r1 (12 Jun 2016)
+
+  12 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.7-r1.ebuild:
+  version bump to 4.5.7-r1
+
+  vanilla-4.5.7 + genpatches-4.5-9 + grsecurity-3.1-4.5.7-201606110914
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.5.7-r2 (15 Jun 2016)
+
+  15 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.7-r2.ebuild:
+  version bump to 4.5.7-r2
+
+  vanilla-4.5.7 + genpatches-4.5-9 + grsecurity-3.1-4.5.7-201606142010.patch
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.5.7-r3 (21 Jun 2016)
+
+  21 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.7-r3.ebuild:
+  version bump to 4.5.7-r3
+
+  vanilla-4.5.7 + genpatches-4.5-9 + grsecurity-3.1-4.5.7-201606202152
+
+  Package-Manager: portage-2.2.28
+
+  21 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.5.7.ebuild, -hardened-sources-4.5.7-r1.ebuild,
+  -hardened-sources-4.5.7-r2.ebuild:
+  remove older buggy 4.5.7 versions
+
+  Package-Manager: portage-2.2.28
+
+  27 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.5.5-r1.ebuild, -hardened-sources-4.5.5-r2.ebuild,
+  -hardened-sources-4.5.6.ebuild:
+  remove older unstable versions
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.5.7-r4 (27 Jun 2016)
+
+  27 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.7-r4.ebuild:
+  version bump to 4.5.7-r4
+
+  vanilla-4.5.7 + genpatches-4.5-9 + grsecurity-3.1-4.5.7-201606262019
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.5.7-r5 (28 Jun 2016)
+
+  28 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.7-r5.ebuild:
+  version bump to 4.5.7-r5
+
+  vanilla-4.5.7 + genpatches-4.5-9 + grsecurity-3.1-4.5.7-201606280009
+
+  Package-Manager: portage-2.2.28
+
+  29 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.5.7-r3.ebuild, -hardened-sources-4.5.7-r4.ebuild:
+  remove older unstable versions
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.5.7-r6 (30 Jun 2016)
+
+  30 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.5.7-r6.ebuild:
+  version bump to 4.5.7-r6
+
+  vanilla-4.5.7 + genpatches-4.5-9 + grsecurity-3.1-4.5.7-201606292300
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.5.7-r7 (02 Jul 2016)
+
+  02 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.5.7-r6.ebuild, +hardened-sources-4.5.7-r7.ebuild:
+  version bump to 4.5.7-r7
+
+  vanilla-4.5.7 + genpatches-4.5-9 + grsecurity-3.1-4.5.7-201606302132
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.6.3 (07 Jul 2016)
+
+  07 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.6.3.ebuild:
+  version bump to 4.6.3
+
+  vanilla-4.6.3 + genpatches-4.6-3 + grsecurity-3.1-4.6.3-201607060823
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.6.3-r1 (07 Jul 2016)
+
+  07 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.6.3.ebuild, +hardened-sources-4.6.3-r1.ebuild:
+  version bump to 4.6.3-r1
+
+  vanilla-4.6.3 + genpatches-4.6-3 + grsecurity-3.1-4.6.3-201607062159
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.6.3-r2 (09 Jul 2016)
+
+  09 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.6.3-r2.ebuild:
+  version bump to 4.6.3-r2
+
+  vanilla-4.6.3 + genpatches-4.6-3 + grsecurity-3.1-4.6.3-201607070721
+
+  Package-Manager: portage-2.2.28
+
+  09 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.5.7-r7.ebuild, -hardened-sources-4.6.3-r1.ebuild:
+  remove older unstable versions
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.6.4 (12 Jul 2016)
+
+  12 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.6.4.ebuild:
+  version bump to 4.6.4
+
+  vanilla-4.6.4 + genpatches-4.6-5 + grsecurity-3.1-4.6.4-201607112205
+
+  Package-Manager: portage-2.2.28
+
+  12 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.6.3-r2.ebuild:
+  remove older unstable version
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.6.4-r1 (19 Jul 2016)
+
+  19 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.6.4-r1.ebuild:
+  version bump to 4.6.4-r1
+
+  vanilla-4.6.4 + genpatches-4.6-5 + grsecurity-3.1-4.6.4-201607182211
+
+  Package-Manager: portage-2.2.28
+
+  19 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.6.4.ebuild:
+  remove older unstable version
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.6.4-r2 (21 Jul 2016)
+
+  21 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.6.4-r2.ebuild:
+  version bump to 4.6.4-r2
+
+  vanilla-4.6.4 + genpatches-4.6-5 + grsecurity-3.1-4.6.4-201607192040
+
+  Package-Manager: portage-2.2.28
+
+  21 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.3.3-r4.ebuild:
+  remove oldest stable kernel, bug #572604
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.6.4-r3 (26 Jul 2016)
+
+  26 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.6.4-r3.ebuild:
+  version bump to 4.6.4-r3
+
+  vanilla-4.6.4 + genpatches-4.6-5 + grsecurity-3.1-4.6.4-201607242014
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.6.5 (29 Jul 2016)
+
+  29 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.6.5.ebuild:
+  version bump to 4.6.5
+
+  vanilla-4.6.4 + genpatches-4.6-5 + grsecurity-3.1-4.6.5-201607272152
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.6.5-r1 (01 Aug 2016)
+
+  01 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.6.5-r1.ebuild:
+  version bump to 4.6.5-r1
+
+  vanilla-4.6.4 + genpatches-4.6-5 + grsecurity-3.1-4.6.5-201607312210
+
+  Package-Manager: portage-2.2.28
+
+  01 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.6.4-r2.ebuild, -hardened-sources-4.6.4-r3.ebuild,
+  -hardened-sources-4.6.5.ebuild:
+  remove older unstable versions
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.0 (14 Aug 2016)
+
+  14 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.0.ebuild:
+  version bump to 4.7.0
+
+  vanilla-4.7 + genpatches-4.7-1 + grsecurity-3.1-4.7-201608131240.patch
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.0-r1 (16 Aug 2016)
+
+  16 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.7.0.ebuild, +hardened-sources-4.7.0-r1.ebuild:
+  version bump to 4.7.0-r1, remove 4.7.0
+
+  vanilla-4.7 + genpatches-4.7-1 + grsecurity-3.1-4.7-201608151842
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.1 (17 Aug 2016)
+
+  17 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.7.0-r1.ebuild, +hardened-sources-4.7.1.ebuild:
+  version bump to 4.7.1, remove 4.7.0-r1
+
+  vanilla-4.7 + genpatches-4.7-1 + grsecurity-3.1-4.7.1-201608161813
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.2 (22 Aug 2016)
+
+  22 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.7.1.ebuild, +hardened-sources-4.7.2.ebuild:
+  version bump to 4.7.2, remove 4.7.1
+
+  vanilla-4.7 + genpatches-4.7-1 + grsecurity-3.1-4.7.2-201608211829
+
+  Package-Manager: portage-2.2.28
+
+  25 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.6.4-r1.ebuild, -hardened-sources-4.6.5-r1.ebuild:
+  remove 4.6.4-r1 and 4.6.5-r1, bug #589838
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.2-r1 (01 Sep 2016)
+
+  01 Sep 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.7.2.ebuild, +hardened-sources-4.7.2-r1.ebuild:
+  version bump to 4.7.2-r1, remove 4.7.2
+
+  vanilla-4.7 + genpatches-4.7-1 + grsecurity-3.1-4.7.2-201608312326
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.3 (08 Sep 2016)
+
+  08 Sep 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.3.ebuild:
+  version bump to 4.7.3
+
+  vanilla-4.7 + genpatches-4.7-1 + grsecurity-3.1-4.7.3-201609072139
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.4 (17 Sep 2016)
+
+  17 Sep 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.4.ebuild:
+  version bump to 4.7.4
+
+  vanilla-4.7 + genpatches-4.7-1 + grsecurity-3.1-4.7.4-201609152234
+
+  Package-Manager: portage-2.2.28
+
+  18 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  hardened-sources-4.7.3.ebuild, hardened-sources-4.7.4.ebuild:
+  EAPI 6 -> 5
+
+  kernel-2.eclass is not ready for EAPI 6.
+
+  Package-Manager: portage-2.3.0_p31
+
+*hardened-sources-4.7.4-r1 (22 Sep 2016)
+
+  22 Sep 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.7.4.ebuild, +hardened-sources-4.7.4-r1.ebuild:
+  version bump to 4.7.4-r1, remove 4.7.4
+
+  vanilla-4.7 + genpatches-4.7-1 + grsecurity-3.1-4.7.4-201609211951
+
+  Package-Manager: portage-2.2.28
+
+  27 Sep 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.7.3.ebuild:
+  remove version 4.7.3, bug #593498
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.5 (28 Sep 2016)
+
+  28 Sep 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.5.ebuild:
+  version bump to 4.7.5
+
+  vanilla-4.7 + genpatches-4.7-6 + grsecurity-3.1-4.7.5-201609261522
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.6 (01 Oct 2016)
+
+  01 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.6.ebuild:
+  version bump to 4.7.6
+
+  vanilla-4.7 + genpatches-4.7-6 + grsecurity-3.1-4.7.6-201609301918
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.7 (11 Oct 2016)
+
+  11 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.7.ebuild:
+  version bump to 4.7.7
+
+  vanilla-4.7 + genpatches-4.7-7 + grsecurity-3.1-4.7.7-201610101902
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.8 (18 Oct 2016)
+
+  18 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.8.ebuild:
+  version bump to 4.7.8
+
+  vanilla-4.7 + genpatches-4.7-8 + grsecurity-3.1-4.7.8-201610161720
+
+  Package-Manager: portage-2.2.28
+
+  18 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  hardened-sources-4.7.6.ebuild:
+  4.7.6 stable on amd64 and x86
+
+  Package-Manager: portage-2.2.28
+
+  18 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.5.7-r5.ebuild, -hardened-sources-4.7.2-r1.ebuild,
+  -hardened-sources-4.7.4-r1.ebuild, -hardened-sources-4.7.5.ebuild:
+  remove older unstable versions
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.9 (20 Oct 2016)
+
+  20 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.9.ebuild:
+  version bump to 4.7.9
+
+  vanilla-4.7 + genpatches-4.7-8 + grsecurity-3.1-4.7.9-201610200819
+
+  Package-Manager: portage-2.2.28
+
+  20 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.7.7.ebuild, -hardened-sources-4.7.8.ebuild:
+  remove unstable versions susceptible to CVE-2016-5195
+
+  Package-Manager: portage-2.2.28
+
+*hardened-sources-4.7.10 (23 Oct 2016)
+
+  23 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.10.ebuild:
+  version bump to 4.7.10
+
+  vanilla-4.7 + genpatches-4.7-8 + grsecurity-3.1-4.7.10-201610222037
+
+  Package-Manager: portage-2.2.28
+
+  26 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  hardened-sources-4.7.10.ebuild:
+  rapid stabilize 4.7.10 on amd64, x86 for CVE-2016-5195
+
+  Package-Manager: portage-2.3.0
+
+*hardened-sources-4.7.10-r1 (27 Oct 2016)
+
+  27 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.10-r1.ebuild:
+  version bump to 4.7.10-r1
+
+  vanilla-4.7 + genpatches-4.7-8 + grsecurity-3.1-4.7.10-201610262029
+
+  Package-Manager: portage-2.3.0
+
+*hardened-sources-4.7.10-r2 (02 Nov 2016)
+
+  02 Nov 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.7.10-r2.ebuild:
+  version bump to 4.7.10-r2
+
+  vanilla-4.7 + genpatches-4.7-8 + grsecurity-3.1-4.7.10-201611011946
+
+  Package-Manager: portage-2.3.0
+
+*hardened-sources-4.8.6 (10 Nov 2016)
+
+  10 Nov 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.8.6.ebuild:
+  version bump to 4.8.6
+
+  vanilla-4.8 + genpatches-4.8-2 + grsecurity-3.1-4.8.6-201611091800
+
+  Package-Manager: portage-2.3.0
+
+*hardened-sources-4.8.7 (12 Nov 2016)
+
+  12 Nov 2016; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-4.8.6.ebuild, +hardened-sources-4.8.7.ebuild:
+  version bump to 4.8.7
+
+  vanilla-4.8 + genpatches-4.8-2 + grsecurity-3.1-4.8.7-201611102210
+
+  Package-Manager: portage-2.3.0
+
+*hardened-sources-4.8.8 (16 Nov 2016)
+
+  16 Nov 2016; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-4.8.8.ebuild:
+  version bump to 4.8.8
+
+  vanilla-4.8 + genpatches-4.8-8 + grsecurity-3.1-4.8.8-201611150756
+
+  Package-Manager: portage-2.3.0
+

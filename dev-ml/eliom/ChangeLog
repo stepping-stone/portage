@@ -108,3 +108,53 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Alexis Ballier <aballier@gentoo.org>
 
+  01 Mar 2016; Alexis Ballier <aballier@gentoo.org> -eliom-4.2.ebuild,
+  -files/tyxml36.patch:
+  remove old
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+  01 Mar 2016; Alexis Ballier <aballier@gentoo.org> eliom-5.0.0.ebuild:
+  add ocamlbuild dep
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+*eliom-5.0.0-r1 (12 Aug 2016)
+
+  12 Aug 2016; Alexis Ballier <aballier@gentoo.org> -eliom-5.0.0.ebuild,
+  +eliom-5.0.0-r1.ebuild, +files/camlp4.patch, +files/oc43.patch:
+  fix build with ocaml 4.03 and add missing dep on camlp4
+
+  Package-Manager: portage-2.3.0
+
+  12 Aug 2016; Alexis Ballier <aballier@gentoo.org> eliom-5.0.0-r1.ebuild,
+  +files/tyxml4.patch:
+  fix build with tyxml4
+
+  Package-Manager: portage-2.3.0
+
+*eliom-9999 (06 Sep 2016)
+
+  06 Sep 2016; Alexis Ballier <aballier@gentoo.org> +eliom-9999.ebuild:
+  add live ebuild
+
+  Package-Manager: portage-2.3.0
+
+*eliom-5.0.0-r2 (07 Sep 2016)
+
+  07 Sep 2016; Alexis Ballier <aballier@gentoo.org> -eliom-5.0.0-r1.ebuild,
+  +eliom-5.0.0-r2.ebuild, +files/oc43-2.patch:
+  backport another patch from upstream to work with ocaml 4.03
+
+  Package-Manager: portage-2.3.0
+
+  10 Oct 2016; Alexis Ballier <aballier@gentoo.org> eliom-5.0.0-r2.ebuild,
+  +files/jsofocaml-282.patch:
+  fix build with js of ocaml 2.8.2, bug #593978.
+
+  Also, make all patches mandatory and bump required versions in deps.
+
+  Package-Manager: portage-2.3.1
+

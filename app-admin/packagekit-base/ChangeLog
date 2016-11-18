@@ -92,3 +92,112 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  20 Apr 2016; Anthony Ryan <anthonyryan1@gmail.com>
+  packagekit-base-1.0.11.ebuild:
+  HTTPS for *.freedesktop.org
+
+  * Excluding xorg.freedesktop.org
+  * Excluding tango.freedesktop.org
+
+  The following modified ebuilds were found to have problems after
+  modification
+  but the problems were determined to not be a regression.
+
+  Upstream tarball has a new hash:
+  * app-misc/evtest-1.29
+  * app-misc/evtest-1.30
+  * dev-embedded/scratchbox2-2.0-r1
+  * dev-ml/cairo-ocaml-1.2.0
+  * net-libs/libqmi-1.0.0
+  * sys-auth/libfprint-0.4.0
+  * sys-auth/libfprint-0.5.0
+  * sys-auth/libfprint-0.5.1
+
+  Upstream tarball has been deleted:
+  * dev-libs/liblazy-0.2
+  * dev-util/pkgconfig-openbsd-20130507-r1
+  * x11-libs/xvba-video-0.8.0-r3
+  * x11-misc/driconf-0.9.1-r1
+  * x11-misc/xdg-utils-1.1.0_rc2-r1
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Reassign due to bug #269417
+
+  Package-Manager: portage-2.3.0_rc1
+
+  19 Jun 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Multiple metadata.xml: reorder to make sure assignee goes first
+
+  Reorder all metadata.xml files with explicit descriptions requesting
+  particular bug assignment/CC to ensure that the requested assignee
+  always goes first, in order to match the bug wrangling policies.
+
+  29 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/packagekit-base-0.7.x-npapi-api-change.patch,
+  -files/packagekit-base-0.7.x-npapi-sdk.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/1788
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*packagekit-base-1.1.1 (05 Sep 2016)
+
+  05 Sep 2016; mudler <mudler@sabayon.org>
+  +files/packagekit-base-1.1.1-cache-qafix.patch,
+  +packagekit-base-1.1.1.ebuild:
+  version bump to 1.1.1
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=587070
+
+  * Removed nsplugin flag
+  * Added patch to fix QA issues
+  * 1.1.1 requires at least glib 2.46
+
+  Package-Manager: portage-2.2.26
+
+  06 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  packagekit-base-1.1.1.ebuild:
+  enable unittests
+
+  Restrict to those that currently work, maybe we can improve things from
+  here.
+
+  Package-Manager: portage-2.3.0
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> packagekit-base-1.0.11.ebuild:
+  amd64/x86 stable, bug #584466
+
+  Package-Manager: portage-2.3.0
+
+*packagekit-base-1.1.4 (26 Sep 2016)
+
+  26 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +packagekit-base-1.1.4.ebuild:
+  version bump 1.1.1 → 1.1.4
+
+  Also inherit xdg eclass.
+
+  Gentoo-bug: 586758
+
+  Package-Manager: portage-2.3.1
+
+  23 Oct 2016; Ettore Di Giacinto <mudler@gentoo.org> metadata.xml:
+  updating metadata, removing from proxy-maint and adding myself as maintainer
+
+  Package-Manager: portage-2.3.1
+
+  30 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  add gnome as backing herd
+
+  Package-Manager: portage-2.3.2
+
+  02 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  packagekit-base-1.1.1.ebuild, packagekit-base-1.1.4.ebuild:
+  PYTHON_USEDEP is inappropriate for gobject-introspection
+
+  It is a build time dependency which pulls python by itself and runtime
+  dependency is only used for its repository.
+
+  Package-Manager: portage-2.3.2
+

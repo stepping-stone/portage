@@ -98,3 +98,35 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*curtsies-0.1.23-r1 (09 Aug 2016)
+
+  09 Aug 2016; Andrey Grozin <grozin@gentoo.org> +curtsies-0.1.23-r1.ebuild:
+  python3_5 added to 0.1.23 (for bpython)
+
+  Package-Manager: portage-2.3.0
+
+*curtsies-0.2.9 (27 Sep 2016)
+
+  27 Sep 2016; Andrey Grozin <grozin@gentoo.org> +curtsies-0.2.9.ebuild:
+  bump to 0.2.9, python3_5 added
+
+  Package-Manager: portage-2.3.0
+
+*curtsies-0.2.10 (12 Oct 2016)
+
+  12 Oct 2016; Andrey Grozin <grozin@gentoo.org> +curtsies-0.2.10.ebuild:
+  bump to 0.2.10
+
+  Package-Manager: portage-2.3.0
+
+  12 Oct 2016; Andrey Grozin <grozin@gentoo.org> -curtsies-0.1.18.ebuild,
+  -curtsies-0.1.23.ebuild, -curtsies-0.2.3.ebuild, -curtsies-0.2.4.ebuild,
+  -curtsies-0.2.6.ebuild, -files/curtsies-0.2.4-test-backport.patch:
+  cleaning old
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> curtsies-0.1.23-r1.ebuild,
+  curtsies-0.2.9.ebuild, curtsies-0.2.10.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

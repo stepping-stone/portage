@@ -1,10 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI="5"
 
-PYTHON_COMPAT=(python{2_7,3_3,3_4,3_5} pypy)
+PYTHON_COMPAT=(python{2_7,3_4,3_5} pypy)
 PYTHON_REQ_USE="xml(+),threads(+)"
 
 inherit distutils-r1 git-r3
@@ -24,10 +24,8 @@ KEYWORDS=""
 DEPEND="sys-apps/portage[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
 	!<=app-portage/gentoolkit-dev-0.2.7
-	|| ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin )
 	sys-apps/gawk
-	sys-apps/gentoo-functions
-	sys-apps/grep"
+	sys-apps/gentoo-functions"
 
 python_prepare_all() {
 	python_setup
@@ -38,11 +36,6 @@ python_prepare_all() {
 
 python_install_all() {
 	distutils-r1_python_install_all
-
-	# Create cache directory for revdep-rebuild
-	keepdir /var/cache/revdep-rebuild
-	use prefix || fowners root:0 /var/cache/revdep-rebuild
-	fperms 0700 /var/cache/revdep-rebuild
 
 	# remove on Gentoo Prefix platforms where it's broken anyway
 	if use prefix; then
@@ -56,6 +49,10 @@ python_install_all() {
 }
 
 pkg_postinst() {
+	# Create cache directory for revdep-rebuild
+	mkdir -p -m 0755 "${EROOT%/}"/var/cache
+	mkdir -p -m 0700 "${EROOT%/}"/var/cache/revdep-rebuild
+
 	# Only show the elog information on a new install
 	if [[ ! ${REPLACING_VERSIONS} ]]; then
 		elog

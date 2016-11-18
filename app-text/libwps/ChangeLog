@@ -123,3 +123,30 @@
 
   Package-Manager: portage-2.2.27
 
+  17 Sep 2016; Andreas K. Hüttel <dilfridge@gentoo.org> libwps-0.4.3.ebuild:
+  Bump to EAPI 6
+
+  Package-Manager: portage-2.2.28
+
+*libwps-0.4.4 (28 Oct 2016)
+
+  28 Oct 2016; Manuel Rüger <mrueg@gentoo.org> +libwps-0.4.4.ebuild:
+  Version bump to 0.4.4
+
+  Package-Manager: portage-2.3.2
+
+*libwps-0.4.4-r1 (05 Nov 2016)
+
+  05 Nov 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +libwps-0.4.4-r1.ebuild:
+  Switch 0.4.4 to --with-sharedptr=c++11
+
+  Drop boost dependency.
+
+  Package-Manager: portage-2.3.0
+
+  05 Nov 2016; Andreas K. Hüttel <dilfridge@gentoo.org> -libwps-0.4.4.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+

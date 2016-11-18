@@ -76,3 +76,37 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*rw-0.7-r1 (03 Jun 2016)
+
+  03 Jun 2016; Michael Orlitzky <mjo@gentoo.org> -rw-0.7.ebuild,
+  +rw-0.7-r1.ebuild:
+  new revision with EAPI=6 and ~x86 keywords.
+
+  The main goal of the new revision is to add ~x86 keywords. In the
+  process, the ebuild was updated to EAPI=6. That basically amounts
+  to replacing the autotools-utils eclass stuff.
+
+  Gentoo-Bug: 573728
+
+  Package-Manager: portage-2.2.28
+
+  25 Sep 2016; Michael Orlitzky <mjo@gentoo.org> metadata.xml:
+  update François Bissey's email address in metadata.xml.
+
+  Package-Manager: portage-2.2.28
+
+*rw-0.7-r2 (16 Oct 2016)
+
+  16 Oct 2016; Michael Orlitzky <mjo@gentoo.org> -rw-0.7-r1.ebuild,
+  +rw-0.7-r2.ebuild:
+  new revision with a blocker on media-gfx/xpaint.
+
+  We have a file collision (librw.so) with xpaint. Barring a better
+  solution, we should at least block it in RDEPEND so that users don't
+  see the collision. This new revision adds "!media-gfx/xpaint" to
+  RDEPEND.
+
+  Gentoo-Bug: 560210
+
+  Package-Manager: portage-2.3.0
+

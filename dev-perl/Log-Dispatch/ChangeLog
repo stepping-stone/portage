@@ -93,3 +93,44 @@
 
   Package-Manager: portage-2.2.27
 
+  12 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Log-Dispatch-2.450.0.ebuild, -Log-Dispatch-2.510.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> Log-Dispatch-2.540.0.ebuild:
+  amd64 stable wrt bug #577236
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> Log-Dispatch-2.540.0.ebuild:
+  x86 stable wrt bug #577236
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Log-Dispatch-2.410.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+*Log-Dispatch-2.580.0 (16 Nov 2016)
+
+  16 Nov 2016; Kent Fredric <kentnl@gentoo.org> +Log-Dispatch-2.580.0.ebuild,
+  metadata.xml:
+  Bump to 2.580.0
+
+  Upstream:
+  - Guard against $@ $! and $? being unintentionally changed
+  - Added remove_callback method(s)
+
+  Keywording:
+  - Dropped ppc due to new dependency, dev-perl/Test-Needs
+
+  Package-Manager: portage-2.3.2
+

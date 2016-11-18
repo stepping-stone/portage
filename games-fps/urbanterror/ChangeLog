@@ -64,3 +64,15 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  19 Mar 2016; Michael Sterrett <mr_bones_@gentoo.org>
+  urbanterror-4.2.023.ebuild:
+  update url to icon (bug #577758)
+
+  Package-Manager: portage-2.2.26
+
+  02 Apr 2016; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/urbanterror-4.2.023-nocurl.patch, urbanterror-4.2.023.ebuild:
+  fix building when USE=-curl is specified (bug #572074)
+
+  Package-Manager: portage-2.2.26
+

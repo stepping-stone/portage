@@ -102,3 +102,159 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+*docker-py-1.7.2 (20 Mar 2016)
+
+  20 Mar 2016; Alex Brandt <alunduil@gentoo.org> +docker-py-1.7.2.ebuild:
+  add version 1.7.2
+
+  Package-Manager: portage-2.2.28
+
+  20 Mar 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.1.0-r2.ebuild:
+  remove version 1.1.0-r2
+
+  Package-Manager: portage-2.2.28
+
+*docker-py-1.8.0_rc2 (03 Apr 2016)
+
+  03 Apr 2016; Alex Brandt <alunduil@gentoo.org> +docker-py-1.8.0_rc2.ebuild:
+  add version 1.8.0_rc2
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.3.1.ebuild:
+  remove version 1.3.1
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.4.0.ebuild:
+  remove version 1.4.0
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.5.0.ebuild:
+  remove version 1.5.0
+
+  Package-Manager: portage-2.2.28
+
+*docker-py-1.8.0_rc5 (10 Apr 2016)
+
+  10 Apr 2016; Alex Brandt <alunduil@gentoo.org> +docker-py-1.8.0_rc5.ebuild:
+  add version 1.8.0_rc5
+
+  Package-Manager: portage-2.2.28
+
+  10 Apr 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.7.0.ebuild:
+  remove version 1.7.0
+
+  Package-Manager: portage-2.2.28
+
+*docker-py-1.8.0 (15 Apr 2016)
+
+  15 Apr 2016; Zac Medico <zmedico@gentoo.org> +docker-py-1.8.0.ebuild:
+  version bump to 1.8.0
+
+  Package-Manager: portage-2.2.28
+
+  17 Apr 2016; Alex Brandt <alunduil@gentoo.org> docker-py-1.8.0.ebuild:
+  add version 1.8.0
+
+  Package-Manager: portage-2.2.28
+
+  17 Apr 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.7.2.ebuild:
+  remove version 1.7.2
+
+  Package-Manager: portage-2.2.28
+
+*docker-py-1.8.0-r1 (23 Apr 2016)
+
+  23 Apr 2016; Alex Brandt <alunduil@gentoo.org> +docker-py-1.8.0-r1.ebuild:
+  add version 1.8.0-r1
+
+  Due to bug #580388, I've removed python2_7 support from docker-py.  This
+  shouldn't be a problem.  This removes the conflict due to py2-ipaddress and
+  makes the question of which package to keep moot.  With py2-ipaddress no
+  longer
+  required by anything in the tree I will be running it through the last-rites
+  process.
+
+  Package-Manager: portage-2.2.28
+
+  23 Apr 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.8.0.ebuild:
+  remove version 1.8.0
+
+  Again, due to bug #580388, I am removing this version of docker-py to finish
+  the
+  solution of py2-ipaddress causing collisions.
+
+  Package-Manager: portage-2.2.28
+
+  15 May 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.8.0_rc5.ebuild:
+  remove version 1.8.0_rc5
+
+  The removal of python2_7 in docker-py happened during this release, not the
+  proper release.  Removing this version fixes #582300.
+
+  Package-Manager: portage-2.2.28
+
+*docker-py-1.8.1 (18 Jun 2016)
+
+  18 Jun 2016; Alex Brandt <alunduil@gentoo.org> +docker-py-1.8.1.ebuild:
+  add version 1.8.1
+
+  Package-Manager: portage-2.3.0_rc1
+
+*docker-py-1.9.0_rc2 (16 Jul 2016)
+
+  16 Jul 2016; Alex Brandt <alunduil@gentoo.org> +docker-py-1.9.0_rc2.ebuild:
+  add version 1.9.0_rc2
+
+  Package-Manager: portage-2.3.0
+
+  16 Jul 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.8.0_rc2.ebuild:
+  remove version 1.8.0_rc2
+
+  Package-Manager: portage-2.3.0
+
+*docker-py-1.9.0 (06 Aug 2016)
+
+  06 Aug 2016; Alex Brandt <alunduil@gentoo.org> +docker-py-1.9.0.ebuild:
+  add version 1.9.0
+
+  Package-Manager: portage-2.3.0
+
+  06 Aug 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.8.0-r1.ebuild:
+  remove version 1.8.0-r1
+
+  Package-Manager: portage-2.3.0
+
+*docker-py-1.10.3 (24 Sep 2016)
+
+  24 Sep 2016; Alex Brandt <alunduil@gentoo.org> +docker-py-1.10.3.ebuild:
+  add version 1.10.3
+
+  Package-Manager: portage-2.3.1
+
+  24 Sep 2016; Alex Brandt <alunduil@gentoo.org> -docker-py-1.8.1.ebuild:
+  remove version 1.8.1
+
+  Package-Manager: portage-2.3.1
+
+*docker-py-1.10.4 (30 Oct 2016)
+
+  30 Oct 2016; Alex Brandt <alunduil@gentoo.org> +docker-py-1.10.4.ebuild:
+  add version 1.10.4
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> docker-py-1.2.2.ebuild,
+  docker-py-1.9.0_rc2.ebuild, docker-py-1.9.0.ebuild, docker-py-1.10.3.ebuild,
+  docker-py-1.10.4.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+*docker-py-1.10.6 (11 Nov 2016)
+
+  11 Nov 2016; Manuel Rüger <mrueg@gentoo.org> +docker-py-1.10.6.ebuild:
+  Version bump to 1.10.6
+
+  Package-Manager: portage-2.3.0
+

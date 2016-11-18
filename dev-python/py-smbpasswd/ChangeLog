@@ -64,3 +64,31 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*py-smbpasswd-1.0.2 (02 Jul 2016)
+
+  02 Jul 2016; David Seifert <soap@gentoo.org> +py-smbpasswd-1.0.2.ebuild:
+  Version bump, modernize to python-r1 suite
+
+  * EAPI=6
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/1814
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  02 Jul 2016; David Seifert <soap@gentoo.org> py-smbpasswd-1.0.1.ebuild,
+  -py-smbpasswd-1.0.1-r1.ebuild:
+  remove old and deprecated
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/1814
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> py-smbpasswd-1.0.2.ebuild:
+  amd64 stable wrt bug #587838
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

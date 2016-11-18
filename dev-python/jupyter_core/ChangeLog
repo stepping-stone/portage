@@ -33,3 +33,43 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  jupyter_core-4.0.6.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*jupyter_core-4.1.0 (23 Jul 2016)
+
+  23 Jul 2016; David Seifert <soap@gentoo.org> +jupyter_core-4.1.0.ebuild:
+  Version bump to 4.1.0; Bump to EAPI=6
+
+  Package-Manager: portage-2.2.26
+  Closes: https://github.com/gentoo/gentoo/pull/1870
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*jupyter_core-4.2.0 (20 Sep 2016)
+
+  20 Sep 2016; David Seifert <soap@gentoo.org> +jupyter_core-4.2.0.ebuild:
+  Version bump to 4.2.0
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/2369
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> jupyter_core-4.0.6.ebuild,
+  jupyter_core-4.1.0.ebuild, jupyter_core-4.2.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  05 Nov 2016; Justin Lecher <jlec@gentoo.org> jupyter_core-4.2.0.ebuild:
+  dev-python/jupyter{,_core}: Backport patch to avoid File collision
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=589750
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+

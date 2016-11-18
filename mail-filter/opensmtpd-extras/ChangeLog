@@ -74,3 +74,50 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*opensmtpd-extras-5.7.1.201602042118 (30 Mar 2016)
+
+  30 Mar 2016; Jason A. Donenfeld <zx2c4@gentoo.org>
+  -opensmtpd-extras-5.4.5.201506020835.ebuild, -opensmtpd-extras-5.7.1.ebuild,
+  +opensmtpd-extras-5.7.1.201602042118.ebuild:
+  bump
+
+  Package-Manager: portage-2.2.28
+
+*opensmtpd-extras-5.9.2.201605232202 (06 Jun 2016)
+
+  06 Jun 2016; Jason A. Donenfeld <zx2c4@gentoo.org>
+  -opensmtpd-extras-5.7.1-r1.ebuild,
+  -opensmtpd-extras-5.7.1.201602042118.ebuild,
+  +opensmtpd-extras-5.9.2.201605232202.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*opensmtpd-extras-5.9.2.201606062304 (06 Jun 2016)
+
+  06 Jun 2016; Jason A. Donenfeld <zx2c4@gentoo.org>
+  -opensmtpd-extras-5.9.2.201605232202.ebuild,
+  +opensmtpd-extras-5.9.2.201606062304.ebuild:
+  snapshot version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*opensmtpd-extras-5.9.2.201609141255 (12 Oct 2016)
+
+  12 Oct 2016; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +opensmtpd-extras-5.9.2.201609141255.ebuild:
+  bump
+
+  Package-Manager: portage-2.3.2
+
+  15 Oct 2016; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove short <longdescription /> that matches DESCRIPTION.
+
+  Package-Manager: portage-2.3.2
+
+  15 Oct 2016; Jason A. Donenfeld <zx2c4@gentoo.org>
+  opensmtpd-extras-5.9.2.201609141255.ebuild:
+  not compat with 6.0
+
+  Package-Manager: portage-2.3.2
+

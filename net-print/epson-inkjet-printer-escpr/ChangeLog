@@ -76,3 +76,43 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*epson-inkjet-printer-escpr-1.6.4 (13 Mar 2016)
+
+  13 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  +epson-inkjet-printer-escpr-1.6.4.ebuild:
+  Bump to 1.6.4
+
+  Package-Manager: portage-2.2.28_p57
+
+  13 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  epson-inkjet-printer-escpr-1.6.4.ebuild:
+  Cleanup src_install
+
+  We only want to install the binaries and ppd files; skip the lib subdir.
+
+  Package-Manager: portage-2.2.28_p57
+
+*epson-inkjet-printer-escpr-1.6.5 (14 May 2016)
+
+  14 May 2016; Mike Gilbert <floppym@gentoo.org>
+  +epson-inkjet-printer-escpr-1.6.5.ebuild, +files/1.6.5-warnings.patch:
+  bump to 1.6.5
+
+  Package-Manager: portage-2.2.28_p107_p258719
+
+  03 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  -epson-inkjet-printer-escpr-1.4.4.ebuild,
+  -epson-inkjet-printer-escpr-1.5.2.ebuild,
+  -epson-inkjet-printer-escpr-1.6.1.ebuild,
+  -epson-inkjet-printer-escpr-1.6.4.ebuild, -files/1.4.4-warnings.patch,
+  -files/1.5.2-warnings.patch, -files/1.6.1-warnings.patch:
+  remove old
+
+  Package-Manager: portage-2.3.0_p24
+
+  03 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  epson-inkjet-printer-escpr-1.6.5.ebuild:
+  replace HOMEPAGE
+
+  Package-Manager: portage-2.3.0_p24
+

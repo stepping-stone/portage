@@ -75,3 +75,74 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*mingetty-1.08-r1 (01 Mar 2016)
+
+  01 Mar 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +files/mingetty-1.08-check_chroot_chdir_nice.patch,
+  +mingetty-1.08-r1.ebuild:
+  Fixed usage of unsafe chroot call (bug #339338).
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  22 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mingetty-1.08-r1.ebuild:
+  amd64 stable wrt bug #339338
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Mar 2016; Jeroen Roovers <jer@gentoo.org> mingetty-1.08-r1.ebuild:
+  Stable for HPPA PPC64 (bug #339338).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  27 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mingetty-1.08-r1.ebuild:
+  ppc stable wrt bug #339338
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  30 Mar 2016; Markus Meier <maekke@gentoo.org> mingetty-1.08-r1.ebuild:
+  arm stable, bug #339338
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org> mingetty-1.08-r1.ebuild:
+  x86 stable wrt bug #339338
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 May 2016; Tobias Klausmann <klausman@gentoo.org> mingetty-1.08-r1.ebuild:
+  1.08-r1: add alpha keyword
+
+  Gentoo-Bug: 339338
+
+  Package-Manager: portage-2.3.0_rc1
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> mingetty-1.08-r1.ebuild:
+  sparc stable wrt bug #339338
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> mingetty-1.08-r1.ebuild:
+  ia64 stable wrt bug #339338
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Jul 2016; Aaron Bauman <bman@gentoo.org> -mingetty-1.08.ebuild:
+  cleanup vulnerable versions wrt bug #339338
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org>
+  files/mingetty-1.08-check_chroot_chdir_nice.patch, mingetty-1.08-r1.ebuild:
+  sourceforge: switch to https:// URIs
+

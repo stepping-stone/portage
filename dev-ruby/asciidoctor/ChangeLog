@@ -78,3 +78,26 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -asciidoctor-1.5.2.ebuild,
+  -asciidoctor-1.5.3.ebuild, -files/asciidoctor-1.5.3-slim-options.patch:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+  05 Jun 2016; Hans de Graaff <graaff@gentoo.org> asciidoctor-1.5.4.ebuild:
+  add ruby22
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Alexis Ballier <aballier@gentoo.org> asciidoctor-1.5.4.ebuild:
+  keyword ~arm
+
+  Package-Manager: portage-2.3.0
+
+*asciidoctor-1.5.5 (06 Oct 2016)
+
+  06 Oct 2016; Hans de Graaff <graaff@gentoo.org> +asciidoctor-1.5.5.ebuild:
+  add 1.5.5
+
+  Package-Manager: portage-2.3.0
+

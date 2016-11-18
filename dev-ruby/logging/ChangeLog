@@ -77,3 +77,30 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -logging-1.8.2.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+  06 Mar 2016; Manuel Rüger <mrueg@gentoo.org> logging-2.0.0.ebuild:
+  Remove ruby19, fix desc
+
+  Package-Manager: portage-2.2.27
+
+*logging-2.1.0 (14 Mar 2016)
+
+  14 Mar 2016; Hans de Graaff <graaff@gentoo.org> +logging-2.1.0.ebuild:
+  add 2.1.0
+
+  Package-Manager: portage-2.2.26
+
+  02 Apr 2016; Hans de Graaff <graaff@gentoo.org> logging-2.1.0.ebuild:
+  add ruby22
+
+  Package-Manager: portage-2.2.26
+
+  24 Jul 2016; Hans de Graaff <graaff@gentoo.org> -logging-2.0.0.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+

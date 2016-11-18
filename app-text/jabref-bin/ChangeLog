@@ -130,3 +130,72 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  13 Apr 2016; Nicolas Bock <nicolasbock@gentoo.org> jabref-bin-3.2.ebuild:
+  Updated project URL
+
+  Package-Manager: portage-2.2.26
+
+*jabref-bin-3.3 (16 May 2016)
+
+  16 May 2016; Nicolas Bock <nicolasbock@gentoo.org> +jabref-bin-3.3.ebuild:
+  Version bump
+
+  Still leaving this at EAPI 5. The next version bump will hopefully be EAPI
+  6.
+
+  Package-Manager: portage-2.2.28
+
+  10 Jun 2016; Agostino Sarubbo <ago@gentoo.org> jabref-bin-3.2.ebuild:
+  amd64 stable wrt bug #583188
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*jabref-bin-3.4 (13 Jun 2016)
+
+  13 Jun 2016; Nicolas Bock <nicolasbock@gentoo.org> +jabref-bin-3.4.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  14 Jun 2016; Nicolas Bock <nicolasbock@gentoo.org> jabref-bin-3.4.ebuild:
+  Drop dependency on virtual/jdk
+
+  Package-Manager: portage-2.2.28
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> jabref-bin-3.2.ebuild:
+  x86 stable wrt bug #583188
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*jabref-bin-3.6 (04 Oct 2016)
+
+  04 Oct 2016; Nicolas Bock <nicolasbock@gentoo.org> +jabref-bin-3.6.ebuild:
+  Version bump
+
+  (Bug 595994)
+
+  Package-Manager: portage-2.3.0
+
+  17 Oct 2016; Nicolas Bock <nicolasbock@gentoo.org> jabref-bin-3.6.ebuild:
+  Fix dependencies
+
+  Fixes bug 597270.
+
+  Package-Manager: portage-2.3.0
+
+  17 Oct 2016; Nicolas Bock <nicolasbock@gentoo.org> jabref-bin-3.4.ebuild:
+  Fix dependencies
+
+  Package-Manager: portage-2.3.0
+
+  17 Oct 2016; Nicolas Bock <nicolasbock@gentoo.org>
+  -jabref-bin-2.11_beta_rc2.ebuild, -jabref-bin-2.11_beta_rc3.ebuild,
+  -jabref-bin-2.11_beta_rc3-r1.ebuild, -jabref-bin-2.11_beta_rc4.ebuild:
+  Cleanup
+
+  Package-Manager: portage-2.3.0
+

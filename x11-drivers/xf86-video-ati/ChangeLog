@@ -86,3 +86,92 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*xf86-video-ati-7.6.1_p20160324 (25 Mar 2016)
+
+  25 Mar 2016; Manuel Rüger <mrueg@gentoo.org>
+  +xf86-video-ati-7.6.1_p20160324.ebuild:
+  Add snapshot
+
+  Package-Manager: portage-2.2.28
+
+*xf86-video-ati-7.6.1_p20160401 (03 Apr 2016)
+
+  03 Apr 2016; Manuel Rüger <mrueg@gentoo.org>
+  +xf86-video-ati-7.6.1_p20160401.ebuild:
+  Update snapshot
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Manuel Rüger <mrueg@gentoo.org> -xf86-video-ati-7.3.0.ebuild,
+  -xf86-video-ati-7.4.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+*xf86-video-ati-7.7.0 (07 Apr 2016)
+
+  07 Apr 2016; Manuel Rüger <mrueg@gentoo.org> +xf86-video-ati-7.7.0.ebuild:
+  Version bump to 7.7.0
+
+  Package-Manager: portage-2.2.28
+
+  07 Apr 2016; Manuel Rüger <mrueg@gentoo.org>
+  -xf86-video-ati-7.6.1_p20160324.ebuild,
+  -xf86-video-ati-7.6.1_p20160401.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+*xf86-video-ati-7.7.1 (17 Sep 2016)
+
+  17 Sep 2016; Manuel Rüger <mrueg@gentoo.org> +xf86-video-ati-7.7.1.ebuild:
+  Version bump to 7.7.1
+
+  Package-Manager: portage-2.3.0
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> xf86-video-ati-7.7.0.ebuild:
+  x86 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> xf86-video-ati-7.7.0.ebuild:
+  amd64 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  22 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  xf86-video-ati-7.7.0.ebuild:
+  7.7.0-r0: add alpha keyword
+
+  Gentoo-Bug: 579266
+
+  16 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xf86-video-ati-7.7.0.ebuild:
+  ia64 stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xf86-video-ati-7.7.0.ebuild:
+  ppc stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*xf86-video-ati-7.8.0 (17 Nov 2016)
+
+  17 Nov 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +xf86-video-ati-7.8.0.ebuild:
+  Bump to version 7.8.0
+
+  Package-Manager: portage-2.3.2
+
+  17 Nov 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -xf86-video-ati-6.14.6-r1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+

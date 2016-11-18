@@ -428,3 +428,224 @@
 
   Package-Manager: portage-2.2.27
 
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> tomcat-7.0.67.ebuild:
+  ppc64 stable wrt bug #572282
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*tomcat-9.0.0_alpha4 (17 Mar 2016)
+
+  17 Mar 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/tomcat-9.0.0_alpha3-build.xml.patch,
+  +files/tomcat-9.0.0_alpha4-build.xml.patch, -tomcat-9.0.0_alpha3-r1.ebuild,
+  +tomcat-9.0.0_alpha4.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+  17 Mar 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/tomcat-7.0.59-build.xml.patch, -tomcat-7.0.59-r2.ebuild:
+  removed obsolete ebuild
+
+  Package-Manager: portage-2.2.28
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> tomcat-7.0.68-r1.ebuild:
+  amd64 stable wrt bug #577626
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> tomcat-8.0.32-r1.ebuild:
+  amd64 stable wrt bug #577628
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> tomcat-7.0.68-r1.ebuild:
+  x86 stable wrt bug #577626
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> tomcat-8.0.32-r1.ebuild:
+  x86 stable wrt bug #577628
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Miroslav Šulc <fordfrog@gentoo.org> -tomcat-8.0.30.ebuild:
+  removes unsecure tomcat version
+
+  Package-Manager: portage-2.2.28
+
+  22 Mar 2016; James Le Cuirot <chewi@gentoo.org>
+  -files/tomcat-6-sysprop.patch, -files/tomcat-6.0.44-build.xml.patch,
+  -files/tomcat-6.0.45-build.xml.patch, -files/tomcat.init,
+  -tomcat-6.0.44-r0.ebuild, -tomcat-6.0.44-r2.ebuild, -tomcat-6.0.45.ebuild:
+  Remove masked version 6
+
+  Upstream EOL is December 2016. We would rather focus on other things
+  than support it until then.
+
+  Package-Manager: portage-2.2.28
+
+*tomcat-8.0.33 (26 Mar 2016)
+
+  26 Mar 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-8.0.33-build.xml.patch, +tomcat-8.0.33.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+*tomcat-7.0.69 (18 Apr 2016)
+
+  18 Apr 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-7.0.69-build.xml.patch, +tomcat-7.0.69.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+*tomcat-9.0.0_alpha6 (17 May 2016)
+
+  17 May 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/tomcat-9.0.0_alpha4-build.xml.patch,
+  +files/tomcat-9.0.0_alpha6-build.xml.patch, -tomcat-9.0.0_alpha4.ebuild,
+  +tomcat-9.0.0_alpha6.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/tomcat-r1.init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  19 May 2016; Miroslav Šulc <fordfrog@gentoo.org> tomcat-9.0.0_alpha6.ebuild:
+  restricted dependency on tomcat-servlet-api to the exact version (bug
+  #583292)
+
+  Package-Manager: portage-2.3.0_rc1
+
+*tomcat-9.0.0_alpha6-r1 (19 May 2016)
+
+  19 May 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-9.0.0_alpha6-processmanifest.patch,
+  -tomcat-9.0.0_alpha6.ebuild, +tomcat-9.0.0_alpha6-r1.ebuild:
+  backported patch from M7 which fixes NPE in
+  StandardJarScanner.processManifest()
+
+  Package-Manager: portage-2.3.0_rc1
+
+*tomcat-8.0.35 (25 May 2016)
+
+  25 May 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-8.0.35-build.xml.patch, +tomcat-8.0.35.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*tomcat-9.0.0_alpha8 (14 Jun 2016)
+
+  14 Jun 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/tomcat-9.0.0_alpha6-build.xml.patch,
+  -files/tomcat-9.0.0_alpha6-processmanifest.patch,
+  +files/tomcat-9.0.0_alpha8-build.xml.patch, -tomcat-9.0.0_alpha6-r1.ebuild,
+  +tomcat-9.0.0_alpha8.ebuild:
+  version bump in slot 9
+
+  Package-Manager: portage-2.3.0_rc1
+
+*tomcat-8.0.36 (14 Jun 2016)
+
+  14 Jun 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-8.0.36-build.xml.patch, +tomcat-8.0.36.ebuild:
+  version bump in slot 8
+
+  Package-Manager: portage-2.3.0_rc1
+
+*tomcat-8.5.3 (14 Jun 2016)
+
+  14 Jun 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-8.5.3-build.xml.patch, +tomcat-8.5.3.ebuild:
+  added new slot 8.5
+
+  Package-Manager: portage-2.3.0_rc1
+
+*tomcat-7.0.70 (21 Jun 2016)
+
+  21 Jun 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-7.0.70-build.xml.patch, +tomcat-7.0.70.ebuild:
+  version bump in slot 7
+
+  Package-Manager: portage-2.3.0_rc1
+
+*tomcat-8.5.4 (13 Jul 2016)
+
+  13 Jul 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-8.5.4-build.xml.patch, +tomcat-8.5.4.ebuild:
+  version bump in slot 8.5
+
+  Package-Manager: portage-2.3.0
+
+*tomcat-9.0.0_alpha9 (13 Jul 2016)
+
+  13 Jul 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/tomcat-9.0.0_alpha8-build.xml.patch,
+  +files/tomcat-9.0.0_alpha9-build.xml.patch, -tomcat-9.0.0_alpha8.ebuild,
+  +tomcat-9.0.0_alpha9.ebuild:
+  version bump in slot 9
+
+  Package-Manager: portage-2.3.0
+
+*tomcat-9.0.0_alpha10 (06 Sep 2016)
+*tomcat-8.5.5 (06 Sep 2016)
+*tomcat-8.0.37 (06 Sep 2016)
+
+  06 Sep 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-8.0.37-build.xml.patch, +files/tomcat-8.5.5-build.xml.patch,
+  +files/tomcat-9.0.0_alpha10-build.xml.patch,
+  -files/tomcat-9.0.0_alpha9-build.xml.patch, +tomcat-8.0.37.ebuild,
+  +tomcat-8.5.5.ebuild, -tomcat-9.0.0_alpha9.ebuild,
+  +tomcat-9.0.0_alpha10.ebuild:
+  bump for main versions 8.0, 8.5 and 9.0
+
+  Package-Manager: portage-2.3.0
+
+*tomcat-9.0.0_alpha11 (13 Oct 2016)
+*tomcat-8.5.6 (13 Oct 2016)
+*tomcat-8.0.38 (13 Oct 2016)
+
+  13 Oct 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-8.0.38-build.xml.patch, +files/tomcat-8.5.6-build.xml.patch,
+  -files/tomcat-9.0.0_alpha10-build.xml.patch,
+  +files/tomcat-9.0.0_alpha11-build.xml.patch, +tomcat-8.0.38.ebuild,
+  +tomcat-8.5.6.ebuild, -tomcat-9.0.0_alpha10.ebuild,
+  +tomcat-9.0.0_alpha11.ebuild:
+  version bump in slot 8, 8.5 and 9
+
+  Package-Manager: portage-2.3.2
+
+*tomcat-9.0.0_alpha13 (10 Nov 2016)
+*tomcat-8.5.8 (10 Nov 2016)
+
+  10 Nov 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-8.5.8-build.xml.patch,
+  -files/tomcat-9.0.0_alpha11-build.xml.patch,
+  +files/tomcat-9.0.0_alpha13-build.xml.patch, +tomcat-8.5.8.ebuild,
+  -tomcat-9.0.0_alpha11.ebuild, +tomcat-9.0.0_alpha13.ebuild:
+  version bump for version 8.5.x and slot 9
+
+  Package-Manager: portage-2.3.2
+
+*tomcat-8.0.39 (15 Nov 2016)
+
+  15 Nov 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/tomcat-8.0.39-build.xml.patch, +tomcat-8.0.39.ebuild:
+  version bump in slot 8
+
+  Package-Manager: portage-2.3.2
+

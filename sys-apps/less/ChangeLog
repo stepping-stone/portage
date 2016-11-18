@@ -141,3 +141,65 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  29 Feb 2016; Steev Klimaszewski <steev@gentoo.org> less-481.ebuild:
+  stable 481 for arm64
+
+  Package-Manager: portage-2.2.27
+
+*less-482 (01 Mar 2016)
+
+  01 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> +less-482.ebuild:
+  Bump to version 482
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  01 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> -less-479.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*less-483 (07 Mar 2016)
+
+  07 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> -less-482.ebuild,
+  +less-483.ebuild:
+  Bump to version 483
+
+  Removed broken 482 version.
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  06 Apr 2016; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
+  lesspipe: improve help text a bit
+
+  06 Apr 2016; Mike Frysinger <vapier@gentoo.org> less-481.ebuild:
+  mark 481 m68k/s390/sh stable
+
+  06 Apr 2016; Mike Frysinger <vapier@gentoo.org> -less-478.ebuild:
+  drop old <481 versions
+
+  06 Apr 2016; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
+  lesspipe: handle all non-regular files in main code
+
+*less-483-r1 (06 Apr 2016)
+
+  06 Apr 2016; Mike Frysinger <vapier@gentoo.org> -less-483.ebuild,
+  +less-483-r1.ebuild:
+  move colorization logic to external lesspipe pkg
+
+  06 Apr 2016; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
+  lesspipe: split pdf/ps handling #477860
+
+  20 Jul 2016; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
+  make image info more verbose/robust
+
+*less-487 (25 Oct 2016)
+
+  25 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> +less-487.ebuild:
+  Bump to version 487
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

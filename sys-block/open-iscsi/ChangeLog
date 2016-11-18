@@ -152,3 +152,39 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  21 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> files/99-iscsi.rules:
+  Fixed udev rule (bug #563800).
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*open-iscsi-2.0.873-r2 (20 Apr 2016)
+
+  20 Apr 2016; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  +open-iscsi-2.0.873-r2.ebuild:
+  Bug #580380: improve checks for rmda/iser vs tcp.
+
+  Package-Manager: portage-2.2.28
+
+  06 May 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml,
+  open-iscsi-2.0.873-r2.ebuild:
+  Remove unneeded useflag descriptions from metadata.xml, whitespace
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/iscsid-init.d,
+  files/open-iscsi-2.0.872-init.d-r1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  29 Jun 2016; Alexey Shvetsov <alexxy@gentoo.org>
+  open-iscsi-2.0.873-r2.ebuild:
+  adapt sys-infiniband to sys-fabric rename
+
+  Package-Manager: portage-2.3.0_rc1
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  open-iscsi-2.0.873-r1.ebuild:
+  2.0.873-r1 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

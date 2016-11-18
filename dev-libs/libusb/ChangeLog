@@ -97,3 +97,14 @@
 
   Package-Manager: portage-2.2.27_p57
 
+  21 Aug 2016; Tim Harder <radhermit@gentoo.org> libusb-1.0.20.ebuild:
+  add github site to HOMEPAGE
+
+  21 Aug 2016; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  update upstream metadata to use github
+
+*libusb-1.0.21 (26 Oct 2016)
+
+  26 Oct 2016; Tim Harder <radhermit@gentoo.org> +libusb-1.0.21.ebuild:
+  version bump to 1.0.21
+

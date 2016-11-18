@@ -252,3 +252,250 @@
 
   Package-Manager: portage-2.2.27-prefix
 
+  28 Feb 2016; William Hubbs <williamh@gentoo.org> go-1.6-r2.ebuild:
+  Add bootstrap tarball for Solaris for #575510
+
+  28 Feb 2016; Fabian Groffen <grobian@gentoo.org> go-1.6-r2.ebuild:
+  fix kernel_SunOS name (lowercase kernel)
+
+  Package-Manager: portage-2.2.27-prefix
+
+  28 Feb 2016; Fabian Groffen <grobian@gentoo.org> go-1.6-r2.ebuild:
+  fix for and keyworded ~x64-solaris, bug #575510
+
+  Package-Manager: portage-2.2.27-prefix
+
+  02 Mar 2016; James Le Cuirot <chewi@gentoo.org> go-1.6-r2.ebuild:
+  Keyword 1.6-r2 for ~ppc64
+
+  Package-Manager: portage-2.2.27
+
+  03 Mar 2016; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.26
+
+  07 Mar 2016; William Hubbs <williamh@gentoo.org> go-1.6-r2.ebuild:
+  Add ~arm keyword for #575510
+
+  Package-Manager: portage-2.2.26
+
+  09 Mar 2016; Agostino Sarubbo <ago@gentoo.org> go-1.5.3.ebuild:
+  x86 stable wrt bug #573856
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Mar 2016; William Hubbs <williamh@gentoo.org> -go-1.4.2.ebuild:
+  remove old version
+
+  Package-Manager: portage-2.2.26
+
+  14 Mar 2016; William Hubbs <williamh@gentoo.org> go-1.6-r2.ebuild:
+  add ~x86 keyword to 1.6-r2 for #575510
+
+  Package-Manager: portage-2.2.26
+
+  14 Mar 2016; William Hubbs <williamh@gentoo.org> go-1.6-r2.ebuild:
+  move 1.6-r2 to amd64 stable for #577434
+
+  Package-Manager: portage-2.2.26
+
+  14 Mar 2016; William Hubbs <williamh@gentoo.org> go-1.6-r2.ebuild:
+  move 1.6-r2 to x86 for #577434
+
+  Package-Manager: portage-2.2.26
+
+  23 Mar 2016; William Hubbs <williamh@gentoo.org> go-1.6-r2.ebuild,
+  go-9999.ebuild:
+  create new 386 bootstrap tarballs for #577674 and sync live
+
+  Package-Manager: portage-2.2.26
+
+  01 Apr 2016; Markus Meier <maekke@gentoo.org> go-1.6-r2.ebuild:
+  arm stable, bug #577434
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  02 Apr 2016; William Hubbs <williamh@gentoo.org>
+  -files/go-1.5.3-assume-amd64-on-osx.patch, -go-1.5.3.ebuild, -go-1.6.ebuild,
+  -go-1.6-r1.ebuild:
+  remove old versions
+
+  Package-Manager: portage-2.2.26
+
+  09 Apr 2016; William Hubbs <williamh@gentoo.org> go-9999.ebuild,
+  metadata.xml:
+  add support for bootstrapping with gccgo
+
+  I would like to thank Zac Medico for the patch.
+  This allows a user to bootstrap go with gcc's go compiler if they have it
+  installed.
+
+  Bug: https://bugs.gentoo.org/show_bug.cgi?id=576290
+
+  Package-Manager: portage-2.2.26
+
+  09 Apr 2016; William Hubbs <williamh@gentoo.org> go-1.6-r2.ebuild,
+  go-9999.ebuild:
+  add QA_FLAGS_IGNORED setting
+
+  Go doesn't use the standard CFLAGS etc at all, so we shouldn't complain
+  about them.
+
+  Bug: https://bugs.gentoo.org/show_bug.cgi?id=428464
+
+  Package-Manager: portage-2.2.26
+
+*go-1.6.1 (13 Apr 2016)
+
+  13 Apr 2016; William Hubbs <williamh@gentoo.org> +go-1.6.1.ebuild:
+  version bump to 1.6.1
+
+  Package-Manager: portage-2.2.26
+
+  13 Apr 2016; William Hubbs <williamh@gentoo.org> go-1.6.1.ebuild:
+  stable 1.6.1 on amd64 and x86 for #579314
+
+  Package-Manager: portage-2.2.26
+
+  19 Apr 2016; Zac Medico <zmedico@gentoo.org> go-1.6.1.ebuild:
+  fix gccgo support to use gcc-config --get-bin-path (bug 579958)
+
+  Package-Manager: portage-2.2.28
+
+*go-1.6.2 (27 Apr 2016)
+
+  27 Apr 2016; William Hubbs <williamh@gentoo.org> +go-1.6.2.ebuild:
+  version bump to 1.6.2
+
+  Package-Manager: portage-2.2.26
+
+  28 Apr 2016; William Hubbs <williamh@gentoo.org> go-1.6.2.ebuild:
+  ppc64le updates for #581278
+
+  Add proper support for ppc64 to go_arch and display GOROOT_BOOTSTRAP
+  to allow debugging this for new architectures in the future.
+
+  Package-Manager: portage-2.2.26
+
+  28 Apr 2016; Zac Medico <zmedico@gentoo.org> go-1.6.2.ebuild:
+  fix gccgo support to use gcc-config --get-bin-path (bug 579958)
+
+  Package-Manager: portage-2.2.28
+
+  28 Apr 2016; Zac Medico <zmedico@gentoo.org> go-9999.ebuild:
+  fix gccgo support to use gcc-config --get-bin-path (bug 579958)
+
+  Package-Manager: portage-2.2.28
+
+  28 Apr 2016; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.26
+
+  01 May 2016; William Hubbs <williamh@gentoo.org> go-1.6.2.ebuild,
+  go-9999.ebuild:
+  style fix
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; William Hubbs <williamh@gentoo.org>
+  +files/go-1.6.1-gdb-no-shell.patch, +files/go-1.6.2-gdb-no-shell.patch,
+  go-1.6.1.ebuild, go-1.6.2.ebuild:
+  apply patch for #581072
+
+  Gdb was starting by spawning a shell and this was causing issues for the
+  tests.
+
+  Package-Manager: portage-2.2.28
+
+*go-1.6.3 (20 Jul 2016)
+
+  20 Jul 2016; William Hubbs <williamh@gentoo.org>
+  +files/go-1.6.3-gdb-no-shell.patch, +go-1.6.3.ebuild:
+  1.6.3 version bump for #589230
+
+  Package-Manager: portage-2.2.28
+
+  20 Jul 2016; William Hubbs <williamh@gentoo.org> go-1.6.3.ebuild:
+  stable 1.6.3 on amd64 for #589230
+
+  Package-Manager: portage-2.2.28
+
+  24 Jul 2016; Markus Meier <maekke@gentoo.org> go-1.6.3.ebuild:
+  arm stable, bug #589230
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  25 Jul 2016; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  remove elog for release notes for #589464
+
+  Package-Manager: portage-2.2.28
+
+  25 Jul 2016; William Hubbs <williamh@gentoo.org> go-1.6.3.ebuild:
+  sync 1.6.3 with live ebuild
+
+  Package-Manager: portage-2.2.28
+
+  28 Jul 2016; Agostino Sarubbo <ago@gentoo.org> go-1.6.3.ebuild:
+  x86 stable wrt bug #589230
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  28 Jul 2016; William Hubbs <williamh@gentoo.org>
+  -files/go-1.6.1-gdb-no-shell.patch, -files/go-1.6.2-gdb-no-shell.patch,
+  -go-1.6-r2.ebuild, -go-1.6.1.ebuild, -go-1.6.2.ebuild:
+  cleanup for #589230
+
+  Package-Manager: portage-2.2.28
+
+*go-1.7 (16 Aug 2016)
+
+  16 Aug 2016; William Hubbs <williamh@gentoo.org> +go-1.7.ebuild:
+  1.7 version bump for #591390
+
+  I have removed the pre/postinst functions in this version; I do not believe
+  that functionality is needed any longer.
+
+  Package-Manager: portage-2.2.28
+
+*go-1.7.1 (08 Sep 2016)
+
+  08 Sep 2016; William Hubbs <williamh@gentoo.org> +go-1.7.1.ebuild:
+  1.7.1 version bump
+
+  Package-Manager: portage-2.2.28
+
+  08 Sep 2016; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+  16 Sep 2016; William Hubbs <williamh@gentoo.org> go-1.7.1.ebuild:
+  Stabilize 1.7.1 on amd64 for #593984
+
+  Package-Manager: portage-2.2.28
+
+*go-1.7.3 (22 Oct 2016)
+
+  22 Oct 2016; William Hubbs <williamh@gentoo.org> +go-1.7.3.ebuild:
+  1.7.3 version bump
+
+  Package-Manager: portage-2.3.0
+
+  22 Oct 2016; William Hubbs <williamh@gentoo.org> -go-1.7.ebuild:
+  remove 1.7 since it is not stable
+
+  Package-Manager: portage-2.3.0
+
+  14 Nov 2016; William Hubbs <williamh@gentoo.org> go-1.7.3.ebuild:
+  stable 1.7.3 on amd64 for #593984
+
+  Package-Manager: portage-2.3.0
+

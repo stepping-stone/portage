@@ -62,3 +62,43 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*cmatrix-1.2a-r2 (31 May 2016)
+
+  31 May 2016; Patrice Clement <monsieurp@gentoo.org> +cmatrix-1.2a-r2.ebuild:
+  EAPI 6 bump.
+
+  Package-Manager: portage-2.2.28
+
+  30 Jun 2016; Patrice Clement <monsieurp@gentoo.org> cmatrix-1.2a-r2.ebuild:
+  Stable for amd64.
+
+  Package-Manager: portage-2.2.28
+
+*cmatrix-1.2a-r3 (20 Oct 2016)
+
+  20 Oct 2016; Jeroen Roovers <jer@gentoo.org> +cmatrix-1.2a-r3.ebuild,
+  +files/cmatrix-1.2a-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo]. Fix some horrible QA issues.
+
+  Package-Manager: portage-2.3.2
+
+  20 Oct 2016; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Maintain.
+
+  Package-Manager: portage-2.3.2
+
+  20 Oct 2016; Jeroen Roovers <jer@gentoo.org> -cmatrix-1.2a-r2.ebuild:
+  Drop faulty ebuild.
+
+  Package-Manager: portage-2.3.2
+
+  22 Oct 2016; Tobias Klausmann <klausman@gentoo.org> cmatrix-1.2a-r3.ebuild:
+  1.2a-r3: stable on alpha
+
+  Gentoo-Bug: 597626
+

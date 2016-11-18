@@ -60,6 +60,14 @@
 
   Bug: https://bugs.gentoo.org/552720
 
+  13 Nov 2015; Denis Romanchuk <den4ikkss@gmail.com> atop-2.2.ebuild,
+  +files/atop.service, +files/atopacct.service:
+  systemd support
+
+  https://bugs.gentoo.org/show_bug.cgi?id=553310
+
+  Package-Manager: portage-2.2.20.1
+
   24 Nov 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   standardize various metadata.xml style
 
@@ -79,4 +87,12 @@
 
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
+
+  19 Apr 2016; Mike Frysinger <vapier@gentoo.org> atop-2.2.ebuild,
+  +files/atop-2.2-sysmacros.patch:
+  fix build w/newer glibc #580372
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/atop.rc,
+  files/atop.rc-r1, files/atopacct.rc:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
 

@@ -60,3 +60,16 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*ed2k_hash-0.4.0-r2 (18 Aug 2016)
+
+  18 Aug 2016; Pacho Ramos <pacho@gentoo.org> +ed2k_hash-0.4.0-r2.ebuild,
+  files/ed2k_64bit.patch:
+  fltk support is completely broken (#359643)
+
+  Package-Manager: portage-2.3.0
+

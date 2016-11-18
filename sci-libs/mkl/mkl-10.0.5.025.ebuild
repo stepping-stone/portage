@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -8,10 +8,11 @@ inherit check-reqs eutils fortran-2 multilib toolchain-funcs
 
 PID=1232
 PB=${PN}
+P_ARCHIVE=l_${PN}_p_${PV}
 
 DESCRIPTION="Intel(R) Math Kernel Library: linear algebra, fft, math functions"
 HOMEPAGE="http://developer.intel.com/software/products/mkl/"
-SRC_URI="http://registrationcenter-download.intel.com/irc_nas/${PID}/l_${PN}_p_${PV}.tgz"
+SRC_URI="http://registrationcenter-download.intel.com/irc_nas/${PID}/${P_ARCHIVE}.tgz"
 
 SLOT="0"
 LICENSE="Intel-SDP"
@@ -31,6 +32,8 @@ RDEPEND="${DEPEND}
 MKL_DIR=/opt/intel/${PN}/${PV}
 INTEL_LIC_DIR=/opt/intel/licenses
 
+CHECKREQS_DISK_BUILD=3500M
+
 QA_PREBUILT="opt/intel/${PN}/${PV}/*"
 
 get_fcomp() {
@@ -45,6 +48,7 @@ get_fcomp() {
 }
 
 pkg_setup() {
+	check-reqs_pkg_setup
 	fortran-2_pkg_setup
 	# Check the license
 	if [[ -z ${MKL_LICENSE} ]]; then
@@ -88,8 +92,9 @@ pkg_setup() {
 	get_fcomp
 }
 
-src_prepare() {
-	cd l_${PN}_*_${PV}/install || die
+src_unpack () {
+	default
+	cd "${WORKDIR}/${P_ARCHIVE}"/install || die
 
 	cp ${MKL_LICENSE} "${WORKDIR}"/ || die
 	MKL_LIC="$(basename ${MKL_LICENSE})"
@@ -122,13 +127,15 @@ src_prepare() {
 		eerror "See ${PWD}/log.txt to see why"
 		die "extracting failed"
 	fi
+}
+
+src_prepare() {
 	# remove left over
 	rm -f /opt/intel/.*mkl*.log /opt/intel/intel_sdp_products.db || die
 
 	# remove unused stuff and set up intel names
 	rm -rf "${WORKDIR}"/l_* || die
 
-	cd "${S}" || die
 	# allow openmpi to work
 	epatch "${FILESDIR}"/${PN}-10.0.2.018-openmpi.patch
 	# make scalapack tests work for gfortran

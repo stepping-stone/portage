@@ -161,3 +161,89 @@
 
   Package-Manager: portage-2.2.27
 
+*darktable-2.0.2 (08 Mar 2016)
+
+  08 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +darktable-2.0.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.27
+
+  08 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -darktable-2.0.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+*darktable-2.0.3 (29 Mar 2016)
+
+  29 Mar 2016; Markus Meier <maekke@gentoo.org> +darktable-2.0.3.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+*darktable-2.0.4 (09 May 2016)
+
+  09 May 2016; Manuel Rüger <mrueg@gentoo.org> +darktable-2.0.4.ebuild:
+  Version bump to 2.0.4
+
+  Package-Manager: portage-2.2.28
+
+  09 May 2016; Manuel Rüger <mrueg@gentoo.org> -darktable-2.0.1.ebuild,
+  -darktable-2.0.2.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+*darktable-2.0.5 (06 Jul 2016)
+
+  06 Jul 2016; Markus Meier <maekke@gentoo.org> darktable-1.6.9.ebuild,
+  darktable-2.0.3.ebuild, darktable-2.0.4.ebuild, +darktable-2.0.5.ebuild,
+  darktable-9999.ebuild:
+  version bump and migrate to L10N
+
+  Package-Manager: portage-2.3.0
+
+  06 Jul 2016; Markus Meier <maekke@gentoo.org> darktable-1.6.9.ebuild,
+  darktable-2.0.3.ebuild, darktable-2.0.4.ebuild, darktable-2.0.5.ebuild:
+  fix L10N usage and add missing ones to 2.0.5
+
+  Package-Manager: portage-2.3.0
+
+  12 Aug 2016; Markus Meier <maekke@gentoo.org> darktable-2.0.5.ebuild,
+  darktable-9999.ebuild:
+  update exiv2 dependency by Thomas Raschbacher in bug #590868
+
+  Package-Manager: portage-2.3.0
+
+  12 Aug 2016; Markus Meier <maekke@gentoo.org> darktable-2.0.3.ebuild,
+  darktable-2.0.4.ebuild, darktable-2.0.5.ebuild:
+  improve ewarn sentence a bit, bug #589024
+
+  Package-Manager: portage-2.3.0
+
+*darktable-2.0.6 (07 Sep 2016)
+
+  07 Sep 2016; Manuel Rüger <mrueg@gentoo.org> +darktable-2.0.6.ebuild:
+  Version bump to 2.0.6
+
+  Package-Manager: portage-2.3.0
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> darktable-2.0.6.ebuild:
+  amd64 stable wrt bug #594590
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*darktable-2.0.7 (26 Oct 2016)
+
+  26 Oct 2016; Markus Meier <maekke@gentoo.org> +darktable-2.0.7.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.2
+
+  26 Oct 2016; Markus Meier <maekke@gentoo.org> -darktable-2.0.3.ebuild,
+  -darktable-2.0.4.ebuild, -darktable-2.0.5.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.2
+

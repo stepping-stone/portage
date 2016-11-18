@@ -72,3 +72,19 @@
   pax-3.4.12.16-r1.ebuild:
   fix building w/newer glibc
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*pax-20160306 (07 Mar 2016)
+
+  07 Mar 2016; Mike Frysinger <vapier@gentoo.org> +pax-20160306.ebuild:
+  switch to MirOS version #537522
+
+  17 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/pax-20160306-glibc-to-linux.patch, pax-20160306.ebuild:
+  add musl support, bug #580362
+
+  Package-Manager: portage-2.2.26
+

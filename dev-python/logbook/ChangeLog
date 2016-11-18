@@ -92,3 +92,23 @@
 
   Package-Manager: portage-2.2.27
 
+*logbook-1.0.0 (29 Jun 2016)
+
+  29 Jun 2016; Patrick Lauer <patrick@gentoo.org> +logbook-1.0.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  18 Sep 2016; David Seifert <soap@gentoo.org>
+  -files/logbook-0.5-pypy-test-fix.patch:
+  remove unused patch
+
+  Closes: https://github.com/gentoo/gentoo/pull/2321
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> logbook-0.9.1.ebuild,
+  logbook-0.10.0.ebuild, logbook-0.12.3.ebuild, logbook-0.12.5.ebuild,
+  logbook-1.0.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

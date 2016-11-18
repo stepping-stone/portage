@@ -78,3 +78,54 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  23 Mar 2016; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  app-i18n/*fcitx*: Use tabs in metadata.xml.
+
+  23 Mar 2016; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  app-i18n/*fcitx*: Add Arfrever as maintainer.
+
+  24 Mar 2016; Mike Gilbert <floppym@gentoo.org> kcm-fcitx-0.4.2.ebuild,
+  kcm-fcitx-0.4.3.ebuild:
+  Change SLOT of KDE-4-related ebuilds from "0" to "4".
+
+  24 Mar 2016; Mike Gilbert <floppym@gentoo.org> kcm-fcitx-0.4.3.ebuild:
+  Minor fixes in 0.4.3.
+
+  Use cmake-utils.eclass and xdg.eclass instead of kde4-base.eclass.
+  Improve HOMEPAGE.
+  Fix LICENSE.
+  Add "minimal" USE flag to avoid collision of translations with app-i18n/kcm-
+  fcitx:5.
+  Fix dependencies.
+
+*kcm-fcitx-0.5.3 (24 Mar 2016)
+
+  24 Mar 2016; Mike Gilbert <floppym@gentoo.org> +kcm-fcitx-0.5.3.ebuild:
+  Version bump (0.5.3).
+
+*kcm-fcitx-9999 (24 Mar 2016)
+*kcm-fcitx-0.4.9999 (24 Mar 2016)
+
+  24 Mar 2016; Mike Gilbert <floppym@gentoo.org> +kcm-fcitx-0.4.9999.ebuild,
+  +kcm-fcitx-9999.ebuild:
+  Add live ebuilds.
+
+  28 Apr 2016; Mike Gilbert <floppym@gentoo.org> -kcm-fcitx-0.5.0.ebuild,
+  -kcm-fcitx-0.5.2.ebuild:
+  Delete old versions.
+
+  25 May 2016; Michael Palimaka <kensington@gentoo.org>
+  kcm-fcitx-0.4.2.ebuild, kcm-fcitx-0.4.3.ebuild:
+  Drop ppc and ppc64 to testing in KDE-related packages.
+
+  15 Sep 2016; Mike Gilbert <floppym@gentoo.org> kcm-fcitx-0.4.3.ebuild,
+  kcm-fcitx-0.4.9999.ebuild, kcm-fcitx-0.5.3.ebuild, kcm-fcitx-9999.ebuild:
+  Use EAPI="6".
+
+  05 Oct 2016; Mike Gilbert <floppym@gentoo.org> kcm-fcitx-0.4.3.ebuild,
+  kcm-fcitx-0.5.3.ebuild:
+  Stabilize on amd64/x86 (bug #589966).
+
+  13 Oct 2016; Mike Gilbert <floppym@gentoo.org> -kcm-fcitx-0.4.2.ebuild:
+  Delete old version.
+

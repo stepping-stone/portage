@@ -70,3 +70,28 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Aug 2016; Austin English <wizardedit@gentoo.org>
+  netbeans-javacard-8.0.2.ebuild, netbeans-javacard-8.1.ebuild:
+  license should be GPL-2-with-classpath-exception, not GPL-2-with-linking-
+  exception
+
+*netbeans-javacard-8.2 (05 Oct 2016)
+
+  05 Oct 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +netbeans-javacard-8.2.ebuild:
+  version bump to version 8.2
+
+  Package-Manager: portage-2.3.1
+
+  06 Oct 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  netbeans-javacard-8.2.ebuild:
+  fixed eapi 6 issue
+
+  Package-Manager: portage-2.3.1
+
+  10 Nov 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  netbeans-javacard-8.2.ebuild:
+  restricted to jdk 1.8 in netbeans slot 8.2
+
+  Package-Manager: portage-2.3.2
+

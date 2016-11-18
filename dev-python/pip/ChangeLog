@@ -324,3 +324,35 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> pip-8.0.3.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+  10 Mar 2016; Mike Gilbert <floppym@gentoo.org> pip-8.0.2-r2.ebuild,
+  pip-8.0.3.ebuild:
+  Restore dependency on dev-python/setuptools
+
+  Package-Manager: portage-2.2.27_p81
+
+*pip-8.1.1 (19 Mar 2016)
+
+  19 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +pip-8.1.1.ebuild:
+  Version bump to 8.1.1
+
+  Package-Manager: portage-2.2.28
+
+*pip-8.1.2 (05 Sep 2016)
+
+  05 Sep 2016; Manuel Rüger <mrueg@gentoo.org> +pip-8.1.2.ebuild:
+  Version bump to 8.1.2
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pip-7.1.2.ebuild,
+  pip-8.0.2-r1.ebuild, pip-8.0.2-r2.ebuild, pip-8.0.3.ebuild,
+  pip-8.1.1.ebuild, pip-8.1.2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

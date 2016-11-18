@@ -80,3 +80,115 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*xfce4-whiskermenu-plugin-1.5.2 (12 Mar 2016)
+
+  12 Mar 2016; Jason Zaman <perfinion@gentoo.org>
+  +xfce4-whiskermenu-plugin-1.5.2.ebuild:
+  version bump
+
+  22 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #408423
+
+  Package-Manager: portage-2.3.0_rc1
+
+*xfce4-whiskermenu-plugin-1.5.3 (03 Jun 2016)
+
+  03 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  +xfce4-whiskermenu-plugin-1.5.3.ebuild:
+  version bump to 1.5.3
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1540
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  03 Jun 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  add myself as maintainer
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1540
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  05 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  xfce4-whiskermenu-plugin-1.5.3.ebuild:
+  fix alphabetical order in RDEPEND
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1612
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  05 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  -xfce4-whiskermenu-plugin-1.5.1.ebuild,
+  -xfce4-whiskermenu-plugin-1.5.2.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1612
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*xfce4-whiskermenu-plugin-1.6.0 (30 Aug 2016)
+
+  30 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  +xfce4-whiskermenu-plugin-1.6.0.ebuild:
+  version bump to 1.6.0.
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/2132
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*xfce4-whiskermenu-plugin-2.0.1 (30 Aug 2016)
+
+  30 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  +xfce4-whiskermenu-plugin-2.0.1.ebuild:
+  version bump to 2.0.1.
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/2132
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  xfce4-whiskermenu-plugin-1.6.0.ebuild,
+  xfce4-whiskermenu-plugin-2.0.1.ebuild:
+  minor fixes.
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/2132
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*xfce4-whiskermenu-plugin-2.0.2 (22 Oct 2016)
+*xfce4-whiskermenu-plugin-1.6.1 (22 Oct 2016)
+
+  22 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  +xfce4-whiskermenu-plugin-1.6.1.ebuild,
+  +xfce4-whiskermenu-plugin-2.0.2.ebuild:
+  version bumps to 1.6.1 and 2.0.2.
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2598
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  22 Oct 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  update metadata.xml.
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2598
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  04 Nov 2016; Patrice Clement <monsieurp@gentoo.org>
+  -xfce4-whiskermenu-plugin-1.5.3.ebuild,
+  -xfce4-whiskermenu-plugin-2.0.1.ebuild:
+  Remove old.
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2721
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

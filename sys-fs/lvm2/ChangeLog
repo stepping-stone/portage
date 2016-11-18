@@ -258,3 +258,146 @@
   Package-Manager: portage-2.2.26
   Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
 
+  05 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> lvm2-2.02.116-r4.ebuild:
+  amd64 stable wrt bug #575764
+
+  Package-Manager: portage-2.2.26
+
+*lvm2-2.02.145 (09 Mar 2016)
+*lvm2-2.02.139 (09 Mar 2016)
+
+  09 Mar 2016; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lvm2-2.02.139-dynamic-static-ldflags.patch, +lvm2-2.02.139.ebuild,
+  +lvm2-2.02.145.ebuild:
+  bump per bug #572352.
+
+  Package-Manager: portage-2.2.27
+
+*lvm2-2.02.145-r1 (10 Mar 2016)
+
+  10 Mar 2016; Robin H. Johnson <robbat2@gentoo.org>
+  files/lvm2-2.02.70-asneeded.patch, files/lvm2-2.02.99-locale-muck.patch,
+  +lvm2-2.02.145-r1.ebuild:
+  EAPI6 conversion from Lars Wendler (polynomial-c).
+
+  Package-Manager: portage-2.2.27
+
+*lvm2-2.02.145-r2 (15 Mar 2016)
+*lvm2-2.02.139-r1 (15 Mar 2016)
+*lvm2-2.02.136-r2 (15 Mar 2016)
+*lvm2-2.02.116-r6 (15 Mar 2016)
+
+  15 Mar 2016; Doug Goldstein <cardoe@gentoo.org> +files/lvm.rc-2.02.116-r6,
+  +lvm2-2.02.116-r6.ebuild, +lvm2-2.02.136-r2.ebuild,
+  +lvm2-2.02.139-r1.ebuild, +lvm2-2.02.145-r2.ebuild:
+  make depend() in lvm init script quiet
+
+  The depend() function makes a call to lvm which can produce output on
+  stderr which might seem concerning to some but is really just harmless.
+  We are checking to see if we need lvmetad to be able to start up properly.
+  At the same time make sure all possible versions receive updated init
+  scripts.
+
+  Gentoo-Bug: 577308
+  Gentoo-Bug: 573384
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  15 Mar 2016; Doug Goldstein <cardoe@gentoo.org> lvm2-2.02.136-r2.ebuild,
+  lvm2-2.02.139-r1.ebuild, lvm2-2.02.145-r2.ebuild:
+  fix issue building with USE=systemd
+
+  When building with USE=systemd, we need to pull it in since it is built
+  against.
+
+  Gentoo-Bug: 570788
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> lvm2-2.02.116-r4.ebuild:
+  ppc stable wrt bug #575764
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> lvm2-2.02.116-r4.ebuild:
+  ppc64 stable wrt bug #575764
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> lvm2-2.02.116-r4.ebuild:
+  ia64 stable wrt bug #575764
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  24 Mar 2016; Markus Meier <maekke@gentoo.org> lvm2-2.02.116-r4.ebuild:
+  arm stable, bug #575764
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  02 Apr 2016; Mike Frysinger <vapier@gentoo.org> lvm2-2.02.116.ebuild:
+  mark 2.02.116 arm64/s390/sh stable
+
+  02 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  -files/device-mapper.rc-2.02.95-r2, -files/lvm-monitoring.initd-2.02.67-r2,
+  -files/lvm.rc-2.02.95-r2,
+  -files/lvm2-2.02.100-selinux_and_udev_static.patch,
+  -files/lvm2-2.02.107-static-pkgconfig-libs.patch,
+  -files/lvm2-2.02.99-example.conf.in.patch, -lvm2-2.02.103.ebuild,
+  -lvm2-2.02.109.ebuild, -lvm2-2.02.109-r1.ebuild, -lvm2-2.02.110.ebuild:
+  drop old <2.02.116 versions
+
+  20 Apr 2016; Mike Frysinger <vapier@gentoo.org> lvm2-2.02.116.ebuild,
+  lvm2-2.02.116-r1.ebuild, lvm2-2.02.116-r2.ebuild, lvm2-2.02.116-r4.ebuild,
+  lvm2-2.02.116-r5.ebuild, lvm2-2.02.116-r6.ebuild, lvm2-2.02.136.ebuild,
+  lvm2-2.02.136-r1.ebuild, lvm2-2.02.136-r2.ebuild, lvm2-2.02.139.ebuild,
+  lvm2-2.02.139-r1.ebuild, lvm2-2.02.145.ebuild, lvm2-2.02.145-r1.ebuild,
+  lvm2-2.02.145-r2.ebuild:
+  update sources.redhat.com to sourceware.org
+
+  20 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/lvm2-2.02.145-mkdev.patch, lvm2-2.02.145-r2.ebuild:
+  fix build w/newer glibc #580062
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/clvmd.rc-2.02.39,
+  files/device-mapper.rc-2.02.105-r2, files/dmeventd.initd-2.02.67-r1,
+  files/lvm-monitoring.initd-2.02.105-r2, files/lvm.rc-2.02.105-r2,
+  files/lvm.rc-2.02.116-r4, files/lvm.rc-2.02.116-r6,
+  files/lvmetad.initd-2.02.105-r2, files/lvmetad.initd-2.02.116-r3:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  26 May 2016; Tobias Klausmann <klausman@gentoo.org> lvm2-2.02.116-r4.ebuild:
+  2.02.116-r4: add alpha keyword
+
+  Gentoo-Bug: 575764
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Oct 2016; Jeroen Roovers <jer@gentoo.org> lvm2-2.02.116-r4.ebuild:
+  Stable for HPPA (bug #575764).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*lvm2-2.02.166 (21 Oct 2016)
+
+  21 Oct 2016; Robin H. Johnson <robbat2@gentoo.org> files/clvmd.rc-2.02.39,
+  files/device-mapper.rc-2.02.105-r2, files/dmeventd.initd-2.02.67-r1,
+  files/lvm-monitoring.initd-2.02.105-r2, files/lvm.rc-2.02.105-r2,
+  files/lvm.rc-2.02.116-r4, files/lvm.rc-2.02.116-r6,
+  files/lvmetad.initd-2.02.105-r2, files/lvmetad.initd-2.02.116-r3,
+  lvm2-2.02.116.ebuild, lvm2-2.02.116-r1.ebuild, lvm2-2.02.116-r2.ebuild,
+  lvm2-2.02.136.ebuild, +lvm2-2.02.166.ebuild:
+  bump.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
+

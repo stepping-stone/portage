@@ -84,3 +84,112 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  19 Mar 2016; Andrew Savchenko <bircoph@gentoo.org>
+  -files/oprofile-1.0.0-athlon.patch,
+  -files/oprofile-1.0.0-opjitconv-open.patch, -oprofile-1.0.0-r2.ebuild:
+  remove old version
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> oprofile-1.1.0-r1.ebuild:
+  amd64 stable wrt bug #577752
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*oprofile-1.0.0-r2 (20 Mar 2016)
+
+  20 Mar 2016; Andrew Savchenko <bircoph@gentoo.org>
+  +files/oprofile-1.0.0-athlon.patch,
+  +files/oprofile-1.0.0-opjitconv-open.patch, +oprofile-1.0.0-r2.ebuild:
+  Revert "dev-util/oprofile: remove old version"
+
+  This reverts commit 331e1e47a803fcc79d9e66ae54db9c364a8f1af9, which
+  accidentally removed patch used by 0.9.9-r2
+  (oprofile-1.0.0-athlon.patch).
+
+  20 Mar 2016; Andrew Savchenko <bircoph@gentoo.org>
+  -files/oprofile-1.0.0-opjitconv-open.patch, -oprofile-1.0.0-r2.ebuild:
+  remove old unstable version
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+  22 Mar 2016; Agostino Sarubbo <ago@gentoo.org> oprofile-0.9.9-r2.ebuild:
+  amd64 stable wrt bug #577750
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  01 Apr 2016; Markus Meier <maekke@gentoo.org> oprofile-0.9.9-r2.ebuild:
+  arm stable, bug #577750
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  05 Apr 2016; Jeroen Roovers <jer@gentoo.org> oprofile-1.1.0-r1.ebuild:
+  Stable for HPPA (bug #577752).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  19 Apr 2016; Markus Meier <maekke@gentoo.org> oprofile-1.1.0-r1.ebuild:
+  arm stable, bug #577752
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  25 May 2016; Jeroen Roovers <jer@gentoo.org> oprofile-0.9.9-r2.ebuild:
+  Stable for HPPA (bug #577750).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  25 May 2016; Jeroen Roovers <jer@gentoo.org> oprofile-0.9.9-r2.ebuild,
+  oprofile-1.1.0-r1.ebuild:
+  Have PPC64 depend on dev-libs/libpfm (bug #579092).
+
+  Package-Manager: portage-2.3.0_rc1
+
+  25 May 2016; Jeroen Roovers <jer@gentoo.org> oprofile-0.9.9-r2.ebuild:
+  Stable for PPC64 (bug #577750).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  25 May 2016; Jeroen Roovers <jer@gentoo.org> oprofile-1.1.0-r1.ebuild:
+  Stable for PPC64 (bug #577752).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  02 Jun 2016; Tobias Klausmann <klausman@gentoo.org>
+  oprofile-0.9.9-r2.ebuild:
+  0.9.9-r2: add alpha keyword
+
+  Gentoo-Bug: 577750
+
+  Package-Manager: portage-2.3.0_rc1
+
+  02 Jun 2016; Tobias Klausmann <klausman@gentoo.org>
+  oprofile-1.1.0-r1.ebuild:
+  1.1.0-r1: add alpha keyword
+
+  Gentoo-Bug: 577752
+
+  Package-Manager: portage-2.3.0_rc1
+
+  29 Sep 2016; Andrew Savchenko <bircoph@gentoo.org>
+  +files/oprofile-1.1.0-gcc6.patch, oprofile-0.9.9-r1.ebuild,
+  oprofile-0.9.9-r2.ebuild, oprofile-1.1.0-r1.ebuild:
+  fix bug 594178
+
+  Add gcc-6 love. Patch from upstream commits by Peter Levine
+  plevine457/gmail.com.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+

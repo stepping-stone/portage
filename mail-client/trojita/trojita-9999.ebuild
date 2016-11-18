@@ -11,21 +11,26 @@ inherit cmake-utils fdo-mime gnome2-utils virtualx
 DESCRIPTION="A Qt IMAP e-mail client"
 HOMEPAGE="http://trojita.flaska.net/"
 if [[ ${PV} != 9999 ]]; then
-	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-IUSE="debug +dbus +password test +zlib"
+IUSE="+crypt debug +dbus +password test +zlib"
 
 RDEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtnetwork:5[ssl]
 	dev-qt/qtsql:5[sqlite]
+	dev-qt/qtsvg:5
 	dev-qt/qtwebkit:5
 	dev-qt/qtwidgets:5
+	crypt? (
+		dev-libs/mimetic
+		kde-apps/gpgmepp:5
+	)
 	dbus? ( dev-qt/qtdbus:5 )
 	password? ( dev-libs/qtkeychain[qt5] )
 	zlib? ( sys-libs/zlib )
@@ -48,6 +53,9 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
+		-DWITH_CRYPTO_MESSAGES=$(usex crypt)
+		-DWITH_GPGMEPP=$(usex crypt)
+		-DWITH_MIMETIC=$(usex crypt)
 		-DWITH_DBUS=$(usex dbus)
 		-DWITH_QTKEYCHAINPLUGIN=$(usex password)
 		-DWITH_TESTS=$(usex test)

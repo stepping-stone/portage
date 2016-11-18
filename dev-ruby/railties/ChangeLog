@@ -146,3 +146,111 @@
 
   Package-Manager: portage-2.2.26
 
+*railties-4.2.5.2 (01 Mar 2016)
+
+  01 Mar 2016; Hans de Graaff <graaff@gentoo.org> +railties-4.2.5.2.ebuild:
+  add rails 4.2.5.2, bug 576068
+
+  Package-Manager: portage-2.2.26
+
+*railties-4.1.14.2 (01 Mar 2016)
+
+  01 Mar 2016; Hans de Graaff <graaff@gentoo.org> +railties-4.1.14.2.ebuild:
+  add rails 4.1.14.2, bug 576068
+
+  Package-Manager: portage-2.2.26
+
+*railties-3.2.22.2 (01 Mar 2016)
+
+  01 Mar 2016; Hans de Graaff <graaff@gentoo.org> +railties-3.2.22.2.ebuild:
+  add rails 3.2.22.2, bug 576068
+
+  Package-Manager: portage-2.2.26
+
+*railties-4.2.6 (08 Mar 2016)
+
+  08 Mar 2016; Hans de Graaff <graaff@gentoo.org> +railties-4.2.6.ebuild:
+  add rails 4.2.6
+
+  Package-Manager: portage-2.2.26
+
+*railties-4.1.15 (08 Mar 2016)
+
+  08 Mar 2016; Hans de Graaff <graaff@gentoo.org> +railties-4.1.15.ebuild:
+  add rails 4.1.15
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Fabian Groffen <grobian@gentoo.org> railties-4.2.6.ebuild:
+  marked ~amd64-linux
+
+  Package-Manager: portage-2.2.28
+
+  21 May 2016; Hans de Graaff <graaff@gentoo.org> -railties-3.2.22.1.ebuild,
+  -railties-4.1.14.1.ebuild, -railties-4.1.14.2.ebuild,
+  -railties-4.2.5.1.ebuild, -railties-4.2.5.2.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+*railties-4.1.16 (13 Jul 2016)
+
+  13 Jul 2016; Hans de Graaff <graaff@gentoo.org> +railties-4.1.16.ebuild:
+  add rails 4.1.16
+
+  Package-Manager: portage-2.2.28
+
+*railties-4.2.7 (18 Jul 2016)
+
+  18 Jul 2016; Hans de Graaff <graaff@gentoo.org> +railties-4.2.7.ebuild:
+  add rails 4.2.7 with ruby23
+
+  Package-Manager: portage-2.2.28
+
+  07 Aug 2016; Michał Górny <mgorny@gentoo.org> -railties-3.2.22.2.ebuild:
+  Prune slot 3.2
+
+*railties-4.2.7.1 (11 Aug 2016)
+
+  11 Aug 2016; Hans de Graaff <graaff@gentoo.org> +railties-4.2.7.1.ebuild:
+  add rails 4.2.7.1
+
+  Package-Manager: portage-2.2.28
+
+*railties-5.0.0.1 (03 Sep 2016)
+
+  03 Sep 2016; Hans de Graaff <graaff@gentoo.org> +railties-5.0.0.1.ebuild:
+  add rails 5.0.0.1
+
+  Package-Manager: portage-2.2.28
+
+*railties-5.0.0.1-r1 (04 Sep 2016)
+
+  04 Sep 2016; Hans de Graaff <graaff@gentoo.org> +railties-5.0.0.1-r1.ebuild:
+  fix installation of binwrapper
+
+  Package-Manager: portage-2.2.28
+
+  04 Sep 2016; Hans de Graaff <graaff@gentoo.org> -railties-5.0.0.1.ebuild:
+  remove broken version
+
+  Package-Manager: portage-2.2.28
+
+  30 Oct 2016; Hans de Graaff <graaff@gentoo.org> -railties-4.0.13.ebuild:
+  remove masked version
+
+  Package-Manager: portage-2.3.0
+
+  03 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  railties-5.0.0.1-r1.ebuild:
+  dev-ruby: restore x86 keyword on various packages
+
+  Gentoo-bug: 562452
+
+  Package-Manager: portage-2.3.2
+
+  05 Nov 2016; Hans de Graaff <graaff@gentoo.org> -railties-4.1.15.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+

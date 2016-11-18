@@ -88,3 +88,25 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*billiard-3.5.0.0 (18 Aug 2016)
+
+  18 Aug 2016; Zac Medico <zmedico@gentoo.org> +billiard-3.5.0.0.ebuild:
+  version bump to 3.5.0.0
+
+  Package-Manager: portage-2.3.0
+
+  30 Aug 2016; Zac Medico <zmedico@gentoo.org> billiard-3.5.0.0.ebuild:
+  PYTHON_COMPAT: add python3_5
+
+  Package-Manager: portage-2.3.0
+
+  30 Aug 2016; Zac Medico <zmedico@gentoo.org> billiard-3.3.0.22.ebuild:
+  PYTHON_COMPAT: add python3_5
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> billiard-3.3.0.18.ebuild,
+  billiard-3.3.0.19.ebuild, billiard-3.3.0.20.ebuild,
+  billiard-3.3.0.21.ebuild, billiard-3.3.0.22.ebuild, billiard-3.5.0.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

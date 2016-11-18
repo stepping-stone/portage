@@ -103,3 +103,72 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*synergy-1.7.6 (03 Apr 2016)
+
+  03 Apr 2016; Jeroen Roovers <jer@gentoo.org> +synergy-1.7.6.ebuild:
+  Version bump by yves.caniou (bug #578854).
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Jeroen Roovers <jer@gentoo.org> -synergy-1.7.4.ebuild,
+  -synergy-1.7.5.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*synergy-1.8.1 (17 Jul 2016)
+
+  17 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/synergy-1.8.1-gtest.patch,
+  +files/synergy-1.8.1-internal-gmock-gtest.patch, +synergy-1.8.1.ebuild:
+  Version bump.
+
+          - add net-misc/curl dependency for syntool
+          - Hack around false gtest dependency
+          - Split out internal gtest/gmock patch
+
+  Package-Manager: portage-2.3.0
+
+*synergy-1.8.1-r1 (17 Jul 2016)
+
+  17 Jul 2016; Jeroen Roovers <jer@gentoo.org> -synergy-1.8.1.ebuild,
+  +synergy-1.8.1-r1.ebuild:
+  Install libns.so (bug #550692).
+
+  Package-Manager: portage-2.3.0
+
+*synergy-1.8.1-r2 (17 Jul 2016)
+
+  17 Jul 2016; Jeroen Roovers <jer@gentoo.org> -synergy-1.8.1-r1.ebuild,
+  +synergy-1.8.1-r2.ebuild:
+  Make libns.so executable (bug #550692).
+
+  Package-Manager: portage-2.3.0
+
+  18 Jul 2016; Jeroen Roovers <jer@gentoo.org> synergy-1.6.3.ebuild,
+  synergy-1.7.5-r1.ebuild, synergy-1.7.6.ebuild, synergy-1.8.1-r2.ebuild:
+  Replace dead URL.
+
+  Package-Manager: portage-2.3.0
+
+*synergy-1.8.1-r3 (19 Jul 2016)
+
+  19 Jul 2016; Jeroen Roovers <jer@gentoo.org> -synergy-1.8.1-r2.ebuild,
+  +synergy-1.8.1-r3.ebuild:
+  exeinto not insinto (bug #550692).
+
+  Package-Manager: portage-2.3.0
+
+*synergy-1.8.2 (24 Aug 2016)
+
+  24 Aug 2016; Jeroen Roovers <jer@gentoo.org> +synergy-1.8.2.ebuild:
+  Version bump (bug #591992 by Rüpel).
+
+  Package-Manager: portage-2.3.0
+
+  24 Aug 2016; Jeroen Roovers <jer@gentoo.org> -synergy-1.7.5-r1.ebuild,
+  -synergy-1.7.6.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+

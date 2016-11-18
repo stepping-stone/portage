@@ -147,3 +147,78 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> libgdata-0.17.4-r1.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  17 Mar 2016; Tobias Klausmann <klausman@gentoo.org>
+  libgdata-0.17.4-r1.ebuild:
+  0.17.4-r1: add alpha keyword
+
+  Gentoo-Bug: 570692
+
+  Package-Manager: portage-2.2.28
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libgdata-0.17.4-r1.ebuild:
+  sparc stable wrt bug #570692
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org> libgdata-0.17.4-r1.ebuild:
+  Stable for HPPA (bug #566378).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> -libgdata-0.17.3.ebuild,
+  -libgdata-0.17.4.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*libgdata-0.17.5 (02 Jul 2016)
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> +libgdata-0.17.5.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  17 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  libgdata-0.17.4-r1.ebuild, libgdata-0.17.5.ebuild:
+  fix a typo in REQUIRED_USE, bug #593944
+
+  Package-Manager: portage-2.3.0
+
+  23 Sep 2016; Tobias Klausmann <klausman@gentoo.org> libgdata-0.17.5.ebuild:
+  0.17.5-r0: add alpha keyword
+
+  Gentoo-Bug: 587010
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> libgdata-0.17.5.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> libgdata-0.17.5.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  03 Oct 2016; Jeroen Roovers <jer@gentoo.org> libgdata-0.17.5.ebuild:
+  Stable for HPPA (bug #587010).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*libgdata-0.17.6 (08 Oct 2016)
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> +libgdata-0.17.6.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.1
+

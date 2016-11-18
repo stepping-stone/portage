@@ -122,3 +122,58 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --ignore-arches
 
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  cblas-reference-20030223-r6.ebuild:
+  ppc64 stable wrt bug #570056
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Apr 2016; Justin Lecher <jlec@gentoo.org>
+  -cblas-reference-20030223-r4.ebuild, -cblas-reference-20030223-r5.ebuild:
+  Drop old
+
+  obsoletes:
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=501042
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=478602
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*cblas-reference-20151113 (30 Sep 2016)
+
+  30 Sep 2016; Matthias Maier <tamiko@gentoo.org>
+  +cblas-reference-20151113.ebuild, +files/eselect.cblas.reference-r1,
+  +files/lapack-fix-build-system.patch:
+  version bump to 20151113
+
+  Package-Manager: portage-2.3.0
+
+*cblas-reference-20151113-r1 (30 Sep 2016)
+
+  30 Sep 2016; Matthias Maier <tamiko@gentoo.org>
+  -cblas-reference-20151113.ebuild, +cblas-reference-20151113-r1.ebuild:
+  fix dependencies
+
+  Package-Manager: portage-2.3.0
+
+*cblas-reference-20151113-r2 (09 Oct 2016)
+
+  09 Oct 2016; Matthias Maier <tamiko@gentoo.org>
+  -cblas-reference-20151113-r1.ebuild, +cblas-reference-20151113-r2.ebuild,
+  -files/eselect.cblas.reference-r1, +files/eselect.cblas.reference-r2:
+  fix eselect symlnk to pc file
+
+  Package-Manager: portage-2.3.0
+
+  26 Oct 2016; Matthias Maier <tamiko@gentoo.org>
+  cblas-reference-20151113-r2.ebuild:
+  do not remove /usr/lib, bug #596036, bug #597288
+
+  Non non-amd64 systems "$(get_libdir)" might actually be "lib". So do not
+  blindly delete this folder.
+
+  Package-Manager: portage-2.3.0
+

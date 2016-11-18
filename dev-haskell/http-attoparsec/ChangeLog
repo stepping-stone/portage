@@ -88,3 +88,18 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  -http-attoparsec-0.1.0.ebuild, -http-attoparsec-0.1.1.ebuild,
+  -http-attoparsec-0.1.1-r1.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.28
+
+*http-attoparsec-0.1.1-r3 (11 May 2016)
+
+  11 May 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +http-attoparsec-0.1.1-r3.ebuild:
+  allow http-types-0.9
+
+  Package-Manager: portage-2.2.28
+

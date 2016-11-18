@@ -69,3 +69,12 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*html2text-2016.5.29 (21 Aug 2016)
+
+  21 Aug 2016; Tim Harder <radhermit@gentoo.org> +html2text-2016.5.29.ebuild:
+  version bump to 2016.5.29
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> html2text-2014.4.5-r1.ebuild,
+  html2text-2016.5.29.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

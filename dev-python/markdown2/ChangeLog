@@ -71,3 +71,14 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 Mar 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove empty <email/> from upstream maintainer
+
+  Remove the empty <email/> from upstream maintainer entry. The <email/>
+  element is optional per GLEP 46. However, providing an empty value is
+  incorrect.
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> markdown2-2.2.1.ebuild,
+  markdown2-2.2.3.ebuild, markdown2-2.3.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

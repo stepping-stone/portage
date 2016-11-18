@@ -70,3 +70,44 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*txaio-2.2.1 (02 Mar 2016)
+
+  02 Mar 2016; Patrick Lauer <patrick@gentoo.org> +txaio-2.2.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+*txaio-2.3.1 (20 Apr 2016)
+
+  20 Apr 2016; Patrick Lauer <patrick@gentoo.org> +txaio-2.3.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.28
+
+*txaio-2.5.1 (31 Aug 2016)
+
+  31 Aug 2016; Brian Dolbec <dolsen@gentoo.org> +txaio-2.5.1.ebuild:
+  Version bump, dep of dev-python/autobahn-0.16.0
+
+  Drop arm keyword due to missing arm keyword for dev-python/tox
+
+  Package-Manager: portage-2.3.0
+
+*txaio-2.5.1-r1 (23 Sep 2016)
+
+  23 Sep 2016; Brian Dolbec <dolsen@gentoo.org> -txaio-2.5.1.ebuild,
+  +txaio-2.5.1-r1.ebuild:
+  Fix deps, bump eapi to 6
+
+  Package-Manager: portage-2.3.1
+
+  07 Oct 2016; Brian Dolbec <dolsen@gentoo.org> txaio-2.5.1-r1.ebuild:
+  Add pypi homepage
+
+  Package-Manager: portage-2.3.1_p8
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> txaio-1.0.0.ebuild,
+  txaio-2.2.0.ebuild, txaio-2.2.1.ebuild, txaio-2.3.1.ebuild,
+  txaio-2.5.1-r1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

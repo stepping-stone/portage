@@ -110,3 +110,28 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  gtksourceviewmm-3.18.0.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  gtksourceviewmm-2.10.3-r1.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  gtksourceviewmm-2.10.3-r1.ebuild, gtksourceviewmm-3.18.0.ebuild:
+  ppc stable, bug 584468
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+
+  18 Sep 2016; Pacho Ramos <pacho@gentoo.org> -gtksourceviewmm-2.10.3.ebuild,
+  -gtksourceviewmm-3.12.0.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+

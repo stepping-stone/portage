@@ -82,3 +82,48 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  23 Mar 2016; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  app-i18n/*fcitx*: Use tabs in metadata.xml.
+
+  23 Mar 2016; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  app-i18n/*fcitx*: Add Arfrever as maintainer.
+
+*fcitx-qt5-1.0.5 (24 Mar 2016)
+
+  24 Mar 2016; Mike Gilbert <floppym@gentoo.org> +fcitx-qt5-1.0.5.ebuild,
+  +files/fcitx-qt5-1.0.5-ucs4.patch:
+  Version bump (1.0.5).
+
+*fcitx-qt5-9999 (24 Mar 2016)
+
+  24 Mar 2016; Mike Gilbert <floppym@gentoo.org> +fcitx-qt5-9999.ebuild:
+  Add live ebuild.
+
+  28 Apr 2016; Mike Gilbert <floppym@gentoo.org> -fcitx-qt5-1.0.2-r1.ebuild,
+  -fcitx-qt5-1.0.4.ebuild, -files/fcitx-qt5-qt-5.5-compatibility-fix.patch:
+  Delete old versions.
+
+  03 Aug 2016; Jeroen Roovers <jer@gentoo.org> fcitx-qt5-1.0.5.ebuild:
+  Mark ~hppa (bug #589964).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  04 Aug 2016; Jeroen Roovers <jer@gentoo.org> fcitx-qt5-1.0.5.ebuild:
+  Mark ~ppc64 (bug #589964).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  15 Sep 2016; Mike Gilbert <floppym@gentoo.org> fcitx-qt5-1.0.5.ebuild,
+  fcitx-qt5-9999.ebuild, files/fcitx-qt5-1.0.5-ucs4.patch:
+  Use EAPI="6".
+
+  05 Oct 2016; Mike Gilbert <floppym@gentoo.org> fcitx-qt5-1.0.5.ebuild:
+  Stabilize on amd64/x86 (bug #589966).
+
+*fcitx-qt5-1.0.6 (13 Oct 2016)
+
+  13 Oct 2016; Mike Gilbert <floppym@gentoo.org> +fcitx-qt5-1.0.6.ebuild:
+  Version bump (1.0.6).
+

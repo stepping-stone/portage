@@ -105,3 +105,45 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*gnuradio-3.7.9.2 (18 Apr 2016)
+
+  18 Apr 2016; Zero_Chaos <zerochaos@gentoo.org> +gnuradio-3.7.9.2.ebuild:
+  bump to 3.7.9.2
+
+  Package-Manager: portage-2.2.28
+
+*gnuradio-3.7.10 (21 Jul 2016)
+
+  21 Jul 2016; Zero_Chaos <zerochaos@gentoo.org> +gnuradio-3.7.10.ebuild:
+  bump to 3.7.10 release
+
+  Package-Manager: portage-2.3.0
+
+*gnuradio-3.7.9.3 (21 Jul 2016)
+
+  21 Jul 2016; Zero_Chaos <zerochaos@gentoo.org> +gnuradio-3.7.9.3.ebuild:
+  bump 3.7.9.3 maint release
+
+  Package-Manager: portage-2.3.0
+
+  21 Jul 2016; Zero_Chaos <zerochaos@gentoo.org> -gnuradio-3.7.8.ebuild,
+  -gnuradio-3.7.9.ebuild, -gnuradio-3.7.9.2.ebuild:
+  minor cleanup of old ebuilds
+
+  Package-Manager: portage-2.3.0
+
+*gnuradio-3.7.10.1 (16 Sep 2016)
+
+  16 Sep 2016; Zero_Chaos <zerochaos@gentoo.org> -gnuradio-3.7.10.ebuild,
+  +gnuradio-3.7.10.1.ebuild:
+  bumpity bump
+
+  Package-Manager: portage-2.3.0
+
+  26 Oct 2016; Patrice Clement <monsieurp@gentoo.org> gnuradio-9999.ebuild:
+  prefer https for git access.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2656
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

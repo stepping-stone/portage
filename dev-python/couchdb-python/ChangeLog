@@ -78,3 +78,33 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  12 Mar 2016; Dirkjan Ochtman <djc@gentoo.org> -couchdb-python-0.9.ebuild,
+  -couchdb-python-0.10.ebuild, -files/0.10-exec-compat.patch:
+  dev-python/couchdb: remove old versions
+
+  Package-Manager: portage-2.2.26
+
+*couchdb-python-1.0.1 (12 Mar 2016)
+
+  12 Mar 2016; Dirkjan Ochtman <djc@gentoo.org> +couchdb-python-1.0.1.ebuild:
+  version bump to 1.0.1
+
+  Package-Manager: portage-2.2.26
+
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  couchdb-python-1.0.1.ebuild:
+  adding py35
+
+  Package-Manager: portage-2.2.26
+
+*couchdb-python-1.1 (05 Aug 2016)
+
+  05 Aug 2016; Dirkjan Ochtman <djc@gentoo.org> +couchdb-python-1.1.ebuild:
+  version bump to 1.1
+
+  Package-Manager: portage-2.2.28
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> couchdb-python-1.0.ebuild,
+  couchdb-python-1.0.1.ebuild, couchdb-python-1.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

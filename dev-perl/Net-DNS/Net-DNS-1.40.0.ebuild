@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -11,7 +11,7 @@ inherit toolchain-funcs perl-module
 DESCRIPTION="Perl Net::DNS - Perl DNS Resolver Module"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="ipv6 test"
 
 RDEPEND="
@@ -28,7 +28,6 @@ DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-MakeMaker
 	test? (
 		virtual/perl-Test-Simple
-		dev-perl/Test-Pod
 	)
 "
 
@@ -42,4 +41,8 @@ src_prepare() {
 
 src_compile() {
 	emake FULL_AR="$(tc-getAR)" OTHERLDFLAGS="${LDFLAGS}"
+}
+src_test() {
+	perl_rm_files t/00-pod.t
+	perl-module_src_test
 }

@@ -203,3 +203,168 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+*linux-firmware-20160223 (10 Mar 2016)
+
+  10 Mar 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +linux-firmware-20160223.ebuild, linux-firmware-99999999.ebuild:
+  new snapshot, re-save config file conditionally
+
+  Bug: https://bugs.gentoo.org/show_bug.cgi?id=546690
+
+  Package-Manager: portage-2.2.26
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  linux-firmware-20151207.ebuild:
+  ppc stable wrt bug #573130
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  linux-firmware-20151207.ebuild:
+  ppc64 stable wrt bug #573130
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  linux-firmware-20151207.ebuild:
+  sparc stable wrt bug #573130
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  linux-firmware-20151207.ebuild:
+  ia64 stable wrt bug #573130
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  05 Apr 2016; Jeroen Roovers <jer@gentoo.org> linux-firmware-20151207.ebuild:
+  Stable for HPPA (bug #573130).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+*linux-firmware-20160331 (07 Apr 2016)
+
+  07 Apr 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +linux-firmware-20160331.ebuild:
+  new snapshot
+
+  Package-Manager: portage-2.2.26
+
+  07 Apr 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -linux-firmware-20150206.ebuild, -linux-firmware-20150320.ebuild,
+  -linux-firmware-20150812.ebuild:
+  remove old
+
+  Package-Manager: portage-2.2.26
+
+*linux-firmware-20160616 (17 May 2016)
+
+  17 May 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +linux-firmware-20160616.ebuild:
+  new snapshot
+
+  Package-Manager: portage-2.2.28
+
+  01 Jun 2016; Tobias Klausmann <klausman@gentoo.org>
+  linux-firmware-20160331.ebuild:
+  20160331-r0: add alpha keyword
+
+  Gentoo-Bug: 584484
+
+  Package-Manager: portage-2.3.0_rc1
+
+  08 Jun 2016; Markus Meier <maekke@gentoo.org>
+  linux-firmware-20160331.ebuild:
+  arm stable, bug #584484
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  10 Jun 2016; Agostino Sarubbo <ago@gentoo.org>
+  linux-firmware-20160331.ebuild:
+  amd64 stable wrt bug #584484
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org>
+  linux-firmware-20160331.ebuild:
+  x86 stable wrt bug #584484
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*linux-firmware-20160628 (28 Jun 2016)
+
+  28 Jun 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +linux-firmware-20160628.ebuild:
+  add 20160628 snapshot
+
+  Package-Manager: portage-2.2.28
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org>
+  linux-firmware-20160331.ebuild:
+  ppc stable wrt bug #584484
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to bug #42273
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> -linux-firmware-20151207.ebuild,
+  -linux-firmware-20160223.ebuild, -linux-firmware-20160331.ebuild,
+  -linux-firmware-20160616.ebuild, -linux-firmware-20160628.ebuild,
+  -linux-firmware-99999999.ebuild, -metadata.xml:
+  package.mask: remove some masked for removal packages
+
+*linux-firmware-99999999 (01 Oct 2016)
+*linux-firmware-20160628 (01 Oct 2016)
+*linux-firmware-20160616 (01 Oct 2016)
+*linux-firmware-20160331 (01 Oct 2016)
+*linux-firmware-20160223 (01 Oct 2016)
+*linux-firmware-20151207 (01 Oct 2016)
+
+  01 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +linux-firmware-20151207.ebuild, +linux-firmware-20160223.ebuild,
+  +linux-firmware-20160331.ebuild, +linux-firmware-20160616.ebuild,
+  +linux-firmware-20160628.ebuild, +linux-firmware-99999999.ebuild,
+  +metadata.xml:
+  Re-added linux-firmware package (bug #595768).
+
+  Was mistakenly removed.
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --force
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  01 Oct 2016; Jeroen Roovers <jer@gentoo.org> linux-firmware-20160331.ebuild:
+  Stable for HPPA PPC64 (bug #584484).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*linux-firmware-20161005 (13 Nov 2016)
+
+  13 Nov 2016; Manuel Rüger <mrueg@gentoo.org>
+  +linux-firmware-20161005.ebuild:
+  Add new snapshot
+
+  Gentoo-Bug: 596550
+
+  Package-Manager: portage-2.3.2
+

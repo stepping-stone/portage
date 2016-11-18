@@ -53,3 +53,28 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*zeal-0.3.1 (31 Oct 2016)
+
+  31 Oct 2016; Patrice Clement <monsieurp@gentoo.org> +zeal-0.3.1.ebuild:
+  improvements.
+
+  * EAPI bump.
+  * version bump to 0.3.1.
+  * keyword for the ~arm platform.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2678
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  02 Nov 2016; Patrice Clement <monsieurp@gentoo.org> -zeal-0.3.1.ebuild:
+  revert 20b8d7f21a2f3de30013699bd88be4bc48911121.
+
+  Package-Manager: portage-2.3.0
+
+*zeal-0.3.1 (09 Nov 2016)
+
+  09 Nov 2016; Ole Reifschneider <tranquility@gentoo.org> +zeal-0.3.1.ebuild:
+  Bump version to 0.3.1
+
+  Package-Manager: portage-2.3.2
+

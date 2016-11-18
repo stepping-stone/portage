@@ -69,3 +69,53 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*OpenGL-0.670.400 (14 Mar 2016)
+
+  14 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +OpenGL-0.670.400.ebuild:
+  Bump to version 0.670.400
+
+  - EAPI6
+  - Use assumed license for Perl5
+  - Add 'examples'
+  - remove 'test.pl' from Installation ( and tests, for now )
+
+  Upstream:
+
+  - Bug fixes.
+
+  Package-Manager: portage-2.2.27
+
+  09 Apr 2016; Agostino Sarubbo <ago@gentoo.org> OpenGL-0.670.400.ebuild:
+  amd64 stable wrt bug #579384
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Apr 2016; Markus Meier <maekke@gentoo.org> OpenGL-0.670.400.ebuild:
+  arm stable, bug #579384
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> OpenGL-0.670.400.ebuild:
+  x86 stable wrt bug #579384
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> OpenGL-0.670.400.ebuild:
+  ppc stable wrt bug #579384
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -OpenGL-0.670.3.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.0
+

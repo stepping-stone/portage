@@ -103,3 +103,45 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/vgl.initd-r2,
+  files/vgl.initd-r3:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  10 Jun 2016; Agostino Sarubbo <ago@gentoo.org> virtualgl-2.4.1-r3.ebuild:
+  amd64 stable wrt bug #585066
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> virtualgl-2.4.1-r3.ebuild:
+  x86 stable wrt bug #585066
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Update metadata with updated mail address (#595000#c4 by Toralf Förster).
+
+  Package-Manager: portage-2.3.0
+
+  29 Sep 2016; Pacho Ramos <pacho@gentoo.org> -files/vgl.confd-r1,
+  -files/vgl.initd-r2, -virtualgl-2.3.3.ebuild, -virtualgl-2.4.1.ebuild,
+  -virtualgl-2.4.1-r1.ebuild, -virtualgl-2.4.1-r2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+*virtualgl-2.5.1 (16 Oct 2016)
+
+  16 Oct 2016; Pacho Ramos <pacho@gentoo.org> +virtualgl-2.5.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.1
+
+  22 Oct 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Update metadata to point to new maintainer
+
+  Package-Manager: portage-2.3.1
+

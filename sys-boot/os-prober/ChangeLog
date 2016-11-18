@@ -119,3 +119,14 @@
 
   Package-Manager: portage-2.2.27
 
+  22 May 2016; Jonathan Callen <jcallen@gentoo.org> metadata.xml:
+  Drop self as maintainer (no longer use)
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Nov 2016; Mike Gilbert <floppym@gentoo.org> os-prober-1.65.ebuild,
+  os-prober-1.70.ebuild, os-prober-1.71.ebuild:
+  drop grub2 sed
+
+  Package-Manager: portage-2.3.2_p1
+

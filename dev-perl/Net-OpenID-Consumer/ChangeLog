@@ -63,3 +63,39 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Net-OpenID-Consumer-1.180.0 (01 Mar 2016)
+
+  01 Mar 2016; Kent Fredric <kentfredric@gmail.com>
+  +Net-OpenID-Consumer-1.180.0.ebuild:
+  Bumped to version 1.180.0
+
+  - EAPI6
+  - Lots of dependency changes.
+
+  Upstream:
+  - Like, a huge amount of changes, API compatibility changes, spanning 8
+  years.
+  - Was last updated in Gentoo back in 2008 ...
+
+  Package-Manager: portage-2.2.27
+
+  05 Mar 2016; Kent Fredric <kentfredric@gmail.com>
+  Net-OpenID-Consumer-1.30.0-r1.ebuild:
+  Fix dependency on Crypt-DH
+
+  Package-Manager: portage-2.2.27
+
+  31 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Net-OpenID-Consumer-1.30.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  19 Oct 2016; Agostino Sarubbo <ago@gentoo.org>
+  Net-OpenID-Consumer-1.180.0.ebuild:
+  amd64 stable wrt bug #582528
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

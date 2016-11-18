@@ -85,3 +85,17 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  30 Mar 2016; Mike Frysinger <vapier@gentoo.org> -attr-2.4.46-r2.ebuild,
+  -attr-2.4.47-r1.ebuild, -files/attr-2.4.44-gettext.patch,
+  -files/attr-2.4.46-config-shell.patch,
+  -files/attr-2.4.46-generic-syscalls.patch:
+  drop old <2.4.47-r2 versions
+
+  23 Apr 2016; Mike Frysinger <vapier@gentoo.org> attr-2.4.47-r2.ebuild:
+  sys-apps/{acl,attr}: run elibtoolize #580792
+
+  This is needed to support newer platforms (like ppc64le).
+
+  04 Jun 2016; Mike Frysinger <vapier@gentoo.org> attr-2.4.47-r2.ebuild:
+  savannah: switch to https URLs
+

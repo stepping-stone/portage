@@ -72,3 +72,33 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*bindfs-1.13.1 (29 Feb 2016)
+
+  29 Feb 2016; Tim Harder <radhermit@gentoo.org> +bindfs-1.13.1.ebuild:
+  version bump to 1.13.1
+
+*bindfs-1.13.2 (02 Oct 2016)
+
+  02 Oct 2016; Tim Harder <radhermit@gentoo.org> +bindfs-1.13.2.ebuild:
+  version bump to 1.13.2
+
+*bindfs-1.13.4 (23 Oct 2016)
+
+  23 Oct 2016; Sebastian Pipping <sping@gentoo.org> +bindfs-1.13.4.ebuild,
+  +files/bindfs-1.13.4-cflags.patch:
+  1.13.4
+
+  Package-Manager: portage-2.3.1
+
+*bindfs-1.13.5 (30 Oct 2016)
+
+  30 Oct 2016; Sebastian Pipping <sping@gentoo.org> +bindfs-1.13.5.ebuild:
+  1.13.5
+
+  Package-Manager: portage-2.3.2
+
+  04 Nov 2016; Tim Harder <radhermit@gentoo.org> -bindfs-1.12.6.ebuild,
+  -bindfs-1.13.0.ebuild, -bindfs-1.13.1.ebuild, -bindfs-1.13.2.ebuild,
+  -files/bindfs-1.10.7-cflags.patch:
+  remove old
+

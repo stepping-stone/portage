@@ -79,3 +79,23 @@
 
   Package-Manager: portage-2.2.27
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*cpudyn-1.0.1-r2 (29 Apr 2016)
+
+  29 Apr 2016; Austin English <wizardedit@gentoo.org> +cpudyn-1.0.1-r2.ebuild,
+  files/cpudyn.init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/573846
+
+  Package-Manager: portage-2.2.26
+
+  29 Apr 2016; Austin English <wizardedit@gentoo.org> -cpudyn-1.0.1-r1.ebuild:
+  remove cpudyn-1.0.1-r1
+
+  Package-Manager: portage-2.2.26
+

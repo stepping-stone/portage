@@ -125,3 +125,106 @@
 
   Package-Manager: portage-2.2.27
 
+*rubygems-2.6.1 (05 Mar 2016)
+
+  05 Mar 2016; Hans de Graaff <graaff@gentoo.org> +rubygems-2.6.1.ebuild:
+  add 2.6.1
+
+  Package-Manager: portage-2.2.26
+
+*rubygems-2.6.2 (14 Mar 2016)
+
+  14 Mar 2016; Hans de Graaff <graaff@gentoo.org> +rubygems-2.6.2.ebuild:
+  add 2.6.2
+
+  Package-Manager: portage-2.2.26
+
+*rubygems-2.6.3 (12 Apr 2016)
+
+  12 Apr 2016; Hans de Graaff <graaff@gentoo.org> +rubygems-2.6.3.ebuild:
+  add 2.6.3
+
+  Package-Manager: portage-2.2.26
+
+*rubygems-2.6.4 (29 Apr 2016)
+
+  29 Apr 2016; Hans de Graaff <graaff@gentoo.org> +rubygems-2.6.4.ebuild:
+  add 2.6.4
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/init.d-gem_server2:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*rubygems-2.6.6 (24 Jun 2016)
+
+  24 Jun 2016; Hans de Graaff <graaff@gentoo.org> +rubygems-2.6.6.ebuild:
+  add 2.6.6
+
+  Package-Manager: portage-2.2.28
+
+  24 Jun 2016; Hans de Graaff <graaff@gentoo.org> -rubygems-2.5.1.ebuild,
+  -rubygems-2.6.1.ebuild, -rubygems-2.6.2.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+  30 Jun 2016; Tobias Klausmann <klausman@gentoo.org> rubygems-2.5.2.ebuild:
+  2.5.2-r0: add alpha keyword
+
+  Gentoo-Bug: 586862
+
+  Package-Manager: portage-2.3.0
+
+  08 Jul 2016; Markus Meier <maekke@gentoo.org> rubygems-2.5.2.ebuild:
+  arm stable, bug #586862
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> rubygems-2.5.2.ebuild:
+  amd64 stable wrt bug #586862
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  30 Sep 2016; Hans de Graaff <graaff@gentoo.org> -rubygems-2.6.3.ebuild,
+  -rubygems-2.6.4.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+
+  30 Sep 2016; Hans de Graaff <graaff@gentoo.org> rubygems-2.2.5-r1.ebuild:
+  drop ruby19
+
+  Package-Manager: portage-2.3.0
+
+*rubygems-2.6.7 (30 Sep 2016)
+
+  30 Sep 2016; Hans de Graaff <graaff@gentoo.org> +rubygems-2.6.7.ebuild:
+  add 2.6.7
+
+  Package-Manager: portage-2.3.0
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> rubygems-2.5.2.ebuild:
+  Stable for HPPA (bug #586862).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*rubygems-2.6.8 (30 Oct 2016)
+
+  30 Oct 2016; Hans de Graaff <graaff@gentoo.org> +rubygems-2.6.8.ebuild:
+  add 2.6.8
+
+  Package-Manager: portage-2.3.0
+
+  31 Oct 2016; Patrice Clement <monsieurp@gentoo.org> -files/10rubygems:
+  remove unused file.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2416
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

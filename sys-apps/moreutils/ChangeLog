@@ -78,3 +78,23 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*moreutils-0.58 (12 Mar 2016)
+
+  12 Mar 2016; Tim Harder <radhermit@gentoo.org> +moreutils-0.58.ebuild:
+  version bump to 0.58
+
+*moreutils-0.59 (21 Jul 2016)
+
+  21 Jul 2016; Tim Harder <radhermit@gentoo.org> +moreutils-0.59.ebuild:
+  version bump to 0.59
+
+*moreutils-0.60 (19 Aug 2016)
+
+  19 Aug 2016; Tim Harder <radhermit@gentoo.org> +moreutils-0.60.ebuild:
+  version bump to 0.60
+
+  19 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to bug #42273
+
+  Package-Manager: portage-2.3.0
+

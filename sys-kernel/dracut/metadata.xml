@@ -6,10 +6,6 @@
 		<name>Patrick McLean</name>
 	</maintainer>
 	<maintainer type="person">
-		<email>prometheanfire@gentoo.org</email>
-		<name>Matthew Thode</name>
-	</maintainer>
-	<maintainer type="person">
 		<email>alexander@tsoy.me</email>
 		<name>Alexander Tsoy</name>
 	</maintainer>
@@ -17,18 +13,9 @@
 		<email>aidecoe@gentoo.org</email>
 		<name>Amadeusz Żołnowski</name>
 	</maintainer>
-	<maintainer type="project">
-		<email>proxy-maint@gentoo.org</email>
-		<name>Proxy Maintainers</name>
-	</maintainer>
 	<use>
 		<flag name="debug">Module installing additional tools like strace, file
 			editor, ssh and more</flag>
-		<flag name="device-mapper">Set of helper modules providing support for
-			device mapper. You need to enable this only if emerge says
-			so.</flag>
-		<flag name="net">Set of helper modules providing networking support. You
-			need to enable this only if emerge says so.</flag>
 	</use>
 	<longdescription lang="en">
 	Generic, modular initramfs generation tool that can be used across various

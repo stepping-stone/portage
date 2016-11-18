@@ -128,3 +128,120 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> gnome-photos-3.18.2.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> -gnome-photos-3.16.3.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+*gnome-photos-3.18.3 (03 Apr 2016)
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> +gnome-photos-3.18.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+*gnome-photos-3.18.3-r1 (09 Apr 2016)
+
+  09 Apr 2016; Pacho Ramos <pacho@gentoo.org> -gnome-photos-3.18.3.ebuild,
+  +gnome-photos-3.18.3-r1.ebuild:
+  Fix dependencies (#579334 by ago)
+
+  Package-Manager: portage-2.2.28
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org>
+  gnome-photos-3.18.3-r1.ebuild:
+  amd64 stable wrt bug #574378
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org>
+  gnome-photos-3.18.3-r1.ebuild:
+  x86 stable wrt bug #574378
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> -gnome-photos-3.18.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnome-photos-3.20.2 (02 Jul 2016)
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> +gnome-photos-3.20.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnome-photos-3.20.3 (15 Aug 2016)
+
+  15 Aug 2016; Pacho Ramos <pacho@gentoo.org> +gnome-photos-3.20.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  04 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-photos-3.20.3.ebuild:
+  add missing gexiv2 dependency and gegl[jpeg2k]
+
+  gexiv2 is listed in configure while jpeg2k support in gegl is required at
+  runtime.
+  Fix unittest support.
+
+  Package-Manager: portage-2.3.0
+
+  04 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-photos-3.20.3.ebuild:
+  require more gegl plugins per source read
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-photos-3.20.3.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-photos-3.20.3.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> -gnome-photos-3.18.3-r1.ebuild,
+  -gnome-photos-3.20.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+
+*gnome-photos-3.20.4 (08 Oct 2016)
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> +gnome-photos-3.20.4.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.1
+
+*gnome-photos-3.22.1 (23 Oct 2016)
+
+  23 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-photos-3.22.1.ebuild:
+  version bump 3.20.4 → 3.22.1
+
+  Package-Manager: portage-2.3.1
+
+*gnome-photos-3.22.2 (12 Nov 2016)
+
+  12 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-photos-3.22.2.ebuild:
+  version bump 3.22.1 → 3.22.2
+
+  Package-Manager: portage-2.3.2
+

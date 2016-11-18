@@ -81,3 +81,74 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Apr 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  metadata.xml, update
+
+  Reset description attribute for user maintainer in metadata.xml
+
+  Package-Manager: portage-2.2.28
+
+  14 Apr 2016; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  fix up metadata
+
+  Package-Manager: portage-2.2.26
+
+*rsnapshot-1.4.2 (18 Aug 2016)
+
+  18 Aug 2016; Patrice Clement <monsieurp@gentoo.org> +rsnapshot-1.4.2.ebuild:
+  version bump to 1.4.2.
+
+  Also bump to EAPI version 6.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2072
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  18 Aug 2016; Patrice Clement <monsieurp@gentoo.org> rsnapshot-1.4.2.ebuild:
+  fix post-install message.
+
+  Add mention about compression.
+
+  Gentoo-Bug: https://bugs.gentoo.org/551762
+
+  Closes: https://github.com/gentoo/gentoo/pull/2072
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  25 Aug 2016; Patrice Clement <monsieurp@gentoo.org> rsnapshot-1.4.2.ebuild:
+  do not compress rsnapshot.conf.default.
+
+  Courtesy of Louis Sautier <sautier.louis@gmail.com>.
+
+  Gentoo-Bug: https://bugs.gentoo.org/551762
+  Closes: https://github.com/gentoo/gentoo/pull/2120
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  25 Aug 2016; Patrice Clement <monsieurp@gentoo.org> rsnapshot-1.4.2.ebuild:
+  strip rsnapshot.conf.default of a hardcoded path.
+
+  remove '/etc/' since we don't place it here.
+
+  Gentoo-Bug: https://bugs.gentoo.org/461554
+  Closes: https://github.com/gentoo/gentoo/pull/2120
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  21 Sep 2016; Tobias Klausmann <klausman@gentoo.org> rsnapshot-1.4.1.ebuild:
+  1.4.1-r0: add alpha keyword
+
+  Gentoo-Bug: 591860
+
+  24 Sep 2016; Agostino Sarubbo <ago@gentoo.org> rsnapshot-1.4.1.ebuild:
+  amd64 stable wrt bug #591860
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  22 Oct 2016; Tobias Klausmann <klausman@gentoo.org> rsnapshot-1.4.2.ebuild:
+  1.4.2-r0: stable on alpha
+
+  Gentoo-Bug: 597416
+

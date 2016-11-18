@@ -240,3 +240,71 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> tornado-4.3.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*tornado-4.4.1 (23 Sep 2016)
+
+  23 Sep 2016; Brian Dolbec <dolsen@gentoo.org>
+  +files/4.4-drop-intersphinx.patch, +files/4.4.1-options-test.patch,
+  +tornado-4.4.1.ebuild:
+  Version bump
+
+  Add new twisted single pkg dep (almost ready for the tree)
+  Needed for newer salt version(s)
+
+  Package-Manager: portage-2.3.1_p4
+
+  12 Oct 2016; Brian Dolbec <dolsen@gentoo.org> tornado-4.4.1.ebuild:
+  4.4.1 Update the twisted dep order to prefer the new twisted pkg
+
+  With the new twisted pkg now in the tree, prefer the new pkg.
+  There will be no new releases of  the split pkgs.
+
+  Package-Manager: portage-2.3.2
+
+*tornado-4.4.2 (21 Oct 2016)
+
+  21 Oct 2016; Brian Dolbec <dolsen@gentoo.org> -tornado-4.4.1.ebuild,
+  +tornado-4.4.2.ebuild:
+  Version bump and security fix
+
+  Fixes a cookie parsing vulnerability:
+      http://www.tornadoweb.org/en/stable/releases/v4.4.2.html
+
+  Package-Manager: portage-2.3.2
+
+*tornado-4.4.2-r1 (22 Oct 2016)
+
+  22 Oct 2016; Brian Dolbec <dolsen@gentoo.org> -tornado-4.4.2.ebuild,
+  +tornado-4.4.2-r1.ebuild:
+  Fix examples install, bug 595020
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> tornado-4.2.1.ebuild,
+  tornado-4.3.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  07 Nov 2016; Agostino Sarubbo <ago@gentoo.org> tornado-4.4.2-r1.ebuild:
+  amd64 stable wrt bug #597740
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  12 Nov 2016; Jeroen Roovers <jer@gentoo.org> tornado-4.4.2-r1.ebuild:
+  Stable for HPPA PPC64 (bug #597740).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+  14 Nov 2016; Tobias Klausmann <klausman@gentoo.org> tornado-4.4.2-r1.ebuild:
+  4.4.2-r1: stable on alpha
+
+  Gentoo-Bug: 597740
+

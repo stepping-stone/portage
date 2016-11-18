@@ -267,3 +267,223 @@
 
   Package-Manager: portage-2.2.26
 
+  14 Mar 2016; Agostino Sarubbo <ago@gentoo.org> neutron-7.0.2.ebuild:
+  amd64 stable wrt bug #575608
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> neutron-7.0.2.ebuild:
+  x86 stable wrt bug #575608
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Matthew Thode <prometheanfire@gentoo.org> neutron-7.0.1.ebuild,
+  neutron-7.0.2.ebuild, neutron-7.0.3.ebuild, neutron-2015.2.9999.ebuild:
+  cleanup for ovs badness
+
+  Package-Manager: portage-2.2.26
+
+*neutron-2016.1.9999 (26 Mar 2016)
+
+  26 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-2016.1.9999.ebuild:
+  MITAKA
+
+  Package-Manager: portage-2.2.26
+
+*neutron-7.0.4 (29 Mar 2016)
+
+  29 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-7.0.4.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+*neutron-8.0.0 (07 Apr 2016)
+
+  07 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-8.0.0.ebuild:
+  MITAKA release
+
+  Package-Manager: portage-2.2.26
+
+  13 Apr 2016; Matthew Thode <prometheanfire@gentoo.org> neutron-8.0.0.ebuild,
+  neutron-2016.1.9999.ebuild:
+  fixing ipv6 dep
+
+  Package-Manager: portage-2.2.26
+
+  13 Apr 2016; Matthew Thode <prometheanfire@gentoo.org> neutron-8.0.0.ebuild,
+  neutron-2016.1.9999.ebuild:
+  add conntrack-tools to deps
+
+  Package-Manager: portage-2.2.26
+
+*neutron-8.1.0 (09 May 2016)
+
+  09 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-8.1.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> neutron-7.0.4.ebuild:
+  amd64 stable wrt bug #580996
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 May 2016; Matthew Thode <prometheanfire@gentoo.org> neutron-7.0.4.ebuild:
+  allarches stable
+
+  Package-Manager: portage-2.2.28
+
+  16 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -neutron-7.0.1.ebuild, -neutron-7.0.2.ebuild, -neutron-7.0.3.ebuild:
+  removing old
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/neutron.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*neutron-8.1.1 (03 Jun 2016)
+*neutron-7.1.0 (03 Jun 2016)
+
+  03 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-7.1.0.ebuild, -neutron-8.1.0.ebuild, +neutron-8.1.1.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org> neutron-8.0.0.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+*neutron-8.1.2 (10 Jun 2016)
+*neutron-7.1.1 (10 Jun 2016)
+
+  10 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-7.1.1.ebuild, +neutron-8.1.2.ebuild:
+  double bup
+
+  Package-Manager: portage-2.2.28
+
+  09 Jul 2016; Matthew Thode <prometheanfire@gentoo.org> neutron-8.1.2.ebuild:
+  amd64 / x86 stable
+
+  Package-Manager: portage-2.2.28
+
+  09 Jul 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -neutron-8.0.0.ebuild, -neutron-8.1.1.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+  25 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -neutron-7.0.4.ebuild, -neutron-7.1.0.ebuild, -neutron-7.1.1.ebuild:
+  cleanup of liberty tags in openstack
+
+*neutron-8.2.0 (30 Aug 2016)
+
+  30 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-8.2.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  09 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -neutron-2015.2.9999.ebuild:
+  clean up liberty openstack
+
+  29 Sep 2016; Matthew Thode <prometheanfire@gentoo.org> neutron-8.2.0.ebuild:
+  8.2.0 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+
+  29 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -neutron-8.1.2.ebuild:
+  removing old
+
+  Package-Manager: portage-2.3.0
+
+*neutron-2016.2.9999 (01 Oct 2016)
+
+  01 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-2016.2.9999.ebuild:
+  openstack p2, newton is done, will add heat later
+
+  05 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  neutron-2016.2.9999.ebuild:
+  neutron needs singledispatch for py2...
+
+  Package-Manager: portage-2.3.0
+
+  05 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  neutron-2016.2.9999.ebuild:
+  disabling py3 until it works
+
+  https://bugs.launchpad.net/neutron/+bug/1630439
+
+  Package-Manager: portage-2.3.0
+
+*neutron-9.0.0 (06 Oct 2016)
+
+  06 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-9.0.0.ebuild:
+  NEWTON :D
+
+  Package-Manager: portage-2.3.0
+
+  06 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  files/neutron-linuxbridge-agent.confd,
+  -files/neutron-linuxbridge-agent.confd.liberty,
+  -files/neutron-ovs-cleanup.confd, neutron-8.2.0.ebuild,
+  neutron-9.0.0.ebuild, neutron-2016.1.9999.ebuild,
+  neutron-2016.2.9999.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+
+  09 Oct 2016; Matthew Thode <prometheanfire@gentoo.org> neutron-9.0.0.ebuild,
+  neutron-2016.2.9999.ebuild:
+  need dat arping
+
+  Package-Manager: portage-2.3.0
+
+*neutron-8.3.0 (11 Oct 2016)
+
+  11 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-8.3.0.ebuild, neutron-2016.1.9999.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+
+*neutron-9.1.0 (04 Nov 2016)
+
+  04 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -neutron-9.0.0.ebuild, +neutron-9.1.0.ebuild:
+  bup, fixes prefix delegation
+
+  Package-Manager: portage-2.3.0
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org> neutron-9.1.0.ebuild:
+  9.1.0 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+
+  11 Nov 2016; Matthew Thode <prometheanfire@gentoo.org> neutron-8.3.0.ebuild:
+  8.3.0 amd64 and x86 stable
+
+  Package-Manager: portage-2.3.0
+
+  11 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -neutron-8.2.0.ebuild:
+  8.2.0 cleanup
+
+  Package-Manager: portage-2.3.0
+

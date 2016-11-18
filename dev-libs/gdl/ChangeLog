@@ -100,3 +100,51 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> gdl-3.18.0.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org> gdl-3.18.0.ebuild:
+  Stable for HPPA (bug #566378).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -gdl-3.16.0.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gdl-3.20.0 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +gdl-3.20.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gdl-3.20.0.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gdl-3.20.0.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  03 Oct 2016; Jeroen Roovers <jer@gentoo.org> gdl-3.20.0.ebuild:
+  Stable for HPPA (bug #587010).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*gdl-3.22.0 (01 Nov 2016)
+
+  01 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org> +gdl-3.22.0.ebuild:
+  version bump 3.20.0 → 3.22.0
+
+  Package-Manager: portage-2.3.2
+

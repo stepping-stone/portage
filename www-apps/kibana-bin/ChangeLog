@@ -137,3 +137,145 @@
 
   Package-Manager: portage-2.2.27
 
+*kibana-bin-4.4.2 (14 Mar 2016)
+*kibana-bin-4.1.6 (14 Mar 2016)
+
+  14 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  -kibana-bin-4.1.5.ebuild, +kibana-bin-4.1.6.ebuild,
+  -kibana-bin-4.4.1.ebuild, +kibana-bin-4.4.2.ebuild:
+  bump to version 4.1.6/4.4.2
+
+  Package-Manager: portage-2.2.27
+  Closes: https://github.com/gentoo/gentoo/pull/1044
+
+*kibana-bin-4.5.0 (01 Apr 2016)
+
+  01 Apr 2016; Patrick Lauer <patrick@gentoo.org> +kibana-bin-4.5.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.28
+
+  05 Apr 2016; Patrick Lauer <patrick@gentoo.org> kibana-bin-4.5.0.ebuild:
+  Fix version shown in pkg_postinst
+
+  Package-Manager: portage-2.2.28
+
+*kibana-bin-4.5.1 (21 May 2016)
+*kibana-bin-4.1.7 (21 May 2016)
+
+  21 May 2016; Ian Delaney <idella4@gentoo.org> -kibana-bin-4.1.6.ebuild,
+  +kibana-bin-4.1.7.ebuild, -kibana-bin-4.4.2.ebuild,
+  -kibana-bin-4.5.0.ebuild, +kibana-bin-4.5.1.ebuild:
+  bump to 4.1.7/4.5.1, drop old
+
+  Package-Manager: portage-2.3.0_rc1
+  Closes: https://github.com/gentoo/gentoo/pull/1491
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+*kibana-bin-4.5.2 (11 Jul 2016)
+*kibana-bin-4.1.9 (11 Jul 2016)
+
+  11 Jul 2016; Patrick Lauer <patrick@gentoo.org> +kibana-bin-4.1.9.ebuild,
+  +kibana-bin-4.5.2.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+*kibana-bin-4.5.3 (18 Jul 2016)
+*kibana-bin-4.1.10 (18 Jul 2016)
+
+  18 Jul 2016; Patrick Lauer <patrick@gentoo.org> +kibana-bin-4.1.10.ebuild,
+  +kibana-bin-4.5.3.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  11 Aug 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  remove maintainer description in metadata.xml
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2067
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*kibana-bin-4.5.4 (11 Aug 2016)
+*kibana-bin-4.1.11 (11 Aug 2016)
+
+  11 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -kibana-bin-4.1.7.ebuild, -kibana-bin-4.1.9.ebuild,
+  -kibana-bin-4.1.10.ebuild, +kibana-bin-4.1.11.ebuild,
+  -kibana-bin-4.5.1.ebuild, -kibana-bin-4.5.2.ebuild,
+  -kibana-bin-4.5.3.ebuild, +kibana-bin-4.5.4.ebuild:
+  bump to 4.1.11/4.5.4, drop old
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2067
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*kibana-bin-4.6.0 (01 Sep 2016)
+
+  01 Sep 2016; Patrick Lauer <patrick@gentoo.org> +kibana-bin-4.6.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  02 Sep 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Fix maintainers
+
+  Package-Manager: portage-2.3.0
+
+  08 Sep 2016; Patrice Clement <monsieurp@gentoo.org> kibana-bin-4.6.0.ebuild:
+  improve ebuild.
+
+  * Bump to EAPI 6.
+  * Fix indent.
+  * Add missing die()'s.
+  * Remove double slashes.
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2241
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*kibana-bin-4.6.1 (12 Sep 2016)
+
+  12 Sep 2016; Patrick Lauer <patrick@gentoo.org> -kibana-bin-4.6.0.ebuild,
+  +kibana-bin-4.6.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+*kibana-bin-5.0.0_beta1 (01 Oct 2016)
+
+  01 Oct 2016; Patrick Lauer <patrick@gentoo.org>
+  +kibana-bin-5.0.0_beta1.ebuild:
+  Add 5.0.0_beta1
+
+  Package-Manager: portage-2.3.0
+
+  02 Oct 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  add proxy-maint back as a maintainer
+
+  Please do not remove projects/developers from the metadata without
+  consulting them first. Thank you!
+
+  Package-Manager: portage-2.3.0
+
+*kibana-bin-5.0.0_rc1 (15 Oct 2016)
+
+  15 Oct 2016; Patrick Lauer <patrick@gentoo.org>
+  -kibana-bin-5.0.0_beta1.ebuild, +kibana-bin-5.0.0_rc1.ebuild:
+  Bump to 5.0.0_rc1
+
+  Package-Manager: portage-2.3.2
+
+*kibana-bin-5.0.0 (28 Oct 2016)
+
+  28 Oct 2016; Patrick Lauer <patrick@gentoo.org>
+  -kibana-bin-5.0.0_rc1.ebuild, +kibana-bin-5.0.0.ebuild:
+  Bump to 5.0.0
+
+  Package-Manager: portage-2.3.2
+

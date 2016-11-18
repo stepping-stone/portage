@@ -123,3 +123,91 @@
   The upstream build tries to set up CC_FOR_BUILD for building helper tools,
   but still mixes target compiler flags in which easily leads to failure.
 
+*gnuplot-5.0.3 (07 Mar 2016)
+
+  07 Mar 2016; Christoph Junghans <ottxor@gentoo.org> +gnuplot-5.0.3.ebuild:
+  version bump (bug #576710)
+
+  Package-Manager: portage-2.2.26
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> gnuplot-5.0.1-r1.ebuild:
+  amd64 stable wrt bug #574242
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*gnuplot-5.1.9999 (10 Jun 2016)
+*gnuplot-5.0.9999 (10 Jun 2016)
+
+  10 Jun 2016; Andreas K. Huettel <dilfridge@gentoo.org>
+  +gnuplot-5.0.9999.ebuild, +gnuplot-5.1.9999.ebuild:
+  Import live ebuilds from sci overlay
+
+  This makes tracking the history easier, since live and derived
+  release ebuilds live in the same repo now.
+
+  Exact copy, will compare and/or update it from release ebuilds
+  within the next days.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  10 Jun 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  gnuplot-5.0.9999.ebuild, gnuplot-5.1.9999.ebuild:
+  Forward-port fixes from releases and remove triplicate eautoreconf calls
+
+  Package-Manager: portage-2.3.0_rc1
+
+  12 Jun 2016; Markus Meier <maekke@gentoo.org> gnuplot-5.0.1-r1.ebuild:
+  arm stable, bug #574242
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  14 Jun 2016; Tobias Klausmann <klausman@gentoo.org> gnuplot-5.0.1-r1.ebuild:
+  5.0.1-r1: add alpha keyword
+
+  Gentoo-Bug: 574242
+
+  Package-Manager: portage-2.3.0_rc1
+
+  11 Sep 2016; Jeroen Roovers <jer@gentoo.org> gnuplot-5.0.1-r1.ebuild:
+  Stable for HPPA PPC64 (bug #574242).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+*gnuplot-5.0.4 (14 Sep 2016)
+
+  14 Sep 2016; Christoph Junghans <ottxor@gentoo.org> +gnuplot-5.0.4.ebuild:
+  version bump (bug #577828)
+
+  Package-Manager: portage-2.2.28
+
+  21 Oct 2016; Ulrich Müller <ulm@gentoo.org> -gnuplot-5.0.3.ebuild:
+  Remove old.
+
+  Package-Manager: portage-2.3.2
+
+  21 Oct 2016; Ulrich Müller <ulm@gentoo.org> gnuplot-4.6.5.ebuild,
+  gnuplot-5.0.1-r1.ebuild, gnuplot-5.0.4.ebuild, gnuplot-5.0.9999.ebuild,
+  gnuplot-5.1.9999.ebuild:
+  Add slot operator to sys-libs/readline dependency.
+
+  Bug: 597658
+
+  Package-Manager: portage-2.3.2
+
+  21 Oct 2016; Andreas K. Hüttel <dilfridge@gentoo.org> gnuplot-4.6.5.ebuild:
+  Drop 4.6.5 to ~arm
+
+  Gentoo-Bug: https://bugs.gentoo.org/587828
+  Closes: https://github.com/gentoo/gentoo/pull/2558
+
+  Signed-off-by: Andreas K. Hüttel <dilfridge@gentoo.org>
+
+  14 Nov 2016; Christoph Junghans <junghans@gentoo.org> metadata.xml:
+  update metadata
+
+  Package-Manager: portage-2.3.0
+

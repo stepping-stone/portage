@@ -105,3 +105,45 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  14 May 2016; David Seifert <soap@gentoo.org> votca-tools-1.2.4.ebuild:
+  Fix QA NonExistentDeps
+
+  Package-Manager: portage-2.2.28
+
+*votca-tools-9999 (14 Jul 2016)
+
+  14 Jul 2016; Christoph Junghans <ottxor@gentoo.org>
+  +votca-tools-9999.ebuild:
+  import live ebuild from sci
+
+  Package-Manager: portage-2.2.28
+
+*votca-tools-1.3.1 (19 Aug 2016)
+
+  19 Aug 2016; Christoph Junghans <ottxor@gentoo.org>
+  +votca-tools-1.3.1.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+*votca-tools-1.4_rc1 (27 Sep 2016)
+
+  27 Sep 2016; Christoph Junghans <ottxor@gentoo.org>
+  +votca-tools-1.4_rc1.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0
+
+*votca-tools-1.4 (29 Oct 2016)
+
+  29 Oct 2016; Christoph Junghans <ottxor@gentoo.org>
+  -votca-tools-1.4_rc1.ebuild, +votca-tools-1.4.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0
+
+  14 Nov 2016; Christoph Junghans <junghans@gentoo.org> metadata.xml:
+  update metadata
+
+  Package-Manager: portage-2.3.0
+

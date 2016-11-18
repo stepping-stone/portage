@@ -77,3 +77,29 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*scikits_image-0.12.3 (18 Mar 2016)
+
+  18 Mar 2016; Sébastien Fabbro <bicatali@gentoo.org>
+  +scikits_image-0.12.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  07 Apr 2016; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/scikits_image-0.11.3-adapthist-backport.patch1,
+  -scikits_image-0.9.3.ebuild, -scikits_image-0.10.0.ebuild,
+  -scikits_image-0.10.1.ebuild, scikits_image-0.12.3.ebuild:
+  move heavy dask dependency to optfeature
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=579156
+
+  Package-Manager: portage-2.2.28
+
+  10 Apr 2016; David Seifert <soap@gentoo.org> scikits_image-0.12.3.ebuild:
+  Bump dev-python/cython version dep
+
+  Package-Manager: portage-2.2.28
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> scikits_image-0.11.3.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

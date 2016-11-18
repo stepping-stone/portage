@@ -61,3 +61,16 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  18 Mar 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove invalid <pkg/> uses in metadata.xml
+
+  Remove the uses of <pkg/> that referenced the package using unqualified
+  name. The elements could be fixed to use qualified names -- however, by
+  definition they are intended to be used for cross-linking, and there is
+  no point in linking the package to itself.
+

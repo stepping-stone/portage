@@ -119,3 +119,120 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  file-roller-3.16.4-r1.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  17 Apr 2016; Pacho Ramos <pacho@gentoo.org> -file-roller-3.14.2.ebuild,
+  -file-roller-3.16.3.ebuild, -file-roller-3.16.4.ebuild,
+  -files/file-roller-2.10.3-use_bin_tar.patch:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+*file-roller-3.16.5 (17 Apr 2016)
+
+  17 Apr 2016; Pacho Ramos <pacho@gentoo.org> +file-roller-3.16.5.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> file-roller-3.16.5.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> file-roller-3.16.5.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  24 Jun 2016; Pacho Ramos <pacho@gentoo.org> -file-roller-3.16.4-r1.ebuild,
+  -files/3.6.0-packages.match, -files/file-roller-3.16.4-bug-757793.patch:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*file-roller-3.20.2 (24 Jun 2016)
+
+  24 Jun 2016; Pacho Ramos <pacho@gentoo.org> +file-roller-3.20.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +3.6.0-packages.match:
+  Readd file removed by accident (#587016 by Toralf)
+
+  Package-Manager: portage-2.3.0_rc1
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -3.6.0-packages.match,
+  +files/3.6.0-packages.match:
+  Move it to proper place
+
+  Package-Manager: portage-2.3.0_rc1
+
+*file-roller-3.20.3 (31 Aug 2016)
+
+  31 Aug 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +file-roller-3.20.3.ebuild:
+  version bump to 3.20.3
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> file-roller-3.20.3.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> file-roller-3.20.3.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*file-roller-3.22.1 (20 Oct 2016)
+
+  20 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +file-roller-3.22.1.ebuild:
+  version bump 3.20.3 → 3.22.1
+
+  Make libnotify optional.
+
+  Gentoo-bug: 589846
+
+  Package-Manager: portage-2.3.1
+
+  20 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -file-roller-3.16.5.ebuild, -file-roller-3.20.2.ebuild:
+  cleanup old revisions
+
+  Package-Manager: portage-2.3.1
+
+*file-roller-3.22.2 (09 Nov 2016)
+
+  09 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +file-roller-3.22.2.ebuild:
+  add file-roller-3.22.2.ebuild
+
+  Simple bump, no relevant changes
+
+  https://git.gnome.org/browse/file-roller/diff/?id=3.22.2&&id2=3.22.1
+  Closes: https://github.com/gentoo/gentoo/pull/2784
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+
+*file-roller-3.20.4 (13 Nov 2016)
+
+  13 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +file-roller-3.20.4.ebuild:
+  3.20.3 -> 3.20.4
+
+  Closes: https://github.com/gentoo/gentoo/pull/2810
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+

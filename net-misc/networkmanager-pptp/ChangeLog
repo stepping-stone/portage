@@ -123,3 +123,46 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  02 Apr 2016; Pacho Ramos <pacho@gentoo.org>
+  networkmanager-pptp-1.0.8.ebuild:
+  x86 stable, bug 566378
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+
+  07 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  -networkmanager-pptp-1.0.6.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+*networkmanager-pptp-1.2.2 (07 Jul 2016)
+
+  07 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  +networkmanager-pptp-1.2.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  networkmanager-pptp-1.2.2.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  networkmanager-pptp-1.2.2.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*networkmanager-pptp-1.2.4 (08 Oct 2016)
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  +networkmanager-pptp-1.2.4.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.1
+

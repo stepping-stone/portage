@@ -75,3 +75,26 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/slony1.init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  30 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/slony1-2.1.1-ldflags.patch:
+  dev-db/*: remove unused patches.
+
+  Squash all commit messages into a single one.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1936
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*slony1-2.2.5 (07 Oct 2016)
+
+  07 Oct 2016; Aaron W. Swenson <titanofold@gentoo.org> +slony1-2.2.5.ebuild:
+  Version Bump
+
+  Added 9.5 and 9.6 as suitable dependencies.
+
+  Bugs: 584778
+
+  Package-Manager: portage-2.2.28
+

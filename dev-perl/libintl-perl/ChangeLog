@@ -66,3 +66,88 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  11 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -libintl-perl-1.230.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+  14 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libintl-perl-1.240.0.ebuild:
+  amd64 stable wrt bug #577104
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libintl-perl-1.240.0.ebuild:
+  x86 stable wrt bug #577104
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libintl-perl-1.240.0.ebuild:
+  ppc stable wrt bug #577104
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libintl-perl-1.240.0.ebuild:
+  ppc64 stable wrt bug #577104
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libintl-perl-1.240.0.ebuild:
+  sparc stable wrt bug #577104
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libintl-perl-1.240.0.ebuild:
+  ia64 stable wrt bug #577104
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Mar 2016; Markus Meier <maekke@gentoo.org> libintl-perl-1.240.0.ebuild:
+  arm stable, bug #577104
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  26 May 2016; Matt Turner <mattst88@gentoo.org> libintl-perl-1.240.0.ebuild:
+  alpha stable, bug 577104.
+
+*libintl-perl-1.240.0-r1 (29 May 2016)
+
+  29 May 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +files/libintl-perl-1.240.0-sanity.patch, +libintl-perl-1.240.0-r1.ebuild:
+  Sanitize build system. This may be the solution for bug 583674.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*libintl-perl-1.240.0-r2 (31 May 2016)
+
+  31 May 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +files/libintl-perl-1.240.0-sanity-2.patch, +libintl-perl-1.240.0-r2.ebuild:
+  More minimal patching, fixes bug 584636
+
+  Package-Manager: portage-2.3.0_rc1
+
+  31 May 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -files/libintl-perl-1.240.0-sanity.patch, -libintl-perl-1.240.0-r1.ebuild:
+  Remove broken version
+
+  Package-Manager: portage-2.3.0_rc1
+
+  13 Aug 2016; Jeroen Roovers <jer@gentoo.org> libintl-perl-1.240.0.ebuild:
+  Stable for HPPA (bug #577104).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+

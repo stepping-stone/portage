@@ -80,3 +80,53 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*ccid-1.4.22 (01 Apr 2016)
+
+  01 Apr 2016; Wolfram Schlich <wschlich@gentoo.org> +ccid-1.4.22.ebuild,
+  metadata.xml:
+  version bump. added USE=kobil-midentity for building and installing
+  contrib/Kobil_mIDentity_switch.
+
+  Package-Manager: portage-2.2.28
+
+  06 Apr 2016; Justin Lecher <jlec@gentoo.org> ccid-1.4.22.ebuild:
+  Fix sandbox violation
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*ccid-1.4.24 (04 Jun 2016)
+
+  04 Jun 2016; Alon Bar-Lev <alonbl@gentoo.org> +ccid-1.4.24.ebuild:
+  version bump
+
+  Bug: 585000
+
+  Package-Manager: portage-2.2.28
+
+  12 Jun 2016; Alon Bar-Lev <alonbl@gentoo.org> -ccid-1.4.20.ebuild,
+  -ccid-1.4.22.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+  12 Jun 2016; Markus Meier <maekke@gentoo.org> ccid-1.4.24.ebuild:
+  arm stable, bug #585414
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  17 Aug 2016; Jeroen Roovers <jer@gentoo.org> ccid-1.4.24.ebuild:
+  Stable for HPPA (bug #585414).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+*ccid-1.4.25 (09 Oct 2016)
+
+  09 Oct 2016; Diego Elio Pettenò <flameeyes@gentoo.org> -ccid-1.4.15.ebuild,
+  +ccid-1.4.25.ebuild:
+  version bump and remove older.
+
+  Package-Manager: portage-2.3.0
+

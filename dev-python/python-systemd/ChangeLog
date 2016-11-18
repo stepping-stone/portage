@@ -93,3 +93,48 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> python-systemd-230.ebuild:
+  ppc64 stable wrt bug #568764
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  23 Mar 2016; Mike Frysinger <vapier@gentoo.org> python-systemd-230.ebuild,
+  python-systemd-231.ebuild:
+  dev-python/systemd: add alpha love
+
+*python-systemd-232 (24 Sep 2016)
+
+  24 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  +files/232-0001-tests-skip-fdstore-tests-if-not-implemented.patch,
+  +files/232-0002-docs-fix-sphinx-format-warning.patch,
+  +files/232-0003-build-sys-add-doc-sync-target.patch,
+  +files/232-0004-tests-add-workaround-for-pre-232-system-returning-EI.patch,
+  +files/232-0005-_reader-use-proper-ifdef-guard-for-sd_j_open_files_f.patch,
+  +files/232-0006-build-sys-import-pytest-instead-of-py.test.patch,
+  +python-systemd-232.ebuild:
+  bump to 232
+
+  Package-Manager: portage-2.3.1_p4
+
+*python-systemd-233 (17 Oct 2016)
+
+  17 Oct 2016; Mike Gilbert <floppym@gentoo.org>
+  -files/231-test_daemon-SO_PASSCRED.patch,
+  -files/232-0001-tests-skip-fdstore-tests-if-not-implemented.patch,
+  -files/232-0002-docs-fix-sphinx-format-warning.patch,
+  -files/232-0003-build-sys-add-doc-sync-target.patch,
+  -files/232-0004-tests-add-workaround-for-pre-232-system-returning-EI.patch,
+  -files/232-0005-_reader-use-proper-ifdef-guard-for-sd_j_open_files_f.patch,
+  -files/232-0006-build-sys-import-pytest-instead-of-py.test.patch,
+  -python-systemd-231.ebuild, -python-systemd-232.ebuild,
+  +python-systemd-233.ebuild:
+  bump to 233
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> python-systemd-230.ebuild,
+  python-systemd-233.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

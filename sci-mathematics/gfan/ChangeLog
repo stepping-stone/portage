@@ -63,3 +63,24 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  02 Mar 2016; Markus Meier <maekke@gentoo.org> gfan-0.5.ebuild:
+  add ~arm, bug #573324
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --include-arches="arm"
+
+*gfan-0.5-r1 (09 Jun 2016)
+
+  09 Jun 2016; Thomas Kahle <tomka@gentoo.org>
+  +files/gfan-0.5-gcc6.1-compat.patch, +gfan-0.5-r1.ebuild:
+  gcc-6.1 compat and EAPI=6
+
+  Package-Manager: portage-2.3.0_rc1
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> gfan-0.5-r1.ebuild:
+  amd64 stable wrt bug #588426
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

@@ -104,3 +104,80 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*libcxx-3.8.0 (10 Mar 2016)
+
+  10 Mar 2016; Alexis Ballier <aballier@gentoo.org> +libcxx-3.8.0.ebuild:
+  bump to 3.8.0
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+*libcxx-3.8.1 (01 Aug 2016)
+
+  01 Aug 2016; Michał Górny <mgorny@gentoo.org>
+  +files/libcxx-3.8.1-musl-support.patch, +libcxx-3.8.1.ebuild,
+  libcxx-9999.ebuild, metadata.xml:
+  bump to 3.8.1, support libunwind & musl (#589352)
+
+  With USE=libunwind, libcxx will be built against libunwind (either
+  sys-libs/libunwind or sys-libs/llvm-libunwind), instead of libgcc_s.
+  In addition, a patch will be applied when building libcxx against musl.
+
+  Package-Manager: portage-2.2.28
+
+  01 Aug 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Add myself as co-maintainer
+
+  03 Oct 2016; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  update maintainers in metadata
+
+  03 Oct 2016; Alexis Ballier <aballier@gentoo.org>
+  +files/libcxx-3.9-cmake-link-flags.patch, libcxx-9999.ebuild:
+  update live ebuild to use cmake
+
+  Notable changes:
+  - gcc is now required to build libcxx against libsupc++
+  - keyword ~mips is dropped to be compatible with clang/llvm
+
+*libcxx-3.9.0 (03 Oct 2016)
+
+  03 Oct 2016; Alexis Ballier <aballier@gentoo.org>
+  +files/libcxx-3.9-cmake-static-lib.patch, +libcxx-3.9.0.ebuild:
+  version bump to 3.9.0
+
+  to synchronize with live ebuild.
+
+  03 Oct 2016; Michał Górny <mgorny@gentoo.org> libcxx-3.9.0.ebuild,
+  libcxx-9999.ebuild:
+  Use CMake files from native LLVM build
+
+  03 Oct 2016; Michał Górny <mgorny@gentoo.org> libcxx-3.9.0.ebuild,
+  libcxx-9999.ebuild:
+  Dep on >=clang-3.9.0 for target symlinks
+
+  05 Oct 2016; Michał Górny <mgorny@gentoo.org> libcxx-9999.ebuild,
+  metadata.xml:
+  Support sys-libs/libcxxabi
+
+  05 Oct 2016; Michał Górny <mgorny@gentoo.org> libcxx-3.9.0.ebuild,
+  libcxx-9999.ebuild:
+  Run tests without LLVM sources
+
+  05 Oct 2016; Michał Górny <mgorny@gentoo.org> libcxx-9999.ebuild:
+  Require matching libcxxabi version
+
+  05 Oct 2016; Michał Górny <mgorny@gentoo.org> libcxx-3.9.0.ebuild:
+  Backport libcxxabi support to 3.9.0
+
+  07 Oct 2016; Michał Górny <mgorny@gentoo.org> libcxx-3.9.0.ebuild,
+  libcxx-9999.ebuild:
+  Fix ldscripts to include gcc EH lib for USE=-unwind
+
+  07 Oct 2016; Michał Górny <mgorny@gentoo.org> libcxx-3.9.0.ebuild,
+  libcxx-9999.ebuild:
+  Always pass compiler runtime libs
+
+  12 Nov 2016; Michał Górny <mgorny@gentoo.org> -libcxx-3.7.0.ebuild,
+  -libcxx-3.8.0.ebuild:
+  Drop a few old versions
+

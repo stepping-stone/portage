@@ -239,3 +239,375 @@
 
   Package-Manager: portage-2.2.27
 
+*opera-developer-37.0.2157.0 (07 Mar 2016)
+
+  07 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-37.0.2157.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-36.0.2120.0.ebuild, -opera-developer-36.0.2129.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.27
+
+*opera-developer-37.0.2163.0 (10 Mar 2016)
+
+  10 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-37.0.2163.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.27
+
+  10 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-37.0.2142.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.27
+
+*opera-developer-37.0.2171.0 (19 Mar 2016)
+
+  19 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-37.0.2171.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  19 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-37.0.2157.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*opera-developer-38.0.2190.0 (07 Apr 2016)
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-38.0.2190.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-37.0.2163.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*opera-developer-38.0.2198.0 (20 Apr 2016)
+
+  20 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-38.0.2198.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  20 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-37.0.2171.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*opera-developer-38.0.2205.0 (21 Apr 2016)
+
+  21 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-38.0.2205.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-38.0.2190.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*opera-developer-38.0.2213.0 (29 Apr 2016)
+
+  29 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-38.0.2213.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  29 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-38.0.2198.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*opera-developer-39.0.2226.0 (12 May 2016)
+
+  12 May 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-39.0.2226.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+*opera-developer-39.0.2234.0 (19 May 2016)
+
+  19 May 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-39.0.2234.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  19 May 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-38.0.2205.0.ebuild, -opera-developer-38.0.2213.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*opera-developer-39.0.2245.0 (01 Jun 2016)
+
+  01 Jun 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-39.0.2245.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Jun 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-39.0.2226.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*opera-developer-39.0.2248.0 (03 Jun 2016)
+
+  03 Jun 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-39.0.2248.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  03 Jun 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-39.0.2234.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*opera-developer-40.0.2267.0 (22 Jun 2016)
+
+  22 Jun 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-40.0.2267.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*opera-developer-40.0.2273.0 (01 Jul 2016)
+
+  01 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-40.0.2273.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  01 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-39.0.2245.0.ebuild, -opera-developer-39.0.2248.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*opera-developer-40.0.2280.0 (05 Jul 2016)
+
+  05 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-40.0.2280.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  05 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-40.0.2267.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*opera-developer-40.0.2288.0 (13 Jul 2016)
+
+  13 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-40.0.2288.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  13 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-40.0.2273.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*opera-developer-40.0.2296.0 (21 Jul 2016)
+
+  21 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-40.0.2296.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  21 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-40.0.2280.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*opera-developer-40.0.2301.0 (26 Jul 2016)
+
+  26 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-40.0.2301.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  26 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-40.0.2288.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*opera-developer-40.0.2306.0 (01 Aug 2016)
+
+  01 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-40.0.2306.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  01 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-40.0.2296.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*opera-developer-41.0.2315.0 (08 Aug 2016)
+
+  08 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-41.0.2315.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  08 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-40.0.2301.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*opera-developer-41.0.2323.0 (17 Aug 2016)
+
+  17 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-41.0.2323.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  17 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-40.0.2306.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*opera-developer-41.0.2329.0 (24 Aug 2016)
+
+  24 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-41.0.2329.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  24 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-41.0.2315.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+  07 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  opera-developer-41.0.2329.0.ebuild:
+  www-client/opera-beta: replace me with sr-ME
+
+  Bug: https://bugs.gentoo.org/583762
+
+  07 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  opera-developer-41.0.2329.0.ebuild:
+  add he to CHROMIUM_LANGS
+
+  Package-Manager: portage-2.3.0_p23
+
+  07 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  opera-developer-41.0.2329.0.ebuild:
+  drop en-US from CHROMIUM_LANGS
+
+  chromium-2.eclass is hard-coded to include en-US.
+
+  Package-Manager: portage-2.3.0_p23
+
+*opera-developer-41.0.2340.0 (08 Sep 2016)
+
+  08 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-41.0.2340.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  08 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-41.0.2323.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*opera-developer-41.0.2349.0 (13 Sep 2016)
+
+  13 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-41.0.2349.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  13 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-41.0.2329.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*opera-developer-42.0.2372.0 (05 Oct 2016)
+
+  05 Oct 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-42.0.2372.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.1
+
+  05 Oct 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-41.0.2340.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.1
+
+*opera-developer-42.0.2392.0 (27 Oct 2016)
+
+  27 Oct 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-42.0.2392.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  27 Oct 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-41.0.2349.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*opera-developer-43.0.2403.0 (07 Nov 2016)
+
+  07 Nov 2016; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-43.0.2403.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  07 Nov 2016; Jeroen Roovers <jer@gentoo.org>
+  -opera-developer-42.0.2372.0.ebuild, -opera-developer-42.0.2392.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+

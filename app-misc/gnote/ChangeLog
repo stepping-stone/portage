@@ -115,3 +115,61 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> gnote-3.18.1.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  19 Jun 2016; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnote-3.18.1.ebuild:
+  fix aclocal error (bug #581308)
+
+  Thanks to Ed Catmur for reporting and the fix.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  24 Jun 2016; Pacho Ramos <pacho@gentoo.org> -gnote-3.16.2.ebuild,
+  -gnote-3.18.0-r1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnote-3.20.1 (24 Jun 2016)
+
+  24 Jun 2016; Pacho Ramos <pacho@gentoo.org> +gnote-3.20.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnote-3.20.1.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnote-3.20.1.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  -files/gnote-3.18.2-x11-support-switch.patch, -gnote-3.18.1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+
+*gnote-3.20.2 (08 Oct 2016)
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> +gnote-3.20.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.1
+
+*gnote-3.22.0 (19 Oct 2016)
+
+  19 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> +gnote-3.22.0.ebuild:
+  version bump 3.20.2 → 3.22.0
+
+  Package-Manager: portage-2.3.1
+

@@ -63,3 +63,24 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*snipmate-0.87 (13 Mar 2016)
+
+  13 Mar 2016; Tim Harder <radhermit@gentoo.org> +snipmate-0.87.ebuild:
+  version bump to 0.87 (bug #538490)
+
+*snipmate-0.87-r1 (16 Mar 2016)
+
+  16 Mar 2016; Tim Harder <radhermit@gentoo.org> -snipmate-0.87.ebuild,
+  +snipmate-0.87-r1.ebuild:
+  add missing rdeps on tlib and mw-utils
+
+  17 Oct 2016; Patrice Clement <monsieurp@gentoo.org> snipmate-0.87-r1.ebuild:
+  Stable for amd64+x86.
+
+  Package-Manager: portage-2.3.0
+
+  17 Oct 2016; Patrice Clement <monsieurp@gentoo.org> -snipmate-0.83.ebuild:
+  clean up old.
+
+  Package-Manager: portage-2.3.0
+

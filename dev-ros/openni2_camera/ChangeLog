@@ -33,3 +33,34 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*openni2_camera-0.2.6 (12 May 2016)
+
+  12 May 2016; Alexis Ballier <aballier@gentoo.org>
+  +openni2_camera-0.2.6.ebuild:
+  bump to 0.2.6
+
+  Package-Manager: portage-2.2.28
+
+*openni2_camera-0.2.7 (09 Jun 2016)
+
+  09 Jun 2016; Alexis Ballier <aballier@gentoo.org>
+  +openni2_camera-0.2.7.ebuild:
+  bump to 0.2.7
+
+  Package-Manager: portage-2.3.0_rc1
+
+  07 Oct 2016; Alexis Ballier <aballier@gentoo.org>
+  -openni2_camera-0.2.5.ebuild, -openni2_camera-0.2.6.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.1
+
+*openni2_camera-0.2.7-r1 (07 Oct 2016)
+
+  07 Oct 2016; Alexis Ballier <aballier@gentoo.org>
+  -openni2_camera-0.2.7.ebuild, +openni2_camera-0.2.7-r1.ebuild,
+  openni2_camera-9999.ebuild:
+  add missing dep on boost
+
+  Package-Manager: portage-2.3.1
+

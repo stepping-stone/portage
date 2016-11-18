@@ -63,3 +63,23 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*MogileFS-Utils-2.290.0 (27 Feb 2016)
+
+  27 Feb 2016; Kent Fredric <kentfredric@gmail.com>
+  +MogileFS-Utils-2.290.0.ebuild:
+  Bump to version 2.290.0
+
+  - use EAPI6
+
+  Upstream:
+  - returns better codes to exit()
+  - adds `mogile device next` command
+
+  Package-Manager: portage-2.2.27
+
+  28 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -MogileFS-Utils-2.280.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+

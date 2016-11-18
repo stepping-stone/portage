@@ -271,3 +271,108 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*pytest-2.8.7 (25 Jan 2016)
+
+  25 Jan 2016; Justin Lecher <jlec@gentoo.org>
+  +files/pytest-2.8.7-skip-test-on-pypy.patch, +pytest-2.8.7.ebuild:
+  Version Bump
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+  20 Mar 2016; Dirkjan Ochtman <djc@gentoo.org>
+  -files/pytest-2.8.5-skip-test-on-pypy.patch, -pytest-2.7.2.ebuild,
+  -pytest-2.8.3.ebuild, -pytest-2.8.4.ebuild, -pytest-2.8.5.ebuild:
+  remove old versions
+
+  Package-Manager: portage-2.2.26
+
+*pytest-2.7.2 (20 Mar 2016)
+
+  20 Mar 2016; Dirkjan Ochtman <djc@gentoo.org> +pytest-2.7.2.ebuild:
+  revert deletion of 2.7.2 ebuild
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --force
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> pytest-2.8.7.ebuild:
+  amd64 stable wrt bug #577826
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  01 Apr 2016; Markus Meier <maekke@gentoo.org> pytest-2.8.7.ebuild:
+  arm stable, bug #577826
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  27 May 2016; Tobias Klausmann <klausman@gentoo.org> pytest-2.8.7.ebuild:
+  2.8.7-r0: add alpha keyword
+
+  Gentoo-Bug: 577826
+
+  Package-Manager: portage-2.3.0_rc1
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> pytest-2.8.7.ebuild:
+  x86 stable wrt bug #577826
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> pytest-2.8.7.ebuild:
+  ppc stable wrt bug #577826
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*pytest-3.0.2 (05 Sep 2016)
+
+  05 Sep 2016; Mike Gilbert <floppym@gentoo.org> +pytest-3.0.2.ebuild:
+  bump to 3.0.2
+
+  Package-Manager: portage-2.3.0_p24
+
+  05 Sep 2016; Mike Gilbert <floppym@gentoo.org> pytest-3.0.2.ebuild:
+  add requests test dep
+
+  Package-Manager: portage-2.3.0_p24
+
+  05 Sep 2016; Mike Gilbert <floppym@gentoo.org> pytest-3.0.2.ebuild:
+  block dev-python/logilab-common
+
+  Bug: https://bugs.gentoo.org/592948
+
+  Package-Manager: portage-2.3.0_p24
+
+  01 Oct 2016; Jeroen Roovers <jer@gentoo.org> pytest-2.8.7.ebuild:
+  Stable for HPPA PPC64 (bug #577826).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*pytest-3.0.3 (07 Oct 2016)
+
+  07 Oct 2016; Brian Dolbec <dolsen@gentoo.org> +pytest-3.0.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.1_p8
+
+  14 Oct 2016; Brian Dolbec <dolsen@gentoo.org> pytest-3.0.3.ebuild:
+  Fix bug 597122, bad command in python_compile_all()
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pytest-2.7.2.ebuild,
+  pytest-2.8.2.ebuild, pytest-2.8.7.ebuild, pytest-3.0.2.ebuild,
+  pytest-9999.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org> pytest-3.0.3.ebuild:
+  3.0.3 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

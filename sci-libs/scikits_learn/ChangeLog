@@ -143,3 +143,24 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+*scikits_learn-0.17.1 (09 Mar 2016)
+
+  09 Mar 2016; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/scikits_learn-0.17.1-system-cblas.patch,
+  +scikits_learn-0.17.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.27
+
+  13 Aug 2016; David Seifert <soap@gentoo.org> scikits_learn-0.17.1.ebuild:
+  using system joblib for cross_validation module
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2065
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> scikits_learn-0.17.ebuild,
+  scikits_learn-0.17.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -12,37 +12,41 @@ fi
 VIRTUALX_REQUIRED="test"
 RESTRICT="test"
 
-inherit autotools readme.gentoo toolchain-funcs virtualx $GIT_ECLASS
+inherit autotools readme.gentoo-r1 toolchain-funcs virtualx $GIT_ECLASS
 
 DESCRIPTION="Wayland reference compositor"
-HOMEPAGE="http://wayland.freedesktop.org/"
+HOMEPAGE="https://wayland.freedesktop.org/"
 
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
 	KEYWORDS=""
 else
-	SRC_URI="http://wayland.freedesktop.org/releases/${P}.tar.xz"
+	SRC_URI="https://wayland.freedesktop.org/releases/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~x86 ~arm-linux"
 fi
 
 LICENSE="MIT CC-BY-SA-3.0"
 SLOT="0"
-IUSE="colord dbus +drm editor examples fbdev +gles2 headless ivi rdp +resize-optimization rpi +launch screen-sharing static-libs +suid systemd test unwind wayland-compositor +X xwayland"
+
+IUSE_VIDEO_CARDS="video_cards_intel video_cards_v4l"
+IUSE="colord dbus +drm editor examples fbdev +gles2 headless ivi jpeg lcms rdp +resize-optimization rpi +launch screen-sharing static-libs +suid systemd test unwind wayland-compositor webp +X xwayland ${IUSE_VIDEO_CARDS}"
 
 REQUIRED_USE="
 	drm? ( gles2 )
 	screen-sharing? ( rdp )
+	systemd? ( dbus )
 	test? ( X )
 	wayland-compositor? ( gles2 )
 "
 
 RDEPEND="
 	>=dev-libs/libinput-0.8.0
-	>=dev-libs/wayland-1.9.0
-	media-libs/lcms:2
+	>=dev-libs/wayland-1.10.0
+	>=dev-libs/wayland-protocols-1.2
+	lcms? ( media-libs/lcms:2 )
 	media-libs/libpng:0=
-	media-libs/libwebp:0=
-	virtual/jpeg:0=
+	webp? ( media-libs/libwebp:0= )
+	jpeg? ( virtual/jpeg:0= )
 	>=x11-libs/cairo-1.11.3
 	>=x11-libs/libdrm-2.4.30
 	x11-libs/libxkbcommon
@@ -112,6 +116,7 @@ src_configure() {
 		$(use_enable drm drm-compositor) \
 		$(use_enable headless headless-compositor) \
 		$(use_enable ivi ivi-shell) \
+		$(use_enable lcms) \
 		$(use_enable rdp rdp-compositor) \
 		$(use_enable rpi rpi-compositor) \
 		$(use_enable wayland-compositor) \
@@ -123,8 +128,14 @@ src_configure() {
 		$(use_enable resize-optimization) \
 		$(use_enable screen-sharing) \
 		$(use_enable suid setuid-install) \
+		$(use_enable systemd systemd-login) \
+		$(use_enable systemd systemd-notify) \
 		$(use_enable xwayland) \
 		$(use_enable xwayland xwayland-test) \
+		$(use_enable video_cards_intel simple-dmabuf-intel-client) \
+		$(use_enable video_cards_v4l simple-dmabuf-v4l-client) \
+		$(use_with jpeg) \
+		$(use_with webp) \
 		${myconf}
 }
 
@@ -140,5 +151,5 @@ src_test() {
 src_install() {
 	default
 
-	readme.gentoo_src_install
+	readme.gentoo_create_doc
 }

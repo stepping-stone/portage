@@ -65,3 +65,61 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Test-Number-Delta-1.60.0 (28 Feb 2016)
+
+  28 Feb 2016; Kent Fredric <kentfredric@gmail.com>
+  +Test-Number-Delta-1.60.0.ebuild:
+  Bump to version 1.60.0
+
+  - EAPI6
+  - Dep fixups
+  - Required for latest dev-perl/MonogDB
+
+  Upstream:
+  - 0 and 0 compare with epsilon
+
+  Package-Manager: portage-2.2.27
+
+  24 May 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Test-Number-Delta-1.30.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Jun 2016; Tobias Klausmann <klausman@gentoo.org>
+  Test-Number-Delta-1.60.0.ebuild:
+  1.60.0-r0: add alpha keyword
+
+  Gentoo-Bug: 584048
+
+  Package-Manager: portage-2.3.0_rc1
+
+  06 Jun 2016; Agostino Sarubbo <ago@gentoo.org>
+  Test-Number-Delta-1.60.0.ebuild:
+  amd64 stable wrt bug #584048
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org>
+  Test-Number-Delta-1.60.0.ebuild:
+  x86 stable wrt bug #584048
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org>
+  Test-Number-Delta-1.60.0.ebuild:
+  ppc stable wrt bug #584048
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> Test-Number-Delta-1.60.0.ebuild:
+  hppa/ia64/ppc64/sparc stable, bug #584048
+
+  Package-Manager: portage-2.3.0
+

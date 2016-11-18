@@ -105,3 +105,24 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+*autopep8-1.2.4 (17 Jul 2016)
+
+  17 Jul 2016; Patrick Lauer <patrick@gentoo.org> +autopep8-1.2.4.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  11 Sep 2016; David Seifert <soap@gentoo.org>
+  -files/autopep8-0.5.2-issue-10.patch:
+  remove unused patch
+
+  Closes: https://github.com/gentoo/gentoo/pull/2291
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> autopep8-1.0.4.ebuild,
+  autopep8-1.1.ebuild, autopep8-1.1.1.ebuild, autopep8-1.2.ebuild,
+  autopep8-1.2.1.ebuild, autopep8-1.2.2.ebuild, autopep8-1.2.4.ebuild,
+  autopep8-9999.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

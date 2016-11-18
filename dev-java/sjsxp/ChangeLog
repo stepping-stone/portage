@@ -79,3 +79,22 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*sjsxp-1.0.1-r3 (30 Mar 2016)
+
+  30 Mar 2016; Patrice Clement <monsieurp@gentoo.org> +sjsxp-1.0.1-r3.ebuild:
+  Switch to java-pkg-simple.
+
+  Package-Manager: portage-2.2.26
+
+  13 Apr 2016; Patrice Clement <monsieurp@gentoo.org> sjsxp-1.0.1-r3.ebuild:
+  Stable for amd64. Retroactively mark stable for the remaining arches using
+  the ALLARCHES policy.
+
+  Package-Manager: portage-2.2.26
+
+  13 Apr 2016; Patrice Clement <monsieurp@gentoo.org> -sjsxp-1.0.1.ebuild,
+  -sjsxp-1.0.1-r1.ebuild, -sjsxp-1.0.1-r2.ebuild:
+  Clean up old.
+
+  Package-Manager: portage-2.2.26
+

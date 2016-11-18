@@ -85,3 +85,18 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  02 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  +files/iksemel-1.4-gnutls-3.4.patch, iksemel-1.4.ebuild:
+  Fix building with >=net-libs/gnutls-3.4.0
+
+  Package-Manager: portage-2.3.0_rc1
+  Gentoo-Bug: https://bugs.gentoo.org/582752
+  Closes: https://github.com/gentoo/gentoo/pull/1561
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

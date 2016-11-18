@@ -86,3 +86,23 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  -tasty-golden-2.2.2.3.ebuild, -tasty-golden-2.3.0.1.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/tasty-golden-2.2.1-haddock.patch:
+  remove unused patch
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*tasty-golden-2.3.1.1 (06 Nov 2016)
+
+  06 Nov 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +tasty-golden-2.3.1.1.ebuild:
+  bump up to 2.3.1.1
+
+  Package-Manager: portage-2.3.2
+

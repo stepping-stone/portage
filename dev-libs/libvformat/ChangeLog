@@ -77,3 +77,18 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org> libvformat-1.13-r1.ebuild,
+  libvformat-1.13-r2.ebuild:
+  sourceforge: switch to https:// URIs
+
+  10 Oct 2016; Jeroen Roovers <jer@gentoo.org> libvformat-1.13-r2.ebuild:
+  Mark ~ppc64 (bug #570898).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+

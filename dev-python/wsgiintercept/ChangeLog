@@ -72,3 +72,27 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*wsgiintercept-1.1.2 (02 Mar 2016)
+
+  02 Mar 2016; Patrick Lauer <patrick@gentoo.org> +wsgiintercept-1.1.2.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+*wsgiintercept-1.3.1 (01 Oct 2016)
+
+  01 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +wsgiintercept-1.3.1.ebuild:
+  openstack p2, newton is done, will add heat later
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> wsgiintercept-0.9.0.ebuild,
+  wsgiintercept-0.9.1.ebuild, wsgiintercept-0.10.0.ebuild,
+  wsgiintercept-0.10.2.ebuild, wsgiintercept-1.1.2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  wsgiintercept-1.3.1.ebuild:
+  1.3.1 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

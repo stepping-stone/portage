@@ -21,7 +21,7 @@ SRC_URI="
 
 LICENSE="GPL-2 LGPL-2.1 FDL-1.2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc static-libs"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
@@ -42,13 +42,6 @@ DEPEND="${COMMON_DEP}
 	)"
 RDEPEND="${COMMON_DEP}"
 
-PATCHES=(
-	"${FILESDIR}/${P}-svncpp_link.patch"
-	"${FILESDIR}/${P}-locale.patch"
-	"${FILESDIR}/${P}-wx3.0.patch"
-	"${FILESDIR}/${P}-subversion1.9-private-api.patch"
-)
-
 DOCS=( HACKING.txt TRANSLATIONS )
 
 src_prepare() {
@@ -62,8 +55,11 @@ src_prepare() {
 		-i src/locale/Makefile.am || die
 
 	mv configure.in configure.ac || die
+	epatch "${FILESDIR}/${P}-svncpp_link.patch"
+	epatch "${FILESDIR}/${P}-locale.patch"
+	epatch "${FILESDIR}/${P}-wx3.0.patch"
+	epatch "${FILESDIR}/${P}-subversion1.9-private-api.patch"
 
-	default
 	eautoreconf
 }
 

@@ -126,3 +126,74 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  07 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  mod_perl-2.0.10_pre201601.ebuild:
+  amd64 stable wrt bug #548932
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  23 May 2016; Tobias Klausmann <klausman@gentoo.org>
+  mod_perl-2.0.10_pre201601.ebuild:
+  2.0.10_pre201601-r0: add alpha keyword
+
+  Gentoo-Bug: 548932
+
+  Package-Manager: portage-2.3.0_rc1
+
+  26 Aug 2016; Pacho Ramos <pacho@gentoo.org>
+  mod_perl-2.0.10_pre201601.ebuild:
+  x86 stable, bug #548932
+
+  Package-Manager: portage-2.3.0
+
+*mod_perl-2.0.10_rc1 (01 Oct 2016)
+
+  01 Oct 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +files/mod_perl-2.0.10_rc1-Gentoo-not-Unix.patch,
+  +files/mod_perl-2.0.10_rc1-bundled-Apache-Test.patch,
+  +mod_perl-2.0.10_rc1.ebuild:
+  Version bump to 2.0.10-rc1 with more or less complete rework; tests should
+  pass now
+
+  Package-Manager: portage-2.3.1
+
+  01 Oct 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  mod_perl-2.0.10_rc1.ebuild:
+  QA fixes suggested by soap
+
+  Package-Manager: portage-2.3.1
+
+  08 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/mod_perl-2.0.7-bundled-Apache-Test.patch:
+  remove old orphan file.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2473
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  08 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  mod_perl-2.0.10_rc1.ebuild:
+  add one more HOMEPAGE entry.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2473
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*mod_perl-2.0.10_rc1-r1 (21 Oct 2016)
+
+  21 Oct 2016; Andreas K. Hüttel <dilfridge@gentoo.org> metadata.xml,
+  -mod_perl-2.0.10_rc1.ebuild, +mod_perl-2.0.10_rc1-r1.ebuild:
+  Better flag handling, force threading support on/off, bug 522698
+
+  Package-Manager: portage-2.3.2
+
+*mod_perl-2.0.10 (28 Oct 2016)
+
+  28 Oct 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +mod_perl-2.0.10.ebuild:
+  Version bump to actual release
+
+  Package-Manager: portage-2.3.2
+

@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -13,14 +13,14 @@ SRC_URI="http://www.kdau.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 RDEPEND="
 	>=dev-libs/glib-2.8:2
 	>=dev-cpp/glibmm-2.46:2
 	>=dev-cpp/gtkmm-2.24.4-r3:2.4
-	>=dev-cpp/libxmlpp-2.40
+	>=dev-cpp/libxmlpp-2.40:2.6
 	>=dev-cpp/gnome-vfsmm-2.26.0-r1
 "
 DEPEND="${RDEPEND}

@@ -79,3 +79,36 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> paste-2.0.2.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org> paste-2.0.2.ebuild:
+  adding py35
+
+  Package-Manager: portage-2.2.26
+
+*paste-2.0.3 (30 Sep 2016)
+
+  30 Sep 2016; Matthew Thode <prometheanfire@gentoo.org> +paste-2.0.3.ebuild:
+  add initial support for newton (keystone)
+
+  dropped py3.3 and updated most (maybe all) to eapi6
+
+  04 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +files/paste-2.0.3-unbundle-tempita.patch, paste-2.0.3.ebuild:
+  fix patch
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> paste-2.0.2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org> paste-2.0.3.ebuild:
+  2.0.3 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

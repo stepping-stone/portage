@@ -61,3 +61,26 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*irssi-xmpp-0.53 (25 May 2016)
+
+  25 May 2016; Patrice Clement <monsieurp@gentoo.org> +irssi-xmpp-0.53.ebuild:
+  bump to 0.53 and other changes - Change HOMEPAGE to https - Change SRC_URI
+  to github and use https
+
+  Package-Manager: portage-2.3.0_rc1
+  Closes: https://github.com/gentoo/gentoo/pull/1527
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  31 May 2016; Patrice Clement <monsieurp@gentoo.org> irssi-xmpp-0.53.ebuild:
+  Add default to src_prepare().
+
+  Closes: https://github.com/gentoo/gentoo/pull/1573
+
+  Package-Manager: portage-2.2.28
+

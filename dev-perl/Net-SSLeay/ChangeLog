@@ -84,3 +84,78 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Net-SSLeay-1.720.0 (05 Mar 2016)
+
+  05 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +Net-SSLeay-1.720.0.ebuild:
+  Bump to version 1.720.0
+
+  - EAPI6
+  - Better DESCRIPTION
+  - Tests enabled
+    - Test deps added
+    - Bad tests nuked
+    - Tests minimalised where possible
+  - 'examples' now optionally installed
+
+  Upstream:
+  - Bug fixes mostly
+
+  Package-Manager: portage-2.2.27
+
+  05 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  Net-SSLeay-1.720.0.ebuild, +files/1.72-config-nettest-no.patch,
+  +files/1.72-config-nettest-yes.patch:
+  Fix tests re: Networking
+
+  1. Reduce clutter for people who aren't running tests, or
+  aren't running tests with DIST_OVERRIDE=~/network/
+
+  2. Enable network-tests if DIST_OVERRIDE=~/network/
+
+  Package-Manager: portage-2.2.27
+
+*Net-SSLeay-1.720.0-r1 (07 Apr 2016)
+
+  07 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Net-SSLeay-1.720.0.ebuild, +Net-SSLeay-1.720.0-r1.ebuild:
+  Add slot operatores on ssl deps
+
+  Package-Manager: portage-2.2.28
+
+  07 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Net-SSLeay-1.650.0-r2.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  09 Apr 2016; Agostino Sarubbo <ago@gentoo.org> Net-SSLeay-1.720.0-r1.ebuild:
+  amd64 stable wrt bug #579284
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  22 Apr 2016; Markus Meier <maekke@gentoo.org> Net-SSLeay-1.720.0-r1.ebuild:
+  arm stable, bug #579284
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  25 May 2016; Matt Turner <mattst88@gentoo.org> Net-SSLeay-1.720.0-r1.ebuild:
+  alpha stable, bug 579284.
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> Net-SSLeay-1.720.0-r1.ebuild:
+  x86 stable wrt bug #579284
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> Net-SSLeay-1.720.0-r1.ebuild:
+  ppc stable wrt bug #579284
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

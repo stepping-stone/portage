@@ -81,3 +81,35 @@
 
   Package-Manager: portage-2.2.27
 
+*libcmis-0.5.1 (19 Mar 2016)
+
+  19 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org> +libcmis-0.5.1.ebuild,
+  libcmis-9999.ebuild, metadata.xml:
+  0.5.1 version bump
+
+  Package-Manager: portage-2.2.27
+
+  19 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -files/libcmis-0.2.3-do-not-override-phases.patch, -libcmis-0.5.0.ebuild:
+  Drop old ebuild and unused patch
+
+  Package-Manager: portage-2.2.27
+
+  28 Mar 2016; David Seifert <soap@gentoo.org> libcmis-0.5.1.ebuild:
+  use more recent sys-devel/boost-m4
+
+  Gentoo-Bug: 569614
+
+  Package-Manager: portage-2.2.28
+
+*libcmis-0.5.2_pre20160820 (17 Sep 2016)
+
+  17 Sep 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +libcmis-0.5.2_pre20160820.ebuild, libcmis-9999.ebuild:
+  Add 0.5.2_pre20160820 snapshot
+
+  Contains the 2FA fixes necessary to make Google Drive remote access
+  work. No big difference to .1 otherwise.
+
+  Package-Manager: portage-2.2.28
+

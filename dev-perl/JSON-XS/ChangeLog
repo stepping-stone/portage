@@ -64,3 +64,44 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  14 Mar 2016; Agostino Sarubbo <ago@gentoo.org> JSON-XS-3.10.0.ebuild:
+  amd64 stable wrt bug #577102
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> JSON-XS-3.10.0.ebuild:
+  x86 stable wrt bug #577102
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -JSON-XS-2.340.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+*JSON-XS-3.30.0 (17 Nov 2016)
+
+  17 Nov 2016; Kent Fredric <kentnl@gentoo.org> +JSON-XS-3.30.0.ebuild,
+  metadata.xml:
+  Bump to version 3.30.0
+
+  - EAPI6
+  - Parallel Tests
+  - Add USE="examples"
+
+  Upstream:
+  - Avoid crash on older perls with shared hash keys
+  - fix calling encode/decode in list context
+  - Add cbor format to json_xs tool
+  - Allow literal tabs in strings in relaxed mode
+  - allow_nonref applies to booleans as well
+  - Fix toformat error message
+  - Fix bug in workaround in sv_chop w/ incremental parsing
+
+  Package-Manager: portage-2.3.2
+

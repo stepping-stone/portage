@@ -71,3 +71,27 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Fabian Groffen <grobian@gentoo.org> bcfg2-1.2.4-r1.ebuild:
+  make virtual/fam a dep for non-linux only, bug #559498
+
+  Package-Manager: portage-2.2.27-prefix
+
+  06 Mar 2016; Fabian Groffen <grobian@gentoo.org> bcfg2-1.2.4-r1.ebuild:
+  update copyright (repoman doesn't do this anymore?)
+
+  Package-Manager: portage-2.2.27-prefix
+
+  04 Apr 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  set description for user in metadata.xml, minor tidy
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/bcfg2-server-1.2.0.rc:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  18 May 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  re-order entries in metadata as they should
+
+  Package-Manager: portage-2.2.28
+

@@ -155,3 +155,125 @@
 
   Package-Manager: portage-2.2.26
 
+*puppetdb-3.2.4 (28 Feb 2016)
+
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetdb-3.2.4.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+*puppetdb-4.0.0 (18 Mar 2016)
+
+  18 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetdb-4.0.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+  18 Mar 2016; Matthew Thode <prometheanfire@gentoo.org> files/puppetdb.initd:
+  fix -a in init script
+
+  Package-Manager: portage-2.2.26
+
+*puppetdb-4.0.2 (29 Apr 2016)
+
+  29 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetdb-4.0.2.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> puppetdb-4.0.0.ebuild:
+  amd64 stable wrt bug #580102
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/puppetdb.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*puppetdb-4.1.0 (20 May 2016)
+
+  20 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetdb-4.1.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  20 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -puppetdb-3.2.3.ebuild, -puppetdb-3.2.4.ebuild:
+  remove old
+
+  Package-Manager: portage-2.2.28
+
+  06 Jun 2016; Agostino Sarubbo <ago@gentoo.org> puppetdb-4.0.2.ebuild:
+  amd64 stable wrt bug #584340
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*puppetdb-4.1.2 (23 Jun 2016)
+
+  23 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetdb-4.1.2.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> puppetdb-4.0.2.ebuild:
+  x86 stable wrt bug #584340
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*puppetdb-4.2.0 (09 Aug 2016)
+
+  09 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetdb-4.2.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+*puppetdb-4.2.1 (18 Aug 2016)
+
+  18 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetdb-4.2.1.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+*puppetdb-4.2.2 (26 Aug 2016)
+
+  26 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetdb-4.2.2.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  18 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -puppetdb-4.0.0.ebuild, -puppetdb-4.1.0.ebuild, -puppetdb-4.1.2.ebuild,
+  -puppetdb-4.2.0.ebuild, -puppetdb-4.2.1.ebuild, puppetdb-4.2.2.ebuild:
+  stable amd64 and x86, and cleanup
+
+  Package-Manager: portage-2.2.28
+
+*puppetdb-4.2.4 (01 Nov 2016)
+
+  01 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetdb-4.2.4.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+
+*puppetdb-4.3.0 (09 Nov 2016)
+
+  09 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetdb-4.3.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+

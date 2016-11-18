@@ -87,3 +87,24 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*tlslite-0.4.9 (01 Mar 2016)
+
+  01 Mar 2016; Patrick Lauer <patrick@gentoo.org> +tlslite-0.4.9.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+*tlslite-0.4.9-r1 (03 Jun 2016)
+
+  03 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  +tlslite-0.4.9-r1.ebuild:
+  add python3 support
+
+  Package-Manager: portage-2.2.26
+  Closes: https://github.com/gentoo/gentoo/pull/1581
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> tlslite-0.4.9-r1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

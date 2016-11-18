@@ -7,11 +7,11 @@ inherit gkrellm-plugin toolchain-funcs
 
 DESCRIPTION="a GKrellM2 plugin which displays the top three processes"
 SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.orig.tar.gz"
-HOMEPAGE="http://sourceforge.net/projects/gkrelltop"
+HOMEPAGE="https://sourceforge.net/projects/gkrelltop"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="X"
 
 PLUGIN_SERVER_SO=gkrelltopd.so

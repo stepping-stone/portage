@@ -140,3 +140,21 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  icinga-1.13.3-r1.ebuild:
+  adding arm keyword
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/icinga-init.d,
+  files/ido2db-init.d:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*icinga-1.13.3-r2 (29 Sep 2016)
+
+  29 Sep 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -icinga-1.13.3-r1.ebuild, +icinga-1.13.3-r2.ebuild:
+  Add missing slot operator in Perl dependency, bug 595428
+
+  Package-Manager: portage-2.3.0
+

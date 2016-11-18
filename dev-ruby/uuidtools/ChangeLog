@@ -78,3 +78,29 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Apr 2016; Manuel Rüger <mrueg@gentoo.org> uuidtools-2.1.4-r1.ebuild,
+  uuidtools-2.1.5.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+  22 Jul 2016; Hans de Graaff <graaff@gentoo.org> uuidtools-2.1.4-r1.ebuild:
+  add ruby21 to stable version
+
+  Package-Manager: portage-2.2.28
+
+*uuidtools-2.1.5-r1 (02 Aug 2016)
+
+  02 Aug 2016; Hans de Graaff <graaff@gentoo.org> +uuidtools-2.1.5-r1.ebuild:
+  add ruby23
+
+  Package-Manager: portage-2.2.28
+
+  31 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/uuidtools-2.1.2-macaddress.patch:
+  remove unused patch.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2417
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

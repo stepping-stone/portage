@@ -95,3 +95,15 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  07 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #267342
+
+  Package-Manager: portage-2.3.0
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> -liferea-1.8.8.ebuild,
+  -liferea-1.8.11.ebuild, -liferea-1.10.9.ebuild, -liferea-1.10.12.ebuild,
+  -liferea-1.10.16.ebuild:
+  Drop old (also dropping consumers of gnome2.eclass support for old eapis)
+
+  Package-Manager: portage-2.3.1
+

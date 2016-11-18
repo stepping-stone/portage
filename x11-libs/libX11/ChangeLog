@@ -96,3 +96,74 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  02 Jun 2016; Tobias Klausmann <klausman@gentoo.org> libX11-1.6.3.ebuild:
+  1.6.3-r0: add alpha keyword
+
+  Gentoo-Bug: 559062
+
+  Package-Manager: portage-2.3.0_rc1
+
+*libX11-1.6.4 (04 Oct 2016)
+
+  04 Oct 2016; Manuel Rüger <mrueg@gentoo.org> +libX11-1.6.4.ebuild:
+  Security bump to 1.6.4
+
+  Package-Manager: portage-2.3.1
+
+  05 Oct 2016; Mart Raudsepp <leio@gentoo.org> libX11-1.6.4.ebuild:
+  1.6.3: Fix libxcb dependency minimum version
+
+  Package-Manager: portage-2.3.1
+
+  06 Oct 2016; Jeroen Roovers <jer@gentoo.org> libX11-1.6.4.ebuild:
+  Stable for HPPA PPC64 (bug #596182).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  07 Oct 2016; Agostino Sarubbo <ago@gentoo.org> libX11-1.6.4.ebuild:
+  amd64 stable wrt bug #596182
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  07 Oct 2016; Agostino Sarubbo <ago@gentoo.org> libX11-1.6.4.ebuild:
+  x86 stable wrt bug #596182
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Oct 2016; Michael Palimaka <kensington@gentoo.org> libX11-1.6.4.ebuild:
+  x11-libs: add comment to various packages to force manifest regeneration
+
+  Gentoo-bug: 596462
+
+  Package-Manager: portage-2.3.1
+
+  11 Oct 2016; Tobias Klausmann <klausman@gentoo.org> libX11-1.6.4.ebuild:
+  1.6.4-r0: stable on alpha
+
+  Gentoo-Bug: 596182
+
+  18 Oct 2016; Markus Meier <maekke@gentoo.org> libX11-1.6.4.ebuild:
+  arm stable, bug #596182
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --include-arches="arm"
+
+  12 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libX11-1.6.3.ebuild:
+  sparc stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libX11-1.6.3.ebuild:
+  ia64 stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

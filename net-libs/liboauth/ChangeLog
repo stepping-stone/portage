@@ -62,3 +62,20 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*liboauth-1.0.3 (09 Nov 2016)
+
+  09 Nov 2016; Pacho Ramos <pacho@gentoo.org> +liboauth-1.0.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.2
+
+  09 Nov 2016; Pacho Ramos <pacho@gentoo.org> liboauth-1.0.3.ebuild:
+  Specify proper openssl slot
+
+  Package-Manager: portage-2.3.2
+

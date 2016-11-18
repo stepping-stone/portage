@@ -88,3 +88,18 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*librep-0.92.6 (20 Jul 2016)
+
+  20 Jul 2016; Michael Orlitzky <mjo@gentoo.org> -librep-0.92.5.ebuild,
+  +librep-0.92.6.ebuild:
+  new version 0.92.6.
+
+  Gentoo-Bug: 493110
+
+  Package-Manager: portage-2.2.28
+

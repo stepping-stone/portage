@@ -79,3 +79,47 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*linuxfromscratch-7.9 (24 Apr 2016)
+
+  24 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +linuxfromscratch-7.9.ebuild:
+  version bump to 7.9, bug #581030
+
+  Package-Manager: portage-2.2.26
+
+  24 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  linuxfromscratch-7.7.ebuild:
+  stabilize version 7.7 across arches
+
+  Package-Manager: portage-2.2.26
+
+  24 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  linuxfromscratch-7.4.ebuild, linuxfromscratch-7.7.ebuild,
+  linuxfromscratch-7.9.ebuild:
+  keyword ~arm64
+
+  Package-Manager: portage-2.2.26
+
+*linuxfromscratch-7.10 (19 Sep 2016)
+
+  19 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +linuxfromscratch-7.10.ebuild:
+  Bump to version 7.10
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  19 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  linuxfromscratch-7.9.ebuild:
+  Version 7.9 stable for all arches.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  19 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -linuxfromscratch-7.4.ebuild, -linuxfromscratch-7.7.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

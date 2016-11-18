@@ -111,3 +111,24 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*openscenegraph-3.5.1 (21 Jul 2016)
+
+  21 Jul 2016; Maciej Mrozowski <reavertm@gentoo.org>
+  +openscenegraph-3.5.1.ebuild:
+  Version bump 3.5.1
+
+  Package-Manager: portage-2.2.28
+
+  04 Nov 2016; Maciej Mrozowski <reavertm@gentoo.org>
+  openscenegraph-3.2.1-r2.ebuild:
+  stabilize 3.2.1-r2, fixed bug 589168
+
+  Package-Manager: portage-2.3.0
+
+  12 Nov 2016; David Seifert <soap@gentoo.org> openscenegraph-3.2.1.ebuild,
+  openscenegraph-3.2.1-r1.ebuild, openscenegraph-3.2.1-r2.ebuild,
+  openscenegraph-3.4.0.ebuild, openscenegraph-3.5.1.ebuild:
+  Add subslot operator on media-libs/jasper
+
+  Package-Manager: portage-2.3.2
+

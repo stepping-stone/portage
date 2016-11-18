@@ -120,3 +120,14 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  18 Sep 2016; Patrice Clement <monsieurp@gentoo.org> -files/test-fix.patch:
+  remove unused patch.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2344
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> mako-1.0.0.ebuild,
+  mako-1.0.2.ebuild, mako-1.0.3.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

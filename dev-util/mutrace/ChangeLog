@@ -61,3 +61,16 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*mutrace-0.2-r1 (12 Jun 2016)
+
+  12 Jun 2016; Pacho Ramos <pacho@gentoo.org> -mutrace-0.2.ebuild,
+  +mutrace-0.2-r1.ebuild:
+  binutils-libs is needed (#584296)
+
+  Package-Manager: portage-2.3.0_rc1
+

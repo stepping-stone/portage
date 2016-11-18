@@ -30,3 +30,21 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*djangocms-snippet-1.8.1 (13 Jun 2016)
+
+  13 Jun 2016; Slawomir Lis <slis@gentoo.org> +djangocms-snippet-1.8.1.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*djangocms-snippet-1.9.1 (22 Oct 2016)
+
+  22 Oct 2016; Slawomir Lis <slis@gentoo.org> +djangocms-snippet-1.9.1.ebuild:
+  version bump to 1.9.1
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> djangocms-snippet-1.5.ebuild,
+  djangocms-snippet-1.8.1.ebuild, djangocms-snippet-1.9.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

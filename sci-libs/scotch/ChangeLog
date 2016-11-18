@@ -67,3 +67,17 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*scotch-6.0.4-r1 (20 Apr 2016)
+
+  20 Apr 2016; Christoph Junghans <ottxor@gentoo.org> +scotch-6.0.4-r1.ebuild:
+  move metis headers to a subdir
+
+  Package-Manager: portage-2.2.26
+
+  07 Jun 2016; Tobias Klausmann <klausman@gentoo.org> scotch-6.0.4-r1.ebuild:
+  6.0.4-r1: add ~alpha keyword
+
+  Gentoo-Bug: 575366
+
+  Package-Manager: portage-2.3.0_rc1
+

@@ -146,3 +146,18 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*pymol-1.8.2.1 (24 Sep 2016)
+
+  24 Sep 2016; Alexey Shvetsov <alexxy@gentoo.org> +pymol-1.8.2.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+*pymol-1.8.4.0 (23 Oct 2016)
+
+  23 Oct 2016; Justin Lecher <jlec@gentoo.org> +pymol-1.8.4.0.ebuild:
+  Version Bump
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+

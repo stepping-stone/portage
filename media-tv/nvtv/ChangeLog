@@ -63,3 +63,36 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Remove explicit uses of disbanded herd e-mails from metadata.xml
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*nvtv-0.4.7-r2 (26 Apr 2016)
+
+  26 Apr 2016; Austin English <wizardedit@gentoo.org> files/nvtv.start,
+  +nvtv-0.4.7-r2.ebuild:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=573846
+
+  Package-Manager: portage-2.2.26
+
+  26 Apr 2016; Austin English <wizardedit@gentoo.org> -nvtv-0.4.7-r1.ebuild:
+  remove nvtv-0.4.7-r1
+
+  Package-Manager: portage-2.2.26
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org> nvtv-0.4.7-r2.ebuild:
+  sourceforge: switch to https:// URIs
+
+*nvtv-0.4.7-r3 (29 Jul 2016)
+
+  29 Jul 2016; Michael Orlitzky <mjo@gentoo.org> +files/respect-cflags.patch,
+  -nvtv-0.4.7-r2.ebuild, +nvtv-0.4.7-r3.ebuild:
+  new revision with a patch to respect CFLAGS.
+
+  Gentoo-Bug: 240836
+
+  Package-Manager: portage-2.2.28
+

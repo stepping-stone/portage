@@ -83,3 +83,34 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  08 Apr 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  Remove local definitions for global USE=vala and USE=introspeciton
+
+  23 packages had local use definitions that matched up perfectly with
+  the global definitions. Remove them as they're not necessary. This
+  is a metadata only change.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1100
+
+  Acked-by: Justin Lecher <jlec@gentoo.org>
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  11 Aug 2016; Patrice Clement <monsieurp@gentoo.org> -files/env.file:
+  remove unused file
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*libguestfs-1.28.5-r2 (02 Oct 2016)
+
+  02 Oct 2016; Pacho Ramos <pacho@gentoo.org> +libguestfs-1.28.5-r2.ebuild:
+  This is also compatible with cdrtools (#591782), allow python 3.5, set slots
+  for libpcre and ncurses, also set subslot for gobject-introspection
+  (https://wiki.gentoo.org/wiki/Project:GNOME/Gnome_Team_Ebuild_Policies#dev-
+  libs.2Fgobject-introspection:.3D_dependency).
+
+  Package-Manager: portage-2.3.1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> libguestfs-1.28.5-r1.ebuild,
+  libguestfs-1.28.5-r2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

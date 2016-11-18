@@ -106,3 +106,77 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  10 Mar 2016; Patrice Clement <monsieurp@gentoo.org> strace-4.9.ebuild:
+  dev-utils/strace: skip flaky -k test #545812 in stable
+
+  Already fixed in 4.10. Apply same fix to current stable.
+
+  10 Mar 2016; Patrice Clement <monsieurp@gentoo.org> strace-4.9.ebuild:
+  dev-utils/strace: fix whitespace
+
+  This series of commits closes #1011.
+
+  Pull-Request: https://github.com/gentoo/gentoo/pull/1011
+  Acked-by: Mike Frysinger <vapier@gentoo.org>
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  10 Mar 2016; Patrick Lauer <patrick@gentoo.org> strace-4.9.ebuild:
+  Whitespace
+
+  Package-Manager: portage-2.2.27
+
+*strace-4.12 (01 Jun 2016)
+
+  01 Jun 2016; Mike Frysinger <vapier@gentoo.org> +strace-4.12.ebuild,
+  strace-9999.ebuild:
+  version bump to 4.12
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org> strace-4.9.ebuild,
+  strace-4.10.ebuild, strace-4.11.ebuild, strace-4.12.ebuild,
+  strace-9999.ebuild:
+  sourceforge: switch to https:// URIs
+
+*strace-4.13 (27 Jul 2016)
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org> +strace-4.13.ebuild:
+  version bump to 4.13
+
+*strace-4.14 (05 Oct 2016)
+
+  05 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> +strace-4.14.ebuild:
+  Bump to version 4.14
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  05 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> -strace-4.10.ebuild,
+  -strace-4.11.ebuild, -strace-4.12.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  06 Oct 2016; Jeroen Roovers <jer@gentoo.org> strace-4.13.ebuild:
+  Stable for HPPA PPC64 (bug #596200).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  21 Oct 2016; Tobias Klausmann <klausman@gentoo.org> strace-4.13.ebuild:
+  4.13-r0: stable on alpha
+
+  Gentoo-Bug: 596200
+
+  26 Oct 2016; Markus Meier <maekke@gentoo.org> strace-4.13.ebuild:
+  arm stable, bug #596200
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+
+  30 Oct 2016; Sven Wegener <swegener@gentoo.org> strace-4.9.ebuild,
+  strace-4.13.ebuild, strace-4.14.ebuild, strace-9999.ebuild:
+  Update SourceForge GIT URLs
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Sven Wegener <swegener@gentoo.org>
+

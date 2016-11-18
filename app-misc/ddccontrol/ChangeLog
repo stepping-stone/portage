@@ -79,3 +79,17 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*ddccontrol-0.4.2_p20140105-r2 (01 Oct 2016)
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  -ddccontrol-0.4.2_p20140105-r1.ebuild,
+  +ddccontrol-0.4.2_p20140105-r2.ebuild:
+  amdadl is broken, disable it (#527268)
+
+  Package-Manager: portage-2.3.0
+

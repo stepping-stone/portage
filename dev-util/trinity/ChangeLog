@@ -82,3 +82,35 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*trinity-1.6 (06 Mar 2016)
+
+  06 Mar 2016; Tim Harder <radhermit@gentoo.org>
+  +files/trinity-1.6-cflags.patch, +trinity-1.6.ebuild:
+  version bump to 1.6
+
+  02 Apr 2016; David Seifert <soap@gentoo.org> trinity-9999.ebuild:
+  src_configure() no longer needed
+
+  due to upstream commit b91a4ef77da which changed filename from
+  configure.sh to configure
+
+  bump EAPI=6
+
+  update Copyright
+
+  Signed-off-by: Toralf Förster <toralf.foerster@gmx.de>
+
+  05 Apr 2016; Patrice Clement <monsieurp@gentoo.org> trinity-9999.ebuild:
+  add "default" to src_prepare()
+
+  accidently missed in the EAPI=6 bump of commit fa94229
+
+  Signed-off-by: Toralf FÃ¶rster <toralf.foerster@gmx.de>
+  Closes: https://github.com/gentoo/gentoo/pull/1198
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

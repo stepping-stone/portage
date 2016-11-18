@@ -78,3 +78,39 @@
 
   Package-Manager: portage-2.2.27
 
+  09 Mar 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  add user Brendan 'undersys' Horan as co-mantainer in metadata
+
+  Package-Manager: portage-2.2.26
+
+  10 Mar 2016; Ian Delaney <idella4@gentoo.org> s3cmd-1.6.1.ebuild:
+  prepare for stabilisation of vn. 1.6.1
+
+  Upgrade EAPI to 6, remove un-needed install phase
+  updated ebuild supplied via attachment in gentoo bug
+
+  Gentoo bug: #576828
+
+  Package-Manager: portage-2.2.26
+
+  14 Mar 2016; Agostino Sarubbo <ago@gentoo.org> s3cmd-1.6.1.ebuild:
+  amd64 stable wrt bug #576828
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> s3cmd-1.6.1.ebuild:
+  x86 stable wrt bug #576828
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Jun 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Multiple metadata.xml: reorder to make sure assignee goes first
+
+  Reorder all metadata.xml files with explicit descriptions requesting
+  particular bug assignment/CC to ensure that the requested assignee
+  always goes first, in order to match the bug wrangling policies.
+

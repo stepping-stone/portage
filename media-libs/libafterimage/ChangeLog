@@ -74,3 +74,49 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  02 May 2016; Andrew Savchenko <bircoph@gentoo.org>
+  libafterimage-1.20.ebuild:
+  update deps
+
+  - 1.20 doesn't work with giflib >= 5;
+  - add jpeg subslot dep.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+*libafterimage-1.20-r1 (02 May 2016)
+
+  02 May 2016; Andrew Savchenko <bircoph@gentoo.org>
+  +files/libafterimage-giflib5.patch, +libafterimage-1.20-r1.ebuild,
+  metadata.xml:
+  1.20-r1: fix bug 571654
+
+  - port to giflib-5 API;
+  - update ebuild to EAPI 6;
+  - add new USE flags and deps for previously ignored dependencies.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+  08 May 2016; Andrew Savchenko <bircoph@gentoo.org>
+  files/libafterimage-giflib5.patch:
+  fix bug 582308
+
+  libjpeg provides some macro that were removed in >=giflib-5, so
+  with USE="gif -jpeg" and >=giflib-5 we had undefined TRUE and
+  FALSE.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+  16 Oct 2016; Pacho Ramos <pacho@gentoo.org> libafterimage-1.20-r1.ebuild:
+  Pin slots
+
+  Package-Manager: portage-2.3.1
+
+  15 Nov 2016; Tobias Klausmann <klausman@gentoo.org>
+  libafterimage-1.20-r1.ebuild:
+  1.20-r1: stable on alpha
+
+  Gentoo-Bug: 597252
+

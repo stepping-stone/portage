@@ -63,3 +63,22 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  07 Jul 2016; Michael Palimaka <kensington@gentoo.org> kshutdown-3.2.ebuild:
+  drop ~ppc keyword
+
+  Package-Manager: portage-2.3.0
+
+*kshutdown-4.0 (31 Aug 2016)
+
+  31 Aug 2016; Michael Palimaka <kensington@gentoo.org> +kshutdown-4.0.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Johannes Huber <johu@gentoo.org> kshutdown-4.0.ebuild:
+  Add kde use flag
+
+  Gentoo-bug: 597100
+
+  Package-Manager: portage-2.3.2
+

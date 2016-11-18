@@ -186,3 +186,164 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  13 Mar 2016; Anthony G. Basile <blueness@gentoo.org> tor-0.2.6.10.ebuild,
+  tor-0.2.7.6.ebuild, tor-0.2.8.1_alpha.ebuild:
+  add app-text/asciidoc as a DEPEND
+
+  Thanks toralf
+
+  Package-Manager: portage-2.2.26
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> tor-0.2.7.6.ebuild:
+  sparc stable wrt bug #571706
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*tor-0.2.8.2_alpha (28 Mar 2016)
+
+  28 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +tor-0.2.8.2_alpha.ebuild:
+  version bump alpha branch to 0.2.8.2
+
+  Package-Manager: portage-2.2.26
+
+  28 Mar 2016; Anthony G. Basile <blueness@gentoo.org> metadata.xml,
+  -tor-0.2.6.10.ebuild, -tor-0.2.8.1_alpha.ebuild:
+  remove older versions
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/tor.initd-r7:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*tor-0.2.8.3_alpha (27 May 2016)
+
+  27 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +tor-0.2.8.3_alpha.ebuild:
+  version bump alpha branch to 0.2.8.3
+
+  Package-Manager: portage-2.2.28
+
+*tor-0.2.8.4_rc (15 Jun 2016)
+
+  15 Jun 2016; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.8.4_rc.ebuild:
+  version bump to 0.2.8.4_rc
+
+  Package-Manager: portage-2.2.28
+
+  15 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  -tor-0.2.8.2_alpha.ebuild:
+  remove older alpha version
+
+  Package-Manager: portage-2.2.28
+
+*tor-0.2.8.5_rc (07 Jul 2016)
+
+  07 Jul 2016; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.8.5_rc.ebuild:
+  version bump to 0.2.8.5_rc
+
+  Package-Manager: portage-2.2.28
+
+*tor-0.2.8.6 (03 Aug 2016)
+
+  03 Aug 2016; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.8.6.ebuild:
+  version bump to 0.2.8.6
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  -files/tor-0.2.3.14_alpha-torrc.sample.patch, -tor-0.2.8.3_alpha.ebuild,
+  -tor-0.2.8.4_rc.ebuild, -tor-0.2.8.5_rc.ebuild:
+  remove older versions
+
+  Package-Manager: portage-2.2.28
+
+*tor-0.2.9.1_alpha (09 Aug 2016)
+
+  09 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  +tor-0.2.9.1_alpha.ebuild:
+  version bump to 0.2.9.1_alpha
+
+  Package-Manager: portage-2.2.28
+
+*tor-0.2.9.2_alpha (24 Aug 2016)
+*tor-0.2.8.7 (24 Aug 2016)
+
+  24 Aug 2016; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.8.7.ebuild,
+  +tor-0.2.9.2_alpha.ebuild:
+  version bump to 0.2.8.7 and 0.2.9.2_alpha
+
+  Package-Manager: portage-2.2.28
+
+*tor-0.2.8.8 (23 Sep 2016)
+
+  23 Sep 2016; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.8.6.ebuild,
+  +tor-0.2.8.8.ebuild:
+  version bump to 0.2.8.8, remove 0.2.8.6
+
+  Package-Manager: portage-2.2.28
+
+*tor-0.2.9.3_alpha (23 Sep 2016)
+
+  23 Sep 2016; Anthony G. Basile <blueness@gentoo.org>
+  -tor-0.2.9.1_alpha.ebuild, +tor-0.2.9.3_alpha.ebuild:
+  version bump to 0.2.9.3_alpha, remove 0.2.9.1_alpha
+
+  Package-Manager: portage-2.2.28
+
+*tor-0.2.9.3_alpha-r1 (24 Sep 2016)
+*tor-0.2.8.8-r1 (24 Sep 2016)
+
+  24 Sep 2016; Anthony G. Basile <blueness@gentoo.org> +files/tor.initd-r8,
+  -tor-0.2.8.8.ebuild, +tor-0.2.8.8-r1.ebuild, -tor-0.2.9.3_alpha.ebuild,
+  +tor-0.2.9.3_alpha-r1.ebuild:
+  update openrc init scripts, bug #593794
+
+  Package-Manager: portage-2.2.28
+
+  24 Sep 2016; Anthony G. Basile <blueness@gentoo.org> files/tor.initd-r8:
+  further economize on openrc init script
+
+  Thanks floppym
+
+  Package-Manager: portage-2.2.28
+
+*tor-0.2.9.4_alpha (17 Oct 2016)
+*tor-0.2.8.9 (17 Oct 2016)
+
+  17 Oct 2016; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.8.7.ebuild,
+  -tor-0.2.8.8-r1.ebuild, +tor-0.2.8.9.ebuild, -tor-0.2.9.2_alpha.ebuild,
+  -tor-0.2.9.3_alpha-r1.ebuild, +tor-0.2.9.4_alpha.ebuild:
+  security version bump to 0.2.8.9 and 0.2.9.4
+
+  Package-Manager: portage-2.2.28
+
+  26 Oct 2016; Michael Palimaka <kensington@gentoo.org> tor-0.2.8.9.ebuild:
+  amd64/x86 stable
+
+  Gentoo-bug: 597394
+
+  Package-Manager: portage-2.3.2
+
+  05 Nov 2016; Jeroen Roovers <jer@gentoo.org> tor-0.2.8.9.ebuild:
+  Stable for PPC64 (bug #597394).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+*tor-0.2.9.5_alpha (09 Nov 2016)
+
+  09 Nov 2016; Anthony G. Basile <blueness@gentoo.org>
+  -tor-0.2.9.4_alpha.ebuild, +tor-0.2.9.5_alpha.ebuild:
+  version bump to 0.2.9.5_alpha, remove 0.2.9.4_alpha
+
+  Package-Manager: portage-2.3.0
+
+  10 Nov 2016; Markus Meier <maekke@gentoo.org> tor-0.2.8.9.ebuild:
+  arm stable, bug #597394
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

@@ -71,3 +71,13 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  19 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to bug #143241
+
+  Package-Manager: portage-2.3.0
+
+  30 Oct 2016; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
+  Handover the package
+
+  Package-Manager: portage-2.3.2
+

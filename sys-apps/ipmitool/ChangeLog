@@ -68,3 +68,61 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*ipmitool-1.8.16 (25 Apr 2016)
+
+  25 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> +ipmitool-1.8.16.ebuild:
+  Bump to version 1.8.16
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  25 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> -ipmitool-1.8.11.ebuild,
+  -ipmitool-1.8.11-r1.ebuild, -ipmitool-1.8.14.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/ipmitool-1.8.9-ipmievd.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*ipmitool-1.8.17 (31 Jul 2016)
+
+  31 Jul 2016; Lars Wendler <polynomial-c@gentoo.org> +ipmitool-1.8.17.ebuild:
+  Bump to version 1.8.17
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  28 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  ipmitool-1.8.14-r1.ebuild, ipmitool-1.8.16.ebuild, ipmitool-1.8.17.ebuild:
+  Added sys-libs/readline to RDEPEND (thanks to Whissi).
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*ipmitool-1.8.18 (17 Oct 2016)
+
+  17 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> +ipmitool-1.8.18.ebuild:
+  Bump to version 1.8.18
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  17 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> -ipmitool-1.8.16.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*ipmitool-1.8.18-r1 (17 Oct 2016)
+*ipmitool-1.8.17-r1 (17 Oct 2016)
+
+  17 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  -ipmitool-1.8.17.ebuild, +ipmitool-1.8.17-r1.ebuild,
+  -ipmitool-1.8.18.ebuild, +ipmitool-1.8.18-r1.ebuild:
+  add libressl support
+
+  Package-Manager: portage-2.2.28
+

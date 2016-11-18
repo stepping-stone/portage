@@ -265,3 +265,251 @@
 
   Package-Manager: portage-2.2.26
 
+*git-sources-4.5_rc6 (28 Feb 2016)
+
+  28 Feb 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.5_rc6.ebuild:
+  Linux patch 4.5_rc6
+
+  Package-Manager: portage-2.2.26
+
+*git-sources-4.5_rc7 (07 Mar 2016)
+
+  07 Mar 2016; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.5_rc7.ebuild:
+  Automated version bump to 4.5_rc7
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*git-sources-4.6_rc1 (27 Mar 2016)
+
+  27 Mar 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.6_rc1.ebuild:
+  Linux patch 4.6_rc1
+
+  Package-Manager: portage-2.2.26
+
+  28 Mar 2016; Mike Pagano <mpagano@gentoo.org> -git-sources-4.5_rc1.ebuild,
+  -git-sources-4.5_rc2.ebuild, -git-sources-4.5_rc3.ebuild,
+  -git-sources-4.5_rc4.ebuild, -git-sources-4.5_rc5.ebuild,
+  -git-sources-4.5_rc6.ebuild, -git-sources-4.5_rc7.ebuild:
+  Remove 4.5_rcX
+
+  Package-Manager: portage-2.2.26
+
+*git-sources-4.6_rc2 (03 Apr 2016)
+
+  03 Apr 2016; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.6_rc2.ebuild:
+  Automated version bump to 4.6_rc2
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*git-sources-4.6_rc3 (11 Apr 2016)
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.6_rc3.ebuild:
+  Automated version bump to 4.6_rc3
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*git-sources-4.6_rc4 (18 Apr 2016)
+
+  18 Apr 2016; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.6_rc4.ebuild:
+  Automated version bump to 4.6_rc4
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*git-sources-4.6_rc5 (25 Apr 2016)
+
+  25 Apr 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.6_rc5.ebuild:
+  Linux patch 4.6_rc5
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.6_rc6 (02 May 2016)
+
+  02 May 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.6_rc6.ebuild:
+  Linux patch 4.6_rc6
+
+  Package-Manager: portage-2.2.26
+
+*git-sources-4.6_rc7 (08 May 2016)
+
+  08 May 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.6_rc7.ebuild:
+  Linux patch 4.6_rc7
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.7_rc1 (30 May 2016)
+
+  30 May 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.7_rc1.ebuild:
+  Linux patch 4.7_rc1
+
+  Package-Manager: portage-2.2.28
+
+  30 May 2016; Mike Pagano <mpagano@gentoo.org> -git-sources-4.6_rc1.ebuild,
+  -git-sources-4.6_rc2.ebuild, -git-sources-4.6_rc3.ebuild,
+  -git-sources-4.6_rc4.ebuild, -git-sources-4.6_rc5.ebuild,
+  -git-sources-4.6_rc6.ebuild, -git-sources-4.6_rc7.ebuild:
+  Removal of the 4.6 series
+
+  Package-Manager: portage-2.2.28
+
+  30 May 2016; Mike Pagano <mpagano@gentoo.org> git-sources-4.7_rc1.ebuild:
+  Fix K_BASE_VER
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.7_rc2 (05 Jun 2016)
+
+  05 Jun 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.7_rc2.ebuild:
+  Linux patch 4.7_rc2
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.7_rc3 (13 Jun 2016)
+
+  13 Jun 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.7_rc3.ebuild:
+  Linux patch 4.7_rc3
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.7_rc4 (20 Jun 2016)
+
+  20 Jun 2016; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.7_rc4.ebuild:
+  Automated version bump to 4.7_rc4
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*git-sources-4.7_rc5 (27 Jun 2016)
+
+  27 Jun 2016; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.7_rc5.ebuild:
+  Automated version bump to 4.7_rc5
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*git-sources-4.7_rc6 (04 Jul 2016)
+
+  04 Jul 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.7_rc6.ebuild:
+  Linux patch 4.7_rc6
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.7_rc7 (11 Jul 2016)
+
+  11 Jul 2016; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.7_rc7.ebuild:
+  Automated version bump to 4.7_rc7
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*git-sources-4.8_rc1 (08 Aug 2016)
+
+  08 Aug 2016; Mike Pagano <mpagano@gentoo.org> -git-sources-4.7_rc1.ebuild,
+  -git-sources-4.7_rc2.ebuild, -git-sources-4.7_rc3.ebuild,
+  -git-sources-4.7_rc4.ebuild, -git-sources-4.7_rc5.ebuild,
+  -git-sources-4.7_rc6.ebuild, -git-sources-4.7_rc7.ebuild,
+  +git-sources-4.8_rc1.ebuild:
+  Linux patch 4.8 rc1. Removal of old version.
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.8_rc2 (15 Aug 2016)
+
+  15 Aug 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.8_rc2.ebuild:
+  Linux patch 4.8-rc2
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.8_rc3 (21 Aug 2016)
+
+  21 Aug 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.8_rc3.ebuild:
+  Linux patch 4.8-rc3
+
+  Package-Manager: portage-2.2.28
+
+  22 Aug 2016; Joshua Kinard <kumba@gentoo.org> git-sources-4.8_rc1.ebuild,
+  git-sources-4.8_rc2.ebuild, git-sources-4.8_rc3.ebuild:
+  Use new 'K_FROM_GIT' var added to kernel-2.eclass.
+
+  Signed-off-by: Joshua Kinard <kumba@gentoo.org>
+  Acked-by: Mike Pagano <mpagano@gentoo.org>
+
+  Package-Manager: portage-2.3.0
+
+*git-sources-4.8_rc4 (28 Aug 2016)
+
+  28 Aug 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.8_rc4.ebuild:
+  Linux patch 4.8-rc4
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.8_rc5 (05 Sep 2016)
+
+  05 Sep 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.8_rc5.ebuild:
+  Linux patch 4.8-rc5
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.8_rc6 (12 Sep 2016)
+
+  12 Sep 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.8_rc6.ebuild:
+  Linux patch 4.8-rc6
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.8_rc7 (19 Sep 2016)
+
+  19 Sep 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.8_rc7.ebuild:
+  Linux patch 4.8_rc7
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.8_rc8 (26 Sep 2016)
+
+  26 Sep 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.8_rc8.ebuild:
+  Linux patch 4.8-rc8
+
+  Package-Manager: portage-2.2.28
+
+*git-sources-4.9_rc1 (15 Oct 2016)
+
+  15 Oct 2016; Mike Pagano <mpagano@gentoo.org> -git-sources-4.8_rc1.ebuild,
+  -git-sources-4.8_rc2.ebuild, -git-sources-4.8_rc3.ebuild,
+  -git-sources-4.8_rc4.ebuild, -git-sources-4.8_rc5.ebuild,
+  -git-sources-4.8_rc6.ebuild, -git-sources-4.8_rc7.ebuild,
+  -git-sources-4.8_rc8.ebuild, +git-sources-4.9_rc1.ebuild:
+  Linux development version 4.9_rc1. Cleanup old kernels.
+
+  Package-Manager: portage-2.3.0
+
+*git-sources-4.9_rc2 (25 Oct 2016)
+
+  25 Oct 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.9_rc2.ebuild:
+  sys-kernel/git-ources: Linux patch 4.9 rc2
+
+  Package-Manager: portage-2.3.0
+
+*git-sources-4.9_rc3 (30 Oct 2016)
+
+  30 Oct 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.9_rc3.ebuild:
+  Linux patch 4.9-rc3
+
+  Package-Manager: portage-2.3.0
+
+*git-sources-4.9_rc4 (06 Nov 2016)
+
+  06 Nov 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.9_rc4.ebuild:
+  Linux patch 4.9-rc4
+
+  Package-Manager: portage-2.3.0
+
+*git-sources-4.9_rc5 (13 Nov 2016)
+
+  13 Nov 2016; Mike Pagano <mpagano@gentoo.org> +git-sources-4.9_rc5.ebuild:
+  Linux patch 4.9-rc5
+
+  Package-Manager: portage-2.3.0
+

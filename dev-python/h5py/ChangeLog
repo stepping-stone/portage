@@ -80,3 +80,21 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*h5py-2.6.0 (19 Aug 2016)
+
+  19 Aug 2016; Benda Xu <heroxbd@gentoo.org> +h5py-2.6.0.ebuild:
+  version bump.
+
+  Package-Manager: portage-2.3.0
+
+  03 Sep 2016; Mike Gilbert <floppym@gentoo.org> h5py-2.6.0.ebuild:
+  drop rm -r _build || die
+
+  Bug: https://bugs.gentoo.org/591736
+
+  Package-Manager: portage-2.3.0_p24
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> h5py-2.3.1.ebuild,
+  h5py-2.4.0.ebuild, h5py-2.5.0.ebuild, h5py-2.6.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

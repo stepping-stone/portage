@@ -8,17 +8,17 @@
 	</maintainer>
 	<maintainer type="person">
 		<email>lists@xunil.at</email>
-		<description>Proxied developer. Please CC on bugs.</description>
 		<name>Stefan G. Weichinger</name>
+		<description>Proxied developer</description>
+	</maintainer>
+	<maintainer type="project">
+		<email>proxy-maint@gentoo.org</email>
+		<name>Proxy Maintainers</name>
 	</maintainer>
 	<maintainer type="person">
 		<email>dustin@v.igoro.us</email>
 		<description>Upstream. Please CC on bugs.</description>
 		<name>Dustin J. Mitchell</name>
-	</maintainer>
-	<maintainer type="project">
-		<email>proxy-maint@gentoo.org</email>
-		<name>Proxy Maintainers</name>
 	</maintainer>
 	<use>
 		<flag name="xfs">Support for backing up raw XFS filesystems using xfsdump</flag>

@@ -117,3 +117,106 @@
 
   Package-Manager: portage-2.2.26
 
+*p7zip-15.14 (14 Mar 2016)
+
+  14 Mar 2016; Matthew Thode <prometheanfire@gentoo.org> +p7zip-15.14.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+  14 Mar 2016; Patrick Lauer <patrick@gentoo.org> p7zip-15.14.ebuild:
+  Remove unneeded/broken patching
+
+  Package-Manager: portage-2.2.28
+
+  26 Mar 2016; Fabian Groffen <grobian@gentoo.org>
+  +files/p7zip-15.14-darwin.patch, p7zip-15.14.ebuild:
+  fix compilation on Darwin, bug #577344
+
+  Package-Manager: portage-2.2.28-prefix
+
+  28 Mar 2016; Fabian Groffen <grobian@gentoo.org>
+  files/p7zip-15.14-darwin.patch:
+  fix compilation on OSX El Capitan also, bug #577344
+
+  Package-Manager: portage-2.2.28-prefix
+
+*p7zip-15.14.1 (10 Apr 2016)
+
+  10 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +p7zip-15.14.1.ebuild:
+  bup for bug 579196
+
+  Package-Manager: portage-2.2.26
+
+  10 Apr 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +files/p7zip-15.14.1-darwin.patch:
+  Added missing darwin patch (bug #579482).
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> p7zip-15.14.1.ebuild:
+  amd64 stable wrt bug #582364
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  03 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/p7zip-9.20.1-long_rar_pwd.patch:
+  remove unused patch
+
+  Closes: https://github.com/gentoo/gentoo/pull/1812
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*p7zip-16.02 (15 Jul 2016)
+
+  15 Jul 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +files/p7zip-16.02-darwin.patch, +p7zip-16.02.ebuild:
+  bup for bug 582832
+
+  Package-Manager: portage-2.2.28
+
+  15 Jul 2016; Lars Wendler <polynomial-c@gentoo.org> p7zip-16.02.ebuild:
+  Fixed installation of manual.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*p7zip-16.02-r1 (25 Jul 2016)
+
+  25 Jul 2016; Matthew Thode <prometheanfire@gentoo.org>
+  files/p7zip-16.02-darwin.patch, -p7zip-16.02.ebuild, +p7zip-16.02-r1.ebuild:
+  Drop kdelibs (R)DEPEND, sort DEPEND/IUSE, EAPI=6
+
+  kde-base/kdelibs:4 is not required here as p7zip only (manually) installs
+  a bunch of desktop files that may or may not be picked up by applications.
+  wxGTK[X] is already enforced by REQUIRED_USE, so there is no reason
+  to duplicate that.
+
+  Reversed symlink logic for ServiceMenu as kservices5 is here to stay and
+  kde4/services is deprecated.
+
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Matthew Thode <prometheanfire@gentoo.org>
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org>
+  files/p7zip-15.09-CVE-2015-1038.patch,
+  files/p7zip-9.20.1-CVE-2015-1038.patch,
+  files/p7zip-9.38.1-CVE-2015-1038.patch:
+  sourceforge: switch to https:// URIs
+
+  01 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  p7zip-16.02-r1.ebuild:
+  remove unneeded eclasses bug 595802
+
+  Package-Manager: portage-2.3.0
+
+  15 Nov 2016; Tobias Klausmann <klausman@gentoo.org> p7zip-16.02-r1.ebuild:
+  16.02-r1: stable on alpha
+
+  Gentoo-Bug: 593986
+

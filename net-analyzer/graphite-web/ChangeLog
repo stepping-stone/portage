@@ -67,3 +67,24 @@
 
   Package-Manager: portage-2.2.26
 
+*graphite-web-0.9.13-r3 (11 Apr 2016)
+
+  11 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +graphite-web-0.9.13-r3.ebuild, metadata.xml:
+  update for bug 556732
+
+  Package-Manager: portage-2.2.26
+
+  27 Apr 2016; Fabian Groffen <grobian@gentoo.org>
+  -graphite-web-0.9.13-r1.ebuild, -graphite-web-0.9.13-r2.ebuild,
+  graphite-web-0.9.13-r3.ebuild:
+  add dep on django, for it doesn't work with 1.9
+
+  Package-Manager: portage-2.2.26
+
+  03 May 2016; Patrick Lauer <patrick@gentoo.org>
+  graphite-web-0.9.13-r3.ebuild:
+  Fix wording in pkg_postinst
+
+  Package-Manager: portage-2.2.28
+

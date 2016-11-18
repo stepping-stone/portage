@@ -38,3 +38,29 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  fasteners-0.13.0.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  fasteners-0.13.0.ebuild:
+  adding python35 support
+
+  Package-Manager: portage-2.2.26
+
+*fasteners-0.14.1 (29 Oct 2016)
+
+  29 Oct 2016; Sébastien Fabbro <bicatali@gentoo.org>
+  +fasteners-0.14.1.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> fasteners-0.13.0.ebuild,
+  fasteners-0.14.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

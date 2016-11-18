@@ -4,7 +4,7 @@
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
-use test && PYTHON_REQ_USE="ipv6"
+PYTHON_REQ_USE="ipv6(+)?"
 
 inherit eutils confutils autotools bash-completion-r1 python-single-r1 versionator pax-utils
 
@@ -35,7 +35,8 @@ HOMEPAGE="https://code.google.com/p/ganeti/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="drbd haskell-daemons htools ipv6 kvm lxc monitoring multiple-users rbd syslog test xen"
-REQUIRED_USE="|| ( kvm xen lxc )"
+REQUIRED_USE="|| ( kvm xen lxc )
+	test? ( ipv6 )"
 
 USER_PREFIX="${GANETI_USER_PREFIX:-"gnt-"}"
 GROUP_PREFIX="${GANETI_GROUP_PREFIX:-"${USER_PREFIX}"}"
@@ -195,7 +196,10 @@ src_install () {
 	insinto /etc/logrotate.d
 	newins doc/examples/ganeti.logrotate ${PN}
 
-	keepdir /var/{lib,log}/${PN}/
+	# need to dodir rather than keepdir here (bug #552482)
+	dodir /var/lib/${PN}
+
+	keepdir /var/log/${PN}/
 	keepdir /usr/share/${PN}/${SERIES}/os/
 	keepdir /var/lib/ganeti-storage/{export,file,shared}/
 

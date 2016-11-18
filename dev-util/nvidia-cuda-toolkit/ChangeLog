@@ -126,3 +126,27 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  20 Apr 2016; Ian Stakenvicius <axs@gentoo.org> metadata.xml:
+  fix <pkg/> references in metadata.xml
+
+  Package-Manager: portage-2.2.26
+
+*nvidia-cuda-toolkit-8.0.44 (26 Oct 2016)
+
+  26 Oct 2016; David Seifert <soap@gentoo.org>
+  +nvidia-cuda-toolkit-8.0.44.ebuild:
+  Version bumpt to 8.0.44
+
+  Gentoo-bug: 595366
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/2445
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  27 Oct 2016; Mikhail Pukhlikov <cynede@gentoo.org>
+  nvidia-cuda-toolkit-8.0.44.ebuild:
+  unlock gcc 5.4
+
+  Package-Manager: portage-2.3.2
+

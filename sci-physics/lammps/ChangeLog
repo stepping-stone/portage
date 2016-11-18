@@ -289,3 +289,79 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+*lammps-20160301 (13 Apr 2016)
+
+  13 Apr 2016; Nicolas Bock <nicolasbock@gentoo.org>
+  +files/lammps-python3-r2.patch, +lammps-20160301.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.26
+
+*lammps-20160310 (14 Apr 2016)
+
+  14 Apr 2016; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20160310.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.26
+
+*lammps-20160314 (15 Apr 2016)
+
+  15 Apr 2016; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20160314.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.26
+
+  15 Apr 2016; Nicolas Bock <nicolasbock@gentoo.org> -lammps-20150904.ebuild,
+  -lammps-20150909.ebuild, -lammps-20150911.ebuild, -lammps-20150924.ebuild,
+  -lammps-20151005.ebuild, -lammps-20151022.ebuild, -lammps-20151023.ebuild,
+  -lammps-20151026.ebuild, -lammps-20151031.ebuild:
+  Cleanup, removing old versions
+
+  Package-Manager: portage-2.2.26
+
+*lammps-20160321 (15 Apr 2016)
+
+  15 Apr 2016; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20160321.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.26
+
+*lammps-20160407 (18 Apr 2016)
+
+  18 Apr 2016; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20160407.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.26
+
+*lammps-20160216 (19 Apr 2016)
+
+  19 Apr 2016; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20160216.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.26
+
+*lammps-20160730 (06 Oct 2016)
+
+  06 Oct 2016; Nicolas Bock <nicolasbock@gentoo.org> +files/fm_exp.patch,
+  +lammps-20160730.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  13 Oct 2016; Nicolas Bock <nicolasbock@gentoo.org> +files/gcc-6.patch,
+  lammps-20160407.ebuild:
+  Fix for gcc-6 (Bug 595728)
+
+  Added patch written by Peter Levine <plevine457@gmail.com>
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> lammps-20150515.ebuild,
+  lammps-20150515-r1.ebuild, lammps-20150810.ebuild, lammps-20151106.ebuild,
+  lammps-20151120.ebuild, lammps-20151207.ebuild, lammps-20151208.ebuild,
+  lammps-20151209.ebuild, lammps-20151211.ebuild, lammps-20160115.ebuild,
+  lammps-20160122.ebuild, lammps-20160216.ebuild, lammps-20160301.ebuild,
+  lammps-20160310.ebuild, lammps-20160314.ebuild, lammps-20160321.ebuild,
+  lammps-20160407.ebuild, lammps-20160730.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

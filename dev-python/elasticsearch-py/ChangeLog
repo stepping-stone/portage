@@ -169,3 +169,98 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*elasticsearch-py-2.3.0 (17 Mar 2016)
+
+  17 Mar 2016; Patrick Lauer <patrick@gentoo.org>
+  +elasticsearch-py-2.3.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.28
+
+  18 Mar 2016; Patrick Lauer <patrick@gentoo.org>
+  elasticsearch-py-2.3.0.ebuild:
+  Fix tarball, restrict tests
+
+  Package-Manager: portage-2.2.28
+
+  18 Apr 2016; Ian Delaney <idella4@gentoo.org> elasticsearch-py-2.2.0.ebuild,
+  elasticsearch-py-2.3.0.ebuild:
+  Do not use banned EXAMPLES in EAPI 6
+
+  Package-Manager: portage-2.2.26
+  Closes: https://github.com/gentoo/gentoo/pull/1299
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #390951
+
+  Package-Manager: portage-2.3.0_rc1
+
+  23 Aug 2016; David Seifert <soap@gentoo.org> metadata.xml:
+  remove maintainer description
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2102
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  23 Aug 2016; David Seifert <soap@gentoo.org> -elasticsearch-py-1.5.0.ebuild,
+  -elasticsearch-py-1.6.0.ebuild, -elasticsearch-py-1.8.0.ebuild,
+  -elasticsearch-py-1.9.0.ebuild, -elasticsearch-py-2.1.0.ebuild,
+  -elasticsearch-py-2.2.0.ebuild:
+  drop old
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2102
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  23 Aug 2016; David Seifert <soap@gentoo.org> elasticsearch-py-2.3.0.ebuild:
+  drop mips
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2102
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*elasticsearch-py-2.4.0 (23 Aug 2016)
+
+  23 Aug 2016; David Seifert <soap@gentoo.org> +elasticsearch-py-2.4.0.ebuild:
+  bump to 2.4.0
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2102
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  30 Aug 2016; David Seifert <soap@gentoo.org> elasticsearch-py-2.4.0.ebuild:
+  restore python 3.3
+
+  Package-Manager: portage-2.3.0
+
+  02 Sep 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Fix maintainers
+
+  Package-Manager: portage-2.3.0
+
+  02 Oct 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  add proxy-maint back as a maintainer
+
+  Please do not remove projects/developers from the metadata without
+  consulting them first. Thank you!
+
+  Package-Manager: portage-2.3.0
+
+*elasticsearch-py-5.0.0 (28 Oct 2016)
+
+  28 Oct 2016; Patrick Lauer <patrick@gentoo.org>
+  +elasticsearch-py-5.0.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> elasticsearch-py-1.4.0.ebuild,
+  elasticsearch-py-2.4.0.ebuild, elasticsearch-py-5.0.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

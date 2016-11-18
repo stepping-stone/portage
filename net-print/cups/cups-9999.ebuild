@@ -200,6 +200,7 @@ multilib_src_configure() {
 		$(use_enable dbus) \
 		$(use_enable debug) \
 		$(use_enable debug debug-guards) \
+		$(use_enable debug debug-printfs) \
 		$(multilib_native_use_with java) \
 		$(use_enable kerberos gssapi) \
 		$(multilib_native_use_enable pam) \
@@ -287,14 +288,14 @@ multilib_src_install_all() {
 	keepdir /usr/libexec/cups/driver /usr/share/cups/{model,profiles} \
 		/var/log/cups /var/spool/cups/tmp
 
-	keepdir /etc/cups/{interfaces,ppd,ssl}
+	keepdir /etc/cups/{ppd,ssl}
 
 	use X || rm -r "${ED}"/usr/share/applications
 
 	# create /etc/cups/client.conf, bug #196967 and #266678
 	echo "ServerName ${EPREFIX}/run/cups/cups.sock" >> "${ED}"/etc/cups/client.conf
 
-	# the following file iw now provided by cups-filters:
+	# the following file is now provided by cups-filters:
 	rm -r "${ED}"/usr/share/cups/banners || die
 
 	# the following are created by the init script

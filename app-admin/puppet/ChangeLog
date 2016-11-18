@@ -137,3 +137,85 @@
 
   Package-Manager: portage-2.2.26
 
+*puppet-4.4.0 (18 Mar 2016)
+
+  18 Mar 2016; Matthew Thode <prometheanfire@gentoo.org> +puppet-4.4.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+*puppet-4.4.1 (25 Mar 2016)
+
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org> -puppet-4.4.0.ebuild,
+  +puppet-4.4.1.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+*puppet-4.4.2 (27 Apr 2016)
+*puppet-3.8.7 (27 Apr 2016)
+
+  27 Apr 2016; Matthew Thode <prometheanfire@gentoo.org> +puppet-3.8.7.ebuild,
+  +puppet-4.4.2.ebuild:
+  bup, also for bug 581372
+
+  Package-Manager: portage-2.2.26
+
+  27 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -puppet-4.0.0-r3.ebuild, -puppet-4.1.0-r1.ebuild, -puppet-4.2.1-r1.ebuild,
+  -puppet-4.2.2-r1.ebuild, -puppet-4.4.1.ebuild:
+  remove badness
+
+  Package-Manager: portage-2.2.26
+
+  28 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +files/puppet-fix-tests-4.4.2.patch, puppet-4.4.2.ebuild:
+  fix patch for bug 581428
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/puppet.init,
+  files/puppet.init-4.x, files/puppet.init-r1, files/puppetmaster.init,
+  files/puppetmaster.init-4.x, files/puppetmaster.init-r1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  29 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/puppet-fix-tests-4.x.patch, -files/puppet-openrc-status-fix.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/1790
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  10 Oct 2016; Jeroen Roovers <jer@gentoo.org> puppet-3.8.7.ebuild:
+  Stable for HPPA (bug #575610).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*puppet-4.7.0 (11 Oct 2016)
+
+  11 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +files/puppet-fix-tests-4.7.0.patch, +puppet-4.7.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+
+*puppet-3.8.7-r1 (31 Oct 2016)
+
+  31 Oct 2016; Hans de Graaff <graaff@gentoo.org> +puppet-3.8.7-r1.ebuild:
+  add ruby22
+
+  Package-Manager: portage-2.3.0
+
+  13 Nov 2016; Hans de Graaff <graaff@gentoo.org> -puppet-3.8.1-r1.ebuild,
+  -puppet-3.8.2.ebuild, -puppet-3.8.3.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+
+  13 Nov 2016; Hans de Graaff <graaff@gentoo.org> puppet-3.8.7.ebuild:
+  amd64 stable, bug 575610
+
+  Package-Manager: portage-2.3.0
+

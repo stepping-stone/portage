@@ -178,3 +178,93 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  sqlalchemy-1.0.9.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  sqlalchemy-1.0.12.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+*sqlalchemy-1.0.14 (25 Jul 2016)
+
+  25 Jul 2016; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-1.0.14.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+*sqlalchemy-1.0.15 (01 Oct 2016)
+
+  01 Oct 2016; Patrick Lauer <patrick@gentoo.org> +sqlalchemy-1.0.15.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+*sqlalchemy-1.1.2 (24 Oct 2016)
+
+  24 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +sqlalchemy-1.1.2.ebuild:
+  Bump to version 1.1.2
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  24 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -files/sqlalchemy-0.7-logging.handlers.patch, -sqlalchemy-0.7.10.ebuild,
+  -sqlalchemy-1.0.9.ebuild, -sqlalchemy-1.0.10.ebuild,
+  -sqlalchemy-1.0.11.ebuild, -sqlalchemy-1.0.14.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*sqlalchemy-1.0.14 (24 Oct 2016)
+*sqlalchemy-1.0.11 (24 Oct 2016)
+*sqlalchemy-1.0.10 (24 Oct 2016)
+*sqlalchemy-1.0.9 (24 Oct 2016)
+*sqlalchemy-0.7.10 (24 Oct 2016)
+
+  24 Oct 2016; Mike Gilbert <floppym@gentoo.org>
+  +files/sqlalchemy-0.7-logging.handlers.patch, +sqlalchemy-0.7.10.ebuild,
+  +sqlalchemy-1.0.9.ebuild, +sqlalchemy-1.0.10.ebuild,
+  +sqlalchemy-1.0.11.ebuild, +sqlalchemy-1.0.14.ebuild:
+  Revert "dev-python/sqlalchemy: Removed old."
+
+  This reverts commit 00379ec116760089ae33535a250f5b4c1733332d.
+
+*sqlalchemy-1.1.3 (31 Oct 2016)
+
+  31 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +sqlalchemy-1.1.3.ebuild:
+  Bump to version 1.1.3
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  01 Nov 2016; Mike Gilbert <floppym@gentoo.org> -sqlalchemy-1.0.8.ebuild,
+  -sqlalchemy-1.0.9.ebuild, -sqlalchemy-1.0.10.ebuild,
+  -sqlalchemy-1.0.11.ebuild, -sqlalchemy-1.0.14.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.2_p1
+
+  01 Nov 2016; Mike Gilbert <floppym@gentoo.org> sqlalchemy-0.7.10.ebuild:
+  drop firebird support
+
+  Package-Manager: portage-2.3.2_p1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> sqlalchemy-0.9.8.ebuild,
+  sqlalchemy-1.0.12.ebuild, sqlalchemy-1.0.15.ebuild, sqlalchemy-1.1.2.ebuild,
+  sqlalchemy-1.1.3.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  sqlalchemy-1.0.15.ebuild:
+  1.0.15 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

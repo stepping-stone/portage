@@ -105,3 +105,70 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --ignore-arches
 
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> privoxy-3.0.24.ebuild:
+  x86 stable wrt bug #572584
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> privoxy-3.0.24.ebuild:
+  ppc stable wrt bug #572584
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> privoxy-3.0.24.ebuild:
+  sparc stable wrt bug #572584
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Andrew Savchenko <bircoph@gentoo.org> -privoxy-3.0.23.ebuild:
+  drop old vulnerable version
+
+  Bug: 572584
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+  13 Apr 2016; Andrew Savchenko <bircoph@gentoo.org> privoxy-3.0.24.ebuild:
+  fix bug 579756
+
+  Warn if threads are disabled, as this mays slow down privoxy significantly.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+*privoxy-3.0.24-r1 (22 Apr 2016)
+
+  22 Apr 2016; Andrew Savchenko <bircoph@gentoo.org> +files/privoxy.initd-2,
+  +privoxy-3.0.24-r1.ebuild:
+  honor multiple instances for ebegin/eend
+
+  Use ${SVCNAME} for ebegin/eend messages, see bug 580278.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+*privoxy-3.0.24-r2 (26 Apr 2016)
+
+  26 Apr 2016; Andrew Savchenko <bircoph@gentoo.org> +files/privoxy.initd-3,
+  +privoxy-3.0.24-r2.ebuild:
+  unloosing net dependency
+
+  use net is sufficient and required in some use cases
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/privoxy.initd,
+  files/privoxy.initd-2, files/privoxy.initd-3:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org> privoxy-3.0.24.ebuild,
+  privoxy-3.0.24-r1.ebuild, privoxy-3.0.24-r2.ebuild:
+  sourceforge: switch to https:// URIs
+

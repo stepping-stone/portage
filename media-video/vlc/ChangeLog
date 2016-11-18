@@ -224,3 +224,142 @@
 
   Package-Manager: portage-2.2.26
 
+  11 Mar 2016; Ian Delaney <idella4@gentoo.org> vlc-9999.ebuild:
+  update the live ebuild
+
+  Add IUSE gstreamer, rm IUSE macosx-dialog-provider,
+  add dep media-libs/gst-plugins-base set behind IUSE gstreamer,
+  take out call to epatch_user,
+  patch to live ebuild submitted by attachment in the gentoo bug
+
+  Gentoo bug: #Bug 571568
+
+  Package-Manager: portage-2.2.26
+
+  11 Mar 2016; Ian Delaney <idella4@gentoo.org> vlc-2.2.9999.ebuild:
+  update vlc-2.2.9999 ebuild
+
+  Add IUSE gstreamer, add dep media-libs/gst-plugins-base
+  set behind IUSE gstreamer, allow QT5.5,
+  patch to live ebuild submitted by attachment in the gentoo bug
+
+  Gentoo bug: #Bug 571568
+
+  Package-Manager: portage-2.2.26
+
+  11 Mar 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Add IUSE gstreamer, zeroconf to metadata.xml
+
+  patch to live ebuild submitted by attachment in the gentoo bug
+
+  Gentoo bug: #Bug 571568
+
+  Package-Manager: portage-2.2.26
+
+  19 Apr 2016; Ian Stakenvicius <axs@gentoo.org> metadata.xml:
+  fix <pkg/> reference in metadata.xml
+
+  Package-Manager: portage-2.2.26
+
+*vlc-2.2.3 (24 May 2016)
+
+  24 May 2016; Lars Wendler <polynomial-c@gentoo.org> +vlc-2.2.3.ebuild:
+  Bump to version 2.2.3 (bug #582662).
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*vlc-2.2.4 (21 Jul 2016)
+
+  21 Jul 2016; Lars Wendler <polynomial-c@gentoo.org> +vlc-2.2.4.ebuild:
+  Security bump to version 2.2.4
+
+  Bugs #584510 and #585642
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  21 Jul 2016; Lars Wendler <polynomial-c@gentoo.org> -vlc-2.2.2.ebuild,
+  -vlc-2.2.3.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  24 Jul 2016; Amy Winston <amynka@gentoo.org> vlc-2.2.1-r1.ebuild,
+  vlc-2.2.4.ebuild, vlc-2.2.9999.ebuild, vlc-9999.ebuild:
+  fix compiler type check
+
+  Package-Manager: portage-2.2.28
+
+  24 Jul 2016; Jeroen Roovers <jer@gentoo.org> vlc-2.2.4.ebuild:
+  Stable for PPC64 (bug #584510).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  24 Jul 2016; Amy Winston <amynka@gentoo.org> vlc-2.2.1-r1.ebuild,
+  vlc-2.2.4.ebuild, vlc-2.2.9999.ebuild, vlc-9999.ebuild:
+  Revert "media-video/vlc: fix compiler type check"
+
+  This reverts commit d8bdcbc565535962f5579c4693784b1ee1547525.
+
+  25 Jul 2016; Amy Winston <amynka@gentoo.org> vlc-2.2.1-r1.ebuild,
+  vlc-2.2.4.ebuild, vlc-2.2.9999.ebuild, vlc-9999.ebuild:
+  fix compiler type check
+
+  Package-Manager: portage-2.2.28
+
+  28 Jul 2016; Agostino Sarubbo <ago@gentoo.org> vlc-2.2.4.ebuild:
+  amd64 stable wrt bug #584510
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  28 Jul 2016; Agostino Sarubbo <ago@gentoo.org> vlc-2.2.4.ebuild:
+  x86 stable wrt bug #584510
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  01 Aug 2016; Mike Gilbert <floppym@gentoo.org> vlc-2.2.1-r1.ebuild,
+  vlc-2.2.4.ebuild:
+  depend on <net-misc/freerdp-2
+
+  Bug: https://bugs.gentoo.org/590164
+  Package-Manager: portage-2.3.0_p16
+
+  11 Aug 2016; Lars Wendler <polynomial-c@gentoo.org> vlc-2.2.1-r1.ebuild,
+  vlc-2.2.4.ebuild, vlc-2.2.9999.ebuild, vlc-9999.ebuild:
+  Added sub-slot dep for media-libs/libvpx.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  02 Sep 2016; Alexis Ballier <aballier@gentoo.org>
+  +files/vlc-2.2.4-ffmpeg3.patch, +files/vlc-2.2.4-relax_ffmpeg.patch,
+  vlc-2.2.4.ebuild:
+  add patches to build with ffmpeg3, bug #574788
+
+  Package-Manager: portage-2.3.0
+
+  02 Oct 2016; Pacho Ramos <pacho@gentoo.org> vlc-2.2.9999.ebuild:
+  Use zeroconf instead of avahi USE flag (#477620)
+
+  Package-Manager: portage-2.3.1
+
+  21 Oct 2016; Amy Winston <amynka@gentoo.org> vlc-9999.ebuild:
+  fix bug #593228 by Nick Andrade
+
+  1. Removing unneeded USE flags: macosx-quartztext & media-library
+  2. Updating RDEPEND: bluray, dvbpsi, gcrypt, gnutls, jack, postproc, qt5,
+  vaapi, & zvbi
+  3. Updating DEPEND: gettext
+  4. Updating econf by removing: --disable-macosx-quartztext (unused),
+  --disable-quicktime (no longer needed), & --enable-mkv (now auto detected)
+  5. Require -std=c++11 due to upstream change
+
+  Package-Manager: portage-2.2.28
+

@@ -77,3 +77,28 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*webrobots-0.1.2 (13 Mar 2016)
+
+  13 Mar 2016; Hans de Graaff <graaff@gentoo.org> +webrobots-0.1.2.ebuild:
+  add 0.1.2
+
+  Drop ppc, x86 keywords due to missing webmock keywords, bug 563858
+
+  Package-Manager: portage-2.2.26
+
+  10 Apr 2016; Manuel Rüger <mrueg@gentoo.org> webrobots-0.1.1-r1.ebuild,
+  webrobots-0.1.1-r2.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Hans de Graaff <graaff@gentoo.org> webrobots-0.1.1-r2.ebuild:
+  mark ruby21 revision stable
+
+  Package-Manager: portage-2.2.26
+
+  21 Apr 2016; Hans de Graaff <graaff@gentoo.org> -webrobots-0.1.1-r1.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.26
+

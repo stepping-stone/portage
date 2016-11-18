@@ -105,3 +105,77 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*postgis-2.2.1 (27 Feb 2016)
+
+  27 Feb 2016; Patrick Lauer <patrick@gentoo.org> +postgis-2.2.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+*postgis-2.2.2 (27 Mar 2016)
+
+  27 Mar 2016; Sam Jorna <wraeth@gentoo.org> +postgis-2.2.2.ebuild:
+  bump to 2.2.2
+
+  Package-Manager: portage-2.2.28
+
+  27 Mar 2016; Sam Jorna <wraeth@gentoo.org> postgis-9999.ebuild:
+  fix 9999 build
+
+  Package-Manager: portage-2.2.28
+
+  27 Mar 2016; Sam Jorna <wraeth@gentoo.org> -files/postgis-1.5-ldflags.patch,
+  -files/postgis_dbs-1.4:
+  remove unneeded patches
+
+  Package-Manager: portage-2.2.28
+
+  17 Jun 2016; Amy Winston <amynka@gentoo.org> postgis-2.1.1.ebuild,
+  postgis-2.1.8.ebuild, postgis-2.2.0.ebuild, postgis-2.2.1.ebuild,
+  postgis-2.2.2.ebuild, postgis-9999.ebuild:
+  Add subslot operator for sci-libs/gdal
+
+  Package-Manager: portage-2.2.28
+
+  17 Jun 2016; Amy Winston <amynka@gentoo.org> metadata.xml:
+  metadata.xml indentation
+
+  Closes: #1655
+  Package-Manager: portage-2.2.28
+
+  17 Jun 2016; Amy Winston <amynka@gentoo.org> -postgis-2.0.3.ebuild,
+  -postgis-2.0.6.ebuild:
+  remove old versions
+
+  Package-Manager: portage-2.2.28
+
+  30 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/postgis-2.0-ldflags.patch, -files/postgis-2.0-pkgconfig-json.patch:
+  dev-db/*: remove unused patches.
+
+  Squash all commit messages into a single one.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1936
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  24 Sep 2016; Agostino Sarubbo <ago@gentoo.org> postgis-2.1.8.ebuild:
+  amd64 stable wrt bug #588434
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Oct 2016; Amy Winston <amynka@gentoo.org> postgis-2.2.2.ebuild:
+  fix URL of online manual in elog
+
+  Gentoo-Bug: https://bugs.gentoo.org/573812
+  Closes: #2537
+
+  Package-Manager: portage-2.3.0
+
+  18 Oct 2016; Amy Winston <amynka@gentoo.org> postgis-2.1.1.ebuild,
+  postgis-2.1.8.ebuild, postgis-9999.ebuild:
+  remove invalid dependency
+
+  Package-Manager: portage-2.2.28
+

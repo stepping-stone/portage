@@ -153,3 +153,87 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  gnome-themes-standard-3.18.0.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  gnome-themes-standard-3.18.0.ebuild:
+  Stable for PPC64 (bug #566378).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  03 May 2016; Markus Meier <maekke@gentoo.org>
+  gnome-themes-standard-3.18.0.ebuild:
+  arm stable, bug #566378
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org>
+  gnome-themes-standard-3.18.0.ebuild:
+  alpha stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="alpha"
+
+*gnome-themes-standard-3.20.2 (27 Jun 2016)
+
+  27 Jun 2016; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-themes-standard-3.20.2.ebuild:
+  bump to 3.20.2
+
+  Package-Manager: portage-2.3.0
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  gnome-themes-standard-3.18.0.ebuild:
+  ppc stable, bug 584468
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+
+  23 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  gnome-themes-standard-3.20.2.ebuild:
+  3.20.2-r0: add alpha keyword
+
+  Gentoo-Bug: 587010
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  gnome-themes-standard-3.20.2.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  gnome-themes-standard-3.20.2.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*gnome-themes-standard-3.20.2-r1 (08 Oct 2016)
+
+  08 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnome-themes-standard-3.20.2-exclude-engine.patch,
+  +gnome-themes-standard-3.20.2-r1.ebuild:
+  split theme engine out
+
+  To x11-themes/gtk-engines-adwaita
+
+  Gentoo-bug: 569552
+
+  Package-Manager: portage-2.3.1
+
+*gnome-themes-standard-3.22.2 (01 Nov 2016)
+
+  01 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnome-themes-standard-3.22.2-exclude-engine.patch,
+  +gnome-themes-standard-3.22.2.ebuild:
+  version bump 3.20.2-r1 → 3.22.2
+
+  Package-Manager: portage-2.3.2
+

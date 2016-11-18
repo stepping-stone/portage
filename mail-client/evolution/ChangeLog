@@ -174,3 +174,125 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> evolution-3.18.5.1.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> -evolution-3.16.5.ebuild,
+  -evolution-3.18.4.ebuild, -files/evolution-3.16.4-contacts-gmail.patch:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+*evolution-3.18.5.2 (03 Apr 2016)
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> +evolution-3.18.5.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> evolution-3.18.5.2.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> evolution-3.18.5.2.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> -evolution-3.18.5.1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*evolution-3.20.3 (02 Jul 2016)
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> +evolution-3.20.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org> evolution-3.20.3.ebuild:
+  Newer eds is needed (#588086 by plaes)
+
+  Package-Manager: portage-2.3.0
+
+*evolution-3.20.4 (30 Jul 2016)
+
+  30 Jul 2016; Pacho Ramos <pacho@gentoo.org> +evolution-3.20.4.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  15 Aug 2016; Pacho Ramos <pacho@gentoo.org> -evolution-3.20.3.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+*evolution-3.20.5 (15 Aug 2016)
+
+  15 Aug 2016; Pacho Ramos <pacho@gentoo.org> +evolution-3.20.5.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> evolution-3.20.5.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> evolution-3.20.5.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*evolution-3.22.1 (26 Oct 2016)
+
+  26 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +evolution-3.22.1.ebuild:
+  version bump 3.20.5 → 3.22.1
+
+  Swith USE=map to geolocation.
+
+  Gentoo-bug: 597178
+
+  Package-Manager: portage-2.3.2
+
+  26 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -evolution-3.18.5.2.ebuild, -evolution-3.20.4.ebuild:
+  cleanup old revisions
+
+  Package-Manager: portage-2.3.2
+
+*evolution-3.22.2 (09 Nov 2016)
+
+  09 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +evolution-3.22.2.ebuild:
+  add evolution-3.22.2.ebuild
+
+  Copy from 3.22.1, needed to bump the dependency on evolution-data-server
+
+      configure.ac:m4_define([eds_minimum_version], [evo_version])
+
+  https://git.gnome.org/browse/evolution/diff/?id=EVOLUTION_3_22_2&&id2=EVOLUT
+  ION_3_22_1
+  Closes: https://github.com/gentoo/gentoo/pull/2784
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+
+  09 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org> evolution-3.22.1.ebuild,
+  evolution-3.22.2.ebuild:
+  automate dependency on evolution-data-server
+
+  in its configure.ac, evolution depends on evolution-data-server
+  being at least that same version
+  Closes: https://github.com/gentoo/gentoo/pull/2784
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+

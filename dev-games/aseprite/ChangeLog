@@ -85,3 +85,123 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*aseprite-1.1.4.1 (21 Apr 2016)
+
+  21 Apr 2016; Patrice Clement <monsieurp@gentoo.org>
+  aseprite-0.9.5-r1.ebuild, -aseprite-1.0.6.ebuild, +aseprite-1.1.4.1.ebuild,
+  -aseprite-9999.ebuild, -files/aseprite-1.0.6-obinary.patch,
+  -files/aseprite-1.0.6-png_sizeof.patch,
+  +files/aseprite-1.1.4.1_underlinking.patch, metadata.xml:
+  Bump to 1.4.1.1. Drop old.
+
+  New version 1.4.1.1, dropping failed 1.0.6 and 9999.
+  Added SLOT for virtual/jpeg:0 for 0.9.5-r1.
+
+  Gentoo-Bug: https://bugs.gentoo.org/571776
+  Package-Manager: portage-2.2.26
+  Closes: https://github.com/gentoo/gentoo/pull/1309
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  21 Apr 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  Grant maintainership to proxy maintainer.
+
+  Gentoo-Bug: https://bugs.gentoo.org/580556
+
+  Package-Manager: portage-2.2.26
+
+  23 Apr 2016; Patrice Clement <monsieurp@gentoo.org> aseprite-1.1.4.1.ebuild,
+  files/aseprite-1.1.4.1_underlinking.patch:
+  Correct patch for 1.1.4.1
+
+  Added subslot checks for libpng and libgif.
+
+  Package-Manager: portage-2.2.26
+  Gentoo-Bug: https://bugs.gentoo.org/580802
+  Closes: https://github.com/gentoo/gentoo/pull/1322
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Apr 2016; Patrice Clement <monsieurp@gentoo.org>
+  files/aseprite-1.1.4.1_underlinking.patch:
+  Mend patch format.
+
+  Gentoo-Bug: https://bugs.gentoo.org/581298
+
+  Package-Manager: portage-2.2.26
+
+  03 May 2016; Patrice Clement <monsieurp@gentoo.org>
+  files/aseprite-1.1.4.1_underlinking.patch:
+  Mend patch format for the umpteenth time.
+
+  Geez!
+
+  Package-Manager: portage-2.2.26
+
+*aseprite-1.1.5.1 (05 May 2016)
+
+  05 May 2016; Patrice Clement <monsieurp@gentoo.org>
+  +aseprite-1.1.5.1.ebuild, metadata.xml:
+  bump to 1.1.5.1
+
+  Package-Manager: portage-2.2.26
+  Closes: https://github.com/gentoo/gentoo/pull/1415
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*aseprite-1.1.6 (13 Jul 2016)
+
+  13 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -aseprite-1.1.5.1.ebuild, +aseprite-1.1.6.ebuild:
+  Version bump 1.1.6, remove old 1.1.5
+
+  * Fix installation KDE thumbnailer into right place
+  * Add pixmap for desktop entry
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1875
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  14 Jul 2016; Göktürk Yüksek <gokturk@gentoo.org> aseprite-1.1.6.ebuild:
+  add missing dep on pkgconfig for webp and gtk3 flags
+
+  From the source:
+  CMakeLists.txt:204:    pkg_check_modules(WEBP libwebp)
+  CMakeLists.txt:368:    pkg_check_modules(GTKMM gtkmm-3.0)
+
+  Package-Manager: portage-2.2.28
+
+*aseprite-1.1.7 (14 Sep 2016)
+
+  14 Sep 2016; Patrice Clement <monsieurp@gentoo.org> +aseprite-1.1.7.ebuild,
+  +files/aseprite-1.1.7_type-punned_pointer.patch, metadata.xml:
+  version bump to 1.1.7.
+
+  Added bundled allegro library support for resizing feature.
+
+  Gentoo-Bug: https://bugs.gentoo.org/588832
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/2142
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  14 Sep 2016; Patrice Clement <monsieurp@gentoo.org>
+  -aseprite-1.1.4.1.ebuild, -files/aseprite-1.1.4.1_underlinking.patch:
+  Clean up old.
+
+  Package-Manager: portage-2.2.28
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> aseprite-1.1.6.ebuild:
+  amd64 stable wrt bug #590976
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

@@ -81,3 +81,20 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*chname-1.0-r2 (21 Jun 2016)
+
+  21 Jun 2016; Patrice Clement <monsieurp@gentoo.org> +chname-1.0-r2.ebuild:
+  EAPI 6 bump.
+
+  Package-Manager: portage-2.2.28
+
+  21 Jun 2016; Patrice Clement <monsieurp@gentoo.org> -chname-1.0-r1.ebuild:
+  Clean up old.
+
+  Package-Manager: portage-2.2.28
+

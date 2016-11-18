@@ -17,7 +17,13 @@ inherit autotools eutils flag-o-matic multilib ssl-cert user toolchain-funcs ver
 
 case ${EAPI:-0} in
 	0|1|2|3|4)
-		die "This eclass requires >=EAPI-5"
+		die "This eclass is banned for EAPI<5"
+	;;
+	5)
+		:;
+	;;
+	6)
+		die "This eclass is not yet ready for EAPI-6. Please help porting it!"
 	;;
 esac
 
@@ -447,6 +453,20 @@ apache-2_src_prepare() {
 
 	epatch "${GENTOO_PATCHDIR}"/patches/*.patch
 
+	if [[ ${EAPI} = 5 ]] ; then
+		# Handle patches from ebuild's PATCHES array if one is given
+		if [[ -n "${PATCHES}" ]] ; then
+			local patchestype=$(declare -p PATCHES 2>&-)
+			if [[ "${patchestype}" != "declare -a PATCHES="* ]] ; then
+				die "Declaring PATCHES as a variable is forbidden. Please use an array instead."
+			fi
+			epatch "${PATCHES[@]}"
+		fi
+
+		# Handle user patches
+		epatch_user
+	fi
+
 	# setup the filesystem layout config
 	cat "${GENTOO_PATCHDIR}"/patches/config.layout >> "${S}"/config.layout || \
 		die "Failed preparing config.layout!"
@@ -465,9 +485,16 @@ apache-2_src_prepare() {
 
 	# This package really should upgrade to using pcre's .pc file.
 	cat <<-\EOF >"${T}"/pcre-config
-	#!/bin/sh
-	[ "${flag}" = "--version" ] && set -- --modversion
-	exec ${PKG_CONFIG} libpcre "$@"
+	#!/bin/bash
+	flags=()
+	for flag; do
+		if [[ ${flag} == "--version" ]]; then
+			flags+=( --modversion )
+		else
+			flags+=( "${flag}" )
+		fi
+	done
+	exec ${PKG_CONFIG} libpcre "${flags[@]}"
 	EOF
 	chmod a+x "${T}"/pcre-config
 }

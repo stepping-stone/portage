@@ -101,3 +101,25 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  netaddr-0.7.18.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+  05 Apr 2016; Anthony G. Basile <blueness@gentoo.org> netaddr-0.7.18.ebuild:
+  Add ~arm.
+
+  I successfully installed and used it on Raspberry Pi 3 board.
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  netaddr-0.7.18.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> netaddr-0.7.12.ebuild,
+  netaddr-0.7.13.ebuild, netaddr-0.7.14.ebuild, netaddr-0.7.15.ebuild,
+  netaddr-0.7.17.ebuild, netaddr-0.7.18.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

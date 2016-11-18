@@ -120,3 +120,143 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  07 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  iputils-20121221-r2.ebuild:
+  add libressl support to version 20121221-r2
+
+  Package-Manager: portage-2.2.26
+
+  07 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  -iputils-20150815.ebuild:
+  remove 20150815 without libressl support
+
+  Package-Manager: portage-2.2.26
+
+  07 Mar 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +files/iputils-20150815-defines_and_libs.patch,
+  +files/iputils-20150815-handle_single_protocol_system.patch,
+  -files/iputils-20150815-ping6_crypto.patch,
+  -files/iputils-20150815-ping_default_ipv4.patch, iputils-20150815-r1.ebuild:
+  Replaced two patches with upstream equivalents.
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*iputils-20160308 (09 Mar 2016)
+
+  09 Mar 2016; Lars Wendler <polynomial-c@gentoo.org>
+  iputils-20150815-r1.ebuild, +iputils-20160308.ebuild:
+  Bump to version 20160308
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*iputils-20151218 (19 Apr 2016)
+
+  19 Apr 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +iputils-20151218.ebuild:
+  Bump to version 20151218
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  19 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> iputils-99999999.ebuild:
+  Synced live ebuild with latest official release.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  19 Apr 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -iputils-20121221.ebuild, -iputils-20150815-r1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/rarpd.init.d:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  25 May 2016; Jeroen Roovers <jer@gentoo.org> iputils-20151218.ebuild:
+  Stable for HPPA PPC64 (bug #583960).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  25 May 2016; Matt Turner <mattst88@gentoo.org> iputils-20151218.ebuild:
+  alpha stable, bug 583960.
+
+  26 May 2016; Lars Wendler <polynomial-c@gentoo.org> iputils-20151218.ebuild:
+  x86 stable (bug #583960).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  27 May 2016; Lars Wendler <polynomial-c@gentoo.org> iputils-20151218.ebuild:
+  amd64 stable (bug #583960).
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  01 Jun 2016; Mike Frysinger <vapier@gentoo.org> iputils-20151218.ebuild:
+  mark 20151218 arm/arm64/ia64/m68k/ppc/s390/sh/sparc stable #583960
+
+  01 Jun 2016; Mike Frysinger <vapier@gentoo.org> iputils-20151218.ebuild,
+  iputils-99999999.ebuild:
+  make -lresolv linkage dynamic #584132
+
+  01 Jun 2016; Mike Frysinger <vapier@gentoo.org> iputils-20121221-r2.ebuild,
+  iputils-20151218.ebuild, iputils-20160308.ebuild, iputils-99999999.ebuild:
+  update traceroute blocker after package move #584362
+
+  19 Jun 2016; Benda Xu <heroxbd@gentoo.org> iputils-20151218.ebuild,
+  iputils-20160308.ebuild, iputils-99999999.ebuild:
+  remove EPREFIX from dosym.
+
+    ebuild helpers includes EPREFIX by default.
+
+  Package-Manager: portage-2.2.28
+
+  01 Aug 2016; Mike Frysinger <vapier@gentoo.org> iputils-20121221-r1.ebuild,
+  iputils-20121221-r2.ebuild, iputils-20151218.ebuild,
+  iputils-20160308.ebuild, iputils-99999999.ebuild:
+  linuxfoundation: switch http:// URIs to https://
+
+  10 Sep 2016; Pavel Šimerda <pavlix@pavlix.net> iputils-99999999.ebuild:
+  update 99999999 to match 20160308
+
+  The current `net-misc/iputils-99999999` is no longer working. This
+  commit switches upstream to `github.com/iputils/iputils` to match
+  the changes already done in `iputils-20160308.ebuild`.
+
+  This patch was created using the following command:
+
+      cp iputils-20160308.ebuild iputils-99999999.ebuild
+
+  The following changes happened:
+
+   * Switch upstream to `github.com/iputils/iputils`
+   * Add nettle and openssl use flags
+   * Remove obsolete patches
+   * Adapt `src_configure()` and related functions
+
+  More changes will come as separate commits to mark the changes
+  clearly.
+
+  10 Sep 2016; Pavel Šimerda <pavlix@pavlix.net> iputils-99999999.ebuild:
+  make 99999999 buildable
+
+  Apply necessary changes to `iputils-99999999.patch` that are not needed
+  in `iputils-20160308.ebuild` from which it was copied.
+
+   * Don't use `S` variable when `PV=99999999`
+   * Quote variables to make `repoman -d full` happy
+   * Reflect the rename of `INSTALL` to `INSTALL.md`
+
+  10 Sep 2016; Pavel Šimerda <pavlix@pavlix.net> iputils-99999999.ebuild:
+  drop unnecessary uClibc patch
+
+  Drop `021109-uclibc-no-ether_ntohost.patch` from
+  `iputils-99999999.ebuild` as latest uClibc in Gentoo already supports
+  `ether_ntohost()` function and thus doesn't require the work around.
+

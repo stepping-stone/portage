@@ -80,3 +80,173 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*quagga-1.0.20160315 (16 Mar 2016)
+
+  16 Mar 2016; Sergey Popov <pinkbyte@gentoo.org> +quagga-1.0.20160315.ebuild:
+  version bump
+
+  Gentoo-Bug: 577156
+
+  Package-Manager: portage-2.2.27
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> quagga-1.0.20160315.ebuild:
+  amd64 stable wrt bug #577156
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Tobias Klausmann <klausman@gentoo.org>
+  quagga-1.0.20160315.ebuild:
+  1.0.20160315-r0: add alpha keyword
+
+  Gentoo-Bug: 577156
+
+  Package-Manager: portage-2.2.28
+
+  19 Mar 2016; Jeroen Roovers <jer@gentoo.org> quagga-1.0.20160315.ebuild:
+  Stable for HPPA (bug #577156).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> quagga-1.0.20160315.ebuild:
+  sparc stable wrt bug #577156
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  24 Mar 2016; Markus Meier <maekke@gentoo.org> quagga-1.0.20160315.ebuild:
+  arm stable, bug #577156
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  27 Mar 2016; Agostino Sarubbo <ago@gentoo.org> quagga-1.0.20160315.ebuild:
+  ppc stable wrt bug #577156
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org> quagga-1.0.20160315.ebuild:
+  x86 stable wrt bug #577156
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*quagga-1.0.20160315-r1 (12 Apr 2016)
+
+  12 Apr 2016; Sergey Popov <pinkbyte@gentoo.org>
+  +files/quagga-1.0.20160315-ripd-null-pointer-fix.patch,
+  -quagga-1.0.20160315.ebuild, +quagga-1.0.20160315-r1.ebuild:
+  revision bump
+
+  Fix NULL pointer dereference in ripd
+  Commited straight to stable
+
+  Reported-by: Sebastian Kricner <sebastian.kricner@tuxwave.net>
+  Acked-by: Sergey Popov <pinkbyte@gentoo.org>
+  Gentoo-Bug: 579386
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --force
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/quagga-services.init.3:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*quagga-1.0.20160315-r2 (20 Jun 2016)
+
+  20 Jun 2016; Sergey Popov <pinkbyte@gentoo.org>
+  +files/quagga-1.0.20160315-ospfd-dangling-pointer-fix.patch,
+  -quagga-1.0.20160315-r1.ebuild, +quagga-1.0.20160315-r2.ebuild:
+  revision bump
+
+  Fix dangling pointer dereference in ospfd,
+  making it useable again on p2p links
+  Commited straight to stable
+
+  Package-Manager: portage-2.3.0_rc1
+
+  20 Jun 2016; Sergey Popov <pinkbyte@gentoo.org> -quagga-0.99.23.1.ebuild,
+  -quagga-0.99.24.1-r1.ebuild:
+  drop old vulnerable versions
+
+  Package-Manager: portage-2.3.0_rc1
+
+*quagga-1.0.20160315-r3 (13 Aug 2016)
+
+  13 Aug 2016; Sergey Popov <pinkbyte@gentoo.org>
+  +files/quagga-1.0.20160315-bgpd-logging-fix.patch,
+  +quagga-1.0.20160315-r3.ebuild:
+  revision bump
+
+  Currently, bgpd logs enormous amount of errors about
+  AFI/SAFI does not set, which is wrong, so we should
+  backport upstream patch to fix this
+
+  Reported-by: Arnaud Launay <asl@launay.org>
+  Gentoo-Bug: 589946
+
+  Package-Manager: portage-2.3.0
+
+  06 Oct 2016; Sergey Popov <pinkbyte@gentoo.org>
+  -quagga-1.0.20160315-r2.ebuild, quagga-1.0.20160315-r3.ebuild:
+  stabilize new revision
+
+  Transfer stable keywords from previous revision, drop old
+
+  Package-Manager: portage-2.2.28
+
+*quagga-1.0.20160315-r4 (18 Oct 2016)
+
+  18 Oct 2016; Sergey Popov <pinkbyte@gentoo.org>
+  +files/quagga-1.0.20160315-zebra-ipv6-ra-overflow.patch,
+  +quagga-1.0.20160315-r4.ebuild:
+  revision bump
+
+  Backport upstream security fix for stack overrun
+  in IPv6 RA receive code in zebra daemon.
+
+  Reported-by: Agostino Sarubbo <ago@gentoo.org>
+  Gentoo-Bug: 597410
+
+  Package-Manager: portage-2.3.2
+
+  19 Oct 2016; Agostino Sarubbo <ago@gentoo.org>
+  quagga-1.0.20160315-r4.ebuild:
+  amd64 stable wrt bug #597410
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Oct 2016; Agostino Sarubbo <ago@gentoo.org>
+  quagga-1.0.20160315-r4.ebuild:
+  x86 stable wrt bug #597410
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  21 Oct 2016; Tobias Klausmann <klausman@gentoo.org>
+  quagga-1.0.20160315-r4.ebuild:
+  1.0.20160315-r4: stable on alpha
+
+  Gentoo-Bug: 597410
+
+  22 Oct 2016; Jeroen Roovers <jer@gentoo.org> quagga-1.0.20160315-r4.ebuild:
+  Stable for HPPA (bug #597410).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+  26 Oct 2016; Markus Meier <maekke@gentoo.org> quagga-1.0.20160315-r4.ebuild:
+  arm stable, bug #597410
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

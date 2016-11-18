@@ -175,3 +175,159 @@
 
   Package-Manager: portage-2.2.27
 
+  20 Apr 2016; Anthony Ryan <anthonyryan1@gmail.com> libdrm-2.4.59.ebuild,
+  libdrm-2.4.65.ebuild, libdrm-2.4.66.ebuild, libdrm-2.4.67.ebuild,
+  libdrm-9999.ebuild:
+  HTTPS for *.freedesktop.org
+
+  * Excluding xorg.freedesktop.org
+  * Excluding tango.freedesktop.org
+
+  The following modified ebuilds were found to have problems after
+  modification
+  but the problems were determined to not be a regression.
+
+  Upstream tarball has a new hash:
+  * app-misc/evtest-1.29
+  * app-misc/evtest-1.30
+  * dev-embedded/scratchbox2-2.0-r1
+  * dev-ml/cairo-ocaml-1.2.0
+  * net-libs/libqmi-1.0.0
+  * sys-auth/libfprint-0.4.0
+  * sys-auth/libfprint-0.5.0
+  * sys-auth/libfprint-0.5.1
+
+  Upstream tarball has been deleted:
+  * dev-libs/liblazy-0.2
+  * dev-util/pkgconfig-openbsd-20130507-r1
+  * x11-libs/xvba-video-0.8.0-r3
+  * x11-misc/driconf-0.9.1-r1
+  * x11-misc/xdg-utils-1.1.0_rc2-r1
+
+*libdrm-2.4.68 (28 Apr 2016)
+
+  28 Apr 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libdrm-2.4.68.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.26
+
+  11 May 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libdrm-9999.ebuild:
+  add video_cards_vc4 flag to live ebuild
+
+  Package-Manager: portage-2.2.28
+
+  02 Jun 2016; Tobias Klausmann <klausman@gentoo.org> libdrm-2.4.65.ebuild:
+  2.4.65-r0: add alpha keyword
+
+  Gentoo-Bug: 559062
+
+  Package-Manager: portage-2.3.0_rc1
+
+  21 Jun 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/libdrm-2.4.68-sysmacros.patch, libdrm-2.4.68.ebuild:
+  fix building w/newer glibc #580088
+
+*libdrm-2.4.69 (21 Jul 2016)
+
+  21 Jul 2016; Matt Turner <mattst88@gentoo.org> +libdrm-2.4.69.ebuild:
+  Version bump to 2.4.69.
+
+*libdrm-2.4.70 (26 Jul 2016)
+
+  26 Jul 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libdrm-2.4.70.ebuild:
+  version bump to 2.4.70
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Jeroen Roovers <jer@gentoo.org> libdrm-2.4.70.ebuild:
+  Stable for HPPA (bug #579266).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  05 Aug 2016; Markus Meier <maekke@gentoo.org> libdrm-2.4.68.ebuild:
+  arm stable, bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libdrm-2.4.70.ebuild:
+  x86 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libdrm-2.4.70.ebuild:
+  amd64 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  22 Sep 2016; Tobias Klausmann <klausman@gentoo.org> libdrm-2.4.70.ebuild:
+  2.4.70-r0: add alpha keyword
+
+  Gentoo-Bug: 579266
+
+*libdrm-2.4.71 (04 Oct 2016)
+
+  04 Oct 2016; Manuel Rüger <mrueg@gentoo.org> +libdrm-2.4.71.ebuild:
+  Version bump to 2.4.71
+
+  Package-Manager: portage-2.3.1
+
+  04 Oct 2016; Manuel Rüger <mrueg@gentoo.org> libdrm-9999.ebuild:
+  Sync live
+
+  Package-Manager: portage-2.3.1
+
+  04 Oct 2016; Manuel Rüger <mrueg@gentoo.org> -libdrm-2.4.66.ebuild,
+  -libdrm-2.4.67.ebuild, -libdrm-2.4.69.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.1
+
+  12 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.65.ebuild:
+  sparc stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.65.ebuild:
+  ia64 stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*libdrm-2.4.72 (14 Nov 2016)
+
+  14 Nov 2016; Matt Turner <mattst88@gentoo.org> +libdrm-2.4.72.ebuild:
+  Version bump to 2.4.72.
+
+*libdrm-2.4.73 (15 Nov 2016)
+
+  15 Nov 2016; Matt Turner <mattst88@gentoo.org> +libdrm-2.4.73.ebuild:
+  Version bump to 2.4.73.
+
+  15 Nov 2016; Matt Turner <mattst88@gentoo.org> -libdrm-2.4.71.ebuild,
+  -libdrm-2.4.72.ebuild:
+  Drop old.
+
+  16 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.70.ebuild:
+  ia64 stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.70.ebuild:
+  ppc stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

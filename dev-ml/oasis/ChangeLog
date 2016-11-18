@@ -74,3 +74,27 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Alexis Ballier <aballier@gentoo.org>
 
+*oasis-0.4.5-r1 (01 Mar 2016)
+
+  01 Mar 2016; Alexis Ballier <aballier@gentoo.org> -oasis-0.4.5.ebuild,
+  +oasis-0.4.5-r1.ebuild:
+  add rdepend on ocamlbuild
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+*oasis-0.4.6 (30 Apr 2016)
+
+  30 Apr 2016; Alexis Ballier <aballier@gentoo.org> +oasis-0.4.6.ebuild:
+  bump to 0.4.6
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+*oasis-0.4.7 (23 Aug 2016)
+
+  23 Aug 2016; Alexis Ballier <aballier@gentoo.org> +oasis-0.4.7.ebuild:
+  bump to 0.4.7
+
+  Package-Manager: portage-2.3.0
+

@@ -85,3 +85,42 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  26 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  signing-party-1.1.4.ebuild, signing-party-1.1.11-r1.ebuild,
+  signing-party-2.0.ebuild, signing-party-2.1.ebuild,
+  signing-party-2.2.ebuild:
+  Fix dependency on dev-perl/Text-Template
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="alpha amd64 amd64-fbsd arm arm64 hppa
+  ia64 m68k mips nios2 ppc ppc64 riscv s390 sh sparc sparc-fbsd x86 x86-fbsd"
+
+  12 Jun 2016; Alon Bar-Lev <alonbl@gentoo.org> -signing-party-2.0.ebuild,
+  -signing-party-2.1.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+*signing-party-2.4 (05 Sep 2016)
+
+  05 Sep 2016; Manuel Rüger <mrueg@gentoo.org> +signing-party-2.4.ebuild:
+  Version bump to 2.4
+
+  Gentoo-Bug: 582070
+
+  Package-Manager: portage-2.3.0
+
+  09 Oct 2016; Diego Elio Pettenò <flameeyes@flameeyes.eu>
+  -signing-party-1.1.11-r1.ebuild, -signing-party-2.2.ebuild:
+  Clean up old ebuilds.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Diego Elio Pettenò <flameeyes@flameeyes.eu>
+
+*signing-party-2.5 (15 Oct 2016)
+
+  15 Oct 2016; Manuel Rüger <mrueg@gentoo.org> +signing-party-2.5.ebuild:
+  Version bump to 2.5
+
+  Package-Manager: portage-2.3.2
+

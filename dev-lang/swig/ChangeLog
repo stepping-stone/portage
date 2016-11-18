@@ -81,3 +81,41 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*swig-3.0.10 (19 Jun 2016)
+
+  19 Jun 2016; Tim Harder <radhermit@gentoo.org> metadata.xml,
+  +swig-3.0.10.ebuild:
+  version bump to 3.0.10
+
+  19 Jun 2016; Tim Harder <radhermit@gentoo.org> -swig-3.0.2.ebuild,
+  -swig-3.0.4.ebuild, -swig-3.0.6.ebuild, -swig-3.0.7.ebuild:
+  remove old
+
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #154183
+
+  Package-Manager: portage-2.3.0
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> swig-3.0.8.ebuild:
+  Stable for PPC64 (bug #589580).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> swig-3.0.8.ebuild:
+  Stable for HPPA (bug #589580).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  03 Oct 2016; Tobias Klausmann <klausman@gentoo.org> swig-3.0.8.ebuild:
+  3.0.8-r0: stable on alpha
+
+  Gentoo-Bug: 589580
+
+  02 Nov 2016; Markus Meier <maekke@gentoo.org> swig-3.0.8.ebuild:
+  arm stable, bug #589580
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

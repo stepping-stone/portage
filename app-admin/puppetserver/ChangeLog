@@ -127,3 +127,109 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*puppetserver-2.3.0 (18 Mar 2016)
+
+  18 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetserver-2.3.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+  18 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  files/puppetserver.initd:
+  add reload command
+
+  Package-Manager: portage-2.2.26
+
+  18 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  files/puppetserver.initd:
+  fixing init.d
+
+  Package-Manager: portage-2.2.26
+
+*puppetserver-2.3.1 (24 Mar 2016)
+
+  24 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetserver-2.3.1.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+*puppetserver-2.3.2 (27 Apr 2016)
+
+  27 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -puppetserver-2.2.1-r1.ebuild, -puppetserver-2.3.0.ebuild,
+  -puppetserver-2.3.1.ebuild, +puppetserver-2.3.2.ebuild:
+  bup for bug 581372
+
+  Package-Manager: portage-2.2.26
+
+  28 Apr 2016; Agostino Sarubbo <ago@gentoo.org> puppetserver-2.3.2.ebuild:
+  amd64 stable wrt bug #581372
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  28 Apr 2016; Agostino Sarubbo <ago@gentoo.org> puppetserver-2.3.2.ebuild:
+  x86 stable wrt bug #581372
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  28 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -puppetserver-2.2.1.ebuild:
+  cleanup, bug 581372
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/puppetserver.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*puppetserver-2.4.0 (20 May 2016)
+
+  20 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetserver-2.4.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+*puppetserver-2.5.0 (13 Aug 2016)
+
+  13 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetserver-2.5.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  15 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  puppetserver-2.5.0.ebuild:
+  fixing misssing dir
+
+  Package-Manager: portage-2.2.28
+
+*puppetserver-2.6.0 (09 Sep 2016)
+
+  09 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetserver-2.6.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  24 Sep 2016; Agostino Sarubbo <ago@gentoo.org> puppetserver-2.4.0.ebuild:
+  amd64 stable wrt bug #586500
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*puppetserver-2.7.0 (14 Nov 2016)
+
+  14 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetserver-2.7.0.ebuild:
+  bup 2.7.0
+
+  Package-Manager: portage-2.3.0
+

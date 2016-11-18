@@ -57,3 +57,31 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  04 Mar 2016; Steev Klimaszewski <steev@gentoo.org>
+  xfce4-terminal-0.6.3.ebuild:
+  Keyword 0.6.3 for ~arm64
+
+  Tested on Cortex-A53
+
+  Package-Manager: portage-2.2.27
+
+*xfce4-terminal-0.6.90 (30 Jul 2016)
+
+  30 Jul 2016; Michał Górny <mgorny@gentoo.org> +xfce4-terminal-0.6.90.ebuild:
+  Bump to 0.6.90, early GTK+3 release
+
+*xfce4-terminal-0.6.92 (07 Sep 2016)
+
+  07 Sep 2016; Michał Górny <mgorny@gentoo.org> +xfce4-terminal-0.6.92.ebuild:
+  Bump to 0.6.92
+
+*xfce4-terminal-0.8.0 (20 Oct 2016)
+
+  20 Oct 2016; Michał Górny <mgorny@gentoo.org> +xfce4-terminal-0.8.0.ebuild:
+  Bump to 0.8.0
+
+*xfce4-terminal-0.8.1 (31 Oct 2016)
+
+  31 Oct 2016; Michał Górny <mgorny@gentoo.org> +xfce4-terminal-0.8.1.ebuild:
+  Bump to 0.8.1
+

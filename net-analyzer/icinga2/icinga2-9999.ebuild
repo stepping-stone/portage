@@ -13,10 +13,11 @@ EGIT_BRANCH="master"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="+mysql postgres classicui console lto mail minimal nano-syntax +plugins studio +vim-syntax"
+IUSE="+mysql postgres classicui console libressl lto mail minimal nano-syntax +plugins studio +vim-syntax"
 
 CDEPEND="
-	dev-libs/openssl:0
+	!libressl? ( dev-libs/openssl:0= )
+	libressl? ( dev-libs/libressl:0= )
 	>=dev-libs/boost-1.41
 	console? ( dev-libs/libedit )
 	mysql? ( virtual/mysql )
@@ -136,7 +137,7 @@ src_install() {
 	fowners icinga:icinga /etc/icinga2
 	fowners icinga:icinga /var/lib/icinga2
 	fowners icinga:icinga /var/spool/icinga2
-	fowners icinga:icingacmd /var/lib/icinga2/api
+	fowners -R icinga:icingacmd /var/lib/icinga2/api
 	fowners icinga:icinga /var/spool/icinga2/perfdata
 	fowners icinga:icingacmd /var/log/icinga2
 

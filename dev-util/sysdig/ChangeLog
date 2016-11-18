@@ -128,3 +128,36 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  16 Apr 2016; Michał Górny <mgorny@gentoo.org> -sysdig-0.1.92.ebuild,
+  -sysdig-0.1.98.ebuild, -sysdig-0.1.104.ebuild:
+  Remove ancient versions 0.1*
+
+*sysdig-0.9.0 (16 Apr 2016)
+
+  16 Apr 2016; Michał Górny <mgorny@gentoo.org> +sysdig-0.9.0.ebuild:
+  Bump to 0.9.0
+
+*sysdig-0.10.0 (17 Jun 2016)
+
+  17 Jun 2016; Michał Górny <mgorny@gentoo.org> +sysdig-0.10.0.ebuild:
+  Bump to 0.10.0
+
+*sysdig-0.10.1 (23 Jun 2016)
+
+  23 Jun 2016; Michał Górny <mgorny@gentoo.org> +sysdig-0.10.1.ebuild:
+  Bump to 0.10.1
+
+*sysdig-0.12.1 (11 Nov 2016)
+
+  11 Nov 2016; Michał Górny <mgorny@gentoo.org> +sysdig-0.12.1.ebuild:
+  Bump to 0.12.1
+
+  15 Nov 2016; Michał Górny <mgorny@gentoo.org> sysdig-0.12.1.ebuild:
+  Fix building kernel module when using Ninja
+
+  15 Nov 2016; Michał Górny <mgorny@gentoo.org> sysdig-0.12.1.ebuild:
+  Use MODULES_OPTIONAL_USE for USE=modules
+
+  15 Nov 2016; Michał Górny <mgorny@gentoo.org> sysdig-0.12.1.ebuild:
+  Use Ninja by default
+

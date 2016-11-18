@@ -89,3 +89,14 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*gmpy-2.0.8 (09 Aug 2016)
+
+  09 Aug 2016; Andrey Grozin <grozin@gentoo.org> +gmpy-2.0.8.ebuild:
+  bump to 2.0.8, python3_5 added
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> gmpy-2.0.4.ebuild,
+  gmpy-2.0.6.ebuild, gmpy-2.0.7.ebuild, gmpy-2.0.8.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

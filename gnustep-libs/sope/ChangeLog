@@ -46,3 +46,31 @@
 
   Package-Manager: portage-2.2.27
 
+*sope-3.0.2 (09 Mar 2016)
+
+  09 Mar 2016; Bernard Cafarelli <voyageur@gentoo.org> +sope-3.0.2.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.27
+
+  22 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #408423
+
+  Package-Manager: portage-2.3.0_rc1
+
+*sope-3.2.0 (02 Nov 2016)
+
+  02 Nov 2016; Bernard Cafarelli <voyageur@gentoo.org> +sope-3.2.0.ebuild:
+  version bump to 3.2.0, bug #584656
+
+  Thanks bgo for the runtime test
+
+  Package-Manager: portage-2.3.2
+
+*sope-3.2.1 (07 Nov 2016)
+
+  07 Nov 2016; Bernard Cafarelli <voyageur@gentoo.org> +sope-3.2.1.ebuild:
+  version bump to 3.2.1
+
+  Package-Manager: portage-2.3.2
+

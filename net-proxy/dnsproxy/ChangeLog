@@ -70,3 +70,27 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*dnsproxy-1.16-r2 (03 May 2016)
+
+  03 May 2016; Austin English <wizardedit@gentoo.org>
+  +dnsproxy-1.16-r2.ebuild:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/573846
+
+  Package-Manager: portage-2.2.26
+
+  03 May 2016; Austin English <wizardedit@gentoo.org>
+  -dnsproxy-1.16-r1.ebuild:
+  remove old version
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/dnsproxy.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+

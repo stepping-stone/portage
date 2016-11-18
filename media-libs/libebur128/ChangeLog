@@ -48,3 +48,34 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  29 Mar 2016; civil@gentoo.org <civil.over@gmail.com>
+  libebur128-1.0.2.ebuild, libebur128-1.0.3.ebuild:
+  keyword for ~x86
+
+  Package-Manager: portage-2.2.28
+
+*libebur128-1.1.0 (09 Jun 2016)
+
+  09 Jun 2016; Alexis Ballier <aballier@gentoo.org> +libebur128-1.1.0.ebuild:
+  bump to 1.1.0; needed by ffmpeg, bug #584816
+
+  Package-Manager: portage-2.3.0_rc1
+
+*libebur128-1.2.0 (01 Nov 2016)
+
+  01 Nov 2016; Amy Winston <amynka@gentoo.org> +libebur128-1.2.0.ebuild:
+  bump to 1.2.0
+
+  - Bump to EAPI 6
+  - Drop the dependency on media-libs/speex
+
+  Closes: #2713
+
+*libebur128-1.2.0-r1 (02 Nov 2016)
+
+  02 Nov 2016; Amy Winston <amynka@gentoo.org> -libebur128-1.2.0.ebuild,
+  +libebur128-1.2.0-r1.ebuild:
+  fix subslot
+
+  Package-Manager: portage-2.2.28
+

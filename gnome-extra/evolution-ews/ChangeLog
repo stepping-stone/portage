@@ -138,3 +138,82 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> evolution-ews-3.18.5.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> -evolution-ews-3.16.5.ebuild,
+  -evolution-ews-3.18.4.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*evolution-ews-3.20.3 (02 Jul 2016)
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> +evolution-ews-3.20.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*evolution-ews-3.20.4 (30 Jul 2016)
+
+  30 Jul 2016; Pacho Ramos <pacho@gentoo.org> +evolution-ews-3.20.4.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  15 Aug 2016; Pacho Ramos <pacho@gentoo.org> -evolution-ews-3.20.3.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+*evolution-ews-3.20.5 (15 Aug 2016)
+
+  15 Aug 2016; Pacho Ramos <pacho@gentoo.org> +evolution-ews-3.20.5.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> evolution-ews-3.20.5.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> evolution-ews-3.20.5.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*evolution-ews-3.22.1 (26 Oct 2016)
+
+  26 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +evolution-ews-3.22.1.ebuild:
+  version bump 3.20.5 → 3.22.1
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --force
+
+  26 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -evolution-ews-3.18.5.ebuild, -evolution-ews-3.20.4.ebuild:
+  cleanup old revisions
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --force
+
+*evolution-ews-3.22.2 (11 Nov 2016)
+
+  11 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +evolution-ews-3.22.2.ebuild:
+  add evolution-ews-3.22.2.ebuild
+
+  Simple bump, as no relevant changes
+
+  https://git.gnome.org/browse/evolution-
+  ews/diff/?id=EVOLUTION_EWS_3_22_2&&id2=EVOLUTION_EWS_3_22_1
+  Closes: https://github.com/gentoo/gentoo/pull/2788
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+

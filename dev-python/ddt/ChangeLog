@@ -93,3 +93,17 @@
 
   Package-Manager: portage-2.2.27
 
+*ddt-1.1.0 (18 Jul 2016)
+
+  18 Jul 2016; Patrick Lauer <patrick@gentoo.org> +ddt-1.1.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  12 Sep 2016; Matthew Thode <prometheanfire@gentoo.org> -ddt-1.0.0.ebuild,
+  -ddt-1.0.1.ebuild, ddt-1.1.0.ebuild:
+  doing the test
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> ddt-1.1.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

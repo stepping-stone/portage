@@ -100,3 +100,34 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org> -conduit-1.0.8.ebuild,
+  -conduit-1.0.9.3.ebuild, -conduit-1.2.4.ebuild, -conduit-1.2.5.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.28
+
+*conduit-1.2.6.6 (11 May 2016)
+
+  11 May 2016; Sergei Trofimovich <slyfox@gentoo.org> +conduit-1.2.6.6.ebuild:
+  bump up to 1.2.6.6
+
+  Package-Manager: portage-2.2.28
+
+  15 May 2016; Sergei Trofimovich <slyfox@gentoo.org> conduit-1.2.6.6.ebuild:
+  amd64/x86 stable, bug #563090
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/conduit-1.0.7-doctest.patch:
+  remove unused patch
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*conduit-1.2.8 (05 Nov 2016)
+
+  05 Nov 2016; Sergei Trofimovich <slyfox@gentoo.org> +conduit-1.2.8.ebuild:
+  bump up to 1.2.8
+
+  Package-Manager: portage-2.3.2
+

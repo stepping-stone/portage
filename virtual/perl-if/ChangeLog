@@ -64,3 +64,70 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  16 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  perl-if-0.60.400.ebuild:
+  Copy keywords from dev-lang/perl
+
+  Package-Manager: portage-2.2.28
+
+*perl-if-0.60.600 (14 May 2016)
+
+  14 May 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +perl-if-0.60.600.ebuild:
+  add Perl 5.24.0 version
+
+  19 May 2016; Markus Meier <maekke@gentoo.org> perl-if-0.60.400.ebuild:
+  arm stable, bug #567482
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  24 May 2016; Tobias Klausmann <klausman@gentoo.org> perl-if-0.60.400.ebuild:
+  0.60.400-r0: add alpha keyword
+
+  Gentoo-Bug: 567482
+
+  Package-Manager: portage-2.3.0_rc1
+
+  14 Sep 2016; Agostino Sarubbo <ago@gentoo.org> perl-if-0.60.400.ebuild:
+  amd64 stable wrt bug #567482
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> perl-if-0.60.400.ebuild:
+  x86 stable wrt bug #567482
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> perl-if-0.60.400.ebuild:
+  sparc stable wrt bug #567482
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> perl-if-0.60.400.ebuild:
+  ppc64 stable wrt bug #567482
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> perl-if-0.60.400.ebuild:
+  ppc stable wrt bug #567482
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> perl-if-0.60.400.ebuild:
+  ia64 stable wrt bug #567482
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

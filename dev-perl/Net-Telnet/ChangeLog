@@ -63,3 +63,34 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Net-Telnet-3.40.0 (05 Mar 2016)
+
+  05 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +Net-Telnet-3.40.0.ebuild:
+  Bump to version 3.40.0
+
+  - EAPI6
+  - Fix DESCRIPTION
+
+  Upstream:
+  - IPv6 Support
+  - Binding local network interface support
+  - Logging functions less buggy
+  - Use Errno instead of $! regex.
+  - Logging methods support bare filehandle
+
+  Package-Manager: portage-2.2.27
+
+  09 Apr 2016; Agostino Sarubbo <ago@gentoo.org> Net-Telnet-3.40.0.ebuild:
+  alpha/amd64/hppa/ia64/ppc64/ppc/sparc/x86 stable, (ALLARCHES policy) wrt bug
+  #579286
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Net-Telnet-3.30.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+

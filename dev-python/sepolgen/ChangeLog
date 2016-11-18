@@ -72,3 +72,60 @@
   sepolgen-9999.ebuild:
   selinux: initial arm/arm64/mips support
 
+*sepolgen-1.2.3 (13 Mar 2016)
+
+  13 Mar 2016; Sven Vermeulen <swift@gentoo.org> +sepolgen-1.2.3.ebuild,
+  sepolgen-9999.ebuild:
+  Bump to 2.5 (1.2.3) release
+
+  Package-Manager: portage-2.2.26
+
+  01 Jun 2016; Jason Zaman <perfinion@gentoo.org> sepolgen-1.2.3.ebuild:
+  stabilize userland 2.5
+
+  Package-Manager: portage-2.2.28
+
+  07 Aug 2016; Jason Zaman <perfinion@gentoo.org> sepolgen-9999.ebuild:
+  update to eapi6
+
+  Package-Manager: portage-2.2.28
+
+  01 Sep 2016; Jason Zaman <perfinion@gentoo.org>
+  -files/0040-have-test-run-with-PYTHON-variable-python-bug-467264.patch,
+  -sepolgen-1.2.1-r1.ebuild, -sepolgen-1.2.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+  01 Sep 2016; Jason Zaman <perfinion@gentoo.org> sepolgen-9999.ebuild:
+  Add python3_5
+
+  Package-Manager: portage-2.2.28
+
+*sepolgen-2.6_rc1 (03 Oct 2016)
+
+  03 Oct 2016; Jason Zaman <perfinion@gentoo.org> +sepolgen-2.6_rc1.ebuild,
+  sepolgen-9999.ebuild:
+  bump to 2.6-rc1
+
+  Package-Manager: portage-2.3.0
+
+*sepolgen-2.6_rc2 (07 Oct 2016)
+
+  07 Oct 2016; Jason Zaman <perfinion@gentoo.org> -sepolgen-2.6_rc1.ebuild,
+  +sepolgen-2.6_rc2.ebuild, sepolgen-9999.ebuild:
+  bump to 2.6_rc2
+
+  Package-Manager: portage-2.3.0
+
+*sepolgen-2.6 (24 Oct 2016)
+
+  24 Oct 2016; Jason Zaman <perfinion@gentoo.org> -sepolgen-2.6_rc2.ebuild,
+  +sepolgen-2.6.ebuild, sepolgen-9999.ebuild:
+  bump to 2.6 final release
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> sepolgen-1.2.3.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

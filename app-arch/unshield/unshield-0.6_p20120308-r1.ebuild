@@ -1,12 +1,12 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=4
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="InstallShield CAB file extractor"
-HOMEPAGE="https://github.com/twogood/unshield http://sourceforge.net/projects/synce/"
+HOMEPAGE="https://github.com/twogood/unshield https://sourceforge.net/projects/synce/"
 SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="MIT"
@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="libressl static-libs"
 
 RDEPEND="
-	!libressl? ( dev-libs/openssl:0 )
-	libressl? ( dev-libs/libressl )
+	!libressl? ( dev-libs/openssl:0= )
+	libressl? ( dev-libs/libressl:0= )
 	sys-libs/zlib"
 DEPEND="${RDEPEND}"
 

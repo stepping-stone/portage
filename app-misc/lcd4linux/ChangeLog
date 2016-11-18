@@ -84,3 +84,28 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*lcd4linux-0.10.1_rc2-r4 (26 Apr 2016)
+
+  26 Apr 2016; Austin English <wizardedit@gentoo.org>
+  files/lcd4linux-0.10.1_rc2.initd, +lcd4linux-0.10.1_rc2-r4.ebuild:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=573846
+
+  Package-Manager: portage-2.2.26
+
+  26 Apr 2016; Austin English <wizardedit@gentoo.org>
+  -lcd4linux-0.10.1_rc2-r3.ebuild:
+  remove lcd4linux-0.10.1_rc2-r3
+
+  Package-Manager: portage-2.2.26
+
+  09 May 2016; Mike Frysinger <vapier@gentoo.org>
+  lcd4linux-0.10.1_rc2-r4.ebuild:
+  update HOMEPAGE
+

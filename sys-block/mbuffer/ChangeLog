@@ -87,3 +87,17 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*mbuffer-20160228 (13 Apr 2016)
+
+  13 Apr 2016; Robin H. Johnson <robbat2@gentoo.org> +mbuffer-20160228.ebuild:
+  bump per bug #568102.
+
+  Package-Manager: portage-2.2.28
+
+  16 Apr 2016; Manuel Rüger <mrueg@gentoo.org> -mbuffer-20090113.ebuild,
+  -mbuffer-20110724.ebuild, -mbuffer-20130220.ebuild,
+  -mbuffer-20140126.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+

@@ -63,3 +63,35 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  04 Sep 2016; David Seifert <soap@gentoo.org> -files/Ice-3.4.1-db5.patch,
+  -files/Ice-3.4.2-gcc46.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/2223
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*Ice-3.6.3 (22 Oct 2016)
+
+  22 Oct 2016; David Seifert <soap@gentoo.org> +Ice-3.6.3.ebuild,
+  +files/Ice-3.6.3-csharp.patch, +files/Ice-3.6.3-no-arch-opts.patch:
+  version bump
+
+  Gentoo-Bug: 555586
+
+  Package-Manager: portage-2.3.2
+  Closes: https://github.com/gentoo/gentoo/pull/2628
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  22 Oct 2016; David Seifert <soap@gentoo.org> Ice-3.6.3.ebuild:
+  Modernize ebuild, prepare for EAPI=6
+
+  Package-Manager: portage-2.3.2
+
+  25 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> Ice-3.6.3.ebuild:
+  Better sys-libs/db support.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

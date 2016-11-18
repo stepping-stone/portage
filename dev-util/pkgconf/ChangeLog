@@ -177,3 +177,67 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> pkgconf-0.9.12.ebuild:
+  ppc stable wrt bug #573312
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> pkgconf-0.9.12.ebuild:
+  sparc stable wrt bug #573312
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> pkgconf-0.9.12.ebuild:
+  ia64 stable wrt bug #573312
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  07 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #390203
+
+  Package-Manager: portage-2.3.0
+
+*pkgconf-1.0.1 (22 Oct 2016)
+
+  22 Oct 2016; David Seifert <soap@gentoo.org> metadata.xml,
+  +pkgconf-1.0.1.ebuild, pkgconf-9999.ebuild:
+  bump to version 1.0.1
+
+  - fixes test failures (bug #562220)
+  - migrate to EAPI6 and git-r3
+
+  Gentoo-Bug: https://bugs.gentoo.org/562220
+  Closes: https://github.com/gentoo/gentoo/pull/2410
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*pkgconf-1.0.2 (25 Oct 2016)
+
+  25 Oct 2016; Mike Gilbert <floppym@gentoo.org> +pkgconf-1.0.2.ebuild,
+  pkgconf-9999.ebuild:
+  bump to 1.0.2
+
+  Package-Manager: portage-2.3.2
+
+  25 Oct 2016; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  make myself a maintainer
+
+  Package-Manager: portage-2.3.2
+
+  25 Oct 2016; Kristian Fiskerstrand <k_f@gentoo.org> metadata.xml:
+  Drop inactive proxied maintainer
+
+  Package-Manager: portage-2.3.2
+
+  30 Oct 2016; Mike Gilbert <floppym@gentoo.org> pkgconf-1.0.2.ebuild,
+  pkgconf-9999.ebuild:
+  drop github from SRC_URI
+
+  Package-Manager: portage-2.3.2_p1
+

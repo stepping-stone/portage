@@ -111,3 +111,84 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*gentoolkit-0.3.1-r1 (12 Mar 2016)
+
+  12 Mar 2016; Mike Gilbert <floppym@gentoo.org> -gentoolkit-0.3.1.ebuild,
+  +gentoolkit-0.3.1-r1.ebuild, gentoolkit-9999.ebuild:
+  Create /var/cache/revdep-rebuild in pkg_postinst
+
+  This resolves a QA warning.
+
+  QA Notice: This ebuild installs into paths that should be created at
+  runtime.
+   To fix, simply do not install into these directories.  Instead, your
+  package
+   should create dirs on the fly at runtime as needed via init scripts/etc...
+
+    var/cache
+    var/cache/revdep-rebuild
+    var/cache/revdep-rebuild/.keep_app-portage_gentoolkit-0
+
+  We already install a tmpfiles entry to recreate the directory on boot.
+
+  Package-Manager: portage-2.2.28_p57
+
+*gentoolkit-0.3.1.1 (06 Jun 2016)
+
+  06 Jun 2016; Brian Dolbec <dolsen@gentoo.org> +gentoolkit-0.3.1.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1_p19
+
+*gentoolkit-0.3.2 (08 Jul 2016)
+
+  08 Jul 2016; Brian Dolbec <dolsen@gentoo.org> -gentoolkit-0.3.0.9.ebuild,
+  -gentoolkit-0.3.0.9-r1.ebuild, -gentoolkit-0.3.1-r1.ebuild,
+  +gentoolkit-0.3.2.ebuild:
+  Version bump, clean up older unstable versions
+
+  Package-Manager: portage-2.3.0
+
+*gentoolkit-0.3.2-r1 (26 Jul 2016)
+
+  26 Jul 2016; Paul Varner <fuzzyray@gentoo.org>
+  +files/0.3.2-helpers.py-589686.patch, +gentoolkit-0.3.2-r1.ebuild:
+  Revision bump to add patch
+
+  Add patch to fix compatability with python2.7 and equery changes.
+  This patch fixes Bug 589686
+
+  Package-Manager: portage-2.3.0
+
+  10 Aug 2016; Mike Frysinger <vapier@gentoo.org>
+  gentoolkit-0.3.0.8-r2.ebuild, gentoolkit-0.3.0.9-r2.ebuild,
+  gentoolkit-0.3.1.1.ebuild, gentoolkit-0.3.2.ebuild,
+  gentoolkit-0.3.2-r1.ebuild, gentoolkit-9999.ebuild:
+  drop old coreutils/realpath/grep deps
+
+  The realpath dep migrated years ago into coreutils, so we can drop this
+  old dep as it's part of the @system.
+
+  23 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  gentoolkit-0.3.2-r1.ebuild:
+  0.3.2-r1: add alpha keyword
+
+  Gentoo-Bug: 590170
+
+  27 Sep 2016; Markus Meier <maekke@gentoo.org> gentoolkit-0.3.2-r1.ebuild:
+  arm stable, bug #590170
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> gentoolkit-0.3.2-r1.ebuild:
+  Stable for HPPA PPC64 (bug #590170).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> gentoolkit-0.3.0.8-r2.ebuild,
+  gentoolkit-0.3.0.9-r2.ebuild, gentoolkit-0.3.1.1.ebuild,
+  gentoolkit-0.3.2.ebuild, gentoolkit-0.3.2-r1.ebuild, gentoolkit-9999.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

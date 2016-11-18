@@ -64,3 +64,51 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  waitress-0.8.9.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*waitress-0.8.10 (01 Mar 2016)
+
+  01 Mar 2016; Patrick Lauer <patrick@gentoo.org> +waitress-0.8.10.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+*waitress-0.8.10-r1 (08 Mar 2016)
+
+  08 Mar 2016; Patrick Lauer <patrick@gentoo.org> -waitress-0.8.10.ebuild,
+  +waitress-0.8.10-r1.ebuild:
+  Fix docs generation #576660
+
+  Package-Manager: portage-2.2.27
+
+  26 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  waitress-0.8.10-r1.ebuild:
+  adding py35
+
+  Package-Manager: portage-2.2.26
+
+*waitress-0.8.10-r2 (11 Oct 2016)
+
+  11 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  -waitress-0.8.10-r1.ebuild, +waitress-0.8.10-r2.ebuild:
+  remove pylons-sphinx-themes dependency as it is being lastrited.
+
+  Package-Manager: portage-2.3.0
+
+*waitress-1.0.1 (23 Oct 2016)
+
+  23 Oct 2016; Sebastian Pipping <sping@gentoo.org> +waitress-1.0.1.ebuild:
+  1.0.1
+
+  Package-Manager: portage-2.3.1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> waitress-0.8.9.ebuild,
+  waitress-0.8.10-r2.ebuild, waitress-1.0.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

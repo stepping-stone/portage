@@ -86,3 +86,239 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  22 Mar 2016; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  change to Rust project
+
+  24 Mar 2016; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  fix metadata
+
+  Rust is a project and not a person.
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+*rust-1.7.0 (26 Mar 2016)
+
+  26 Mar 2016; Doug Goldstein <cardoe@gentoo.org> +rust-1.7.0.ebuild:
+  version bump
+
+  Based on the work of the Gentoo Rust overlay team's work. Includes
+  additional improvements such as:
+  - using the system LLVM by default
+  - updates for cross compile support
+  - using the latest stage0 bootstrap binary
+  - drop the custom postfix that Gentoo used
+  - provide a sub-slot for ABI so packages can rebuild
+  - EAPI=6
+  - misc cleanups
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  26 Mar 2016; Doug Goldstein <cardoe@gentoo.org> rust-1.7.0.ebuild:
+  fix llvm dependency
+
+  Technically prior to LLVM 3.7, Gentoo still supports static linking which
+  is what the Rust build does by default so LLVM is not a run-time depend.
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+*rust-1.8.0_beta20160323 (28 Mar 2016)
+
+  28 Mar 2016; Doug Goldstein <cardoe@gentoo.org>
+  +rust-1.8.0_beta20160323.ebuild:
+  initial beta version
+
+  Add an initial beta version that is un-KEYWORDed.
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+*rust-1.8.0_beta20160323-r100 (30 Mar 2016)
+*rust-1.7.0-r100 (30 Mar 2016)
+
+  30 Mar 2016; Doug Goldstein <cardoe@gentoo.org> +rust-1.7.0-r100.ebuild,
+  +rust-1.8.0_beta20160323-r100.ebuild:
+  add packages for >=sys-devel/llvm-3.7.0
+
+  Because of changes Gentoo has made with how sys-devel/llvm is built
+  the way we have to depend on it has changed. LLVM 3.6.0 is only
+  a build time DEPEND. While LLVM 3.7.0 and newer is a run-time
+  RDEPEND and DEPEND. Since no EAPI provides a dynamic way for
+  packages to update RDEPEND we need to provide two different
+  packages so that people can build against LLVM 3.6.0 and LLVM
+  3.7.0 and newer.
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  30 Mar 2016; Doug Goldstein <cardoe@gentoo.org> rust-1.7.0-r100.ebuild,
+  rust-1.8.0_beta20160323-r100.ebuild:
+  fix LLVM sub-slot depends
+
+  We need to have a depend on the sub-slot.
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  07 Apr 2016; Doug Goldstein <cardoe@gentoo.org> rust-1.7.0-r100.ebuild:
+  fix stage0 snapshots
+
+  Accidently put the stage0 snapshots from 1.8.0 into the
+  1.7.0-r100 ebuild instead of the values from the 1.7.0
+  ebuild.
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  11 Apr 2016; Doug Goldstein <cardoe@gentoo.org> rust-1.7.0.ebuild,
+  rust-1.7.0-r100.ebuild, rust-1.8.0_beta20160323.ebuild,
+  rust-1.8.0_beta20160323-r100.ebuild:
+  disable building with rpath
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+*rust-1.8.0-r100 (14 Apr 2016)
+*rust-1.8.0 (14 Apr 2016)
+
+  14 Apr 2016; Doug Goldstein <cardoe@gentoo.org>
+  -rust-1.8.0_beta20160323.ebuild, -rust-1.8.0_beta20160323-r100.ebuild,
+  +rust-1.8.0.ebuild, +rust-1.8.0-r100.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+*rust-1.9.0 (22 Jun 2016)
+
+  22 Jun 2016; Doug Goldstein <cardoe@gentoo.org> +rust-1.9.0.ebuild:
+  version bump
+
+  Bump to 1.9.0. Fixes bug #585740.
+
+  Gentoo-Bug: 585740
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+*rust-1.10.0 (08 Jul 2016)
+
+  08 Jul 2016; Dirkjan Ochtman <djc@gentoo.org> +rust-1.10.0.ebuild:
+  version bump to 1.10.0
+
+  Package-Manager: portage-2.2.28
+
+  08 Jul 2016; Dirkjan Ochtman <djc@gentoo.org> -rust-1.2.0.ebuild,
+  -rust-1.3.0.ebuild, -rust-1.5.0.ebuild, -rust-1.7.0.ebuild,
+  -rust-1.7.0-r100.ebuild, -rust-1.8.0.ebuild, -rust-1.8.0-r100.ebuild:
+  remove old versions
+
+  Package-Manager: portage-2.2.28
+
+*rust-1.11.0 (22 Aug 2016)
+
+  22 Aug 2016; Dirkjan Ochtman <djc@gentoo.org> +rust-1.11.0.ebuild:
+  version bump to 1.11.0
+
+  Package-Manager: portage-2.2.28
+
+  30 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/rust-1.1.0-install.patch:
+  remove unused patch.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2165
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  02 Sep 2016; Patrice Clement <monsieurp@gentoo.org> rust-1.9.0.ebuild,
+  rust-1.10.0.ebuild, rust-1.11.0.ebuild:
+  app-vim/rust-mode: rename to app-vim/rust-vim.
+
+  Update package metadata.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2157
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*rust-1.12.0 (30 Sep 2016)
+
+  30 Sep 2016; Dirkjan Ochtman <djc@gentoo.org> +rust-1.12.0.ebuild:
+  version bump to 1.12.0
+
+  Package-Manager: portage-2.3.0
+
+  30 Sep 2016; Dirkjan Ochtman <djc@gentoo.org> -rust-1.9.0.ebuild,
+  -rust-1.10.0.ebuild:
+  remove old versions
+
+  Package-Manager: portage-2.3.0
+
+*rust-1.12.1 (21 Oct 2016)
+
+  21 Oct 2016; Dirkjan Ochtman <djc@gentoo.org> +rust-1.12.1.ebuild:
+  version bump to 1.12.1
+
+  Package-Manager: portage-2.3.0
+
+  24 Oct 2016; Doug Goldstein <cardoe@gentoo.org> rust-1.11.0.ebuild,
+  rust-1.12.0.ebuild, rust-1.12.1.ebuild:
+  have src_prepare use default
+
+  Instead of calling eapply_user manually inside of src_prepare, call the
+  default function to ensure we use all the of the steps of src_prepare
+  (namely the use of eapply ${PATCHES}).
+
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  24 Oct 2016; Doug Goldstein <cardoe@gentoo.org>
+  +files/rust-1.12.0-disable-fetching-stage0.patch, rust-1.12.0.ebuild,
+  rust-1.12.1.ebuild:
+  fix network-less builds
+
+  When building without a network connection or FEATURES=network-sandbox
+  the build would fail due to the build process reaching out to the
+  internet to fetch down some files that the package manager already got
+  for it. This neuters that network access and uses the existing files.
+
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  25 Oct 2016; Doug Goldstein <cardoe@gentoo.org> rust-1.12.1.ebuild:
+  PDEPEND on dev-util/cargo
+
+  A number of people have pointed out to me that on most distros
+  installing Rust results in a fully working environment (e.g. includes
+  Cargo) so we should really provide the same.
+
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  31 Oct 2016; Doug Goldstein <cardoe@gentoo.org> rust-1.12.1.ebuild:
+  drop need for USE+multitarget on LLVM
+
+  Rust no longer needs USE=multitarget when building against the system
+  LLVM. fixes bug #598144
+
+  Gentoo-Bug: 598144
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  02 Nov 2016; Doug Goldstein <cardoe@gentoo.org> rust-1.12.1.ebuild:
+  bump allowed LLVM version
+
+  Rust 1.12.0 supports LLVM 3.9 so allow that version to be used.
+
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  08 Nov 2016; Doug Goldstein <cardoe@gentoo.org>
+  -files/rust-1.12.0-disable-fetching-stage0.patch, rust-1.11.0.ebuild,
+  rust-1.12.0.ebuild, rust-1.12.1.ebuild:
+  simplify unpack
+
+  Instead of unpacking the tarball of the stage0 compiler and then
+  patching the fetch script to not actually reach out to the internet, use
+  the built in mechanism for supplying a stage0 compiler. This improves on
+  d63d593dfdc5fb7dd1256663daac7b978aa892af and should make future bumps
+  easier. Drops the now unnecessary patch as well.
+
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+

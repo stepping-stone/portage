@@ -107,3 +107,58 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> gnome-light-3.18.0.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+*gnome-light-3.20.0 (05 Sep 2016)
+
+  05 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-light-3.20.0.ebuild:
+  version bump to 3.20.0
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-light-3.20.0.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-light-3.20.0.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*gnome-light-3.22.0 (12 Nov 2016)
+
+  12 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-light-3.22.0.ebuild:
+  version bump 3.20.0 → 3.22.0
+
+  Package-Manager: portage-2.3.2
+
+  12 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-light-3.16.0.ebuild, -gnome-light-3.18.0.ebuild:
+  cleanup old revisions
+
+  Package-Manager: portage-2.3.2
+
+  12 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-light-3.22.0.ebuild:
+  gnome-base/gnome-control-center: drop sparc keyword
+
+  Gentoo-Bug: 599572
+
+  Package-Manager: portage-2.3.2
+
+  12 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-light-3.22.0.ebuild:
+  lower requirement on nautilus due to gnome-autoar
+
+  Gentoo-Bug: 599574
+
+  Package-Manager: portage-2.3.2
+

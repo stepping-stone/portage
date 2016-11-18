@@ -90,3 +90,74 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> qtcurve-1.8.18-r1.ebuild:
+  ppc stable wrt bug #572114
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> qtcurve-1.8.18-r1.ebuild:
+  ppc64 stable wrt bug #572114
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> qtcurve-1.8.18-r1.ebuild:
+  sparc stable wrt bug #572114
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  30 May 2016; Davide Pesavento <pesa@gentoo.org> -qtcurve-1.8.18.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0_rc1
+
+  02 Jun 2016; Davide Pesavento <pesa@gentoo.org> qtcurve-1.8.17-r1.ebuild,
+  qtcurve-1.8.18-r1.ebuild:
+  don't define KEYWORDS for 9999
+
+  The double declaration confuses some automatic tools.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  09 Jun 2016; Jeroen Roovers <jer@gentoo.org> qtcurve-1.8.18-r1.ebuild:
+  Stable for HPPA (bug #572114).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  09 Jun 2016; Davide Pesavento <pesa@gentoo.org> -qtcurve-1.8.17-r1.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0_rc1
+
+  10 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  +files/qtcurve-1.8.18-std_isnan.patch, qtcurve-1.8.18-r1.ebuild:
+  fix usage of isnan() for bug 431848
+
+  Gentoo-Bug: 431848
+
+  19 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  files/qtcurve-1.8.18-std_isnan.patch:
+  Fix broken isnan patch
+
+  Gentoo-Bug: 593472
+
+  02 Nov 2016; Johannes Huber <johu@gentoo.org> metadata.xml,
+  qtcurve-1.8.18-r1.ebuild:
+  Drop deprecated Plasma 4 support
+
+  Package-Manager: portage-2.3.2
+
+*qtcurve-9999 (11 Nov 2016)
+
+  11 Nov 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +files/qtcurve-9999-add_utils_include.patch, +qtcurve-9999.ebuild:
+  Added live ebuild based on work from seden overlay.
+
+  Package-Manager: portage-2.3.2
+

@@ -97,3 +97,81 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> gnome-mines-3.18.2.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  02 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  gnome-mines-3.18.2.ebuild:
+  games-board/games-mines: keyword for ~arm64.
+
+  Tested on cortex-a53. Raspberry Pi in 64 bit mode.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1578
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -gnome-mines-3.16.1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnome-mines-3.20.0 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +gnome-mines-3.20.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> -gnome-mines-3.20.0.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnome-mines-3.20.1 (02 Jul 2016)
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> +gnome-mines-3.20.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-mines-3.20.1.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-mines-3.20.1.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*gnome-mines-3.22.1 (31 Oct 2016)
+
+  31 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-mines-3.22.1.ebuild:
+  version bump 3.20.1 → 3.22.1
+
+  Package-Manager: portage-2.3.2
+
+  31 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-mines-3.18.2.ebuild:
+  cleanup old revision
+
+  Package-Manager: portage-2.3.2
+
+*gnome-mines-3.22.2 (09 Nov 2016)
+
+  09 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-mines-3.22.2.ebuild:
+  add gnome-mines-3.22.2.ebuild
+
+  Simple bump, no relevant changes
+
+  https://git.gnome.org/browse/gnome-mines/diff/?id=3.22.2&&id2=3.22.1
+  Closes: https://github.com/gentoo/gentoo/pull/2785
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5} )
 
 inherit distutils-r1 eutils qt4-r2 toolchain-funcs flag-o-matic
 
@@ -14,11 +14,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="htmlreport pcre qt4"
 
 RDEPEND="htmlreport? ( dev-python/pygments[${PYTHON_USEDEP}] )
 	>=dev-libs/tinyxml2-2
+	<dev-libs/tinyxml2-4
 	qt4? ( dev-qt/qtgui:4 )
 	pcre? ( dev-libs/libpcre )"
 DEPEND="${RDEPEND}

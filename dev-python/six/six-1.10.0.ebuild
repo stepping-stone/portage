@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_{3,4,5} pypy pypy3 )
+PYTHON_COMPAT=( python2_7 python3_{4,5} pypy pypy3 )
 
 inherit distutils-r1
 
@@ -25,6 +25,15 @@ PATCHES=(
 	"${FILESDIR}"/1.10.0-no-setuptools.patch
 	"${FILESDIR}"/1.9.0-mapping.patch
 )
+
+if [[ ${PV} != 1.10.0 ]]; then
+	# There is no longer a circular dep with setuptools, so please do the following
+	# Drop 1.10.0-no-setuptools.patch
+	# Add a dependency on dev-python/setuptools[${PYTHON_USEDEP}]
+	# Remove pkg_preinst
+	# Thanks! - Mike Gilbert (floppym)
+	die "Please read the ebuild for notes on this version bump"
+fi
 
 python_prepare_all() {
 	# https://bitbucket.org/gutworth/six/issues/139/
@@ -49,8 +58,11 @@ python_install_all() {
 	distutils-r1_python_install_all
 }
 
+# Remove pkg_preinst in the next version bump
 pkg_preinst() {
-	# Remove this in the next version bump
+	# https://bugs.gentoo.org/585146
+	cd "${HOME}" || die
+
 	_cleanup() {
 		local pyver=$("${PYTHON}" -c "from distutils.sysconfig import get_python_version; print(get_python_version())")
 		local egginfo="${ROOT%/}$(python_get_sitedir)/${P}-py${pyver}.egg-info"

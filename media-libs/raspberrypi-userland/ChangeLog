@@ -79,3 +79,67 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*raspberrypi-userland-0_pre20160305 (08 Mar 2016)
+
+  08 Mar 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/92-local-vchiq-permissions.rules,
+  +raspberrypi-userland-0_pre20160305.ebuild:
+  version bump and fixed regular user access rights to vchiq when using udev
+
+  Package-Manager: portage-2.2.27
+
+*raspberrypi-userland-0_pre20160305-r1 (10 Mar 2016)
+
+  10 Mar 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  files/04raspberrypi-userland, +files/bcm_host.pc, +files/egl.pc,
+  +files/glesv2.pc, +files/next-resource-handle.patch,
+  +files/wayland-wsys.patch, -raspberrypi-userland-0_pre20160305.ebuild,
+  +raspberrypi-userland-0_pre20160305-r1.ebuild:
+  bug fixes and improvements
+
+  fixed bug #539504: support for GLESv1
+  fixed bugs #499768 and #529424: added pkgconfig files and set environment
+  path to these files
+  fixed location of udev rules file
+  fixed bug #499768: added support for wayland from leio.git overlay
+
+  Package-Manager: portage-2.2.27
+
+*raspberrypi-userland-0_pre20160330 (30 Mar 2016)
+
+  30 Mar 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +raspberrypi-userland-0_pre20160330.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+*raspberrypi-userland-0_pre20160408 (11 Apr 2016)
+
+  11 Apr 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +raspberrypi-userland-0_pre20160408.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+*raspberrypi-userland-0_pre20160424 (25 Apr 2016)
+
+  25 Apr 2016; Miroslav Šulc <fordfrog@gentoo.org>
+  +raspberrypi-userland-0_pre20160424.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+  11 May 2016; Tupone Alfredo <tupone@gentoo.org>
+  files/raspberrypi-userland-9999-gentoo.patch,
+  raspberrypi-userland-9999.ebuild:
+  patches accepted by upstream
+
+  Package-Manager: portage-2.2.26
+
+  19 Oct 2016; Tupone Alfredo <tupone@gentoo.org>
+  -files/raspberrypi-userland-9999-gentoo.patch,
+  raspberrypi-userland-9999.ebuild:
+  Patch accepted by upstream
+
+  Package-Manager: portage-2.3.0
+

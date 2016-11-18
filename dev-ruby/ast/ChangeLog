@@ -77,3 +77,15 @@
 
   Package-Manager: portage-2.2.27
 
+  30 Mar 2016; Hans de Graaff <graaff@gentoo.org> ast-2.2.0.ebuild:
+  add ruby23
+
+  Package-Manager: portage-2.2.26
+
+*ast-2.3.0 (08 Jun 2016)
+
+  08 Jun 2016; Hans de Graaff <graaff@gentoo.org> +ast-2.3.0.ebuild:
+  add 2.3.0
+
+  Package-Manager: portage-2.2.28
+

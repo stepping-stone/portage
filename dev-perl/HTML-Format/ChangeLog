@@ -92,3 +92,14 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  05 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> HTML-Format-2.140.0.ebuild:
+  ppc stable wrt bug #573554
+
+  Package-Manager: portage-2.2.26
+
+  09 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -HTML-Format-2.100.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+

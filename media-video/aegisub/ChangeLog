@@ -334,3 +334,227 @@
 
   Package-Manager: portage-2.2.27
 
+  04 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> metadata.xml:
+  add bugs-to link to metadata
+
+  Package-Manager: portage-2.2.27
+
+  04 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> metadata.xml:
+  add maintainer description to metadata
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> aegisub-9999.ebuild:
+  remove obsolete RDEPEND version numbers from 9999
+
+  These versions were removed from tree in 2012.
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> aegisub-9999.ebuild:
+  remove unneeded wxGTK dep version number from 9999
+
+  wxGTK has SLOT=3.0 only in >=3.0.0 versions.
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> aegisub-9999.ebuild:
+  add missing libass subslot operator to 9999
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> aegisub-9999.ebuild,
+  -files/aegisub-9999-add-missing-pthread-flags.patch:
+  remove unneeded pthread-flags patch from 9999
+
+  Merged upstream.
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> aegisub-9999.ebuild,
+  -files/aegisub-9999-unbundle-luajit.patch:
+  remove unneeded unbundle-luajit patch from 9999
+
+  Mostly merged upstream. Upstream now supports building with system
+  luajit. There are still some problems left, see [1]. But it's already
+  a major improvement.
+
+  [1]: http://devel.aegisub.org/ticket/1904#comment:10
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> aegisub-9999.ebuild:
+  adjust luajit dep to SLOT=2, i.e. >=2.0.0, in 9999
+
+  Upstream allows system luajit to be >=2.0.0.
+
+  Package-Manager: portage-2.2.27
+
+*aegisub-3.2.2_p20160306 (07 Mar 2016)
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com>
+  +aegisub-3.2.2_p20160306.ebuild, aegisub-9999.ebuild,
+  +files/aegisub-3.2.2_p20160306-fix-luajit-unbundling.patch,
+  +files/aegisub-3.2.2_p20160306-respect-user-compiler-flags.patch:
+  verbump to 3.2.2_p20160306
+
+  New snapshot release with most of our Gentoo patches merged upstream.
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> -aegisub-3.2.2-r1.ebuild,
+  -files/aegisub-3.2.2-r1-respect-user-compiler-flags.patch:
+  remove old
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com>
+  files/aegisub-3.0.4-fix-install-with-empty-LINGUAS.patch:
+  better wording in patch comment for 3.0.4
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> aegisub-3.0.4-r1.ebuild:
+  remove obsolete RDEPEND version numbers from 3.0.4
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> aegisub-3.0.4-r1.ebuild:
+  add missing libass subslot operator to 3.0.4
+
+  Package-Manager: portage-2.2.27
+
+  10 Mar 2016; Ian Delaney <idella4@gentoo.org>
+  aegisub-3.2.2_p20160306.ebuild, aegisub-9999.ebuild:
+  update comment re luabins
+
+  Package-Manager: portage-2.2.27
+
+  10 Mar 2016; Ian Delaney <idella4@gentoo.org>
+  aegisub-3.2.2_p20160306.ebuild:
+  manually add git_version.h to 3.2.2_p20160306 wrt bug 576918
+
+  Gentoo-Bug: 576918
+  Closes: https://github.com/gentoo/gentoo/pull/1018
+
+  Package-Manager: portage-2.2.27
+
+  10 Mar 2016; Ian Delaney <idella4@gentoo.org>
+  aegisub-3.2.2_p20160306.ebuild, aegisub-9999.ebuild:
+  copy config.rpath via autotools eclass in 3.2.2_p20160306, 9999
+
+  Replace a custom config.rpath hack with the legalized one from autotools
+  eclass. See also http://devel.aegisub.org/ticket/1914
+
+  Package-Manager: portage-2.2.27
+
+  26 May 2016; Michał Górny <mgorny@gentoo.org> aegisub-9999.ebuild:
+  Switch to git-r3
+
+  Switch the live ebuild to git-r3, using the new EGIT_SUBMODULES API.
+
+  27 Jun 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  cleanup maintainer list
+
+  Acked-By: Maxim Koltsov <maksbotan@gentoo.org>
+
+  Package-Manager: portage-2.3.0
+
+  28 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  -aegisub-3.0.4-r1.ebuild,
+  -files/aegisub-3.0.4-fix-install-with-empty-LINGUAS.patch,
+  -files/aegisub-3.0.4-fix-lua-macro.patch,
+  -files/aegisub-3.0.4-respect-user-compiler-flags.patch:
+  remove 3.0.4
+
+  It's time for 3.0.4 to go.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  28 Jun 2016; Patrice Clement <monsieurp@gentoo.org> aegisub-3.2.2.ebuild,
+  +files/3.2.2/aegisub-3.2.2-add-missing-pthread-flags.patch,
+  +files/3.2.2/aegisub-3.2.2-fix-lua-regexp.patch,
+  +files/3.2.2/aegisub-3.2.2-respect-user-compiler-flags.patch,
+  +files/3.2.2/aegisub-3.2.2-unbundle-luajit.patch,
+  -files/aegisub-3.2.2-add-missing-pthread-flags.patch,
+  -files/aegisub-3.2.2-fix-lua-regexp.patch,
+  -files/aegisub-3.2.2-respect-user-compiler-flags.patch,
+  -files/aegisub-3.2.2-unbundle-luajit.patch:
+  move 3.2.2 patchset to files/3.2.2/ subdirectory
+
+  Otherwise files/ directory is a bit messy.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*aegisub-3.2.2_p20160518 (28 Jun 2016)
+
+  28 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  +aegisub-3.2.2_p20160518.ebuild, +files/3.2.2_p20160518/aegisub-3.2.2_p20160
+  518-fix-system-luajit-build.patch,
+  +files/3.2.2_p20160518/aegisub-3.2.2_p20160518-respect-compiler-flags.patch,
+  +files/3.2.2_p20160518/aegisub-3.2.2_p20160518-support-system-gtest.patch:
+  verbump to 3.2.2_p20160518
+
+  Major revamp of the ebuild and the patchset:
+  - EAPI=6;
+  - add testing support;
+  - remove ffmpeg USE and depend on ffmpegsource unconditionally
+    (otherwise aegisub can only open blank 'videos' without any video);
+  - cleanup dependencies;
+  - update the patchset (all changes were submitted upstream);
+  - update LICENSE.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  28 Jun 2016; Patrice Clement <monsieurp@gentoo.org> aegisub-9999.ebuild:
+  sync 9999 with the latest snapshot ebuild
+
+  Package-Manager: portage-2.3.0_rc1
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  28 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  -aegisub-3.2.2_p20160306.ebuild,
+  -files/aegisub-3.2.2_p20160306-fix-luajit-unbundling.patch,
+  -files/aegisub-3.2.2_p20160306-respect-user-compiler-flags.patch:
+  remove old
+
+  Closes: https://github.com/gentoo/gentoo/pull/1781
+  Package-Manager: portage-2.3.0_rc1
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  11 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  aegisub-3.2.2_p20160518.ebuild, aegisub-9999.ebuild:
+  add setup-wxwidgets call wrt bug 587530
+
+  Gentoo-Bug: https://bugs.gento.org/587530
+  Closes: https://github.com/gentoo/gentoo/pull/1839
+  Package-Manager: portage-2.3.0
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  20 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  aegisub-3.2.2_p20160518.ebuild, aegisub-9999.ebuild:
+  do compiler checks in pkg_setup() too.
+
+  Package-Manager: portage-2.3.2
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  20 Oct 2016; Patrice Clement <monsieurp@gentoo.org> aegisub-9999.ebuild:
+  update live ebuild.
+
+  Prefer HTTPS URI, port to xdg-utils eclass.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2609
+  Package-Manager: portage-2.3.2
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

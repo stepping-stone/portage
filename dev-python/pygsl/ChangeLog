@@ -80,3 +80,25 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  06 Mar 2016; Agostino Sarubbo <ago@gentoo.org> pygsl-0.9.5-r1.ebuild:
+  amd64 stable wrt bug #574720
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> pygsl-0.9.5-r1.ebuild:
+  x86 stable wrt bug #574720
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  05 Sep 2016; Manuel Rüger <mrueg@gentoo.org> -pygsl-0.9.5.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pygsl-2.1.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

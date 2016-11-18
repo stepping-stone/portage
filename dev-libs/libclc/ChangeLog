@@ -85,3 +85,49 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*libclc-0.2.0_pre20160209 (10 Mar 2016)
+
+  10 Mar 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libclc-0.2.0_pre20160209.ebuild:
+  new snapshot
+
+  Package-Manager: portage-2.2.26
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libclc-0.2.0_pre20160209.ebuild:
+  x86 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libclc-0.2.0_pre20160209.ebuild:
+  amd64 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  26 Oct 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Add LLVM project as co-maintainer
+
+*libclc-0.2.0_pre20160921 (26 Oct 2016)
+
+  26 Oct 2016; Michał Górny <mgorny@gentoo.org>
+  +libclc-0.2.0_pre20160921.ebuild:
+  Bump to a new snapshot
+
+  26 Oct 2016; Michał Górny <mgorny@gentoo.org>
+  libclc-0.2.0_pre20160921.ebuild:
+  Drop ~ppc from newest due to LLVM-3.9 keywords
+
+  15 Nov 2016; Michał Górny <mgorny@gentoo.org>
+  -files/libclc-llvm-3.5-compat.patch, -libclc-0.0.1_pre20140101-r1.ebuild,
+  -libclc-0.0.1_pre20141027.ebuild:
+  Drop old
+
+  17 Nov 2016; Agostino Sarubbo <ago@gentoo.org>
+  libclc-0.2.0_pre20160209.ebuild:
+  ppc stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

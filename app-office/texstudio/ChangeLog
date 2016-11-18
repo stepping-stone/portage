@@ -195,3 +195,70 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  17 Jul 2016; Michael Palimaka <kensington@gentoo.org>
+  texstudio-2.10.8.ebuild:
+  amd64/x86 stable
+
+  Gentoo-bug: 585292
+
+  Package-Manager: portage-2.3.0
+
+*texstudio-2.11.0 (25 Aug 2016)
+
+  25 Aug 2016; Manuel Rüger <mrueg@gentoo.org> +texstudio-2.11.0.ebuild:
+  Version bump to 2.11.0
+
+  Gentoo-Bug: #581520
+  Gentoo-Bug: #586854
+  Gentoo-Bug: #584888
+  Gentoo-Bug: #590702
+
+  Package-Manager: portage-2.3.0
+
+  30 Sep 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/texstudio-2.6.0-desktop.patch,
+  -files/texstudio-2.6.0-hunspell-quazip.patch:
+  remove unused patches.
+
+  Courtesy of Michael Mair-Keimberger <m.mairkeimberger@gmail.com>.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1916
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*texstudio-2.11.2 (10 Oct 2016)
+
+  10 Oct 2016; Manuel Rüger <mrueg@gentoo.org> +texstudio-2.11.2.ebuild:
+  Version bump to 2.11.2
+
+  Gentoo-Bug: #595996
+
+  Package-Manager: portage-2.3.1
+
+  10 Oct 2016; Manuel Rüger <mrueg@gentoo.org>
+  -files/texstudio-2.5-viewers-use-xdg-open.patch,
+  -files/texstudio-2.8.2-desktop.patch, -texstudio-2.10.2.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.1
+
+*texstudio-2.11.2-r1 (29 Oct 2016)
+
+  29 Oct 2016; Michael Palimaka <kensington@gentoo.org>
+  +texstudio-2.11.2-r1.ebuild:
+  revision bump with various fixes
+
+  * Port to EAPI 6 and remove deprecated Qt 4 support (by Andreas
+  Sturmlechner)
+  * Fix build with quazip-0.7.2
+  * Add missing sys-libs/zlib dependency
+  * Sort dependencies
+  * Update GTK icon cache
+  * Add subslot operator for app-text/hunspell and remove from app-
+  text/poppler
+    (since the stable qt5 interface is used)
+
+  Gentoo-bug: 597876
+  Gentoo-bug: 597930
+
+  Package-Manager: portage-2.3.2
+

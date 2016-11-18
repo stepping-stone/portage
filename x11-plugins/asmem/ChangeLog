@@ -61,3 +61,22 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*asmem-1.12-r1 (28 Aug 2016)
+
+  28 Aug 2016; Michael Orlitzky <mjo@gentoo.org> +asmem-1.12-r1.ebuild,
+  +files/respect-ldflags.patch:
+  new EAPI=6 revision that respects LDFLAGS.
+
+  This new revision is based on the ebuild supplied by Michael
+  Mair-Keimberger in bug 334771. I turned his sed command into a patch,
+  and further updated the ebuild to EAPI=6.
+
+  Gentoo-Bug: 334771
+
+  Package-Manager: portage-2.2.28
+

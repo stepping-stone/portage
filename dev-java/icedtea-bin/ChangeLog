@@ -327,3 +327,239 @@
 
   Package-Manager: portage-2.2.27
 
+  01 Mar 2016; James Le Cuirot <chewi@gentoo.org>
+  icedtea-bin-3.0.0_pre09.ebuild:
+  Keyword for ~amd64, ~arm, and ~x86
+
+  Package-Manager: portage-2.2.27
+
+*icedtea-bin-3.0.0_pre09-r1 (02 Mar 2016)
+
+  02 Mar 2016; James Le Cuirot <chewi@gentoo.org>
+  -icedtea-bin-3.0.0_pre09.ebuild, +icedtea-bin-3.0.0_pre09-r1.ebuild:
+  Remove libsplashscreen.so dep on libgif.so.4
+
+  I forgot to set --disable-system-gif like I did with 7. giflib-5 still
+  isn't stable yet.
+
+  Package-Manager: portage-2.2.27
+
+  15 Mar 2016; James Le Cuirot <chewi@gentoo.org>
+  icedtea-bin-3.0.0_pre09-r1.ebuild:
+  3.0.0_pre09-r1 stable on ppc64 (tested by ago)
+
+  Package-Manager: portage-2.2.28
+
+*icedtea-bin-7.2.6.5 (27 Mar 2016)
+
+  27 Mar 2016; James Le Cuirot <chewi@gentoo.org> +icedtea-bin-7.2.6.5.ebuild:
+  Bump to 7.2.6.5 wrt security bug #578300
+
+  Package-Manager: portage-2.2.28
+
+  27 Mar 2016; Agostino Sarubbo <ago@gentoo.org> icedtea-bin-7.2.6.5.ebuild:
+  amd64 stable wrt bug #578300
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Mar 2016; Agostino Sarubbo <ago@gentoo.org> icedtea-bin-7.2.6.5.ebuild:
+  x86 stable wrt bug #578300
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Mar 2016; James Le Cuirot <chewi@gentoo.org> -icedtea-bin-7.2.6.4.ebuild:
+  Remove vulnerable 7.2.6.4 wrt bug #578300
+
+  Package-Manager: portage-2.2.28
+
+*icedtea-bin-3.0.0_pre10 (01 Apr 2016)
+
+  01 Apr 2016; James Le Cuirot <chewi@gentoo.org>
+  +icedtea-bin-3.0.0_pre10.ebuild:
+  Bump to 3.0.0_pre10 wrt security bug #578788
+
+  This removes the patchelf stuff as I now realise it isn't needed for
+  IcedTea 3.
+
+  Package-Manager: portage-2.2.28
+
+  05 Apr 2016; Jeroen Roovers <jer@gentoo.org> icedtea-bin-3.0.0_pre10.ebuild:
+  Stable for PPC64 (bug #578788).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  06 Apr 2016; James Le Cuirot <chewi@gentoo.org>
+  -icedtea-bin-3.0.0_pre09-r1.ebuild:
+  Remove vulnerable 3.0.0_pre09-r1 wrt bug #578788
+
+  Package-Manager: portage-2.2.28
+
+*icedtea-bin-3.0.0 (10 Apr 2016)
+
+  10 Apr 2016; James Le Cuirot <chewi@gentoo.org> +icedtea-bin-3.0.0.ebuild:
+  Version bump to 3.0.0 final
+
+  There are no security fixes since pre10.
+
+  Package-Manager: portage-2.2.28
+
+*icedtea-bin-3.0.0-r1 (12 Apr 2016)
+
+  12 Apr 2016; James Le Cuirot <chewi@gentoo.org> +files/no-sunec.patch,
+  -icedtea-bin-3.0.0.ebuild, +icedtea-bin-3.0.0-r1.ebuild:
+  Disable SunEC for now (#579676), fontconfig fix
+
+  Package-Manager: portage-2.2.28
+
+  14 Apr 2016; James Le Cuirot <chewi@gentoo.org> -files/icedtea-bin-6.env,
+  -icedtea-bin-6.1.13.9.ebuild:
+  Goodbye Java 6! (bug #483018)
+
+  IcedTea for Java 6 (1.x) is still maintained upstream but Gentoo no
+  longer needs it. If you need it, upstream will continue to provide
+  source ebuilds in the java overlay for the foreseeable future.
+
+  Package-Manager: portage-2.2.28
+
+*icedtea-bin-7.2.6.6 (24 Apr 2016)
+
+  24 Apr 2016; James Le Cuirot <chewi@gentoo.org> +icedtea-bin-7.2.6.6.ebuild:
+  Bump to 7.2.6.6 wrt security bug #581028
+
+  icedtea-bin:7 for arm is being dropped, at least temporarily, as the
+  performance benefit it provides over icedtea-bin:8 is currently
+  broken.
+
+  Package-Manager: portage-2.2.28
+
+*icedtea-bin-7.2.6.6-r1 (25 Apr 2016)
+
+  25 Apr 2016; James Le Cuirot <chewi@gentoo.org> -icedtea-bin-7.2.6.6.ebuild,
+  +icedtea-bin-7.2.6.6-r1.ebuild:
+  Revbump 7.2.6.6, I forgot to increase glibc dep
+
+  Package-Manager: portage-2.2.28
+
+  26 Apr 2016; Agostino Sarubbo <ago@gentoo.org>
+  icedtea-bin-7.2.6.6-r1.ebuild:
+  amd64 stable wrt bug #581028
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*icedtea-bin-3.0.1 (26 Apr 2016)
+
+  26 Apr 2016; James Le Cuirot <chewi@gentoo.org>
+  -icedtea-bin-3.0.0-r1.ebuild, +icedtea-bin-3.0.1.ebuild:
+  Bump to 3.0.1 wrt security bug #581238
+
+  Package-Manager: portage-2.2.28
+
+  27 Apr 2016; Jeroen Roovers <jer@gentoo.org> icedtea-bin-3.0.1.ebuild:
+  Stable for PPC64 (bug #581238).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  27 Apr 2016; James Le Cuirot <chewi@gentoo.org> -files/no-sunec.patch,
+  -icedtea-bin-3.0.0_pre10.ebuild:
+  Remove vulnerable 3.0.0_pre10 wrt bug #581238
+
+  Package-Manager: portage-2.2.28
+
+  17 May 2016; James Le Cuirot <chewi@gentoo.org> icedtea-bin-3.0.1.ebuild:
+  3.0.1 stable on amd64 and x86 (#581876)
+
+  Package-Manager: portage-2.3.0_rc1
+
+  27 Jun 2016; Agostino Sarubbo <ago@gentoo.org>
+  icedtea-bin-7.2.6.6-r1.ebuild:
+  x86 stable wrt bug #581028
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Jun 2016; James Le Cuirot <chewi@gentoo.org> -icedtea-bin-7.2.6.5.ebuild:
+  Remove vulnerable 7.2.6.5 wrt bug #581028
+
+  Package-Manager: portage-2.3.0
+
+*icedtea-bin-3.1.0 (02 Aug 2016)
+
+  02 Aug 2016; James Le Cuirot <chewi@gentoo.org> +files/icedtea-bin.env.sh,
+  +icedtea-bin-3.1.0.ebuild:
+  Bump to 3.1.0, adds multilib for amd64
+
+  Package-Manager: portage-2.3.0
+
+  03 Aug 2016; Austin English <wizardedit@gentoo.org>
+  icedtea-bin-3.0.1.ebuild, icedtea-bin-3.1.0.ebuild,
+  icedtea-bin-7.2.6.6-r1.ebuild:
+  license should be GPL-2-with-classpath-exception, not GPL-2-with-linking-
+  exception
+
+*icedtea-bin-7.2.6.7 (04 Aug 2016)
+
+  04 Aug 2016; James Le Cuirot <chewi@gentoo.org> +icedtea-bin-7.2.6.7.ebuild:
+  Bump to 7.2.6.7, adds multilib for amd64
+
+  Package-Manager: portage-2.3.0
+
+  05 Aug 2016; James Le Cuirot <chewi@gentoo.org> icedtea-bin-3.1.0.ebuild:
+  Add missing nsplugin USE flag on icedtea-web dep
+
+  Package-Manager: portage-2.3.0
+
+  05 Aug 2016; James Le Cuirot <chewi@gentoo.org> icedtea-bin-3.1.0.ebuild:
+  Add missing dependency on libXcomposite, #584738
+
+  Package-Manager: portage-2.3.0
+
+  07 Aug 2016; Agostino Sarubbo <ago@gentoo.org> icedtea-bin-3.1.0.ebuild,
+  icedtea-bin-7.2.6.7.ebuild:
+  amd64 stable wrt bug #590590
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  14 Aug 2016; Jeroen Roovers <jer@gentoo.org> icedtea-bin-3.1.0.ebuild:
+  Stable for PPC64 (bug #590590).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  16 Sep 2016; Benda Xu <heroxbd@gentoo.org> icedtea-bin-7.2.6.7.ebuild:
+  hprefixify before mv.
+
+  Package-Manager: portage-2.3.0
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> icedtea-bin-3.1.0.ebuild,
+  icedtea-bin-7.2.6.7.ebuild:
+  x86 stable wrt bug #590590
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; James Le Cuirot <chewi@gentoo.org> -icedtea-bin-3.0.1.ebuild,
+  -icedtea-bin-7.2.6.6-r1.ebuild:
+  Remove vulnerable 7.2.6.6 and 3.0.1 wrt #590590
+
+  Package-Manager: portage-2.3.1
+
+  05 Oct 2016; James Le Cuirot <chewi@gentoo.org> icedtea-bin-3.1.0.ebuild,
+  icedtea-bin-7.2.6.7.ebuild:
+  MULTILIB_COMPAT needs to be before inherit
+
+  It doesn't take effect otherwise. See bug #595976.
+
+  Package-Manager: portage-2.3.1
+

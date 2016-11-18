@@ -119,3 +119,47 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/init.d-r4:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  02 Jun 2016; Mike Gilbert <floppym@gentoo.org> cpupower-4.2.ebuild:
+  fix SRC_URI
+
+  Package-Manager: portage-2.3.0_rc1_p14
+
+*cpupower-4.5.0 (02 Jun 2016)
+
+  02 Jun 2016; Mike Gilbert <floppym@gentoo.org> +cpupower-4.5.0.ebuild:
+  bump to 4.5.0
+
+  Package-Manager: portage-2.3.0_rc1_p14
+
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #131259
+
+  Package-Manager: portage-2.3.0
+
+*cpupower-4.7.0 (07 Aug 2016)
+
+  07 Aug 2016; Mike Gilbert <floppym@gentoo.org> +cpupower-4.7.0.ebuild:
+  bump to 4.7.0
+
+  Package-Manager: portage-2.3.0_p16
+
+*cpupower-4.7.0-r1 (08 Sep 2016)
+*cpupower-4.5.0-r1 (08 Sep 2016)
+
+  08 Sep 2016; Mike Gilbert <floppym@gentoo.org> -cpupower-4.5.0.ebuild,
+  +cpupower-4.5.0-r1.ebuild, -cpupower-4.7.0.ebuild,
+  +cpupower-4.7.0-r1.ebuild, +files/cpupower-frequency-set.service,
+  +files/cpupower-frequency-set.service.conf:
+  add cpupower-frequency-set.service
+
+  Bug: https://bugs.gentoo.org/531360
+
+  09 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  files/cpupower-frequency-set.service:
+  fix typo in cpupower-frequency-set.service
+
+  Package-Manager: portage-2.3.0_p24
+

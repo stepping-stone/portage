@@ -207,3 +207,154 @@
   15 Feb 2016; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   sync live ebuild
 
+*udev-229-r1 (05 Mar 2016)
+
+  05 Mar 2016; William Hubbs <williamh@gentoo.org> +udev-229-r1.ebuild:
+  revision bump for bug #571986
+
+  Package-Manager: portage-2.2.26
+
+*udev-229-r2 (05 Mar 2016)
+
+  05 Mar 2016; William Hubbs <williamh@gentoo.org> +udev-229-r2.ebuild:
+  rev bump to fix a segmentation fault
+
+  Package-Manager: portage-2.2.26
+
+  07 Mar 2016; Mike Gilbert <floppym@gentoo.org> udev-222.ebuild,
+  udev-224.ebuild, udev-224-r1.ebuild, udev-224-r2.ebuild, udev-225.ebuild,
+  udev-228.ebuild, udev-229.ebuild, udev-229-r1.ebuild, udev-229-r2.ebuild,
+  udev-9999.ebuild:
+  Rename udev.tar.gz to systemd.tar.gz
+
+  This conserves some space on distfile mirrors since we share the
+  distfiles with sys-apps/systemd.
+
+  Package-Manager: portage-2.2.27_p64
+
+  09 Mar 2016; William Hubbs <williamh@gentoo.org>
+  -files/224-0002-Use-getxpid-syscall-on-alpha-for-raw_getpid.patch,
+  -udev-217.ebuild, -udev-218.ebuild, -udev-219.ebuild, -udev-220-r3.ebuild,
+  -udev-222.ebuild, -udev-224.ebuild, -udev-224-r1.ebuild,
+  -udev-224-r2.ebuild, -udev-229.ebuild, -udev-229-r1.ebuild:
+  remove unstable versions
+
+  Package-Manager: portage-2.2.26
+
+  20 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/udev-229-sysmacros.patch, udev-229-r2.ebuild:
+  add upstream fix for building w/glibc #580200
+
+  20 Apr 2016; Anthony Ryan <anthonyryan1@gmail.com> udev-216.ebuild,
+  udev-225.ebuild, udev-228.ebuild, udev-229-r2.ebuild, udev-9999.ebuild:
+  HTTPS for *.freedesktop.org
+
+  * Excluding xorg.freedesktop.org
+  * Excluding tango.freedesktop.org
+
+  The following modified ebuilds were found to have problems after
+  modification
+  but the problems were determined to not be a regression.
+
+  Upstream tarball has a new hash:
+  * app-misc/evtest-1.29
+  * app-misc/evtest-1.30
+  * dev-embedded/scratchbox2-2.0-r1
+  * dev-ml/cairo-ocaml-1.2.0
+  * net-libs/libqmi-1.0.0
+  * sys-auth/libfprint-0.4.0
+  * sys-auth/libfprint-0.5.0
+  * sys-auth/libfprint-0.5.1
+
+  Upstream tarball has been deleted:
+  * dev-libs/liblazy-0.2
+  * dev-util/pkgconfig-openbsd-20130507-r1
+  * x11-libs/xvba-video-0.8.0-r3
+  * x11-misc/driconf-0.9.1-r1
+  * x11-misc/xdg-utils-1.1.0_rc2-r1
+
+*udev-230 (25 May 2016)
+
+  25 May 2016; William Hubbs <williamh@gentoo.org> +udev-230.ebuild:
+  version bump to 230
+
+  Package-Manager: portage-2.2.28
+
+  30 May 2016; Mike Gilbert <floppym@gentoo.org> udev-216.ebuild,
+  udev-225.ebuild, udev-228.ebuild, udev-229-r2.ebuild, udev-230.ebuild,
+  udev-9999.ebuild:
+  kernel check for CONFIG_UNIX
+
+  Bug: https://bugs.gentoo.org/538088
+
+  Package-Manager: portage-2.3.0_rc1_p14
+
+*udev-230-r1 (04 Jun 2016)
+*udev-225-r1 (04 Jun 2016)
+
+  04 Jun 2016; Mike Gilbert <floppym@gentoo.org> -udev-225.ebuild,
+  +udev-225-r1.ebuild, -udev-230.ebuild, +udev-230-r1.ebuild,
+  udev-9999.ebuild:
+  eliminate pointless backslashes
+
+  Overuse of backslash escapes led to a weird directory named ' ' being
+  installed in the root directory.
+
+  Thanks to Coacher for spotting the weird directory.
+
+  Bug: https://bugs.gentoo.org/584256
+
+  Package-Manager: portage-2.3.0_rc1_p14
+
+  04 Jun 2016; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+  04 Jun 2016; William Hubbs <williamh@gentoo.org> udev-230-r1.ebuild:
+  drop multilib from inherit in 230-r1
+
+  Package-Manager: portage-2.2.28
+
+  04 Jun 2016; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+  27 Sep 2016; Michał Górny <mgorny@gentoo.org> udev-225-r1.ebuild,
+  udev-228.ebuild, udev-229-r2.ebuild, udev-230-r1.ebuild, udev-9999.ebuild:
+  Remove unnecessary header hack from new versions
+
+  Remove the header hack that was introduced as the twice-wrong solution
+  to the libgudev header problem from the new versions that do not ship
+  libgudev anymore.
+
+*udev-232 (04 Nov 2016)
+
+  04 Nov 2016; William Hubbs <williamh@gentoo.org> +udev-232.ebuild:
+  232 version bump
+
+  Package-Manager: portage-2.3.0
+
+*udev-232-r1 (05 Nov 2016)
+
+  05 Nov 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +files/systemd-232-pkgconfig.patch, -udev-232.ebuild, +udev-232-r1.ebuild:
+  Fixed installation of libudev.so (bug #598988).
+
+  Thanks to floppym for reviewing the ebuild patches and creating the
+  pkgconfig fix he also sent upstream.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*udev-232-r2 (05 Nov 2016)
+
+  05 Nov 2016; Mike Gilbert <floppym@gentoo.org> -udev-232-r1.ebuild,
+  +udev-232-r2.ebuild:
+  fix libudev on non-native abis
+
+  Also simplify multilib_src_install; there's no need for variables here.
+
+  Package-Manager: portage-2.3.2_p4
+

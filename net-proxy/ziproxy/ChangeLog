@@ -63,3 +63,39 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*ziproxy-3.3.1-r1 (03 May 2016)
+
+  03 May 2016; Austin English <wizardedit@gentoo.org> -files/ziproxy.initd,
+  files/ziproxy.initd-r1, +ziproxy-3.3.1-r1.ebuild:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/573846
+
+  Package-Manager: portage-2.2.26
+
+  03 May 2016; Austin English <wizardedit@gentoo.org> -ziproxy-3.3.1.ebuild:
+  remove old version
+
+  Package-Manager: portage-2.2.26
+
+  16 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  +files/ziproxy-3.3.1-giflib5.patch, ziproxy-3.3.1-r1.ebuild:
+  Support giflib-5 (#571898 by Oleg and Toralf Förster)
+
+  Package-Manager: portage-2.3.1
+
+  16 Oct 2016; Pacho Ramos <pacho@gentoo.org> ziproxy-3.3.1-r1.ebuild:
+  Pin slot for jpeg
+
+  Package-Manager: portage-2.3.1
+
+  12 Nov 2016; David Seifert <soap@gentoo.org> ziproxy-3.3.1-r1.ebuild:
+  Add subslot operator on media-libs/jasper
+
+  Package-Manager: portage-2.3.2
+

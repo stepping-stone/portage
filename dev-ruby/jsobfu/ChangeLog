@@ -92,3 +92,21 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  17 Apr 2016; Manuel Rüger <mrueg@gentoo.org> jsobfu-0.2.1.ebuild,
+  jsobfu-0.2.1-r1.ebuild, jsobfu-0.3.0.ebuild, jsobfu-0.3.0-r1.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+*jsobfu-0.4.1 (19 Oct 2016)
+
+  19 Oct 2016; Hans de Graaff <graaff@gentoo.org> +jsobfu-0.4.1.ebuild:
+  add 0.4.1
+
+  Package-Manager: portage-2.3.0
+
+  08 Nov 2016; Manuel Rüger <mrueg@gentoo.org> jsobfu-0.4.1.ebuild:
+  Add ruby23
+
+  Package-Manager: portage-2.3.2
+

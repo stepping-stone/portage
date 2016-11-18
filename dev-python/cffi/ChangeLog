@@ -326,3 +326,81 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> cffi-1.5.2.ebuild:
+  amd64 stable wrt bug #577824
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  01 Apr 2016; Markus Meier <maekke@gentoo.org> cffi-1.5.2.ebuild:
+  arm stable, bug #577824
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+*cffi-1.6.0 (16 May 2016)
+
+  16 May 2016; Dirkjan Ochtman <djc@gentoo.org> +cffi-1.6.0.ebuild:
+  version bump to 1.6.0
+
+  Package-Manager: portage-2.2.28
+
+  16 May 2016; Dirkjan Ochtman <djc@gentoo.org> -cffi-1.4.2.ebuild,
+  -cffi-1.5.0.ebuild:
+  remove old versions
+
+  Package-Manager: portage-2.2.28
+
+  27 May 2016; Tobias Klausmann <klausman@gentoo.org> cffi-1.5.2.ebuild:
+  1.5.2-r0: add alpha keyword
+
+  Gentoo-Bug: 577824
+
+  Package-Manager: portage-2.3.0_rc1
+
+  21 Jun 2016; Mike Frysinger <vapier@gentoo.org> cffi-1.5.2.ebuild:
+  mark 1.5.2 arm64/ia64/m68k/ppc/ppc64/s390/sh/sparc stable #577824
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> cffi-1.5.2.ebuild:
+  x86 stable wrt bug #577824
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*cffi-1.7.0 (17 Jul 2016)
+
+  17 Jul 2016; Patrick Lauer <patrick@gentoo.org> +cffi-1.7.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  11 Sep 2016; David Seifert <soap@gentoo.org>
+  -files/cffi-1.1.0-test-backport.patch, -files/issue177_prot_exec.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/2291
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*cffi-1.8.2 (15 Sep 2016)
+
+  15 Sep 2016; Tim Harder <radhermit@gentoo.org> +cffi-1.8.2.ebuild:
+  version bump to 1.8.2
+
+*cffi-1.8.3 (18 Sep 2016)
+
+  18 Sep 2016; Tim Harder <radhermit@gentoo.org> +cffi-1.8.3.ebuild:
+  version bump to 1.8.3
+
+  01 Oct 2016; Jeroen Roovers <jer@gentoo.org> cffi-1.5.2.ebuild:
+  Stable for HPPA (bug #577824).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> cffi-1.2.1.ebuild,
+  cffi-1.5.2.ebuild, cffi-1.6.0.ebuild, cffi-1.7.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

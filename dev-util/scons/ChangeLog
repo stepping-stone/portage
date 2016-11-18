@@ -126,3 +126,33 @@
 
   Package-Manager: portage-2.2.20-prefix
 
+*scons-2.5.0 (20 Apr 2016)
+
+  20 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> +scons-2.5.0.ebuild:
+  Bump to version 2.5.0
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  20 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> -scons-2.4.0.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*scons-2.5.1 (04 Nov 2016)
+
+  04 Nov 2016; Lars Wendler <polynomial-c@gentoo.org> +scons-2.5.1.ebuild:
+  Bump to version 2.5.1
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  06 Nov 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Add myself as primary maint
+
+  15 Nov 2016; Tobias Klausmann <klausman@gentoo.org> scons-2.4.1.ebuild:
+  2.4.1-r0: stable on alpha
+
+  Gentoo-Bug: 598902
+

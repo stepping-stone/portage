@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
+PYTHON_COMPAT=( python2_7 python3_{4,5} )
 PYTHON_REQ_USE='readline,sqlite,threads(+)'
 
 inherit distutils-r1 eutils virtualx
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~x86"
 IUSE="doc examples matplotlib mongodb notebook nbconvert qt4 +smp test wxwidgets"
 
 REQUIRED_USE="
@@ -38,8 +38,7 @@ RDEPEND="${CDEPEND}
 		dev-python/notebook[${PYTHON_USEDEP}]
 		dev-python/ipywidgets[${PYTHON_USEDEP}]
 	)
-	nbconvert? ( dev-python/nbconvert[${PYTHON_USEDEP}] )
-	qt4? ( dev-python/qtconsole )"
+	nbconvert? ( dev-python/nbconvert[${PYTHON_USEDEP}] )"
 DEPEND="${CDEPEND}
 	>=dev-python/setuptools-18.5[${PYTHON_USEDEP}]
 	test? (
@@ -66,6 +65,7 @@ DEPEND="${CDEPEND}
 	)"
 
 PDEPEND="
+	qt4? ( dev-python/qtconsole )
 	smp? ( dev-python/ipyparallel[${PYTHON_USEDEP}] )"
 
 PATCHES=(
@@ -93,7 +93,7 @@ python_compile_all() {
 python_test() {
 	distutils_install_for_testing
 	# https://github.com/ipython/ipython/issues/8639
-	# Failure of some modules only in python3.4 
+	# Failure of some modules only in python3.4
 	local fail
 	run_tests() {
 		pushd ${TEST_DIR} > /dev/null || die

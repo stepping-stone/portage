@@ -57,3 +57,26 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*polib-1.0.7 (07 May 2016)
+
+  07 May 2016; Ian Delaney <idella4@gentoo.org> +polib-1.0.7.ebuild:
+  version bump, vn. 1.0.7
+
+  Closes: https://github.com/gentoo/gentoo/pull/1423
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  30 Aug 2016; Patrice Clement <monsieurp@gentoo.org> polib-1.0.7.ebuild:
+  add ~arm keyword.
+
+  Gentoo-Bug: https://bugs.gentoo.org/578656
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/2071
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> polib-1.0.4.ebuild,
+  polib-1.0.7.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

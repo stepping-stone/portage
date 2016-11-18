@@ -49,7 +49,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	extras? (
 		${SUBVERSION_DEPEND}
-		sys-devel/qconf
+		sys-devel/qconf[qt4(+)]
 	)
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig
@@ -58,9 +58,9 @@ PDEPEND="
 	crypt? ( app-crypt/qca:2[gpg] )
 	jingle? (
 		net-im/psimedia
-		app-crypt/qca:2[openssl]
+		app-crypt/qca:2[ssl]
 	)
-	ssl? ( app-crypt/qca:2[openssl] )
+	ssl? ( app-crypt/qca:2[ssl] )
 "
 RESTRICT="test"
 

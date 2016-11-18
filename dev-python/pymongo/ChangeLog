@@ -125,3 +125,64 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*pymongo-3.2.1 (12 Mar 2016)
+
+  12 Mar 2016; Zac Medico <zmedico@gentoo.org> +pymongo-3.2.1.ebuild:
+  version bump to 3.2.1
+
+  Package-Manager: portage-2.2.28
+
+*pymongo-3.2.2 (17 Mar 2016)
+*pymongo-2.9.3 (17 Mar 2016)
+
+  17 Mar 2016; Ultrabug <ultrabug@gentoo.org> +pymongo-2.9.3.ebuild,
+  +pymongo-3.2.2.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.27
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org> pymongo-3.2.2.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+  19 Jun 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Multiple metadata.xml: reorder to make sure assignee goes first
+
+  Reorder all metadata.xml files with explicit descriptions requesting
+  particular bug assignment/CC to ensure that the requested assignee
+  always goes first, in order to match the bug wrangling policies.
+
+  19 Aug 2016; Ultrabug <ultrabug@gentoo.org> -pymongo-2.9.ebuild,
+  pymongo-2.9.3.ebuild:
+  fix 2.9 doc generation fixes #568514
+
+  Package-Manager: portage-2.2.27
+
+*pymongo-3.3.0 (19 Aug 2016)
+*pymongo-3.1.1 (19 Aug 2016)
+
+  19 Aug 2016; Ultrabug <ultrabug@gentoo.org> -pymongo-3.1.ebuild,
+  +pymongo-3.1.1.ebuild, -pymongo-3.2.ebuild, -pymongo-3.2.1.ebuild,
+  +pymongo-3.3.0.ebuild:
+  ebuild cleanup and version bump
+
+  Package-Manager: portage-2.2.27
+
+  08 Oct 2016; David Seifert <soap@gentoo.org>
+  -files/pymongo-2.5.1-greenlet.patch:
+  remove unused patch
+
+  Closes: https://github.com/gentoo/gentoo/pull/2363
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pymongo-2.6.3.ebuild,
+  pymongo-2.7.2.ebuild, pymongo-2.8.1.ebuild, pymongo-2.9.3.ebuild,
+  pymongo-3.0.3.ebuild, pymongo-3.1.1.ebuild, pymongo-3.2.2.ebuild,
+  pymongo-3.3.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org> pymongo-3.3.0.ebuild:
+  3.3.0 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

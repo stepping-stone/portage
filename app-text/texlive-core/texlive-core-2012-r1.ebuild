@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -106,7 +106,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=dev-tex/bibtexu-3.71_p20120701
 	virtual/perl-Getopt-Long
 	xetex? ( >=app-text/xdvipdfmx-0.7.8_p20120701 )
-	tk? ( dev-perl/perl-tk )"
+	tk? ( dev-perl/Tk )"
 
 # texdoc needs luatex.
 PDEPEND=">=dev-tex/luatex-0.70"
@@ -337,7 +337,7 @@ pkg_postinst() {
 	elog
 	ewarn "If you are migrating from an older TeX distribution"
 	ewarn "Please make sure you have read:"
-	ewarn "https://www.gentoo.org/proj/en/tex/texlive-migration-guide.xml"
+	ewarn "https://wiki.gentoo.org/wiki/Project:TeX/Tex_Live_Migration_Guide"
 	ewarn "in order to avoid possible problems"
 	elog
 	elog "TeXLive has been split in various ebuilds. If you are missing a"

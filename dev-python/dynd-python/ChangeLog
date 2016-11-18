@@ -66,3 +66,20 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  21 Jul 2016; Patrick Lauer <patrick@gentoo.org> dynd-python-0.6.6.ebuild:
+  Add py35
+
+  Package-Manager: portage-2.3.0
+
+  11 Sep 2016; David Seifert <soap@gentoo.org>
+  -files/dynd-python-0.6.0-out-of-git-versioning.patch:
+  remove unused patch
+
+  Closes: https://github.com/gentoo/gentoo/pull/2291
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> dynd-python-0.6.5.ebuild,
+  dynd-python-0.6.6.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

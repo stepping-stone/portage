@@ -141,3 +141,34 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  wrapt-1.10.6-r1.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*wrapt-1.10.7 (10 Apr 2016)
+
+  10 Apr 2016; Alex Brandt <alunduil@gentoo.org> +wrapt-1.10.7.ebuild:
+  add version 1.10.7
+
+  Package-Manager: portage-2.2.28
+
+*wrapt-1.10.8 (24 Apr 2016)
+
+  24 Apr 2016; Alex Brandt <alunduil@gentoo.org> +wrapt-1.10.8.ebuild:
+  add version 1.10.8
+
+  Package-Manager: portage-2.2.28
+
+  24 Apr 2016; Alex Brandt <alunduil@gentoo.org> -wrapt-1.10.6.ebuild:
+  remove version 1.10.6
+
+  Package-Manager: portage-2.2.28
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> wrapt-1.10.5.ebuild,
+  wrapt-1.10.6-r1.ebuild, wrapt-1.10.7.ebuild, wrapt-1.10.8.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

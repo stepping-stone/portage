@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -14,17 +14,22 @@ HOMEPAGE="https://github.com/bitcoin/${MyPN}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
-IUSE="asm doc endomorphism gmp test"
+IUSE="asm doc ecdh endomorphism experimental gmp libressl +recovery schnorr test"
 
 REQUIRED_USE="
 	asm? ( amd64 )
+	ecdh? ( experimental )
+	schnorr? ( experimental )
 "
 RDEPEND="
 	gmp? ( dev-libs/gmp:0 )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	test? ( dev-libs/openssl:0 )
+	test? (
+		!libressl? ( dev-libs/openssl:0= )
+		libressl? ( dev-libs/libressl:0= )
+	)
 "
 
 src_prepare() {
@@ -34,10 +39,14 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-benchmark \
+		$(use_enable experimental) \
 		$(use_enable test tests) \
+		$(use_enable ecdh module-ecdh) \
 		$(use_enable endomorphism)  \
 		--with-asm=$(usex asm auto no) \
 		--with-bignum=$(usex gmp gmp no) \
+		$(use_enable recovery module-recovery) \
+		$(use_enable schnorr module-schnorr) \
 		--disable-static
 }
 

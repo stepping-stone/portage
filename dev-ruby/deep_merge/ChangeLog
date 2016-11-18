@@ -63,3 +63,31 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  09 Mar 2016; Manuel Rüger <mrueg@gentoo.org> deep_merge-1.0.1.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.27
+
+  05 Jun 2016; Hans de Graaff <graaff@gentoo.org> deep_merge-1.0.1.ebuild:
+  add ruby23
+
+  Package-Manager: portage-2.2.28
+
+*deep_merge-1.1.1 (02 Aug 2016)
+
+  02 Aug 2016; Hans de Graaff <graaff@gentoo.org> +deep_merge-1.1.1.ebuild:
+  add 1.1.1
+
+  Package-Manager: portage-2.2.28
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> deep_merge-1.0.1.ebuild:
+  Stable for HPPA (bug #580108).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  13 Nov 2016; Hans de Graaff <graaff@gentoo.org> deep_merge-1.0.1.ebuild:
+  amd64 stable, bug 575610
+
+  Package-Manager: portage-2.3.0
+

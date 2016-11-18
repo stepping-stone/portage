@@ -98,3 +98,39 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> routes-2.2.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org> routes-2.2.ebuild:
+  adding py35
+
+  Package-Manager: portage-2.2.26
+
+  20 Sep 2016; David Seifert <soap@gentoo.org>
+  -files/routes-2.0-setup.py.patch:
+  remove unused patch
+
+  Closes: https://github.com/gentoo/gentoo/pull/2375
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*routes-2.3.1 (30 Sep 2016)
+
+  30 Sep 2016; Matthew Thode <prometheanfire@gentoo.org> +routes-2.3.1.ebuild:
+  add initial support for newton (keystone)
+
+  dropped py3.3 and updated most (maybe all) to eapi6
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> routes-2.1-r1.ebuild,
+  routes-2.2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org> routes-2.3.1.ebuild:
+  2.3.1 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

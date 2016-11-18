@@ -64,3 +64,19 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  27 Aug 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/terminatorx-3.84-includes.patch, terminatorx-3.84-r1.ebuild:
+  add missing includes, bug #563782
+
+  Reported-by: Toralf Förster
+  Bug: https://bugs.gentoo.org/563782
+
+  Package-Manager: portage-2.3.0
+
+*terminatorx-4.0.1 (04 Nov 2016)
+
+  04 Nov 2016; Pacho Ramos <pacho@gentoo.org> +terminatorx-4.0.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.2
+

@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1 fdo-mime
 
 DESCRIPTION="Audio tag editor"
-HOMEPAGE="http://puddletag.sourceforge.net/"
+HOMEPAGE="http://docs.puddletag.net/"
 SRC_URI="https://github.com/keithgg/${PN}/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3"
@@ -29,4 +29,4 @@ RDEPEND=">=dev-python/PyQt4-4.9.6-r2[${PYTHON_USEDEP},svg]
 	>=dev-python/sip-4.14.2-r1:0[${PYTHON_USEDEP}]
 	>=dev-python/lxml-3.0.1[${PYTHON_USEDEP}]"
 
-DOCS=(changelog HACKING NEWS README THANKS TODO)
+DOCS=(changelog HACKING NEWS THANKS TODO)

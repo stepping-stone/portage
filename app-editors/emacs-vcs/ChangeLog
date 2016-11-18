@@ -213,3 +213,95 @@
 
   Package-Manager: portage-2.2.27
 
+*emacs-vcs-25.0.92 (02 Mar 2016)
+
+  02 Mar 2016; Ulrich Müller <ulm@gentoo.org> +emacs-vcs-25.0.92.ebuild:
+  New pretest version.
+
+  Package-Manager: portage-2.2.27
+
+  05 Mar 2016; Ulrich Müller <ulm@gentoo.org>
+  emacs-vcs-25.0.50_pre20151113.ebuild, emacs-vcs-25.0.90.ebuild,
+  emacs-vcs-25.0.92.ebuild, emacs-vcs-25.0.9999-r2.ebuild,
+  emacs-vcs-25.1.50_pre20160130.ebuild, emacs-vcs-25.1.9999-r1.ebuild:
+  Enable SSL/TLS support with ssl instead of gnutls flag.
+
+  Package-Manager: portage-2.2.27
+
+*emacs-vcs-25.0.93 (23 Apr 2016)
+
+  23 Apr 2016; Ulrich Müller <ulm@gentoo.org> +emacs-vcs-25.0.93.ebuild:
+  New pretest version.
+
+  Package-Manager: portage-2.2.28
+
+*emacs-vcs-25.0.94 (22 May 2016)
+
+  22 May 2016; Ulrich Müller <ulm@gentoo.org> +emacs-vcs-25.0.94.ebuild:
+  New pretest version.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  22 May 2016; Ulrich Müller <ulm@gentoo.org> -emacs-vcs-25.0.90.ebuild:
+  Remove old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  12 Jun 2016; Ulrich Müller <ulm@gentoo.org> -emacs-vcs-25.0.92.ebuild,
+  -emacs-vcs-25.1.50_pre20160130.ebuild:
+  Remove old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*emacs-vcs-25.0.95 (12 Jun 2016)
+
+  12 Jun 2016; Ulrich Müller <ulm@gentoo.org> +emacs-vcs-25.0.95.ebuild:
+  New pretest version.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  24 Jul 2016; Ulrich Müller <ulm@gentoo.org>
+  emacs-vcs-25.0.50_pre20151113.ebuild, emacs-vcs-25.0.93.ebuild,
+  emacs-vcs-25.0.94.ebuild, emacs-vcs-25.0.95.ebuild,
+  emacs-vcs-25.0.9999-r2.ebuild, emacs-vcs-25.1.9999-r1.ebuild:
+  Remove version test which is meaningless for slot 25.
+
+  Package-Manager: portage-2.3.0
+
+  17 Sep 2016; Ulrich Müller <ulm@gentoo.org> -emacs-vcs-25.0.93.ebuild,
+  -emacs-vcs-25.0.94.ebuild, -emacs-vcs-25.0.95.ebuild:
+  Remove old.
+
+  Package-Manager: portage-2.3.0
+
+*emacs-vcs-26.0.9999 (15 Oct 2016)
+*emacs-vcs-25.1.9999-r2 (15 Oct 2016)
+
+  15 Oct 2016; Ulrich Müller <ulm@gentoo.org> -emacs-vcs-25.0.9999-r2.ebuild,
+  -emacs-vcs-25.1.9999-r1.ebuild, +emacs-vcs-25.1.9999-r2.ebuild,
+  +emacs-vcs-26.0.9999.ebuild:
+  Bump live ebuilds to reflect upstream versioning.
+
+  25.1.9999-r2 is the live ebuild for the emacs-25 branch.
+  26.0.9999 is the live ebuild for master.
+
+  Bug: 595814
+
+  Package-Manager: portage-2.3.1
+
+*emacs-vcs-25.1.50_pre20160923 (15 Oct 2016)
+
+  15 Oct 2016; Ulrich Müller <ulm@gentoo.org>
+  +emacs-vcs-25.1.50_pre20160923.ebuild:
+  New snapshot of master.
+
+  Last revision before the version was updated from 25.1.50 to 25.2.50.
+
+  Package-Manager: portage-2.3.2
+
+  15 Oct 2016; Ulrich Müller <ulm@gentoo.org>
+  -emacs-vcs-25.0.50_pre20151113.ebuild:
+  Remove old.
+
+  Package-Manager: portage-2.3.2
+

@@ -127,3 +127,63 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*db-6.2.23 (16 Apr 2016)
+
+  16 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> +db-6.2.23.ebuild,
+  +files/db-6.2-jni-check-prefix-first.patch:
+  Bump to version 6.2.23
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  16 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> -db-6.0.30-r1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  03 Jun 2016; Austin English <wizardedit@gentoo.org> db-5.1.29-r1.ebuild,
+  db-5.3.28-r2.ebuild, +files/db-5.1.29-rename-atomic-compare-exchange.patch:
+  fix compiling with clang
+
+  Gentoo-Bug: https://bugs.gentoo.org/417547
+
+  25 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> db-1.85-r3.ebuild,
+  db-3.2.9_p2.ebuild, db-4.2.52_p5-r1.ebuild, db-4.3.29_p1-r1.ebuild,
+  db-4.4.20_p4-r1.ebuild, db-4.5.20_p2-r1.ebuild, db-4.6.21_p4.ebuild,
+  db-4.7.25_p4.ebuild, db-4.8.30-r1.ebuild, db-4.8.30-r2.ebuild,
+  db-5.1.29-r1.ebuild, db-5.3.28-r2.ebuild, db-6.0.35.ebuild,
+  db-6.1.26.ebuild, db-6.2.23.ebuild:
+  Fixed homepage (old one returned 404).
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*db-6.1.29 (25 Oct 2016)
+
+  25 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> +db-6.1.29.ebuild:
+  Bump to version 6.1.29
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  25 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> -db-4.8.30-r1.ebuild,
+  -db-6.1.26.ebuild, -files/db-3.2.9-jarlocation.patch,
+  -files/db-3.2.9-java15.patch, -files/db-4.0.14-jarlocation.patch,
+  -files/db-4.2-jarlocation.patch, -files/db-4.3-jarlocation.patch,
+  -files/db-4.4-jarlocation.patch, -files/db-4.5-jarlocation.patch,
+  -files/db-4.6-jarlocation.patch, -files/db-5.0.21-enable-dbm-autoconf.patch,
+  -files/db-6.0.19-sqlite-configure-path.patch:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  14 Nov 2016; Mike Frysinger <vapier@gentoo.org> db-4.8.30-r2.ebuild:
+  mark 4.8.30-r2 arm64/m68k/s390/sh stable
+
+  16 Nov 2016; Tobias Klausmann <klausman@gentoo.org> db-5.3.28-r2.ebuild:
+  5.3.28-r2: stable on alpha
+
+  Gentoo-Bug: 599134
+

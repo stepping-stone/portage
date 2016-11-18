@@ -72,3 +72,23 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  20 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/speed-dreams-1.4.0-math-hack.patch, speed-dreams-1.4.0.ebuild:
+  fix build w/newer glibc #580054
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org> speed-dreams-1.4.0.ebuild:
+  sourceforge: switch to https:// URIs
+
+*speed-dreams-1.4.0-r1 (29 Sep 2016)
+
+  29 Sep 2016; Austin English <wizardedit@gentoo.org>
+  files/speed-dreams-1.4.0-asneeded.patch,
+  files/speed-dreams-1.4.0-automake.patch, +speed-dreams-1.4.0-r1.ebuild:
+  remove deprecated games eclass
+
+  Also update to EAPI 6
+
+  Gentoo-Bug: https://bugs.gentoo.org/574082
+
+  Package-Manager: portage-2.3.0
+

@@ -101,3 +101,25 @@
 
   Package-Manager: portage-2.2.27
 
+  28 Mar 2016; Ian Delaney <idella4@gentoo.org> gunicorn-19.4.5.ebuild:
+  add Python 3.5 support
+
+  Package-Manager: portage-2.2.26
+  Closes: https://github.com/gentoo/gentoo/pull/1152
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> gunicorn-19.1.1.ebuild,
+  gunicorn-19.3.0.ebuild, gunicorn-19.4.5.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  03 Nov 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  remove proxied maintainer per his request
+
+  Package-Manager: portage-2.2.28
+
+*gunicorn-19.6.0 (10 Nov 2016)
+
+  10 Nov 2016; Sebastian Pipping <sping@gentoo.org> +gunicorn-19.6.0.ebuild:
+  19.6.0
+
+  Package-Manager: portage-2.3.2
+

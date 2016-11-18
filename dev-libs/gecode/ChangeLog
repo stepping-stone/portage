@@ -69,3 +69,95 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*gecode-4.4.0 (01 Aug 2016)
+
+  01 Aug 2016; Michael Orlitzky <mjo@gentoo.org> +gecode-4.4.0.ebuild,
+  metadata.xml:
+  new version 4.4.0.
+
+  This version bump fixes at least two open bugs. The first simply asked
+  for a version bump, and the second reported a failure when /bin/sh is
+  dash (now fixed).
+
+  Along with the new version, some ebuild cleanup was done. The ebuild
+  is now EAPI=6, and the "gmp" USE flag was added to control building
+  with float constraints. Three superfluous runtime dependencies
+  (transitive through Qt) were removed, and two new build dependencies
+  needed to generate the documentation were added.
+
+  The src_test() phase has been re-enabled with an LD_LIBRARY hack to
+  make sure that the test suite is run against the just-build libraries.
+
+  Gentoo-Bug: 377091
+  Gentoo-bug: 527526
+  Gentoo-Bug: 567208
+
+  Package-Manager: portage-2.2.28
+
+  01 Aug 2016; Michael Orlitzky <mjo@gentoo.org> -gecode-3.7.3.ebuild:
+  remove old version 3.7.3 to fix QA warnings.
+
+  Package-Manager: portage-2.2.28
+
+*gecode-3.7.3 (01 Aug 2016)
+
+  01 Aug 2016; Michael Orlitzky <mjo@gentoo.org> +gecode-3.7.3.ebuild:
+  Revert "dev-libs/gecode: remove old version 3.7.3 to fix QA warnings."
+
+  This reverts commit 395d5ea72bceca3087e602683b43e279f5ca0b71. The
+  dev-ruby/dep_selector package has a dependency on >=gecode3.5.0, but
+  at the moment it can only be satisfied by gecode-3.x, so we need to
+  leave v3.7.3 in the tree. There is an upstream pull request (#44) to
+  support gecode 4.x.
+
+  01 Aug 2016; Michael Orlitzky <mjo@gentoo.org> metadata.xml:
+  fix metadata.xml schema.
+
+  In my recent addition of gecode-4.4.0, I made a copy/paste error and
+  duplicated the <use> element in metadata.xml. Michał's Travis CI
+  instance caught the error (thanks).
+
+  Package-Manager: portage-2.2.28
+
+*gecode-4.4.0-r1 (29 Sep 2016)
+
+  29 Sep 2016; Michael Palimaka <kensington@gentoo.org>
+  +files/gecode-4.4.0-no-examples.patch, +gecode-4.4.0-r1.ebuild:
+  revision bump fixing numerous QA violations
+
+  * Add missing dependencies
+
+  * Avoid hard-coded CFLAGS
+
+  * Do not install examples to system root
+
+  * Install HTML documentation to the correct directory
+
+  * Remove unused test USE flag
+
+  * Do not allow sci-libs/mpir as a runtime alternative to sci-libs/mpir. This
+  can only be selected at build time.
+
+  * Force building libgecodegist.so against Qt 4 again. Careful consideration
+  must
+  be given to reverse dependencies before switching to Qt 5 due to the
+  potential
+  for symbol collisions and ABI breakage. Additionally, the existing approach
+  is not valid because Qt versions are not interchangeable at runtime.
+
+  Gentoo-bug: 488150
+  Gentoo-bug: 595442
+
+  Package-Manager: portage-2.3.1
+
+  29 Sep 2016; Michael Palimaka <kensington@gentoo.org>
+  gecode-4.4.0-r1.ebuild:
+  remove econf options that are automatically added in EAPI 6
+
+  Package-Manager: portage-2.3.1
+

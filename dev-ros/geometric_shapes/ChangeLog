@@ -34,3 +34,43 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*geometric_shapes-0.4.4 (08 Mar 2016)
+
+  08 Mar 2016; Alexis Ballier <aballier@gentoo.org>
+  +geometric_shapes-0.4.4.ebuild:
+  bump to 0.4.4
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+*geometric_shapes-0.5.0 (03 Aug 2016)
+
+  03 Aug 2016; Alexis Ballier <aballier@gentoo.org>
+  +geometric_shapes-0.5.0.ebuild, geometric_shapes-9999.ebuild:
+  bump to 0.5.0
+
+  Package-Manager: portage-2.3.0
+
+*geometric_shapes-0.5.1 (26 Aug 2016)
+
+  26 Aug 2016; Alexis Ballier <aballier@gentoo.org>
+  +geometric_shapes-0.5.1.ebuild:
+  bump to 0.5.1
+
+  Package-Manager: portage-2.3.0
+
+  24 Oct 2016; Alexis Ballier <aballier@gentoo.org>
+  -geometric_shapes-0.4.3.ebuild, -geometric_shapes-0.4.4.ebuild,
+  -geometric_shapes-0.5.0.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.2
+
+*geometric_shapes-0.5.2 (24 Oct 2016)
+
+  24 Oct 2016; Alexis Ballier <aballier@gentoo.org>
+  +geometric_shapes-0.5.2.ebuild:
+  bump to 0.5.2
+
+  Package-Manager: portage-2.3.2
+

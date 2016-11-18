@@ -64,3 +64,38 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*xmltodict-0.10.1 (01 Mar 2016)
+
+  01 Mar 2016; Patrick Lauer <patrick@gentoo.org> +xmltodict-0.10.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+*xmltodict-0.10.1-r1 (16 Mar 2016)
+
+  16 Mar 2016; Tiziano Müller <dev-zero@gentoo.org>
+  +xmltodict-0.10.1-r1.ebuild:
+  rev-bump for py-3.5 compat and EAPI-6
+
+  Package-Manager: portage-2.2.28
+
+  01 May 2016; Jason Zaman <perfinion@gentoo.org> xmltodict-0.10.1-r1.ebuild:
+  stable for all arches, bug 581694
+
+  Package-Manager: portage-2.2.26
+
+*xmltodict-0.10.2 (29 Jun 2016)
+
+  29 Jun 2016; Patrick Lauer <patrick@gentoo.org> +xmltodict-0.10.2.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  21 Aug 2016; Tim Harder <radhermit@gentoo.org> -xmltodict-0.9.1.ebuild,
+  -xmltodict-0.9.2.ebuild, -xmltodict-0.10.1.ebuild:
+  remove old
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> xmltodict-0.10.1-r1.ebuild,
+  xmltodict-0.10.2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

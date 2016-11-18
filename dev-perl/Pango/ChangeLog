@@ -72,3 +72,63 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> Pango-1.224.0-r1.ebuild:
+  stable for all wrt bug #576564
+
+  Package-Manager: portage-2.2.26
+
+*Pango-1.227.0 (14 Mar 2016)
+
+  14 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org> +Pango-1.227.0.ebuild:
+  Bump to version 1.227.0
+
+  - EAPI6
+  - Add support for testing under virtual-X11
+  - Add USE="examples"
+
+  NB: and gtk-perl X11 Test dependencies only pulled when both USE="test
+  -minimal" are set,
+  because "test" being set doesn't necessarily mean you want to pay the price
+  for the
+  heavy, optional extra stuff. ( And gtk-perl is a bit slow to install )
+
+  This way, you can continue using FEATURES="test", but you can save yourself
+  some effort
+  and still get good test coverage if you have USE="minimal" in your
+  environment
+
+  Package-Manager: portage-2.2.27
+
+  10 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org> -Pango-1.224.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> Pango-1.227.0.ebuild:
+  amd64 stable wrt bug #579776
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  31 May 2016; Tobias Klausmann <klausman@gentoo.org> Pango-1.227.0.ebuild:
+  1.227.0-r0: add alpha keyword
+
+  Gentoo-Bug: 579776
+
+  Package-Manager: portage-2.3.0_rc1
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> Pango-1.227.0.ebuild:
+  x86 stable wrt bug #579776
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> Pango-1.227.0.ebuild:
+  ppc stable wrt bug #579776
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

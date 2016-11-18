@@ -144,3 +144,48 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> eog-plugins-3.16.3.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  28 May 2016; Pacho Ramos <pacho@gentoo.org> -eog-plugins-3.16.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*eog-plugins-3.16.4 (28 May 2016)
+
+  28 May 2016; Pacho Ramos <pacho@gentoo.org> +eog-plugins-3.16.4.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> eog-plugins-3.16.4.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> eog-plugins-3.16.4.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  16 Oct 2016; Pacho Ramos <pacho@gentoo.org> -eog-plugins-3.16.3.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+
+*eog-plugins-3.16.5 (16 Oct 2016)
+
+  16 Oct 2016; Pacho Ramos <pacho@gentoo.org> +eog-plugins-3.16.5.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> eog-plugins-3.16.4.ebuild,
+  eog-plugins-3.16.5.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

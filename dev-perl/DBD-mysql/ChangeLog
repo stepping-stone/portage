@@ -161,3 +161,154 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*DBD-mysql-4.36.0 (02 Oct 2016)
+
+  02 Oct 2016; Kent Fredric <kentnl@gentoo.org> +DBD-mysql-4.36.0.ebuild,
+  metadata.xml:
+  Bump to version 4.36.0 re bug #589818 & bug #587206
+
+  - EAPI6
+  - Bad tests pruned
+  - USE="ssl" added
+  - DESCRIPTION updated.
+
+  Note:
+  - USE="ssl" is only partial because there's no straight-forward way to
+  ensure that the client library ( which is hidden behind virtual/mysql )
+  itself has ssl support. If the backend does not have ssl support, it will
+  be silently disabled!
+
+  Upstream:
+  - Compatibility fixes for older MySQL versions
+  - use-after-free fixes
+  - Fixed memory leak in sth->{ParamValues}
+  - SSL support turned on by default (implemented via libmysqlclient)
+  - Check errors after calling mysql_affected_rows
+  - Tests fixed on bigendian systems
+
+  Bug: https://bugs.gentoo.org/587206
+  Bug: https://bugs.gentoo.org/589818
+
+  Package-Manager: portage-2.3.1
+
+  07 Oct 2016; Kent Fredric <kentnl@gentoo.org> DBD-mysql-4.32.0-r1.ebuild,
+  DBD-mysql-4.36.0.ebuild:
+  Fix mysql-client dependencies re bug #595970
+
+  This means pulling virtual/mysql is only now down with USE=embedded,
+  and client-libraries are now slot-upgradeable when you upgrade the virtual.
+
+  Enforcing SSL happens is still on the todo-list, but turns out, most
+  backends support SSL in all cases, only mysql-connector-c is an exemption.
+
+  Package-Manager: portage-2.3.1
+
+*DBD-mysql-4.36.0-r1 (07 Oct 2016)
+*DBD-mysql-4.32.0-r2 (07 Oct 2016)
+
+  07 Oct 2016; Kent Fredric <kentnl@gentoo.org> -DBD-mysql-4.32.0-r1.ebuild,
+  +DBD-mysql-4.32.0-r2.ebuild, -DBD-mysql-4.36.0.ebuild,
+  +DBD-mysql-4.36.0-r1.ebuild:
+  r1 bump to force slot-dep recompilation
+
+  Package-Manager: portage-2.3.1
+
+*DBD-mysql-4.37.0 (07 Oct 2016)
+
+  07 Oct 2016; Kent Fredric <kentnl@gentoo.org> +DBD-mysql-4.37.0.ebuild:
+  Bump to 4.37.0 re bug #596424
+
+  Upstream:
+  - Fix for possible buffer overflow in prepared statements, CVE-2016-1246
+
+  Bug: https://bugs.gentoo.org/596424
+
+  Package-Manager: portage-2.3.1
+
+  26 Oct 2016; Agostino Sarubbo <ago@gentoo.org> DBD-mysql-4.37.0.ebuild:
+  amd64 stable wrt bug #596424
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Oct 2016; Agostino Sarubbo <ago@gentoo.org> DBD-mysql-4.37.0.ebuild:
+  x86 stable wrt bug #596424
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Oct 2016; Markus Meier <maekke@gentoo.org> DBD-mysql-4.37.0.ebuild:
+  arm stable, bug #596424
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+
+  01 Nov 2016; Jeroen Roovers <jer@gentoo.org> DBD-mysql-4.37.0.ebuild:
+  Stable for HPPA (bug #596424).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+  04 Nov 2016; Jeroen Roovers <jer@gentoo.org> DBD-mysql-4.37.0.ebuild:
+  Stable for PPC64 (bug #596424).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+*DBD-mysql-4.38.0 (06 Nov 2016)
+
+  06 Nov 2016; Kent Fredric <kentnl@gentoo.org> +DBD-mysql-4.38.0.ebuild:
+  Bump to version 4.38.0
+
+  Upstream:
+  - Fixes for MySQL 8 support
+  - Fixes for Win32 with new libmysqlclient
+  - Fix unit test crashes on windows
+  - Add support for storing MYSQL_TYPE_LONG as native 64 bit integers
+    instead of strings when Perl is built with 64bit int support.
+  - Use _WIN32 Macro instead of __WIN__ to support newer libmysqlclient
+  - Avoid use of unsafe sprintf with variable length
+  - Change bind-parameter logic to avoid buffer overflows with incorret
+    parameter type (rt#61849)
+
+  Bug: https://rt.cpan.org/Ticket/Display.html?id=61849
+
+  Package-Manager: portage-2.3.2
+
+*DBD-mysql-4.38.10_rc (07 Nov 2016)
+
+  07 Nov 2016; Kent Fredric <kentnl@gentoo.org> +DBD-mysql-4.38.10_rc.ebuild:
+  Bump to 4.38.10_rc ( Development ) re: bug #599068
+
+  - Patch now upstreamed
+
+  Upstream:
+  - Fix bug in compiling mysql embedded server
+  - Fix compilation with mariadb
+  - use newSVpn where possible for efficiency
+  - mysql_server_prepare supports fetching BIT columns
+  - Use correct format for printf instead of relying on typecasting
+  - Include errno.h for MYSQL_ASYNC which uses it
+
+  Bug: https://bugs.gentoo.org/599068
+
+  Package-Manager: portage-2.3.2
+
+  14 Nov 2016; Tobias Klausmann <klausman@gentoo.org> DBD-mysql-4.37.0.ebuild:
+  4.37.0-r0: stable on alpha
+
+  Gentoo-Bug: 596424
+
+*DBD-mysql-4.39.0 (17 Nov 2016)
+
+  17 Nov 2016; Kent Fredric <kentnl@gentoo.org> +DBD-mysql-4.39.0.ebuild:
+  Bump to version 4.39.0
+
+  Upstream:
+  - Fix for CVE-2016-1249, Out-of-Bounds read using server-side
+    prepared statements
+
+  Package-Manager: portage-2.3.2
+

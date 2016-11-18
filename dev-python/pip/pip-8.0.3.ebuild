@@ -4,7 +4,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 python3_{3,4,5} pypy )
+PYTHON_COMPAT=( python2_7 python3_{4,5} pypy )
 PYTHON_REQ_USE="threads(+)"
 
 inherit bash-completion-r1 distutils-r1
@@ -14,7 +14,7 @@ HOMEPAGE="https://pip.pypa.io/ https://pypi.python.org/pypi/pip/ https://github.
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 
 # Check pip/_vendor/vendor.txt for this
@@ -54,6 +54,9 @@ RESTRICT="test"
 #
 #	distutils-r1_python_prepare_all
 #}
+
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND="${DEPEND}"
 
 python_install_all() {
 	local DOCS=( AUTHORS.txt docs/*.rst )

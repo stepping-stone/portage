@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -25,7 +25,7 @@ REQUIRED_USE="cgi? ( !minimal ) apache? ( cgi )"
 # Some of the postgres plugins use DBD::Pg, while others call psql directly.
 # Some of the mysql plugins use DBD::mysql, while others call mysqladmin directly.
 # We replace the original ipmi plugins with the freeipmi_ plugin which at least works.
-DEPEND_COM="dev-lang/perl[berkdb]
+DEPEND_COM="dev-lang/perl:=[berkdb]
 			kernel_linux? ( sys-process/procps )
 			doc? ( dev-python/sphinx )
 			asterisk? ( dev-perl/Net-Telnet )
@@ -46,7 +46,7 @@ DEPEND_COM="dev-lang/perl[berkdb]
 				dev-perl/HTTP-Date
 			)
 			dev-perl/DBI
-			dev-perl/DateManip
+			dev-perl/Date-Manip
 			dev-perl/File-Copy-Recursive
 			dev-perl/List-MoreUtils
 			dev-perl/Log-Log4perl
@@ -54,7 +54,7 @@ DEPEND_COM="dev-lang/perl[berkdb]
 			dev-perl/Net-DNS
 			dev-perl/Net-Netmask
 			dev-perl/Net-SNMP
-			dev-perl/net-server[ipv6(-)?]
+			dev-perl/Net-Server[ipv6(-)?]
 			virtual/perl-Digest-MD5
 			virtual/perl-Getopt-Long
 			virtual/perl-MIME-Base64

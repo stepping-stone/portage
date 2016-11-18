@@ -93,3 +93,25 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> ddrescue-1.20.ebuild:
+  ppc stable wrt bug #572158
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*ddrescue-1.21 (18 Mar 2016)
+
+  18 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> +ddrescue-1.21.ebuild:
+  Bump to version 1.21
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  18 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> -ddrescue-1.18.1.ebuild,
+  -ddrescue-1.19.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

@@ -119,3 +119,171 @@
   libxcb-1.11-r1.ebuild:
   add support for python 3.5
 
+  11 Apr 2016; Patrice Clement <monsieurp@gentoo.org> libxcb-1.11.1.ebuild:
+  x11-proto/xcb-proto: add support for python 3.5
+
+  Closes: https://github.com/gentoo/gentoo/pull/988
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  20 Apr 2016; Anthony Ryan <anthonyryan1@gmail.com> libxcb-1.9.1.ebuild,
+  libxcb-1.9.1-r1.ebuild, libxcb-1.9.3.ebuild, libxcb-1.9.3-r1.ebuild,
+  libxcb-1.10.ebuild, libxcb-1.11.ebuild, libxcb-1.11-r1.ebuild,
+  libxcb-1.11.1.ebuild:
+  HTTPS for *.freedesktop.org
+
+  * Excluding xorg.freedesktop.org
+  * Excluding tango.freedesktop.org
+
+  The following modified ebuilds were found to have problems after
+  modification
+  but the problems were determined to not be a regression.
+
+  Upstream tarball has a new hash:
+  * app-misc/evtest-1.29
+  * app-misc/evtest-1.30
+  * dev-embedded/scratchbox2-2.0-r1
+  * dev-ml/cairo-ocaml-1.2.0
+  * net-libs/libqmi-1.0.0
+  * sys-auth/libfprint-0.4.0
+  * sys-auth/libfprint-0.5.0
+  * sys-auth/libfprint-0.5.1
+
+  Upstream tarball has been deleted:
+  * dev-libs/liblazy-0.2
+  * dev-util/pkgconfig-openbsd-20130507-r1
+  * x11-libs/xvba-video-0.8.0-r3
+  * x11-misc/driconf-0.9.1-r1
+  * x11-misc/xdg-utils-1.1.0_rc2-r1
+
+*libxcb-1.12 (29 May 2016)
+
+  29 May 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libxcb-1.12.ebuild:
+  Version bump
+
+  Includes patch to fix python-3 build.
+  Bug: https://bugs.freedesktop.org/show_bug.cgi?id=95490
+
+  Package-Manager: portage-2.2.28
+
+  29 May 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/libxcb-1.12-fix-inconsistent-use-tabs-space.patch:
+  add patch file that was mistakenly not committed
+
+  Package-Manager: portage-2.2.28
+
+  02 Jun 2016; Tobias Klausmann <klausman@gentoo.org> libxcb-1.11.1.ebuild:
+  1.11.1-r0: add alpha keyword
+
+  Gentoo-Bug: 559062
+
+  Package-Manager: portage-2.3.0_rc1
+
+  03 Aug 2016; Jeroen Roovers <jer@gentoo.org> libxcb-1.12.ebuild:
+  Stable for HPPA (bug #579266).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  06 Aug 2016; Markus Meier <maekke@gentoo.org> libxcb-1.12.ebuild:
+  arm stable, bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libxcb-1.12.ebuild:
+  x86 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libxcb-1.12.ebuild:
+  amd64 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  22 Sep 2016; Tobias Klausmann <klausman@gentoo.org> libxcb-1.12.ebuild:
+  1.12-r0: add alpha keyword
+
+  Gentoo-Bug: 579266
+
+*libxcb-1.12-r1 (29 Sep 2016)
+
+  29 Sep 2016; Patrice Clement <monsieurp@gentoo.org> +libxcb-1.12-r1.ebuild:
+  Only install man pages with USE="doc".
+
+  This reduces the default installation down to 2043 files.
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2358
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Sep 2016; Alexis Ballier <aballier@gentoo.org> libxcb-1.12-r1.ebuild:
+  use proper phase for removing man pages.
+
+  Removing files from $D has nothing to do with pkg_preinst and moreover it
+  breaks with FEATURES=noman...
+
+  Package-Manager: portage-2.3.1
+
+  01 Oct 2016; Mart Raudsepp <leio@gentoo.org> -libxcb-1.12-r1.ebuild:
+  Revert USE=doc controlling man pages
+
+  FEATURES=noman is for skipping man pages, not doc USE flag.
+  This change seems to not have been acknowledge by any libxcb maintainers.
+  It may be discussed on bugzilla on the premise of these being development
+  docs, some of which are already behind USE=doc due to extra deps.
+
+  Package-Manager: portage-2.3.1
+
+*libxcb-1.12-r2 (01 Oct 2016)
+
+  01 Oct 2016; Mart Raudsepp <leio@gentoo.org> +libxcb-1.12-r2.ebuild:
+  Lock subslot to 1.12 for now
+
+  As it was before, a simple bugfix release of 1.12.1 would force
+  a huge set of rebuilds unnecessarily. We'll need to decide if we
+  need subslot 1.13 upon such a release appearing or not.
+  This is a revbump due to a -r1 having just been reverted and so
+  avoids it looking like a downgrade.
+
+  Gentoo-bug: 576890
+  Package-Manager: portage-2.3.1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> libxcb-1.9.1.ebuild,
+  libxcb-1.9.1-r1.ebuild, libxcb-1.9.3.ebuild, libxcb-1.9.3-r1.ebuild,
+  libxcb-1.10.ebuild, libxcb-1.11.ebuild, libxcb-1.11-r1.ebuild,
+  libxcb-1.11.1.ebuild, libxcb-1.12.ebuild, libxcb-1.12-r2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  12 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libxcb-1.11.1.ebuild:
+  sparc stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libxcb-1.11.1.ebuild:
+  ia64 stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libxcb-1.12.ebuild:
+  ia64 stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libxcb-1.12.ebuild:
+  ppc stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

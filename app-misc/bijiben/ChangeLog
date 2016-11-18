@@ -99,3 +99,44 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> bijiben-3.18.2.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  24 Jun 2016; Pacho Ramos <pacho@gentoo.org> -bijiben-3.16.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*bijiben-3.20.2 (24 Jun 2016)
+
+  24 Jun 2016; Pacho Ramos <pacho@gentoo.org> +bijiben-3.20.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> bijiben-3.20.2.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> bijiben-3.20.2.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*bijiben-3.21.2 (20 Oct 2016)
+
+  20 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> +bijiben-3.21.2.ebuild:
+  version bump 3.20.2 → 3.21.2
+
+  Package-Manager: portage-2.3.1
+
+  20 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> -bijiben-3.18.2.ebuild:
+  drop old revision
+
+  Package-Manager: portage-2.3.1
+

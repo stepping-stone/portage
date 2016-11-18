@@ -62,3 +62,11 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  04 Jun 2016; Mike Frysinger <vapier@gentoo.org> tpb-0.6.4-r1.ebuild:
+  savannah: switch to https URLs
+

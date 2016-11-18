@@ -149,3 +149,35 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*libraw-0.17.2 (14 Jun 2016)
+
+  14 Jun 2016; Lars Wendler <polynomial-c@gentoo.org> +libraw-0.17.2.ebuild:
+  Bump to version 0.17.2
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  14 Jun 2016; Lars Wendler <polynomial-c@gentoo.org> -libraw-0.17.0.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  12 Nov 2016; David Seifert <soap@gentoo.org> libraw-0.16.2.ebuild,
+  libraw-0.17.1.ebuild, libraw-0.17.2.ebuild:
+  Add subslot operator on media-libs/jasper
+
+  Package-Manager: portage-2.3.2
+
+  14 Nov 2016; David Seifert <soap@gentoo.org>
+  +files/libraw-0.17.2-gcc6.patch, libraw-0.17.2.ebuild:
+  Allow for compiling with GCC 6
+
+  Gentoo-bug: 582852
+  * Patch by Peter Levine
+  * Add pkg_setup() check
+  * Disable building of static libraries
+  * Prune .la files unconditionally
+
+  Package-Manager: portage-2.3.2
+

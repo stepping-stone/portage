@@ -178,3 +178,119 @@
 
   Package-Manager: portage-2.2.26
 
+  29 Feb 2016; Rafael Martins <rafaelmartins@gentoo.org> blogc-9999.ebuild:
+  updated live ebuild
+
+  Package-Manager: portage-2.2.26
+
+*blogc-0.7.6 (29 Feb 2016)
+
+  29 Feb 2016; Rafael Martins <rafaelmartins@gentoo.org> -blogc-0.7.5.ebuild,
+  +blogc-0.7.6.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.26
+
+*blogc-0.8.0 (07 Apr 2016)
+
+  07 Apr 2016; Rafael Martins <rafaelmartins@gentoo.org> -blogc-0.7.6.ebuild,
+  +blogc-0.8.0.ebuild, blogc-9999.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.26
+
+*blogc-0.8.1 (17 Apr 2016)
+
+  17 Apr 2016; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -blogc-0.8.0.ebuild, +blogc-0.8.1.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.26
+
+  20 Apr 2016; Rafael Martins <rafaelmartins@gentoo.org> blogc-0.8.1.ebuild,
+  blogc-9999.ebuild:
+  do not eautoreconf submodules
+
+  we don't use bundled libraries from submodules, then we don't need to run
+  eautoreconf recursively. the correct fix here would be to disable clonning
+  of submodules, but the git eclass does not support it.
+
+  Package-Manager: portage-2.2.26
+
+  28 Apr 2016; Rafael Martins <rafaelmartins@gentoo.org> blogc-9999.ebuild,
+  metadata.xml:
+  updated live ebuild, added new use flags.
+
+  Package-Manager: portage-2.2.26
+
+  28 Apr 2016; Rafael Martins <rafaelmartins@gentoo.org> blogc-9999.ebuild:
+  added blockers to live ebuild, to avoid conflicts
+
+  Package-Manager: portage-2.2.26
+
+*blogc-0.9.0 (30 Apr 2016)
+
+  30 Apr 2016; Rafael Martins <rafaelmartins@gentoo.org> -blogc-0.8.1.ebuild,
+  +blogc-0.9.0.ebuild:
+  version bump.
+
+  Package-Manager: portage-2.2.26
+
+*blogc-0.10.0 (30 May 2016)
+
+  30 May 2016; Rafael Martins <rafaelmartins@gentoo.org> -blogc-0.9.0.ebuild,
+  +blogc-0.10.0.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.26
+
+*blogc-0.10.1 (19 Jun 2016)
+
+  19 Jun 2016; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -blogc-0.10.0.ebuild, +blogc-0.10.1.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.26
+
+*blogc-0.10.2 (30 Jun 2016)
+
+  30 Jun 2016; Rafael Martins <rafaelmartins@gentoo.org> -blogc-0.10.1.ebuild,
+  +blogc-0.10.2.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.26
+
+*blogc-0.11.0 (05 Jul 2016)
+
+  05 Jul 2016; Rafael Martins <rafaelmartins@gentoo.org> -blogc-0.10.2.ebuild,
+  +blogc-0.11.0.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.26
+
+*blogc-0.11.1 (18 Jul 2016)
+
+  18 Jul 2016; Rafael Martins <rafaelmartins@gentoo.org> -blogc-0.11.0.ebuild,
+  +blogc-0.11.1.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.26
+
+  26 Sep 2016; Rafael Martins <rafaelmartins@gentoo.org> blogc-9999.ebuild:
+  fixed live ebuild dependencies
+
+  Package-Manager: portage-2.2.28
+
+  16 Oct 2016; Rafael Martins <rafaelmartins@gentoo.org> blogc-9999.ebuild:
+  add git as test DEPEND for live ebuild
+
+  Package-Manager: portage-2.2.28
+
+*blogc-0.12.0 (30 Oct 2016)
+
+  30 Oct 2016; Rafael Martins <rafaelmartins@gentoo.org> -blogc-0.11.1.ebuild,
+  +blogc-0.12.0.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+

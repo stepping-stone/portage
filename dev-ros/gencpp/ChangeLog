@@ -40,3 +40,22 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Alexis Ballier <aballier@gentoo.org>
 
+*gencpp-0.5.4 (19 Mar 2016)
+
+  19 Mar 2016; Alexis Ballier <aballier@gentoo.org> +gencpp-0.5.4.ebuild:
+  bump to 0.5.4
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+*gencpp-0.5.5 (30 Jun 2016)
+
+  30 Jun 2016; Alexis Ballier <aballier@gentoo.org> +gencpp-0.5.5.ebuild:
+  bump to 0.5.5
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> gencpp-0.5.3.ebuild,
+  gencpp-0.5.4.ebuild, gencpp-0.5.5.ebuild, gencpp-9999.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

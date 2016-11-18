@@ -125,3 +125,62 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> nm-applet-1.0.10.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  07 Jul 2016; Pacho Ramos <pacho@gentoo.org> -nm-applet-1.0.6.ebuild,
+  -nm-applet-1.0.8.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+*nm-applet-1.2.2 (07 Jul 2016)
+
+  07 Jul 2016; Pacho Ramos <pacho@gentoo.org> +nm-applet-1.2.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+*nm-applet-1.2.4 (04 Aug 2016)
+
+  04 Aug 2016; Mike Gilbert <floppym@gentoo.org> +nm-applet-1.2.4.ebuild:
+  bump to 1.2.4
+
+  Package-Manager: portage-2.3.0_p16
+
+*nm-applet-1.4.0 (11 Sep 2016)
+
+  11 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  +nm-applet-1.4.0.ebuild:
+  version bump 1.2.4 → 1.4.0
+
+  Fix automagic dependency on modemmanager.
+
+  Package-Manager: portage-2.3.0
+
+  11 Sep 2016; Mike Gilbert <floppym@gentoo.org> nm-applet-1.4.0.ebuild:
+  drop ia64 and sparc keywords
+
+  Package-Manager: portage-2.3.0_p24
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> nm-applet-1.4.0.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> nm-applet-1.4.0.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*nm-applet-1.4.2 (02 Oct 2016)
+
+  02 Oct 2016; Pacho Ramos <pacho@gentoo.org> +nm-applet-1.4.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.1
+

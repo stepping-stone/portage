@@ -483,3 +483,404 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
 
+*samba-4.4.0_rc4 (08 Mar 2016)
+*samba-4.3.6 (08 Mar 2016)
+*samba-4.2.9 (08 Mar 2016)
+
+  08 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.2.9.ebuild,
+  +samba-4.3.6.ebuild, +samba-4.4.0_rc4.ebuild:
+  Bump to versions 4.2.9, 4.3.6 and 4.4.0_rc4
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*samba-4.4.0 (22 Mar 2016)
+
+  22 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.4.0.ebuild:
+  Bump to version 4.4.0
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  22 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> -samba-4.2.8.ebuild,
+  -samba-4.3.5.ebuild, -samba-4.4.0_rc3.ebuild, -samba-4.4.0_rc4.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  24 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> samba-4.4.0.ebuild:
+  Adjusted dependencies (bug #578192).
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  29 Mar 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.9.ebuild:
+  amd64 stable wrt bug #578498
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Mar 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.9.ebuild:
+  x86 stable wrt bug #578498
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> samba-4.2.9.ebuild:
+  Make pam dependency optional again (bug #489770).
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  30 Mar 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.9.ebuild:
+  ppc stable wrt bug #578498
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  30 Mar 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.9.ebuild:
+  ppc64 stable wrt bug #578498
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  30 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> samba-4.2.9.ebuild,
+  samba-4.3.6.ebuild, samba-4.4.0.ebuild:
+  Fixed smb backend detection by cups (bug #552310)
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  31 Mar 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.9.ebuild:
+  ia64 stable wrt bug #578498
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  03 Apr 2016; Stephen L Arnold <nerdboy@gentoo.org> samba-4.2.9.ebuild:
+  keyword for ~arm
+
+  Package-Manager: portage-2.2.28
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.9.ebuild:
+  arm stable wrt bug #578498
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="arm"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.9.ebuild:
+  sparc stable wrt bug #578498
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*samba-4.4.2 (12 Apr 2016)
+*samba-4.3.8 (12 Apr 2016)
+*samba-4.2.11 (12 Apr 2016)
+
+  12 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.2.11.ebuild,
+  +samba-4.3.8.ebuild, +samba-4.4.2.ebuild:
+  Security bump to versions 4.2.11, 4.3.8 and 4.4.2 (bug #578004).
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  12 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> -samba-4.3.6.ebuild,
+  -samba-4.4.0.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  13 Apr 2016; Sergey Popov <pinkbyte@gentoo.org> files/4.2/samba4.initd-r1,
+  files/4.3/samba4.initd-r1, files/4.4/samba4.initd-r1:
+  use /run instead of /var/run
+
+  Gentoo-Bug: 454676
+
+  Package-Manager: portage-2.2.28
+
+  13 Apr 2016; Sergey Popov <pinkbyte@gentoo.org> files/samba.conf,
+  samba-4.2.11.ebuild, samba-4.3.8.ebuild, samba-4.4.2.ebuild:
+  stop using /var/run in ebuild and conf files too
+
+  Gentoo-Bug: 454676
+
+  Package-Manager: portage-2.2.28
+
+  13 Apr 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.11.ebuild:
+  amd64 stable wrt bug #578004
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Apr 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.11.ebuild:
+  x86 stable wrt bug #578004
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Apr 2016; Markus Meier <maekke@gentoo.org> samba-4.2.11.ebuild:
+  arm stable, bug #578004
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  23 Apr 2016; Jeroen Roovers <jer@gentoo.org> samba-4.2.11.ebuild:
+  Stable for HPPA PPC64 (bug #578004).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  25 Apr 2016; Ian Stakenvicius <axs@gentoo.org> samba-4.4.2.ebuild:
+  4.4: drop building of libsamba-net-samba4.so from abi_x86_32
+
+  libsamba-net-samba4.so requires PROVISION as well as other dependencies that
+  are libpython based, and so cannot be built for alternate ABIs.  This
+  section
+  of the code was already disabled in the 4.2.x series but was erroneously
+  re-enabled for 4.4.
+
+  Bug: https://bugs.gentoo.org/578588
+
+  Package-Manager: portage-2.2.26
+
+*samba-4.4.3 (02 May 2016)
+*samba-4.3.9 (02 May 2016)
+*samba-4.2.12 (02 May 2016)
+
+  02 May 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.2.12.ebuild,
+  +samba-4.3.9.ebuild, +samba-4.4.3.ebuild:
+  Bump to versions 4.2.12, 4.3.9 and 4.4.3
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  02 May 2016; Lars Wendler <polynomial-c@gentoo.org> -samba-4.3.8.ebuild,
+  -samba-4.4.2.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  03 May 2016; Lars Wendler <polynomial-c@gentoo.org>
+  files/4.2/samba4.initd-r1, files/4.3/samba4.initd-r1,
+  files/4.4/samba4.initd-r1:
+  Fixed openrc init script shebang.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  15 May 2016; Andreas K. Hüttel <dilfridge@gentoo.org> samba-4.2.9.ebuild,
+  samba-4.2.11.ebuild, samba-4.2.12.ebuild, samba-4.3.9.ebuild,
+  samba-4.4.3.ebuild:
+  Add missing Perl dependency, slot operator := is required
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/3.5/samba.initd,
+  files/3.6/samba.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  21 May 2016; Andreas K. Hüttel <dilfridge@gentoo.org> samba-4.2.9.ebuild,
+  samba-4.2.11.ebuild, samba-4.2.12.ebuild, samba-4.3.9.ebuild,
+  samba-4.4.3.ebuild:
+  Block dev-perl/Parse-Yapp, bug 562918. Samba upstream should fix their
+  bundling fetish.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*samba-4.4.4 (09 Jun 2016)
+
+  09 Jun 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.4.4.ebuild:
+  Bump to version 4.4.4
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*samba-4.3.10 (16 Jun 2016)
+
+  16 Jun 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.3.10.ebuild:
+  Bump to version 4.3.10
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  26 Jun 2016; Michał Górny <mgorny@gentoo.org> -files/3.5/lmhosts,
+  -files/3.5/nsswitch.conf-winbind, -files/3.5/nsswitch.conf-wins,
+  -files/3.5/samba-3.5.6-kerberos-dummy.patch,
+  -files/3.5/samba-3.5.8-uclib-build.patch, -files/3.5/samba.confd,
+  -files/3.5/samba.initd, -files/3.5/samba.pam, -files/3.5/smb.conf.default,
+  -files/3.5/smb.conf.default.patch, -files/3.5/smbusers,
+  -files/3.5/swat.xinetd, -files/3.5/system-auth-winbind.pam,
+  -samba-3.5.21.ebuild, -samba-3.5.22.ebuild:
+  Remove <3.6, bonsaikitten approved
+
+  26 Jun 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
+
+  Package-Manager: portage-2.3.0
+
+*samba-4.4.5 (08 Jul 2016)
+*samba-4.3.11 (08 Jul 2016)
+*samba-4.2.14 (08 Jul 2016)
+
+  08 Jul 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.2.14.ebuild,
+  +samba-4.3.11.ebuild, +samba-4.4.5.ebuild:
+  Security bump to versions 4.2.14, 4.3.11 and 4.4.5
+
+  (CVE-2016-2119)
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  08 Jul 2016; Lars Wendler <polynomial-c@gentoo.org> -samba-4.2.12.ebuild,
+  -samba-4.3.9.ebuild, -samba-4.3.10.ebuild, -samba-4.4.3.ebuild,
+  -samba-4.4.4.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.11.ebuild:
+  ppc stable wrt bug #578004
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.11.ebuild:
+  sparc stable wrt bug #578004
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> samba-4.2.11.ebuild:
+  ia64 stable wrt bug #578004
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  10 Jul 2016; Zac Medico <zmedico@gentoo.org> samba-4.4.5.ebuild:
+  prefix fixes
+
+  Package-Manager: portage-2.3.0
+
+*samba-4.5.0_rc1 (29 Jul 2016)
+
+  29 Jul 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.5.0_rc1.ebuild:
+  Bump to version 4.5.0_rc1
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  29 Jul 2016; Lars Wendler <polynomial-c@gentoo.org> -samba-4.2.9.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*samba-4.5.0_rc2 (10 Aug 2016)
+
+  10 Aug 2016; Lars Wendler <polynomial-c@gentoo.org> -samba-4.5.0_rc1.ebuild,
+  +samba-4.5.0_rc2.ebuild:
+  Bump to version 4.5.0_rc2
+
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*samba-4.5.0_rc3 (29 Aug 2016)
+
+  29 Aug 2016; Lars Wendler <polynomial-c@gentoo.org> -samba-4.5.0_rc2.ebuild,
+  +samba-4.5.0_rc3.ebuild:
+  Bumped to version 4.5.0_rc3. Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  06 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> samba-4.2.14.ebuild:
+  Fixed dependency on sys-libs/tevent (bug #592970).
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  06 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> samba-4.2.11.ebuild,
+  samba-4.2.14.ebuild, samba-4.3.11.ebuild, samba-4.4.5.ebuild,
+  samba-4.5.0_rc3.ebuild:
+  Added "ldap" USE-dependency for sys-libs/ldb
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*samba-4.5.0 (08 Sep 2016)
+
+  08 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> -samba-4.5.0_rc3.ebuild,
+  +samba-4.5.0.ebuild:
+  Bump to version 4.5.0
+
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*samba-4.4.6 (23 Sep 2016)
+
+  23 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.4.6.ebuild:
+  Bump to version 4.4.6
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  02 Oct 2016; Pacho Ramos <pacho@gentoo.org> samba-4.5.0.ebuild:
+  Use zeroconf instead of avahi USE flag (#477620)
+
+  Package-Manager: portage-2.3.1
+
+*samba-4.5.0-r1 (21 Oct 2016)
+
+  21 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.5.0-r1.ebuild:
+  Revbump to fix nmbd segfault with >=tevent-0.9.30
+
+  See Gentoo bug #592502
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*samba-4.5.1 (26 Oct 2016)
+*samba-4.4.7 (26 Oct 2016)
+
+  26 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> +samba-4.4.7.ebuild,
+  +samba-4.5.1.ebuild:
+  Bump to versions 4.4.7 and 4.5.1
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  26 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> -samba-4.4.5.ebuild,
+  -samba-4.5.0.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  02 Nov 2016; Lars Wendler <polynomial-c@gentoo.org> samba-4.4.6.ebuild,
+  samba-4.4.7.ebuild, samba-4.5.0-r1.ebuild, samba-4.5.1.ebuild:
+  Re-added dev-libs/libaio (automagic dependency).
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

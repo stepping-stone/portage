@@ -69,3 +69,35 @@
 
   Package-Manager: portage-2.2.27
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  26 Apr 2016; Austin English <wizardedit@gentoo.org> -files/rxstack:
+  remove old unused initscript
+
+*regina-rexx-3.9.1-r1 (26 Apr 2016)
+*regina-rexx-3.6-r3 (26 Apr 2016)
+
+  26 Apr 2016; Austin English <wizardedit@gentoo.org> files/rxstack-r1,
+  +regina-rexx-3.6-r3.ebuild, +regina-rexx-3.9.1-r1.ebuild:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=573846
+
+  Package-Manager: portage-2.2.26
+
+  26 Apr 2016; Austin English <wizardedit@gentoo.org>
+  -regina-rexx-3.6-r2.ebuild, -regina-rexx-3.9.1.ebuild:
+  remove regina-rexx-3.6-r2 / regina-rexx-3.9.1
+
+  Package-Manager: portage-2.2.26
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  sourceforge: switch to https:// URIs
+
+  31 Oct 2016; Michał Górny <mgorny@gentoo.org>
+  -files/regina-rexx-3.6-gentoo.patch, -regina-rexx-3.6-r3.ebuild:
+  Remove buggy 3.6 version (stable, masked), #515944
+

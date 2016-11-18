@@ -100,3 +100,67 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  28 Feb 2016; Pacho Ramos <pacho@gentoo.org> gnome-characters-3.18.1.ebuild:
+  Ensure all prepare phases are run
+
+  Package-Manager: portage-2.2.27
+
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  gnome-characters-3.18.1.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -gnome-characters-3.16.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnome-characters-3.20.1 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +gnome-characters-3.20.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-characters-3.20.1.ebuild:
+  add missing env support for unittests
+
+  Package-Manager: portage-2.3.0
+
+  04 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-characters-3.20.1.ebuild:
+  raise gtk+ to 3.20 and fix test deps again
+
+  gtk+-3.20 is required for the app to start at all, otherwise only garbage
+  gjs error messages are shown.
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-characters-3.20.1.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-characters-3.20.1.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*gnome-characters-3.22.0 (20 Oct 2016)
+
+  20 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-characters-3.22.0.ebuild:
+  version bump 3.20.1 → 3.22.0
+
+  Package-Manager: portage-2.3.1
+
+  20 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-characters-3.18.1.ebuild:
+  cleanup old revision
+
+  Package-Manager: portage-2.3.1
+

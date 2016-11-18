@@ -68,3 +68,49 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*gradm-3.1.201603152148 (16 Mar 2016)
+
+  16 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +gradm-3.1.201603152148.ebuild:
+  version bump to 3.1.201603152148
+
+  Package-Manager: portage-2.2.26
+
+  16 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  gradm-3.1.201507191652.ebuild:
+  stable on amd64 and x86
+
+  Package-Manager: portage-2.2.26
+
+  16 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  -gradm-3.1.201506081912.ebuild:
+  remove older version
+
+  Package-Manager: portage-2.2.26
+
+  17 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  gradm-3.1.201603152148.ebuild:
+  bump next stable candidate to EAPI=6
+
+  Package-Manager: portage-2.2.26
+
+  26 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  gradm-3.1.201603152148.ebuild:
+  stable on amd64 and x86
+
+  Package-Manager: portage-2.2.26
+
+  26 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  -gradm-3.1.201507041117.ebuild:
+  remove older stable version
+
+  Package-Manager: portage-2.2.26
+
+*gradm-3.1.201607172312 (19 Jul 2016)
+
+  19 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  +gradm-3.1.201607172312.ebuild:
+  bump to version 3.1.201607172312
+
+  Package-Manager: portage-2.2.28
+

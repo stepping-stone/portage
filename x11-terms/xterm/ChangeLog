@@ -151,3 +151,132 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  04 Mar 2016; Steev Klimaszewski <steev@gentoo.org> xterm-322.ebuild:
+  Keyword 322 for ~arm64
+
+  Package-Manager: portage-2.2.27
+
+*xterm-323 (08 Mar 2016)
+
+  08 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +xterm-323.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.27
+
+  08 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -xterm-321.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+*xterm-324 (12 Mar 2016)
+
+  12 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +xterm-324.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  12 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -xterm-322.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  02 Jun 2016; Tobias Klausmann <klausman@gentoo.org> xterm-320.ebuild:
+  320-r0: add alpha keyword
+
+  Gentoo-Bug: 559062
+
+  Package-Manager: portage-2.3.0_rc1
+
+*xterm-325 (09 Jun 2016)
+
+  09 Jun 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xterm-325.ebuild:
+  Version bump to 325
+
+  Package-Manager: portage-2.2.28
+
+  09 Jun 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xterm-325.ebuild:
+  make building xinerama support optional
+
+  Bug: https://bugs.gentoo.org/show_bug.cgi?id=580936
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Jeroen Roovers <jer@gentoo.org> xterm-325.ebuild:
+  Stable for HPPA PPC64 (bug #579266).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  06 Aug 2016; Markus Meier <maekke@gentoo.org> xterm-325.ebuild:
+  arm stable, bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> xterm-325.ebuild:
+  x86 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> xterm-325.ebuild:
+  amd64 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  22 Sep 2016; Tobias Klausmann <klausman@gentoo.org> xterm-325.ebuild:
+  325-r0: add alpha keyword
+
+  Gentoo-Bug: 579266
+
+*xterm-326 (01 Oct 2016)
+
+  01 Oct 2016; Manuel Rüger <mrueg@gentoo.org> +xterm-326.ebuild:
+  Version bump to 326
+
+  Package-Manager: portage-2.3.1
+
+  01 Oct 2016; Manuel Rüger <mrueg@gentoo.org> -xterm-323.ebuild,
+  -xterm-324.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.1
+
+*xterm-327 (10 Oct 2016)
+
+  10 Oct 2016; Manuel Rüger <mrueg@gentoo.org> +xterm-327.ebuild:
+  Version bump to 327
+
+  Package-Manager: portage-2.3.1
+
+  12 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xterm-320.ebuild:
+  sparc stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xterm-320.ebuild:
+  ia64 stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xterm-325.ebuild:
+  ia64 stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xterm-325.ebuild:
+  ppc stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

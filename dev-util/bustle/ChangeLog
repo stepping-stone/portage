@@ -95,3 +95,38 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*bustle-0.5.4 (03 Apr 2016)
+
+  03 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org> +bustle-0.5.4.ebuild:
+  bump up to 0.5.4
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org> -bustle-0.4.3.ebuild,
+  -bustle-0.5.1.ebuild, -bustle-0.5.2.ebuild, -bustle-0.5.3.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.28
+
+  15 May 2016; Sergei Trofimovich <slyfox@gentoo.org> bustle-0.5.4.ebuild:
+  amd64/x86 stable, bug #563090
+
+  Package-Manager: portage-2.2.28
+
+  04 Jun 2016; Sergei Trofimovich <slyfox@gentoo.org> bustle-0.5.4.ebuild:
+  add missing build-time dependency on dev-perl/Locale-gettext
+
+  Package-Manager: portage-2.3.0_rc1
+
+  09 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/0001-bustle-dbus-monitor-fix-linking-order-libs-go-after-.patch,
+  -files/bustle-0.2.3-ghc-7.4.patch,
+  -files/bustle-0.2.3-restrict-gtk2hs-deps-to-gtkplus2.patch,
+  -files/bustle-0.4.0-ghc-7.4.patch,
+  -files/bustle-0.4.0-restrict-gtk2hs-deps-to-gtkplus2.patch:
+  remove unused patches.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2495
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

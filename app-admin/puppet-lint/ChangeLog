@@ -72,3 +72,39 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  10 Apr 2016; Manuel Rüger <mrueg@gentoo.org> puppet-lint-0.3.2.ebuild,
+  puppet-lint-1.1.0.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+*puppet-lint-2.0.0 (24 Jun 2016)
+
+  24 Jun 2016; Hans de Graaff <graaff@gentoo.org> +puppet-lint-2.0.0.ebuild:
+  add 2.0.0
+
+  Package-Manager: portage-2.2.28
+
+  24 Jun 2016; Hans de Graaff <graaff@gentoo.org> -puppet-lint-0.3.2.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+  23 Jul 2016; Hans de Graaff <graaff@gentoo.org> puppet-lint-2.0.0.ebuild:
+  add ruby22
+
+  Package-Manager: portage-2.2.28
+
+*puppet-lint-2.0.2 (20 Aug 2016)
+
+  20 Aug 2016; Hans de Graaff <graaff@gentoo.org> +puppet-lint-2.0.2.ebuild:
+  add 2.0.2
+
+  Package-Manager: portage-2.2.28
+
+  03 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  puppet-lint-2.0.2.ebuild:
+  add x86 keyword
+
+  Package-Manager: portage-2.3.2
+

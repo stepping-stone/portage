@@ -61,3 +61,20 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  04 Jun 2016; Mike Frysinger <vapier@gentoo.org> bobotpp-2.2.3.ebuild:
+  savannah: switch to https URLs
+
+  18 Sep 2016; David Seifert <soap@gentoo.org> bobotpp-2.2.3.ebuild,
+  +files/bobotpp-2.2.3-fix-c++14.patch:
+  Allow for compiling with GCC 6
+
+  Gentoo-bug: 594152
+  * EAPI=6
+
+  Package-Manager: portage-2.3.0
+

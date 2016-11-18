@@ -168,3 +168,94 @@
 
   Package-Manager: portage-2.2.26
 
+  29 Feb 2016; Daniel Pielmeier <billie@gentoo.org> conky-1.10.1.ebuild:
+  Fix doc installation.
+
+  This fixes bug #575416. Thanks to David Brooke for the report.
+
+  Package-Manager: portage-2.2.26
+
+  18 Mar 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove disallowed upstream maintainer description
+
+  Remove <description/> from upstream maintainer as it is not allowed
+  by GLEP 46.
+
+  18 May 2016; Daniel Pielmeier <billie@gentoo.org> conky-1.10.1.ebuild,
+  +files/conky-1.10.1-ncurses-tinfo.patch:
+  Fixes bug #562154. Fix building ncurses with USE=tinfo.
+
+  Thanks to Nicholas O'Connor for the report and Laurent Georget for the
+  patch.
+
+  Package-Manager: portage-2.2.28
+
+  07 Jun 2016; Tobias Klausmann <klausman@gentoo.org> conky-1.10.1.ebuild:
+  1.10.1-r0: add ~alpha keyword
+
+  Gentoo-Bug: 561750
+
+  Package-Manager: portage-2.3.0_rc1
+
+  22 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/conky-1.10.0-cmake.patch, -files/conky-1.10.0-includefiles.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/1688
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org>
+  files/conky-1.9.0-apcupsd.patch:
+  sourceforge: switch to https:// URIs
+
+*conky-1.10.3 (24 Aug 2016)
+
+  24 Aug 2016; Daniel Pielmeier <billie@gentoo.org> +conky-1.10.3.ebuild:
+  Version bump, fixes bug #590878.
+
+  Thanks to Perfect Gentleman for the report.
+
+  Package-Manager: portage-2.2.28
+
+*conky-1.10.4 (27 Aug 2016)
+
+  27 Aug 2016; Daniel Pielmeier <billie@gentoo.org> +conky-1.10.4.ebuild:
+  Fix bug #590878.
+
+  Package-Manager: portage-2.2.28
+
+  27 Aug 2016; Daniel Pielmeier <billie@gentoo.org> -conky-1.10.1.ebuild,
+  -conky-1.10.3.ebuild:
+  Remove old.
+
+  Package-Manager: portage-2.2.28
+
+  10 Sep 2016; Daniel Pielmeier <billie@gentoo.org> conky-1.10.4.ebuild,
+  +files/conky-1.10.4-x11-build.patch:
+  Fix build without X11. Bug #592252.
+
+  Thanks to Toralf Förster for the report.
+
+  Package-Manager: portage-2.2.28
+
+*conky-1.10.5 (16 Oct 2016)
+
+  16 Oct 2016; Daniel Pielmeier <billie@gentoo.org> +conky-1.10.5.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  16 Oct 2016; Daniel Pielmeier <billie@gentoo.org> conky-1.9.0-r3.ebuild,
+  +files/conky-1.9.0-update-noaa-metar-uri.patch:
+  Update NOAA METAR uri.
+
+  This fixes bug #592906. Thanks to Brand Huntsman for the report.
+
+  Package-Manager: portage-2.3.0
+
+  15 Nov 2016; Tobias Klausmann <klausman@gentoo.org> conky-1.10.4.ebuild:
+  1.10.4-r0: stable on alpha
+
+  Gentoo-Bug: 595652
+

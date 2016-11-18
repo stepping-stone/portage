@@ -298,3 +298,400 @@
 
   Package-Manager: portage-2.2.27
 
+*plasma-workspace-5.5.5 (01 Mar 2016)
+
+  01 Mar 2016; Michael Palimaka <kensington@gentoo.org>
+  +plasma-workspace-5.5.5.ebuild:
+  kde-plasma: version bump 5.5.5
+
+  Package-Manager: portage-2.2.27
+
+*plasma-workspace-5.5.5-r1 (01 Mar 2016)
+
+  01 Mar 2016; Michael Palimaka <kensington@gentoo.org>
+  -plasma-workspace-5.5.5.ebuild, +plasma-workspace-5.5.5-r1.ebuild:
+  upstream respun the tarball
+
+  Package-Manager: portage-2.2.27
+
+*plasma-workspace-5.5.5-r2 (02 Mar 2016)
+
+  02 Mar 2016; Michael Palimaka <kensington@gentoo.org>
+  -plasma-workspace-5.5.5-r1.ebuild, +plasma-workspace-5.5.5-r2.ebuild:
+  upstream respun the tarball again
+
+  Package-Manager: portage-2.2.27
+
+  12 Mar 2016; Johannes Huber <johu@gentoo.org>
+  -files/plasma-workspace-5.4-consolekit2.patch,
+  -files/plasma-workspace-5.4.3-fix-drkonqi.patch,
+  -files/plasma-workspace-5.4.3-lockscreen-bypass.patch,
+  -files/plasma-workspace-5.4.3-no-SUID-no-GUID.patch, metadata.xml,
+  -plasma-workspace-5.4.3-r2.ebuild:
+  kde-plasma: Remove KDE Plasma 5.4.3
+
+  Package-Manager: portage-2.2.28
+
+  12 Mar 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.5.4.ebuild:
+  kde-plasma: Remove KDE Plasma 5.5.4
+
+  Package-Manager: portage-2.2.28
+
+*plasma-workspace-5.6.1 (29 Mar 2016)
+
+  29 Mar 2016; Johannes Huber <johu@gentoo.org>
+  +files/plasma-workspace-5.6.0-rpath.patch, +plasma-workspace-5.6.1.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.6.1
+
+  Package-Manager: portage-2.2.28
+
+*plasma-workspace-5.6.2 (06 Apr 2016)
+
+  06 Apr 2016; Johannes Huber <johu@gentoo.org>
+  +plasma-workspace-5.6.2.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.6.2
+
+  Package-Manager: portage-2.2.28
+
+  06 Apr 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.6.1.ebuild:
+  kde-plasma: Remove KDE Plasma 5.6.1
+
+  Package-Manager: portage-2.2.28
+
+  07 Apr 2016; Mikle Kolyada <zlogene@gentoo.org>
+  plasma-workspace-5.5.5-r2.ebuild:
+  amd64 stable wrt bug #429204
+
+  Package-Manager: portage-2.2.26
+
+*plasma-workspace-5.6.3 (19 Apr 2016)
+
+  19 Apr 2016; Johannes Huber <johu@gentoo.org>
+  +plasma-workspace-5.6.3.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.6.3
+
+  Package-Manager: portage-2.2.28
+
+  23 Apr 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.6.2.ebuild:
+  kde-plasma: Remove KDE Plasma 5.6.2
+
+  Package-Manager: portage-2.2.28
+
+*plasma-workspace-5.6.4 (11 May 2016)
+
+  11 May 2016; Michael Palimaka <kensington@gentoo.org>
+  +plasma-workspace-5.6.4.ebuild:
+  kde-plasma: version bump 5.6.4
+
+  Package-Manager: portage-2.2.28
+
+  17 May 2016; Johannes Huber <johu@gentoo.org>
+  plasma-workspace-5.5.5-r2.ebuild, plasma-workspace-5.6.3.ebuild,
+  plasma-workspace-5.6.4.ebuild:
+  Pkg move kde-plasma/kwayland -> kde-frameworks/kwayland
+
+  17 May 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.6.3.ebuild:
+  kde-plasma: Remove KDE Plasma 5.6.3
+
+  Package-Manager: portage-2.3.0_rc1
+
+  02 Jun 2016; Michael Palimaka <kensington@gentoo.org>
+  plasma-workspace-5.5.5-r2.ebuild:
+  kde-plasma: stabilise 5.5.5 on x86
+
+  Package-Manager: portage-2.3.0_rc1
+
+  16 Jun 2016; Michael Palimaka <kensington@gentoo.org>
+  plasma-workspace-5.6.4.ebuild:
+  remove erroneous extra argument
+
+  Package-Manager: portage-2.3.0_rc1
+
+*plasma-workspace-5.6.5.1 (17 Jun 2016)
+
+  17 Jun 2016; Michael Palimaka <kensington@gentoo.org>
+  +files/plasma-workspace-5.6.5-drop-kscreen-dep.patch,
+  +plasma-workspace-5.6.5.1.ebuild:
+  kde-plasma: version bump 5.6.5
+
+  Package-Manager: portage-2.3.0_rc1
+
+  21 Jun 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.6.4.ebuild:
+  kde-plasma: Remove KDE Plasma 5.6.4
+
+  Package-Manager: portage-2.3.0_rc1
+
+*plasma-workspace-5.6.5.1-r1 (26 Jun 2016)
+
+  26 Jun 2016; Michael Palimaka <kensington@gentoo.org>
+  +files/plasma-workspace-5.6.5.1-struts.patch,
+  +plasma-workspace-5.6.5.1-r1.ebuild:
+  backport patch from upstream to fix panel geometry
+
+  This resolves a regression introduced by plasma-workspace-5.6.5-drop-
+  kscreen-dep.patch.
+
+  Package-Manager: portage-2.3.0
+
+*plasma-workspace-5.6.5.1-r2 (26 Jun 2016)
+
+  26 Jun 2016; Michael Palimaka <kensington@gentoo.org>
+  +files/plasma-workspace-5.6.5.1-legacy-session-mgmt.patch,
+  +plasma-workspace-5.6.5.1-r2.ebuild:
+  Add back legacy (gtk2) session mgmt
+
+  Upstream dropped it in 5.6 but later found out it was still in use by
+  Mozilla applications et al., thus reverted in Plasma/5.6 branch but
+  only after 5.6.5.1 release.
+
+  See also: https://bugs.kde.org/show_bug.cgi?id=362671
+
+  Package-Manager: portage-2.2.28
+
+*plasma-workspace-5.7.0 (05 Jul 2016)
+
+  05 Jul 2016; Johannes Huber <johu@gentoo.org> files/10-agent-shutdown.sh,
+  files/10-agent-startup.sh, +plasma-workspace-5.7.0.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.7.0
+
+  Package-Manager: portage-2.3.0
+
+*plasma-workspace-5.7.1 (13 Jul 2016)
+
+  13 Jul 2016; Johannes Huber <johu@gentoo.org>
+  +plasma-workspace-5.7.1.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.7.1
+
+  Package-Manager: portage-2.3.0
+
+  13 Jul 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.7.0.ebuild:
+  kde-plasma: Remove KDE Plasma 5.7.0
+
+  Package-Manager: portage-2.3.0
+
+*plasma-workspace-5.7.2 (19 Jul 2016)
+
+  19 Jul 2016; Johannes Huber <johu@gentoo.org>
+  +plasma-workspace-5.7.2.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.7.2
+
+  Package-Manager: portage-2.3.0
+
+  19 Jul 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.7.1.ebuild:
+  kde-plasma: Remove KDE Plasma 5.7.1
+
+  Package-Manager: portage-2.3.0
+
+  25 Jul 2016; Michael Palimaka <kensington@gentoo.org>
+  plasma-workspace-5.6.5.1-r2.ebuild:
+  kde-plasma: stabilise 5.6.5 for amd64/x86
+
+  Gentoo-bug: 586166
+
+  Package-Manager: portage-2.3.0
+
+  25 Jul 2016; Johannes Huber <johu@gentoo.org>
+  -files/plasma-workspace-tests-optional.patch,
+  -plasma-workspace-5.5.5-r2.ebuild:
+  kde-plasma: Remove KDE Plasma 5.5.5
+
+  Package-Manager: portage-2.3.0
+
+  25 Jul 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.6.5.1.ebuild, -plasma-workspace-5.6.5.1-r1.ebuild:
+  Remove 5.6.5.1 (r0,r1)
+
+  Package-Manager: portage-2.3.0
+
+*plasma-workspace-5.7.3 (02 Aug 2016)
+
+  02 Aug 2016; Johannes Huber <johu@gentoo.org>
+  +plasma-workspace-5.7.3.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.7.3
+
+  Package-Manager: portage-2.3.0
+
+  02 Aug 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.7.2.ebuild:
+  kde-plasma: Remve KDE Plasma 5.7.2
+
+  Package-Manager: portage-2.3.0
+
+  03 Aug 2016; Michael Palimaka <kensington@gentoo.org>
+  plasma-workspace-5.6.5.1-r2.ebuild, plasma-workspace-5.7.3.ebuild:
+  add dependency on kde-plasma/plasma-integration
+
+  Gentoo-bug: 590010
+
+  Package-Manager: portage-2.3.0
+
+*plasma-workspace-5.7.4 (27 Aug 2016)
+
+  27 Aug 2016; Johannes Huber <johu@gentoo.org>
+  +plasma-workspace-5.7.4.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.7.4
+
+  Package-Manager: portage-2.3.0
+
+  27 Aug 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.7.3.ebuild:
+  kde-plasma: Remvoe KDE Plasma 5.7.3
+
+  Package-Manager: portage-2.3.0
+
+*plasma-workspace-5.7.5 (14 Sep 2016)
+
+  14 Sep 2016; Michael Palimaka <kensington@gentoo.org>
+  +files/plasma-workspace-5.7.5-klipper-autostart.patch,
+  +plasma-workspace-5.7.5.ebuild:
+  kde-plasma: version bump 5.7.5
+
+  Package-Manager: portage-2.3.0
+
+  25 Sep 2016; Michael Palimaka <kensington@gentoo.org>
+  -plasma-workspace-5.7.4.ebuild:
+  kde-plasma: remove 5.7.4
+
+  Package-Manager: portage-2.3.1
+
+  28 Sep 2016; Michael Palimaka <kensington@gentoo.org>
+  +files/plasma-workspace-5.6.5.1-unused-dep.patch,
+  +files/plasma-workspace-5.7.3-unused-dep.patch,
+  plasma-workspace-5.6.5.1-r2.ebuild, plasma-workspace-5.7.5.ebuild:
+  Drop unused libXcomposite DEPEND
+
+  Reported-by: awilfox (irc)
+
+  Package-Manager: portage-2.2.28
+
+*plasma-workspace-5.8.0 (05 Oct 2016)
+
+  05 Oct 2016; Michael Palimaka <kensington@gentoo.org>
+  +plasma-workspace-5.8.0.ebuild:
+  kde-plasma: version bump 5.8.0
+
+  Package-Manager: portage-2.3.1
+
+  07 Oct 2016; Michael Palimaka <kensington@gentoo.org>
+  plasma-workspace-5.7.5.ebuild:
+  kde-plasma: stabilise 5.7.5 for amd64/x86
+
+  Gentoo-bug: 596284
+
+  Package-Manager: portage-2.3.1
+
+*plasma-workspace-5.8.1 (12 Oct 2016)
+
+  12 Oct 2016; Michael Palimaka <kensington@gentoo.org>
+  +files/plasma-workspace-5.7.90-baloo-optional.patch,
+  +plasma-workspace-5.8.1.ebuild:
+  kde-plasma: 5.8.1 version bump
+
+  Package-Manager: portage-2.3.0
+
+  14 Oct 2016; Johannes Huber <johu@gentoo.org>
+  -files/plasma-workspace-5.6.0-rpath.patch,
+  -files/plasma-workspace-5.6.5-drop-kscreen-dep.patch,
+  -files/plasma-workspace-5.6.5.1-legacy-session-mgmt.patch,
+  -files/plasma-workspace-5.6.5.1-struts.patch,
+  -files/plasma-workspace-5.6.5.1-unused-dep.patch,
+  -plasma-workspace-5.6.5.1-r2.ebuild:
+  kde-plasma: Remove KDE Plasma 5.6.5
+
+  Package-Manager: portage-2.3.2
+
+  14 Oct 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.8.0.ebuild:
+  kde-plasma: Remove KDE Plasma 5.8.0
+
+  Package-Manager: portage-2.3.2
+
+*plasma-workspace-5.8.2 (18 Oct 2016)
+
+  18 Oct 2016; Johannes Huber <johu@gentoo.org>
+  +plasma-workspace-5.8.2.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.8.2
+
+  Package-Manager: portage-2.3.2
+
+  18 Oct 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.8.1.ebuild:
+  kde-plasma: Remove KDE Plasma 5.8.1
+
+  Package-Manager: portage-2.3.2
+
+*plasma-workspace-5.8.3 (01 Nov 2016)
+
+  01 Nov 2016; Johannes Huber <johu@gentoo.org>
+  +plasma-workspace-5.8.3.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.8.3
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.8.2.ebuild:
+  kde-plasma: Remove KDE Plasma 5.8.2
+
+  Package-Manager: portage-2.3.2
+
+*plasma-workspace-5.8.3-r1 (12 Nov 2016)
+
+  12 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  +files/plasma-workspace-5.8.3-all-outputs-known.patch,
+  +files/plasma-workspace-5.8.3-dont-connect-twice.patch,
+  +files/plasma-workspace-5.8.3-screenpool-screenchange.patch,
+  +files/plasma-workspace-5.8.3-sync-app-w-applets-config.patch,
+  +files/plasma-workspace-5.8.3-systray-cpuload.patch,
+  +plasma-workspace-5.8.3-r1.ebuild:
+  Add several multiscreen fixes
+
+  Each of those closes several bugs.
+  Also adding a fix from master about too high cpuload with systray.
+  Dropped subslot operator from kde-frameworks/plasma.
+
+  Gentoo-bug: 598128, 569556
+
+  Package-Manager: portage-2.3.0
+
+*plasma-workspace-5.8.3-r2 (16 Nov 2016)
+
+  16 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  +files/plasma-workspace-5.8.3-krunner-crash.patch,
+  +plasma-workspace-5.8.3-r2.ebuild:
+  backport patch from upstream resolving krunner crash
+
+  Package-Manager: portage-2.3.2
+
+  17 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  plasma-workspace-5.8.3-r2.ebuild:
+  raise minimum frameworks version
+
+  Gentoo-bug: 600044
+
+  Package-Manager: portage-2.3.2
+
+*plasma-workspace-5.8.3-r3 (17 Nov 2016)
+
+  17 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  files/plasma-workspace-5.8.3-krunner-crash.patch,
+  +plasma-workspace-5.8.3-r3.ebuild:
+  Fix krunner crashfix
+
+  Upstream revert-fixed in 9e457e8c639f1db0b42a22036d61673aeac6a60f
+  and then fixed once more.
+
+  Package-Manager: portage-2.3.0
+
+  17 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  -plasma-workspace-5.8.3-r2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+

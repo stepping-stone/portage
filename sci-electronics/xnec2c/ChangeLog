@@ -89,3 +89,29 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 Apr 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  Fix metadata.xml file.
+
+  Package-Manager: portage-2.2.26
+
+  11 Jul 2016; Thomas Beierlein <tomjbe@gentoo.org> -xnec2c-2.8.ebuild,
+  -xnec2c-3.0.ebuild, -xnec2c-3.1.ebuild, -xnec2c-3.2.ebuild,
+  -xnec2c-3.3.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+*xnec2c-3.5 (11 Jul 2016)
+
+  11 Jul 2016; Thomas Beierlein <tomjbe@gentoo.org> +xnec2c-3.5.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> xnec2c-3.5.ebuild:
+  amd64 stable wrt bug #592634
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

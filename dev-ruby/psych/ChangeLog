@@ -97,3 +97,48 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Hans de Graaff <graaff@gentoo.org> -psych-2.0.15.ebuild,
+  -psych-2.0.16.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.26
+
+  06 Mar 2016; Hans de Graaff <graaff@gentoo.org> psych-2.0.17.ebuild:
+  add ruby23
+
+  Package-Manager: portage-2.2.26
+
+*psych-2.1.0 (26 Jun 2016)
+
+  26 Jun 2016; Hans de Graaff <graaff@gentoo.org> +psych-2.1.0.ebuild:
+  add 2.1.0
+
+  Package-Manager: portage-2.2.28
+
+*psych-2.1.1 (07 Sep 2016)
+
+  07 Sep 2016; Hans de Graaff <graaff@gentoo.org> +psych-2.1.1.ebuild:
+  add 2.1.1
+
+  Package-Manager: portage-2.2.28
+
+  08 Sep 2016; Hans de Graaff <graaff@gentoo.org> psych-2.1.1.ebuild:
+  avoid need for git dependency, fixing bug 593066
+
+  Package-Manager: portage-2.2.28
+
+*psych-2.1.1-r1 (08 Sep 2016)
+
+  08 Sep 2016; Hans de Graaff <graaff@gentoo.org> -psych-2.1.1.ebuild,
+  +psych-2.1.1-r1.ebuild:
+  don't install internal binstubs, fixing bug 593068
+
+  Package-Manager: portage-2.2.28
+
+*psych-2.2.0 (14 Nov 2016)
+
+  14 Nov 2016; Hans de Graaff <graaff@gentoo.org> +psych-2.2.0.ebuild:
+  add 2.2.0
+
+  Package-Manager: portage-2.3.0
+

@@ -63,3 +63,20 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  08 Mar 2016; Manuel Rüger <mrueg@gentoo.org> chronic-0.10.2.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.27
+
+  23 Apr 2016; Hans de Graaff <graaff@gentoo.org> chronic-0.10.2.ebuild:
+  add ruby23
+
+  Package-Manager: portage-2.2.26
+
+  07 Jun 2016; Tobias Klausmann <klausman@gentoo.org> chronic-0.10.2.ebuild:
+  0.10.2-r0: add ~alpha keyword
+
+  Gentoo-Bug: 542782
+
+  Package-Manager: portage-2.3.0_rc1
+

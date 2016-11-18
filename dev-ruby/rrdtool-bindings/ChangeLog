@@ -129,3 +129,37 @@
 
   Package-Manager: portage-2.2.27
 
+  17 Apr 2016; Manuel Rüger <mrueg@gentoo.org> rrdtool-bindings-1.4.8.ebuild,
+  rrdtool-bindings-1.4.8-r2.ebuild, rrdtool-bindings-1.4.9.ebuild,
+  rrdtool-bindings-1.5.3.ebuild, rrdtool-bindings-1.5.4.ebuild,
+  rrdtool-bindings-1.5.5.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+*rrdtool-bindings-1.6.0 (23 Apr 2016)
+
+  23 Apr 2016; Jeroen Roovers <jer@gentoo.org> +rrdtool-bindings-1.6.0.ebuild:
+  net-analyzer/rrdtool-bindings: Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  23 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  -rrdtool-bindings-1.4.8-r2.ebuild, -rrdtool-bindings-1.4.9.ebuild,
+  -rrdtool-bindings-1.5.3.ebuild, -rrdtool-bindings-1.5.4.ebuild:
+  net-analyzer/rrdtool-bindings: Old.
+
+  Package-Manager: portage-2.2.28
+
+  22 Oct 2016; Jeroen Roovers <jer@gentoo.org> rrdtool-bindings-1.6.0.ebuild:
+  Stable for HPPA (bug #597174).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+  22 Oct 2016; Tobias Klausmann <klausman@gentoo.org>
+  rrdtool-bindings-1.6.0.ebuild:
+  1.6.0-r0: stable on alpha
+
+  Gentoo-Bug: 597174
+

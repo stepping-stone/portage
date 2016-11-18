@@ -123,3 +123,15 @@
 
   Package-Manager: portage-2.2.27
 
+  15 Mar 2016; James Le Cuirot <chewi@gentoo.org> -files/icu4j-4.0-manifest,
+  -files/icu4j-4.4.2-add-jdk8-to-check.patch, -icu4j-4.0.1.1.ebuild,
+  -icu4j-4.4.2.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+*icu4j-56.1 (13 Nov 2016)
+
+  13 Nov 2016; Sebastian Pipping <sping@gentoo.org> +icu4j-56.1.ebuild:
+  56.1 (bug #599242)
+

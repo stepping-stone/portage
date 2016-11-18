@@ -68,3 +68,45 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  osprofiler-0.3.0.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*osprofiler-1.2.0 (25 Mar 2016)
+
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +osprofiler-1.2.0.ebuild:
+  bup for mitaka
+
+  Package-Manager: portage-2.2.26
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  osprofiler-1.2.0.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+  12 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -osprofiler-0.3.0.ebuild:
+  doing the test
+
+*osprofiler-1.4.0 (30 Sep 2016)
+
+  30 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +osprofiler-1.4.0.ebuild:
+  add initial support for newton (keystone)
+
+  dropped py3.3 and updated most (maybe all) to eapi6
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> osprofiler-1.2.0.ebuild,
+  osprofiler-1.4.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  osprofiler-1.4.0.ebuild:
+  1.4.0 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

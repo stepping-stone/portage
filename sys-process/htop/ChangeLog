@@ -107,3 +107,44 @@
   Certain htoprc files trigger a crash at startup. Upstream's instruction
   is to include this commit until a new version is released.
 
+  07 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> htop-2.0.0-r1.ebuild:
+  from version 2 onwards, FreeBSD is supported natively
+
+  07 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> -htop-2.0.0.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*htop-2.0.1 (08 Mar 2016)
+
+  08 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> +htop-2.0.1.ebuild:
+  Bump to version 2.0.1
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  25 Jun 2016; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
+  Added myself as maintainer.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*htop-2.0.2 (22 Jul 2016)
+
+  22 Jul 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +files/htop-2.0.2-tinfo.patch, +htop-2.0.2.ebuild:
+  Bump to version 2.0.2
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  22 Jul 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -files/htop-1.0.2-out-of-src.patch, -files/htop-1.0.2-process.patch,
+  -files/htop-1.0.2-tinfo.patch, -files/htop-2.0.0-commlen.patch,
+  -htop-2.0.0-r1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

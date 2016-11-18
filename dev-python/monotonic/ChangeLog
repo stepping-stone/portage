@@ -105,3 +105,55 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> monotonic-0.5.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*monotonic-1.0 (25 Mar 2016)
+
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +monotonic-1.0.ebuild:
+  bup for mitaka
+
+  Package-Manager: portage-2.2.26
+
+  27 Mar 2016; Alex Brandt <alunduil@gentoo.org> monotonic-1.0.ebuild:
+  add version 1.0
+
+  Package-Manager: portage-2.2.28
+
+  27 Mar 2016; Michael Palimaka <kensington@gentoo.org> monotonic-1.0.ebuild:
+  fix depgraph
+
+  Package-Manager: portage-2.2.28
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org> monotonic-1.0.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+*monotonic-1.1 (18 Jun 2016)
+
+  18 Jun 2016; Alex Brandt <alunduil@gentoo.org> +monotonic-1.1.ebuild:
+  add version 1.1
+
+  Package-Manager: portage-2.3.0_rc1
+
+*monotonic-1.2 (13 Aug 2016)
+
+  13 Aug 2016; Alex Brandt <alunduil@gentoo.org> +monotonic-1.2.ebuild:
+  add version 1.2
+
+  Package-Manager: portage-2.3.0
+
+  13 Aug 2016; Alex Brandt <alunduil@gentoo.org> -monotonic-0.2.ebuild:
+  remove version 0.2
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> monotonic-0.3.ebuild,
+  monotonic-0.5.ebuild, monotonic-1.0.ebuild, monotonic-1.1.ebuild,
+  monotonic-1.2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

@@ -82,3 +82,43 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*roccat-tools-3.9.0 (24 Mar 2016)
+
+  24 Mar 2016; Ian Delaney <idella4@gentoo.org> +roccat-tools-3.9.0.ebuild:
+  vn. bump to 3.9.0; new devices support
+
+  Closes: https://github.com/gentoo/gentoo/pull/1116
+
+  24 Mar 2016; Ian Delaney <idella4@gentoo.org> -roccat-tools-3.4.0.ebuild,
+  -roccat-tools-3.5.0.ebuild, -roccat-tools-3.5.0-r1.ebuild,
+  -roccat-tools-3.6.1.ebuild:
+  retiring old version
+
+  Closes: https://github.com/gentoo/gentoo/pull/1116
+
+  24 Mar 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag descriptions from metadata.xml
+
+  Package-Manager: portage-2.2.28
+
+*roccat-tools-5.1.1 (03 Jun 2016)
+*roccat-tools-5.1.0 (03 Jun 2016)
+
+  03 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  +roccat-tools-5.1.0.ebuild, +roccat-tools-5.1.1.ebuild:
+  dev-libs/libgaminggear: Version bump.
+
+  This commit also bumps sys-apps/roccat-tools whilst at it and has been
+  squashed
+  into a single commit.
+
+  Package-Manager: portage-2.2.28
+  Gentoo-Bug: https://bugs.gentoo.org/579512
+  Closes: https://github.com/gentoo/gentoo/pull/1456
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  03 Jul 2016; Göktürk Yüksek <gokturk@gentoo.org> roccat-tools-3.9.0.ebuild:
+  bump ebuild copyright year
+
+  Package-Manager: portage-2.2.28
+

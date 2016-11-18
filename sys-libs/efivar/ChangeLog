@@ -132,3 +132,40 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  16 Apr 2016; Mike Gilbert <floppym@gentoo.org> efivar-0.23.ebuild,
+  +files/0.23-sysmacros.patch:
+  fix build with glibc-2.23
+
+  Bug: https://bugs.gentoo.org/580142
+
+  Package-Manager: portage-2.2.28_p64
+
+  26 Apr 2016; Mike Gilbert <floppym@gentoo.org> efivar-0.23.ebuild:
+  move tc-ld-disable-gold to src_configure
+
+  Package-Manager: portage-2.2.28_p79
+
+*efivar-27 (19 Aug 2016)
+
+  19 Aug 2016; Mike Gilbert <floppym@gentoo.org> +efivar-27.ebuild:
+  bump to 27
+
+  Package-Manager: portage-2.3.0_p16
+
+  19 Aug 2016; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  update upstream id
+
+  Package-Manager: portage-2.3.0_p16
+
+  20 Aug 2016; Mike Gilbert <floppym@gentoo.org> efivar-27.ebuild:
+  disable -Werror
+
+  Package-Manager: portage-2.3.0_p16
+
+*efivar-30 (01 Oct 2016)
+
+  01 Oct 2016; Mike Gilbert <floppym@gentoo.org> +efivar-30.ebuild:
+  bump to 30
+
+  Package-Manager: portage-2.3.1_p4_p627701
+

@@ -222,3 +222,77 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> libxml2-2.9.3.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org> libxml2-2.9.3.ebuild:
+  Stable for HPPA PPC64 (bug #566378).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  03 May 2016; Markus Meier <maekke@gentoo.org> libxml2-2.9.3.ebuild:
+  arm stable, bug #566378
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+*libxml2-2.9.4 (29 May 2016)
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org>
+  files/libxml2-2.7.1-catalog_path.patch, +libxml2-2.9.4.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  07 Jun 2016; Tobias Klausmann <klausman@gentoo.org> libxml2-2.9.4.ebuild:
+  2.9.4-r0: add alpha keyword
+
+  Gentoo-Bug: 584468
+
+  Package-Manager: portage-2.3.0_rc1
+
+  08 Jun 2016; Markus Meier <maekke@gentoo.org> libxml2-2.9.4.ebuild:
+  arm stable, bug #584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> libxml2-2.9.4.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> libxml2-2.9.4.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org> libxml2-2.9.4.ebuild:
+  ppc stable, bug 584468
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+
+  30 Jul 2016; Jeroen Roovers <jer@gentoo.org> libxml2-2.9.4.ebuild:
+  Stable for HPPA PPC64 (bug #584468).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  04 Sep 2016; Fabian Groffen <grobian@gentoo.org> libxml2-2.9.4.ebuild:
+  fix linking of python modules on Darwin
+
+  Package-Manager: portage-2.2.28
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> libxml2-2.9.2-r4.ebuild,
+  libxml2-2.9.3.ebuild, libxml2-2.9.4.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  10 Nov 2016; Mike Frysinger <vapier@gentoo.org> libxml2-2.9.4.ebuild:
+  mark 2.9.4 arm64/ia64/m68k/s390/sh/sparc stable #584468
+

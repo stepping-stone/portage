@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -20,12 +20,12 @@ RDEPEND="
 	media-libs/assimp
 	dev-games/ogre
 	virtual/opengl
-	dev-qt/qtgui:4
-	dev-qt/qtopengl:4
-	dev-qt/qtcore:4
-	dev-qt/qtsvg:4
+	dev-qt/qtwidgets:5
+	dev-qt/qtcore:5
+	dev-qt/qtopengl:5
 	dev-cpp/eigen:3
 	dev-cpp/yaml-cpp
+	dev-libs/urdfdom:=
 
 	dev-ros/angles
 	dev-ros/image_geometry
@@ -34,7 +34,7 @@ RDEPEND="
 	dev-ros/laser_geometry
 	dev-ros/message_filters
 	dev-ros/pluginlib
-	dev-ros/python_qt_binding[${PYTHON_USEDEP}]
+	>=dev-ros/python_qt_binding-0.3.0[${PYTHON_USEDEP}]
 	dev-ros/resource_retriever
 	dev-ros/rosbag[${PYTHON_USEDEP}]
 	dev-ros/rosconsole
@@ -59,3 +59,8 @@ DEPEND="${RDEPEND}
 		dev-ros/rostest[${PYTHON_USEDEP}]
 		dev-cpp/gtest
 	)"
+
+src_configure() {
+	local mycatkincmakeargs=( "-DUseQt5=ON" )
+	ros-catkin_src_configure
+}

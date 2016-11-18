@@ -118,3 +118,172 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*aiohttp-0.21.4 (27 Mar 2016)
+
+  27 Mar 2016; Alex Brandt <alunduil@gentoo.org> +aiohttp-0.21.4.ebuild:
+  add version 0.21.4
+
+  Package-Manager: portage-2.2.28
+
+  27 Mar 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-0.17.4.ebuild:
+  remove version 0.17.4
+
+  Package-Manager: portage-2.2.28
+
+  27 Mar 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-0.18.4.ebuild:
+  remove version 0.18.4
+
+  Package-Manager: portage-2.2.28
+
+*aiohttp-0.21.5 (28 Mar 2016)
+
+  28 Mar 2016; Ian Delaney <idella4@gentoo.org> +aiohttp-0.21.5.ebuild:
+  version bump to 0.21.5
+
+  Package-Manager: portage-2.2.26
+  Closes: https://github.com/gentoo/gentoo/pull/1152
+
+  28 Mar 2016; Ian Delaney <idella4@gentoo.org> aiohttp-0.21.5.ebuild:
+  add Python 3.5 support
+
+  Package-Manager: portage-2.2.26
+  Closes: https://github.com/gentoo/gentoo/pull/1152
+
+*aiohttp-0.21.6 (22 May 2016)
+
+  22 May 2016; Alex Brandt <alunduil@gentoo.org> +aiohttp-0.21.6.ebuild:
+  add version 0.21.6
+
+  Package-Manager: portage-2.3.0_rc1
+
+  22 May 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-0.19.0.ebuild:
+  remove version 0.19.0
+
+  Package-Manager: portage-2.3.0_rc1
+
+  30 May 2016; Aaron Bauman <bman@gentoo.org> aiohttp-0.21.6.ebuild:
+  add ~x86 keyword
+
+*aiohttp-0.22.2 (30 Jul 2016)
+
+  30 Jul 2016; Alex Brandt <alunduil@gentoo.org> +aiohttp-0.22.2.ebuild:
+  add version 0.22.2
+
+  Package-Manager: portage-2.3.0
+
+  30 Jul 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-0.20.2.ebuild:
+  remove version 0.20.2
+
+  Package-Manager: portage-2.3.0
+
+  30 Jul 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-0.21.4.ebuild:
+  remove version 0.21.4
+
+  Package-Manager: portage-2.3.0
+
+*aiohttp-0.22.4 (06 Aug 2016)
+
+  06 Aug 2016; Alex Brandt <alunduil@gentoo.org> +aiohttp-0.22.4.ebuild:
+  add version 0.22.4
+
+  Package-Manager: portage-2.3.0
+
+  06 Aug 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-0.21.6.ebuild:
+  remove version 0.21.6
+
+  Package-Manager: portage-2.3.0
+
+*aiohttp-0.22.5 (13 Aug 2016)
+
+  13 Aug 2016; Alex Brandt <alunduil@gentoo.org> +aiohttp-0.22.5.ebuild:
+  add version 0.22.5
+
+  Package-Manager: portage-2.3.0
+
+*aiohttp-1.0.1 (19 Sep 2016)
+
+  19 Sep 2016; Zac Medico <zmedico@gentoo.org> +aiohttp-1.0.1.ebuild:
+  version bump to 1.0.1 (bug 594166)
+
+  Package-Manager: portage-2.3.0
+
+*aiohttp-1.0.2 (26 Sep 2016)
+
+  26 Sep 2016; Zac Medico <zmedico@gentoo.org> +aiohttp-1.0.2.ebuild:
+  version bump to 1.0.2
+
+  Package-Manager: portage-2.3.1
+
+*aiohttp-1.0.3 (09 Oct 2016)
+
+  09 Oct 2016; Zac Medico <zmedico@gentoo.org> +aiohttp-1.0.3.ebuild:
+  version bump to 1.0.3
+
+  Package-Manager: portage-2.3.1
+
+*aiohttp-1.0.4 (16 Oct 2016)
+
+  16 Oct 2016; Alex Brandt <alunduil@gentoo.org> +aiohttp-1.0.4.ebuild:
+  add version 1.0.4
+
+  Package-Manager: portage-2.3.2
+
+  16 Oct 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-0.22.2.ebuild:
+  remove version 0.22.2
+
+  Package-Manager: portage-2.3.2
+
+  16 Oct 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-0.22.4.ebuild:
+  remove version 0.22.4
+
+  Package-Manager: portage-2.3.2
+
+  16 Oct 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-0.22.5.ebuild:
+  remove version 0.22.5
+
+  Package-Manager: portage-2.3.2
+
+*aiohttp-1.0.5 (23 Oct 2016)
+
+  23 Oct 2016; Alex Brandt <alunduil@gentoo.org> +aiohttp-1.0.5.ebuild:
+  add version 1.0.5
+
+  Package-Manager: portage-2.3.2
+
+  23 Oct 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-1.0.1.ebuild:
+  remove version 1.0.1
+
+  Package-Manager: portage-2.3.2
+
+  23 Oct 2016; Alex Brandt <alunduil@gentoo.org> -aiohttp-1.0.2.ebuild:
+  remove version 1.0.2
+
+  Package-Manager: portage-2.3.2
+
+*aiohttp-1.1.1 (07 Nov 2016)
+
+  07 Nov 2016; Zac Medico <zmedico@gentoo.org> +aiohttp-1.1.1.ebuild:
+  version bump to 1.1.1
+
+  Package-Manager: portage-2.3.2
+
+*aiohttp-1.1.2 (08 Nov 2016)
+
+  08 Nov 2016; Zac Medico <zmedico@gentoo.org> +aiohttp-1.1.2.ebuild:
+  version bump to 1.1.2
+
+  Package-Manager: portage-2.3.2
+
+  10 Nov 2016; Zac Medico <zmedico@gentoo.org> aiohttp-1.1.1.ebuild,
+  aiohttp-1.1.2.ebuild:
+  move dev-python/yarl to CDEPEND
+
+  Package-Manager: portage-2.3.2
+
+*aiohttp-1.1.5 (17 Nov 2016)
+
+  17 Nov 2016; Zac Medico <zmedico@gentoo.org> +aiohttp-1.1.5.ebuild:
+  version bump to 1.1.5
+
+  Package-Manager: portage-2.3.2
+

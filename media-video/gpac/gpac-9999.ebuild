@@ -20,7 +20,8 @@ HOMEPAGE="http://gpac.wp.mines-telecom.fr/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="a52 aac alsa debug dvb ffmpeg ipv6 jack jpeg jpeg2k mad opengl oss png pulseaudio sdl ssl static-libs theora truetype vorbis xml xvid"
+IUSE="a52 aac alsa debug dvb ffmpeg ipv6 jack jpeg jpeg2k mad opengl oss png
+	pulseaudio sdl ssl static-libs theora truetype vorbis xml xvid X"
 
 RDEPEND="
 	a52? ( media-libs/a52dec )
@@ -43,10 +44,12 @@ RDEPEND="
 	jpeg2k? ( media-libs/openjpeg:0 )
 	ssl? ( dev-libs/openssl )
 	pulseaudio? ( media-sound/pulseaudio )
-	x11-libs/libXt
-	x11-libs/libX11
-	x11-libs/libXv
-	x11-libs/libXext"
+	X? (
+		x11-libs/libXt
+		x11-libs/libX11
+		x11-libs/libXv
+		x11-libs/libXext
+	)"
 # disabled upstream, see applications/Makefile
 # wxwidgets? ( =x11-libs/wxGTK-2.8* )
 
@@ -87,6 +90,7 @@ src_configure() {
 		$(use_enable sdl) \
 		$(use_enable ssl) \
 		$(use_enable static-libs static-lib) \
+		$(use_enable X x11) $(use_enable X x11-shm) $(use_enable X x11-xv) \
 		--disable-wx \
 		$(my_use a52) \
 		$(my_use aac faad) \

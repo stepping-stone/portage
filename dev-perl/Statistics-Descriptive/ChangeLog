@@ -63,3 +63,42 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Statistics-Descriptive-3.61.200 (11 Apr 2016)
+
+  11 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +Statistics-Descriptive-3.61.200.ebuild:
+  Bump to version 3.61.200
+
+  - EAPI6
+  - Add USE="examples"
+  - Pruned useless tests
+
+  Upstream:
+  - add median_absolute_derivation method
+  - skewness calculations sped up
+  - Many Packaging and documentation fixes.
+
+  Package-Manager: portage-2.2.28
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org>
+  Statistics-Descriptive-3.61.200.ebuild:
+  amd64 stable wrt bug #582120
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org>
+  Statistics-Descriptive-3.61.200.ebuild:
+  x86 stable wrt bug #582120
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Statistics-Descriptive-3.60.300-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.0_rc1
+

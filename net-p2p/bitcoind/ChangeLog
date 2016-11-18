@@ -133,3 +133,39 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*bitcoind-0.12.0 (20 Mar 2016)
+
+  20 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.12.0.ebuild, bitcoind-9999.ebuild, files/9999-syslibs.patch,
+  metadata.xml:
+  net-p2p/bitcoin*: bump all pkgs to 0.12.0 and update 9999
+
+  24 Mar 2016; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.12.0.ebuild,
+  bitcoind-9999.ebuild:
+  0.12.0+ have removed bitrpc example
+
+  Signed-off-by: Anthony G. Basile <blueness@gentoo.org>
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/bitcoin.initd-r1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*bitcoind-0.12.1 (01 Jul 2016)
+
+  01 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.12.1.ebuild:
+  0.12.1
+
+  Signed-off-by: Anthony G. Basile <blueness@gentoo.org>
+
+*bitcoind-0.13.0 (25 Aug 2016)
+
+  25 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.13.0.ebuild:
+  Bitcoin 0.13.0
+
+*bitcoind-0.13.1 (09 Nov 2016)
+
+  09 Nov 2016; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.13.1.ebuild:
+  Bitcoin 0.13.1
+

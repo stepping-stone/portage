@@ -66,3 +66,32 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  21 Mar 2016; Michael Weber <xmw@gentoo.org> -fatrace-0.4.ebuild,
+  -fatrace-0.5.ebuild:
+  drop old.
+
+  Package-Manager: portage-2.2.28
+
+*fatrace-0.11 (21 Mar 2016)
+
+  21 Mar 2016; Michael Weber <xmw@gentoo.org> +fatrace-0.11.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  21 Mar 2016; Michael Weber <xmw@gentoo.org> fatrace-0.11.ebuild:
+  Version bump, fix python pkg_setup (bug 482848, thanks vapier & mgorny).
+
+  Package-Manager: portage-2.2.28
+
+  20 Apr 2016; Mike Frysinger <vapier@gentoo.org> -fatrace-0.9.ebuild,
+  -fatrace-0.10.ebuild:
+  drop old <0.11 versions
+
+  20 Apr 2016; Mike Frysinger <vapier@gentoo.org> fatrace-0.11.ebuild,
+  +files/fatrace-0.11-sysmacros.patch:
+  fix build w/newer glibc #580082
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> fatrace-0.11.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

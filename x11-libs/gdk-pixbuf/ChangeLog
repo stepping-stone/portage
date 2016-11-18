@@ -309,3 +309,90 @@
 
   Package-Manager: portage-2.2.26
 
+  28 Feb 2016; Pacho Ramos <pacho@gentoo.org> -gdk-pixbuf-2.32.3-r1.ebuild:
+  Revert previous bump as this package was not affected by that bug
+
+  Package-Manager: portage-2.2.27
+
+  28 Feb 2016; Pacho Ramos <pacho@gentoo.org> -gdk-pixbuf-2.32.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.27
+
+  02 Apr 2016; Pacho Ramos <pacho@gentoo.org> gdk-pixbuf-2.32.3.ebuild:
+  x86 stable, bug 566378
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org> gdk-pixbuf-2.32.3.ebuild:
+  Stable for HPPA PPC64 (bug #566378).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  03 May 2016; Markus Meier <maekke@gentoo.org> gdk-pixbuf-2.32.3.ebuild:
+  arm stable, bug #566378
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> gdk-pixbuf-2.32.3.ebuild:
+  alpha stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="alpha"
+
+*gdk-pixbuf-2.34.0 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +gdk-pixbuf-2.34.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org> gdk-pixbuf-2.32.3.ebuild:
+  ppc stable, bug 584468
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+
+  15 Sep 2016; Michał Górny <mgorny@gentoo.org> gdk-pixbuf-2.32.1.ebuild,
+  gdk-pixbuf-2.32.3.ebuild, gdk-pixbuf-2.34.0.ebuild:
+  Add $(get_exeext) to MULTILIB_CHOST_TOOLS
+
+  Bug: https://bugs.gentoo.org/588330
+  Package-Manager: portage-2.2.28
+  Pull-Request: https://github.com/gentoo/gentoo/pull/2278
+
+  23 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  gdk-pixbuf-2.34.0.ebuild:
+  2.34.0-r0: add alpha keyword
+
+  Gentoo-Bug: 587010
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gdk-pixbuf-2.34.0.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gdk-pixbuf-2.34.0.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  03 Oct 2016; Jeroen Roovers <jer@gentoo.org> gdk-pixbuf-2.34.0.ebuild:
+  Stable for HPPA (bug #587010).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*gdk-pixbuf-2.36.0 (01 Nov 2016)
+
+  01 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gdk-pixbuf-2.36.0.ebuild:
+  version bump 2.34.0 → 2.36.0
+
+  Package-Manager: portage-2.3.2
+

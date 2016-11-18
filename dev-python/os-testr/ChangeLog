@@ -50,3 +50,48 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+*os-testr-0.6.0 (25 Mar 2016)
+
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +os-testr-0.6.0.ebuild:
+  bup mitaka
+
+  Package-Manager: portage-2.2.26
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  os-testr-0.6.0.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+  12 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -os-testr-0.3.0.ebuild:
+  doing the test
+
+*os-testr-0.7.0 (01 Oct 2016)
+
+  01 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +os-testr-0.7.0.ebuild:
+  openstack p2, newton is done, will add heat later
+
+*os-testr-0.8.0 (19 Oct 2016)
+
+  19 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -os-testr-0.7.0.ebuild, +os-testr-0.8.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+
+  19 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  os-testr-0.8.0.ebuild:
+  typo...
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> os-testr-0.6.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  os-testr-0.8.0.ebuild:
+  0.8.0 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pokerth/${MY_P}.tar.bz2"
 
 LICENSE="AGPL-3 GPL-1 GPL-2 GPL-3 BitstreamVera public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dedicated"
 
 RDEPEND="dev-db/sqlite:3
@@ -44,7 +44,8 @@ src_prepare() {
 
 	sed -i -e '/no_dead_strip_inits_and_terms/d' *pro || die
 
-	epatch "${FILESDIR}"/${P}-qt5.patch
+	epatch "${FILESDIR}"/${P}-qt5.patch \
+		"${FILESDIR}/${P}-boost-1.60.patch"
 }
 
 src_configure() {

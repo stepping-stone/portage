@@ -82,3 +82,28 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  05 Mar 2016; Pacho Ramos <pacho@gentoo.org> -moserial-3.0.9.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.27
+
+  05 Mar 2016; Pacho Ramos <pacho@gentoo.org> moserial-3.0.10.ebuild:
+  itstool needed as DEPEND (#575766 by Maciej Szmigiero)
+
+  Package-Manager: portage-2.2.27
+
+  05 Mar 2016; Pacho Ramos <pacho@gentoo.org> moserial-3.0.10.ebuild:
+  Fix header
+
+  Package-Manager: portage-2.2.27
+
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> moserial-3.0.10.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  04 Nov 2016; Pacho Ramos <pacho@gentoo.org> moserial-3.0.10.ebuild:
+  scrollkeeper running is disabled, then, we don't need it
+
+  Package-Manager: portage-2.3.2
+

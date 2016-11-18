@@ -95,3 +95,69 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*aspell-0.60.6.1-r3 (06 May 2016)
+
+  06 May 2016; Ulrich Müller <ulm@gentoo.org> -aspell-0.60.6.1-r2.ebuild,
+  +aspell-0.60.6.1-r3.ebuild:
+  Remove exception for German.
+
+  Use linguas_de_1901 for the traditional German spelling variant instead.
+
+  Package-Manager: portage-2.2.28
+
+  24 Jun 2016; Ulrich Müller <ulm@gentoo.org> aspell-0.60.6.1-r1.ebuild,
+  aspell-0.60.6.1-r3.ebuild:
+  Migrate from LINGUAS to L10N.
+
+  Bug: 586780
+
+  Package-Manager: portage-2.3.0_rc1
+
+*aspell-0.60.6.1-r4 (09 Sep 2016)
+
+  09 Sep 2016; David Seifert <soap@gentoo.org> +aspell-0.60.6.1-r4.ebuild,
+  files/aspell-0.60.5-solaris.patch, files/aspell-0.60.6-darwin-bundles.patch,
+  files/aspell-0.60.6.1-clang.patch, +files/aspell-0.60.6.1-unicode.patch:
+  Fix building with Unicode support
+
+  * EAPI=6
+  * Use dep on sys-libs/ncurses using newly introduced IUSE="unicode"
+  * Made PATCHES -p1 compliant
+  * Fixed unicode handling by pulling in ncurses/ncursesw
+    using PKG_CHECK_MODULES instead of automagic discovery
+    in configure.ac
+  * Add missing '|| die' statements
+
+  Closes: https://github.com/gentoo/gentoo/pull/2269
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  26 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  aspell-0.60.6.1-r3.ebuild:
+  0.60.6.1-r3: add alpha keyword
+
+  Gentoo-Bug: 591812
+
+  01 Oct 2016; Jeroen Roovers <jer@gentoo.org> aspell-0.60.6.1-r3.ebuild:
+  Stable for HPPA PPC64 (bug #591812).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  05 Oct 2016; Markus Meier <maekke@gentoo.org> aspell-0.60.6.1-r3.ebuild:
+  arm stable, bug #591812
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --include-arches="arm"
+
+  25 Oct 2016; Kristian Fiskerstrand <k_f@gentoo.org> metadata.xml:
+  Drop inactive proxied maintainer
+
+  Package-Manager: portage-2.3.2
+
+  29 Oct 2016; David Seifert <soap@gentoo.org> aspell-0.60.6.1-r1.ebuild,
+  aspell-0.60.6.1-r3.ebuild, aspell-0.60.6.1-r4.ebuild:
+  Fix USE flag generation with 'de@1901' locale
+
+  Package-Manager: portage-2.3.2
+

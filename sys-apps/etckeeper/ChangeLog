@@ -75,3 +75,42 @@
 
   Package-Manager: portage-2.2.27
 
+  06 Mar 2016; Agostino Sarubbo <ago@gentoo.org> etckeeper-1.18.1.ebuild:
+  amd64 stable wrt bug #574842
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> etckeeper-1.18.1.ebuild:
+  x86 stable wrt bug #574842
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -etckeeper-1.11-r1.ebuild,
+  -files/etckeeper-1.11-gentoo.patch:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+*etckeeper-1.18.4 (16 Jul 2016)
+
+  16 Jul 2016; Manuel Rüger <mrueg@gentoo.org> +etckeeper-1.18.4.ebuild:
+  Version bump to 1.18.4
+
+  Package-Manager: portage-2.3.0
+
+*etckeeper-1.18.5 (06 Aug 2016)
+
+  06 Aug 2016; Manuel Rüger <mrueg@gentoo.org> +etckeeper-1.18.5.ebuild:
+  Version bump to 1.18.5
+
+  Package-Manager: portage-2.3.0
+
+  06 Aug 2016; Manuel Rüger <mrueg@gentoo.org> -etckeeper-1.18.3.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.0
+

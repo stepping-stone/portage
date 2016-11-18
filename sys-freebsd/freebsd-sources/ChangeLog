@@ -151,3 +151,112 @@
   -freebsd-sources-10.2-r2.ebuild, +freebsd-sources-10.2-r3.ebuild:
   Fix FreeBSD-SA-16:10.linux
 
+*freebsd-sources-10.2-r4 (18 Mar 2016)
+
+  18 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  -freebsd-sources-10.2-r3.ebuild, +freebsd-sources-10.2-r4.ebuild:
+  Fix multiple Security Advisory and Errata.
+
+  Security Advisory
+  * FreeBSD-SA-16:15.sysarch
+
+  Eratta
+  * FreeBSD-EN-16:04.hyperv
+  * FreeBSD-EN-16:05.hv_netvsc
+
+  Closes: https://github.com/gentoo/gentoo/pull/1080
+
+*freebsd-sources-10.3 (04 Apr 2016)
+
+  04 Apr 2016; Yuta Satoh <nigoro.dev@gmail.com> +freebsd-sources-10.3.ebuild:
+  sys-freebsd: Bump to 10.3.
+
+*freebsd-sources-10.3-r1 (05 May 2016)
+*freebsd-sources-10.2-r5 (05 May 2016)
+
+  05 May 2016; Yuta Satoh <nigoro.dev@gmail.com>
+  -freebsd-sources-10.2-r4.ebuild, +freebsd-sources-10.2-r5.ebuild,
+  -freebsd-sources-10.3.ebuild, +freebsd-sources-10.3-r1.ebuild:
+  Fix errata, EN-16:07.ipi and EN-16:08.zfs
+
+*freebsd-sources-10.3-r2 (18 May 2016)
+*freebsd-sources-10.2-r6 (18 May 2016)
+
+  18 May 2016; Yuta Satoh <nigoro.dev@gmail.com>
+  -freebsd-sources-10.2-r5.ebuild, +freebsd-sources-10.2-r6.ebuild,
+  -freebsd-sources-10.3-r1.ebuild, +freebsd-sources-10.3-r2.ebuild:
+  Fix multiple Security Advisory.
+
+  * FreeBSD-SA-16:18.atkbd
+  * FreeBSD-SA-16:19.sendmsg
+
+*freebsd-sources-10.3-r3 (02 Jun 2016)
+*freebsd-sources-10.2-r7 (02 Jun 2016)
+
+  02 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  -freebsd-sources-10.2-r6.ebuild, +freebsd-sources-10.2-r7.ebuild,
+  -freebsd-sources-10.3-r2.ebuild, +freebsd-sources-10.3-r3.ebuild:
+  Fix multiple Security Advisory.
+
+  * FreeBSD-SA-16:20.linux
+  * FreeBSD-SA-16:21.43bsd
+  Closes: https://github.com/gentoo/gentoo/pull/1587
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  16 Jun 2016; Yuta Satoh <nigoro.dev@gmail.com>
+  +files/freebsd-ubin-10.3-bmake-workaround.patch,
+  freebsd-sources-10.3-r3.ebuild:
+  Fix the issue that can not build bmake.
+
+  23 Jun 2016; Mike Frysinger <vapier@gentoo.org>
+  freebsd-sources-8.2-r2.ebuild:
+  sourceware: convert to https:// URIs
+
+  11 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -freebsd-sources-10.2-r7.ebuild:
+  sys-freebsd: Remove 10.2.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2059
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*freebsd-sources-10.3-r4 (15 Aug 2016)
+
+  15 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -freebsd-sources-10.3-r3.ebuild, +freebsd-sources-10.3-r4.ebuild:
+  Fix multiple Errata.
+
+  * FreeBSD-EN-16:11.vmbus
+  * FreeBSD-EN-16:12.hv_storvsc
+  * FreeBSD-EN-16:13.vmbus
+  * FreeBSD-EN-16:14.hv_storvsc
+  * FreeBSD-EN-16:15.vmbus
+  * FreeBSD-EN-16:16.hv_storvsc
+
+  Closes: https://github.com/gentoo/gentoo/pull/2084
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*freebsd-sources-10.3-r5 (07 Sep 2016)
+
+  07 Sep 2016; Patrice Clement <monsieurp@gentoo.org>
+  -freebsd-sources-10.3-r4.ebuild, +freebsd-sources-10.3-r5.ebuild:
+  Drop freebsd-sources-7.1-types.h-fix.patch.
+
+  Gentoo-Bug: https://bugs.gentoo.org/592776
+  Closes: https://github.com/gentoo/gentoo/pull/2270
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*freebsd-sources-11.0 (11 Oct 2016)
+
+  11 Oct 2016; Alexis Ballier <aballier@gentoo.org>
+  +files/freebsd-sources-11.0-gentoo-gcc.patch,
+  +files/freebsd-sources-11.0-gentoo.patch, +freebsd-sources-11.0.ebuild:
+  sys-freebsd: bump to 11.0
+
+  12 Oct 2016; Alexis Ballier <aballier@gentoo.org>
+  freebsd-sources-11.0.ebuild:
+  replace from zfs to dtrace
+

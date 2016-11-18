@@ -13,12 +13,13 @@ HOMEPAGE="http://www.karneim.com/jrexx/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip -> ${P}.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 RDEPEND="
 	>=virtual/jre-1.6"
+
 DEPEND="
-	app-arch/unzip
-	>=virtual/jdk-1.6"
+	>=virtual/jdk-1.6
+	source? ( app-arch/zip )"
 
 JAVA_ENCODING="ISO-8859-1"

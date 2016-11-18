@@ -119,3 +119,26 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Mar 2016; Mike Frysinger <vapier@gentoo.org>
+  qemu-guest-agent-2.5.0.ebuild:
+  mark 2.5.0 stable to match qemu
+
+  28 Mar 2016; Mike Frysinger <vapier@gentoo.org>
+  -qemu-guest-agent-2.3.0.ebuild, -qemu-guest-agent-2.3.1.ebuild,
+  -qemu-guest-agent-2.4.0.ebuild:
+  drop old <2.5.0 versions
+
+  23 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/qemu-guest-agent-2.5.0-sysmacros.patch,
+  qemu-guest-agent-2.5.0.ebuild:
+  fix build w/newer glibc #580924
+
+*qemu-guest-agent-2.6.0 (17 May 2016)
+
+  17 May 2016; Mike Frysinger <vapier@gentoo.org>
+  +qemu-guest-agent-2.6.0.ebuild:
+  version bump to 2.6.0 #583212
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/qemu-ga.init-r1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+

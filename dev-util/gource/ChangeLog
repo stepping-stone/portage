@@ -83,3 +83,50 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  26 Apr 2016; Sam Jorna <wraeth@gentoo.org> metadata.xml:
+  remove proxy maintainer
+
+  Proxy maintainer has requested to be removed per email to the project.
+  Removing both maintainer and project from metadata, and have notified
+  flameeyes by email.
+
+  Package-Manager: portage-2.2.28
+
+  07 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #85210
+
+  Package-Manager: portage-2.3.0
+
+  07 Aug 2016; Michael Palimaka <kensington@gentoo.org> -gource-0.39.ebuild,
+  -gource-0.40.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0
+
+*gource-0.44 (07 Aug 2016)
+
+  07 Aug 2016; Michael Palimaka <kensington@gentoo.org> +gource-0.44.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0
+
+  07 Aug 2016; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  metadata whitespace
+
+  Package-Manager: portage-2.3.0
+
+  07 Aug 2016; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  add myself as maintainer
+
+  Package-Manager: portage-2.3.0
+
+  15 Sep 2016; Michael Palimaka <kensington@gentoo.org> gource-0.44.ebuild:
+  amd64/x86 stable
+
+  Package-Manager: portage-2.3.0
+
+  15 Sep 2016; Michael Palimaka <kensington@gentoo.org> -gource-0.43.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0
+

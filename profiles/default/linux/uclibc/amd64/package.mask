@@ -148,11 +148,8 @@ sci-electronics/eagle
 sci-chemistry/cara-bin
 sci-chemistry/cyana
 sci-chemistry/icm
-sci-chemistry/icm-browser
 sci-chemistry/mars
 sci-libs/ipp
-sys-apps/memtest86
-sys-apps/memtest86+
 sys-libs/lib-compat-loki
 www-plugins/nspluginwrapper
 

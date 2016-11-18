@@ -69,3 +69,27 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org> -tar-0.3.1.0.ebuild,
+  -tar-0.4.1.0.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.28
+
+  15 May 2016; Sergei Trofimovich <slyfox@gentoo.org> tar-0.4.2.1.ebuild:
+  amd64/x86 stable, bug #563090
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/tar-0.3.1.0-ghc-7.4.patch:
+  remove unused patch
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*tar-0.5.0.3 (11 Sep 2016)
+
+  11 Sep 2016; Sergei Trofimovich <slyfox@gentoo.org> +tar-0.5.0.3.ebuild:
+  bump up to 0.5.0.3
+
+  Package-Manager: portage-2.3.0
+

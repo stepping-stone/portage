@@ -63,3 +63,24 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*wtf-peewee-0.2.4 (01 Mar 2016)
+
+  01 Mar 2016; Patrick Lauer <patrick@gentoo.org> +wtf-peewee-0.2.4.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+*wtf-peewee-0.2.5 (05 Mar 2016)
+
+  05 Mar 2016; Patrick Lauer <patrick@gentoo.org> +wtf-peewee-0.2.5.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+*wtf-peewee-0.2.6 (06 Nov 2016)
+
+  06 Nov 2016; Tiziano Müller <dev-zero@gentoo.org> +wtf-peewee-0.2.6.ebuild:
+  version bump, includes EAPI bump and py-3.x support
+
+  Package-Manager: portage-2.3.0
+

@@ -62,3 +62,13 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  19 Apr 2016; Manuel Rüger <mrueg@gentoo.org> -lufis-0.2.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+

@@ -260,3 +260,141 @@
 
   Package-Manager: portage-2.2.26
 
+*icinga2-2.4.4 (16 Mar 2016)
+
+  16 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga2-2.4.4.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+*icinga2-2.4.4-r1 (17 Mar 2016)
+
+  17 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga2-2.4.4-r1.ebuild, icinga2-9999.ebuild:
+  fixing fowners
+
+  Package-Manager: portage-2.2.26
+
+  18 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  icinga2-2.4.4-r1.ebuild:
+  add arm keyword
+
+  Package-Manager: portage-2.2.26
+
+  26 Mar 2016; Agostino Sarubbo <ago@gentoo.org> icinga2-2.4.4-r1.ebuild:
+  amd64 stable wrt bug #578092
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*icinga2-2.4.5 (20 Apr 2016)
+
+  20 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga2-2.4.5.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+*icinga2-2.4.6 (20 Apr 2016)
+
+  20 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -icinga2-2.4.5.ebuild, +icinga2-2.4.6.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+*icinga2-2.4.7 (21 Apr 2016)
+
+  21 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -icinga2-2.4.6.ebuild, +icinga2-2.4.7.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+  30 Apr 2016; Matthew Thode <prometheanfire@gentoo.org> icinga2-2.4.7.ebuild:
+  fix bug 580838
+
+  Package-Manager: portage-2.2.26
+
+  30 Apr 2016; Matthew Thode <prometheanfire@gentoo.org> icinga2-2.4.7.ebuild:
+  better url
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/icinga2.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*icinga2-2.4.10 (19 May 2016)
+
+  19 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -icinga2-2.3.11.ebuild, -icinga2-2.4.3.ebuild, -icinga2-2.4.4.ebuild,
+  -icinga2-2.4.7.ebuild, +icinga2-2.4.10.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+*icinga2-2.4.10-r1 (22 May 2016)
+
+  22 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +files/logrotate.patch, -icinga2-2.4.10.ebuild, +icinga2-2.4.10-r1.ebuild:
+  fix bug 583298 logrotate
+
+  Package-Manager: portage-2.2.28
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> icinga2-2.4.4-r1.ebuild:
+  x86 stable wrt bug #578092
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Jul 2016; Anthony G. Basile <blueness@gentoo.org>
+  icinga2-2.4.10-r1.ebuild, icinga2-9999.ebuild:
+  add libressl support
+
+  Package-Manager: portage-2.2.28
+
+*icinga2-2.5.1 (23 Aug 2016)
+
+  23 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga2-2.5.1.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  24 Aug 2016; Matthew Thode <prometheanfire@gentoo.org> icinga2-2.5.1.ebuild:
+  fixing postinst message and keywording 2.5.1
+
+  Package-Manager: portage-2.2.28
+
+*icinga2-2.5.2 (24 Aug 2016)
+
+  24 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -icinga2-2.5.1.ebuild, +icinga2-2.5.2.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+*icinga2-2.5.3 (25 Aug 2016)
+
+  25 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -icinga2-2.5.2.ebuild, +icinga2-2.5.3.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+*icinga2-2.5.4 (31 Aug 2016)
+
+  31 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -icinga2-2.5.3.ebuild, +icinga2-2.5.4.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  25 Sep 2016; Matthew Thode <prometheanfire@gentoo.org> icinga2-2.5.4.ebuild:
+  stable amd64 and x86
+
+  Package-Manager: portage-2.2.28
+

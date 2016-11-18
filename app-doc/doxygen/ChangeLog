@@ -197,3 +197,137 @@
 
   Package-Manager: portage-2.2.26
 
+  28 Feb 2016; Matthias Maier <tamiko@gentoo.org> doxygen-1.8.10-r1.ebuild,
+  doxygen-9999.ebuild:
+  remove unnecessary RESTRICT="mirror", bug #564712
+
+  All components of the tarball can be freely distributed subject to the
+  GPL-2.
+
+  Gentoo-Bug: 564712
+
+  Package-Manager: portage-2.2.26
+
+*doxygen-1.8.11 (28 Feb 2016)
+
+  28 Feb 2016; Matthias Maier <tamiko@gentoo.org> +doxygen-1.8.11.ebuild,
+  doxygen-9999.ebuild, +files/doxygen-1.8.11-link_with_pthread.patch:
+  bump to 1.8.11, fix lingua support (bug #566510), EAPI 5, qt5
+
+   - Version bump to newly released 1.8.11.
+
+   - Change EAPI to 5.
+
+   - Switch Qt support (for doxywizard) to Qt5.
+
+   - Fix LINGUAS support
+
+   - Update live ebuild
+
+  Gentoo-Bugs: 566510
+
+  Package-Manager: portage-2.2.26
+
+  28 Feb 2016; Matthias Maier <tamiko@gentoo.org> doxygen-1.8.10-r1.ebuild,
+  doxygen-1.8.11.ebuild, doxygen-9999.ebuild:
+  Avoid a sandbox violation with (bug #564944)
+
+  Export VARTEXFONTS="${T}/fonts" such that kpathsea does not try to write to
+  /var/cache/fonts/pk/... during doc generation.
+
+  Package-Manager: portage-2.2.26
+
+*doxygen-1.8.11-r1 (28 Feb 2016)
+
+  28 Feb 2016; Matthias Maier <tamiko@gentoo.org> -doxygen-1.8.11.ebuild,
+  +doxygen-1.8.11-r1.ebuild, doxygen-9999.ebuild:
+  introduce slot-dependency on media-libs/libpng:0=
+
+  Package-Manager: portage-2.2.26
+
+*doxygen-1.8.11-r2 (15 Jun 2016)
+
+  15 Jun 2016; Matthias Maier <tamiko@gentoo.org> -doxygen-1.8.11-r1.ebuild,
+  +doxygen-1.8.11-r2.ebuild, doxygen-9999.ebuild:
+  remove LINGUAS use expand, bug #584782
+
+  doxygen has language support in form of quite a number of "translator"
+  units. We had the habit of fine-tuning the translator units that are
+  actually built via the LINGUAS use expand mechanism.
+
+  But this is a broken approach due to the following reasons:
+
+   - "translator" units are lightweight header files that are built into
+     doxygen during compilation. No external dependencies are required.
+
+   - Traditionally, the LINGUAS variable is used for packages to determine
+     runtime language support (especially for GUI programs, etc) that usually
+     requires additional packages to be installed - i.e., LINGUAS controls
+     the languages supported in CLI and GUI applications.
+
+     doxygen's support for translator units does *not* fit into this scheme
+     at all.
+
+   - Not all translator units have a LINGUAS equivalent (!!)
+
+   - Hand selecting supported LINGUAS is a maintenance burden.
+
+  Therefore, I just got rid of it and install *all supported* "translator"
+  unconditionally.
+
+  Package-Manager: portage-2.2.28
+
+  07 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/doxygen-1.8.1-prefix-misc-alt.patch,
+  -files/doxygen-1.8.3.1-empty-line-sigsegv.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/1826
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  17 Jul 2016; Tobias Klausmann <klausman@gentoo.org>
+  doxygen-1.8.11-r2.ebuild:
+  1.8.11-r2: add alpha keyword
+
+  Gentoo-Bug: 588448
+
+  16 Aug 2016; Matthias Maier <tamiko@gentoo.org> doxygen-1.8.11-r2.ebuild:
+  stabilize amd64 and x86, bug #588448
+
+  Package-Manager: portage-2.2.28
+
+  28 Aug 2016; Jeroen Roovers <jer@gentoo.org> doxygen-1.8.11-r2.ebuild:
+  Stable for HPPA (bug #588448).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+*doxygen-1.8.12 (16 Sep 2016)
+
+  16 Sep 2016; Matthias Maier <tamiko@gentoo.org> +doxygen-1.8.12.ebuild,
+  +files/doxygen-1.8.12-link_with_pthread.patch:
+  Version bump
+
+  Move to EAPI 6
+  Replace dodoc with DOCS
+  Replace epatch with PATCHES
+  Drop python 3.3 support
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Matthias Maier <tamiko@gentoo.org>
+
+  16 Sep 2016; Matthias Maier <tamiko@gentoo.org> doxygen-9999.ebuild:
+  Move live ebuild to EAPI 6
+
+  Replace dodoc with DOCS
+  Replace epatch with PATCHES
+  Drop python 3.3 support
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Matthias Maier <tamiko@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> doxygen-1.8.10-r1.ebuild,
+  doxygen-1.8.11-r2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

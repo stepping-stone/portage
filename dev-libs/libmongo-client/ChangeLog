@@ -57,3 +57,16 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #256419
+
+  Package-Manager: portage-2.3.0
+
+*libmongo-client-0.1.8 (24 Aug 2016)
+
+  24 Aug 2016; Thomas Deutschmann <whissi@gentoo.org>
+  +libmongo-client-0.1.8.ebuild, metadata.xml:
+  Bumped to v0.1.8
+
+  Package-Manager: portage-2.3.0
+

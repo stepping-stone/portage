@@ -68,3 +68,21 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*BitVector-3.4.4 (08 Aug 2016)
+
+  08 Aug 2016; David Seifert <soap@gentoo.org> +BitVector-3.4.4.ebuild:
+  Version bump, add py3.5 support
+
+  * EAPI=6
+
+  Package-Manager: portage-2.3.0
+
+  30 Aug 2016; David Seifert <soap@gentoo.org> BitVector-3.4.4.ebuild:
+  restore python 3.3
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> BitVector-3.3.2.ebuild,
+  BitVector-3.4.4.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

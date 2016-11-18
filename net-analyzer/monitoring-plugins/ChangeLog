@@ -99,3 +99,31 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  17 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  monitoring-plugins-2.1.2.ebuild:
+  add arm keyword
+
+  Package-Manager: portage-2.2.26
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org>
+  monitoring-plugins-2.1.2.ebuild:
+  amd64 stable wrt bug #575426
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org>
+  monitoring-plugins-2.1.2.ebuild:
+  x86 stable wrt bug #575426
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Aug 2016; Michael Orlitzky <mjo@gentoo.org>
+  -monitoring-plugins-2.1.1.ebuild:
+  remove old v2.1.1.
+
+  Package-Manager: portage-2.2.28
+

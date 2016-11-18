@@ -110,3 +110,36 @@
 
   Package-Manager: portage-2.2.26
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*backuppc-3.3.1-r2 (26 Apr 2016)
+*backuppc-3.3.0-r2 (26 Apr 2016)
+
+  26 Apr 2016; Austin English <wizardedit@gentoo.org>
+  +backuppc-3.3.0-r2.ebuild, +backuppc-3.3.1-r2.ebuild,
+  files/apache2-backuppc.init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=573846
+
+  26 Apr 2016; Austin English <wizardedit@gentoo.org>
+  -backuppc-3.3.0-r1.ebuild, -backuppc-3.3.1-r1.ebuild:
+  remove backuppc-3.3.0-r1 / backuppc-3.3.1-r1
+
+  Package-Manager: portage-2.2.26
+
+  01 Jun 2016; Mike Frysinger <vapier@gentoo.org> files/apache2-backuppc.conf,
+  files/httpd.conf:
+  apache: switch to https:// URI
+
+  07 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/BackupPC-2.1.2pl2.diff, -files/postinstall-en.txt:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/1826
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

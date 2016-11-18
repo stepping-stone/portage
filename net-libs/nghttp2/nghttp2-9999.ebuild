@@ -4,13 +4,13 @@
 
 # TODO: Add python support.
 
-EAPI="5"
+EAPI=6
 
 inherit multilib-minimal
 
 if [[ ${PV} == 9999 ]] ; then
 	EGIT_REPO_URI="https://github.com/tatsuhiro-t/nghttp2.git"
-	inherit git-2
+	inherit autotools git-r3
 else
 	SRC_URI="https://github.com/tatsuhiro-t/nghttp2/releases/download/v${PV}/${P}.tar.gz"
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
@@ -26,17 +26,22 @@ IUSE="cxx debug hpack-tools jemalloc libressl static-libs test +threads utils xm
 RDEPEND="
 	cxx? ( dev-libs/boost:=[${MULTILIB_USEDEP},threads] )
 	hpack-tools? ( >=dev-libs/jansson-2.5 )
-	jemalloc? ( dev-libs/jemalloc )
+	jemalloc? ( dev-libs/jemalloc[${MULTILIB_USEDEP}] )
 	utils? (
-		>=dev-libs/libev-4.15
-		!libressl? ( >=dev-libs/openssl-1.0.2:0[-bindist] )
-		libressl? ( dev-libs/libressl )
-		>=sys-libs/zlib-1.2.3
+		>=dev-libs/libev-4.15[${MULTILIB_USEDEP}]
+		!libressl? ( >=dev-libs/openssl-1.0.2:0[-bindist,${MULTILIB_USEDEP}] )
+		libressl? ( dev-libs/libressl[${MULTILIB_USEDEP}] )
+		>=sys-libs/zlib-1.2.3[${MULTILIB_USEDEP}]
 	)
-	xml? ( >=dev-libs/libxml2-2.7.7:2 )"
+	xml? ( >=dev-libs/libxml2-2.7.7:2[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( >=dev-util/cunit-2.1[${MULTILIB_USEDEP}] )"
+
+src_prepare() {
+	default
+	[[ ${PV} == 9999 ]] && eautoreconf
+}
 
 multilib_src_configure() {
 	ECONF_SOURCE=${S} \

@@ -184,3 +184,49 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  02 Mar 2016; Agostino Sarubbo <ago@gentoo.org> aufs3-3_p20160219.ebuild:
+  amd64 stable wrt bug #575122
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> aufs3-3_p20160219.ebuild:
+  x86 stable wrt bug #575122
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Jul 2016; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20150622.ebuild:
+  Drop vulnerable version
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=575122
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*aufs3-3_p20160627 (02 Jul 2016)
+
+  02 Jul 2016; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20160627.ebuild:
+  Bump to latest aufs release
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*aufs3-3_p20160815 (14 Aug 2016)
+
+  14 Aug 2016; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20160815.ebuild:
+  Bump to latest aufs release
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*aufs3-3_p20160822 (17 Oct 2016)
+
+  17 Oct 2016; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20160822.ebuild:
+  Version Bump
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+

@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -6,7 +6,8 @@ EAPI=5
 
 inherit git-2 perl-module
 
-EGIT_REPO_URI="git://clusterssh.git.sourceforge.net/gitroot/clusterssh/clusterssh"
+EGIT_REPO_URI="git://git.code.sf.net/p/clusterssh/code"
+EGIT_PROJECT="${PN}"
 
 DESCRIPTION="Concurrent Multi-Server Terminal Access"
 HOMEPAGE="http://clusterssh.sourceforge.net"
@@ -24,7 +25,7 @@ RDEPEND="
 	dev-perl/Test-Trap
 	dev-perl/Test-DistManifest
 	dev-perl/Try-Tiny
-	dev-perl/perl-tk
+	dev-perl/Tk
 	dev-perl/Config-Simple
 	dev-perl/X11-Protocol
 	dev-perl/XML-Simple

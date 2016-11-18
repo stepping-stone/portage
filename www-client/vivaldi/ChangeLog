@@ -397,3 +397,659 @@
 
   Package-Manager: portage-2.2.27
 
+*vivaldi-1.0.403.24_p1 (04 Mar 2016)
+
+  04 Mar 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.403.24_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.27
+
+  04 Mar 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.390.3_p1.ebuild,
+  -vivaldi-1.0.403.15_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.27
+
+*vivaldi-1.0.418.3_p1 (10 Mar 2016)
+
+  10 Mar 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.418.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.27
+
+  10 Mar 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.403.17_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.27
+
+  11 Mar 2016; Jeroen Roovers <jer@gentoo.org> vivaldi-1.0.403.24_p1.ebuild,
+  vivaldi-1.0.418.3_p1.ebuild:
+  Set KEYWORDS+=-* (by steev).
+
+  Package-Manager: portage-2.2.27
+
+*vivaldi-1.0.420.4_p1 (12 Mar 2016)
+
+  12 Mar 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.420.4_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  12 Mar 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.403.24_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.0.422.8_p1 (16 Mar 2016)
+
+  16 Mar 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.422.8_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  16 Mar 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.418.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.0.425.3_p1 (19 Mar 2016)
+
+  19 Mar 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.425.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.0.430.3_p1 (24 Mar 2016)
+
+  24 Mar 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.430.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  24 Mar 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.420.4_p1.ebuild,
+  -vivaldi-1.0.422.8_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.0.435.5_p1 (30 Mar 2016)
+
+  30 Mar 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.435.5_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  30 Mar 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.425.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.0.435.24_p1 (01 Apr 2016)
+
+  01 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.435.24_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  01 Apr 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.430.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.0.435.26_p1 (02 Apr 2016)
+
+  02 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.435.26_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  02 Apr 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.435.5_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.0.435.29_p1 (05 Apr 2016)
+
+  05 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.435.29_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  05 Apr 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.435.24_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.0.435.40_p1 (07 Apr 2016)
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.435.40_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.435.26_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.0.435.42_p1 (08 Apr 2016)
+
+  08 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.435.42_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.1.443.3_p1 (09 Apr 2016)
+
+  09 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.1.443.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  09 Apr 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.435.29_p1.ebuild,
+  -vivaldi-1.0.435.40_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.1.453.6_p1 (18 Apr 2016)
+
+  18 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.1.453.6_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.1.453.30_p1 (21 Apr 2016)
+
+  21 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.1.453.30_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.1.443.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.1.453.36_p1 (22 Apr 2016)
+
+  22 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.1.453.36_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  22 Apr 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.1.453.6_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.1.453.43_p1 (23 Apr 2016)
+
+  23 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.1.453.43_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  23 Apr 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.1.453.30_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.1.453.45_p1 (26 Apr 2016)
+
+  26 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.1.453.45_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  26 Apr 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.1.453.36_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.1.453.47_p1 (27 Apr 2016)
+
+  27 Apr 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.1.453.47_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  27 Apr 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.1.453.43_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.2.470.11_p1 (05 May 2016)
+*vivaldi-1.1.453.52_p1 (05 May 2016)
+
+  05 May 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.1.453.52_p1.ebuild,
+  +vivaldi-1.2.470.11_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  05 May 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.435.42_p1.ebuild,
+  -vivaldi-1.1.453.45_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.2.479.8_p1 (13 May 2016)
+
+  13 May 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.2.479.8_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  13 May 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.1.453.47_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*vivaldi-1.2.485.14_p1 (21 May 2016)
+
+  21 May 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.2.485.14_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  21 May 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.2.470.11_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*vivaldi-1.2.490.3_p1 (24 May 2016)
+
+  24 May 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.2.490.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  24 May 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.2.479.8_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*vivaldi-1.2.490.27_p1 (30 May 2016)
+
+  30 May 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.2.490.27_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  30 May 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.2.485.14_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*vivaldi-1.2.490.32_p1 (01 Jun 2016)
+
+  01 Jun 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.2.490.32_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Jun 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.2.490.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*vivaldi-1.2.490.35_p1 (02 Jun 2016)
+
+  02 Jun 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.2.490.35_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  02 Jun 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.2.490.27_p1.ebuild,
+  -vivaldi-1.2.490.32_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  02 Jun 2016; Jeroen Roovers <jer@gentoo.org> vivaldi-1.1.453.52_p1.ebuild:
+  Stable for AMD64 x86 too.
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+*vivaldi-1.3.501.6_p1 (04 Jun 2016)
+
+  04 Jun 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.3.501.6_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*vivaldi-1.3.519.25_p1 (23 Jun 2016)
+
+  23 Jun 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.3.519.25_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*vivaldi-1.3.534.3_p1 (13 Jul 2016)
+
+  13 Jul 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.3.534.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  13 Jul 2016; Jeroen Roovers <jer@gentoo.org> vivaldi-1.2.490.35_p1.ebuild:
+  Stable for AMD64 x86 too.
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  13 Jul 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.1.453.52_p1.ebuild,
+  -vivaldi-1.3.501.6_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.3.537.5_p1 (15 Jul 2016)
+
+  15 Jul 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.3.537.5_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  15 Jul 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.3.519.25_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.3.544.25_p1 (24 Jul 2016)
+
+  24 Jul 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.3.544.25_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  24 Jul 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.3.534.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.3.551.13_p1 (28 Jul 2016)
+
+  28 Jul 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.3.551.13_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  28 Jul 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.3.537.5_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.3.551.21_p1 (08 Aug 2016)
+
+  08 Aug 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.3.551.21_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  08 Aug 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.3.544.25_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.3.551.30_p1 (11 Aug 2016)
+
+  11 Aug 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.3.551.30_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  11 Aug 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.3.551.13_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.3.551.37_p1 (25 Aug 2016)
+
+  25 Aug 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.3.551.37_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.3.582.3_p1 (27 Aug 2016)
+
+  27 Aug 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.3.582.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  27 Aug 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.3.551.21_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.4.589.2_p1 (03 Sep 2016)
+
+  03 Sep 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.4.589.2_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  03 Sep 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.3.551.37_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+  03 Sep 2016; Jeroen Roovers <jer@gentoo.org> vivaldi-1.3.551.30_p1.ebuild:
+  Stable for AMD64 x86 too.
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+*vivaldi-1.4.589.4_p1 (07 Sep 2016)
+
+  07 Sep 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.4.589.4_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.4.589.11_p1 (08 Sep 2016)
+
+  08 Sep 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.4.589.11_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  08 Sep 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.4.589.2_p1.ebuild,
+  -vivaldi-1.4.589.4_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.5.604.4_p1 (15 Sep 2016)
+
+  15 Sep 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.604.4_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  15 Sep 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.3.582.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*vivaldi-1.5.609.8_p1 (19 Sep 2016)
+
+  19 Sep 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.609.8_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.1
+
+  24 Sep 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.2.490.35_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.1
+
+*vivaldi-1.4.589.29_p1 (27 Sep 2016)
+
+  27 Sep 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.4.589.29_p1.ebuild:
+  Stable version bump.
+
+  Package-Manager: portage-2.3.1
+
+  27 Sep 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.5.604.4_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.1
+
+*vivaldi-1.5.618.8_p1 (30 Sep 2016)
+
+  30 Sep 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.618.8_p1.ebuild:
+  Snapshot version bump.
+
+  Package-Manager: portage-2.3.1
+
+*vivaldi-1.5.627.3_p1 (07 Oct 2016)
+
+  07 Oct 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.627.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.1
+
+  07 Oct 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.4.589.11_p1.ebuild,
+  -vivaldi-1.5.609.8_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.1
+
+*vivaldi-1.5.633.16_p1 (14 Oct 2016)
+
+  14 Oct 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.633.16_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  14 Oct 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.5.618.8_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*vivaldi-1.5.638.3_p1 (18 Oct 2016)
+
+  18 Oct 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.638.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  18 Oct 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.5.627.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+  24 Oct 2016; Jeroen Roovers <jer@gentoo.org> vivaldi-1.4.589.29_p1.ebuild:
+  Stable for AMD64 x86 too.
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+*vivaldi-1.5.644.7_p1 (24 Oct 2016)
+
+  24 Oct 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.644.7_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+*vivaldi-1.5.648.6_p1 (28 Oct 2016)
+
+  28 Oct 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.648.6_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  28 Oct 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.3.551.30_p1.ebuild,
+  -vivaldi-1.5.633.16_p1.ebuild, -vivaldi-1.5.638.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*vivaldi-1.5.651.10_p1 (01 Nov 2016)
+
+  01 Nov 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.651.10_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.5.644.7_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*vivaldi-1.5.652.8_p1 (02 Nov 2016)
+
+  02 Nov 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.652.8_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  02 Nov 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.5.648.6_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*vivaldi-1.5.653.3_p1 (03 Nov 2016)
+
+  03 Nov 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.653.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  03 Nov 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.5.651.10_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*vivaldi-1.5.654.3_p1 (04 Nov 2016)
+
+  04 Nov 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.654.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  04 Nov 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.5.652.8_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*vivaldi-1.5.655.3_p1 (04 Nov 2016)
+
+  04 Nov 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.655.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  04 Nov 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.5.653.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*vivaldi-1.5.658.3_p1 (07 Nov 2016)
+
+  07 Nov 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.658.3_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  07 Nov 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.5.654.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*vivaldi-1.5.658.21_p1 (14 Nov 2016)
+
+  14 Nov 2016; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.5.658.21_p1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  14 Nov 2016; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.5.655.3_p1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+

@@ -81,3 +81,18 @@
 
   Package-Manager: portage-2.2.27
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  aioeventlet-0.5.1.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+  12 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -aioeventlet-0.4.ebuild, aioeventlet-0.5.1.ebuild:
+  doing the test
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> aioeventlet-0.5.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

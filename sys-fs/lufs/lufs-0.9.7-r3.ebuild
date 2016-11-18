@@ -5,7 +5,7 @@
 inherit eutils autotools
 
 DESCRIPTION="User-mode filesystem implementation"
-HOMEPAGE="http://sourceforge.net/projects/lufs/"
+HOMEPAGE="https://sourceforge.net/projects/lufs/"
 SRC_URI="mirror://sourceforge/lufs/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -66,6 +66,6 @@ pkg_postinst() {
 	fi
 	ewarn "If something does not work for you with this setup please"
 	ewarn "complain to bugs.gentoo.org"
-	einfo "Note: There is also the native sshfs-fuse implementation now"
+	einfo "Note: There is also the native sshfs implementation now"
 	use amd64 && ewarn "lufs-sshfs does not work on amd64 and is disabled there."
 }

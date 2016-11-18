@@ -188,3 +188,61 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*linuxdoc-tools-0.9.71-r2 (12 Apr 2016)
+
+  12 Apr 2016; Ian Delaney <idella4@gentoo.org>
+  +files/linuxdoc-tools-0.9.71-fix-build-with-flex-2.6.1.patch,
+  files/linuxdoc-tools-0.9.71-fix-parallel-doc-build.patch,
+  +files/linuxdoc-tools-0.9.71-upgrade-deprecated-latex-commands.patch,
+  +files/linuxdoc-tools-0.9.71-upgrade-deprecated-perl-regexs.patch,
+  +linuxdoc-tools-0.9.71-r2.ebuild:
+  revbump to 0.9.71-r2 wrt bug 579490
+
+  Backport a couple of upstream fixes on the way.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1240
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=579490
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+*linuxdoc-tools-0.9.72 (09 May 2016)
+
+  09 May 2016; Ian Delaney <idella4@gentoo.org> +linuxdoc-tools-0.9.72.ebuild:
+  verbump to 0.9.72
+
+  Update the ebuild to be 99% compatible with EAPI 6.
+  The remaining 1% is due to some of the inherited eclasses.
+
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  09 May 2016; Ian Delaney <idella4@gentoo.org>
+  -files/linuxdoc-tools-0.9.71-fix-build-with-flex-2.6.1.patch,
+  -files/linuxdoc-tools-0.9.71-upgrade-deprecated-latex-commands.patch,
+  -files/linuxdoc-tools-0.9.71-upgrade-deprecated-perl-regexs.patch,
+  -linuxdoc-tools-0.9.71-r2.ebuild:
+  remove old
+
+  Closes: https://github.com/gentoo/gentoo/pull/1437
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  24 May 2016; Ian Delaney <idella4@gentoo.org>
+  linuxdoc-tools-0.9.71-r1.ebuild, linuxdoc-tools-0.9.72.ebuild:
+  fix LICENSE
+
+  Closes: https://github.com/gentoo/gentoo/pull/1519
+  Package-Manager: portage-2.3.0_rc1
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  24 Sep 2016; Agostino Sarubbo <ago@gentoo.org> linuxdoc-tools-0.9.72.ebuild:
+  amd64 stable wrt bug #585532
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

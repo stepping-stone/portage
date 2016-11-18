@@ -88,3 +88,43 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Hans de Graaff <graaff@gentoo.org> -rgen-0.7.0.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.26
+
+  11 May 2016; Hans de Graaff <graaff@gentoo.org> rgen-0.8.0.ebuild:
+  add 0.8.0
+
+  Package-Manager: portage-2.2.28
+
+*rgen-0.8.1 (10 Jun 2016)
+
+  10 Jun 2016; Hans de Graaff <graaff@gentoo.org> +rgen-0.8.1.ebuild:
+  add 0.8.1
+
+  Package-Manager: portage-2.2.28
+
+  10 Jun 2016; Hans de Graaff <graaff@gentoo.org> rgen-0.6.6.ebuild:
+  drop ruby19
+
+  Package-Manager: portage-2.2.28
+
+*rgen-0.8.2 (27 Sep 2016)
+
+  27 Sep 2016; Hans de Graaff <graaff@gentoo.org> +rgen-0.8.2.ebuild:
+  add 0.8.2
+
+  Package-Manager: portage-2.2.28
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> rgen-0.8.0.ebuild:
+  Stable for HPPA (bug #580100).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  06 Nov 2016; Hans de Graaff <graaff@gentoo.org> rgen-0.8.0.ebuild:
+  amd64 stable, bug 576626
+
+  Package-Manager: portage-2.3.0
+

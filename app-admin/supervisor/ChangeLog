@@ -75,3 +75,38 @@
 
   Package-Manager: portage-2.2.27
 
+*supervisor-3.2.2 (12 Mar 2016)
+
+  12 Mar 2016; Patrick Lauer <patrick@gentoo.org> +supervisor-3.2.2.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.28
+
+*supervisor-3.2.3 (03 Apr 2016)
+
+  03 Apr 2016; Patrick Lauer <patrick@gentoo.org> +supervisor-3.2.3.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/init.d,
+  files/init.d-r1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*supervisor-3.3.0 (13 Jun 2016)
+
+  13 Jun 2016; Patrick Lauer <patrick@gentoo.org> +supervisor-3.3.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*supervisor-3.3.1 (01 Oct 2016)
+
+  01 Oct 2016; Patrick Lauer <patrick@gentoo.org> +supervisor-3.3.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  29 Oct 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove Python team from maintainers
+

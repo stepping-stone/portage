@@ -74,3 +74,24 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  10 Apr 2016; Manuel Rüger <mrueg@gentoo.org> aruba-0.5.4-r1.ebuild,
+  aruba-0.6.2.ebuild, aruba-0.7.4.ebuild, aruba-0.8.1.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+*aruba-0.6.2-r1 (01 Sep 2016)
+
+  01 Sep 2016; Hans de Graaff <graaff@gentoo.org> +aruba-0.6.2-r1.ebuild:
+  add ruby23 revision
+
+  Package-Manager: portage-2.2.28
+
+  27 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/aruba-0.4.11+childprocess-0.2.4.patch:
+  remove unused patch.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2494
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

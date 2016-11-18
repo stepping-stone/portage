@@ -80,3 +80,45 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Reassign due to bug #269417
+
+  Package-Manager: portage-2.3.0_rc1
+
+  19 Jun 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Multiple metadata.xml: reorder to make sure assignee goes first
+
+  Reorder all metadata.xml files with explicit descriptions requesting
+  particular bug assignment/CC to ensure that the requested assignee
+  always goes first, in order to match the bug wrangling policies.
+
+*packagekit-gtk-1.1.1 (05 Sep 2016)
+
+  05 Sep 2016; mudler <mudler@sabayon.org> +packagekit-gtk-1.1.1.ebuild:
+  version bump to 1.1.1
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=587070
+
+  * Removed disable nsplugin
+  * 1.1.1 requires at least glib 2.46
+
+  Package-Manager: portage-2.2.26
+
+*packagekit-gtk-1.1.4 (26 Sep 2016)
+
+  26 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +packagekit-gtk-1.1.4.ebuild:
+  version bump 1.1.1 → 1.1.4
+
+  Package-Manager: portage-2.3.1
+
+  23 Oct 2016; Ettore Di Giacinto <mudler@gentoo.org> metadata.xml:
+  updating metadata, removing from proxy-maint and adding myself as maintainer
+
+  Package-Manager: portage-2.3.1
+
+  30 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  add gnome as backing herd
+
+  Package-Manager: portage-2.3.2
+

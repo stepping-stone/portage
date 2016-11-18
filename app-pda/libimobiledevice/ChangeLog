@@ -84,3 +84,28 @@
 
   Package-Manager: portage-2.2.27_p49
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  22 May 2016; James Le Cuirot <chewi@gentoo.org> +files/gnutls-3.4.patch,
+  libimobiledevice-1.2.0.ebuild:
+  Apply upstream patch for newer gnutls (#582758)
+
+  Package-Manager: portage-2.3.0_rc1
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libimobiledevice-1.2.0.ebuild:
+  amd64/x86 stable, bug #591590
+
+  Package-Manager: portage-2.3.0
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> -libimobiledevice-1.1.6.ebuild,
+  -libimobiledevice-1.1.6-r1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> libimobiledevice-1.2.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

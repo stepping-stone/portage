@@ -141,3 +141,48 @@
 
   Package-Manager: portage-2.2.26
 
+  06 Mar 2016; Daniel Campbell <zlg@gentoo.org> -spacefm-0.9.3.ebuild,
+  -spacefm-0.9.4.ebuild, -spacefm-1.0.0.ebuild, -spacefm-1.0.2.ebuild,
+  -spacefm-1.0.3.ebuild:
+  Old version cleanup
+
+  Package-Manager: portage-2.2.27
+
+  18 Mar 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove type="" from upstream maintainer
+
+  Remove the type="" attribute from upstream maintainer as it is
+  not allowed by GLEP 46 (and GLEP 67 is out of scope).
+
+*spacefm-1.0.5-r1 (03 Apr 2016)
+
+  03 Apr 2016; Daniel Campbell <zlg@gentoo.org> +spacefm-1.0.5-r1.ebuild:
+  revbump to fix distfile name
+
+  Thanks, Samuel Bauer.
+
+  Gentoo-Bug: 578886
+  Gentoo-Bug-URL: https://bugs.gentoo.org/578886
+
+  Package-Manager: portage-2.2.28
+
+  07 May 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Add missing upstream maintainer's name
+
+  30 Jul 2016; Mike Gilbert <floppym@gentoo.org> spacefm-1.0.4.ebuild,
+  spacefm-1.0.5.ebuild:
+  PV}.tar.gz -> ${P}.tar.gz
+
+  Package-Manager: portage-2.3.0_p16
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> -spacefm-1.0.5.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> spacefm-1.0.4.ebuild,
+  spacefm-1.0.5-r1.ebuild, spacefm-9999.ebuild:
+  gksu is dead for ages and vulnerable, don't suggest it
+
+  Package-Manager: portage-2.3.1
+

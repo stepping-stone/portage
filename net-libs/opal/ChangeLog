@@ -78,3 +78,18 @@
 
   Package-Manager: portage-2.2.27
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  02 Oct 2016; Pacho Ramos <pacho@gentoo.org> opal-3.10.11.ebuild:
+  Default enable USE flags needed by ekiga (the only consumer of this lib)
+
+  Package-Manager: portage-2.3.1
+
+  02 Oct 2016; Pacho Ramos <pacho@gentoo.org> opal-3.10.11.ebuild:
+  Default enable USE flags needed by ekiga (the only consumer of this lib)
+
+  Package-Manager: portage-2.3.1
+

@@ -145,3 +145,47 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="arm"
 
+  02 Mar 2016; Mike Frysinger <vapier@gentoo.org> socat-1.7.3.1.ebuild:
+  mark 1.7.3.1 ia64/ppc/sparc stable #573602
+
+  02 Mar 2016; Jeroen Roovers <jer@gentoo.org> -socat-1.7.3.0.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.27
+
+  05 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/socat-1.7.3.1-stddef_h.patch, socat-1.7.3.1.ebuild,
+  socat-2.0.0_beta9.ebuild, socat-9999.ebuild:
+  Fix building with USE=-ssl (bug #576270 by Jan Chren (rindeal)).
+
+  Package-Manager: portage-2.2.27
+
+*socat-1.7.3.1-r1 (21 Sep 2016)
+
+  21 Sep 2016; Patrick McLean <chutzpah@gentoo.org>
+  +files/socat-1.7.3.1-libressl.patch, +socat-1.7.3.1-r1.ebuild:
+  Revision bump, add libressl support and license warning
+
+  Port to EAPI=6
+
+  Add libressl support (bug #565244), thanks to Marek Behun for the patch
+
+  Add license warning and RESTRICT (bug #587740)
+
+  Package-Manager: portage-2.3.1
+
+  21 Sep 2016; Patrick McLean <chutzpah@gentoo.org>
+  +files/socat-2.0.0_beta9-libressl.patch, socat-2.0.0_beta9.ebuild,
+  socat-9999.ebuild:
+  Add libressl and license warning to 2.0 ebuild
+
+  Port to EAPI=6
+
+  This adds libressl support (bug #565244) thanks to Marek Behun for the patch
+
+  This also adds a RESTRICT for bindist with ssl and readline
+
+  Sync 9999 ebuild with changes
+
+  Package-Manager: portage-2.3.1
+

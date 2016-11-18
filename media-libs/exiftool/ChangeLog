@@ -109,3 +109,136 @@
   22 Feb 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.11.ebuild:
   version bump to 10.11
 
+*exiftool-10.12 (06 Mar 2016)
+
+  06 Mar 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.12.ebuild:
+  version bump to 10.12
+
+  06 Mar 2016; Tim Harder <radhermit@gentoo.org> exiftool-10.10.ebuild:
+  stabilize 10.10 for all
+
+  06 Mar 2016; Tim Harder <radhermit@gentoo.org> -exiftool-9.98.ebuild,
+  -exiftool-10.00.ebuild, -exiftool-10.07.ebuild, -exiftool-10.09.ebuild:
+  remove old
+
+*exiftool-10.13 (16 Mar 2016)
+
+  16 Mar 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.13.ebuild:
+  version bump to 10.13
+
+*exiftool-10.14 (11 Apr 2016)
+
+  11 Apr 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.14.ebuild:
+  version bump to 10.14
+
+*exiftool-10.15 (26 Apr 2016)
+
+  26 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> +exiftool-10.15.ebuild:
+  Bump to version 10.15
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  26 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> -exiftool-10.11.ebuild,
+  -exiftool-10.12.ebuild, -exiftool-10.13.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*exiftool-10.16 (04 May 2016)
+
+  04 May 2016; Lars Wendler <polynomial-c@gentoo.org> +exiftool-10.16.ebuild:
+  Bump to version 10.16
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  04 May 2016; Lars Wendler <polynomial-c@gentoo.org> -exiftool-10.14.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*exiftool-10.17 (25 May 2016)
+
+  25 May 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.17.ebuild:
+  version bump to 10.17
+
+*exiftool-10.18 (31 May 2016)
+
+  31 May 2016; Lars Wendler <polynomial-c@gentoo.org> +exiftool-10.18.ebuild:
+  Bump to version 10.18
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  31 May 2016; Lars Wendler <polynomial-c@gentoo.org> -exiftool-10.15.ebuild,
+  -exiftool-10.16.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*exiftool-10.19 (02 Jun 2016)
+
+  02 Jun 2016; Lars Wendler <polynomial-c@gentoo.org> +exiftool-10.19.ebuild:
+  Bump to version 10.19
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*exiftool-10.20 (19 Jun 2016)
+
+  19 Jun 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.20.ebuild:
+  version bump to 10.20
+
+*exiftool-10.23 (21 Jul 2016)
+
+  21 Jul 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.23.ebuild:
+  version bump to 10.23
+
+*exiftool-10.24 (31 Jul 2016)
+
+  31 Jul 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.24.ebuild:
+  version bump to 10.24
+
+*exiftool-10.25 (07 Aug 2016)
+
+  07 Aug 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.25.ebuild:
+  version bump to 10.25
+
+  07 Aug 2016; Tim Harder <radhermit@gentoo.org> exiftool-10.20.ebuild:
+  stabilize 10.20 for all
+
+  07 Aug 2016; Tim Harder <radhermit@gentoo.org> -exiftool-10.10.ebuild,
+  -exiftool-10.17.ebuild, -exiftool-10.18.ebuild, -exiftool-10.19.ebuild:
+  remove old
+
+*exiftool-10.27 (24 Sep 2016)
+
+  24 Sep 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.27.ebuild:
+  version bump to 10.27
+
+  24 Sep 2016; Tim Harder <radhermit@gentoo.org> exiftool-10.25.ebuild:
+  stabilize 10.25
+
+  24 Sep 2016; Tim Harder <radhermit@gentoo.org> -exiftool-10.20.ebuild,
+  -exiftool-10.23.ebuild, -exiftool-10.24.ebuild:
+  remove old
+
+*exiftool-10.28 (03 Oct 2016)
+
+  03 Oct 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.28.ebuild:
+  version bump to 10.28
+
+*exiftool-10.31 (26 Oct 2016)
+
+  26 Oct 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.31.ebuild:
+  version bump to 10.31
+
+*exiftool-10.33 (12 Nov 2016)
+
+  12 Nov 2016; Tim Harder <radhermit@gentoo.org> +exiftool-10.33.ebuild:
+  version bump to 10.33
+

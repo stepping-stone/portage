@@ -65,3 +65,36 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*shtool-2.0.8-r1 (20 Apr 2016)
+
+  20 Apr 2016; Patrice Clement <monsieurp@gentoo.org> +shtool-2.0.8-r1.ebuild:
+  EAPI 6 bump.
+
+  Package-Manager: portage-2.2.26
+
+  20 Apr 2016; Patrice Clement <monsieurp@gentoo.org> shtool-2.0.8-r1.ebuild:
+  Fix Copyright.
+
+  Package-Manager: portage-2.2.26
+
+  21 Apr 2016; Patrice Clement <monsieurp@gentoo.org> shtool-2.0.8-r1.ebuild:
+  Call emake instead of emake.
+
+  Package-Manager: portage-2.2.26
+
+  03 Jun 2016; Patrice Clement <monsieurp@gentoo.org> shtool-2.0.8-r1.ebuild:
+  Stable for amd64. Retroactively mark stable for the remaining arches using
+  the ALLARCHES policy.
+
+  Package-Manager: portage-2.2.28
+
+  03 Jun 2016; Patrice Clement <monsieurp@gentoo.org> -shtool-2.0.8.ebuild:
+  Clean up old.
+
+  Package-Manager: portage-2.2.28
+

@@ -70,3 +70,18 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*dfu-util-0.9 (25 Aug 2016)
+
+  25 Aug 2016; Tim Harder <radhermit@gentoo.org> +dfu-util-0.9.ebuild,
+  dfu-util-9999.ebuild, metadata.xml:
+  version bump to 0.9
+
+  25 Aug 2016; Tim Harder <radhermit@gentoo.org> dfu-util-0.9.ebuild,
+  dfu-util-9999.ebuild:
+  use sourceforge mirror
+

@@ -120,3 +120,57 @@
 
   Package-Manager: portage-2.2.26
 
+  08 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -bunny-2.0.1.ebuild,
+  -bunny-2.2.1.ebuild, -bunny-2.2.2.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+*bunny-2.3.1 (12 Apr 2016)
+
+  12 Apr 2016; Hans de Graaff <graaff@gentoo.org> +bunny-2.3.1.ebuild:
+  add 2.3.1
+
+  Package-Manager: portage-2.2.26
+
+*bunny-2.4.0 (13 Jun 2016)
+
+  13 Jun 2016; Hans de Graaff <graaff@gentoo.org> +bunny-2.4.0.ebuild:
+  add 2.4.0
+
+  Package-Manager: portage-2.2.28
+
+*bunny-2.5.0 (25 Jul 2016)
+
+  25 Jul 2016; Hans de Graaff <graaff@gentoo.org> +bunny-2.5.0.ebuild:
+  add 2.5.0
+
+  Package-Manager: portage-2.2.28
+
+*bunny-2.5.1 (19 Aug 2016)
+
+  19 Aug 2016; Hans de Graaff <graaff@gentoo.org> +bunny-2.5.1.ebuild:
+  add 2.5.1
+
+  Package-Manager: portage-2.2.28
+
+  15 Oct 2016; Hans de Graaff <graaff@gentoo.org> -bunny-2.3.0.ebuild,
+  -bunny-2.3.1.ebuild, -bunny-2.4.0.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+
+*bunny-2.6.0 (15 Oct 2016)
+
+  15 Oct 2016; Hans de Graaff <graaff@gentoo.org> +bunny-2.6.0.ebuild:
+  add 2.6.0
+
+  Package-Manager: portage-2.3.0
+
+*bunny-2.6.1 (23 Oct 2016)
+
+  23 Oct 2016; Hans de Graaff <graaff@gentoo.org> +bunny-2.6.1.ebuild:
+  add 2.6.1
+
+  Package-Manager: portage-2.3.0
+

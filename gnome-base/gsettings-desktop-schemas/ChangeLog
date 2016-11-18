@@ -168,3 +168,81 @@
 
   Package-Manager: portage-2.2.27
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  gsettings-desktop-schemas-3.18.1.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  gsettings-desktop-schemas-3.18.1.ebuild:
+  Stable for HPPA PPC64 (bug #566378).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  03 May 2016; Markus Meier <maekke@gentoo.org>
+  gsettings-desktop-schemas-3.18.1.ebuild:
+  arm stable, bug #566378
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  07 Jun 2016; Tobias Klausmann <klausman@gentoo.org>
+  gsettings-desktop-schemas-3.18.1.ebuild:
+  3.18.1-r0: add alpha keyword
+
+  Gentoo-Bug: 584468
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gsettings-desktop-schemas-3.20.0 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org>
+  +gsettings-desktop-schemas-3.20.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  gsettings-desktop-schemas-3.18.1.ebuild:
+  ppc stable, bug 584468
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+
+  23 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  gsettings-desktop-schemas-3.20.0.ebuild:
+  3.20.0-r0: add alpha keyword
+
+  Gentoo-Bug: 587010
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  gsettings-desktop-schemas-3.20.0.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  gsettings-desktop-schemas-3.20.0.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  03 Oct 2016; Jeroen Roovers <jer@gentoo.org>
+  gsettings-desktop-schemas-3.20.0.ebuild:
+  Stable for HPPA (bug #587010).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*gsettings-desktop-schemas-3.22.0 (01 Nov 2016)
+
+  01 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gsettings-desktop-schemas-3.22.0.ebuild:
+  version bump 3.20.0 → 3.22.0
+
+  Package-Manager: portage-2.3.2
+

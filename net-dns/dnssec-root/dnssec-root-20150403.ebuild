@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -10,7 +10,7 @@ DATE_ISSUE1=20100715 # Original root-anchor creation date
 DATE_ISSUE2=20110715 # ICANN PGP key updated
 DATE_ISSUE3=20150504 # Subordinate CAs updated
 ICANN_PGP_FINGERPRINT='2FBB91BCAAEE0ABE1F8031C7D1AFBCE00F6C91D2'
-# The naming of the files really needs some improvement upstream: 
+# The naming of the files really needs some improvement upstream:
 # root-anchors.p7s despite it's name, is mostly the the same data as
 # icannbundle.pem
 SRC_URI="http://data.iana.org/root-anchors/root-anchors.xml -> root-anchors-${DATE_ISSUE1}.xml
@@ -24,7 +24,7 @@ SRC_URI="http://data.iana.org/root-anchors/root-anchors.xml -> root-anchors-${DA
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x64-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x64-macos"
 IUSE="test"
 
 RDEPEND=""

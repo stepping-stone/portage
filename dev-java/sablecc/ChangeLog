@@ -70,3 +70,28 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  05 Mar 2016; Patrice Clement <monsieurp@gentoo.org> sablecc-3.7.ebuild:
+  Stable for amd64+x86.
+
+  Package-Manager: portage-2.2.26
+
+  05 Mar 2016; Patrice Clement <monsieurp@gentoo.org> -files/sablecc,
+  -sablecc-3.2.ebuild:
+  Clean up old.
+
+  Package-Manager: portage-2.2.26
+
+*sablecc-3.7-r1 (04 Apr 2016)
+
+  04 Apr 2016; Patrice Clement <monsieurp@gentoo.org> +sablecc-3.7-r1.ebuild:
+  Convert to java-pkg-simple.
+
+  --straight-to-stable because the current stable version is broken.
+
+  Package-Manager: portage-2.2.26
+
+  04 Apr 2016; Patrice Clement <monsieurp@gentoo.org> -sablecc-3.7.ebuild:
+  Clean up old.
+
+  Package-Manager: portage-2.2.26
+

@@ -251,3 +251,202 @@
 
   Package-Manager: portage-2.2.26
 
+*ruby-2.1.9 (30 Mar 2016)
+
+  30 Mar 2016; Hans de Graaff <graaff@gentoo.org> +ruby-2.1.9.ebuild:
+  add 2.1.9
+
+  Package-Manager: portage-2.2.26
+
+*ruby-2.1.10 (04 Apr 2016)
+
+  04 Apr 2016; Hans de Graaff <graaff@gentoo.org> +ruby-2.1.10.ebuild:
+  add 2.1.10
+
+  Package-Manager: portage-2.2.26
+
+*ruby-2.2.5 (27 Apr 2016)
+
+  27 Apr 2016; Hans de Graaff <graaff@gentoo.org> +ruby-2.2.5.ebuild:
+  add 2.2.5
+
+  Package-Manager: portage-2.2.26
+
+*ruby-2.3.1 (27 Apr 2016)
+
+  27 Apr 2016; Hans de Graaff <graaff@gentoo.org> +ruby-2.3.1.ebuild:
+  add 2.3.1
+
+  Package-Manager: portage-2.2.26
+
+  30 May 2016; Hans de Graaff <graaff@gentoo.org> -ruby-2.1.7-r1.ebuild,
+  -ruby-2.1.8.ebuild:
+  cleanup in 2.1 slot
+
+  Package-Manager: portage-2.2.28
+
+  30 May 2016; Hans de Graaff <graaff@gentoo.org> -ruby-2.2.2-r1.ebuild,
+  -ruby-2.2.3.ebuild, -ruby-2.2.3-r1.ebuild, -ruby-2.2.3-r2.ebuild,
+  -ruby-2.2.4.ebuild:
+  cleanup in 2.2 slot
+
+  Package-Manager: portage-2.2.28
+
+  31 May 2016; Tobias Klausmann <klausman@gentoo.org> ruby-2.0.0_p648.ebuild:
+  2.0.0_p648-r0: add alpha keyword
+
+  Gentoo-Bug: 568502
+
+  Package-Manager: portage-2.3.0_rc1
+
+  31 May 2016; Tobias Klausmann <klausman@gentoo.org> ruby-2.1.9.ebuild:
+  2.1.9-r0: add alpha keyword
+
+  Gentoo-Bug: 568502
+
+  Package-Manager: portage-2.3.0_rc1
+
+  31 May 2016; Agostino Sarubbo <ago@gentoo.org> ruby-2.0.0_p648.ebuild,
+  ruby-2.1.9.ebuild:
+  amd64 stable wrt bug #568502
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  31 May 2016; Agostino Sarubbo <ago@gentoo.org> ruby-2.0.0_p648.ebuild,
+  ruby-2.1.9.ebuild:
+  x86 stable wrt bug #568502
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  03 Jun 2016; Jeroen Roovers <jer@gentoo.org> ruby-2.0.0_p648.ebuild:
+  Stable for PPC64 (bug #568502).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  03 Jun 2016; Jeroen Roovers <jer@gentoo.org> ruby-2.1.9.ebuild:
+  Stable for PPC64 (bug #568502).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  04 Jun 2016; Markus Meier <maekke@gentoo.org> ruby-2.0.0_p648.ebuild:
+  arm stable, bug #568502
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  04 Jun 2016; Markus Meier <maekke@gentoo.org> ruby-2.1.9.ebuild:
+  arm stable, bug #568502
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  06 Jun 2016; Hans de Graaff <graaff@gentoo.org> ruby-2.1.9.ebuild,
+  ruby-2.1.10.ebuild, ruby-2.2.5.ebuild, ruby-2.3.0.ebuild, ruby-2.3.1.ebuild:
+  fix bootstrap build on uclibc
+
+  With a blank LIBPATHENV the ruby build tools fall back to using LD_PRELOAD
+  to load libruby.so during the build process. With uclibc, preloading is
+  now optional and not enabled at least in the vanilla stage3 that we
+  produce. This causes the build to fail since there are no options left
+  to find libruby.so.
+
+  Fixed by adding ${S} to the temporary LD_LIBRARY_PATH during the install
+  phase. Thanks to blueness for the original patch.
+
+  Fixes bug 564272
+
+  Package-Manager: portage-2.2.28
+
+  11 Jun 2016; Jeroen Roovers <jer@gentoo.org> ruby-2.0.0_p648.ebuild:
+  Stable for HPPA (bug #568502).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  20 Jun 2016; Hans de Graaff <graaff@gentoo.org> ruby-2.1.10.ebuild,
+  ruby-2.2.5.ebuild, ruby-2.3.1.ebuild:
+  add back tk support
+
+  Initial patches by  Arfrever Frehtes Taifersar Arahesis
+  in bug 497130
+
+  Package-Manager: portage-2.2.28
+
+  21 Jun 2016; Jeroen Roovers <jer@gentoo.org> ruby-2.1.9.ebuild:
+  Stable for HPPA (bug #568502).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> ruby-2.0.0_p648.ebuild,
+  ruby-2.1.9.ebuild:
+  ppc stable wrt bug #568502
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> ruby-2.0.0_p648.ebuild,
+  ruby-2.1.9.ebuild:
+  sparc stable wrt bug #568502
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> ruby-2.0.0_p648.ebuild,
+  ruby-2.1.9.ebuild:
+  ia64 stable wrt bug #568502
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Jul 2016; Hans de Graaff <graaff@gentoo.org> -ruby-2.0.0_p647-r1.ebuild,
+  -ruby-2.1.7.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+  31 Aug 2016; Lars Wendler <polynomial-c@gentoo.org> ruby-2.0.0_p648.ebuild,
+  ruby-2.1.9.ebuild, ruby-2.1.10.ebuild, ruby-2.2.5.ebuild, ruby-2.3.0.ebuild,
+  ruby-2.3.1.ebuild:
+  Added sub-slot dependency on dev-libs/openssl.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  19 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> ruby-2.0.0_p648.ebuild,
+  ruby-2.1.9.ebuild, ruby-2.1.10.ebuild, ruby-2.2.5.ebuild, ruby-2.3.0.ebuild,
+  ruby-2.3.1.ebuild:
+  Added sub-slot dependency for sys-libs/readline.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  02 Oct 2016; Hans de Graaff <graaff@gentoo.org> -ruby-2.3.0.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+
+  02 Oct 2016; Hans de Graaff <graaff@gentoo.org> ruby-2.0.0_p648.ebuild,
+  ruby-2.1.9.ebuild, ruby-2.1.10.ebuild, ruby-2.2.5.ebuild:
+  Use rm -f consistently, addressing bug 594206
+
+  Package-Manager: portage-2.3.0
+
+*ruby-2.3.2 (16 Nov 2016)
+*ruby-2.2.6 (16 Nov 2016)
+
+  16 Nov 2016; Hans de Graaff <graaff@gentoo.org> +ruby-2.2.6.ebuild,
+  +ruby-2.3.2.ebuild:
+  add 2.2.6 and 2.3.2
+
+  Package-Manager: portage-2.3.0
+

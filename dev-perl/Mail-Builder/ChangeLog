@@ -64,3 +64,25 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Mail-Builder-2.90.0 (27 Feb 2016)
+
+  27 Feb 2016; Kent Fredric <kentfredric@gmail.com>
+  +Mail-Builder-2.90.0.ebuild:
+  Bump to version 2.90.0
+
+  - use EAPI6
+
+  Package-Manager: portage-2.2.27
+
+  22 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Mail-Builder-2.80.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  09 Sep 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/1.16-escape-at-for-perl-5.8.patch:
+  remove unused patch.
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

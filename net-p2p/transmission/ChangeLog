@@ -172,3 +172,108 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*transmission-2.90 (04 Mar 2016)
+
+  04 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  +files/transmission-daemon.initd.10, +transmission-2.90.ebuild:
+  Bump to 2.90
+
+  Also modernize the init script.
+
+  Package-Manager: portage-2.2.27_p64
+
+*transmission-2.90-r1 (06 Mar 2016)
+
+  06 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  files/transmission-daemon.initd.10, -transmission-2.90.ebuild,
+  +transmission-2.90-r1.ebuild:
+  Don't clobber download directory setting
+
+  Bug: https://bugs.gentoo.org/576640
+
+  Package-Manager: portage-2.2.27_p64
+
+*transmission-2.92 (08 Mar 2016)
+
+  08 Mar 2016; Mike Gilbert <floppym@gentoo.org> +transmission-2.92.ebuild:
+  Bump to 2.92
+
+  Package-Manager: portage-2.2.27_p81
+
+  16 Mar 2016; Mike Gilbert <floppym@gentoo.org> +files/libsystemd.patch,
+  transmission-2.92.ebuild:
+  Fix building against recent libsystemd
+
+  Package-Manager: portage-2.2.28_p60
+
+  16 Mar 2016; Mike Gilbert <floppym@gentoo.org> transmission-2.92.ebuild:
+  Fix build with xfsprogs-4.5.0
+
+  Bug: https://bugs.gentoo.org/577528
+
+  Package-Manager: portage-2.2.28_p60
+
+  27 Mar 2016; Mike Gilbert <floppym@gentoo.org> transmission-2.92.ebuild:
+  Fix m4 error when running aclocal
+
+  Package-Manager: portage-2.2.28_p64
+
+  03 Apr 2016; Mike Gilbert <floppym@gentoo.org>
+  files/transmission-daemon.confd.4:
+  Remove default TRANSMISSION_OPTIONS setting
+
+  Bug: https://bugs.gentoo.org/578920
+
+  23 Apr 2016; Mike Gilbert <floppym@gentoo.org> transmission-2.92.ebuild:
+  Create /var/lib/transmission in postinst
+
+  The openrc init script normally creates this, but this does not work for
+  systemd users.
+
+  Bug: https://bugs.gentoo.org/580932
+
+  Package-Manager: portage-2.2.28_p70
+
+  24 Apr 2016; Mike Gilbert <floppym@gentoo.org>
+  +files/transmission-daemon.service.conf, transmission-2.92.ebuild:
+  systemd: Move config-dir to a service.d file
+
+  Package-Manager: portage-2.2.28_p71
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/transmission-daemon.initd.9:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #131259
+
+  Package-Manager: portage-2.3.0
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> transmission-2.92.ebuild:
+  amd64 stable wrt bug #586648
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  07 Oct 2016; Mike Gilbert <floppym@gentoo.org> -transmission-2.84-r5.ebuild,
+  -transmission-2.90-r1.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.1_p6
+
+*transmission-2.92-r1 (23 Oct 2016)
+
+  23 Oct 2016; Mike Gilbert <floppym@gentoo.org> +transmission-2.92-r1.ebuild:
+  Drop USE=qt4, one REQUIRED_USE down
+
+  DOCS to array
+  ED remove double slash
+  ROOT -> EROOT
+  Dropped several subslot operators where there are none
+  Add subslot operator to libressl RDEPEND
+  append-cppflags -> append-lfs-flags
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2645
+

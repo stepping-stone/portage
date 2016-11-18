@@ -63,3 +63,36 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  31 Mar 2016; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml:
+  drop myself from metadata.xml
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Matthew Thode <prometheanfire@gentoo.org> rtslib-9999.ebuild:
+  add conflict with rtslib-fb for bug 580378
+
+  Package-Manager: portage-2.2.26
+
+  02 Sep 2016; Patrice Clement <monsieurp@gentoo.org> rtslib-9999.ebuild:
+  update live ebuild
+
+  * Bump to EAPI 6
+  * Update git repository URI
+  * Change license to Apache-2.0
+  * Add DEPEND on dev-python/pyparsing
+
+  Closes: https://github.com/gentoo/gentoo/pull/2034
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*rtslib-3.0_pre4 (02 Sep 2016)
+
+  02 Sep 2016; Patrice Clement <monsieurp@gentoo.org> +rtslib-3.0_pre4.ebuild:
+  add version 3.0_pre4
+
+  Gentoo-Bug: https://bugs.gentoo.org/453272
+  Reported-by: Andrew Hamilton <andrew@ahamilto.net>
+  Closes: https://github.com/gentoo/gentoo/pull/2034
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

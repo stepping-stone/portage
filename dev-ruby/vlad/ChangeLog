@@ -65,3 +65,26 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -vlad-2.6.3.ebuild,
+  -vlad-2.6.4.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+  06 Mar 2016; Manuel Rüger <mrueg@gentoo.org> vlad-2.6.5.ebuild:
+  Fix Homepage, remove old
+
+  Package-Manager: portage-2.2.27
+
+*vlad-2.7.0 (15 Jun 2016)
+
+  15 Jun 2016; Hans de Graaff <graaff@gentoo.org> +vlad-2.7.0.ebuild:
+  add 2.7.0
+
+  Package-Manager: portage-2.2.28
+
+  09 Nov 2016; Manuel Rüger <mrueg@gentoo.org> -vlad-2.6.5.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.2
+

@@ -76,3 +76,168 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*buildbot-0.8.12-r2 (30 Mar 2016)
+
+  30 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  -buildbot-0.8.12-r1.ebuild, +buildbot-0.8.12-r2.ebuild,
+  files/buildmaster.initd:
+  Bumped to 0.8.12-r2. Removed 0.8.12-r1.
+
+  Bumped version from 0.8.12-r1 to 0.8.12-r2, due to updated initd file. The
+  initd file now supports multiple instances of buildmaster.
+
+  Gentoo-Bug: https://bugs.gentoo.org/570666
+  Closes: https://github.com/gentoo/gentoo/pull/1027
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  buildbot-0.8.12-r2.ebuild, +files/buildmaster.target,
+  +files/buildmaster_at.service, +files/buildmaster_at.service.conf:
+  Added support for multiple service instances when using systemd.
+
+  This commit adds support for starting multiple buildmaster instances using
+  systemd. A service configuration file allows to specify the filesystem
+  location
+  of the buildmaster instances. A systemd target allows to start up or shut
+  down
+  all buildmaster instances at once.
+
+  Gentoo-Bug: https://bugs.gentoo.org/570666
+  Closes: https://github.com/gentoo/gentoo/pull/1027
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  buildbot-0.8.12-r2.ebuild:
+  Version migration elog message not displayed on fresh install.
+
+  Hides the elog notification about migrating to a new version of buildbot, if
+  there was no previous version installed.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1027
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  buildbot-0.8.12-r2.ebuild:
+  Added pkg_config.
+
+  buildbot-0.8.12-r2 supports the use of emerge --config to create instances
+  of
+  buildmaster.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1027
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  buildbot-0.8.12-r2.ebuild:
+  Added migration guide and updated setup instructions.
+
+  buildbot-0.8.12-r2 prints ewarn messages when migrating from a previous
+  version. The messages describe the necessary steps to migrate properly. In
+  addition to this, the user is notified of the support for emerge --config
+  and
+  DOC_CONTENT was updated to point to the possibility of using it.
+
+  This string of 5 commits merges gentoo/gentoo#1027 and solves bug #570666.
+
+  Gentoo-Bug: https://bugs.gentoo.org/570666
+  Acked-By: Markos Chandras hwoarang@gentoo.org>
+  Closes: https://github.com/gentoo/gentoo/pull/1027
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/buildmaster.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*buildbot-0.9.0_rc1 (09 Aug 2016)
+
+  09 Aug 2016; Brian Dolbec <dolsen@gentoo.org> +buildbot-0.9.0_rc1.ebuild,
+  buildbot-9999.ebuild, +files/buildbot9..service, +files/buildmaster.confd.9,
+  +files/buildmaster.initd.9, metadata.xml:
+  Version bump, update live ebuild
+
+  This version is a major change from previous version.
+
+  10 Aug 2016; Brian Dolbec <dolsen@gentoo.org> -files/buildbot9..service,
+  +files/buildbot9.service:
+  Fix typo in files/buildbot9.service filename bug 590958
+
+  Package-Manager: portage-2.3.0
+
+*buildbot-0.9.1_rc1-r1 (11 Aug 2016)
+
+  11 Aug 2016; Brian Dolbec <dolsen@gentoo.org> -buildbot-0.9.0_rc1.ebuild,
+  +buildbot-0.9.1_rc1-r1.ebuild, buildbot-9999.ebuild,
+  -files/buildbot9.service, -files/buildmaster.confd.9,
+  -files/buildmaster.initd.9:
+  Update the 0.9.0_rc1 and 9999 versions with changes made in 0.8.12-r2
+
+  Clean up the files/ directory, remove the no longer needed .9 versions of
+  the files.
+
+  Package-Manager: portage-2.3.0
+
+*buildbot-0.9.0_rc1-r1 (12 Aug 2016)
+
+  12 Aug 2016; Brian Dolbec <dolsen@gentoo.org> +buildbot-0.9.0_rc1-r1.ebuild,
+  -buildbot-0.9.1_rc1-r1.ebuild:
+  Fix bad version in previous revision bump
+
+  Package-Manager: portage-2.3.0
+
+*buildbot-0.9.0_rc1-r2 (17 Aug 2016)
+*buildbot-0.8.12-r3 (17 Aug 2016)
+
+  17 Aug 2016; Brian Dolbec <dolsen@gentoo.org> -buildbot-0.8.12-r2.ebuild,
+  +buildbot-0.8.12-r3.ebuild, -buildbot-0.9.0_rc1-r1.ebuild,
+  +buildbot-0.9.0_rc1-r2.ebuild, files/buildmaster.initd:
+  Use python2 in the buildmaster.initd startup (bug 591150)
+
+  This allows a proper startup if a python3 version is the system default.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Brian Dolbec <dolsen@gentoo.org>
+
+*buildbot-0.9.0_rc2 (01 Sep 2016)
+
+  01 Sep 2016; Brian Dolbec <dolsen@gentoo.org> +buildbot-0.9.0_rc2.ebuild,
+  buildbot-9999.ebuild:
+  Version bump, syncronize deps in 9999
+
+  Package-Manager: portage-2.3.0
+
+*buildbot-0.9.0_rc3 (23 Sep 2016)
+
+  23 Sep 2016; Brian Dolbec <dolsen@gentoo.org> +buildbot-0.9.0_rc3.ebuild:
+  Version bump, fixes some deps as well
+
+  Package-Manager: portage-2.3.1
+
+*buildbot-0.9.0_p1 (07 Oct 2016)
+
+  07 Oct 2016; Brian Dolbec <dolsen@gentoo.org> -buildbot-0.9.0_rc1-r2.ebuild,
+  -buildbot-0.9.0_rc2.ebuild, +buildbot-0.9.0_p1.ebuild:
+  Version bump, clean up old releases
+
+  Package-Manager: portage-2.3.1_p8
+
+  12 Oct 2016; Brian Dolbec <dolsen@gentoo.org> buildbot-0.9.0_rc3.ebuild,
+  buildbot-0.9.0_p1.ebuild, buildbot-9999.ebuild:
+  Update the twisted dep order to prefer the new twisted pkg
+
+  With the new twisted pkg now in the tree, prefer the new pkg.
+  There will be no new releases of  the split pkgs.
+
+  Package-Manager: portage-2.3.2
+
+*buildbot-0.9.1 (08 Nov 2016)
+
+  08 Nov 2016; Brian Dolbec <dolsen@gentoo.org> -buildbot-0.9.0_rc3.ebuild,
+  +buildbot-0.9.1.ebuild:
+  Version bump, remove rc version
+
+  Package-Manager: portage-2.3.2_p3
+

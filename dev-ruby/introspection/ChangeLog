@@ -63,3 +63,43 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  21 Mar 2016; Hans de Graaff <graaff@gentoo.org> introspection-0.0.3.ebuild:
+  drop ruby19
+
+  Package-Manager: portage-2.2.26
+
+  21 Mar 2016; Hans de Graaff <graaff@gentoo.org> introspection-0.0.3.ebuild:
+  add ruby23
+
+  Package-Manager: portage-2.2.26
+
+  14 Aug 2016; Markus Meier <maekke@gentoo.org> introspection-0.0.3.ebuild:
+  arm stable, bug #589432
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  22 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  introspection-0.0.3.ebuild:
+  0.0.3-r0: add alpha keyword
+
+  Gentoo-Bug: 589432
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> introspection-0.0.3.ebuild:
+  Stable for HPPA (bug #575600).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*introspection-0.0.4 (01 Nov 2016)
+
+  01 Nov 2016; Hans de Graaff <graaff@gentoo.org> +introspection-0.0.4.ebuild:
+  add 0.0.4
+
+  Package-Manager: portage-2.3.0
+
+  06 Nov 2016; Hans de Graaff <graaff@gentoo.org> introspection-0.0.3.ebuild:
+  amd64 stable, bug 589432
+
+  Package-Manager: portage-2.3.0
+

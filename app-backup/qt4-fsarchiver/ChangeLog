@@ -62,3 +62,16 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  12 Mar 2016; Tim Harder <radhermit@gentoo.org>
+  qt4-fsarchiver-0.6.19.6.ebuild, qt4-fsarchiver-0.6.19.7.ebuild:
+  various sys-fs/sshfs-fuse -> sys-fs/sshfs pkgmove updates
+
+  25 Aug 2016; Tim Harder <radhermit@gentoo.org>
+  qt4-fsarchiver-0.6.19.6.ebuild, qt4-fsarchiver-0.6.19.7.ebuild:
+  net-fs/sshfs: moved from sys-fs/sshfs
+

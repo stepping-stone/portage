@@ -92,3 +92,73 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  29 Feb 2016; Kent Fredric <kentfredric@gmail.com> rt-4.2.12.ebuild:
+  Fix dependency on dev-perl/Locale-Maketext-Fuzzy
+
+  Package-Manager: portage-2.2.27
+
+*rt-4.2.12-r1 (29 Feb 2016)
+
+  29 Feb 2016; Kent Fredric <kentfredric@gmail.com> -rt-4.2.12.ebuild,
+  +rt-4.2.12-r1.ebuild:
+  Empty -r1 bump to propagate dep change w/o dyndeps
+
+  Package-Manager: portage-2.2.27
+
+  09 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org> rt-4.2.12-r1.ebuild:
+  Fix dependency on dev-perl/Net-Server
+
+  Package-Manager: portage-2.2.27
+
+  10 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org> rt-4.2.12-r1.ebuild:
+  Fix dependency on dev-perl/Date-Manip
+
+  Package-Manager: portage-2.2.27
+
+  23 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org> rt-4.2.12-r1.ebuild:
+  Fix dependency on dev-perl/Time-ParseDate
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="alpha amd64 amd64-fbsd arm arm64 hppa
+  ia64 m68k mips nios2 ppc ppc64 riscv s390 sh sparc sparc-fbsd x86 x86-fbsd"
+
+  26 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org> rt-4.2.12-r1.ebuild:
+  Fix dependency on dev-perl/Text-Template
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="alpha amd64 amd64-fbsd arm arm64 hppa
+  ia64 m68k mips nios2 ppc ppc64 riscv s390 sh sparc sparc-fbsd x86 x86-fbsd"
+
+  26 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org> rt-4.2.12-r1.ebuild:
+  Fix dependency on dev-perl/Text-Wrapper
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="alpha amd64 amd64-fbsd arm arm64 hppa
+  ia64 m68k mips nios2 ppc ppc64 riscv s390 sh sparc sparc-fbsd x86 x86-fbsd"
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/rt.init.d.2:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  02 Aug 2016; Kent Fredric <kentnl@gentoo.org> rt-4.2.12-r1.ebuild:
+  Fix dependency on dev-perl/Regexp-Common
+
+  Part of Capitalization Migration
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="alpha amd64 amd64-fbsd arm arm64 hppa
+  ia64 m68k mips nios2 ppc ppc64 riscv s390 sh sparc sparc-fbsd x86 x86-fbsd"
+
+  12 Sep 2016; Kent Fredric <kentnl@gentoo.org> rt-4.2.12-r1.ebuild:
+  Fix dependency on dev-perl/DBIx-SearchBuilder
+
+  Package-Manager: portage-2.3.0
+
+*rt-4.4.1 (20 Sep 2016)
+
+  20 Sep 2016; Aaron W. Swenson <titanofold@gentoo.org> +rt-4.4.1.ebuild:
+  Version Bump
+
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+

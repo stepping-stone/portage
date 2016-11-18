@@ -70,3 +70,40 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Apr 2016; Manuel Rüger <mrueg@gentoo.org> fakeweb-1.3.0-r1.ebuild,
+  fakeweb-1.3.0-r2.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+  28 Sep 2016; Tobias Klausmann <klausman@gentoo.org> fakeweb-1.3.0-r2.ebuild:
+  1.3.0-r2: keyworded for ~alpha
+
+  Gentoo-Bug: 592756
+
+*fakeweb-1.3.0.20131201 (03 Nov 2016)
+
+  03 Nov 2016; Hans de Graaff <graaff@gentoo.org>
+  +fakeweb-1.3.0.20131201.ebuild, +files/fakeweb-ruby22.patch:
+  add snapshot with ruby22 support
+
+  Package-Manager: portage-2.3.0
+
+*fakeweb-1.3.0.20131201-r1 (08 Nov 2016)
+
+  08 Nov 2016; Manuel Rüger <mrueg@gentoo.org>
+  +fakeweb-1.3.0.20131201-r1.ebuild, +files/fakeweb-ruby23.patch:
+  Add ruby23
+
+  Package-Manager: portage-2.3.2
+
+  13 Nov 2016; Hans de Graaff <graaff@gentoo.org> fakeweb-1.3.0-r2.ebuild:
+  amd64 stable ruby21 revision
+
+  Package-Manager: portage-2.3.0
+
+  14 Nov 2016; Hans de Graaff <graaff@gentoo.org> -fakeweb-1.3.0-r1.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+

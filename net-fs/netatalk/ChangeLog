@@ -90,3 +90,58 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  18 Mar 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove duplicate USE=pgp description
+
+  11 May 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/netatalk-3.1.8-disable-ld-library-path.patch, netatalk-3.1.8.ebuild:
+  fix crashes w/newer binutils #564350
+
+  11 May 2016; Mike Frysinger <vapier@gentoo.org> netatalk-3.1.8.ebuild:
+  simplify configure a bit
+
+  Newer EAPI handles the silent rules for us.
+
+  The REQUIRED_USE settings handles the acl/ldap logic,
+  so no need to duplicate the checks.
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org>
+  files/netatalk-3.1.7-zeroconf-prefer-native-Avahi-support.patch:
+  sourceforge: switch to https:// URIs
+
+  02 Oct 2016; Pacho Ramos <pacho@gentoo.org> netatalk-3.1.8.ebuild:
+  Use zeroconf instead of avahi USE flag (#477620)
+
+  Package-Manager: portage-2.3.1
+
+*netatalk-3.1.10 (23 Oct 2016)
+
+  23 Oct 2016; Justin Lecher <jlec@gentoo.org> +netatalk-3.1.10.ebuild:
+  Version Bump
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+  23 Oct 2016; Justin Lecher <jlec@gentoo.org> netatalk-3.1.6.ebuild,
+  -netatalk-3.1.7.ebuild, netatalk-3.1.7-r1.ebuild, netatalk-3.1.8.ebuild,
+  netatalk-3.1.10.ebuild:
+  Properly use REPLACING_VERSIONS
+
+  Drop old
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=589486
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+  26 Oct 2016; Markus Meier <maekke@gentoo.org> netatalk-3.1.8.ebuild:
+  arm stable, bug #595662
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

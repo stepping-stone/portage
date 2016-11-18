@@ -98,3 +98,43 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*typhoeus-1.0.1 (28 Feb 2016)
+
+  28 Feb 2016; Hans de Graaff <graaff@gentoo.org> +typhoeus-1.0.1.ebuild:
+  add 1.0.1
+
+  Package-Manager: portage-2.2.26
+
+  17 Apr 2016; Manuel Rüger <mrueg@gentoo.org> typhoeus-0.7.3.ebuild,
+  typhoeus-0.8.0.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+  30 Apr 2016; Hans de Graaff <graaff@gentoo.org> -typhoeus-0.7.3.ebuild,
+  -typhoeus-0.8.0.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.26
+
+*typhoeus-1.0.2 (30 Apr 2016)
+
+  30 Apr 2016; Hans de Graaff <graaff@gentoo.org> +typhoeus-1.0.2.ebuild:
+  add 1.0.2
+
+  Package-Manager: portage-2.2.26
+
+*typhoeus-1.1.0 (24 Jul 2016)
+
+  24 Jul 2016; Hans de Graaff <graaff@gentoo.org> +typhoeus-1.1.0.ebuild:
+  add 1.1.0
+
+  Package-Manager: portage-2.2.28
+
+*typhoeus-0.6.9 (05 Aug 2016)
+
+  05 Aug 2016; Christoph Junghans <ottxor@gentoo.org> +typhoeus-0.6.9.ebuild:
+  bring back 0.6.9 (bug #578458)
+
+  Package-Manager: portage-2.2.28
+

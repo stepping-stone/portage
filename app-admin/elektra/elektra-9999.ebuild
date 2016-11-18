@@ -1,17 +1,17 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit cmake-multilib eutils java-pkg-opt-2 git-r3
 
-DESCRIPTION="Universal and secure framework to store config parameters in a hierarchical key-value pair mechanism"
-HOMEPAGE="http://freedesktop.org/wiki/Software/Elektra"
+DESCRIPTION="Framework to store config parameters in hierarchical key-value pairs"
+HOMEPAGE="https://freedesktop.org/wiki/Software/Elektra"
 EGIT_REPO_URI="git://github.com/ElektraInitiative/libelektra.git"
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS=""
 PLUGIN_IUSE="augeas iconv ini java simpleini syslog systemd tcl +uname xml yajl";
 IUSE="dbus doc qt5 static-libs test ${PLUGIN_IUSE}"
@@ -23,10 +23,10 @@ RDEPEND="dev-libs/libltdl:0[${MULTILIB_USEDEP}]
 	iconv? ( >=virtual/libiconv-0-r1[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jdk-1.8.0 )
 	qt5? (
-		>=dev-qt/qtdeclarative-5.3:5
-		>=dev-qt/qtgui-5.3:5
-		>=dev-qt/qttest-5.3:5
-		>=dev-qt/qtwidgets-5.3:5
+		dev-qt/qtdeclarative:5
+		dev-qt/qtgui:5
+		dev-qt/qttest:5
+		dev-qt/qtwidgets:5
 	)
 	uname? ( sys-apps/coreutils )
 	systemd? ( sys-apps/systemd[${MULTILIB_USEDEP}] )
@@ -41,7 +41,7 @@ RESTRICT="test"
 
 MULTILIB_WRAPPED_HEADERS=( /usr/include/elektra/kdbconfig.h )
 
-PATCHES=( "${FILESDIR}/${PN}"-0.8.11-conditional-glob-tests.patch )
+PATCHES=( "${FILESDIR}/${PN}"-0.8.15-conditional-glob-tests.patch )
 
 src_prepare() {
 	cmake-utils_src_prepare
@@ -56,8 +56,8 @@ src_prepare() {
 		-i cmake/ElektraCache.cmake || die
 
 	# avoid useless build time, nothing ends up installed
-	comment_add_subdirectory benchmarks
-	comment_add_subdirectory examples
+	cmake_comment_add_subdirectory benchmarks
+	cmake_comment_add_subdirectory examples
 }
 
 multilib_src_configure() {
@@ -96,17 +96,16 @@ multilib_src_configure() {
 		use qt5 && my_tools+=";qt-gui"
 	fi
 
-	mycmakeargs=(
-		"-DBUILD_SHARED=ON"
-		"-DPLUGINS=${my_plugins}"
-		"-DTOOLS=${my_tools}"
-		"-DLATEX_COMPILER=OFF"
-		"-DTARGET_CMAKE_FOLDER=share/cmake/Modules"
-		$(multilib_is_native_abi && cmake-utils_use doc BUILD_DOCUMENTATION \
-			|| echo -DBUILD_DOCUMENTATION=OFF)
-		$(cmake-utils_use static-libs BUILD_STATIC)
-		$(cmake-utils_use test BUILD_TESTING)
-		$(cmake-utils_use test ENABLE_TESTING)
+	local mycmakeargs=(
+		-DBUILD_PDF=OFF
+		-DBUILD_SHARED=ON
+		-DBUILD_STATIC=$(usex static-libs)
+		-DBUILD_TESTING=$(usex test)
+		-DENABLE_TESTING=$(usex test)
+		-DPLUGINS=${my_plugins}
+		-DTOOLS=${my_tools}
+		-DBUILD_DOCUMENTATION=$(multilib_is_native_abi && usex doc || echo no)
+		-DTARGET_CMAKE_FOLDER=share/cmake/Modules
 	)
 
 	cmake-utils_src_configure
@@ -114,7 +113,7 @@ multilib_src_configure() {
 
 multilib_src_install_all() {
 	einfo remove test_data
-	rm -rvf "${D}/usr/share/${PN}" || die "Failed to remove test_data"
+	rm -rvf "${ED%/}/usr/share/${PN}" || die "Failed to remove test_data"
 	einfo remove tool_exec
-	rm -rvf "${D}/usr/$(get_libdir)/${PN}/tool_exec" || die "Failed to remove tool_exec"
+	rm -rvf "${ED%/}/usr/$(get_libdir)/${PN}/tool_exec" || die "Failed to remove tool_exec"
 }

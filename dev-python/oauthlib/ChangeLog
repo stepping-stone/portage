@@ -76,3 +76,36 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  oauthlib-1.0.1.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*oauthlib-1.0.3 (02 Mar 2016)
+
+  02 Mar 2016; Patrick Lauer <patrick@gentoo.org> +oauthlib-1.0.3.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+*oauthlib-1.1.2 (30 Sep 2016)
+
+  30 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +oauthlib-1.1.2.ebuild:
+  add initial support for newton (keystone)
+
+  dropped py3.3 and updated most (maybe all) to eapi6
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> oauthlib-0.7.2.ebuild,
+  oauthlib-1.0.1.ebuild, oauthlib-1.0.3.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  oauthlib-1.1.2.ebuild:
+  1.1.2 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

@@ -73,3 +73,20 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 Mar 2016; Sébastien Fabbro <bicatali@gentoo.org> toolz-0.7.4.ebuild:
+  Add python-3.5 compat
+
+  Package-Manager: portage-2.2.28
+
+*toolz-0.8.0 (29 Jun 2016)
+
+  29 Jun 2016; Patrick Lauer <patrick@gentoo.org> +toolz-0.8.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> toolz-0.7.0.ebuild,
+  toolz-0.7.1.ebuild, toolz-0.7.2.ebuild, toolz-0.7.4.ebuild,
+  toolz-0.8.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

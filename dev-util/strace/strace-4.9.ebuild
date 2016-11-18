@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -7,7 +7,8 @@ EAPI="4"
 inherit flag-o-matic eutils
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://strace.git.sourceforge.net/gitroot/strace/strace"
+	EGIT_REPO_URI="git://git.code.sf.net/p/strace/code"
+	EGIT_PROJECT="${PN}"
 	inherit git-2 autotools
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
@@ -15,7 +16,7 @@ else
 fi
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"
-HOMEPAGE="http://sourceforge.net/projects/strace/"
+HOMEPAGE="https://sourceforge.net/projects/strace/"
 
 LICENSE="BSD"
 SLOT="0"
@@ -40,6 +41,9 @@ src_prepare() {
 	use static && append-ldflags -static
 
 	export ac_cv_header_libaio_h=$(usex aio)
+
+	# Stub out the -k test since it's known to be flaky. #545812
+	sed -i '1iexit 77' tests*/strace-k.test || die
 }
 
 src_configure() {

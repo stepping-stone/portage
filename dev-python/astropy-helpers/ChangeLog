@@ -108,3 +108,32 @@
 
   Package-Manager: portage-2.2.27
 
+*astropy-helpers-1.1.2 (18 Mar 2016)
+
+  18 Mar 2016; Sébastien Fabbro <bicatali@gentoo.org>
+  +astropy-helpers-1.1.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.27
+
+  09 Jun 2016; Sébastien Fabbro <bicatali@gentoo.org>
+  -astropy-helpers-1.0.6.ebuild, -astropy-helpers-1.1.1.ebuild,
+  astropy-helpers-1.1.2.ebuild:
+  dropping python-3.3 to sync with astropy
+
+  Package-Manager: portage-2.3.0_rc1
+
+*astropy-helpers-1.2 (31 Aug 2016)
+
+  31 Aug 2016; Sébastien Fabbro <bicatali@gentoo.org>
+  +astropy-helpers-1.2.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0
+
+  01 Sep 2016; Sébastien Fabbro <bicatali@gentoo.org>
+  astropy-helpers-1.2.ebuild:
+  fix xdg sandbox violation (bug #587700)
+
+  Package-Manager: portage-2.3.0
+

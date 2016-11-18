@@ -201,3 +201,50 @@
   enlightenment-0.17.9999.ebuild, +enlightenment-0.20.5.ebuild:
   version bump to 0.20.5 #573784
 
+  02 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  -enlightenment-0.18.8.ebuild, -enlightenment-0.19.10.ebuild,
+  -enlightenment-1.0.11.ebuild:
+  drop old versions
+
+*enlightenment-0.20.6 (02 Apr 2016)
+
+  02 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  +enlightenment-0.20.6.ebuild:
+  version bump to 0.20.6 #578228
+
+  02 Apr 2016; Mike Frysinger <vapier@gentoo.org> enlightenment-0.20.5.ebuild:
+  mark 0.20.5 stable
+
+  05 May 2016; Mike Frysinger <vapier@gentoo.org> enlightenment-0.20.5.ebuild,
+  enlightenment-0.20.6.ebuild:
+  update wayland dep to reflect source #581744
+
+  05 May 2016; Mike Frysinger <vapier@gentoo.org>
+  -enlightenment-0.19.12.ebuild, -enlightenment-0.20.1.ebuild,
+  -enlightenment-0.20.2.ebuild:
+  drop old <0.20.5 versions
+
+  08 May 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag descriptions from metadata.xml
+
+  Package-Manager: portage-2.2.28
+
+  12 Jun 2016; Patrick Lauer <patrick@gentoo.org> enlightenment-0.20.5.ebuild,
+  enlightenment-0.20.6.ebuild:
+  Fix keywording #342185
+
+  Package-Manager: portage-2.3.0_rc1
+
+  10 Nov 2016; Mike Frysinger <vapier@gentoo.org>
+  enlightenment-0.17.9999.ebuild, enlightenment-0.20.5.ebuild,
+  enlightenment-0.20.6.ebuild:
+  drop USE=udev flag
+
+  Upstream doesn't expect mount-eeze to ever be disabled,
+  so drop the option to allow it to be.
+
+  10 Nov 2016; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  drop description for 'udev'
+
+  Package-Manager: portage-2.3.2_p5
+

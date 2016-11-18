@@ -65,3 +65,103 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  21 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-9999.ebuild:
+  remove old elog messages
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-9999.ebuild:
+  remove unused dependencies
+
+  CMake can now handle automoc directly. xz-utils for unpacking can be assumed
+  from the base profile now.
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-9999.ebuild:
+  update LICENSE to be more accurate
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-9999.ebuild:
+  update HOMEPAGE
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-9999.ebuild:
+  remove S override that is no longer required
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-9999.ebuild:
+  whitespace
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-9999.ebuild:
+  port to EAPI 6
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-9999.ebuild:
+  reorganise variables that are set conditionally to appear in one block
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-9999.ebuild:
+  raise media-libs/phonon dependency
+
+  Package-Manager: portage-2.2.28
+
+*phonon-vlc-0.9.0 (21 Apr 2016)
+
+  21 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  +phonon-vlc-0.9.0.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+  24 Apr 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-0.9.0.ebuild:
+  drop ppc64 keyword due to unsatisfied dependencies
+
+  media-libs/phonon had its ppc64 keyword dropped in
+  b136d707464d2052d8442d8d8804b848a3a36060.
+
+  Package-Manager: portage-2.2.28
+
+  11 Jul 2016; Johannes Huber <johu@gentoo.org> phonon-vlc-0.9.0.ebuild:
+  Restore ppc64
+
+  Package-Manager: portage-2.3.0
+
+  22 Jul 2016; Michael Palimaka <kensington@gentoo.org>
+  phonon-vlc-0.9.0.ebuild:
+  amd64/x86 stable
+
+  Gentoo-bug: 587346
+
+  Package-Manager: portage-2.3.0
+
+  24 Jul 2016; Michael Palimaka <kensington@gentoo.org>
+  -phonon-vlc-0.8.2.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0
+
+  13 Oct 2016; Agostino Sarubbo <ago@gentoo.org> phonon-vlc-0.9.0.ebuild:
+  ppc stable wrt bug #587346
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

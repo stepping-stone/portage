@@ -74,3 +74,31 @@
 
   Package-Manager: portage-2.2.27
 
+  05 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> IO-Interface-1.90.0.ebuild:
+  amd64 stable wrt bug #576112
+
+  Package-Manager: portage-2.2.26
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> IO-Interface-1.90.0.ebuild:
+  x86 stable wrt bug #576112
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> IO-Interface-1.90.0.ebuild:
+  ppc stable wrt bug #576112
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 May 2016; Matt Turner <mattst88@gentoo.org> IO-Interface-1.90.0.ebuild:
+  alpha stable, bug 576112.
+
+  09 Jul 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -IO-Interface-1.60.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.0_rc1
+

@@ -79,3 +79,25 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Jun 2016; Mike Frysinger <vapier@gentoo.org>
+  files/gmic-1.6.5.0-makefile.patch, files/gmic-1.6.5.1-makefile.patch:
+  curl: switch to https:// URI
+
+*gmic-1.7.8 (29 Oct 2016)
+
+  29 Oct 2016; Tim Harder <radhermit@gentoo.org>
+  +files/gmic-1.7.8-cmake.patch, +gmic-1.7.8.ebuild, metadata.xml:
+  version bump to 1.7.8
+
+  Move to using cmake for building and combine library/cli/gimp builds
+  into one ebuild.
+
+  29 Oct 2016; Tim Harder <radhermit@gentoo.org> gmic-1.7.8.ebuild:
+  fix phase ordering
+
+  29 Oct 2016; Tim Harder <radhermit@gentoo.org> gmic-1.7.8.ebuild:
+  only install man page if cli interface is installed
+
+  29 Oct 2016; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  update upstream metadata to use github
+

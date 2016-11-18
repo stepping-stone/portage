@@ -120,3 +120,24 @@
 
   Package-Manager: portage-2.2.27
 
+*easytag-2.4.2 (01 Mar 2016)
+
+  01 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> +easytag-2.4.2.ebuild:
+  Bump to version 2.4.2
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  01 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> -easytag-2.4.0.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  21 Jul 2016; Lars Wendler <polynomial-c@gentoo.org> easytag-2.1.8.ebuild,
+  easytag-2.2.6.ebuild, easytag-2.4.1.ebuild, easytag-2.4.2.ebuild:
+  media-libs/taglib-1.11 dropped mp4 USE flag.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

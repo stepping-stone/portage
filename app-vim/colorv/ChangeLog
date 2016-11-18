@@ -78,3 +78,16 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  13 Mar 2016; Tim Harder <radhermit@gentoo.org> colorv-3.0.2.ebuild:
+  add github homepage
+
+  13 Mar 2016; Tim Harder <radhermit@gentoo.org> -colorv-2.5.3.ebuild,
+  -colorv-2.5.6.ebuild:
+  remove old
+
+  25 Aug 2016; Patrice Clement <monsieurp@gentoo.org> colorv-3.0.2.ebuild:
+  Stable for amd64. Retroactively mark stable for the remaining arches using
+  the ALLARCHES policy.
+
+  Package-Manager: portage-2.2.28
+

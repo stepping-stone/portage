@@ -60,3 +60,21 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*dial-1.2-r2 (24 Aug 2016)
+
+  24 Aug 2016; Michael Orlitzky <mjo@gentoo.org> +dial-1.2-r2.ebuild:
+  new revision with EAPI=6.
+
+  By moving to EAPI=6, this new revision (-r2) allows us to drop the
+  eutils eclass, and the src_prepare/src_install phases. As a byproduct,
+  einstall is no longer used.
+
+  Gentoo-Bug: 521578
+
+  Package-Manager: portage-2.2.28
+

@@ -69,3 +69,53 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  20 Apr 2016; Hans de Graaff <graaff@gentoo.org> metaclass-0.0.1-r1.ebuild:
+  add ruby21
+
+  Package-Manager: portage-2.2.26
+
+  25 Apr 2016; Manuel Rüger <mrueg@gentoo.org> metaclass-0.0.1-r1.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+  01 May 2016; Markus Meier <maekke@gentoo.org> metaclass-0.0.4.ebuild:
+  arm stable, bug #580578
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> metaclass-0.0.4.ebuild:
+  amd64 stable wrt bug #580578
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  31 May 2016; Tobias Klausmann <klausman@gentoo.org> metaclass-0.0.4.ebuild:
+  0.0.4-r0: add alpha keyword
+
+  Gentoo-Bug: 580578
+
+  Package-Manager: portage-2.3.0_rc1
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> metaclass-0.0.4.ebuild:
+  x86 stable wrt bug #580578
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> metaclass-0.0.4.ebuild:
+  ppc stable wrt bug #580578
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> metaclass-0.0.4.ebuild:
+  Stable for HPPA (bug #580578).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+

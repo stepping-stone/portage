@@ -160,3 +160,59 @@
 
   Package-Manager: portage-2.2.27
 
+  29 Feb 2016; Steev Klimaszewski <steev@gentoo.org> vim-7.4.769.ebuild:
+  stable 7.4.769 for arm64
+
+  Package-Manager: portage-2.2.27
+
+*vim-7.4.1583 (17 Mar 2016)
+
+  17 Mar 2016; Tim Harder <radhermit@gentoo.org> +vim-7.4.1583.ebuild:
+  version bump to 7.4.1583
+
+  17 Mar 2016; Tim Harder <radhermit@gentoo.org> vim-7.4.1583.ebuild,
+  vim-9999.ebuild:
+  drop unnecessary test hacks
+
+  20 Apr 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Fix racket category
+
+*vim-7.4.1821 (08 May 2016)
+
+  08 May 2016; Tim Harder <radhermit@gentoo.org> +vim-7.4.1821.ebuild:
+  version bump to 7.4.1821
+
+  08 May 2016; Tim Harder <radhermit@gentoo.org> -vim-7.4.1089.ebuild,
+  -vim-7.4.1229.ebuild, -vim-7.4.1342.ebuild:
+  remove old
+
+*vim-7.4.2102 (26 Jul 2016)
+
+  26 Jul 2016; Tim Harder <radhermit@gentoo.org> +vim-7.4.2102.ebuild,
+  vim-9999.ebuild:
+  version bump to 7.4.2102
+
+*vim-8.0.0004 (15 Sep 2016)
+
+  15 Sep 2016; Tim Harder <radhermit@gentoo.org> +vim-8.0.0004.ebuild,
+  vim-9999.ebuild:
+  version bump to 8.0.0004
+
+*vim-8.0.0005 (15 Sep 2016)
+
+  15 Sep 2016; Tim Harder <radhermit@gentoo.org> +vim-8.0.0005.ebuild:
+  version bump to 8.0.0005
+
+  15 Sep 2016; Tim Harder <radhermit@gentoo.org> -vim-7.4.1583.ebuild,
+  -vim-7.4.1821.ebuild, -vim-8.0.0004.ebuild:
+  remove old
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> vim-7.4.769.ebuild,
+  vim-7.4.2102.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  17 Nov 2016; Tim Harder <radhermit@gentoo.org> vim-9999.ebuild:
+  update live ebuilds to work with renamed file
+
+  configure.in was renamed to configure.ac (bug #599992).
+

@@ -1,16 +1,16 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+EAPI="6"
+PYTHON_COMPAT=( python{2_7,3_4,3_5} )
 PYTHON_REQ_USE="xml"
 
-inherit multilib python-r1 toolchain-funcs eutils bash-completion-r1
+inherit multilib python-r1 toolchain-funcs bash-completion-r1
 
 MY_P="${P//_/-}"
 
-MY_RELEASEDATE="20150202"
+MY_RELEASEDATE="20161014"
 EXTRAS_VER="1.34"
 SEMNG_VER="${PV}"
 SELNX_VER="${PV}"
@@ -46,6 +46,7 @@ DEPEND=">=sys-libs/libselinux-${SELNX_VER}:=[python]
 	>=sys-libs/libsemanage-${SEMNG_VER}:=[python]
 	sys-libs/libcap-ng:=
 	>=sys-libs/libsepol-${SEPOL_VER}:=
+	>=app-admin/setools-4.0
 	sys-devel/gettext
 	dev-python/ipy[${PYTHON_USEDEP}]
 	dbus? (
@@ -78,15 +79,12 @@ src_prepare() {
 	cd "${S}" || die "Failed to switch to ${S}"
 	if [[ ${PV} != 9999 ]] ; then
 		# If needed for live ebuilds please use /etc/portage/patches
-		epatch "${FILESDIR}/0010-remove-sesandbox-support.patch"
-		epatch "${FILESDIR}/0020-disable-autodetection-of-pam-and-audit.patch"
-		epatch "${FILESDIR}/0030-make-inotify-check-use-flag-triggered.patch"
-		epatch "${FILESDIR}/0040-reverse-access-check-in-run_init.patch"
-		epatch "${FILESDIR}/0070-remove-symlink-attempt-fails-with-gentoo-sandbox-approach.patch"
-		epatch "${FILESDIR}/0110-build-mcstrans-bug-472912.patch"
-		epatch "${FILESDIR}/0120-build-failure-for-mcscolor-for-CONTEXT__CONTAINS.patch"
-		epatch "${FILESDIR}/0130-Only-invoke-RPM-on-RPM-enabled-Linux-distributions-bug-534682.patch"
-		epatch "${FILESDIR}/0140-Set-self.sename-to-sename-after-calling-semanage-bug-557370.patch"
+		eapply "${FILESDIR}/0010-remove-sesandbox-support.patch"
+		eapply "${FILESDIR}/0020-disable-autodetection-of-pam-and-audit.patch"
+		eapply "${FILESDIR}/0030-make-inotify-check-use-flag-triggered.patch"
+		eapply "${FILESDIR}/0070-remove-symlink-attempt-fails-with-gentoo-sandbox-approach.patch"
+		eapply "${FILESDIR}/0110-build-mcstrans-bug-472912.patch"
+		eapply "${FILESDIR}/0120-build-failure-for-mcscolor-for-CONTEXT__CONTAINS.patch"
 	fi
 
 	# rlpkg is more useful than fixfiles
@@ -95,7 +93,7 @@ src_prepare() {
 	sed -i -e '/fixfiles/d' "${S}/scripts/Makefile" \
 		|| die "fixfiles sed 2 failed"
 
-	epatch_user
+	eapply_user
 
 	sed -i 's/-Werror//g' "${S1}"/*/Makefile || die "Failed to remove Werror"
 
@@ -178,9 +176,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	# The selinux_gentoo init script is no longer needed with recent OpenRC
-	elog "The selinux_gentoo init script has been removed in this version as it is not required after OpenRC 0.13."
-
 	for POLICY_TYPE in ${POLICY_TYPES} ; do
 		# There have been some changes to the policy store, rebuilding now.
 		# https://marc.info/?l=selinux&m=143757277819717&w=2

@@ -79,3 +79,89 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Agostino Sarubbo <ago@gentoo.org> unifont-8.0.01.ebuild:
+  amd64 stable wrt bug #576510
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> unifont-8.0.01.ebuild:
+  x86 stable wrt bug #576510
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> unifont-8.0.01.ebuild:
+  ppc stable wrt bug #576510
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> unifont-8.0.01.ebuild:
+  ppc64 stable wrt bug #576510
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> unifont-8.0.01.ebuild:
+  sparc stable wrt bug #576510
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> unifont-8.0.01.ebuild:
+  ia64 stable wrt bug #576510
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Mar 2016; Markus Meier <maekke@gentoo.org> unifont-8.0.01.ebuild:
+  arm stable, bug #576510
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  26 May 2016; Tobias Klausmann <klausman@gentoo.org> unifont-8.0.01.ebuild:
+  8.0.01-r0: add alpha keyword
+
+  Gentoo-Bug: 576510
+
+  Package-Manager: portage-2.3.0_rc1
+
+*unifont-9.0.01 (03 Jul 2016)
+
+  03 Jul 2016; Mike Gilbert <floppym@gentoo.org> +unifont-9.0.01.ebuild:
+  bump to 9.0.01
+
+  Package-Manager: portage-2.3.0_p7
+
+  03 Jul 2016; Mike Gilbert <floppym@gentoo.org> -unifont-5.1.20080914.ebuild,
+  -unifont-6.3.20131006.ebuild, -unifont-6.3.20131020.ebuild,
+  -unifont-6.3.20131217.ebuild, -unifont-6.3.20140204.ebuild,
+  -unifont-7.0.01.ebuild, -unifont-7.0.03.ebuild, -unifont-7.0.05.ebuild,
+  -unifont-7.0.06.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0_p7
+
+*unifont-9.0.02 (02 Sep 2016)
+
+  02 Sep 2016; Mike Gilbert <floppym@gentoo.org> +unifont-9.0.02.ebuild:
+  bump to 9.0.02
+
+  Package-Manager: portage-2.3.0_p22
+
+*unifont-9.0.04 (30 Oct 2016)
+
+  30 Oct 2016; Mike Gilbert <floppym@gentoo.org> -unifont-9.0.01.ebuild,
+  -unifont-9.0.02.ebuild, +unifont-9.0.04.ebuild:
+  bump to 9.0.04
+
+  Package-Manager: portage-2.3.2_p1
+

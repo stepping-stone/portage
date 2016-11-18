@@ -110,3 +110,99 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> geoclue-2.4.1.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+*geoclue-2.4.3 (03 Apr 2016)
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> +geoclue-2.4.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> -geoclue-2.2.0.ebuild,
+  -geoclue-2.4.0-r1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+  09 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/geoclue-2.4.1-fix-GLIBC-features.patch, geoclue-2.4.1.ebuild,
+  geoclue-2.4.3.ebuild:
+  fix build on uclibc, bug #577290
+
+  Package-Manager: portage-2.2.26
+
+  20 Apr 2016; Anthony Ryan <anthonyryan1@gmail.com> geoclue-0.12.99.ebuild,
+  geoclue-2.4.1.ebuild, geoclue-2.4.3.ebuild:
+  HTTPS for *.freedesktop.org
+
+  * Excluding xorg.freedesktop.org
+  * Excluding tango.freedesktop.org
+
+  The following modified ebuilds were found to have problems after
+  modification
+  but the problems were determined to not be a regression.
+
+  Upstream tarball has a new hash:
+  * app-misc/evtest-1.29
+  * app-misc/evtest-1.30
+  * dev-embedded/scratchbox2-2.0-r1
+  * dev-ml/cairo-ocaml-1.2.0
+  * net-libs/libqmi-1.0.0
+  * sys-auth/libfprint-0.4.0
+  * sys-auth/libfprint-0.5.0
+  * sys-auth/libfprint-0.5.1
+
+  Upstream tarball has been deleted:
+  * dev-libs/liblazy-0.2
+  * dev-util/pkgconfig-openbsd-20130507-r1
+  * x11-libs/xvba-video-0.8.0-r3
+  * x11-misc/driconf-0.9.1-r1
+  * x11-misc/xdg-utils-1.1.0_rc2-r1
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> geoclue-2.4.3.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> geoclue-2.4.3.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  18 Aug 2016; Pacho Ramos <pacho@gentoo.org> -geoclue-2.4.1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+*geoclue-2.4.4 (11 Sep 2016)
+
+  11 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org> +geoclue-2.4.4.ebuild:
+  version bump 2.4.3 → 2.4.4
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> geoclue-2.4.4.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> geoclue-2.4.4.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  12 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org> geoclue-2.4.4.ebuild:
+  add missing gnome2_src_prepare
+
+  Gentoo-Bug; 587034
+
+  Package-Manager: portage-2.3.2
+

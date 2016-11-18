@@ -121,3 +121,91 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="arm"
 
+*fail2ban-0.9.4 (09 Mar 2016)
+
+  09 Mar 2016; Jeroen Roovers <jer@gentoo.org> +fail2ban-0.9.4.ebuild:
+  Version bump (bug #576812).
+
+  Package-Manager: portage-2.2.27
+
+  09 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  fail2ban-0.9.3-r1.ebuild:
+  add missing die, rewrite find/sed
+
+  Package-Manager: portage-2.2.27
+
+  09 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  fail2ban-0.9.3-r1.ebuild:
+  use distutils-r1 functions
+
+  Package-Manager: portage-2.2.27
+
+  09 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  fail2ban-0.9.3-r1.ebuild:
+  support freebsd-pf
+
+  Package-Manager: portage-2.2.27
+
+  09 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  fail2ban-99999999.ebuild:
+  update live ebuild, drop useless patches
+
+  Apply changes from the stable ebuild and drop the two patches
+  since they are not needed any more, as per:
+  https://github.com/fail2ban/fail2ban/commit/294a7790a9a32f98448e1e2a2d7a5cfd
+  f741c35f
+  https://github.com/fail2ban/fail2ban/commit/869d99dd377ff45efa5796bb3be2500e
+  41f32dc3
+
+  Pull-Request: https://github.com/gentoo/gentoo/pull/832
+  Acked-by: Mike Frysinger <vapier@gentoo.org>
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+  Package-Manager: portage-2.2.27
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> fail2ban-0.9.3-r1.ebuild:
+  ppc stable wrt bug #573558
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> fail2ban-0.9.3-r1.ebuild:
+  sparc stable wrt bug #573558
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Patrice Clement <monsieurp@gentoo.org> fail2ban-0.9.4.ebuild:
+  apply changes from the 0.9.3 ebuild to 0.9.4
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1078
+
+  23 Mar 2016; Mike Frysinger <vapier@gentoo.org> fail2ban-0.9.2.ebuild,
+  fail2ban-0.9.2-r1.ebuild, fail2ban-0.9.3-r1.ebuild, fail2ban-0.9.4.ebuild:
+  add alpha love
+
+  23 Mar 2016; Patrick McLean <chutzpah@gentoo.org> fail2ban-0.9.3-r1.ebuild,
+  fail2ban-0.9.4.ebuild, fail2ban-99999999.ebuild:
+  Don't fail with USE=-systemd when attempting to remove /run from ${D}
+
+  Package-Manager: portage-2.2.28
+
+  12 Apr 2016; Jeroen Roovers <jer@gentoo.org> -fail2ban-0.9.2.ebuild,
+  -fail2ban-0.9.2-r1.ebuild, fail2ban-0.9.3-r1.ebuild, fail2ban-0.9.4.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*fail2ban-0.9.5 (21 Jul 2016)
+
+  21 Jul 2016; Jeroen Roovers <jer@gentoo.org> +fail2ban-0.9.5.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> fail2ban-0.9.3-r1.ebuild,
+  fail2ban-0.9.4.ebuild, fail2ban-0.9.5.ebuild, fail2ban-99999999.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

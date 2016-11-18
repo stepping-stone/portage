@@ -106,3 +106,63 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> geos-3.5.0.ebuild:
+  ppc64 stable wrt bug #571760
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  21 Mar 2016; Aaron W. Swenson <titanofold@gentoo.org> -geos-3.4.1-r1.ebuild,
+  -geos-3.4.2-r1.ebuild:
+  Removing Old
+
+  Remove old versions.
+
+  Bug: 567204
+
+  Package-Manager: portage-2.2.26
+
+*geos-3.5.0-r1 (23 Mar 2016)
+
+  23 Mar 2016; Sam Jorna <wraeth@gentoo.org>
+  +files/geos-3.5.0-phpconfig-path.patch, +geos-3.5.0-r1.ebuild:
+  add python setup, fix php support
+
+  This adds python package setup per request, also fixes PHP support
+  and restricts building against php-7 while unsupported.
+
+  Gentoo-bug: 576436
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Sam Jorna <wraeth@gentoo.org>
+
+  23 Mar 2016; Sam Jorna <wraeth@gentoo.org> -files/3.2.0-darwin.patch,
+  -files/3.2.0-python.patch, -files/3.3.2-solaris-isnan.patch,
+  -files/3.4.1-solaris-isnan.patch, -files/3.4.2-ruby_so_name.patch:
+  remove unneeded patches
+
+  Package-Manager: portage-2.2.28
+
+*geos-3.5.0-r2 (25 Mar 2016)
+
+  25 Mar 2016; Sam Jorna <wraeth@gentoo.org> -geos-3.5.0-r1.ebuild,
+  +geos-3.5.0-r2.ebuild:
+  fix build ext for all php targets
+
+  Ensures the extention for all php targets is built. Ebuild from
+  grknight.
+
+  Gentoo-bug: 578188
+  Gentoo-bug: 578190
+  Package-Manager: portage-2.2.28
+
+  17 Sep 2016; David Seifert <soap@gentoo.org>
+  +files/geos-3.5.0-autoconf-detect-isnan.patch,
+  +files/geos-3.5.0-std-isnan.patch, geos-3.5.0-r2.ebuild:
+  Allow for compiling with GCC 6
+
+  Gentoo-bug: 593934
+  * Patches taken from Upstream trunk
+
+  Package-Manager: portage-2.3.0
+

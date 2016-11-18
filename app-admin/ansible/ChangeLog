@@ -192,3 +192,124 @@
 
   Package-Manager: portage-2.2.26
 
+*ansible-1.9.5 (21 Mar 2016)
+
+  21 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +ansible-1.9.5.ebuild:
+  bup to 1.x release
+
+  Package-Manager: portage-2.2.26
+
+*ansible-1.9.6 (15 Apr 2016)
+
+  15 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -ansible-1.9.5.ebuild, +ansible-1.9.6.ebuild:
+  bup for bug 578814
+
+  Package-Manager: portage-2.2.26
+
+*ansible-2.0.2.0 (20 Apr 2016)
+
+  20 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -ansible-2.0.0.1-r2.ebuild, -ansible-2.0.0.2.ebuild,
+  -ansible-2.0.1.0.ebuild, +ansible-2.0.2.0.ebuild:
+  fix for bug 578814
+
+  Package-Manager: portage-2.2.26
+
+  20 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  ansible-2.0.2.0.ebuild:
+  cleanup of bad line
+
+  Package-Manager: portage-2.2.26
+
+*ansible-2.0.2.0-r1 (23 Apr 2016)
+
+  23 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -ansible-2.0.2.0.ebuild, +ansible-2.0.2.0-r1.ebuild:
+  fix spaces in reqs.txt bug 575972
+
+  Package-Manager: portage-2.2.26
+
+  23 Apr 2016; Matthew Thode <prometheanfire@gentoo.org> ansible-9999.ebuild:
+  also fix 9999
+
+  Package-Manager: portage-2.2.26
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> ansible-1.9.6.ebuild:
+  amd64 stable wrt bug #580126
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*ansible-2.1.0.0 (25 May 2016)
+
+  25 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +ansible-2.1.0.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> ansible-1.9.6.ebuild:
+  x86 stable wrt bug #580126
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Jul 2016; Sergey Popov <pinkbyte@gentoo.org> -ansible-1.9.4.ebuild:
+  drop old version
+
+  Package-Manager: portage-2.2.28
+
+*ansible-2.1.1.0 (29 Jul 2016)
+
+  29 Jul 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +ansible-2.1.1.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+*ansible-2.1.2.0 (30 Sep 2016)
+
+  30 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -ansible-2.0.2.0-r1.ebuild, -ansible-2.1.0.0.ebuild,
+  -ansible-2.1.1.0.ebuild, +ansible-2.1.2.0.ebuild:
+  bup and cleanup
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  ansible-2.1.2.0.ebuild:
+  removing examples
+
+  Package-Manager: portage-2.3.0
+
+  30 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  ansible-2.1.2.0.ebuild:
+  stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+
+*ansible-2.2.0.0 (01 Nov 2016)
+
+  01 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +ansible-2.2.0.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  remove myself from maintainers
+
+  Package-Manager: portage-2.3.0
+
+*ansible-2.1.3.0 (05 Nov 2016)
+
+  05 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +ansible-2.1.3.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+

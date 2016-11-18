@@ -65,3 +65,64 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libcerf-1.4.ebuild:
+  amd64 stable wrt bug #577516
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libcerf-1.4.ebuild:
+  x86 stable wrt bug #577516
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libcerf-1.4.ebuild:
+  ppc stable wrt bug #577516
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libcerf-1.4.ebuild:
+  ppc64 stable wrt bug #577516
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libcerf-1.4.ebuild:
+  sparc stable wrt bug #577516
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libcerf-1.4.ebuild:
+  ia64 stable wrt bug #577516
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 May 2016; Tobias Klausmann <klausman@gentoo.org> libcerf-1.4.ebuild:
+  1.4-r0: add alpha keyword
+
+  Gentoo-Bug: 577516
+
+  Package-Manager: portage-2.3.0_rc1
+
+  12 Jun 2016; Markus Meier <maekke@gentoo.org> libcerf-1.4.ebuild:
+  arm stable, bug #577516
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  11 Sep 2016; Jeroen Roovers <jer@gentoo.org> libcerf-1.4.ebuild:
+  Stable for HPPA (bug #577516).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+

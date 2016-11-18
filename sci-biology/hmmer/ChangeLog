@@ -67,3 +67,43 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*hmmer-2.3.2-r3 (19 Apr 2016)
+
+  19 Apr 2016; Ian Stakenvicius <axs@gentoo.org> -hmmer-2.3.2-r1.ebuild,
+  -hmmer-2.3.2-r2.ebuild, +hmmer-2.3.2-r3.ebuild, metadata.xml:
+  cheamup of 2.3.2 version
+
+  * Bumped EAPI
+  * Merged KEYWORDS between 2.3.2-r1 and 2.3.2-r2
+  * dropped IUSE="pvm" as package was dropped 5 years ago
+  * fixed metadata.xml to match
+
+  Package-Manager: portage-2.2.26
+
+*hmmer-3.1_beta2 (09 Oct 2016)
+
+  09 Oct 2016; David Seifert <soap@gentoo.org>
+  +files/hmmer-3.1_beta2-fix-header-install-path.patch,
+  +files/hmmer-3.1_beta2-fix-perl-shebangs.patch, +hmmer-3.1_beta2.ebuild:
+  Version bump to 3.1_beta2
+
+  * EAPI=6
+  * Make perl shebangs portable
+  * Install headers into 'hmmer3' subdir
+
+  Package-Manager: portage-2.3.1
+
+*hmmer-2.3.2-r4 (09 Oct 2016)
+
+  09 Oct 2016; David Seifert <soap@gentoo.org>
+  +files/hmmer-2.3.2-fix-build-system-destdir.patch,
+  +files/hmmer-2.3.2-fix-perl-shebangs.patch, +hmmer-2.3.2-r4.ebuild:
+  Properly SLOT=2 hmmer-2.3.2
+
+  Gentoo-bug: 328911, 586960
+  * EAPI=6
+  * Introduce SLOT=2 and rename binaries and
+    static libraries
+
+  Package-Manager: portage-2.3.1
+

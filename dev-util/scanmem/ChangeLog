@@ -70,3 +70,20 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  05 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/scanmem-0.13-configure.patch, -files/scanmem-0.13-desktop.patch,
+  -files/scanmem-0.13-docs.patch:
+  remove unused patches.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2474
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> scanmem-0.15.2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

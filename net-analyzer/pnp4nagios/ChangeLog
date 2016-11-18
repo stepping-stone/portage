@@ -88,3 +88,25 @@
 
   Package-Manager: portage-2.2.26
 
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> pnp4nagios-0.6.25-r2.ebuild:
+  amd64 stable wrt bug #548968
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*pnp4nagios-0.6.25-r3 (28 Apr 2016)
+
+  28 Apr 2016; Robin H. Johnson <robbat2@gentoo.org>
+  +files/pnp4nagios-0.6.25-rrdtool-0.6.0-support.patch,
+  +pnp4nagios-0.6.25-r3.ebuild:
+  EAPI=6, support >=rrdtool-1.6.0
+
+  Package-Manager: portage-2.2.28
+  (cherry picked from commit 4ee6bc9b624d654038d28c15b39b901ac9d67b2b)
+  Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/npcd,
+  files/npcd.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+

@@ -57,3 +57,19 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  05 Apr 2016; Anthony G. Basile <blueness@gentoo.org> ndppd-0.2.3.ebuild:
+  Add ~arm.
+
+  I successfully installed and used it on Raspberry Pi 3 board.
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/ndppd.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*ndppd-0.2.5 (13 Oct 2016)
+
+  13 Oct 2016; Jason A. Donenfeld <zx2c4@gentoo.org> -ndppd-0.2.3.ebuild,
+  +ndppd-0.2.5.ebuild:
+  bump
+
+  Package-Manager: portage-2.3.2
+

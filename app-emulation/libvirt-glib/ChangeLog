@@ -123,3 +123,39 @@
 
   Package-Manager: portage-2.2.27
 
+  28 Feb 2016; Matthias Maier <tamiko@gentoo.org> libvirt-glib-0.2.3.ebuild:
+  Stable for x86
+
+  Package-Manager: portage-2.2.26
+
+  28 Feb 2016; Matthias Maier <tamiko@gentoo.org> -libvirt-glib-0.2.2.ebuild:
+  remove old version 0.2.2
+
+  Package-Manager: portage-2.2.26
+
+  28 Feb 2016; Pacho Ramos <pacho@gentoo.org> -libvirt-glib-0.2.3-r1.ebuild:
+  Revert previous bump as this was broken due to not exporting src_prepare
+  phases properly
+
+  Package-Manager: portage-2.2.27
+
+  28 Feb 2016; Pacho Ramos <pacho@gentoo.org> libvirt-glib-0.2.3.ebuild:
+  Fix src_prepare phase
+
+  Package-Manager: portage-2.2.27
+
+  19 Jun 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Multiple metadata.xml: reorder to make sure assignee goes first
+
+  Reorder all metadata.xml files with explicit descriptions requesting
+  particular bug assignment/CC to ensure that the requested assignee
+  always goes first, in order to match the bug wrangling policies.
+
+*libvirt-glib-0.2.3-r1 (04 Oct 2016)
+
+  04 Oct 2016; Matthias Maier <tamiko@gentoo.org>
+  +libvirt-glib-0.2.3-r1.ebuild:
+  add USE="nls", bug #596052
+
+  Package-Manager: portage-2.3.0
+

@@ -113,3 +113,55 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  libsodium-1.0.8.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*libsodium-1.0.9 (05 Apr 2016)
+
+  05 Apr 2016; Manuel Rüger <mrueg@gentoo.org> +libsodium-1.0.9.ebuild:
+  Version bump to 1.0.9
+
+  Package-Manager: portage-2.2.28
+
+*libsodium-1.0.10 (05 Apr 2016)
+
+  05 Apr 2016; Manuel Rüger <mrueg@gentoo.org> +libsodium-1.0.10.ebuild:
+  Version bump to 1.0.10
+
+  Package-Manager: portage-2.2.28
+
+  05 Apr 2016; Manuel Rüger <mrueg@gentoo.org> -libsodium-1.0.7.ebuild,
+  -libsodium-1.0.9.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  17 Jun 2016; Michael Weber <xmw@gentoo.org>
+  +files/libsodium-1.0.10-cpuflags.patch, libsodium-1.0.10.ebuild:
+  Add IUSE="cpu_flags_x86_sse4_1 cpu_flags_x86_aes"
+
+  Package-Manager: portage-2.2.28
+
+*libsodium-1.0.11 (06 Aug 2016)
+
+  06 Aug 2016; Manuel Rüger <mrueg@gentoo.org> +libsodium-1.0.11.ebuild:
+  Version bump to 1.0.11
+
+  Package-Manager: portage-2.3.0
+
+  09 Nov 2016; Tony Vroon <chainsaw@gentoo.org> libsodium-1.0.11.ebuild:
+  Mark 1.0.11 stable on AMD64 based on arch testing by Michael "n0idx80"
+  Harrison in bug #599198.
+
+  Package-Manager: portage-2.3.2
+
+  15 Nov 2016; Tobias Klausmann <klausman@gentoo.org> libsodium-1.0.11.ebuild:
+  1.0.11-r0: stable on alpha
+
+  Gentoo-Bug: 599198
+

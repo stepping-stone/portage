@@ -41,3 +41,47 @@
 
   Package-Manager: portage-2.2.27
 
+*sogo-3.0.2 (09 Mar 2016)
+
+  09 Mar 2016; Bernard Cafarelli <voyageur@gentoo.org> +sogo-3.0.2.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.27
+
+  24 Mar 2016; Bernard Cafarelli <voyageur@gentoo.org> -sogo-3.0.1.ebuild:
+  drop old 3.x
+
+  Package-Manager: portage-2.2.28
+
+  24 Mar 2016; Bernard Cafarelli <voyageur@gentoo.org> sogo-2.3.2.ebuild,
+  sogo-3.0.2.ebuild:
+  raise min gnustep-make dependency
+
+  Reported by Wolfgang Apolinarski <apolinarski@locoslab.com>
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/sogod.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  22 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #408423
+
+  Package-Manager: portage-2.3.0_rc1
+
+*sogo-3.2.0 (02 Nov 2016)
+
+  02 Nov 2016; Bernard Cafarelli <voyageur@gentoo.org> +sogo-3.2.0.ebuild:
+  version bump to 3.2.0, bug #584656
+
+  Thanks bgo for the runtime test
+
+  Package-Manager: portage-2.3.2
+
+*sogo-3.2.1 (07 Nov 2016)
+
+  07 Nov 2016; Bernard Cafarelli <voyageur@gentoo.org> +sogo-3.2.1.ebuild:
+  version bump to 3.2.1
+
+  Package-Manager: portage-2.3.2
+

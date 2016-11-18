@@ -101,3 +101,102 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  29 Mar 2016; Mike Frysinger <vapier@gentoo.org> -e2fsprogs-1.42.12.ebuild,
+  -files/e2fsprogs-1.42.10-e2fsck-fix-makefile-dependency.patch,
+  -files/e2fsprogs-1.42.10-fix-build-cflags.patch:
+  sys-libs/e2fsprogs-libs & sys-fs/e2fsprogs: drop old 1.42.12 versions
+
+  29 Mar 2016; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.42.13.ebuild,
+  +files/e2fsprogs-1.42.13-sysmacros.patch:
+  fix build w/newer glibc #577946
+
+*e2fsprogs-1.43 (18 May 2016)
+
+  18 May 2016; Mike Frysinger <vapier@gentoo.org> +e2fsprogs-1.43.ebuild,
+  +files/e2fsprogs-1.43-sysmacros.patch:
+  sys-libs/e2fsprogs-libs & sys-fs/e2fsprogs: version bump to 1.43
+
+  18 May 2016; Mike Frysinger <vapier@gentoo.org> -e2fsprogs-1.41.7-r1.ebuild,
+  -files/0001-resize2fs-Fix-error-message-so-the-mountpoint-is-pri.patch,
+  -files/e2fsprogs-1.38-tests-locale.patch,
+  -files/e2fsprogs-1.41.5-makefile.patch:
+  sys-libs/e2fsprogs-libs & sys-fs/e2fsprogs: drop old 1.41.7 version
+
+  25 May 2016; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.43.ebuild,
+  metadata.xml:
+  add USE=fuse to control fuse2fs
+
+*e2fsprogs-1.43.1 (09 Jun 2016)
+
+  09 Jun 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +e2fsprogs-1.43.1.ebuild:
+  Bump to version 1.43.1
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*e2fsprogs-1.43.2 (02 Sep 2016)
+
+  02 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +e2fsprogs-1.43.2.ebuild:
+  Bump to version 1.43.2
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  02 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> -e2fsprogs-1.43.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*e2fsprogs-1.43.3 (05 Sep 2016)
+
+  05 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +e2fsprogs-1.43.3.ebuild:
+  Bump to version 1.43.3
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  11 Oct 2016; Jeroen Roovers <jer@gentoo.org> e2fsprogs-1.43.3.ebuild:
+  Stable for HPPA (bug #596788).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  11 Oct 2016; Jeroen Roovers <jer@gentoo.org> e2fsprogs-1.43.3.ebuild:
+  Stable for PPC64 (bug #596788).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  21 Oct 2016; Tobias Klausmann <klausman@gentoo.org> e2fsprogs-1.43.3.ebuild:
+  1.43.3-r0: stable on alpha
+
+  Gentoo-Bug: 596788
+
+*e2fsprogs-1.43.3-r1 (26 Oct 2016)
+
+  26 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -e2fsprogs-1.43.3.ebuild, +e2fsprogs-1.43.3-r1.ebuild:
+  Revbump to add back uninit_bg option (bug #598100).
+
+  This option was accidentally removed in the 1.43 development cycle which
+  caused mke2fs to take a very long time because it initialized all of the
+  block group metadata.
+  Committing straight to stable where 1.43.3-r0 was stable.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  28 Oct 2016; Markus Meier <maekke@gentoo.org> e2fsprogs-1.43.3-r1.ebuild:
+  arm stable, bug #596788
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+
+  15 Nov 2016; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.43.3-r1.ebuild:
+  sys-libs/e2fsprogs-libs & sys-fs/e2fsprogs: mark 1.43.3
+  arm64/ia64/m68k/ppc/s390/sh/sparc stable #596788
+

@@ -126,3 +126,114 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  09 Mar 2016; Patrick Lauer <patrick@gentoo.org> rb_libtorrent-1.0.8.ebuild:
+  Drop py3.3 as boost dropped it
+
+  Package-Manager: portage-2.2.27
+
+*rb_libtorrent-1.0.9 (09 Mar 2016)
+
+  09 Mar 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +rb_libtorrent-1.0.9.ebuild:
+  Bump to version 1.0.9 (bug #576794).
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  09 Mar 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -files/rb_libtorrent-1.0.6-fix-debug-build.patch,
+  -files/rb_libtorrent-1.0.6-remove-parse-hash-fails.patch,
+  -rb_libtorrent-1.0.4.ebuild, -rb_libtorrent-1.0.5.ebuild,
+  -rb_libtorrent-1.0.6.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  10 Mar 2016; Michael Palimaka <kensington@gentoo.org>
+  rb_libtorrent-1.0.8.ebuild:
+  py3.3 is no longer in IUSE
+
+*rb_libtorrent-1.0.9-r1 (21 Apr 2016)
+
+  21 Apr 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml,
+  +rb_libtorrent-1.0.9-r1.ebuild:
+  fix linking of python bindings
+
+  Thanks to Jan Chren (rindeal) <dev.rindeal+bugs.gentoo.org@gmail.com>
+  for the ebuild, I've simply ported the good bits to the current one.
+
+  Gentoo-Bug: https://bugs.gentoo.org/576910
+  Closes: https://github.com/gentoo/gentoo/pull/1262
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  20 May 2016; Patrice Clement <monsieurp@gentoo.org>
+  rb_libtorrent-1.0.9-r1.ebuild:
+  fix miscellaneous issues
+
+  Gentoo-Bug: https://bugs.gentoo.org/581274
+  Closes: https://github.com/gentoo/gentoo/pull/1394
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  18 Aug 2016; Davide Pesavento <pesa@gentoo.org>
+  -rb_libtorrent-0.16.17-r2.ebuild, -rb_libtorrent-1.0.8.ebuild,
+  -rb_libtorrent-1.0.9.ebuild:
+  remove a few old versions
+
+  Package-Manager: portage-2.3.0
+
+*rb_libtorrent-1.0.9-r2 (18 Aug 2016)
+
+  18 Aug 2016; Davide Pesavento <pesa@gentoo.org>
+  +files/rb_libtorrent-1.0.9-CVE-2016-5301.patch,
+  +files/rb_libtorrent-1.0.9-test_torrent_parse.patch, metadata.xml,
+  +rb_libtorrent-1.0.9-r2.ebuild:
+  revbump with several fixes and improvements
+
+    * add libressl support (bug 574004)
+    * use official "prepared" tarball, saves eautoreconf call (bug 577288)
+    * link python bindings against the just-built library (bug 578026)
+    * backport patch for CVE-2016-5301 (bug 585278)
+    * add subslot
+    * use system copy of geoip library and allow disabling it via USE flag
+    * drop some obsolete/redundant options from econf invocation
+    * revise which logging options are turned on by USE=debug
+    * fix and unrestrict tests
+    * don't install .la file when not needed
+
+  Package-Manager: portage-2.3.0
+
+*rb_libtorrent-1.0.10 (15 Oct 2016)
+
+  15 Oct 2016; Davide Pesavento <pesa@gentoo.org>
+  +rb_libtorrent-1.0.10.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.2
+
+  15 Oct 2016; Davide Pesavento <pesa@gentoo.org>
+  -rb_libtorrent-1.0.9-r1.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.2
+
+  24 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  -files/rb_libtorrent-1.0.2-python.patch,
+  -files/rb_libtorrent-1.0.9-CVE-2016-5301.patch, -rb_libtorrent-1.0.7.ebuild,
+  -rb_libtorrent-1.0.9-r2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --force
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> rb_libtorrent-0.16.19.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  13 Nov 2016; Markus Meier <maekke@gentoo.org> rb_libtorrent-1.0.10.ebuild:
+  arm stable, bug #530720
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

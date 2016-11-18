@@ -81,3 +81,22 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org> -uuid-1.3.7.ebuild,
+  -uuid-1.3.8.ebuild, -uuid-1.3.9.ebuild, -uuid-1.3.10.ebuild,
+  -uuid-1.3.11.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.28
+
+*uuid-1.3.12 (11 May 2016)
+
+  11 May 2016; Sergei Trofimovich <slyfox@gentoo.org> +uuid-1.3.12.ebuild:
+  bump up to 1.3.12
+
+  Package-Manager: portage-2.2.28
+
+  06 Nov 2016; Sergei Trofimovich <slyfox@gentoo.org> uuid-1.3.12.ebuild:
+  allow QuickCheck-2.9
+
+  Package-Manager: portage-2.3.2
+

@@ -91,3 +91,38 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*mtr-0.87 (04 Aug 2016)
+
+  04 Aug 2016; Jeroen Roovers <jer@gentoo.org> +mtr-0.87.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  04 Aug 2016; Jeroen Roovers <jer@gentoo.org> +files/mtr-9999-ipv6.patch,
+  +files/mtr-9999-strings.patch, mtr-0.87.ebuild, mtr-9999.ebuild:
+  Fix building with USE="-ipv6 -gtk".
+
+  Package-Manager: portage-2.3.0
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> mtr-9999.ebuild:
+  Drop obsolete patches (bug #595822), sed script.
+
+  Package-Manager: portage-2.3.1
+
+  10 Oct 2016; Jeroen Roovers <jer@gentoo.org> mtr-0.87.ebuild:
+  Stable for HPPA PPC64 (bug #596654).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  16 Oct 2016; Tobias Klausmann <klausman@gentoo.org> mtr-0.87.ebuild:
+  0.87-r0: stable on alpha
+
+  Gentoo-Bug: 596654
+
+  28 Oct 2016; Markus Meier <maekke@gentoo.org> mtr-0.87.ebuild:
+  arm stable, bug #596654
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

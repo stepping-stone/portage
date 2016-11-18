@@ -85,3 +85,48 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  02 Mar 2016; Fabian Groffen <grobian@gentoo.org>
+  gcc-apple-4.2.1_p5666-r2.ebuild:
+  ensure building succeeds with more modern compilers, bug #574736
+
+  Package-Manager: portage-2.2.27-prefix
+
+  21 Mar 2016; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  sys-devel/{gcc,gcc-apple,kgcc64}: update USE=multislot description
+
+  21 Jun 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  toolchain.eclass: [QA] Remove meaningless USE=multislot, #584610
+
+  The USE=multislot as defined partially by toolchain.eclass and partially
+  by sys-devel/gcc was used for two purposes:
+
+  - enabling build-time (only) blockers on old gcc versions -- which do
+    not make any sense because they are build-time only and there is no
+    technical reason for two gcc version ranges not to be installed at
+    the same time, both at build time and at run time,
+
+  - changing behavior of post-install wrt conditional gcc-config calls.
+
+  Both cases are invalid use of USE flags, considering that the flag does
+  not affect the installed files in any way.
+
+  23 Jun 2016; Mike Frysinger <vapier@gentoo.org>
+  files/gcc-apple-4.2.1-autoconf-m4-precious.patch:
+  sourceware: convert to https:// URIs
+
+  10 Sep 2016; Fabian Groffen <grobian@gentoo.org>
+  gcc-apple-4.0.1_p5493.ebuild, gcc-apple-4.2.1_p5664.ebuild,
+  gcc-apple-4.2.1_p5666-r1.ebuild, gcc-apple-4.2.1_p5666-r2.ebuild:
+  remove cross-compile SLOT magic once copied from gcc/toolchain.eclass, bug
+  #593392
+
+  Package-Manager: portage-2.2.28
+
+  10 Sep 2016; Fabian Groffen <grobian@gentoo.org>
+  gcc-apple-4.0.1_p5493.ebuild, gcc-apple-4.2.1_p5664.ebuild,
+  gcc-apple-4.2.1_p5666-r1.ebuild, gcc-apple-4.2.1_p5666-r2.ebuild:
+  bump to EAPI=5 and remove all conditional code from global scope, bug
+  #593392
+
+  Package-Manager: portage-2.2.28
+

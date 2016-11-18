@@ -63,3 +63,28 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*tcl3d-0.4.0-r1 (24 Aug 2016)
+
+  24 Aug 2016; Daniel Campbell <zlg@gentoo.org> +tcl3d-0.4.0-r1.ebuild:
+  Correct path typo, fixes #563400
+
+  Gentoo-Bug: 563400
+  Gentoo-Bug-URL: https://bugs.gentoo.org/563400
+
+  Package-Manager: portage-2.3.0
+
+*tcl3d-0.5.0 (31 Oct 2016)
+
+  31 Oct 2016; Amy Winston <amynka@gentoo.org>
+  +files/tcl3d-0.5.0-include-tk-dir-and-permissive.patch, metadata.xml,
+  +tcl3d-0.5.0.ebuild:
+  version bump to 0.5.0 and added x86 support
+
+  Gentoo-Bug: 469304,514300
+
+  31 Oct 2016; Amy Winston <amynka@gentoo.org> tcl3d-0.4.0.ebuild,
+  tcl3d-0.4.0-r1.ebuild:
+  add missing dep bug #514300
+
+  Package-Manager: portage-2.2.28
+

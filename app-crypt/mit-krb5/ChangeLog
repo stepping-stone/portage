@@ -176,3 +176,183 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*mit-krb5-1.14.1 (02 Mar 2016)
+
+  02 Mar 2016; Eray Aslan <eras@gentoo.org> +mit-krb5-1.14.1.ebuild:
+  version bump to 1.14.1
+
+  Package-Manager: portage-2.2.27
+
+  02 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.14.1.ebuild:
+  amd64 stable wrt bug #574604
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Mar 2016; Jeroen Roovers <jer@gentoo.org> mit-krb5-1.14.1.ebuild:
+  Stable for PPC64 (bug #574604).
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --ignore-arches
+
+  06 Mar 2016; Jeroen Roovers <jer@gentoo.org> mit-krb5-1.14.1.ebuild:
+  Stable for HPPA (bug #574604).
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --ignore-arches
+
+  12 Mar 2016; Markus Meier <maekke@gentoo.org> mit-krb5-1.14.1.ebuild:
+  arm stable, bug #574604
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --include-arches="arm"
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.14.1.ebuild:
+  x86 stable wrt bug #574604
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Tobias Klausmann <klausman@gentoo.org> mit-krb5-1.14.1.ebuild:
+  1.14.1-r0: add alpha keyword
+
+  Gentoo-Bug: 574604
+
+  Package-Manager: portage-2.2.28
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.14.1.ebuild:
+  ppc stable wrt bug #574604
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.14.1.ebuild:
+  sparc stable wrt bug #574604
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.14.1.ebuild:
+  ia64 stable wrt bug #574604
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*mit-krb5-1.14.2 (21 Apr 2016)
+
+  21 Apr 2016; Eray Aslan <eras@gentoo.org> +mit-krb5-1.14.2.ebuild:
+  Security bump - bug 577930
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Eray Aslan <eras@gentoo.org> -files/CVE-2015-2695.patch,
+  -files/CVE-2015-2696.patch, -files/CVE-2015-2697.patch,
+  -files/mit-krb5kadmind.initd-r1, -files/mit-krb5kdc.initd-r1,
+  -files/mit-krb5kpropd.initd-r1, -mit-krb5-1.13.2-r2.ebuild,
+  -mit-krb5-1.13.2-r3.ebuild, -mit-krb5-1.14.ebuild:
+  Remove vulnerable versions
+
+  Package-Manager: portage-2.2.28
+
+  23 Apr 2016; Jeroen Roovers <jer@gentoo.org> mit-krb5-1.14.2.ebuild:
+  Stable for HPPA PPC64 (bug #577930).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  26 Apr 2016; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.14.2.ebuild:
+  amd64 stable wrt bug #577930
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Apr 2016; Markus Meier <maekke@gentoo.org> mit-krb5-1.14.2.ebuild:
+  arm stable, bug #577930
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/mit-krb5kadmind.initd-r2, files/mit-krb5kdc.initd-r2,
+  files/mit-krb5kpropd.initd-r2:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  20 May 2016; Tobias Klausmann <klausman@gentoo.org> mit-krb5-1.14.2.ebuild:
+  1.14.2-r0: add alpha keyword
+
+  Gentoo-Bug: 577930
+
+  Package-Manager: portage-2.3.0_rc1
+
+  27 Jun 2016; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.14.2.ebuild:
+  x86 stable wrt bug #577930
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.14.2.ebuild:
+  ppc stable wrt bug #577930
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.14.2.ebuild:
+  sparc stable wrt bug #577930
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.14.2.ebuild:
+  ia64 stable wrt bug #577930
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  12 Jul 2016; Eray Aslan <eras@gentoo.org> -mit-krb5-1.14.1.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0
+
+*mit-krb5-1.14.3 (25 Jul 2016)
+
+  25 Jul 2016; Eray Aslan <eras@gentoo.org> +mit-krb5-1.14.3.ebuild:
+  version bump to mit-krb5-1.14.3
+
+  Package-Manager: portage-2.3.0
+
+*mit-krb5-1.14.4 (19 Sep 2016)
+
+  19 Sep 2016; Eray Aslan <eras@gentoo.org> +mit-krb5-1.14.4.ebuild:
+  version bump to 1.14.4
+
+  Package-Manager: portage-2.3.1
+
+  10 Nov 2016; Mike Frysinger <vapier@gentoo.org> mit-krb5-1.14.2.ebuild,
+  mit-krb5-1.14.3.ebuild, mit-krb5-1.14.4.ebuild:
+  drop old com_err include
+
+  Starting with the 1.42 e2fsprogs releases, com_err.h has been symlinked
+  into /usr/include directly.  That means we no longer need to set the -I
+  path by hand to get it.
+
+  10 Nov 2016; Mike Frysinger <vapier@gentoo.org> mit-krb5-1.14.4.ebuild:
+  delete local lib code to guarantee system usage
+
+  These libs are already pulled from the system, but delete the source
+  just to guarantee we don't accidentally regress in the future.
+
+  16 Nov 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/mit-krb5-1.14.2-redeclared-ttyname.patch, mit-krb5-1.14.2.ebuild,
+  mit-krb5-1.14.3.ebuild, mit-krb5-1.14.4.ebuild:
+  fix clang build due to ttyname redecl
+

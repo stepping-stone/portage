@@ -113,3 +113,58 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  09 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  amavisd-new-2.7.2.ebuild, amavisd-new-2.8.1-r1.ebuild,
+  amavisd-new-2.9.1-r1.ebuild, amavisd-new-2.10.1.ebuild,
+  amavisd-new-2.10.1-r3.ebuild:
+  Fix dependency on dev-perl/Net-Server
+
+  Package-Manager: portage-2.2.27
+
+*amavisd-new-2.11.0 (27 Apr 2016)
+
+  27 Apr 2016; Eray Aslan <eras@gentoo.org> +amavisd-new-2.11.0.ebuild:
+  Version bump to 2.11.0
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/amavisd.initd,
+  files/amavisd.initd-r1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*amavisd-new-2.11.0-r1 (06 Jun 2016)
+*amavisd-new-2.10.1-r4 (06 Jun 2016)
+*amavisd-new-2.9.1-r2 (06 Jun 2016)
+
+  06 Jun 2016; Marc Schiffbauer <mschiff@gentoo.org>
+  -amavisd-new-2.9.1-r1.ebuild, +amavisd-new-2.9.1-r2.ebuild,
+  -amavisd-new-2.10.1-r3.ebuild, +amavisd-new-2.10.1-r4.ebuild,
+  -amavisd-new-2.11.0.ebuild, +amavisd-new-2.11.0-r1.ebuild,
+  files/amavisd-snmp.initd:
+  Fix depend and conf.d setting in amavisd-snmp
+
+  Package-Manager: portage-2.3.0_rc1
+
+*amavisd-new-2.11.0-r2 (08 Aug 2016)
+
+  08 Aug 2016; Mike Gilbert <floppym@gentoo.org>
+  -amavisd-new-2.11.0-r1.ebuild, +amavisd-new-2.11.0-r2.ebuild,
+  files/amavisd.service:
+  2.11.0-r2: additional systemd hardening
+
+  Gentoo-bug: 587540
+  Closes: https://github.com/gentoo/gentoo/pull/1797
+
+*amavisd-new-2.11.0-r3 (01 Oct 2016)
+
+  01 Oct 2016; Eray Aslan <eras@gentoo.org> +amavisd-new-2.11.0-r3.ebuild:
+  add missing dependencies (bug 592666)
+
+  Package-Manager: portage-2.3.1
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> amavisd-new-2.11.0-r3.ebuild:
+  Mark ~hppa (bug #595766).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+

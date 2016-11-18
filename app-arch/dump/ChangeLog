@@ -72,3 +72,17 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  21 Mar 2016; Anthony G. Basile <blueness@gentoo.org> dump-0.4.44-r2.ebuild:
+  fix openssl and libressl slots
+
+  Package-Manager: portage-2.2.26
+
+  19 Apr 2016; Mike Frysinger <vapier@gentoo.org> dump-0.4.44-r2.ebuild,
+  +files/dump-0.4.44-sysmacros.patch:
+  fix build w/newer glibc #580204
+
+*dump-0.4.45 (09 May 2016)
+
+  09 May 2016; Mike Frysinger <vapier@gentoo.org> +dump-0.4.45.ebuild:
+  version bump to 0.4.45
+

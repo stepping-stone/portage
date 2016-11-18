@@ -161,3 +161,147 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  29 Feb 2016; Steev Klimaszewski <steev@gentoo.org> iproute2-4.3.0.ebuild:
+  stable 4.3.0 for arm64
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Agostino Sarubbo <ago@gentoo.org> iproute2-4.4.0.ebuild:
+  amd64 stable wrt bug #576618
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*iproute2-4.5.0 (15 Mar 2016)
+
+  15 Mar 2016; Lars Wendler <polynomial-c@gentoo.org> +iproute2-4.5.0.ebuild:
+  Bump to version 4.5.0
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> iproute2-4.4.0.ebuild:
+  x86 stable wrt bug #576618
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> iproute2-4.3.0.ebuild:
+  ppc stable wrt bug #573334
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> iproute2-4.4.0.ebuild:
+  ppc stable wrt bug #576618
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> iproute2-4.4.0.ebuild:
+  ppc64 stable wrt bug #576618
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> iproute2-4.4.0.ebuild:
+  sparc stable wrt bug #576618
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> iproute2-4.3.0.ebuild:
+  sparc stable wrt bug #573334
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> iproute2-4.3.0.ebuild:
+  ia64 stable wrt bug #573334
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> iproute2-4.4.0.ebuild:
+  ia64 stable wrt bug #576618
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Mar 2016; Markus Meier <maekke@gentoo.org> iproute2-4.4.0.ebuild:
+  arm stable, bug #576618
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+*iproute2-4.6.0 (19 May 2016)
+
+  19 May 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +files/iproute2-4.5.0-no-iptables.patch, +iproute2-4.6.0.ebuild:
+  Bump to version 4.6.0
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  23 May 2016; Jeroen Roovers <jer@gentoo.org> iproute2-4.4.0.ebuild:
+  Stable for HPPA (bug #576618).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  25 May 2016; Matt Turner <mattst88@gentoo.org> iproute2-4.4.0.ebuild:
+  alpha stable, bug 576618.
+
+  01 Aug 2016; Mike Frysinger <vapier@gentoo.org> iproute2-2.6.38.ebuild,
+  iproute2-3.3.0.ebuild, iproute2-3.8.0.ebuild, iproute2-3.17.0.ebuild,
+  iproute2-3.19.0.ebuild, iproute2-4.0.0-r2.ebuild, iproute2-4.1.1.ebuild,
+  iproute2-4.2.0.ebuild, iproute2-4.3.0.ebuild, iproute2-4.4.0.ebuild,
+  iproute2-4.5.0.ebuild, iproute2-4.6.0.ebuild, iproute2-9999.ebuild:
+  linuxfoundation: switch http:// URIs to https://
+
+*iproute2-4.7.0 (08 Aug 2016)
+
+  08 Aug 2016; Lars Wendler <polynomial-c@gentoo.org> +iproute2-4.7.0.ebuild:
+  Bump to version 4.7.0
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  18 Sep 2016; Sergei Trofimovich <slyfox@gentoo.org> iproute2-4.7.0.ebuild,
+  iproute2-9999.ebuild:
+  respect CC, fixes cross-compilation, bug #591218
+
+  iproute tarball used to use 'CC = ' to override a compiler.
+  Now it uses 'CC :=' and it broke our sed silently.
+
+  Reported-by: Gerhard Bräunlich
+  Reported-by: n05 on #gentoo-embedded
+  Bug: https://bugs.gentoo.org/591218
+
+  Package-Manager: portage-2.3.0
+
+  18 Sep 2016; Sergei Trofimovich <slyfox@gentoo.org> iproute2-9999.ebuild:
+  refreshed live ebuild
+
+  Buffer overflow patch was upstreamed,
+  ipv6 patch was updated in iproute2-4.2.0, use that.
+
+  Package-Manager: portage-2.3.0
+
+*iproute2-4.8.0 (10 Oct 2016)
+
+  10 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> +iproute2-4.8.0.ebuild:
+  Bump to version 4.8.0
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

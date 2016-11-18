@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -14,10 +14,6 @@ x11-themes/smplayer-themes
 # Alexey Shvetsov <alexxy@gentoo.org> (21 May 2012)
 # Need deps pecl-apc and pecl-uploadprogress bug #416897
 >=www-apps/drupal-7.14
-
-# Justin Lecher <jlec@gentoo.org> (9 Mar 2011)
-# sci-libs/plplot needs keywords #358035
-=sci-biology/emboss-6.3.1*
 
 # Doug Goldstein <cardoe@gentoo.org> (11 Jan 2013)
 # Masked due to depends on bug #438780

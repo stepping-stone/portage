@@ -118,3 +118,17 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  17 Mar 2016; Patrice Clement <monsieurp@gentoo.org> seabios-1.7.5.ebuild,
+  seabios-1.7.5-r1.ebuild, seabios-1.8.2.ebuild:
+  add support for python3
+
+  Closes: https://github.com/gentoo/gentoo/pull/1020
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> seabios-1.7.5.ebuild,
+  seabios-1.7.5-r1.ebuild, seabios-1.8.2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  11 Nov 2016; Mike Frysinger <vapier@gentoo.org> seabios-1.7.5.ebuild,
+  seabios-1.7.5-r1.ebuild, seabios-1.8.2.ebuild:
+  update URIs to https://
+

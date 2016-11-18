@@ -247,3 +247,58 @@
 
   Package-Manager: portage-2.2.27
 
+*dovecot-2.2.22 (18 Mar 2016)
+
+  18 Mar 2016; Eray Aslan <eras@gentoo.org> +dovecot-2.2.22.ebuild:
+  version bump to 2.2.22
+
+  Package-Manager: portage-2.2.28
+
+*dovecot-2.2.23 (04 Apr 2016)
+
+  04 Apr 2016; Eray Aslan <eras@gentoo.org> +dovecot-2.2.23.ebuild:
+  version bump to 2.2.23 - bug 578704
+
+  Package-Manager: portage-2.2.28
+
+*dovecot-2.2.24 (27 Apr 2016)
+
+  27 Apr 2016; Eray Aslan <eras@gentoo.org> +dovecot-2.2.24.ebuild:
+  Version bump to 2.2.24
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/dovecot.init-r4:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*dovecot-2.2.25 (12 Jul 2016)
+
+  12 Jul 2016; Eray Aslan <eras@gentoo.org> +dovecot-2.2.25.ebuild:
+  version bump to dovecot-2.2.25
+
+  Package-Manager: portage-2.3.0
+
+  21 Oct 2016; Tobias Klausmann <klausman@gentoo.org> dovecot-2.2.25.ebuild:
+  2.2.25-r0: stable on alpha
+
+  Gentoo-Bug: 596820
+
+*dovecot-2.2.26.0 (31 Oct 2016)
+
+  31 Oct 2016; Eray Aslan <eras@gentoo.org> +dovecot-2.2.26.0.ebuild:
+  version bump to 2.2.26.0 (bug 598306)
+
+  Package-Manager: portage-2.3.2
+
+  06 Nov 2016; Jeroen Roovers <jer@gentoo.org> dovecot-2.2.25.ebuild:
+  Stable for HPPA PPC64 (bug #596820).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+  16 Nov 2016; Markus Meier <maekke@gentoo.org> dovecot-2.2.25.ebuild:
+  arm stable, bug #596820
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

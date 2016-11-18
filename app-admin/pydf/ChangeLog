@@ -70,3 +70,51 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="arm"
 
+  06 Mar 2016; Agostino Sarubbo <ago@gentoo.org> pydf-12.ebuild:
+  amd64 stable wrt bug #574898
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> pydf-12.ebuild:
+  x86 stable wrt bug #574898
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> pydf-12.ebuild:
+  ppc stable wrt bug #574898
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  28 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #175274
+
+  Package-Manager: portage-2.3.0_rc1
+
+  28 May 2016; Pacho Ramos <pacho@gentoo.org> -pydf-10-r1.ebuild:
+  drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*pydf-12-r1 (07 Jul 2016)
+
+  07 Jul 2016; Austin English <wizardedit@gentoo.org> metadata.xml,
+  +pydf-12-r1.ebuild:
+  bump to EAPI 6, add maintainer-needed
+
+  Package-Manager: portage-2.2.28
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> pydf-12-r1.ebuild:
+  Support python 3.5
+
+  Package-Manager: portage-2.3.1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pydf-12.ebuild,
+  pydf-12-r1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

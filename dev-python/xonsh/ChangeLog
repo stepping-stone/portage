@@ -58,3 +58,42 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+*xonsh-0.4.4 (23 Jul 2016)
+
+  23 Jul 2016; Ultrabug <ultrabug@gentoo.org> -xonsh-0.2.3.ebuild,
+  -xonsh-0.2.4.ebuild, -xonsh-0.2.5.ebuild, +xonsh-0.4.4.ebuild:
+  version bump and cleanup
+
+  Package-Manager: portage-2.2.27
+
+  23 Jul 2016; Ultrabug <ultrabug@gentoo.org> xonsh-0.4.4.ebuild:
+  fix missing runtime dep
+
+  Package-Manager: portage-2.2.27
+
+  20 Sep 2016; David Seifert <soap@gentoo.org>
+  -files/xonsh-0.2.3-kernel-backport.patch,
+  -files/xonsh-0.2.3-xonsh.bat-backport.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/2376
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  13 Nov 2016; Justin Lecher <jlec@gentoo.org>
+  +files/xonsh-0.4.4-destdir.patch, xonsh-0.4.4.ebuild:
+  Fix sandbox issue
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=589442
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*xonsh-0.4.7 (13 Nov 2016)
+
+  13 Nov 2016; Justin Lecher <jlec@gentoo.org> +xonsh-0.4.7.ebuild:
+  Version Bump
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+

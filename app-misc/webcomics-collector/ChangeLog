@@ -62,3 +62,28 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org>
+  webcomics-collector-0.7.3-r1.ebuild:
+  amd64 stable wrt bug #591492
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  webcomics-collector-0.7.3-r1.ebuild:
+  x86 stable, bug #591492
+
+  Package-Manager: portage-2.3.1
+
+  18 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  -webcomics-collector-0.7.3.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+

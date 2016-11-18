@@ -373,3 +373,201 @@
 
   Package-Manager: portage-2.2.26
 
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> xen-4.5.2-r5.ebuild,
+  xen-4.6.0-r9.ebuild:
+  amd64 stable wrt bug #574012
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Ian Delaney <idella4@gentoo.org> -xen-4.5.2-r4.ebuild,
+  -xen-4.6.0-r8.ebuild:
+  clean old vulnerable vns.
+
+  wrt the gentoo security bug
+
+  Gentoo bug: #574012
+
+  Package-Manager: portage-2.2.26
+
+  14 Apr 2016; Ian Delaney <idella4@gentoo.org> xen-4.6.1.ebuild:
+  correct typo in source of vn. 4.6.1
+
+  noted in gentoo bug, set with an equivalent sed statement substituting
+  an upstream patch, the sed being completed in one line
+
+  Gentoo-bug: #575868
+
+  Package-Manager: portage-2.2.28
+
+*xen-4.6.1-r1 (23 Apr 2016)
+*xen-4.6.0-r10 (23 Apr 2016)
+*xen-4.5.2-r6 (23 Apr 2016)
+
+  23 Apr 2016; Ian Delaney <idella4@gentoo.org> +xen-4.5.2-r6.ebuild,
+  +xen-4.6.0-r10.ebuild, +xen-4.6.1-r1.ebuild:
+  revbumps subsequent to addition of xsa sec patches
+
+  versions; 4.5.2-r6 4.6.0-r10 4.6.1-r1
+  sec patches; xsa 172 173
+
+  Gentoo-bug: #579074 #579072
+
+  Package-Manager: portage-2.2.28
+
+  26 Apr 2016; Patrice Clement <monsieurp@gentoo.org> xen-4.6.1.ebuild,
+  xen-4.6.1-r1.ebuild:
+  remove duplicate sed statements in 4.6.1{,-r1}
+
+  Package-Manager: portage-2.2.26
+  Closes: https://github.com/gentoo/gentoo/pull/1355
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  26 Apr 2016; Patrice Clement <monsieurp@gentoo.org> xen-4.6.1.ebuild,
+  xen-4.6.1-r1.ebuild:
+  Revert 4a1812d93b2531712d2293ad3bcd381d3b7d846e.
+
+  Package-Manager: portage-2.2.26
+
+  26 Apr 2016; Ian Delaney <idella4@gentoo.org> xen-4.6.1.ebuild,
+  xen-4.6.1-r1.ebuild:
+  remove duplicates accidentally copied
+
+  set in versions 4.6.1{,-r1}
+
+  Package-Manager: portage-2.2.28
+
+  15 May 2016; Ian Delaney <idella4@gentoo.org> -xen-4.5.2-r5.ebuild,
+  -xen-4.5.2-r6.ebuild:
+  rm old vns. 4.5.2
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Removing unneeded useflag description from metadata.xml
+
+  Package-Manager: portage-2.2.28
+
+*xen-4.6.1-r2 (20 May 2016)
+
+  20 May 2016; Ian Delaney <idella4@gentoo.org> +xen-4.6.1-r2.ebuild:
+  revbump to 4.6.1-r2
+
+  Add sec patch xsa-176 patch, re security bug
+  Holding off revbump to 4.6.0, considering also purging
+
+  Gentoo-bug: #583462
+
+  Package-Manager: portage-2.2.28
+
+*xen-4.6.1-r3 (07 Jun 2016)
+
+  07 Jun 2016; Yixun Lan <dlan@gentoo.org> +xen-4.6.1-r3.ebuild:
+  fix XSA-181, only for arm
+
+  include bumping various upstream non-security fixes
+
+  Package-Manager: portage-2.3.0_rc1
+
+*xen-4.7.0 (27 Jun 2016)
+*xen-4.6.3 (27 Jun 2016)
+
+  27 Jun 2016; Yixun Lan <dlan@gentoo.org> +xen-4.6.3.ebuild,
+  +xen-4.7.0.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*xen-4.7.0-r1 (27 Jul 2016)
+*xen-4.6.3-r1 (27 Jul 2016)
+
+  27 Jul 2016; Yixun Lan <dlan@gentoo.org> +xen-4.6.3-r1.ebuild,
+  +xen-4.7.0-r1.ebuild:
+  security bump, fix XSA-182,183
+
+  Gentoo-Bug: 588780
+
+  Package-Manager: portage-2.3.0
+
+  28 Jul 2016; Agostino Sarubbo <ago@gentoo.org> xen-4.6.3-r1.ebuild:
+  amd64 stable wrt bug #588780
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  28 Jul 2016; Yixun Lan <dlan@gentoo.org>
+  -files/xen-4-fix_dotconfig-gcc.patch, -files/xen-4.2-efi.patch,
+  -files/xen-4.5-efi.patch, -xen-4.6.0-r9.ebuild, -xen-4.6.0-r10.ebuild,
+  -xen-4.6.1.ebuild, -xen-4.6.1-r1.ebuild, -xen-4.6.1-r2.ebuild,
+  -xen-4.6.1-r3.ebuild, -xen-4.6.3.ebuild, -xen-4.7.0.ebuild:
+  drop old vulnerable versions
+
+  Gentoo-Bug: 588780
+
+  Package-Manager: portage-2.3.0
+
+*xen-4.7.0-r2 (09 Sep 2016)
+*xen-4.6.3-r2 (09 Sep 2016)
+
+  09 Sep 2016; Yixun Lan <dlan@gentoo.org> +xen-4.6.3-r2.ebuild,
+  +xen-4.7.0-r2.ebuild:
+  security bump, XSA-185/186/187
+
+  Package-Manager: portage-2.3.0
+
+  10 Sep 2016; Agostino Sarubbo <ago@gentoo.org> xen-4.6.3-r2.ebuild:
+  amd64 stable wrt bug #593198
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  12 Sep 2016; Yixun Lan <dlan@gentoo.org> -xen-4.6.3-r1.ebuild,
+  -xen-4.7.0-r1.ebuild:
+  drop old vulnerable versions
+
+  Package-Manager: portage-2.3.0
+
+*xen-4.7.0-r3 (05 Oct 2016)
+*xen-4.6.3-r3 (05 Oct 2016)
+
+  05 Oct 2016; Yixun Lan <dlan@gentoo.org> +xen-4.6.3-r3.ebuild,
+  +xen-4.7.0-r3.ebuild:
+  fix XSA-190
+
+  Gentoo-Bug: 594850
+
+  Package-Manager: portage-2.3.1
+
+  04 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xen-4.6.3-r3.ebuild:
+  amd64 stable wrt bug #594850
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  04 Nov 2016; Yixun Lan <dlan@gentoo.org> -xen-4.6.3-r2.ebuild,
+  -xen-4.7.0-r2.ebuild:
+  drop old vulnerable version
+
+  Gentoo-Bug: 594850
+
+  Package-Manager: portage-2.3.2
+
+*xen-4.7.1 (11 Nov 2016)
+
+  11 Nov 2016; Yixun Lan <dlan@gentoo.org> +xen-4.7.1.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.2
+
+*xen-4.6.4 (15 Nov 2016)
+
+  15 Nov 2016; Yixun Lan <dlan@gentoo.org> +xen-4.6.4.ebuild:
+  version bump 4.6.4
+
+  Package-Manager: portage-2.3.2
+

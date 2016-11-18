@@ -63,3 +63,16 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*gpicview-0.2.5 (13 Sep 2016)
+
+  13 Sep 2016; Hanno <hanno@gentoo.org> +gpicview-0.2.5.ebuild:
+  Version bump to 0.2.5
+
+  Package-Manager: portage-2.3.0
+
+  16 Nov 2016; Markus Meier <maekke@gentoo.org> gpicview-0.2.5.ebuild:
+  arm stable, bug #597350
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

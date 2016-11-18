@@ -112,3 +112,57 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  oslo-log-1.10.0.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*oslo-log-3.2.0 (25 Mar 2016)
+
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +oslo-log-3.2.0.ebuild:
+  bup mitaka
+
+  Package-Manager: portage-2.2.26
+
+*oslo-log-3.3.0 (29 Mar 2016)
+
+  29 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -oslo-log-3.2.0.ebuild, +oslo-log-3.3.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  oslo-log-3.3.0.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+  11 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -oslo-log-0.3.0.ebuild, -oslo-log-1.0.0.ebuild, -oslo-log-1.1.0.ebuild,
+  -oslo-log-1.10.0.ebuild:
+  massive cleanup of old openstack stuff
+
+*oslo-log-3.16.0 (30 Sep 2016)
+
+  30 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  oslo-log-3.3.0.ebuild, +oslo-log-3.16.0.ebuild:
+  add initial support for newton (keystone)
+
+  dropped py3.3 and updated most (maybe all) to eapi6
+
+  01 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  oslo-log-3.16.0.ebuild:
+  openstack p2, newton is done, will add heat later
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> oslo-log-3.3.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  oslo-log-3.16.0.ebuild:
+  3.16.0 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

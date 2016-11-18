@@ -67,3 +67,13 @@
 
   Package-Manager: portage-2.2.27
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  03 Jun 2016; Anthony G. Basile <blueness@gentoo.org> keynote-2.3-r3.ebuild:
+  add libressl support
+
+  Package-Manager: portage-2.2.28
+

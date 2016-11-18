@@ -61,3 +61,58 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org>
+  dosemu-1.4.1_pre20130107-r3.ebuild:
+  sourceforge: switch to https:// URIs
+
+  11 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/dosemu-1.3.4-shm.diff, -files/dosemu-1.4.0.1-gcc433.diff:
+  remove unused patches
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  29 Oct 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  dosemu-1.4.1_pre20091009.ebuild, dosemu-1.4.1_pre20130107-r3.ebuild,
+  +files/dosemu-1.4.1_pre20091009-dash.patch:
+  tweak to support non-bash '/bin/sh'
+
+  Package-Manager: portage-2.3.2
+
+  29 Oct 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  dosemu-1.4.1_pre20091009.ebuild,
+  +files/dosemu-1.4.1_pre20091009-fix-glibc.patch:
+  backported glibc detection, bug #597880
+
+  Reported-by: gentoo@moin.fi
+  Bug: https://bugs.gentoo.org/597880
+
+  Package-Manager: portage-2.3.2
+
+  29 Oct 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  dosemu-1.4.1_pre20130107-r3.ebuild:
+  amd64/x86 stable, bug #597880
+
+  Package-Manager: portage-2.3.2
+
+  29 Oct 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  -dosemu-1.4.1_pre20091009.ebuild,
+  -files/dosemu-1.4.1_pre20091009-fix-glibc.patch,
+  -files/dosemu-1.4.1_pre20091009-flex.patch:
+  drop old
+
+  Package-Manager: portage-2.3.2
+
+  29 Oct 2016; Hanno <hanno@gentoo.org> metadata.xml:
+  remove myself as maintainer
+
+  slyfox will take over maintainership.
+
+  Package-Manager: portage-2.3.2
+
+  05 Nov 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  dosemu-1.4.1_pre20130107-r3.ebuild,
+  +files/dosemu-1.4.1_pre20130107-no-glibc.patch:
+  drop incomplete check for glibc
+
+  Package-Manager: portage-2.3.2
+

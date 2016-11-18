@@ -75,3 +75,18 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*dav-0.8.5-r2 (10 Aug 2016)
+
+  10 Aug 2016; Michael Orlitzky <mjo@gentoo.org> +dav-0.8.5-r2.ebuild,
+  +files/fix-Wformat-security-warnings.patch:
+  new revision with format-security patch.
+
+  Gentoo-Bug: 521016
+
+  Package-Manager: portage-2.2.28
+

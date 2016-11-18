@@ -134,3 +134,78 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*man-pages-4.05 (15 Mar 2016)
+
+  15 Mar 2016; Anthony G. Basile <blueness@gentoo.org> +man-pages-4.05.ebuild:
+  version bump to 4.05
+
+  Package-Manager: portage-2.2.26
+
+  15 Mar 2016; Anthony G. Basile <blueness@gentoo.org> man-pages-4.04.ebuild:
+  stabilize 4.04
+
+  Package-Manager: portage-2.2.26
+
+*man-pages-4.06 (10 May 2016)
+
+  10 May 2016; Lars Wendler <polynomial-c@gentoo.org> +man-pages-4.06.ebuild:
+  Bump to version 4.06
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  10 May 2016; Lars Wendler <polynomial-c@gentoo.org> -man-pages-4.03.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  10 May 2016; Lars Wendler <polynomial-c@gentoo.org> man-pages-4.05.ebuild:
+  Stable for all arches.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  11 May 2016; Mike Frysinger <vapier@gentoo.org> man-pages-4.05.ebuild:
+  stabilize for arm64/m68k/s390/sh too
+
+  23 Jun 2016; Ulrich Müller <ulm@gentoo.org> man-pages-4.04.ebuild,
+  man-pages-4.05.ebuild, man-pages-4.06.ebuild:
+  Migrate from LINGUAS to L10N.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*man-pages-4.07 (19 Jul 2016)
+
+  19 Jul 2016; Anthony G. Basile <blueness@gentoo.org> +man-pages-4.07.ebuild:
+  version bump to 4.07
+
+  Package-Manager: portage-2.2.28
+
+  19 Jul 2016; Anthony G. Basile <blueness@gentoo.org> man-pages-4.06.ebuild:
+  stabilize 4.06 for all arches
+
+  Package-Manager: portage-2.2.28
+
+  19 Jul 2016; Anthony G. Basile <blueness@gentoo.org> -man-pages-4.04.ebuild:
+  remove old stable version
+
+  Package-Manager: portage-2.2.28
+
+*man-pages-4.08 (08 Oct 2016)
+
+  08 Oct 2016; Anthony G. Basile <blueness@gentoo.org> +man-pages-4.08.ebuild:
+  version bump to 4.08
+
+  Package-Manager: portage-2.2.28
+
+  08 Oct 2016; Anthony G. Basile <blueness@gentoo.org> man-pages-4.07.ebuild:
+  stabilize 4.07 for all arches
+
+  Package-Manager: portage-2.2.28
+
+  08 Oct 2016; Anthony G. Basile <blueness@gentoo.org> -man-pages-4.05.ebuild:
+  remove old stable version
+
+  Package-Manager: portage-2.2.28
+

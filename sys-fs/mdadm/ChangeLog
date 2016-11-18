@@ -117,3 +117,11 @@
   08 Feb 2016; Mike Frysinger <vapier@gentoo.org> mdadm-3.4.ebuild:
   disable corosync & libdlm autodetection #573782
 
+  19 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/mdadm-3.4-sysmacros.patch, mdadm-3.4.ebuild:
+  fix build w/newer glibc #580188
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/mdadm.rc,
+  files/mdraid.rc:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+

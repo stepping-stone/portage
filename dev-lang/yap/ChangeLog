@@ -83,3 +83,49 @@
 
   Package-Manager: portage-2.2.26
 
+  03 Mar 2016; Keri Harris <keri@gentoo.org> yap-6.3.3.ebuild:
+  avoid compile-time MPI-YAP interface redefinitions
+
+  Package-Manager: portage-2.2.26
+
+  04 Mar 2016; Keri Harris <keri@gentoo.org> yap-6.3.3.ebuild:
+  avoid missing SWI-YAP interface definitions with USE=-readline
+
+  Package-Manager: portage-2.2.26
+
+  10 Mar 2016; Keri Harris <keri@gentoo.org> yap-6.3.3.ebuild:
+  6.3.3 stable on amd64. #576994
+
+  Package-Manager: portage-2.2.26
+
+  11 Mar 2016; Keri Harris <keri@gentoo.org> yap-6.3.3.ebuild:
+  differentiate between mysql & odbc during MYDDAS config checks
+
+  Package-Manager: portage-2.2.26
+
+  16 Mar 2016; Keri Harris <keri@gentoo.org> yap-6.3.2.ebuild:
+  always inline cp-float-unaligned instructions. Closes #577106
+
+  Package-Manager: portage-2.2.26
+
+  16 Mar 2016; Keri Harris <keri@gentoo.org> yap-6.3.2.ebuild:
+  fix gcc-5 compilation of swi-minisat
+
+  Package-Manager: portage-2.2.26
+
+  21 Jul 2016; Keri Harris <keri@gentoo.org> yap-6.3.3.ebuild:
+  do not build jpl docs as they are not installed and have been superceded by
+  pldocs
+
+  Package-Manager: portage-2.2.26
+
+  21 Jul 2016; Keri Harris <keri@gentoo.org> yap-6.3.3.ebuild:
+  avoid compile-time MPE-YAP interface redefinitions. Closes #589186
+
+  Package-Manager: portage-2.2.26
+
+  06 Oct 2016; Keri Harris <keri@gentoo.org> yap-6.3.3.ebuild:
+  disable outdated gecode bindings. Closes #590960
+
+  Package-Manager: portage-2.3.0
+

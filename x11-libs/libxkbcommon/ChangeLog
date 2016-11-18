@@ -67,3 +67,67 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*libxkbcommon-0.6.0 (19 Mar 2016)
+
+  19 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +libxkbcommon-0.6.0.ebuild:
+  Version bump to 0.6.0
+
+  Package-Manager: portage-2.2.28
+
+  19 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -libxkbcommon-0.2.0.ebuild,
+  -libxkbcommon-0.3.1.ebuild, -libxkbcommon-0.4.1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+*libxkbcommon-0.6.1 (10 Apr 2016)
+
+  10 Apr 2016; Manuel Rüger <mrueg@gentoo.org> +libxkbcommon-0.6.1.ebuild:
+  Version bump to 0.6.1
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Jeroen Roovers <jer@gentoo.org> libxkbcommon-0.6.0.ebuild:
+  Stable for HPPA (bug #584482).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  06 Aug 2016; Markus Meier <maekke@gentoo.org> libxkbcommon-0.6.0.ebuild:
+  arm stable, bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libxkbcommon-0.6.0.ebuild:
+  x86 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libxkbcommon-0.6.0.ebuild:
+  amd64 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  22 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  libxkbcommon-0.6.0.ebuild:
+  0.6.0-r0: add alpha keyword
+
+  Gentoo-Bug: 579266
+
+  16 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libxkbcommon-0.6.0.ebuild:
+  ia64 stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libxkbcommon-0.6.0.ebuild:
+  ppc stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

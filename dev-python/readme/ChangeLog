@@ -77,3 +77,12 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> readme-0.5.1.ebuild,
+  readme-0.6.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org> readme-0.6.0.ebuild:
+  0.6 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

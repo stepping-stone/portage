@@ -188,3 +188,226 @@
 
   Package-Manager: portage-2.2.26
 
+*spotify-1.0.24.104 (10 Mar 2016)
+
+  10 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.23.93.ebuild, +spotify-1.0.24.104.ebuild:
+  they bumped it again
+
+  Package-Manager: portage-2.2.26
+
+  14 Mar 2016; Agostino Sarubbo <ago@gentoo.org> spotify-1.0.24.104.ebuild:
+  amd64 stable wrt bug #575126
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> spotify-1.0.24.104.ebuild:
+  x86 stable wrt bug #575126
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*spotify-1.0.26.125 (02 Apr 2016)
+
+  02 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.19.106-r1.ebuild, +spotify-1.0.26.125.ebuild:
+  bup bug 578864
+
+  Package-Manager: portage-2.2.26
+
+  02 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.24.104.ebuild, spotify-1.0.26.125.ebuild:
+  updated again...
+
+  Package-Manager: portage-2.2.26
+
+*spotify-1.0.27 (12 Apr 2016)
+
+  12 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +spotify-1.0.27.ebuild:
+  bug for bug 579558
+
+  Package-Manager: portage-2.2.26
+
+  12 Apr 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.26.125.ebuild, spotify-1.0.27.ebuild:
+  and stable
+
+  Package-Manager: portage-2.2.26
+
+*spotify-1.0.28 (01 May 2016)
+
+  01 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.27.ebuild, +spotify-1.0.28.ebuild:
+  bup and bugs 581596 and 581670
+
+  Package-Manager: portage-2.2.26
+
+  01 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  spotify-1.0.28.ebuild:
+  fast stable
+
+  Package-Manager: portage-2.2.26
+
+*spotify-1.0.29 (19 May 2016)
+
+  19 May 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.28.ebuild, +spotify-1.0.29.ebuild:
+  upadte for new release
+
+*spotify-1.0.31 (04 Jun 2016)
+
+  04 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.29.ebuild, +spotify-1.0.31.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  04 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  spotify-1.0.31.ebuild:
+  and stable
+
+  Package-Manager: portage-2.2.28
+
+*spotify-1.0.32 (29 Jun 2016)
+
+  29 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.31.ebuild, +spotify-1.0.32.ebuild:
+  bup for bug 585042
+
+  Package-Manager: portage-2.2.28
+
+  29 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  spotify-1.0.32.ebuild:
+  fast stable due to stupid upstream
+
+  Package-Manager: portage-2.2.28
+
+*spotify-1.0.33 (03 Aug 2016)
+
+  03 Aug 2016; Jorge Manuel B. S. Vicetto (jmbsvicetto)
+  <jmbsvicetto@gentoo.org> +spotify-1.0.33.ebuild:
+  Version bump - fixes bug 590398.
+  Thanks to Russell Knighton <russell AT annunaki2k2 DOT co DOT uk>.
+
+  Package-Manager: portage-2.3.0
+
+  03 Aug 2016; Jorge Manuel B. S. Vicetto (jmbsvicetto)
+  <jmbsvicetto@gentoo.org> spotify-1.0.33.ebuild:
+  fast stable due to stupid upstream
+
+  Package-Manager: portage-2.3.0
+
+  03 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  spotify-1.0.33.ebuild:
+  stable x86
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.32.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+*spotify-1.0.34 (07 Aug 2016)
+
+  07 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +spotify-1.0.34.ebuild:
+  bup for bug 590624
+
+  Package-Manager: portage-2.2.28
+
+  07 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.33.ebuild, spotify-1.0.34.ebuild:
+  remove old and stable new for bug 590624
+
+  Package-Manager: portage-2.2.28
+
+*spotify-1.0.36 (12 Aug 2016)
+
+  12 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.34.ebuild, +spotify-1.0.36.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  12 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  spotify-1.0.36.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+*spotify-1.0.36-r1 (15 Aug 2016)
+
+  15 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +spotify-1.0.36-r1.ebuild:
+  fixing bug 591020
+
+  Package-Manager: portage-2.2.28
+
+  15 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.36.ebuild, spotify-1.0.36-r1.ebuild:
+  stable
+
+  Package-Manager: portage-2.2.28
+
+*spotify-1.0.37 (03 Sep 2016)
+
+  03 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +spotify-1.0.37.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  03 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.36-r1.ebuild, spotify-1.0.37.ebuild:
+  because upstream likes to remove stuff
+
+  Package-Manager: portage-2.2.28
+
+*spotify-1.0.38 (28 Sep 2016)
+
+  28 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +spotify-1.0.38.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+
+  28 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.37.ebuild, spotify-1.0.38.ebuild:
+  1.0.38 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+
+*spotify-1.0.42 (05 Nov 2016)
+
+  05 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +spotify-1.0.42.ebuild:
+  bup for bug 598936
+
+  Package-Manager: portage-2.3.0
+
+*spotify-1.0.42-r1 (10 Nov 2016)
+
+  10 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.42.ebuild, +spotify-1.0.42-r1.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+
+  10 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  spotify-1.0.42-r1.ebuild:
+  stable amd64 and x86 for disappearing src bug 598936
+
+  Package-Manager: portage-2.3.0
+
+  10 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -spotify-1.0.38.ebuild:
+  cleanup for disapearing stuff
+
+  Package-Manager: portage-2.3.0
+

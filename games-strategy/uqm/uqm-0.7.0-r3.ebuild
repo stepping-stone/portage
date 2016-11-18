@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/sc2/${P}-source.tgz
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="music opengl remix voice"
 
 RDEPEND="media-libs/libmikmod
@@ -38,6 +38,10 @@ src_prepare() {
 	use opengl \
 		&& myopengl=opengl \
 		|| myopengl=pure
+
+	epatch \
+		"${FILESDIR}"/${P}-tempdir.patch \
+		"${FILESDIR}"/${P}-warning.patch
 
 	cat <<-EOF > config.state
 	CHOICE_debug_VALUE='nodebug'

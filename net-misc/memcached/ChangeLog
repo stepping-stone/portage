@@ -101,3 +101,190 @@
 
   Package-Manager: portage-2.2.26
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  memcached-1.4.25.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+  26 Mar 2016; Agostino Sarubbo <ago@gentoo.org> memcached-1.4.25.ebuild:
+  amd64 stable wrt bug #578088
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  03 Apr 2016; Markus Meier <maekke@gentoo.org> memcached-1.4.25.ebuild:
+  arm stable, bug #578088
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/1.1.12/init,
+  files/1.1.13/init, files/1.2.6/init, files/1.3.3/init, files/memcached.init,
+  files/memcached.init2:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  30 May 2016; Tobias Klausmann <klausman@gentoo.org> memcached-1.4.25.ebuild:
+  1.4.25-r0: add alpha keyword
+
+  Gentoo-Bug: 578088
+
+  Package-Manager: portage-2.3.0_rc1
+
+*memcached-1.4.26 (19 Jun 2016)
+
+  19 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +memcached-1.4.26.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> memcached-1.4.25.ebuild:
+  x86 stable wrt bug #578088
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*memcached-1.4.27 (27 Jun 2016)
+
+  27 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +memcached-1.4.27.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> memcached-1.4.25.ebuild:
+  ppc stable wrt bug #578088
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*memcached-1.4.29 (14 Jul 2016)
+
+  14 Jul 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +memcached-1.4.29.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  06 Aug 2016; Markus Meier <maekke@gentoo.org> memcached-1.4.26.ebuild:
+  arm stable, bug #589120
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+*memcached-1.4.30 (12 Aug 2016)
+
+  12 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +memcached-1.4.30.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+*memcached-1.4.31 (20 Aug 2016)
+
+  20 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +memcached-1.4.31.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.28
+
+  06 Sep 2016; Tobias Klausmann <klausman@gentoo.org> memcached-1.4.31.ebuild:
+  1.4.31-r0: add alpha keyword
+
+  Gentoo-Bug: 589120
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> memcached-1.4.31.ebuild:
+  amd64 stable wrt bug #589120
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  01 Oct 2016; Jeroen Roovers <jer@gentoo.org> memcached-1.4.31.ebuild:
+  Stable for HPPA PPC64 (bug #589120).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*memcached-1.4.32 (14 Oct 2016)
+
+  14 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +memcached-1.4.32.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+
+*memcached-1.4.33 (01 Nov 2016)
+
+  01 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +memcached-1.4.33.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+
+  04 Nov 2016; Agostino Sarubbo <ago@gentoo.org> memcached-1.4.33.ebuild:
+  amd64 stable wrt bug #598836
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  04 Nov 2016; Agostino Sarubbo <ago@gentoo.org> memcached-1.4.33.ebuild:
+  x86 stable wrt bug #598836
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  04 Nov 2016; Jeroen Roovers <jer@gentoo.org> memcached-1.4.33.ebuild:
+  Stable for HPPA PPC64 (bug #598836).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+  06 Nov 2016; Robin H. Johnson <robbat2@gentoo.org>
+  memcached-1.2.6-r1.ebuild, memcached-1.2.8-r1.ebuild,
+  memcached-1.3.3-r5.ebuild, metadata.xml:
+  cleanup googlecode references, upstream added old releases on request
+
+  Package-Manager: portage-2.3.2
+
+  06 Nov 2016; Patrick Lauer <patrick@gentoo.org> memcached-1.2.6-r1.ebuild:
+  Whitespace
+
+  Package-Manager: portage-2.3.2
+
+*memcached-1.4.33-r1 (08 Nov 2016)
+
+  08 Nov 2016; Robin H. Johnson <robbat2@gentoo.org>
+  +memcached-1.4.33-r1.ebuild:
+  use upstream systemd unit per bug #587440 suggestion.
+
+  Package-Manager: portage-2.3.2
+
+  08 Nov 2016; Robin H. Johnson <robbat2@gentoo.org> -files/1.1.12/conf,
+  -files/1.1.12/init, -files/1.1.13/conf, -files/1.1.13/init,
+  -files/1.2.6/conf, -files/1.2.6/init, -files/1.3.3/conf, -files/1.3.3/init,
+  -memcached-1.2.6-r1.ebuild, -memcached-1.2.8-r1.ebuild,
+  -memcached-1.3.3-r5.ebuild, -memcached-1.4.17.ebuild,
+  -memcached-1.4.17-r3.ebuild, memcached-1.4.24.ebuild,
+  memcached-1.4.25.ebuild, memcached-1.4.26.ebuild, memcached-1.4.27.ebuild,
+  memcached-1.4.29.ebuild, memcached-1.4.30.ebuild, memcached-1.4.31.ebuild,
+  memcached-1.4.32.ebuild, memcached-1.4.33.ebuild,
+  memcached-1.4.33-r1.ebuild:
+  clean up old 1.2/1.3 series that no longer build, as well as filesdir and
+  old 1.4 release; update src_uri
+
+  Package-Manager: portage-2.3.2
+
+  14 Nov 2016; Tobias Klausmann <klausman@gentoo.org> memcached-1.4.33.ebuild:
+  1.4.33-r0: stable on alpha
+
+  Gentoo-Bug: 598836
+

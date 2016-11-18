@@ -124,3 +124,28 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> plplot-5.11.1-r1.ebuild:
+  ppc stable wrt bug #546578
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org>
+  files/plplot-5.10.0-have-config-h.patch:
+  sourceforge: switch to https:// URIs
+
+  03 Aug 2016; David Seifert <soap@gentoo.org> plplot-5.11.1-r1.ebuild:
+  Add missing call to fortran-2_pkg_setup
+
+  Package-Manager: portage-2.3.0
+
+  08 Oct 2016; David Seifert <soap@gentoo.org> metadata.xml,
+  plplot-5.10.0-r1.ebuild, plplot-5.11.0-r1.ebuild, plplot-5.11.1.ebuild,
+  plplot-5.11.1-r1.ebuild:
+  Remove support for USE="ada"
+
+  Gentoo-bug: 596530
+
+  Package-Manager: portage-2.3.1
+

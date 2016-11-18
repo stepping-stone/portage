@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -6,12 +6,12 @@ EAPI=2
 inherit flag-o-matic eutils libtool
 
 DESCRIPTION="A thesaurus lib, tool and database"
-HOMEPAGE="http://sourceforge.net/projects/aiksaurus"
+HOMEPAGE="https://sourceforge.net/projects/aiksaurus"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos"
 IUSE="gtk"
 
 RDEPEND="gtk? ( x11-libs/gtk+:2 )"

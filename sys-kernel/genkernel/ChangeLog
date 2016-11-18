@@ -239,3 +239,138 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --ignore-arches
 
+  21 Mar 2016; Mike Frysinger <vapier@gentoo.org> genkernel-3.4.52.3.ebuild:
+  mark 3.4.52.3 stable for all
+
+  26 Mar 2016; Mike Frysinger <vapier@gentoo.org> genkernel-3.4.45.1.ebuild,
+  genkernel-3.4.48.ebuild, genkernel-3.4.49.2.ebuild, genkernel-3.4.50.ebuild,
+  genkernel-3.4.51.4.ebuild, genkernel-3.4.52.2.ebuild,
+  genkernel-3.4.52.3.ebuild, genkernel-3.4.52.4.ebuild,
+  genkernel-3.5.0.0.ebuild, genkernel-9999.ebuild:
+  drop redundant keywords
+
+*genkernel-3.5.0.1 (27 Mar 2016)
+*genkernel-3.4.52.4-r1 (27 Mar 2016)
+
+  27 Mar 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/genkernel-3.4.52.4-system-map.patch, +genkernel-3.4.52.4-r1.ebuild,
+  +genkernel-3.5.0.1.ebuild:
+  version bump for System.map fixes #570822
+
+  01 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  genkernel-3.4.52.4-r1.ebuild:
+  mark 3.4.52.4-r1 s390 stable for System.map fix
+
+  20 Apr 2016; Mike Frysinger <vapier@gentoo.org> genkernel-3.4.45.1.ebuild,
+  genkernel-3.4.48.ebuild, genkernel-3.4.49.2.ebuild, genkernel-3.4.50.ebuild,
+  genkernel-3.4.51.4.ebuild, genkernel-3.4.52.2.ebuild,
+  genkernel-3.4.52.3.ebuild, genkernel-3.4.52.4.ebuild,
+  genkernel-3.4.52.4-r1.ebuild, genkernel-3.5.0.0.ebuild,
+  genkernel-3.5.0.1.ebuild, genkernel-9999.ebuild:
+  update sources.redhat.com to sourceware.org
+
+  20 Apr 2016; Mike Frysinger <vapier@gentoo.org> genkernel-3.4.45.1.ebuild,
+  genkernel-3.4.48.ebuild, genkernel-3.4.49.2.ebuild, genkernel-3.4.50.ebuild,
+  genkernel-3.4.51.4.ebuild, genkernel-3.4.52.2.ebuild,
+  genkernel-3.4.52.3.ebuild, genkernel-3.4.52.4.ebuild,
+  genkernel-3.4.52.4-r1.ebuild, genkernel-3.5.0.0.ebuild,
+  genkernel-3.5.0.1.ebuild, genkernel-9999.ebuild:
+  move to https URLs
+
+  21 Apr 2016; Mike Frysinger <vapier@gentoo.org> genkernel-9999.ebuild:
+  clean up automatic git version
+
+  Drop the leading "v" to match the version style we use in releases.
+
+  Always add a "-git" suffix so we know it's the 9999 ebuild even if the
+  git repo happens to be the same as the latest release.
+
+*genkernel-3.5.0.2 (16 May 2016)
+
+  16 May 2016; Robin H. Johnson <robbat2@gentoo.org>
+  +genkernel-3.5.0.2.ebuild:
+  bump, lots of kconfig fixups.
+
+  Package-Manager: portage-2.2.28
+
+*genkernel-3.4.52.4-r2 (15 Aug 2016)
+
+  15 Aug 2016; Robin H. Johnson <robbat2@gentoo.org>
+  +files/genkernel-3.4.52.4-grub-mkconfig.patch,
+  +genkernel-3.4.52.4-r2.ebuild:
+  backport grub-mkconfig change from master, per bug #591200
+
+  Package-Manager: portage-2.2.28
+
+*genkernel-3.5.0.3 (15 Aug 2016)
+
+  15 Aug 2016; Robin H. Johnson <robbat2@gentoo.org>
+  +genkernel-3.5.0.3.ebuild:
+  new release on the 3.5 series, ready for more prime-time usage
+
+  Package-Manager: portage-2.2.28
+
+*genkernel-3.5.0.4 (16 Aug 2016)
+
+  16 Aug 2016; Robin H. Johnson <robbat2@gentoo.org>
+  +genkernel-3.5.0.4.ebuild:
+  bump.
+
+  Package-Manager: portage-2.2.28
+
+*genkernel-3.5.0.5 (31 Aug 2016)
+
+  31 Aug 2016; Robin H. Johnson <robbat2@gentoo.org>
+  +genkernel-3.5.0.5.ebuild:
+  bump for bug #591770.
+
+  Package-Manager: portage-2.2.28
+
+  04 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  genkernel-3.4.52.4-r2.ebuild:
+  3.4.52.4-r2: add alpha keyword
+
+  Gentoo-Bug: 591224
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> genkernel-3.4.52.4-r2.ebuild:
+  amd64 stable wrt bug #591224
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Jeroen Roovers <jer@gentoo.org> genkernel-3.4.52.4-r2.ebuild:
+  Stable for HPPA PPC64 (bug #591224).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  12 Oct 2016; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild:
+  require external newer firmware per bug #447100.
+
+  Package-Manager: portage-2.2.28
+
+  12 Oct 2016; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild,
+  metadata.xml:
+  also ensure local firmware can still be optionally used, bug #447100.
+
+  Package-Manager: portage-2.2.28
+
+  12 Oct 2016; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  fix remote-id.
+
+  Package-Manager: portage-2.2.28
+
+  12 Oct 2016; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  temporarily disable metadata change for QA false positive.
+
+  Package-Manager: portage-2.2.28
+
+*genkernel-3.5.0.6 (27 Oct 2016)
+
+  27 Oct 2016; Robin H. Johnson <robbat2@gentoo.org>
+  +genkernel-3.5.0.6.ebuild:
+  bump, now with added firmware & early-microcode goodness.
+
+  Package-Manager: portage-2.3.2
+

@@ -72,3 +72,80 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  07 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #269977
+
+  Package-Manager: portage-2.3.0
+
+  11 Aug 2016; Marek Szuba <marecki@gentoo.org> metadata.xml, pms-9999.ebuild:
+  live ebuild overhaul
+
+  Updated homepage and repo URIs
+
+  Bumped EAPI to version 6
+
+  Fixed build with ncurses[tinfo]
+
+  Added dependency on media-libs/libmpdclient
+
+  Removed obsolete boost dependency
+
+  Updated USE-flags and upstream metadata
+
+  Added new maintainer info
+
+  Signed-off-by: Marek Szuba <marecki@gentoo.org>
+
+*pms-0.42-r2 (25 Aug 2016)
+
+  25 Aug 2016; Kristian Fiskerstrand <k_f@gentoo.org> +pms-0.42-r2.ebuild:
+  revbump to 0.42-r2
+
+  EAPI bump to 6
+
+  fixed bug #526530 (build with ncurses[tinfo])
+
+  fixed bug #351996 (a buffer overflow)
+
+  updated HOMEPAGE, SRC_URI and the year in the header
+
+  25 Aug 2016; Kristian Fiskerstrand <k_f@gentoo.org> pms-9999.ebuild:
+  9999: match ncurses slot
+
+  25 Aug 2016; Kristian Fiskerstrand <k_f@gentoo.org> -pms-0.42.ebuild:
+  dropped old 0.42 from the tree
+
+  25 Aug 2016; Kristian Fiskerstrand <k_f@gentoo.org> -pms-0.42-r1.ebuild:
+  dropped old 0.42-r1 from the tree
+
+  13 Sep 2016; Marek Szuba <marecki@gentoo.org> pms-0.42-r2.ebuild:
+  fix numerous QA issues in 0.42-r2
+
+  specify correct license
+
+  fix ncurses slot depend
+
+  add missing virtual/libintl depend and sys-devel/gettext rdepend
+
+  use tc-getPKG_CONFIG from toolchain funcs
+
+  Signed-off-by: Marek Szuba <marecki@gentoo.org>
+
+  13 Sep 2016; Marek Szuba <marecki@gentoo.org>
+  +files/pms-9999-fix-automagic-dep.patch, pms-9999.ebuild:
+  live ebuild overhaul
+
+  fix ncurses slot dep
+
+  specify correct license
+
+  fix automagic dependency on autodoc
+
+  add missing depends (dev-util/intltool and dev-util/gettext)
+
+  add missing rdepend on virtual/libintl
+
+  specify gcc 4.9 as the minimal gcc version
+
+  Signed-off-by: Marek Szuba <marecki@gentoo.org>
+

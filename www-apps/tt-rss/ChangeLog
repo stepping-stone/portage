@@ -86,3 +86,45 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/ttrssd.initd-r1,
+  files/ttrssd.initd-r2:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*tt-rss-20160527 (27 May 2016)
+
+  27 May 2016; Thomas Kahle <tomka@gentoo.org> +tt-rss-20160527.ebuild:
+  bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  27 May 2016; Thomas Kahle <tomka@gentoo.org> -tt-rss-20150924.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*tt-rss-20160930 (30 Sep 2016)
+
+  30 Sep 2016; Thomas Kahle <tomka@gentoo.org> +tt-rss-20160930.ebuild:
+  Bump to current git (rolling release)
+
+  Package-Manager: portage-2.3.0
+
+  30 Sep 2016; Thomas Kahle <tomka@gentoo.org> -tt-rss-20160124.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0
+
+  12 Oct 2016; Thomas Kahle <tomka@gentoo.org> tt-rss-20160527.ebuild,
+  tt-rss-20160930.ebuild:
+  Switch to mysqli interface
+
+  Fixes bug 595760.
+
+  Package-Manager: portage-2.3.0
+
+  12 Oct 2016; Thomas Kahle <tomka@gentoo.org> tt-rss-20160527.ebuild,
+  tt-rss-20160930.ebuild:
+  Fix mysql->mysqli transition
+
+  Package-Manager: portage-2.3.0
+

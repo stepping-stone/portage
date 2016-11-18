@@ -38,3 +38,16 @@
 
   Package-Manager: portage-2.2.26
 
+  08 Apr 2016; Fabian Groffen <grobian@gentoo.org>
+  with-editor-2.5.0-r2.ebuild:
+  add Prefix keywords, bug #563748
+
+  Package-Manager: portage-2.2.27
+
+*with-editor-2.5.2 (22 Aug 2016)
+
+  22 Aug 2016; Hans de Graaff <graaff@gentoo.org> +with-editor-2.5.2.ebuild:
+  add 2.5.2
+
+  Package-Manager: portage-2.2.28
+

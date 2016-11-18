@@ -184,3 +184,92 @@
   kodi-15.2.ebuild, kodi-16.0.ebuild, kodi-9999.ebuild:
   fix logic error in vaapi/gles check #464306#14
 
+  02 Mar 2016; Mike Frysinger <vapier@gentoo.org> kodi-14.1.ebuild,
+  kodi-15.2.ebuild, kodi-16.0.ebuild, kodi-9999.ebuild:
+  require at least gles or opengl to be enabled #575626
+
+  02 Mar 2016; Mike Frysinger <vapier@gentoo.org> kodi-14.1.ebuild,
+  kodi-15.2.ebuild, kodi-16.0.ebuild, kodi-9999.ebuild:
+  switch HOMEPAGE to https #576244
+
+  02 Mar 2016; Mike Frysinger <vapier@gentoo.org> kodi-15.2.ebuild,
+  kodi-16.0.ebuild, kodi-9999.ebuild:
+  require >=yajl-2 in newer versions #576246
+
+  02 Mar 2016; Mike Frysinger <vapier@gentoo.org> kodi-9999.ebuild:
+  drop libdvdcss requirement to match upstream
+
+  See upstream:
+  https://github.com/xbmc/xbmc/commit/5138926fd8009f27613f2b08a8f0423be4a7779f
+
+  01 Jun 2016; Mike Frysinger <vapier@gentoo.org> kodi-9999.ebuild:
+  update OS X font paths #583460
+
+  02 Oct 2016; Pacho Ramos <pacho@gentoo.org> kodi-16.0.ebuild,
+  kodi-9999.ebuild:
+  Use zeroconf instead of avahi USE flag (#477620)
+
+  Package-Manager: portage-2.3.1
+
+  02 Oct 2016; Pacho Ramos <pacho@gentoo.org> kodi-16.0.ebuild:
+  Make repoman more happy
+
+  Package-Manager: portage-2.3.1
+
+*kodi-17.0_beta3 (25 Oct 2016)
+*kodi-16.1 (25 Oct 2016)
+
+  25 Oct 2016; David Seifert <soap@gentoo.org>
+  files/kodi-9999-texturepacker.patch, +kodi-16.1.ebuild,
+  +kodi-17.0_beta3.ebuild, kodi-9999.ebuild:
+  16.1 and media-tv/kodi-17.0_beta3: version bump
+
+  Update to EAPI 6
+
+  Hard mask >=media-tv/kodi-17.0_alpha because it depends on >=media-
+  video/ffmpeg-3.0 which is hard masked
+
+  Gentoo-bug: 581276
+  Closes: https://github.com/gentoo/gentoo/pull/1821
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*kodi-17.0_beta4 (25 Oct 2016)
+
+  25 Oct 2016; David Seifert <soap@gentoo.org> -kodi-17.0_beta3.ebuild,
+  +kodi-17.0_beta4.ebuild:
+  bump to 17.0b4
+
+  Closes: https://github.com/gentoo/gentoo/pull/2662
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*kodi-17.0_beta4-r1 (06 Nov 2016)
+
+  06 Nov 2016; David Seifert <soap@gentoo.org> -kodi-17.0_beta4.ebuild,
+  +kodi-17.0_beta4-r1.ebuild, kodi-9999.ebuild:
+  Allowing building with FEATURES="network-sandbox"
+
+  Gentoo-bug: 598150
+  Closes: https://github.com/gentoo/gentoo/pull/2668
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  12 Nov 2016; David Seifert <soap@gentoo.org> kodi-14.1.ebuild,
+  kodi-15.2.ebuild, kodi-16.0.ebuild, kodi-16.1.ebuild,
+  kodi-17.0_beta4-r1.ebuild, kodi-9999.ebuild:
+  Add subslot operator on media-libs/jasper
+
+  Package-Manager: portage-2.3.2
+
+  17 Nov 2016; David Seifert <soap@gentoo.org> kodi-16.0.ebuild,
+  kodi-16.1.ebuild, kodi-9999.ebuild:
+  Adding cross-compilation support
+
+  Gentoo-bugs: https://bugs.gentoo.org/show_bug.cgi?id=560196
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/2392
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+

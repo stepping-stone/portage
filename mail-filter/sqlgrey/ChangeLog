@@ -64,3 +64,15 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  09 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  sqlgrey-1.7.6-r1.ebuild:
+  Fix dependency on dev-perl/Net-Server
+
+  Package-Manager: portage-2.2.27
+
+  13 Mar 2016; Markus Meier <maekke@gentoo.org> sqlgrey-1.7.6-r1.ebuild:
+  add ~arm, bug #575950
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --include-arches="arm"
+

@@ -70,3 +70,61 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  26 Jun 2016; Anthony G. Basile <blueness@gentoo.org> yaz-3.0.53.ebuild,
+  yaz-4.2.30.ebuild, yaz-4.2.51.ebuild:
+  bump EAPI and add libressl support
+
+  Package-Manager: portage-2.2.28
+
+  28 Jun 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Drop to maint-needed, #587144
+
+  03 Jul 2016; Andreas K. Hüttel <dilfridge@gentoo.org> yaz-3.0.53.ebuild,
+  yaz-4.2.30.ebuild, yaz-4.2.51.ebuild:
+  add missing slot operator on dev-libs/icu dependency
+
+  Package-Manager: portage-2.3.0
+
+  04 Jul 2016; Tobias Klausmann <klausman@gentoo.org> yaz-3.0.53.ebuild:
+  3.0.53-r0: add alpha keyword
+
+  Gentoo-Bug: 522674
+
+  Package-Manager: portage-2.3.0
+
+  21 Aug 2016; Pacho Ramos <pacho@gentoo.org>
+  -files/yaz-4.2.30-icu-automagic.patch, -yaz-4.2.30.ebuild,
+  -yaz-4.2.51.ebuild:
+  drop hard masked versions (#587144)
+
+  Package-Manager: portage-2.3.0
+
+  30 Aug 2016; Markus Meier <maekke@gentoo.org> yaz-3.0.53.ebuild:
+  arm stable, bug #522674
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> yaz-3.0.53.ebuild:
+  amd64 stable wrt bug #522674
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  01 Oct 2016; Jeroen Roovers <jer@gentoo.org> yaz-3.0.53.ebuild:
+  Stable for HPPA PPC64 (bug #522674).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  05 Nov 2016; Pacho Ramos <pacho@gentoo.org> yaz-3.0.53.ebuild:
+  x86 stable, bug #522674
+
+  Package-Manager: portage-2.3.2
+
+  05 Nov 2016; Pacho Ramos <pacho@gentoo.org> -yaz-3.0.50.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.2
+

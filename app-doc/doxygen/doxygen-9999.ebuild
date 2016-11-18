@@ -1,11 +1,11 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+EAPI=6
+PYTHON_COMPAT=( python{2_7,3_4,3_5} )
 
-inherit cmake-utils eutils fdo-mime flag-o-matic python-any-r1 qt4-r2
+inherit cmake-utils eutils fdo-mime flag-o-matic python-any-r1
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="git://github.com/doxygen/doxygen.git"
@@ -23,18 +23,11 @@ HOMEPAGE="http://www.doxygen.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="clang debug doc dot doxysearch latex qt4 sqlite userland_GNU"
-
-#missing SerbianCyrilic, JapaneseEn, KoreanEn, Chinesetraditional
-LANGS=(hy ar pt_BR ca zh cs de da eo es fa fi fr el hr hu id it ja ko lt mk
-nl nb pl pt ro ru sl sk sr sv tr uk vi af)
-for X in "${LANGS[@]}" ; do
-	IUSE="${IUSE} linguas_${X}"
-done
+IUSE="clang debug doc dot doxysearch latex qt5 sqlite userland_GNU"
 
 RDEPEND="app-text/ghostscript-gpl
 	dev-lang/perl
-	media-libs/libpng
+	media-libs/libpng:0=
 	virtual/libiconv
 	clang? ( sys-devel/clang )
 	dot? (
@@ -43,69 +36,43 @@ RDEPEND="app-text/ghostscript-gpl
 	)
 	doxysearch? ( =dev-libs/xapian-1.2* )
 	latex? ( app-text/texlive[extra] )
-	qt4? ( dev-qt/qtgui:4 )
+	qt5? (
+		dev-qt/qtgui:5
+		dev-qt/qtwidgets:5
+	)
 	sqlite? ( dev-db/sqlite:3 )
 	"
 
 REQUIRED_USE="doc? ( latex )"
 
-DEPEND="sys-apps/sed
-	sys-devel/flex
+DEPEND="sys-devel/flex
 	sys-devel/bison
 	doc? ( ${PYTHON_DEPS} )
 	${RDEPEND}"
 
 # src_test() defaults to make -C testing but there is no such directory (bug #504448)
-RESTRICT="mirror test"
-EPATCH_SUFFIX="patch"
+RESTRICT="test"
 
-get_langs() {
-	# using only user set linguas also fixes #263641
-	my_linguas=()
-	for lingua in ${LINGUAS}; do
-		if has ${lingua} "${LANGS[@]}"; then
-			case ${lingua} in
-				hy) lingua=am ;;
-			    pt_BR) lingua=br ;;
-				zh*) lingua=cn ;;
-				cs) lingua=cz ;;
-				da) lingua=dk ;;
-				el*) lingua=gr ;;
-				ja*) lingua=jp ;;
-				ko) lingua=kr ;;
-				nb) lingua=no ;;
-				sl) lingua=si ;;
-			    tr*) lingua=tr ;;
-			    uk) lingua=ua ;;
-			    af) lingua=za ;;
-			esac
-			has ${lingua} "${my_linguas[@]}" ||
-				my_linguas+=(${lingua})
-		fi
-	done
-	f_langs="${my_linguas[@]}"
-	echo ${f_langs// /;}
-}
+PATCHES=( "${FILESDIR}/${PN}-1.8.11-link_with_pthread.patch" )
+DOCS=( LANGUAGE.HOWTO README.md )
 
 pkg_setup() {
 	use doc && python-any-r1_pkg_setup
 }
 
 src_prepare() {
+	default
+
 	# Ensure we link to -liconv
 	if use elibc_FreeBSD && has_version dev-libs/libiconv || use elibc_uclibc; then
+		local pro
 		for pro in */*.pro.in */*/*.pro.in; do
-		echo "unix:LIBS += -liconv" >> "${pro}"
+			echo "unix:LIBS += -liconv" >> "${pro}" || die
 		done
 	fi
 
 	# Call dot with -Teps instead of -Tps for EPS generation - bug #282150
 	sed -i -e '/addJob("ps"/ s/"ps"/"eps"/g' src/dot.cpp || die
-
-	# prefix search tools patch, plus OSX fixes
-	epatch "${FILESDIR}"/${PN}-1.8.9.1-empty-line-sigsegv.patch #454348
-
-	epatch "${FILESDIR}"/${P}-link_with_pthread.patch
 
 	# fix pdf doc
 	sed -i.orig -e "s:g_kowal:g kowal:" \
@@ -125,12 +92,11 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		-DDOC_INSTALL_DIR="share/doc/${P}"
-		-DLANG_CODES="$(get_langs)"
-		$(cmake-utils_use clang use_libclang)
-		$(cmake-utils_use doc build_doc)
-		$(cmake-utils_use doxysearch build_search)
-		$(cmake-utils_use qt4 build_wizard)
-		$(cmake-utils_use sqlite use_sqlite3)
+		-Duse_libclang=$(usex clang)
+		-Dbuild_doc=$(usex doc)
+		-Dbuild_search=$(usex doxysearch)
+		-Dbuild_wizard=$(usex qt5)
+		-Duse_sqlite3=$(usex sqlite)
 		)
 
 	cmake-utils_src_configure
@@ -139,30 +105,27 @@ src_configure() {
 src_compile() {
 	cmake-utils_src_compile
 
-	# generate html and pdf documents. errors here are not considered
-	# fatal, hence the ewarn message TeX's font caching in /var/cache/fonts
-	# causes sandbox warnings, so we allow it.
 	if use doc; then
+		export VARTEXFONTS="${T}/fonts" # bug #564944
+
 		if ! use dot; then
 			sed -i -e "s/HAVE_DOT               = YES/HAVE_DOT    = NO/" \
 				{Doxyfile,doc/Doxyfile} \
-				|| ewarn "disabling dot failed"
+				|| die "disabling dot failed"
 		fi
-		cd "${BUILD_DIR}" && emake docs
+		emake -C "${BUILD_DIR}" docs
 	fi
 }
 
 src_install() {
-	if use qt4; then
+	cmake-utils_src_install
+
+	if use qt5; then
 		doicon "${DISTDIR}/doxywizard.png"
 		make_desktop_entry doxywizard "DoxyWizard ${PV}" \
 			"/usr/share/pixmaps/doxywizard.png" \
 			"Development"
 	fi
-
-	dodoc LANGUAGE.HOWTO README.md
-
-	cmake-utils_src_install
 }
 
 pkg_postinst() {

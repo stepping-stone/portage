@@ -271,3 +271,338 @@
 
   Package-Manager: portage-2.2.27
 
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.28.ebuild:
+  ppc stable wrt bug #572870
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.28.ebuild:
+  sparc stable wrt bug #572870
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.28.ebuild:
+  ia64 stable wrt bug #572870
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  21 Mar 2016; Brian Evans <grknight@gentoo.org> -mysql-5.6.27.ebuild:
+  Drop security vulnerable version
+
+  Package-Manager: portage-2.2.28
+
+*mysql-5.6.30 (12 Apr 2016)
+*mysql-5.5.49 (12 Apr 2016)
+
+  12 Apr 2016; Brian Evans <grknight@gentoo.org> +mysql-5.5.49.ebuild,
+  +mysql-5.6.30.ebuild:
+  Version bump for 5.5.49 and 5.6.30
+
+  Package-Manager: portage-2.2.28
+
+  18 Apr 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  Fix metadata.xml file.
+
+  Package-Manager: portage-2.2.26
+
+  18 Apr 2016; Brian Evans <grknight@gentoo.org> metadata.xml:
+  Reorder maintainers after GLEP68 change
+
+  Package-Manager: portage-2.2.28
+
+  19 May 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.30.ebuild:
+  amd64 stable wrt bug #580832
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 May 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.30.ebuild:
+  x86 stable wrt bug #580832
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 May 2016; Jeroen Roovers <jer@gentoo.org> mysql-5.6.30.ebuild:
+  Stable for HPPA PPC64 (bug #580832).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  19 May 2016; Markus Meier <maekke@gentoo.org> mysql-5.6.30.ebuild:
+  arm stable, bug #580832
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  21 May 2016; Tobias Klausmann <klausman@gentoo.org> mysql-5.6.30.ebuild:
+  5.6.30-r0: add alpha keyword
+
+  Gentoo-Bug: 580832
+
+  Package-Manager: portage-2.3.0_rc1
+
+  22 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #408423
+
+  Package-Manager: portage-2.3.0_rc1
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.30.ebuild:
+  ppc stable wrt bug #580832
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.30.ebuild:
+  sparc stable wrt bug #580832
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.30.ebuild:
+  ia64 stable wrt bug #580832
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  11 Jul 2016; Brian Evans <grknight@gentoo.org> -mysql-5.5.47.ebuild,
+  -mysql-5.5.48.ebuild, -mysql-5.6.28.ebuild, -mysql-5.6.29.ebuild:
+  Drop security vulnerable versions
+
+  Package-Manager: portage-2.3.0
+
+*mysql-5.6.31 (20 Jul 2016)
+
+  20 Jul 2016; Brian Evans <grknight@gentoo.org> +mysql-5.6.31.ebuild:
+  Security version bump wrt bug 589238
+
+  Package-Manager: portage-2.3.0
+
+*mysql-5.5.50 (20 Jul 2016)
+
+  20 Jul 2016; Brian Evans <grknight@gentoo.org> +mysql-5.5.50.ebuild:
+  Version bump for 5.5.50
+
+  Package-Manager: portage-2.3.0
+
+  20 Jul 2016; Brian Evans <grknight@gentoo.org> -mysql-5.5.49.ebuild:
+  Drop security vulnerable 5.5.49 wrt bug 589238
+
+  Package-Manager: portage-2.3.0
+
+  24 Jul 2016; Jeroen Roovers <jer@gentoo.org> mysql-5.6.31.ebuild:
+  Stable for PPC64 (bug #589238).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  24 Jul 2016; Jeroen Roovers <jer@gentoo.org> mysql-5.6.31.ebuild:
+  Stable for HPPA (bug #589238).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  26 Jul 2016; Tobias Klausmann <klausman@gentoo.org> mysql-5.6.31.ebuild:
+  5.6.31-r0: add alpha keyword
+
+  Gentoo-Bug: 589238
+
+  27 Jul 2016; Markus Meier <maekke@gentoo.org> mysql-5.6.31.ebuild:
+  arm stable, bug #589238
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  28 Jul 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.31.ebuild:
+  amd64 stable wrt bug #589238
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  28 Jul 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.31.ebuild:
+  x86 stable wrt bug #589238
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*mysql-5.5.51 (17 Aug 2016)
+
+  17 Aug 2016; Brian Evans <grknight@gentoo.org> +mysql-5.5.51.ebuild:
+  Version bump for 5.5.51
+
+  Package-Manager: portage-2.3.0
+
+*mysql-5.6.32 (17 Aug 2016)
+
+  17 Aug 2016; Brian Evans <grknight@gentoo.org> +mysql-5.6.32.ebuild:
+  Verison bump for 5.6.32
+
+  Package-Manager: portage-2.3.0
+
+*mysql-5.6.33 (12 Sep 2016)
+
+  12 Sep 2016; Brian Evans <grknight@gentoo.org> +mysql-5.6.33.ebuild:
+  Version bump for 5.6.33
+
+  Package-Manager: portage-2.3.0
+
+*mysql-5.5.52 (12 Sep 2016)
+
+  12 Sep 2016; Brian Evans <grknight@gentoo.org> +mysql-5.5.52.ebuild:
+  Version bump for 5.5.52
+
+  Package-Manager: portage-2.3.0
+
+  12 Sep 2016; Brian Evans <grknight@gentoo.org> -mysql-5.5.50.ebuild,
+  -mysql-5.5.51.ebuild:
+  Drop old versions
+
+  Package-Manager: portage-2.3.0
+
+  14 Sep 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.33.ebuild:
+  amd64 stable wrt bug #593614
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Sep 2016; Tobias Klausmann <klausman@gentoo.org> mysql-5.6.33.ebuild:
+  5.6.33-r0: add alpha keyword
+
+  Gentoo-Bug: 593614
+
+  24 Sep 2016; Jeroen Roovers <jer@gentoo.org> mysql-5.6.33.ebuild:
+  Stable for HPPA PPC64 (bug #593614).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  24 Sep 2016; Markus Meier <maekke@gentoo.org> mysql-5.6.33.ebuild:
+  arm stable, bug #593614
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.33.ebuild:
+  x86 stable wrt bug #593614
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.33.ebuild:
+  sparc stable wrt bug #593614
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.31.ebuild:
+  sparc stable wrt bug #589238
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.33.ebuild:
+  ppc stable wrt bug #593614
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.31.ebuild:
+  ppc stable wrt bug #589238
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.33.ebuild:
+  ia64 stable wrt bug #593614
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.31.ebuild:
+  ia64 stable wrt bug #589238
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  11 Oct 2016; Brian Evans <grknight@gentoo.org> -mysql-5.6.30.ebuild,
+  -mysql-5.6.31.ebuild, -mysql-5.6.32.ebuild:
+  Remove security vulnerable versions
+
+  Package-Manager: portage-2.3.1
+
+*mysql-5.6.34 (19 Oct 2016)
+
+  19 Oct 2016; Brian Evans <grknight@gentoo.org> +mysql-5.6.34.ebuild:
+  Version bump for security bug 597538
+
+  Package-Manager: portage-2.3.2
+
+*mysql-5.5.53 (19 Oct 2016)
+
+  19 Oct 2016; Brian Evans <grknight@gentoo.org> +mysql-5.5.53.ebuild:
+  Security bump for bug 597538
+
+  Package-Manager: portage-2.3.2
+
+  19 Oct 2016; Brian Evans <grknight@gentoo.org> -mysql-5.5.52.ebuild:
+  Drop security vulnerable 5.5.52
+
+  Package-Manager: portage-2.3.2
+
+  21 Oct 2016; Tobias Klausmann <klausman@gentoo.org> mysql-5.6.34.ebuild:
+  5.6.34-r0: stable on alpha
+
+  Gentoo-Bug: 597538
+
+  22 Oct 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.34.ebuild:
+  amd64 stable wrt bug #597538
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  22 Oct 2016; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.34.ebuild:
+  x86 stable wrt bug #597538
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  23 Oct 2016; Jeroen Roovers <jer@gentoo.org> mysql-5.6.34.ebuild:
+  Stable for PPC64 (bug #597538).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+  26 Oct 2016; Markus Meier <maekke@gentoo.org> mysql-5.6.34.ebuild:
+  arm stable, bug #597538
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+
+  31 Oct 2016; Jeroen Roovers <jer@gentoo.org> mysql-5.6.34.ebuild:
+  Stable for HPPA (bug #597538).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+

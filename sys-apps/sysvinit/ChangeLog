@@ -116,3 +116,68 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
 
+  07 Mar 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/sysvinit-2.88-sysmacros.patch, sysvinit-2.88-r9.ebuild:
+  fix building w/newer glibc
+
+  27 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/sysvinit-2.88-ttydefaults.patch, sysvinit-2.88-r9.ebuild:
+  add missing header, bug #551626
+
+  Package-Manager: portage-2.2.26
+
+  23 May 2016; Jeroen Roovers <jer@gentoo.org> sysvinit-2.88-r9.ebuild:
+  Stable for HPPA PPC64 (bug #580958).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  24 May 2016; Markus Meier <maekke@gentoo.org> sysvinit-2.88-r9.ebuild:
+  arm stable, bug #580958
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  25 May 2016; Matt Turner <mattst88@gentoo.org> sysvinit-2.88-r9.ebuild:
+  alpha stable, bug 580958.
+
+  04 Jun 2016; Mike Frysinger <vapier@gentoo.org>
+  files/sysvinit-2.88-makefile.patch, sysvinit-2.88-r7.ebuild,
+  sysvinit-2.88-r9.ebuild:
+  savannah: switch to https URLs
+
+  06 Jun 2016; Agostino Sarubbo <ago@gentoo.org> sysvinit-2.88-r9.ebuild:
+  amd64 stable wrt bug #580958
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> sysvinit-2.88-r9.ebuild:
+  x86 stable wrt bug #580958
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> sysvinit-2.88-r9.ebuild:
+  ppc stable wrt bug #580958
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Sep 2016; William Hubbs <williamh@gentoo.org> sysvinit-2.88-r9.ebuild:
+  stable 2.88-r9 on sparc and ia64 for #580958
+
+  Package-Manager: portage-2.2.28
+
+  15 Sep 2016; William Hubbs <williamh@gentoo.org> -files/inittab-2.87,
+  -files/reboot.sh, -files/shutdown.sh, -sysvinit-2.88-r7.ebuild:
+  remove old version
+
+  Package-Manager: portage-2.2.28
+
+  10 Nov 2016; Mike Frysinger <vapier@gentoo.org> sysvinit-2.88-r9.ebuild:
+  mark arm64/m68k/s390/sh 2.88-r9 stable
+

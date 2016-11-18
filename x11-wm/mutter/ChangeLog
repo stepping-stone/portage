@@ -186,3 +186,111 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> mutter-3.18.2-r1.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+*mutter-3.18.3 (07 Mar 2016)
+
+  07 Mar 2016; Rémi Cardona <remi@gentoo.org> +mutter-3.18.3.ebuild:
+  bump to 3.18.3
+
+  Package-Manager: portage-2.2.27
+
+*mutter-3.18.4 (22 Apr 2016)
+
+  22 Apr 2016; Gilles Dartiguelongue <eva@gentoo.org> +mutter-3.18.4.ebuild:
+  version bump to 3.18.4
+
+  Package-Manager: portage-2.2.28
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> mutter-3.18.4.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> mutter-3.18.4.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org>
+  -files/mutter-3.16.3-fallback-keymap.patch,
+  -files/mutter-3.18.2-bypass-hint.patch,
+  -files/mutter-3.18.2-configure-notify.patch,
+  -files/mutter-3.18.2-cursor-renderer.patch,
+  -files/mutter-3.18.2-logical-monitors.patch,
+  -files/mutter-3.18.2-wayland-crash.patch, -mutter-3.16.4.ebuild,
+  -mutter-3.18.2.ebuild, -mutter-3.18.2-r1.ebuild, -mutter-3.18.3.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*mutter-3.20.2 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +mutter-3.20.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*mutter-3.20.3 (03 Jul 2016)
+
+  03 Jul 2016; Pacho Ramos <pacho@gentoo.org> +mutter-3.20.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org> mutter-3.20.3.ebuild:
+  wayland needs kms support (#587220 by Leho Kraav)
+
+  Package-Manager: portage-2.3.0
+
+  04 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org> mutter-3.20.2.ebuild:
+  raise clutter dep per configure
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> mutter-3.20.3.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> mutter-3.20.3.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*mutter-3.22.1 (01 Nov 2016)
+
+  01 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org> +mutter-3.22.1.ebuild:
+  version bump 3.20.3 → 3.22.1
+
+  Package-Manager: portage-2.3.2
+
+  11 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  mutter-3.22.1.ebuild:
+  fix dependencies and option combinations
+
+  Checked with upstream, native backend without wayland is not useful and
+  the opposite would have limited use.
+
+  See upstream reports for not enabling these possibilities anyway:
+  https://bugzilla.gnome.org/show_bug.cgi?id=771638
+  https://bugzilla.gnome.org/show_bug.cgi?id=772681
+
+  Gentoo-bug: 598846
+
+  Package-Manager: portage-2.3.2
+
+*mutter-3.22.2 (13 Nov 2016)
+
+  13 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org> +mutter-3.22.2.ebuild:
+  version bump 3.22.1 → 3.22.2
+
+  Package-Manager: portage-2.3.2
+

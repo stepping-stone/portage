@@ -110,3 +110,61 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  courier-authlib-0.66.4.ebuild:
+  ppc stable wrt bug #572744
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  courier-authlib-0.66.4.ebuild:
+  ppc64 stable wrt bug #572744
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  courier-authlib-0.66.4.ebuild:
+  sparc stable wrt bug #572744
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  courier-authlib-0.66.4.ebuild:
+  ia64 stable wrt bug #572744
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/courier-authlib-r1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  19 Sep 2016; Hanno <hanno@gentoo.org> -courier-authlib-0.66.1.ebuild,
+  -courier-authlib-0.66.3-r1.ebuild:
+  remove old versions
+
+  Package-Manager: portage-2.3.0
+
+*courier-authlib-0.66.4-r1 (19 Sep 2016)
+
+  19 Sep 2016; Hanno <hanno@gentoo.org> +courier-authlib-0.66.4-r1.ebuild:
+  fix courier-unicode dep, bump EAPI
+
+  The old ebuild had a hard dep on courier-unicode-1.3, although
+  it works with never versions, too. Also moved to EAPI 6.
+
+  Package-Manager: portage-2.3.0
+
+  24 Sep 2016; Jeroen Roovers <jer@gentoo.org> courier-authlib-0.66.4.ebuild:
+  Stable for HPPA (bug #572744).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+

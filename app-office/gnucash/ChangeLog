@@ -155,3 +155,84 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> gnucash-2.6.11.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  10 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org> gnucash-2.6.9.ebuild,
+  gnucash-2.6.10.ebuild, gnucash-2.6.11.ebuild:
+  Fix dependency on dev-perl/Date-Manip
+
+  Package-Manager: portage-2.2.27
+
+*gnucash-2.6.12 (28 May 2016)
+
+  28 May 2016; Pacho Ramos <pacho@gentoo.org> +gnucash-2.6.12.ebuild:
+  Version bump, fix gnucash-make-guids (#576908 by Anton Lindström)
+
+  Package-Manager: portage-2.3.0_rc1
+
+  28 May 2016; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.12.ebuild:
+  Drop inherit for now unneeded eclasses
+
+  Package-Manager: portage-2.3.0_rc1
+
+  28 May 2016; Pacho Ramos <pacho@gentoo.org> -gnucash-2.6.9.ebuild,
+  -gnucash-2.6.10.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.12.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.12.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  -files/gnucash-2.6.9-automagic-guile.patch, -gnucash-2.6.11.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnucash-2.6.13 (02 Jul 2016)
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> +gnucash-2.6.13.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.13.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.13.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*gnucash-2.6.13-r1 (15 Oct 2016)
+
+  15 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> gnucash-2.6.13.ebuild,
+  +gnucash-2.6.13-r1.ebuild:
+  version bump to guile-2 support
+
+  Gentoo-bug: 590536
+
+  Package-Manager: portage-2.3.1
+
+  23 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.13-r1.ebuild:
+  Needs to be rebuilt when guile is updated
+
+  Package-Manager: portage-2.3.2
+

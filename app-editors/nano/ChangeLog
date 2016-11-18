@@ -201,3 +201,52 @@
   25 Feb 2016; Mike Frysinger <vapier@gentoo.org> +nano-2.5.3.ebuild:
   version bump to 2.5.3
 
+  04 Apr 2016; Mike Frysinger <vapier@gentoo.org> nano-9999.ebuild:
+  switch to git
+
+  24 Jun 2016; Mike Frysinger <vapier@gentoo.org> nano-2.5.3.ebuild:
+  mark 2.5.3 stable for all
+
+  24 Jun 2016; Mike Frysinger <vapier@gentoo.org> -nano-2.5.0.ebuild,
+  -nano-2.5.2.ebuild:
+  drop old 2.5 versions
+
+*nano-2.6.1 (28 Jun 2016)
+
+  28 Jun 2016; Mike Frysinger <vapier@gentoo.org> +nano-2.6.1.ebuild,
+  nano-9999.ebuild:
+  version bump to 2.6.1
+
+*nano-2.6.3 (11 Aug 2016)
+
+  11 Aug 2016; Mike Frysinger <vapier@gentoo.org> +nano-2.6.3.ebuild:
+  version bump to 2.6.3
+
+*nano-2.7.0 (18 Oct 2016)
+
+  18 Oct 2016; Joshua Kinard <kumba@gentoo.org> +nano-2.7.0.ebuild:
+  Update nano to 2.7.0.  Should fix at least Bug #592572.
+
+  Package-Manager: portage-2.3.2
+
+*nano-2.7.1 (29 Oct 2016)
+
+  29 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> +nano-2.7.1.ebuild:
+  Bump to version 2.7.1
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  29 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> nano-9999.ebuild:
+  Bumped live ebuild to EAPI-6.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  29 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> -nano-2.4.3.ebuild,
+  -nano-2.6.1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

@@ -183,3 +183,31 @@
 
   Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
 
+  10 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  mythplugins-0.27_p20140321-r1.ebuild,
+  mythplugins-0.27.5_p20150627-r4.ebuild:
+  Fix dependency on dev-perl/Date-Manip
+
+  Package-Manager: portage-2.2.27
+
+*mythplugins-0.27.6_p20160318 (20 Mar 2016)
+
+  20 Mar 2016; Doug Goldstein <cardoe@gentoo.org>
+  +mythplugins-0.27.6_p20160318.ebuild:
+  version bump
+
+  Add a matching version bump of the plugins to go with the main package
+  to avoid problems like bug #560462.
+
+  Gentoo-Bug: 560462
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+*mythplugins-0.28 (16 Apr 2016)
+
+  16 Apr 2016; Richard Freeman <rich0@gentoo.org> +mythplugins-0.28.ebuild:
+  Major update to 0.28
+
+  Package-Manager: portage-2.2.26
+

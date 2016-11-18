@@ -6,7 +6,7 @@
 		<name>Paul B. Henson</name>
 	</maintainer>
 	<maintainer type="person">
-		<email>ottxor@gentoo.org</email>
+		<email>junghans@gentoo.org</email>
 		<name>Christoph Junghans (proxy)</name>
 	</maintainer>
 	<maintainer type="project">
@@ -19,4 +19,9 @@
 		NTP servers and can act as NTP server itself, redistributing the
 		local clock.
 	</longdescription>
+	<use>
+	    <flag name="libressl">Enable HTTPS TLS time constraint support using
+		    <pkg>dev-libs/libressl</pkg>
+	    </flag>
+	</use>
 </pkgmetadata>

@@ -107,3 +107,44 @@
 
   Package-Manager: portage-2.2.26
 
+  06 Apr 2016; Fabian Groffen <grobian@gentoo.org> sphinx-2.2.10.ebuild:
+  add back Prefix keywords now USE=re2 is masked, bug #563932
+
+  Package-Manager: portage-2.2.27
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/searchd.rc:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  31 Jul 2016; Hans de Graaff <graaff@gentoo.org> -sphinx-2.1.8.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+*sphinx-2.2.11 (31 Jul 2016)
+
+  31 Jul 2016; Hans de Graaff <graaff@gentoo.org> +sphinx-2.2.11.ebuild:
+  add 2.2.11
+
+  Package-Manager: portage-2.2.28
+
+  11 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/sphinx-1.10_beta-darwin8.patch,
+  -files/sphinx-1.10_beta-libsphinxclient-darwin.patch,
+  -files/sphinx-1.10_beta-nosigpipe.patch,
+  -files/sphinx-2.0.1_beta-solaris.patch, -files/sphinx-2.0.4_gcc-4.7.patch:
+  remove unused patch
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  05 Sep 2016; Hans de Graaff <graaff@gentoo.org> -sphinx-2.2.10.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+  24 Sep 2016; Agostino Sarubbo <ago@gentoo.org> sphinx-2.2.11.ebuild:
+  amd64 stable wrt bug #591276
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

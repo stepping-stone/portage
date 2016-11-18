@@ -86,3 +86,78 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  27 Mar 2016; Mike Frysinger <vapier@gentoo.org> libcec-3.0.1.ebuild:
+  fix python libdir install #577612
+
+  27 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libcec-3.0.1.ebuild:
+  amd64 stable wrt bug #575502
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Mar 2016; Agostino Sarubbo <ago@gentoo.org> libcec-3.0.1.ebuild:
+  x86 stable wrt bug #575502
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*libcec-3.1.0 (02 Apr 2016)
+
+  02 Apr 2016; Ian Whyman <thev00d00@gentoo.org> +libcec-3.1.0.ebuild:
+  Version bump, EAPI=6, Fix 576746
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --force
+
+  03 Apr 2016; Patrice Clement <monsieurp@gentoo.org> -libcec-3.1.0.ebuild:
+  Revert commit 7d0d59ad0d7581e5a9c9efc6020a2998b6183edc to get tree back to a
+  sane state.
+
+  Package-Manager: portage-2.2.26
+
+  04 Apr 2016; Michael Weber <xmw@gentoo.org> libcec-3.0.1.ebuild:
+  RDEPEND on <dev-libs/libplatform-2 (bug 578984, ack'd by maintainer).
+
+  Package-Manager: portage-2.2.28
+
+*libcec-3.1.0 (22 May 2016)
+
+  22 May 2016; Ian Whyman <thev00d00@gentoo.org> +libcec-3.1.0.ebuild:
+  Version bump, EAPI=6, Fix Bug 576746
+
+  Package-Manager: portage-2.2.28
+
+  10 Jul 2016; Ian Whyman <thev00d00@gentoo.org> libcec-3.1.0.ebuild:
+  drop unnecessary dependency on dev-libs/lockdev (#584122)
+
+  Package-Manager: portage-2.3.0
+
+  08 Sep 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/libcec-1.8.1-eintr-retry.patch:
+  dev-libs/{...}: remove unused patches.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2218
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*libcec-3.1.0-r1 (26 Oct 2016)
+
+  26 Oct 2016; Patrice Clement <monsieurp@gentoo.org> +libcec-3.1.0-r1.ebuild:
+  various fixes.
+
+  This commit:
+  * bumps to EAPI=6.
+  * fixes improper linux-info check.
+  * cleans up cmake configure blocks.
+  * adds post-install note about uutp.
+  * adds missing version dependency on libplatform >= 2.
+
+  Gentoo-Bug: https://bugs.gentoo.org/588926
+  Gentoo-Bug: https://bugs.gentoo.org/597834
+
+  Closes: https://github.com/gentoo/gentoo/pull/2641
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

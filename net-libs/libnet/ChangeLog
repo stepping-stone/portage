@@ -68,3 +68,44 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*libnet-1.2_rc3-r1 (08 Aug 2016)
+*libnet-1.1.6-r1 (08 Aug 2016)
+
+  08 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  +files/libnet-1.1.6-_SOURCE.patch, +files/libnet-1.1.6-musl.patch,
+  +files/libnet-1.2-_SOURCE.patch, +files/libnet-1.2-sizeof.patch,
+  +files/libnet-1.2-socklen_t.patch, +libnet-1.1.6-r1.ebuild,
+  +libnet-1.2_rc3-r1.ebuild:
+  Fix building against sys-libs/musl by Petr Vaněk (bug #590738).
+
+  Package-Manager: portage-2.3.0
+
+  08 Aug 2016; Jeroen Roovers <jer@gentoo.org> files/libnet-1.2-sizeof.patch:
+  Use upstream patch for sample/sebek.
+
+  Package-Manager: portage-2.3.0
+
+  01 Sep 2016; Markus Meier <maekke@gentoo.org> libnet-1.2_rc3-r1.ebuild:
+  arm stable, bug #591978
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  21 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  libnet-1.2_rc3-r1.ebuild:
+  1.2_rc3-r1: add alpha keyword
+
+  Gentoo-Bug: 591978
+
+  01 Oct 2016; Jeroen Roovers <jer@gentoo.org> libnet-1.2_rc3-r1.ebuild:
+  Stable for HPPA (bug #591978).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  10 Oct 2016; Jeroen Roovers <jer@gentoo.org> libnet-1.2_rc3-r1.ebuild:
+  Stable for PPC64 (bug #591978).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+

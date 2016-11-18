@@ -68,3 +68,33 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*unar-1.10.1 (26 Jun 2016)
+
+  26 Jun 2016; Hanno <hanno@gentoo.org> -unar-1.1.ebuild, -unar-1.2.ebuild,
+  -unar-1.5.ebuild, +unar-1.10.1.ebuild:
+  Bump to 1.10.1, remove old
+
+  Package-Manager: portage-2.3.0
+
+  06 Nov 2016; Michael Palimaka <kensington@gentoo.org> unar-1.10.1.ebuild:
+  amd64 stable
+
+  Gentoo-bug: 599052
+
+  Package-Manager: portage-2.3.2
+
+  08 Nov 2016; Hanno <hanno@gentoo.org> -unar-1.6.ebuild, -unar-1.8.1.ebuild:
+  Remove old versions
+
+  Package-Manager: portage-2.3.2
+
+  08 Nov 2016; Hanno <hanno@gentoo.org> unar-1.10.1.ebuild:
+  Fix dependencies and make warning
+
+  Add missing dependencies found by depcheck (zlib, bzip2),
+  move gnustep-make from RDEPEND to DEPEND.
+  Avoid jobserver warning by removing direct make call
+  from Makefile.
+
+  Package-Manager: portage-2.3.2
+

@@ -167,3 +167,25 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*pytest-runner-2.8 (12 Jun 2016)
+
+  12 Jun 2016; Patrick Lauer <patrick@gentoo.org> +pytest-runner-2.8.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pytest-runner-2.6.2.ebuild,
+  pytest-runner-2.8.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+*pytest-runner-2.9 (05 Nov 2016)
+
+  05 Nov 2016; Justin Lecher <jlec@gentoo.org> pytest-runner-2.8.ebuild,
+  +pytest-runner-2.9.ebuild:
+  Version Bump
+
+  Drop pypy3 support as pytest dropped it
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+

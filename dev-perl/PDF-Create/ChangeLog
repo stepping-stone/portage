@@ -63,3 +63,68 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*PDF-Create-1.290.0 (19 Mar 2016)
+
+  19 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +PDF-Create-1.290.0.ebuild:
+  Bump to version 1.290.0
+
+  - EAPI6
+  - Cleanup DESCRIPTION
+  - Add USE="examples"
+  - Removed uselesss authortests
+
+  Upstream:
+  - Removed CGI.pm Tests
+  - Memory leaks removed
+  - Improved input validation
+  - "CreationDate" now supported in constructor
+  - PDF::Image::GIF::UnLZW warning fixed
+  - PDF::Create::Page::string() now handles character/word spacing.
+  - PDF::Create::Page::text() now handles font correctly.
+  - Added PDF::Create::Page::block_text()
+  - Uninitialied "$align" warnings gone
+  - Improved Debug level handling
+  - new_outline() now validates parameters
+  - Better handling for widths of german special characters
+  - Added support for "Symbol" font and encoding
+
+  Package-Manager: portage-2.2.28
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> PDF-Create-1.290.0.ebuild:
+  amd64 stable wrt bug #580130
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  24 May 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  PDF-Create-1.290.0.ebuild:
+  Retroactively stable for alpha/ia64/ppc/sparc/x86 (ALLARCHES), bug 580130
+
+  Package-Manager: portage-2.3.0_rc1
+
+  24 May 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -PDF-Create-1.60.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*PDF-Create-1.370.0 (17 Nov 2016)
+
+  17 Nov 2016; Kent Fredric <kentnl@gentoo.org> +PDF-Create-1.370.0.ebuild,
+  metadata.xml:
+  Bump to version 1.370.0
+
+  Upstream:
+  - fixed block_text() line spacing calculation
+  - Added util verify-char-width for font character with testing
+  - Fixed calculation of Helvetica and HelveticaBold fonts
+  - Ensure to close passed write filehandles to avoid corruption
+
+  Keywording:
+  - New dependencies
+  - Dropped alpha ia64 ppc sparc
+
+  Package-Manager: portage-2.3.2
+

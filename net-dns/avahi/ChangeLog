@@ -178,3 +178,57 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="arm"
 
+  06 Apr 2016; Agostino Sarubbo <ago@gentoo.org> avahi-0.6.32.ebuild:
+  amd64 stable wrt bug #578838
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Apr 2016; Ian Stakenvicius <axs@gentoo.org> metadata.xml:
+  fix <pkg/> reference in metadata.xml
+
+  Package-Manager: portage-2.2.26
+
+  21 Apr 2016; Markus Meier <maekke@gentoo.org> avahi-0.6.32.ebuild:
+  arm stable, bug #578838
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  30 May 2016; Tobias Klausmann <klausman@gentoo.org> avahi-0.6.32.ebuild:
+  0.6.32-r0: add alpha keyword
+
+  Gentoo-Bug: 578838
+
+  Package-Manager: portage-2.3.0_rc1
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> avahi-0.6.32.ebuild:
+  x86 stable wrt bug #578838
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> avahi-0.6.32.ebuild:
+  ppc stable wrt bug #578838
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Aug 2016; Jeroen Roovers <jer@gentoo.org> avahi-0.6.32.ebuild:
+  Stable for HPPA PPC64 (bug #578838).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+*avahi-0.6.32-r1 (22 Sep 2016)
+
+  22 Sep 2016; Anthony G. Basile <blueness@gentoo.org>
+  +avahi-0.6.32-r1.ebuild,
+  +files/avahi-0.6.32-openrc-0.21.7-fix-init-scripts.patch:
+  update openrc init scripts, bug #594622
+
+  Package-Manager: portage-2.2.28
+

@@ -83,3 +83,16 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org> gdata-2.0.18.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+  09 Nov 2016; Pacho Ramos <pacho@gentoo.org> -gdata-2.0.17-r1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.2
+
+  15 Nov 2016; Tobias Klausmann <klausman@gentoo.org> gdata-2.0.18.ebuild:
+  2.0.18-r0: stable on alpha
+
+  Gentoo-Bug: 599290
+

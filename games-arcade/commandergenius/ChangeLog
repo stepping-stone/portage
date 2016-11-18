@@ -65,3 +65,31 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*commandergenius-1.8.3 (02 Apr 2016)
+
+  02 Apr 2016; Michael Sterrett <mr_bones_@gentoo.org>
+  +commandergenius-1.8.3.ebuild, +files/commandergenius-1.8.3-install.patch:
+  version bump
+
+  Package-Manager: portage-2.2.26
+
+  22 Apr 2016; Michael Sterrett <mr_bones_@gentoo.org>
+  commandergenius-1.8.3.ebuild:
+  Workaround buggy neard package - bug #558160
+
+  Package-Manager: portage-2.2.26
+
+  06 Jun 2016; Agostino Sarubbo <ago@gentoo.org> commandergenius-1.8.3.ebuild:
+  amd64 stable wrt bug #583822
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> commandergenius-1.8.3.ebuild:
+  x86 stable wrt bug #583822
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

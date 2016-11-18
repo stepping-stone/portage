@@ -69,3 +69,35 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Shell-0.730.0 (11 Apr 2016)
+
+  11 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org> +Shell-0.730.0.ebuild:
+  Bump to version 0.730.0
+
+  - EAPI6
+  - Cleanup tests and provide missing deps
+
+  Upstream:
+  - Minor packaging and documentation fixes
+
+  Package-Manager: portage-2.2.28
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> Shell-0.730.0.ebuild:
+  amd64 stable wrt bug #581884
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> Shell-0.730.0.ebuild:
+  x86 stable wrt bug #581884
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Andreas K. Hüttel <dilfridge@gentoo.org> -Shell-0.720.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.0_rc1
+

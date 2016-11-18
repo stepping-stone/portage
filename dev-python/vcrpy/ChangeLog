@@ -84,3 +84,23 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*vcrpy-1.10.0 (04 Sep 2016)
+
+  04 Sep 2016; Manuel Rüger <mrueg@gentoo.org> +vcrpy-1.10.0.ebuild:
+  Version bump to 1.10.0, add python3_5
+
+  Gentoo-Bug: 590538
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> vcrpy-1.5.2.ebuild,
+  vcrpy-1.7.3.ebuild, vcrpy-1.7.4.ebuild, vcrpy-1.10.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+*vcrpy-1.10.3 (14 Nov 2016)
+
+  14 Nov 2016; Manuel Rüger <mrueg@gentoo.org> +vcrpy-1.10.3.ebuild:
+  Version bump to 1.10.3
+
+  Package-Manager: portage-2.3.2
+

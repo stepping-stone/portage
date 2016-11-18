@@ -5,7 +5,7 @@
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{3_3,3_4,3_5} )
+PYTHON_COMPAT=( python{3_4,3_5} )
 PYTHON_REQ_USE="sqlite"
 
 inherit gnome2 python-single-r1 virtualx
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.pitivi.org"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="v4l test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

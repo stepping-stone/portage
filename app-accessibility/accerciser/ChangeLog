@@ -77,3 +77,22 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*accerciser-3.14.0-r1 (08 Oct 2016)
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> +accerciser-3.14.0-r1.ebuild:
+  Support python 3.5 and bump eapi
+
+  Package-Manager: portage-2.3.1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> accerciser-3.14.0.ebuild,
+  accerciser-3.14.0-r1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+*accerciser-3.22.0 (13 Nov 2016)
+
+  13 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +accerciser-3.22.0.ebuild:
+  version bump 3.14.0-r1 → 3.22.0
+
+  Package-Manager: portage-2.3.2
+

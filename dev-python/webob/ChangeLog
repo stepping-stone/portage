@@ -105,3 +105,49 @@
 
   Package-Manager: portage-2.2.26
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> webob-1.5.1.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*webob-1.6.0 (20 Apr 2016)
+
+  20 Apr 2016; Patrick Lauer <patrick@gentoo.org> -webob-1.6.0_alpha0.ebuild,
+  +webob-1.6.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.28
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org> webob-1.5.1.ebuild,
+  webob-1.6.0.ebuild:
+  stablereq for bug 582170
+
+  Package-Manager: portage-2.2.28
+
+*webob-1.6.1 (12 Jun 2016)
+
+  12 Jun 2016; Patrick Lauer <patrick@gentoo.org> +webob-1.6.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  20 Sep 2016; David Seifert <soap@gentoo.org> -files/webob-1.0.7-tests.patch,
+  -files/webob-1.2.3-tests.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/2376
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> webob-1.4.ebuild,
+  webob-1.4.1.ebuild, webob-1.5.0.ebuild, webob-1.5.1.ebuild,
+  webob-1.6.0.ebuild, webob-1.6.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org> webob-1.6.1.ebuild:
+  1.6.1 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

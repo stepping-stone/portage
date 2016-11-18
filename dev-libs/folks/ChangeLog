@@ -100,3 +100,25 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> folks-0.11.2.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> -folks-0.11.1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+
+*folks-0.11.3 (08 Oct 2016)
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> +folks-0.11.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.1
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> folks-0.11.3.ebuild:
+  Fix debug handling
+
+  Package-Manager: portage-2.3.1
+

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <maintainer type="person">
+        <email>k_f@gentoo.org</email>
+        <name>Kristian Fiskerstrand</name>
+  </maintainer>
   <maintainer type="project">
     <email>crypto@gentoo.org</email>
     <name>Crypto</name>
@@ -11,14 +15,15 @@
   </longdescription>
   <use>
     <flag name="smartcard">
-      Bring in <pkg>dev-libs/libusb</pkg> as a dependency; enable
-      scdaemon.
-    </flag>
-    <flag name="smartcard">
       Build scdaemon software. Enables usage of OpenPGP cards. For
       other type of smartcards, try
       <pkg>app-crypt/gnupg-pkcs11-scd</pkg>.
+      Bring in <pkg>dev-libs/libusb</pkg> as a dependency; enable
+      scdaemon.
     </flag>
+	<flag name="system-cert-store">
+	  Use gnutls system TLS cert store for hkps access
+	</flag>
     <flag name="usb">
       Build direct CCID access for scdaemon; requires
       <pkg>dev-libs/libusb</pkg>.

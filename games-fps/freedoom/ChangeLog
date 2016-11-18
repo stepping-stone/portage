@@ -63,3 +63,32 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*freedoom-0.10.1 (03 Mar 2016)
+
+  03 Mar 2016; Michael Sterrett <mr_bones_@gentoo.org>
+  +freedoom-0.10.1.ebuild:
+  version bump (bug #573298)
+
+  Package-Manager: portage-2.2.26
+
+  09 Apr 2016; Agostino Sarubbo <ago@gentoo.org> freedoom-0.10.1.ebuild:
+  amd64 stable wrt bug #579026
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> freedoom-0.10.1.ebuild:
+  x86 stable wrt bug #579026
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> freedoom-0.10.1.ebuild:
+  ppc stable wrt bug #579026
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

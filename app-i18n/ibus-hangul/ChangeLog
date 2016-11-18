@@ -93,3 +93,34 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*ibus-hangul-1.5.0 (15 May 2016)
+
+  15 May 2016; Patrick Lauer <patrick@gentoo.org> ibus-hangul-1.4.2-r1.ebuild,
+  +ibus-hangul-1.5.0.ebuild:
+  Bump #540270
+
+  Package-Manager: portage-2.2.28
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> ibus-hangul-1.5.0.ebuild:
+  amd64 stable wrt bug #593184
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> -ibus-hangul-1.4.0.ebuild,
+  -ibus-hangul-1.4.1.ebuild, -ibus-hangul-1.4.2-r1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+
+  16 Oct 2016; Pacho Ramos <pacho@gentoo.org> ibus-hangul-1.5.0.ebuild:
+  x86 stable, bug #593184
+
+  Package-Manager: portage-2.3.1
+
+  16 Oct 2016; Pacho Ramos <pacho@gentoo.org> -ibus-hangul-1.4.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+

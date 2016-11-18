@@ -125,3 +125,125 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*moodle-2.7.13 (12 Mar 2016)
+
+  12 Mar 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-2.7.12.ebuild,
+  +moodle-2.7.13.ebuild:
+  version bump to 2.7.13, remove older 2.7
+
+  Package-Manager: portage-2.2.26
+
+*moodle-2.8.11 (12 Mar 2016)
+
+  12 Mar 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-2.8.10.ebuild,
+  +moodle-2.8.11.ebuild:
+  version bump to 2.8.11, drop older 2.8
+
+  Package-Manager: portage-2.2.26
+
+*moodle-2.9.5 (12 Mar 2016)
+
+  12 Mar 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-2.9.4.ebuild,
+  +moodle-2.9.5.ebuild:
+  version bump to 2.9.5, drop older 2.9
+
+  Package-Manager: portage-2.2.26
+
+*moodle-3.0.3 (12 Mar 2016)
+
+  12 Mar 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-3.0.2.ebuild,
+  +moodle-3.0.3.ebuild:
+  version bump to 3.0.3, remove older 3.0
+
+  Package-Manager: portage-2.2.26
+
+*moodle-3.0.4 (09 May 2016)
+*moodle-2.9.6 (09 May 2016)
+*moodle-2.8.12 (09 May 2016)
+*moodle-2.7.14 (09 May 2016)
+
+  09 May 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-2.7.13.ebuild,
+  +moodle-2.7.14.ebuild, -moodle-2.8.11.ebuild, +moodle-2.8.12.ebuild,
+  -moodle-2.9.5.ebuild, +moodle-2.9.6.ebuild, -moodle-3.0.3.ebuild,
+  +moodle-3.0.4.ebuild:
+  version bumps
+
+  Package-Manager: portage-2.2.26
+
+*moodle-3.1 (23 Jun 2016)
+
+  23 Jun 2016; Anthony G. Basile <blueness@gentoo.org> +moodle-3.1.ebuild:
+  version bump to 3.1
+
+  Package-Manager: portage-2.2.28
+
+*moodle-3.0.5 (10 Jul 2016)
+*moodle-2.9.7 (10 Jul 2016)
+*moodle-2.7.15 (10 Jul 2016)
+
+  10 Jul 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-2.7.14.ebuild,
+  +moodle-2.7.15.ebuild, -moodle-2.8.12.ebuild, -moodle-2.9.6.ebuild,
+  +moodle-2.9.7.ebuild, -moodle-3.0.4.ebuild, +moodle-3.0.5.ebuild:
+  version bumps, remove unsupported versions
+
+  Package-Manager: portage-2.2.28
+
+*moodle-3.1.1 (11 Jul 2016)
+
+  11 Jul 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-3.1.ebuild,
+  +moodle-3.1.1.ebuild:
+  version bump to 3.1.1, drop older 3.1
+
+  Package-Manager: portage-2.2.28
+
+*moodle-2.7.16 (11 Sep 2016)
+
+  11 Sep 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-2.7.15.ebuild,
+  +moodle-2.7.16.ebuild:
+  version bump to 2.7.16, remove 2.7.15
+
+  Package-Manager: portage-2.2.28
+
+*moodle-2.9.8 (11 Sep 2016)
+
+  11 Sep 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-2.9.7.ebuild,
+  +moodle-2.9.8.ebuild:
+  version bump to 2.9.8, remove 2.9.7
+
+  Package-Manager: portage-2.2.28
+
+*moodle-3.0.6 (11 Sep 2016)
+
+  11 Sep 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-3.0.5.ebuild,
+  +moodle-3.0.6.ebuild:
+  version bump to 3.0.6, remove 3.0.5
+
+  Package-Manager: portage-2.2.28
+
+*moodle-3.1.2 (11 Sep 2016)
+
+  11 Sep 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-3.1.1.ebuild,
+  +moodle-3.1.2.ebuild:
+  version bump to 3.1.2, remove 3.1.1
+
+  Package-Manager: portage-2.2.28
+
+  28 Sep 2016; Anthony G. Basile <blueness@gentoo.org> moodle-2.7.16.ebuild,
+  moodle-2.9.8.ebuild, moodle-3.0.6.ebuild, moodle-3.1.2.ebuild:
+  remove einfo banner header
+
+  Package-Manager: portage-2.2.28
+
+*moodle-3.1.3 (13 Nov 2016)
+*moodle-3.0.7 (13 Nov 2016)
+*moodle-2.9.9 (13 Nov 2016)
+*moodle-2.7.17 (13 Nov 2016)
+
+  13 Nov 2016; Anthony G. Basile <blueness@gentoo.org> -moodle-2.7.16.ebuild,
+  +moodle-2.7.17.ebuild, -moodle-2.9.8.ebuild, +moodle-2.9.9.ebuild,
+  -moodle-3.0.6.ebuild, +moodle-3.0.7.ebuild, -moodle-3.1.2.ebuild,
+  +moodle-3.1.3.ebuild:
+  version bumps to 2.7.17, 2.9.9, 3.0.7, 3.1.3, bug #599408.
+
+  Package-Manager: portage-2.3.0
+

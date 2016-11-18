@@ -128,3 +128,45 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  05 Mar 2016; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
+  Removes DOLPHIN_WC_REVISION, bug #576090
+
+  Package-Manager: portage-2.2.27
+
+  05 Mar 2016; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
+  Replaces xpm icon with png and svg, bug #575420
+
+  Package-Manager: portage-2.2.27
+
+  02 Apr 2016; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
+  Adds LINGUAS support to ebuid, bug #561914
+
+  Package-Manager: portage-2.2.27
+
+  02 Apr 2016; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
+  Removes games eclass usage & changes desktop icon location, bug #561914
+
+  Package-Manager: portage-2.2.27
+
+  09 May 2016; Michael Sterrett <mr_bones_@gentoo.org> -dolphin-4.0-r2.ebuild,
+  -dolphin-4.0.2-r7.ebuild:
+  clean old (last user of libsfml-1)
+
+  Package-Manager: portage-2.2.26
+
+  25 Jun 2016; Devan Franchini <twitch153@gentoo.org> dolphin-5.0.ebuild:
+  Updates package version to reflect new release
+
+  Package-Manager: portage-2.3.0
+
+  25 Jun 2016; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
+  Updates locales and QT flag, bug #561914
+
+  Package-Manager: portage-2.3.0
+
+  17 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  -files/dolphin-5.0-dynamic-llvm-detect.patch,
+  -files/dolphin-5.0-miniupnpc-abi-14.patch,
+  -files/dolphin-emu-3.5-gcc-4.8.patch:
+  remove unused patches
+

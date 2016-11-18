@@ -83,3 +83,31 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  sauerbraten-2013.02.03.ebuild:
+  amd64 stable wrt bug #574834
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  sauerbraten-2013.02.03.ebuild:
+  x86 stable wrt bug #574834
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/sauerbraten-2013.01.04-QA.patch,
+  -files/sauerbraten-2013.01.04-master.patch,
+  -files/sauerbraten-2013.01.04-system-enet.patch,
+  -files/sauerbraten_unix.patch, -sauerbraten-2013.01.04.ebuild:
+  clean old
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/sauerbraten.init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+

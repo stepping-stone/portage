@@ -133,3 +133,109 @@
 
   Package-Manager: portage-2.2.26
 
+*elasticsearch-curator-3.5.0 (17 Mar 2016)
+
+  17 Mar 2016; Patrick Lauer <patrick@gentoo.org>
+  +elasticsearch-curator-3.5.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.28
+
+  18 Mar 2016; Ian Delaney <idella4@gentoo.org>
+  elasticsearch-curator-3.5.0.ebuild:
+  remove RESTRICT on tests
+
+  bump to EAPI=6 for vm. 3.5.0
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1077
+
+  18 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  elasticsearch-curator-3.4.0.ebuild, elasticsearch-curator-3.4.1.ebuild,
+  elasticsearch-curator-3.5.0.ebuild:
+  esetup.py dies on its own.
+
+  Package-Manager: portage-2.2.26
+
+*elasticsearch-curator-3.5.1 (23 Mar 2016)
+
+  23 Mar 2016; Patrick Lauer <patrick@gentoo.org>
+  -elasticsearch-curator-3.5.0.ebuild, +elasticsearch-curator-3.5.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.28
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #390951
+
+  Package-Manager: portage-2.3.0_rc1
+
+  08 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -elasticsearch-curator-3.4.0.ebuild, -elasticsearch-curator-3.4.1.ebuild:
+  drop old
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/1827
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*elasticsearch-curator-4.0.1 (08 Jul 2016)
+
+  08 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  +elasticsearch-curator-4.0.1.ebuild:
+  bump to 4.0.1
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/1827
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*elasticsearch-curator-4.0.5 (09 Aug 2016)
+
+  09 Aug 2016; Patrick Lauer <patrick@gentoo.org>
+  +elasticsearch-curator-4.0.5.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  16 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -elasticsearch-curator-4.0.1.ebuild, elasticsearch-curator-4.0.5.ebuild:
+  add missing '|| die's, drop old.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2056
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  02 Sep 2016; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Fix maintainers
+
+  Package-Manager: portage-2.3.0
+
+*elasticsearch-curator-4.0.6 (29 Sep 2016)
+
+  29 Sep 2016; Patrice Clement <monsieurp@gentoo.org>
+  -elasticsearch-curator-3.5.1.ebuild, -elasticsearch-curator-4.0.5.ebuild,
+  +elasticsearch-curator-4.0.6.ebuild:
+  bump to 4.0.6, drop old.
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2310
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  02 Oct 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  add proxy-maint back as a maintainer
+
+  Please do not remove projects/developers from the metadata without
+  consulting them first. Thank you!
+
+  Package-Manager: portage-2.3.0
+
+*elasticsearch-curator-4.1.2 (28 Oct 2016)
+
+  28 Oct 2016; Patrick Lauer <patrick@gentoo.org>
+  +elasticsearch-curator-4.1.2.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.2
+

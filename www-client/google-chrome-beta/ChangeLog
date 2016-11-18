@@ -336,3 +336,389 @@
 
   Package-Manager: portage-2.2.27_p64
 
+*google-chrome-beta-49.0.2623.75_p1 (03 Mar 2016)
+
+  03 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-49.0.2623.63_p1.ebuild,
+  +google-chrome-beta-49.0.2623.75_p1.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.27_p64
+
+*google-chrome-beta-50.0.2661.26_p1 (11 Mar 2016)
+
+  11 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-49.0.2623.75_p1.ebuild,
+  +google-chrome-beta-50.0.2661.26_p1.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.28_p57
+
+*google-chrome-beta-50.0.2661.37_p1 (16 Mar 2016)
+
+  16 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-50.0.2661.26_p1.ebuild,
+  +google-chrome-beta-50.0.2661.37_p1.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.28_p60
+
+  18 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-beta-50.0.2661.37_p1.ebuild:
+  www-client/google-chrome: Add REQUIRED_USE="abi_x86_64"
+
+  This should prevent people from accidentatlly trying to install this
+  package on x86 due to portage's autounmask feature.
+
+  Bug: https://bugs.gentoo.org/577678
+
+  21 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-beta-50.0.2661.37_p1.ebuild:
+  Revert "www-client/google-chrome: Add REQUIRED_USE="abi_x86_64""
+
+  This reverts commit 8e336a3b9265100c300094900f4601296e317333.
+
+  Adding this REQUIRED_USE constraint is pretty hacky and users will
+  quickly figure out that the ebuild doesn't work anyway.
+
+  23 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-beta-50.0.2661.37_p1.ebuild:
+  www-client/google-chrome: Misc cleanup
+
+  EAPI=6
+  Remove stale code that is no longer useful with x86 gone.
+  Die in pkg_pretend if not on amd64.
+
+*google-chrome-beta-50.0.2661.49_p1 (24 Mar 2016)
+
+  24 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-50.0.2661.37_p1.ebuild,
+  +google-chrome-beta-50.0.2661.49_p1.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.28_p64
+
+*google-chrome-beta-50.0.2661.57_p1 (30 Mar 2016)
+
+  30 Mar 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-50.0.2661.49_p1.ebuild,
+  +google-chrome-beta-50.0.2661.57_p1.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.28_p64
+
+*google-chrome-beta-50.0.2661.66_p1 (07 Apr 2016)
+
+  07 Apr 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-50.0.2661.57_p1.ebuild,
+  +google-chrome-beta-50.0.2661.66_p1.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.28_p64
+
+*google-chrome-beta-50.0.2661.75 (13 Apr 2016)
+
+  13 Apr 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-50.0.2661.66_p1.ebuild,
+  +google-chrome-beta-50.0.2661.75.ebuild:
+  bump
+
+  Package-Manager: portage-2.2.28_p64
+
+*google-chrome-beta-51.0.2704.22 (26 Apr 2016)
+
+  26 Apr 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-50.0.2661.75.ebuild,
+  +google-chrome-beta-51.0.2704.22.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.28_p79
+
+*google-chrome-beta-51.0.2704.29 (27 Apr 2016)
+
+  27 Apr 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-51.0.2704.22.ebuild,
+  +google-chrome-beta-51.0.2704.29.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.28_p79
+
+*google-chrome-beta-51.0.2704.36 (06 May 2016)
+
+  06 May 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-51.0.2704.29.ebuild,
+  +google-chrome-beta-51.0.2704.36.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.28_p97
+
+*google-chrome-beta-51.0.2704.47 (14 May 2016)
+
+  14 May 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-51.0.2704.36.ebuild,
+  +google-chrome-beta-51.0.2704.47.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.28_p107_p258876
+
+*google-chrome-beta-51.0.2704.54 (20 May 2016)
+
+  20 May 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-51.0.2704.47.ebuild,
+  +google-chrome-beta-51.0.2704.54.ebuild:
+  automated update
+
+  Package-Manager: portage-2.2.28_p107_p765264
+
+  21 May 2016; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-beta-51.0.2704.54.ebuild:
+  www-client/google-chrome: replace es_LA with es_419
+
+*google-chrome-beta-51.0.2704.63 (27 May 2016)
+
+  27 May 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-51.0.2704.54.ebuild,
+  +google-chrome-beta-51.0.2704.63.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_rc1_p12
+
+*google-chrome-beta-52.0.2743.24 (04 Jun 2016)
+
+  04 Jun 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-51.0.2704.63.ebuild,
+  +google-chrome-beta-52.0.2743.24.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_rc1_p14
+
+*google-chrome-beta-52.0.2743.33 (10 Jun 2016)
+
+  10 Jun 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-52.0.2743.24.ebuild,
+  +google-chrome-beta-52.0.2743.33.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_rc1_p20
+
+*google-chrome-beta-52.0.2743.41 (16 Jun 2016)
+
+  16 Jun 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-52.0.2743.33.ebuild,
+  +google-chrome-beta-52.0.2743.41.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_rc1_p20
+
+*google-chrome-beta-52.0.2743.49 (25 Jun 2016)
+
+  25 Jun 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-52.0.2743.41.ebuild,
+  +google-chrome-beta-52.0.2743.49.ebuild:
+  automated update
+
+  Package-Manager: portage-portage_p2.3.0
+
+*google-chrome-beta-52.0.2743.60 (30 Jun 2016)
+
+  30 Jun 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-52.0.2743.49.ebuild,
+  +google-chrome-beta-52.0.2743.60.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p7
+
+*google-chrome-beta-52.0.2743.75 (14 Jul 2016)
+
+  14 Jul 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-52.0.2743.60.ebuild,
+  +google-chrome-beta-52.0.2743.75.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p11
+
+  14 Jul 2016; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-beta-52.0.2743.75.ebuild, metadata.xml:
+  convert to chromium-2 eclass
+
+  Package-Manager: portage-2.3.0_p11
+
+*google-chrome-beta-52.0.2743.82 (20 Jul 2016)
+
+  20 Jul 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-52.0.2743.75.ebuild,
+  +google-chrome-beta-52.0.2743.82.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p15
+
+*google-chrome-beta-53.0.2785.34 (29 Jul 2016)
+
+  29 Jul 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-52.0.2743.82.ebuild,
+  +google-chrome-beta-53.0.2785.34.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p16
+
+*google-chrome-beta-53.0.2785.46 (04 Aug 2016)
+
+  04 Aug 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-53.0.2785.34.ebuild,
+  +google-chrome-beta-53.0.2785.46.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p16
+
+*google-chrome-beta-53.0.2785.57 (12 Aug 2016)
+
+  12 Aug 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-53.0.2785.46.ebuild,
+  +google-chrome-beta-53.0.2785.57.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p16
+
+*google-chrome-beta-53.0.2785.70 (18 Aug 2016)
+
+  18 Aug 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-53.0.2785.57.ebuild,
+  +google-chrome-beta-53.0.2785.70.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p16
+
+*google-chrome-beta-53.0.2785.80 (25 Aug 2016)
+
+  25 Aug 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-53.0.2785.70.ebuild,
+  +google-chrome-beta-53.0.2785.80.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p22
+
+*google-chrome-beta-53.0.2785.89 (31 Aug 2016)
+
+  31 Aug 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-53.0.2785.80.ebuild,
+  +google-chrome-beta-53.0.2785.89.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p22
+
+  01 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-beta-53.0.2785.89.ebuild:
+  www-client/google-chrome: ignore desktop file validation
+
+  01 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-beta-53.0.2785.89.ebuild:
+  www-client/google-chrome: do all the work in src_install
+
+*google-chrome-beta-53.0.2785.92 (03 Sep 2016)
+
+  03 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-53.0.2785.89.ebuild,
+  +google-chrome-beta-53.0.2785.92.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p24
+
+*google-chrome-beta-54.0.2840.16 (09 Sep 2016)
+
+  09 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-53.0.2785.92.ebuild,
+  +google-chrome-beta-54.0.2840.16.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p24
+
+*google-chrome-beta-54.0.2840.27 (15 Sep 2016)
+
+  15 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-54.0.2840.16.ebuild,
+  +google-chrome-beta-54.0.2840.27.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p31
+
+*google-chrome-beta-54.0.2840.34 (23 Sep 2016)
+
+  23 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-54.0.2840.27.ebuild,
+  +google-chrome-beta-54.0.2840.34.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.0_p43
+
+*google-chrome-beta-54.0.2840.41 (28 Sep 2016)
+
+  28 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-54.0.2840.34.ebuild,
+  +google-chrome-beta-54.0.2840.41.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.1_p4_p395246
+
+*google-chrome-beta-54.0.2840.50 (07 Oct 2016)
+
+  07 Oct 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-54.0.2840.41.ebuild,
+  +google-chrome-beta-54.0.2840.50.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.1_p6
+
+*google-chrome-beta-54.0.2840.59 (13 Oct 2016)
+
+  13 Oct 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-54.0.2840.50.ebuild,
+  +google-chrome-beta-54.0.2840.59.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.1_p6
+
+*google-chrome-beta-55.0.2883.21 (23 Oct 2016)
+
+  23 Oct 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-54.0.2840.59.ebuild,
+  +google-chrome-beta-55.0.2883.21.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.2
+
+*google-chrome-beta-55.0.2883.28 (27 Oct 2016)
+
+  27 Oct 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-55.0.2883.21.ebuild,
+  +google-chrome-beta-55.0.2883.28.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.2
+
+*google-chrome-beta-55.0.2883.35 (03 Nov 2016)
+
+  03 Nov 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-55.0.2883.28.ebuild,
+  +google-chrome-beta-55.0.2883.35.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.2_p3
+
+*google-chrome-beta-55.0.2883.44 (10 Nov 2016)
+
+  10 Nov 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-55.0.2883.35.ebuild,
+  +google-chrome-beta-55.0.2883.44.ebuild:
+  automated update
+
+  Package-Manager: portage-2.3.2_p5
+
+*google-chrome-beta-55.0.2883.52 (17 Nov 2016)
+
+  17 Nov 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-beta-55.0.2883.44.ebuild,
+  +google-chrome-beta-55.0.2883.52.ebuild:
+  automated update (55.0.2883.52)
+
+  Package-Manager: portage-2.3.2_p8
+

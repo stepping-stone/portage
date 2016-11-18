@@ -91,3 +91,44 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*teamviewer-11.0.57095 (07 Apr 2016)
+
+  07 Apr 2016; Wolfram Schlich <wschlich@gentoo.org>
+  -teamviewer-11.0.53191.ebuild, -teamviewer-11.0.53191-r1.ebuild,
+  +teamviewer-11.0.57095.ebuild:
+  version bump, removed old 11.x versions
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/teamviewerd9.init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*teamviewer-11.0.57095-r1 (29 Jun 2016)
+
+  29 Jun 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  -teamviewer-11.0.57095.ebuild, +teamviewer-11.0.57095-r1.ebuild:
+  Add png dependency for wine, resolves #580066
+
+  Package-Manager: portage-2.2.28
+
+  25 Jul 2016; NP-Hardass <NP-Hardass@gentoo.org> metadata.xml:
+  Fix maintainer in metadata
+
+  Package-Manager: portage-2.2.28
+
+*teamviewer-11.0.67687 (21 Oct 2016)
+
+  21 Oct 2016; Wolfram Schlich <wschlich@gentoo.org>
+  +teamviewer-11.0.67687.ebuild:
+  version bump
+
+  Package-Manager: portage-2.3.0
+
+*teamviewer-12.0.69753 (02 Nov 2016)
+
+  02 Nov 2016; Wolfram Schlich <wschlich@gentoo.org>
+  +teamviewer-12.0.69753.ebuild:
+  major version bump (v12 is officially still beta though)
+
+  Package-Manager: portage-2.3.0
+

@@ -172,3 +172,121 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> cinnamon-2.8.6.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+*cinnamon-2.8.8 (29 May 2016)
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> +cinnamon-2.8.8.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> -cinnamon-2.6.13.ebuild,
+  -cinnamon-2.8.4.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> cinnamon-2.8.8.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> cinnamon-2.8.8.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -cinnamon-2.8.6.ebuild,
+  -files/cinnamon-2.4.5-background.patch,
+  -files/cinnamon-2.4.5-gnome-3.14.patch,
+  -files/cinnamon-2.4.5-optional-networkmanager.patch,
+  -files/cinnamon-2.4.5-set-wheel.patch,
+  -files/cinnamon-2.6.13-test-recorder-includes.patch,
+  -files/cinnamon-2.6.7-set-wheel.patch:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*cinnamon-3.0.6 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +cinnamon-3.0.6.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org> cinnamon-3.0.6.ebuild:
+  Rebuilding with NM subslot bump will be needed when it's bumped (likely when
+  we are ready to kill the obsolete dbus-glib support from NM)
+
+  Package-Manager: portage-2.3.0
+
+  17 Sep 2016; Kristian Fiskerstrand <k_f@gentoo.org> metadata.xml:
+  Reassigning to new Cinnamon Project
+
+  Package-Manager: portage-2.3.0
+
+*cinnamon-3.0.7 (17 Sep 2016)
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> +cinnamon-3.0.7.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> cinnamon-3.0.7.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> cinnamon-3.0.7.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*cinnamon-3.0.7-r1 (18 Oct 2016)
+
+  18 Oct 2016; Kristian Fiskerstrand <k_f@gentoo.org>
+  +cinnamon-3.0.7-r1.ebuild:
+  Fix gtk-engines-adwait theme dependency use flag
+
+  Gentoo-Bug: 596556
+
+  Package-Manager: portage-2.3.1
+
+  29 Oct 2016; Michael Palimaka <kensington@gentoo.org> cinnamon-2.8.8.ebuild,
+  cinnamon-3.0.6.ebuild, cinnamon-3.0.7.ebuild, cinnamon-3.0.7-r1.ebuild:
+  remove invalid USE flag from REQUIRED_USE
+
+  Gentoo-bug: 598342
+
+  Package-Manager: portage-2.3.2
+
+  29 Oct 2016; Mike Gilbert <floppym@gentoo.org> cinnamon-2.8.8.ebuild,
+  cinnamon-3.0.6.ebuild, cinnamon-3.0.7.ebuild, cinnamon-3.0.7-r1.ebuild:
+  fixup REQUIRED_USE
+
+  Generate python_targets flags using python_gen_useflags. We don't need
+  PYTHON_REQUIRED_USE since we generate a more strict set of flags anyway.
+
+  Package-Manager: portage-2.3.2
+
+  29 Oct 2016; Mike Gilbert <floppym@gentoo.org> cinnamon-2.8.8.ebuild,
+  cinnamon-3.0.6.ebuild, cinnamon-3.0.7.ebuild, cinnamon-3.0.7-r1.ebuild:
+  another REQUIRED_USE adjustment
+
+  Put python2* inside an || dep for consistency and in case python2.8 is
+  released by somebody in the future.
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> cinnamon-2.8.8.ebuild,
+  cinnamon-3.0.6.ebuild, cinnamon-3.0.7.ebuild, cinnamon-3.0.7-r1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

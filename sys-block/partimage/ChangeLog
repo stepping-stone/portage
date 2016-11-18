@@ -80,3 +80,16 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  16 Apr 2016; Manuel Rüger <mrueg@gentoo.org> -partimage-0.6.8.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  19 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/partimage-0.6.9-minor-typo.patch, partimage-0.6.9.ebuild:
+  fix build w/newer glibc #580290
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/partimaged.init,
+  files/partimaged.init.2:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+

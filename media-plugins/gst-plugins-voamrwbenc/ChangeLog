@@ -111,3 +111,47 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  02 Apr 2016; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-voamrwbenc-1.6.3.ebuild:
+  x86 stable, bug 566378
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  -gst-plugins-voamrwbenc-1.4.5.ebuild, -gst-plugins-voamrwbenc-1.6.1.ebuild,
+  -gst-plugins-voamrwbenc-1.6.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+*gst-plugins-voamrwbenc-1.8.2 (09 Jul 2016)
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  +gst-plugins-voamrwbenc-1.8.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+*gst-plugins-voamrwbenc-1.8.3 (18 Sep 2016)
+
+  18 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-voamrwbenc-1.8.3.ebuild:
+  version bump to 1.8.3
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-voamrwbenc-1.8.3.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-voamrwbenc-1.8.3.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+

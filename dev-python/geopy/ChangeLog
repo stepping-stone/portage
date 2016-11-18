@@ -74,3 +74,15 @@
 
   Package-Manager: portage-2.2.27
 
+  18 Sep 2016; David Seifert <soap@gentoo.org> -files/1.1.3-formatpy3.patch,
+  -files/1.1.3-tests-env-vars.patch, -files/1.1.3-version-compat.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/2322
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> geopy-1.8.1.ebuild,
+  geopy-1.9.1.ebuild, geopy-1.10.0.ebuild, geopy-1.11.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

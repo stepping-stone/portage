@@ -66,3 +66,21 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*weasyprint-0.26 (01 Mar 2016)
+
+  01 Mar 2016; Patrick Lauer <patrick@gentoo.org> +weasyprint-0.26.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+*weasyprint-0.29 (29 Jun 2016)
+
+  29 Jun 2016; Patrick Lauer <patrick@gentoo.org> +weasyprint-0.29.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> weasyprint-0.21-r1.ebuild,
+  weasyprint-0.22.ebuild, weasyprint-0.23.ebuild, weasyprint-0.26.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

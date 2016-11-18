@@ -84,3 +84,27 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*freebsd-mk-defs-10.3 (04 Apr 2016)
+
+  04 Apr 2016; Yuta Satoh <nigoro.dev@gmail.com>
+  +files/freebsd-mk-defs-10.3-gentoo.patch, +freebsd-mk-defs-10.3.ebuild:
+  sys-freebsd: Bump to 10.3.
+
+  11 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/freebsd-mk-defs-10.2-gentoo.patch, -freebsd-mk-defs-10.2.ebuild:
+  sys-freebsd: Remove 10.2.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2059
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*freebsd-mk-defs-11.0 (11 Oct 2016)
+
+  11 Oct 2016; Alexis Ballier <aballier@gentoo.org>
+  +files/freebsd-mk-defs-11.0-drop-unsupport-cflags.patch,
+  +files/freebsd-mk-defs-11.0-gentoo.patch,
+  +files/freebsd-mk-defs-11.0-gnu.patch,
+  +files/freebsd-mk-defs-11.0-libproc-libcxx.patch,
+  +files/freebsd-mk-defs-11.0-rename-libs.patch, +freebsd-mk-defs-11.0.ebuild:
+  sys-freebsd: bump to 11.0
+

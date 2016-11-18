@@ -88,3 +88,18 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  30 May 2016; Michael Haubenwallner <haubi@gentoo.org>
+  +files/libpipeline-1.4.1-gnulib-cygwin-sys_select.patch,
+  libpipeline-1.4.1.ebuild:
+  add gnulib cygwin patch (#584314)
+
+  Package-Manager: portage-2.2.26
+
+  07 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -files/libpipeline-1.2.1-no-gets.patch:
+  remove unused patch
+
+  Closes: https://github.com/gentoo/gentoo/pull/2222
+
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

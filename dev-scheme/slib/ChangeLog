@@ -74,3 +74,65 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Agostino Sarubbo <ago@gentoo.org> slib-3.2.2.ebuild:
+  amd64 stable wrt bug #575066
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> slib-3.2.2.ebuild:
+  x86 stable wrt bug #575066
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> slib-3.2.2.ebuild:
+  ppc stable wrt bug #575066
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> slib-3.2.2.ebuild:
+  sparc stable wrt bug #575066
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> slib-3.2.2.ebuild:
+  ia64 stable wrt bug #575066
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 May 2016; Tobias Klausmann <klausman@gentoo.org> slib-3.2.2.ebuild:
+  3.2.2-r0: add alpha keyword
+
+  Gentoo-Bug: 575066
+
+  Package-Manager: portage-2.3.0_rc1
+
+*slib-3.2.5 (23 Oct 2016)
+
+  23 Oct 2016; Ettore Di Giacinto <mudler@gentoo.org> +files/50slib,
+  +files/slib-3.2.5-fix-makefile-guile.patch,
+  +files/slib-3.2.5-fix-paths.patch, metadata.xml, +slib-3.2.5.ebuild:
+  version bump to 3.2.5
+
+  * migrate to EAPI 6
+  * splitted sed calls in patches
+  * add local gambit and scm USE flags
+  * QA fixes, added DOCS
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=537306
+  Package-Manager: portage-2.3.1
+
+  24 Oct 2016; Ettore Di Giacinto <mudler@gentoo.org> -slib-3.1.5-r1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+

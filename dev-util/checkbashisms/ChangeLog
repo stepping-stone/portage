@@ -99,3 +99,96 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*checkbashisms-2.16.2 (21 Mar 2016)
+
+  21 Mar 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +checkbashisms-2.16.2.ebuild:
+  Bump to version 2.16.2
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  21 Mar 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -checkbashisms-2.15.9.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*checkbashisms-2.16.4 (27 Apr 2016)
+
+  27 Apr 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +checkbashisms-2.16.4.ebuild:
+  Bump to version 2.16.4
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*checkbashisms-2.16.5 (14 Jun 2016)
+
+  14 Jun 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +checkbashisms-2.16.5.ebuild:
+  Bump to version 2.16.5
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  14 Jun 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -checkbashisms-2.16.2.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*checkbashisms-2.16.6 (13 Jul 2016)
+
+  13 Jul 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +checkbashisms-2.16.6.ebuild:
+  Bump to version 2.16.6
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  13 Jul 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -checkbashisms-2.15.10.ebuild, -checkbashisms-2.16.4.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*checkbashisms-2.16.7 (23 Aug 2016)
+
+  23 Aug 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +checkbashisms-2.16.7.ebuild:
+  Bump to version 2.16.7
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  23 Aug 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -checkbashisms-2.16.5.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*checkbashisms-2.16.8 (04 Oct 2016)
+
+  04 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +checkbashisms-2.16.8.ebuild:
+  Bump to version 2.16.8
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  04 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -checkbashisms-2.16.6.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  08 Oct 2016; Michael Palimaka <kensington@gentoo.org>
+  -files/checkbashisms-2.15.9-printf-b.patch:
+  remove unused patch
+

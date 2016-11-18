@@ -104,3 +104,129 @@
 
   Package-Manager: portage-2.2.27
 
+  28 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add us as co-maintainers
+
+  Package-Manager: portage-2.3.0_rc1
+
+*shotwell-0.23.1 (28 May 2016)
+
+  28 May 2016; Pacho Ramos <pacho@gentoo.org> +shotwell-0.23.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> shotwell-0.23.1.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> shotwell-0.23.1.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  -files/shotwell-0.13.1-ldflags.patch, -shotwell-0.22.0.ebuild,
+  -shotwell-0.22.0-r1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*shotwell-0.23.2 (02 Jul 2016)
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> +shotwell-0.23.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*shotwell-0.23.4 (30 Jul 2016)
+
+  30 Jul 2016; Pacho Ramos <pacho@gentoo.org> +shotwell-0.23.4.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> -shotwell-0.23.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+*shotwell-0.23.7 (17 Sep 2016)
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> +shotwell-0.23.7.ebuild:
+  Version bump, stop building static, itstool is needed (#592132), stop
+  hacking linguas support (#590630)
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> shotwell-0.23.7.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> shotwell-0.23.7.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> -shotwell-0.23.1.ebuild,
+  -shotwell-0.23.4.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+
+*shotwell-0.24.0 (08 Oct 2016)
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> +shotwell-0.24.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.1
+
+*shotwell-0.24.1 (31 Oct 2016)
+
+  31 Oct 2016; Pacho Ramos <pacho@gentoo.org> +shotwell-0.24.1.ebuild:
+  Version bump, gst-plugins-gdkpixbuf is used (#597968 by Fabio Bonfante).
+
+  Package-Manager: portage-2.3.2
+
+*shotwell-0.25.0.1 (09 Nov 2016)
+
+  09 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +shotwell-0.25.0.1.ebuild:
+  add shotwell-0.25.0.1.ebuild
+
+  Copied from 0.24.0, updated dependencies as per
+
+  https://git.gnome.org/browse/shotwell/diff/?id=shotwell-0.25.0&&id2=shotwell
+  -0.24.0
+  https://git.gnome.org/browse/shotwell/diff/common.am?id=shotwell-0.25.0&id2=
+  shotwell-0.24.0
+  https://git.gnome.org/browse/shotwell/diff/configure.ac?id=shotwell-0.25.0&i
+  d2=shotwell-0.24.0
+  Closes: https://github.com/gentoo/gentoo/pull/2785
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+
+  09 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  shotwell-0.25.0.1.ebuild:
+  fix some dependencies
+
+  gcr[gtk] is needed for gcr-ui-3 in configure. desktop-file-utils is
+  pulled by xdg.eclass. No need to declare it if no direct use of it is
+  done in sources, build or ebuild. Add missing dependency on pkgconfig.
+  Drop unused gnome-doc-utils dependency.
+
+  Package-Manager: portage-2.3.2
+
+*shotwell-0.24.2 (12 Nov 2016)
+
+  12 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org> +shotwell-0.24.2.ebuild:
+  version bump 0.24.1 → 0.24.2
+
+  Package-Manager: portage-2.3.2
+

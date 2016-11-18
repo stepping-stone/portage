@@ -76,3 +76,22 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  13 Jun 2016; Zero_Chaos <zerochaos@gentoo.org>
+  multipart-post-2.0.0-r1.ebuild:
+  disable non-functional (and non-existant) test
+
+  Package-Manager: portage-2.3.0_rc1
+
+  08 Jul 2016; Hans de Graaff <graaff@gentoo.org>
+  multipart-post-2.0.0-r1.ebuild:
+  add ruby23, enable tests
+
+  Package-Manager: portage-2.2.28
+
+  31 Oct 2016; Patrice Clement <monsieurp@gentoo.org> -files/multibyte.txt:
+  remove unused patch.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2417
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

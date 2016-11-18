@@ -302,3 +302,44 @@
 
   Package-Manager: portage-2.2.26
 
+  30 Mar 2016; Mike Frysinger <vapier@gentoo.org> ncurses-5.9-r3.ebuild,
+  ncurses-5.9-r4.ebuild, ncurses-5.9-r5.ebuild:
+  toolchain-funcs.eclass: gen_usr_ldscript: integrate multilib_is_native_abi
+  support #479448
+
+  Many ebuilds have started checking multilib_is_native_abi to see if they
+  should call gen_usr_ldscript.  Since that logic always makes sense, add
+  it directly to the gen_usr_ldscript function.
+
+  09 Oct 2016; Jeroen Roovers <jer@gentoo.org> ncurses-6.0.ebuild,
+  ncurses-6.0-r1.ebuild:
+  Stable for HPPA PPC64 (bug #594338).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  21 Oct 2016; Tobias Klausmann <klausman@gentoo.org> ncurses-6.0-r1.ebuild:
+  6.0-r1: stable on alpha
+
+  Gentoo-Bug: 594338
+
+  21 Oct 2016; Tobias Klausmann <klausman@gentoo.org> ncurses-6.0.ebuild:
+  6.0-r0: stable on alpha
+
+  Gentoo-Bug: 594338
+
+  26 Oct 2016; Markus Meier <maekke@gentoo.org> ncurses-6.0.ebuild,
+  ncurses-6.0-r1.ebuild:
+  arm stable, bug #594338
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+
+  15 Nov 2016; Mike Frysinger <vapier@gentoo.org> ncurses-5.9-r5.ebuild,
+  ncurses-5.9-r99.ebuild:
+  mark 5.9-r5 & 5.9-r99 m68k/sh stable
+
+  15 Nov 2016; Mike Frysinger <vapier@gentoo.org> ncurses-6.0.ebuild,
+  ncurses-6.0-r1.ebuild:
+  mark 6.0 & 6.0-r1 arm64/ia64/m68k/ppc/s390/sh/sparc stable #594338
+

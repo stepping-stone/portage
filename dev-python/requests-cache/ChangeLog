@@ -64,3 +64,15 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*requests-cache-0.4.12 (29 Jun 2016)
+
+  29 Jun 2016; Patrick Lauer <patrick@gentoo.org>
+  +requests-cache-0.4.12.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> requests-cache-0.4.9.ebuild,
+  requests-cache-0.4.10.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

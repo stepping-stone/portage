@@ -71,3 +71,23 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*xpp3-1.1.4c-r3 (04 Apr 2016)
+
+  04 Apr 2016; Patrice Clement <monsieurp@gentoo.org> +xpp3-1.1.4c-r3.ebuild:
+  EAPI 5 bump. Switch to java-pkg-simple.
+
+  Package-Manager: portage-2.2.26
+
+  07 Apr 2016; Patrice Clement <monsieurp@gentoo.org> xpp3-1.1.4c-r3.ebuild:
+  Stable for amd64. Retroactively mark stable for the remaining arches using
+  the ALLARCHES policy.
+
+  Package-Manager: portage-2.2.26
+
+  07 Apr 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/xpp3-1.1.4c-build.xml.patch, -xpp3-1.1.4c-r1.ebuild,
+  -xpp3-1.1.4c-r2.ebuild:
+  Clean up old.
+
+  Package-Manager: portage-2.2.26
+

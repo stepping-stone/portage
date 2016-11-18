@@ -90,3 +90,95 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*kmplayer-0.11.5 (26 Apr 2016)
+
+  26 Apr 2016; Johannes Huber <johu@gentoo.org> +kmplayer-0.11.5.ebuild:
+  Version bump 0.11.5
+
+  Uses tagged version in upstream repo. No proper release by tarball, lacks
+  translations and handbook feature.
+
+  Gentoo-bug: 580680
+
+  Package-Manager: portage-2.2.28
+
+  03 Jun 2016; Johannes Huber <johu@gentoo.org> kmplayer-0.11.3d-r3.ebuild,
+  kmplayer-0.11.5.ebuild:
+  Update HOMEPAGE
+
+  Package-Manager: portage-2.3.0_rc1
+
+*kmplayer-0.12.0 (03 Jun 2016)
+
+  03 Jun 2016; Johannes Huber <johu@gentoo.org> +kmplayer-0.12.0.ebuild:
+  Version bump 0.12.0
+
+  Gentoo-bug: 584904
+
+  Package-Manager: portage-2.3.0_rc1
+
+*kmplayer-0.12.0a (17 Jul 2016)
+
+  17 Jul 2016; Johannes Huber <johu@gentoo.org> +kmplayer-0.12.0a.ebuild:
+  Version bump 0.12.0a
+
+  Package-Manager: portage-2.3.0
+
+  17 Jul 2016; Johannes Huber <johu@gentoo.org> -kmplayer-0.12.0.ebuild:
+  Remove 0.12.0
+
+  Package-Manager: portage-2.3.0
+
+  04 Aug 2016; Michael Palimaka <kensington@gentoo.org>
+  kmplayer-0.12.0a.ebuild:
+  Fix prepare with USE=npp
+
+  Gentoo-bug: 590054
+
+  Package-Manager: portage-2.2.28
+
+  27 Aug 2016; Manuel Rüger <mrueg@gentoo.org> kmplayer-0.12.0a.ebuild:
+  Fix build with USE="-npp"
+
+  Package-Manager: portage-2.3.0
+
+  15 Oct 2016; Johannes Huber <johu@gentoo.org> kmplayer-0.11.5.ebuild,
+  kmplayer-0.12.0a.ebuild:
+  Set slot operator for www-plugins/adobe-flash
+
+  Package-Manager: portage-2.3.2
+
+  19 Oct 2016; Michael Palimaka <kensington@gentoo.org>
+  kmplayer-0.12.0a.ebuild:
+  enable handbook
+
+  Package-Manager: portage-2.3.2
+
+  19 Oct 2016; Michael Palimaka <kensington@gentoo.org>
+  kmplayer-0.12.0a.ebuild:
+  fix build with handbook disabled
+
+  Package-Manager: portage-2.3.2
+
+  19 Oct 2016; Michael Palimaka <kensington@gentoo.org>
+  kmplayer-0.12.0a.ebuild:
+  add missing USE dependency
+
+  Package-Manager: portage-2.3.2
+
+  19 Oct 2016; Michael Palimaka <kensington@gentoo.org>
+  kmplayer-0.12.0a.ebuild:
+  amd64/x86 stable
+
+  Gentoo-bug: 597168
+
+  Package-Manager: portage-2.3.2
+
+  19 Oct 2016; Johannes Huber <johu@gentoo.org>
+  -files/kmplayer-0.11.3d-cmake34.patch,
+  -files/kmplayer-0.11.3d-kdelibs-4.14.11.patch, -files/kmplayer-flash.patch,
+  -kmplayer-0.11.3d-r3.ebuild, -kmplayer-0.11.5.ebuild:
+  Remove slot 4
+
+  Package-Manager: portage-2.3.2
+

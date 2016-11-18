@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -25,20 +25,20 @@ IUSE="test"
 # URI-Escape
 
 RDEPEND="
-	>=dev-perl/data-buffer-0.04
+	>=dev-perl/Data-Buffer-0.04
 	virtual/perl-MIME-Base64
 	virtual/perl-Math-BigInt
 	virtual/perl-IO-Compress
 	dev-perl/libwww-perl
 	dev-perl/URI
-	dev-perl/crypt-dsa
-	dev-perl/crypt-rsa
+	dev-perl/Crypt-DSA
+	dev-perl/Crypt-RSA
 	dev-perl/File-HomeDir
 
-	dev-perl/crypt-idea
+	dev-perl/Crypt-IDEA
 	virtual/perl-Digest-MD5
 
-	dev-perl/crypt-des-ede3
+	dev-perl/Crypt-DES_EDE3
 	dev-perl/Digest-SHA1
 
 	dev-perl/Crypt-Rijndael

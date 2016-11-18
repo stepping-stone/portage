@@ -89,3 +89,14 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  11 Sep 2016; David Seifert <soap@gentoo.org> -files/cvxopt-1.1.6-glpk.patch:
+  remove unused patch
+
+  Closes: https://github.com/gentoo/gentoo/pull/2290
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> cvxopt-1.1.6-r2.ebuild,
+  cvxopt-1.1.8.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

@@ -8,7 +8,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="http://root.cern.ch/git/root.git"
 else
-	SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz"
+	SRC_URI="https://root.cern.ch/download/${PN}_v${PV}.source.tar.gz"
 	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 fi
 
@@ -18,7 +18,7 @@ inherit elisp-common eutils fdo-mime fortran-2 multilib python-single-r1 \
 	toolchain-funcs user versionator
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
-HOMEPAGE="http://root.cern.ch/"
+HOMEPAGE="https://root.cern.ch"
 
 SLOT="0/$(get_version_component_range 1-3 ${PV})"
 LICENSE="LGPL-2.1 freedist MSttfEULA LGPL-3 libpng UoI-NCSA"
@@ -52,8 +52,8 @@ CDEPEND="
 		x11-libs/libXext:0=
 		x11-libs/libXpm:0=
 		|| (
-			media-libs/libafterimage:0=[gif,jpeg,png,tiff?]
-			>=x11-wm/afterstep-2.2.11:0=[gif,jpeg,png,tiff?]
+			media-libs/libafterimage[gif,jpeg,png,tiff?]
+			>=x11-wm/afterstep-2.2.11[gif,jpeg,png,tiff?]
 		)
 		opengl? ( virtual/opengl virtual/glu x11-libs/gl2ps:0= )
 		qt4? (
@@ -81,7 +81,7 @@ CDEPEND="
 		mpi? ( virtual/mpi )
 	)
 	mysql? ( virtual/mysql )
-	odbc? ( || ( dev-db/libiodbc:0= dev-db/unixODBC:0= ) )
+	odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) )
 	oracle? ( dev-db/oracle-instantclient-basic:0= )
 	postgres? ( dev-db/postgresql:= )
 	pythia6? ( sci-physics/pythia:6= )
@@ -340,6 +340,10 @@ src_configure() {
 }
 
 src_compile() {
+	# The build system does not handle the dependency of bin/rmkdepend correctly,
+	# preventing it to be called in parallel.  Build bin/rmkdepend explicitly
+	# first to circumvent the problem.
+	emake bin/rmkdepend
 	emake \
 		OPT="${CXXFLAGS}" \
 		F77OPT="${FFLAGS}" \

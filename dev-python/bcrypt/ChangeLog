@@ -104,3 +104,36 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> bcrypt-2.0.0.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*bcrypt-2.0.0-r1 (16 Mar 2016)
+
+  16 Mar 2016; Tiziano Müller <dev-zero@gentoo.org> +bcrypt-2.0.0-r1.ebuild:
+  rev-bump for py-3.5 compat and EAPI-6
+
+  Package-Manager: portage-2.2.28
+
+*bcrypt-3.1.0 (17 Jul 2016)
+
+  17 Jul 2016; Patrick Lauer <patrick@gentoo.org> +bcrypt-3.1.0.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+*bcrypt-3.1.1 (01 Oct 2016)
+
+  01 Oct 2016; Patrick Lauer <patrick@gentoo.org> +bcrypt-3.1.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> bcrypt-1.1.1.ebuild,
+  bcrypt-2.0.0.ebuild, bcrypt-2.0.0-r1.ebuild, bcrypt-3.1.0.ebuild,
+  bcrypt-3.1.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

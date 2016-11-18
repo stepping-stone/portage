@@ -103,7 +103,6 @@ mzscheme
 xemacs
 rpm
 scanner
-madwifi
 libupnp
 zvbi
 ldap
@@ -148,15 +147,12 @@ gts
 anthy
 ace
 csharp
-gtk
 qt4
-qt5
 R
 sdl
 slang
 tk
 vim-syntax
-X
 
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
@@ -213,7 +209,7 @@ video_cards_vmware
 # Robin H. Johnson <robbat2@gentoo.org>
 audit
 
-# Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
+# Matt Turner <mattst88@gentoo.org> (10 Feb 2012)
 # mask d3d since we don't have wine
 d3d
 
@@ -229,9 +225,6 @@ clvm
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
 # virtual/opencl is not keyworded
 opencl
-
-# This one we need to test ...
-python_targets_python3_3
 
 # No arm64 java support yet.
 java

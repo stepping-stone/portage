@@ -125,3 +125,42 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> grilo-plugins-0.2.17.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -grilo-plugins-0.2.14.ebuild,
+  -grilo-plugins-0.2.16.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*grilo-plugins-0.3.2 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +grilo-plugins-0.3.2.ebuild,
+  metadata.xml:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*grilo-plugins-0.3.3 (11 Sep 2016)
+
+  11 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +grilo-plugins-0.3.3.ebuild:
+  version bump 0.3.2 → 0.3.3
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> grilo-plugins-0.3.3.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> grilo-plugins-0.3.3.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+

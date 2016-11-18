@@ -84,3 +84,27 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  -wai-logger-0.3.1.ebuild, -wai-logger-2.0.1.ebuild,
+  -wai-logger-2.1.1.ebuild, -wai-logger-2.2.3.ebuild,
+  -wai-logger-2.2.4.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.28
+
+*wai-logger-2.2.7 (14 May 2016)
+
+  14 May 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  -wai-logger-2.2.5.ebuild, +wai-logger-2.2.7.ebuild:
+  bump up to 2.2.7, bug #582754
+
+  Reported-by: Toralf Förster
+  Bug: https://bugs.gentoo.org/show_bug.cgi?id=582754
+
+  Package-Manager: portage-2.2.28
+
+  15 May 2016; Sergei Trofimovich <slyfox@gentoo.org> wai-logger-2.2.7.ebuild:
+  amd64/x86 stable, bug #563090
+
+  Package-Manager: portage-2.2.28
+

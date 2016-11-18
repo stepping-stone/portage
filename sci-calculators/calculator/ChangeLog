@@ -69,3 +69,18 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #150215
+
+  Package-Manager: portage-2.3.0
+
+*calculator-1.7.54 (18 Oct 2016)
+
+  18 Oct 2016; David Seifert <soap@gentoo.org> +calculator-1.7.54.ebuild:
+  Version bump to the latest fox version in portage
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2587
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+

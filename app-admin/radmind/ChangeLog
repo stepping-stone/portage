@@ -73,3 +73,21 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  21 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  radmind-1.14.1-r1.ebuild:
+  fix openssl and libressl slots
+
+  Package-Manager: portage-2.2.26
+
+  25 Apr 2016; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  netmon was never the right project for this package.
+
+  Package-Manager: portage-2.2.28
+
+  17 May 2016; Austin English <wizardedit@gentoo.org> metadata.xml:
+  add missing maintainer-needed
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/radmind-1.7.0-gentoo.patch:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+

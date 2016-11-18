@@ -80,3 +80,42 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*re2-0.2016.05.01 (08 May 2016)
+
+  08 May 2016; Mike Gilbert <floppym@gentoo.org>
+  +files/0.2016.05.01-pkgconfig.patch, +re2-0.2016.05.01.ebuild:
+  bump to 2016-05-01
+
+  Closes: https://github.com/gentoo/gentoo/pull/1213
+  Package-Manager: portage-2.2.28_p97
+
+  09 May 2016; Mike Gilbert <floppym@gentoo.org> re2-0.2016.05.01.ebuild:
+  remove 'www' from github links
+
+  14 Sep 2016; Mike Gilbert <floppym@gentoo.org>
+  files/0.2016.05.01-pkgconfig.patch:
+  use pkgconfig patch from upstream
+
+  Package-Manager: portage-2.3.0_p24
+
+  14 Oct 2016; Agostino Sarubbo <ago@gentoo.org> re2-0.2016.05.01.ebuild:
+  amd64 stable wrt bug #597016
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  14 Oct 2016; Agostino Sarubbo <ago@gentoo.org> re2-0.2016.05.01.ebuild:
+  x86 stable wrt bug #597016
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Oct 2016; Mike Gilbert <floppym@gentoo.org> re2-0.2016.05.01.ebuild:
+  add MULTILIB_USEDEP to icu dependency
+
+  Bug: https://bugs.gentoo.org/597328
+
+  Package-Manager: portage-2.3.2
+

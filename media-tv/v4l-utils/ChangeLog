@@ -65,3 +65,31 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  23 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/v4l-utils-1.6.2-sysmacros.patch, v4l-utils-1.6.2.ebuild:
+  fix build w/newer glibc #580910
+
+*v4l-utils-1.10.1 (18 Jun 2016)
+
+  18 Jun 2016; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +v4l-utils-1.10.1.ebuild:
+  bump to 1.10.1
+
+  Now with qt5 and EAPI6
+
+  Package-Manager: portage-2.3.0_rc1
+
+  18 Jun 2016; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -v4l-utils-1.0.0.ebuild, -v4l-utils-1.6.0.ebuild:
+  clean up old
+
+  Package-Manager: portage-2.3.0_rc1
+
+  28 Sep 2016; Michael Palimaka <kensington@gentoo.org>
+  v4l-utils-1.10.1.ebuild:
+  fix build with Qt 5.7
+
+  Gentoo-bug: 590196
+
+  Package-Manager: portage-2.3.1
+

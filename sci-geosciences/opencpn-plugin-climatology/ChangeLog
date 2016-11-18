@@ -77,3 +77,18 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  26 Mar 2016; Marc Schiffbauer <mschiff@gentoo.org>
+  -opencpn-plugin-climatology-1.0.ebuild,
+  opencpn-plugin-climatology-1.0-r1.ebuild:
+  add additional opencpn dep
+
+  Package-Manager: portage-2.2.28
+
+*opencpn-plugin-climatology-9999 (30 Mar 2016)
+
+  30 Mar 2016; Marc Schiffbauer <mschiff@gentoo.org>
+  +opencpn-plugin-climatology-9999.ebuild:
+  add live version
+
+  Package-Manager: portage-2.2.28
+

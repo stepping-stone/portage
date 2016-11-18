@@ -79,3 +79,45 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  16 Mar 2016; Christian Ruppert <idl0r@gentoo.org>
+  -xtrabackup-bin-2.1.9.ebuild:
+  Remove old version
+
+  Package-Manager: portage-2.2.27
+
+*xtrabackup-bin-2.4.1 (16 Mar 2016)
+
+  16 Mar 2016; Christian Ruppert <idl0r@gentoo.org>
+  -xtrabackup-bin-2.2.12.ebuild, +xtrabackup-bin-2.4.1.ebuild:
+  Version bump to 2.4.1, bug 564460 and bug 564458
+
+  Package-Manager: portage-2.2.27
+
+  18 Aug 2016; Kristian Fiskerstrand <k_f@gentoo.org>
+  xtrabackup-bin-2.2.5.ebuild, xtrabackup-bin-2.4.1.ebuild:
+  Reduce to testing keywords
+
+  libgcrypt 1.5 branch is no longer in stable, the compatibility slot 11
+  should be used which is in testing only. libgcrypt is scheduled for EOL
+  and subject to complete removal
+
+  Gentoo-Bug: 585366
+  Gentoo-Bug: 567382
+
+  Package-Manager: portage-2.3.0
+
+  18 Aug 2016; Christian Ruppert <idl0r@gentoo.org>
+  -files/xtrabackup-bin-2.1.7-no-versioncheck.patch,
+  -xtrabackup-bin-2.2.5.ebuild:
+  Remove old version
+
+  Package-Manager: portage-2.3.0
+
+*xtrabackup-bin-2.4.4 (18 Aug 2016)
+
+  18 Aug 2016; Christian Ruppert <idl0r@gentoo.org>
+  -xtrabackup-bin-2.4.1.ebuild, +xtrabackup-bin-2.4.4.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+

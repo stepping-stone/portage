@@ -74,3 +74,104 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  07 Mar 2016; Jeroen Roovers <jer@gentoo.org> hpricot-0.8.6-r3.ebuild:
+  Stable for HPPA (bug #576632).
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --ignore-arches
+
+  14 Mar 2016; Zero_Chaos <zerochaos@gentoo.org> hpricot-0.8.6-r3.ebuild:
+  adding tested ruby23 support
+
+  Package-Manager: portage-2.2.27
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> hpricot-0.8.6-r3.ebuild:
+  amd64 stable wrt bug #576632
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> hpricot-0.8.6-r3.ebuild:
+  x86 stable wrt bug #576632
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> hpricot-0.8.6-r3.ebuild:
+  ppc stable wrt bug #576632
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> hpricot-0.8.6-r3.ebuild:
+  ppc64 stable wrt bug #576632
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Mar 2016; Markus Meier <maekke@gentoo.org> hpricot-0.8.6-r3.ebuild:
+  arm stable, bug #576632
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  14 May 2016; Fabian Groffen <grobian@gentoo.org> hpricot-0.8.6-r3.ebuild:
+  marked ~x64-macos
+
+  Package-Manager: portage-2.2.28
+
+  21 May 2016; Hans de Graaff <graaff@gentoo.org> hpricot-0.8.6-r2.ebuild:
+  drop ruby19
+
+  Package-Manager: portage-2.2.28
+
+*hpricot-0.8.6-r4 (27 May 2016)
+
+  27 May 2016; Hans de Graaff <graaff@gentoo.org> -hpricot-0.8.6-r3.ebuild,
+  +hpricot-0.8.6-r4.ebuild:
+  try to fix bug 584304
+
+  Add a patch to properly cast the input to sprintf. Hopefully this
+  fixes bug 584304 on alpha.
+
+  Package-Manager: portage-2.2.28
+
+*hpricot-0.8.6-r3 (27 May 2016)
+
+  27 May 2016; Hans de Graaff <graaff@gentoo.org> +hpricot-0.8.6-r3.ebuild,
+  hpricot-0.8.6-r4.ebuild:
+  restore -r3 which was removed by accident in previous commit
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --force
+
+  28 May 2016; Tobias Klausmann <klausman@gentoo.org> hpricot-0.8.6-r3.ebuild:
+  0.8.6-r3: add alpha keyword
+
+  Gentoo-Bug: 576632
+
+  Package-Manager: portage-2.3.0_rc1
+
+*hpricot-0.8.6-r5 (05 Aug 2016)
+
+  05 Aug 2016; Hans de Graaff <graaff@gentoo.org> -hpricot-0.8.6-r4.ebuild,
+  +hpricot-0.8.6-r5.ebuild:
+  make sure last revision also has cast fix
+
+  Package-Manager: portage-2.2.28
+
+  05 Aug 2016; Hans de Graaff <graaff@gentoo.org> hpricot-0.8.6-r5.ebuild:
+  add explicit rdoc build dependency
+
+  dev-ruby/rdoc is needed by the build system. Make this dependency
+  explicit to avoid potential problems when bootstrapping on a system
+  without ruby installed.
+
+  Fixes bug 590184
+
+  Package-Manager: portage-2.2.28
+

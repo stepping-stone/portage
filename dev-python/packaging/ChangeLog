@@ -243,3 +243,46 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+*packaging-16.5 (28 Feb 2016)
+
+  28 Feb 2016; David Seifert <soap@gentoo.org> +packaging-16.5.ebuild:
+  Version bump
+
+  Gentoo-Bug: 575894
+
+  Package-Manager: portage-2.2.27
+
+  28 Feb 2016; David Seifert <soap@gentoo.org> -packaging-16.4.ebuild:
+  Remove broken
+
+  Gentoo-Bug: 575894
+
+  Package-Manager: portage-2.2.27
+
+*packaging-16.6 (03 Apr 2016)
+
+  03 Apr 2016; Manuel Rüger <mrueg@gentoo.org> +packaging-16.6.ebuild:
+  Version bump to 16.6
+
+  Package-Manager: portage-2.2.28
+
+  24 Sep 2016; Mike Gilbert <floppym@gentoo.org> packaging-15.3-r2.ebuild,
+  packaging-16.0.ebuild, packaging-16.1.ebuild, packaging-16.2.ebuild,
+  packaging-16.5.ebuild, packaging-16.6.ebuild:
+  drop pkg_preinst
+
+  https://bugs.gentoo.org/574002
+
+  Package-Manager: portage-2.3.1_p4
+
+  30 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  packaging-16.6.ebuild:
+  stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> packaging-15.3-r2.ebuild,
+  packaging-16.0.ebuild, packaging-16.1.ebuild, packaging-16.2.ebuild,
+  packaging-16.5.ebuild, packaging-16.6.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

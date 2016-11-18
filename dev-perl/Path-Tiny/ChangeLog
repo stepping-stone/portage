@@ -64,3 +64,72 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> Path-Tiny-0.61.0.ebuild:
+  amd64 stable wrt bug #576000
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> Path-Tiny-0.61.0.ebuild:
+  x86 stable wrt bug #576000
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> Path-Tiny-0.61.0.ebuild:
+  ppc stable wrt bug #576000
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*Path-Tiny-0.84.0 (16 Mar 2016)
+
+  16 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +Path-Tiny-0.84.0.ebuild:
+  Bump to version 0.84.0
+
+  - EAPI6
+  - Cleanup deps.
+  - Make recommended deps optional
+
+  Upstream:
+  - New methods: assert, visit, edit{,_raw,_utf8}, edit_lines{,_raw,_utf8},
+  - lines() accepts negative count to fetch last lines
+  - Exclusive locking options added to filehandle opens
+  - copy() now returns a path() for the copied file
+  - Spaces in tilde expansion no longer broken
+  - realpath() no longer fatalizes if path_part[-1] is all that is missing
+  - values returned to visit() only dereferenced if scalar refs.
+  - Bug fixes in arg handling with File::Path
+  - Fixed spewing to symlink that crosses fs boundary
+  - relative() no longer implemented using File::Spec rel2abs
+
+  Needs rekeywording for: ~arm ~hppa ~ppc
+  Including: dev-perl/Test-MockRandom-1.10.0
+
+  Package-Manager: portage-2.2.28
+
+  13 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Path-Tiny-0.44.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  22 Apr 2016; Markus Meier <maekke@gentoo.org> Path-Tiny-0.84.0.ebuild:
+  add ~arm, bug #577646
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  25 May 2016; Matt Turner <mattst88@gentoo.org> Path-Tiny-0.84.0.ebuild:
+  added ~alpha, bug 579360.
+
+  24 Jul 2016; Jeroen Roovers <jer@gentoo.org> Path-Tiny-0.84.0.ebuild:
+  Mark ~hppa (bug #577646).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+

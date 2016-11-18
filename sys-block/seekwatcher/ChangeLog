@@ -63,3 +63,32 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  17 Apr 2016; Manuel Rüger <mrueg@gentoo.org> -seekwatcher-0.9.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+*seekwatcher-0.12_p20091015-r1 (26 Jun 2016)
+
+  26 Jun 2016; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml,
+  seekwatcher-0.6.ebuild, seekwatcher-0.12.ebuild,
+  seekwatcher-0.12_p20091015.ebuild, +seekwatcher-0.12_p20091015-r1.ebuild:
+  port to distutils-r1, add myself to maintainers
+
+  Package-Manager: portage-2.3.0
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org>
+  seekwatcher-0.12_p20091015-r1.ebuild:
+  amd64 stable wrt bug #593180
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Oct 2016; Patrick Lauer <patrick@gentoo.org> seekwatcher-0.6.ebuild,
+  seekwatcher-0.12.ebuild, seekwatcher-0.12_p20091015.ebuild,
+  seekwatcher-0.12_p20091015-r1.ebuild:
+  Fix dependency naming after partial package move
+
+  Package-Manager: portage-2.3.0
+

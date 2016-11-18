@@ -147,3 +147,179 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="arm"
 
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> xapian-omega-1.2.22.ebuild:
+  ppc stable wrt bug #574638
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> xapian-omega-1.2.22.ebuild:
+  ppc64 stable wrt bug #574638
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> xapian-omega-1.2.22.ebuild:
+  sparc stable wrt bug #574638
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> xapian-omega-1.2.22.ebuild:
+  ia64 stable wrt bug #574638
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*xapian-omega-1.2.23 (30 Mar 2016)
+
+  30 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.2.23.ebuild:
+  version bump to 1.2.23
+
+  Package-Manager: portage-2.2.26
+
+*xapian-omega-1.3.5 (02 Apr 2016)
+
+  02 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.3.5.ebuild:
+  version bump to 1.3.5
+
+  Package-Manager: portage-2.2.26
+
+*xapian-omega-1.3.5-r1 (11 Apr 2016)
+*xapian-omega-1.3.4-r1 (11 Apr 2016)
+*xapian-omega-1.2.23-r1 (11 Apr 2016)
+
+  11 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-omega-1.2.23.ebuild, +xapian-omega-1.2.23-r1.ebuild,
+  -xapian-omega-1.3.4.ebuild, +xapian-omega-1.3.4-r1.ebuild,
+  -xapian-omega-1.3.5.ebuild, +xapian-omega-1.3.5-r1.ebuild:
+  CONFIG_PROTECT /etc/omega.conf, bug #579494
+
+  Package-Manager: portage-2.2.26
+
+  07 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-omega-1.3.4-r1.ebuild:
+  drop older 1.3 version
+
+  Package-Manager: portage-2.2.26
+
+*xapian-omega-1.3.5-r2 (07 May 2016)
+
+  07 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-omega-1.3.5-r1.ebuild, +xapian-omega-1.3.5-r2.ebuild:
+  add data, template, cdb and log dirs, bug # 581984
+
+  Package-Manager: portage-2.2.26
+
+  07 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  xapian-omega-1.2.23-r1.ebuild, xapian-omega-1.3.5-r2.ebuild:
+  clean up the phases a bit
+
+  Package-Manager: portage-2.2.26
+
+*xapian-omega-1.2.23-r2 (07 May 2016)
+
+  07 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-omega-1.2.23-r1.ebuild, +xapian-omega-1.2.23-r2.ebuild:
+  backport commit 9be97c9 for the 1.2 branch
+
+  Package-Manager: portage-2.2.26
+
+*xapian-omega-1.3.6 (10 May 2016)
+
+  10 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.3.6.ebuild:
+  version bump to 1.3.6
+
+  Package-Manager: portage-2.2.26
+
+  14 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  -files/xapian-omega-1.3.4-fix-lz.patch, -xapian-omega-1.3.5-r2.ebuild:
+  remove older 1.3 version
+
+  Package-Manager: portage-2.2.26
+
+  25 May 2016; Tobias Klausmann <klausman@gentoo.org>
+  xapian-omega-1.2.22.ebuild:
+  1.2.22-r0: add alpha keyword
+
+  Gentoo-Bug: 574638
+
+  Package-Manager: portage-2.3.0_rc1
+
+*xapian-omega-1.3.7 (02 Jun 2016)
+
+  02 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.3.7.ebuild:
+  version bump to 1.3.7
+
+  Package-Manager: portage-2.2.28
+
+*xapian-omega-1.3.7-r1 (08 Jun 2016)
+
+  08 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-omega-1.3.7.ebuild, +xapian-omega-1.3.7-r1.ebuild:
+  fix slot dependency, bug #584910
+
+  Package-Manager: portage-2.2.28
+
+*xapian-omega-1.4.0 (26 Jun 2016)
+
+  26 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.4.0.ebuild:
+  version bump to 1.4.0
+
+  Package-Manager: portage-2.2.28
+
+  10 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-omega-1.3.6.ebuild:
+  remove older unstable version
+
+  Package-Manager: portage-2.2.28
+
+  04 Sep 2016; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-omega-1.2.19.ebuild:
+  remove older version
+
+  Package-Manager: portage-2.2.28
+
+*xapian-omega-1.2.24 (29 Sep 2016)
+
+  29 Sep 2016; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.2.24.ebuild:
+  version bump to 1.2.24
+
+  Package-Manager: portage-2.2.28
+
+*xapian-omega-1.4.1 (23 Oct 2016)
+
+  23 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-omega-1.2.23-r2.ebuild, -xapian-omega-1.3.7-r1.ebuild,
+  -xapian-omega-1.4.0.ebuild, +xapian-omega-1.4.1.ebuild:
+  dev-libs/xapian-bindings: bump to 1.4.1, remove older unstable versions
+
+  Package-Manager: portage-2.2.28
+
+  03 Nov 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  remove proxied maintainer per his request
+
+  Package-Manager: portage-2.2.28
+
+  15 Nov 2016; Tobias Klausmann <klausman@gentoo.org>
+  xapian-omega-1.2.24.ebuild:
+  1.2.24-r0: stable on alpha
+
+  Gentoo-Bug: 597894
+
+  16 Nov 2016; Markus Meier <maekke@gentoo.org> xapian-omega-1.2.24.ebuild:
+  arm stable, bug #597894
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

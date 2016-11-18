@@ -90,3 +90,33 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  15 Mar 2016; Tim Harder <radhermit@gentoo.org>
+  python-dateutil-2.4.2-r1.ebuild:
+  add pypy3 support
+
+*python-dateutil-2.5.3 (11 May 2016)
+
+  11 May 2016; Mike Gilbert <floppym@gentoo.org>
+  +python-dateutil-2.5.3.ebuild:
+  bump to 2.5.3
+
+  Package-Manager: portage-2.2.28_p106
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  python-dateutil-2.4.2-r1.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+  19 Sep 2016; David Seifert <soap@gentoo.org>
+  -files/python-dateutil-1.4.1-locale.patch:
+  remove unused patch
+
+  Closes: https://github.com/gentoo/gentoo/pull/2362
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> python-dateutil-2.1-r1.ebuild,
+  python-dateutil-2.2.ebuild, python-dateutil-2.4.0.ebuild,
+  python-dateutil-2.4.1-r1.ebuild, python-dateutil-2.4.2.ebuild,
+  python-dateutil-2.4.2-r1.ebuild, python-dateutil-2.5.3.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

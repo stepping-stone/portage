@@ -121,3 +121,93 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  gnome-calendar-3.18.2.1.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> -gnome-calendar-3.16.2.ebuild,
+  -gnome-calendar-3.18.1.ebuild, -gnome-calendar-3.18.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+*gnome-calendar-3.18.3 (03 Apr 2016)
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> +gnome-calendar-3.18.3.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> gnome-calendar-3.18.3.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> gnome-calendar-3.18.3.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -gnome-calendar-3.18.2.1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnome-calendar-3.20.2 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +gnome-calendar-3.20.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnome-calendar-3.20.3 (06 Sep 2016)
+
+  06 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-calendar-3.20.3.ebuild:
+  version bump from 3.20.2 to 3.20.3
+
+  Package-Manager: portage-2.3.0
+
+*gnome-calendar-3.20.4 (17 Sep 2016)
+
+  17 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-calendar-3.20.4.ebuild:
+  version bump 3.20.3 → 3.20.4
+
+  Package-Manager: portage-2.3.0
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> -gnome-calendar-3.20.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-calendar-3.20.4.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-calendar-3.20.4.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*gnome-calendar-3.22.1 (01 Nov 2016)
+
+  01 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-calendar-3.22.1.ebuild:
+  version bump 3.20.4 → 3.22.1
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-calendar-3.18.3.ebuild, -gnome-calendar-3.20.3.ebuild:
+  cleanup old revisions
+
+  Package-Manager: portage-2.3.2
+

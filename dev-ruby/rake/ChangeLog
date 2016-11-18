@@ -114,3 +114,101 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*rake-11.0.1 (09 Mar 2016)
+
+  09 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +rake-11.0.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.27
+
+  09 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -rake-10.3.2.ebuild,
+  -rake-10.4.0.ebuild, -rake-10.4.2.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+  09 Mar 2016; Manuel Rüger <mrueg@gentoo.org> rake-0.9.6-r1.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.27
+
+*rake-11.1.0 (12 Mar 2016)
+
+  12 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +rake-11.1.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  12 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -rake-11.0.1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+*rake-11.1.1 (14 Mar 2016)
+
+  14 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +rake-11.1.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+*rake-11.1.2 (27 Mar 2016)
+
+  27 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +rake-11.1.2.ebuild:
+  Version bump to 11.1.2
+
+  Package-Manager: portage-2.2.28
+
+*rake-11.2.2 (12 Jun 2016)
+
+  12 Jun 2016; Hans de Graaff <graaff@gentoo.org> +rake-11.2.2.ebuild:
+  add 11.2.2
+
+  Package-Manager: portage-2.2.28
+
+  12 Jun 2016; Hans de Graaff <graaff@gentoo.org> -rake-11.1.0.ebuild,
+  -rake-11.1.1.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+*rake-11.2.2-r1 (13 Jun 2016)
+
+  13 Jun 2016; Hans de Graaff <graaff@gentoo.org> -rake-11.2.2.ebuild,
+  +rake-11.2.2-r1.ebuild:
+  account for changed bindir, fixing bug 585836
+
+  Package-Manager: portage-2.2.28
+
+  30 Jun 2016; Tobias Klausmann <klausman@gentoo.org> rake-10.5.0.ebuild:
+  10.5.0-r0: add alpha keyword
+
+  Gentoo-Bug: 586862
+
+  Package-Manager: portage-2.3.0
+
+  08 Jul 2016; Markus Meier <maekke@gentoo.org> rake-10.5.0.ebuild:
+  arm stable, bug #586862
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> rake-10.5.0.ebuild:
+  amd64 stable wrt bug #586862
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> rake-10.5.0.ebuild:
+  Stable for HPPA (bug #586862).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*rake-11.3.0 (12 Nov 2016)
+
+  12 Nov 2016; Hans de Graaff <graaff@gentoo.org> +rake-11.3.0.ebuild:
+  add 11.3.0
+
+  Package-Manager: portage-2.3.0
+

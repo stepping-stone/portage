@@ -157,3 +157,108 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  gnome-control-center-3.18.2.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org>
+  -files/gnome-control-center-3.14.0-optional.patch,
+  -files/gnome-control-center-3.16.0-keep-panels-optional.patch,
+  -gnome-control-center-3.16.3.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnome-control-center-3.20.1 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-control-center-3.20.0-optional.patch,
+  +gnome-control-center-3.20.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  gnome-control-center-3.20.1.ebuild:
+  Rebuilding with NM subslot bump will be needed when it's bumped (likely when
+  we are ready to kill the obsolete dbus-glib support from NM)
+
+  Package-Manager: portage-2.3.0
+
+*gnome-control-center-3.20.1-r1 (31 Jul 2016)
+
+  31 Jul 2016; Pacho Ramos <pacho@gentoo.org>
+  +gnome-control-center-3.20.1-r1.ebuild:
+  mouse panel needs a concrete set of plugins at runtime, we also need to
+  handle the coexistance of wacom and libinput together (#580474)
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  gnome-control-center-3.20.1-r1.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  gnome-control-center-3.20.1-r1.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*gnome-control-center-3.20.2 (12 Oct 2016)
+
+  12 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-control-center-3.20.2.ebuild:
+  version bump 3.20.1-r1 → 3.20.2
+
+  Package-Manager: portage-2.3.1
+
+*gnome-control-center-3.22.1 (01 Nov 2016)
+
+  01 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-control-center-3.22.1.ebuild:
+  version bump 3.20.2 → 3.22.1
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnome-control-center-3.18.0-optional.patch,
+  -gnome-control-center-3.18.2.ebuild, -gnome-control-center-3.20.1.ebuild:
+  cleanup old revisions
+
+  Package-Manager: portage-2.3.2
+
+*gnome-control-center-3.20.1 (01 Nov 2016)
+
+  01 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-control-center-3.20.1.ebuild:
+  restore version 3.20.1
+
+  Actually last keyworded version for sparc.
+
+  This partly reverts commit 18beb0f3f63430489428b9a400da801ba6af43b9.
+
+  02 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnome-control-center-3.22.0-gentoo-paths.patch,
+  +files/gnome-control-center-3.22.0-keep-panels-optional.patch,
+  +files/gnome-control-center-3.22.0-make-networkmanager-optional.patch,
+  +files/gnome-control-center-3.22.0-make-wayland-optional.patch,
+  +files/gnome-control-center-3.22.0-optional.patch,
+  gnome-control-center-3.22.1.ebuild:
+  refresh patch stack against 3.22
+
+  Package-Manager: portage-2.3.2
+
+  13 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  files/gnome-control-center-3.22.0-optional.patch:
+  fix typo in optional patch
+
+  Gentoo-Bug: 599622
+
+  Package-Manager: portage-2.3.2
+

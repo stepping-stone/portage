@@ -136,3 +136,83 @@
 
   Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
 
+  20 May 2016; Lars Wendler <polynomial-c@gentoo.org> texinfo-6.0.ebuild,
+  texinfo-6.1.ebuild:
+  Added perl subslot dependency.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  24 May 2016; Jeroen Roovers <jer@gentoo.org> texinfo-6.1.ebuild:
+  Stable for HPPA PPC64 (bug #583794).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  26 May 2016; Lars Wendler <polynomial-c@gentoo.org> texinfo-6.1.ebuild:
+  x86 stable (bug #583794).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  27 May 2016; Lars Wendler <polynomial-c@gentoo.org> texinfo-6.1.ebuild:
+  amd64 stable (bug #583794).
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  02 Jun 2016; Markus Meier <maekke@gentoo.org> texinfo-6.1.ebuild:
+  arm stable, bug #583794
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  02 Jun 2016; Tobias Klausmann <klausman@gentoo.org> texinfo-6.1.ebuild:
+  6.1-r0: add alpha keyword
+
+  Gentoo-Bug: 583794
+
+  Package-Manager: portage-2.3.0_rc1
+
+  15 Jun 2016; Mike Frysinger <vapier@gentoo.org> texinfo-6.1.ebuild:
+  mark 6.1 arm64/ia64/m68k/ppc/s390/sh/sparc stable #583794
+
+*texinfo-6.3 (11 Sep 2016)
+
+  11 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> +texinfo-6.3.ebuild:
+  Bump to version 6.3
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  11 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -files/texinfo-4.13-accentenc-test.patch, -files/texinfo-4.13-docbook.patch,
+  -files/texinfo-4.13-texi2dvi-regexp-range.patch,
+  -files/texinfo-4.13-tinfo.patch, -files/texinfo-4.13-xz.patch,
+  -texinfo-4.13-r2.ebuild, -texinfo-6.0.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*texinfo-6.0 (11 Sep 2016)
+*texinfo-4.13-r2 (11 Sep 2016)
+
+  11 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +files/texinfo-4.13-accentenc-test.patch, +files/texinfo-4.13-docbook.patch,
+  +files/texinfo-4.13-texi2dvi-regexp-range.patch,
+  +files/texinfo-4.13-tinfo.patch, +files/texinfo-4.13-xz.patch,
+  +texinfo-4.13-r2.ebuild, +texinfo-6.0.ebuild:
+  Revert "sys-apps/texinfo: Removed old."
+
+  This reverts commit f2955742698b6b5eeca932fcc6289b7b60acf3b1.
+
+  Breaks some ebuilds that still depend on old texinfo versions.
+
+  11 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> -texinfo-6.0.ebuild:
+  Removed old without breaking the tree.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

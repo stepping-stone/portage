@@ -124,3 +124,31 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> pyzmq-15.2.0.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+  28 Jun 2016; Mike Gilbert <floppym@gentoo.org>
+  +files/pyzmq-cython-0.24.patch, pyzmq-15.2.0.ebuild:
+  fix build with cython-0.24
+
+  Bug: https://bugs.gentoo.org/583192
+
+  Package-Manager: portage-portage_p2.3.0
+
+  19 Sep 2016; David Seifert <soap@gentoo.org>
+  -files/pyzmq-2.2.0.1-python3.patch:
+  remove unused patch
+
+  Closes: https://github.com/gentoo/gentoo/pull/2362
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pyzmq-14.4.1.ebuild,
+  pyzmq-14.6.0.ebuild, pyzmq-14.7.0.ebuild, pyzmq-15.0.0.ebuild,
+  pyzmq-15.1.0.ebuild, pyzmq-15.2.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

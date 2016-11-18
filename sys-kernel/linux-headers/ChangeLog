@@ -172,3 +172,36 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  29 Feb 2016; Steev Klimaszewski <steev@gentoo.org> linux-headers-4.3.ebuild:
+  stable 4.3 for arm64
+
+  Package-Manager: portage-2.2.27
+
+  29 Feb 2016; Mike Frysinger <vapier@gentoo.org> linux-headers-4.3.ebuild:
+  mark 4.4 ia64/m68k/s390/sh/sparc stable #571528
+
+*linux-headers-4.5 (15 Mar 2016)
+
+  15 Mar 2016; Mike Frysinger <vapier@gentoo.org> +linux-headers-4.5.ebuild:
+  version bump to 4.5
+
+  15 Mar 2016; Mike Frysinger <vapier@gentoo.org> -linux-headers-3.19.ebuild,
+  -linux-headers-4.0.ebuild, -linux-headers-4.1.ebuild,
+  -linux-headers-4.2.ebuild:
+  drop old non-LTS versions
+
+*linux-headers-4.6 (17 May 2016)
+
+  17 May 2016; Mike Frysinger <vapier@gentoo.org> +linux-headers-4.6.ebuild:
+  version bump to 4.6
+
+*linux-headers-4.7 (02 Aug 2016)
+
+  02 Aug 2016; Mike Frysinger <vapier@gentoo.org> +linux-headers-4.7.ebuild:
+  version bump to 4.7
+
+*linux-headers-4.8 (11 Nov 2016)
+
+  11 Nov 2016; Mike Frysinger <vapier@gentoo.org> +linux-headers-4.8.ebuild:
+  version bump to 4.8 #596688
+

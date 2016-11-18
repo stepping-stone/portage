@@ -227,3 +227,33 @@
 
   Package-Manager: portage-2.2.27
 
+*libnl-3.2.28_rc1 (30 Jun 2016)
+
+  30 Jun 2016; Jeroen Roovers <jer@gentoo.org> +libnl-3.2.28_rc1.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+*libnl-3.2.28 (09 Jul 2016)
+
+  09 Jul 2016; Jeroen Roovers <jer@gentoo.org> -libnl-3.2.28_rc1.ebuild,
+  +libnl-3.2.28.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  11 Sep 2016; Jeroen Roovers <jer@gentoo.org> libnl-3.2.28.ebuild,
+  libnl-3.2.9999.ebuild:
+  Add dev-lang/python:3.5 support.
+
+  Package-Manager: portage-2.3.0
+
+  11 Sep 2016; Jeroen Roovers <jer@gentoo.org> libnl-3.2.28.ebuild,
+  libnl-3.2.9999.ebuild:
+  Shorten DESCRIPTION.
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> libnl-3.2.27.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

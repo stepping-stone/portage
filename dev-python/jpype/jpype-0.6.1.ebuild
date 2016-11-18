@@ -4,17 +4,17 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
+PYTHON_COMPAT=( python2_7 python3_{4,5} )
 
 inherit java-pkg-2 distutils-r1
 
-DESCRIPTION="JPype is an effort to allow Python programs full access to Java class libraries"
+DESCRIPTION="JPype is an effort to allow Python programs full access to Java class librairies"
 HOMEPAGE="https://github.com/originell/jpype"
 SRC_URI="https://github.com/originell/${PN}/archive/v${PV}.zip -> ${P}.zip"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc examples"
 
 S="${WORKDIR}/${P}"

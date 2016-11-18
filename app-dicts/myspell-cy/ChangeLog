@@ -61,3 +61,23 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*myspell-cy-2013.07.08 (04 Mar 2016)
+
+  04 Mar 2016; Elizabeth Myers <elizabeth@interlinked.me>
+  +myspell-cy-2013.07.08.ebuild:
+  update to 2013.07.08
+
+*myspell-cy-20130708 (17 Mar 2016)
+
+  17 Mar 2016; Ian Delaney <idella4@gentoo.org> -myspell-cy-2013.07.08.ebuild,
+  +myspell-cy-20130708.ebuild:
+  fix versioning information
+
+  Closes: https://github.com/gentoo/gentoo/pull/1071
+  Cloases Bug #575616
+

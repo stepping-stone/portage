@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -10,7 +10,7 @@ MY_TREE="bf8ff17"
 
 DESCRIPTION="OSI Certified implementation of a complete cluster engine"
 HOMEPAGE="http://www.corosync.org/"
-SRC_URI="https://github.com/corosync/corosync/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="http://build.clusterlabs.org/corosync/releases/${P}.tar.gz"
 
 LICENSE="BSD-2 public-domain"
 SLOT="0"
@@ -20,8 +20,8 @@ IUSE="doc infiniband ssl static-libs"
 RDEPEND="!sys-cluster/heartbeat
 	ssl? ( dev-libs/nss )
 	infiniband? (
-		sys-infiniband/libibverbs
-		sys-infiniband/librdmacm
+		sys-fabric/libibverbs
+		sys-fabric/librdmacm
 	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

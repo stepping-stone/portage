@@ -285,3 +285,116 @@
 
   Package-Manager: portage-2.2.27
 
+  06 Apr 2016; Agostino Sarubbo <ago@gentoo.org> ncmpcpp-0.7.3-r1.ebuild:
+  amd64 stable wrt bug #578904
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  10 Apr 2016; Jeroen Roovers <jer@gentoo.org> ncmpcpp-0.7.3-r1.ebuild:
+  Stable for HPPA PPC64 (bug #578904).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+*ncmpcpp-0.7.4 (17 Apr 2016)
+
+  17 Apr 2016; Jeroen Roovers <jer@gentoo.org> +ncmpcpp-0.7.4.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.28
+
+  17 Apr 2016; Jeroen Roovers <jer@gentoo.org> -ncmpcpp-0.7.1.ebuild,
+  -ncmpcpp-0.7.2.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+  21 Apr 2016; Markus Meier <maekke@gentoo.org> ncmpcpp-0.7.3-r1.ebuild:
+  arm stable, bug #578904
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  20 May 2016; Jeroen Roovers <jer@gentoo.org> ncmpcpp-0.7.4.ebuild:
+  Stable for HPPA PPC64 (bug #583502).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  31 May 2016; Markus Meier <maekke@gentoo.org> ncmpcpp-0.7.4.ebuild:
+  arm stable, bug #583502
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  10 Jun 2016; Agostino Sarubbo <ago@gentoo.org> ncmpcpp-0.7.4.ebuild:
+  amd64 stable wrt bug #583502
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> ncmpcpp-0.7.4.ebuild:
+  x86 stable wrt bug #583502
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> ncmpcpp-0.7.4.ebuild:
+  ppc stable wrt bug #583502
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  07 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #269977
+
+  Package-Manager: portage-2.3.0
+
+*ncmpcpp-0.7.5 (19 Aug 2016)
+
+  19 Aug 2016; Jeroen Roovers <jer@gentoo.org> +ncmpcpp-0.7.5.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  19 Aug 2016; Jeroen Roovers <jer@gentoo.org> -ncmpcpp-0.7.3-r1.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> ncmpcpp-0.7.5.ebuild:
+  amd64 stable wrt bug #593516
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  01 Oct 2016; Jeroen Roovers <jer@gentoo.org> ncmpcpp-0.7.5.ebuild:
+  Stable for HPPA PPC64 (bug #593516).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  05 Oct 2016; Markus Meier <maekke@gentoo.org> ncmpcpp-0.7.5.ebuild:
+  arm stable, bug #593516
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --include-arches="arm"
+
+*ncmpcpp-0.7.7 (05 Nov 2016)
+
+  05 Nov 2016; Jeroen Roovers <jer@gentoo.org> +ncmpcpp-0.7.7.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  05 Nov 2016; Jeroen Roovers <jer@gentoo.org> ncmpcpp-9999.ebuild:
+  Update live ebuild.
+
+  Package-Manager: portage-2.3.2
+

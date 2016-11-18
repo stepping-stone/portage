@@ -97,3 +97,30 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 Mar 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Collapse multiple <upstream/> blocks
+
+  Collapse multiple <upstream/> blocks into one as GLEP 46 does not permit
+  more than one.
+
+  06 Jun 2016; Agostino Sarubbo <ago@gentoo.org> screengrab-1.2.1-r1.ebuild:
+  amd64 stable wrt bug #584592
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jun 2016; Michael Palimaka <kensington@gentoo.org>
+  screengrab-1.2.1-r1.ebuild:
+  x86 stable
+
+  Gentoo-bug: 584592
+
+  Package-Manager: portage-2.3.0_rc1
+
+  08 Jun 2016; Michael Palimaka <kensington@gentoo.org>
+  -files/screengrab-1.0-detect-lib64.patch, -screengrab-1.0.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0_rc1
+

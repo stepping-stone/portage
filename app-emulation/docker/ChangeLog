@@ -150,3 +150,345 @@
 
   Package-Manager: portage-2.2.27
 
+  18 Mar 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove status="" from downstream maintainer
+
+  Remove the status="" attribute from downstream maintainer as it is
+  invalid. GLEP 46 permits status="" for upstream maintainers only.
+
+*docker-1.10.3 (28 Mar 2016)
+
+  28 Mar 2016; Kacper Kowalik <xarthisius@gentoo.org> +docker-1.10.3.ebuild:
+  version bump
+
+  Fixes #578330
+
+  Reported-by: Vasilis Lourdas <bugs@lourdas.eu>
+
+  Package-Manager: portage-2.2.27
+
+  29 Mar 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  cleanup of entries in metadata
+
+  Remove alunduil with consent give in irc, today
+  also remove redundant presence of gentoo proxy maintianers project
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.11.0 (20 Apr 2016)
+
+  20 Apr 2016; William Hubbs <williamh@gentoo.org> +docker-1.11.0.ebuild,
+  +files/docker-containerd.patch:
+  version bump to 1.11.0 for #580564
+
+  Package-Manager: portage-2.2.26
+
+  20 Apr 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.26
+
+  27 Apr 2016; Agostino Sarubbo <ago@gentoo.org> docker-1.11.0.ebuild:
+  amd64 stable wrt bug #581236
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Apr 2016; Kacper Kowalik <xarthisius@gentoo.org> docker-1.11.0.ebuild:
+  add missing check for CONFIG_KEYS, fixes bug 581348
+
+  Package-Manager: portage-2.2.27
+
+  27 Apr 2016; Kacper Kowalik <xarthisius@gentoo.org> docker-1.11.0.ebuild:
+  add more verbose error message for lack of CONFIG_KEYS
+
+  Package-Manager: portage-2.2.27
+
+  27 Apr 2016; Kacper Kowalik <xarthisius@gentoo.org> -docker-1.6.1.ebuild,
+  -docker-1.6.2.ebuild, -docker-1.7.1.ebuild, -docker-1.8.1.ebuild,
+  -docker-1.8.2.ebuild, -docker-1.9.0.ebuild, -docker-1.9.1.ebuild,
+  -docker-1.10.0.ebuild, -docker-1.10.3.ebuild:
+  Drop vulnerable versions wrt bug 581236
+
+  Package-Manager: portage-2.2.27
+
+  27 Apr 2016; Kacper Kowalik <xarthisius@gentoo.org> docker-1.11.0.ebuild,
+  docker-9999.ebuild, metadata.xml:
+  drop unused keywords from metadata, shorten description
+
+  Package-Manager: portage-2.2.27
+
+  07 May 2016; William Hubbs <williamh@gentoo.org>
+  -files/15404-fix-go14_15.patch, -files/18074-disable-journald-arm.patch,
+  -files/7179-add-audit_write-cap.patch, -files/docker-r2.confd,
+  -files/docker-r2.initd, -files/docker-r3.confd, -files/docker-r3.initd,
+  -files/docker.initd, -files/docker.service:
+  remove unused files
+
+  Package-Manager: portage-2.2.26
+
+*docker-1.12.0_rc2 (24 Jun 2016)
+
+  24 Jun 2016; William Hubbs <williamh@gentoo.org> +docker-1.12.0_rc2.ebuild:
+  version bump to 1.12.0_rc2
+
+  Package-Manager: portage-2.2.28
+
+  24 Jun 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+  27 Jun 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  live ebuild updates based on upstream
+
+  - use symlinks for docker-runc and docker-containerd instead of patching
+  - add kernel checks for CONFIG_IP_VS, CONFIG_XFRM_ALGO and CONFIG_XFRM_USER
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.12.0_rc2-r1 (27 Jun 2016)
+
+  27 Jun 2016; William Hubbs <williamh@gentoo.org>
+  +docker-1.12.0_rc2-r1.ebuild:
+  1.12.0_rc2-r1 revbump
+
+  This is for #587180 and #587242.
+
+  Package-Manager: portage-2.2.28
+
+  27 Jun 2016; William Hubbs <williamh@gentoo.org> -docker-1.12.0_rc2.ebuild:
+  remove 1.12.0_rc1 since it is broken
+
+  Package-Manager: portage-2.2.28
+
+  27 Jun 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.12.0_rc2-r2 (28 Jun 2016)
+
+  28 Jun 2016; William Hubbs <williamh@gentoo.org>
+  +docker-1.12.0_rc2-r2.ebuild:
+  1.12.0_rc2-r2 revbump for bug #587404
+
+  Package-Manager: portage-2.2.28
+
+  28 Jun 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+  28 Jun 2016; William Hubbs <williamh@gentoo.org>
+  -docker-1.12.0_rc2-r1.ebuild:
+  remove old version
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.12.0_rc3 (05 Jul 2016)
+
+  05 Jul 2016; William Hubbs <williamh@gentoo.org> +docker-1.12.0_rc3.ebuild:
+  1.12.0_rc3 version bump
+
+  Package-Manager: portage-2.2.28
+
+  05 Jul 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+  09 Jul 2016; William Hubbs <williamh@gentoo.org>
+  -docker-1.12.0_rc2-r2.ebuild:
+  remove 1.12.0-rc2 per #588276
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.12.0_rc4 (13 Jul 2016)
+
+  13 Jul 2016; William Hubbs <williamh@gentoo.org> +docker-1.12.0_rc4.ebuild:
+  1.12.0_rc4 version bump
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.12.0_rc4-r1 (14 Jul 2016)
+
+  14 Jul 2016; William Hubbs <williamh@gentoo.org>
+  +docker-1.12.0_rc4-r1.ebuild:
+  1.12.0-rc4-r1 revbump to install docker-proxy binary
+
+  Package-Manager: portage-2.2.28
+
+  14 Jul 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.12.0_rc5 (27 Jul 2016)
+
+  27 Jul 2016; William Hubbs <williamh@gentoo.org> +docker-1.12.0_rc5.ebuild:
+  1.12.0-rc5 version bump
+
+  Package-Manager: portage-2.2.28
+
+  27 Jul 2016; William Hubbs <williamh@gentoo.org> docker-1.12.0_rc5.ebuild:
+  1.12.0_rc5: adjust CONFIG_MEMCG_KMEM check for #589552
+
+  Package-Manager: portage-2.2.28
+
+  27 Jul 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+  27 Jul 2016; William Hubbs <williamh@gentoo.org> -docker-1.12.0_rc3.ebuild,
+  -docker-1.12.0_rc4.ebuild, -docker-1.12.0_rc4-r1.ebuild:
+  remove older 1.12.0 release candidates
+
+  Package-Manager: portage-2.2.28
+
+  27 Jul 2016; William Hubbs <williamh@gentoo.org> docker-1.12.0_rc5.ebuild:
+  1.12.0-rc5: apply hardened patch for #587726
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.12.0_rc5-r1 (28 Jul 2016)
+
+  28 Jul 2016; William Hubbs <williamh@gentoo.org>
+  +docker-1.12.0_rc5-r1.ebuild:
+  1.12.0_rc5-r1 bump for #589298 and to fix DOCKER_GITCOMMIT
+
+  Package-Manager: portage-2.2.28
+
+  28 Jul 2016; William Hubbs <williamh@gentoo.org> -docker-1.12.0_rc5.ebuild:
+  remove old
+
+  Package-Manager: portage-2.2.28
+
+  28 Jul 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.12.0 (29 Jul 2016)
+
+  29 Jul 2016; William Hubbs <williamh@gentoo.org> +docker-1.12.0.ebuild:
+  1.12.0 version bump
+
+  Package-Manager: portage-2.2.28
+
+  29 Jul 2016; William Hubbs <williamh@gentoo.org>
+  -docker-1.12.0_rc5-r1.ebuild:
+  remove 1.12.0 release candidates
+
+  Package-Manager: portage-2.2.28
+
+  30 Jul 2016; William Hubbs <williamh@gentoo.org> docker-1.12.0.ebuild:
+  1.12.0: clean up kernel checks
+
+  Package-Manager: portage-2.2.28
+
+  30 Jul 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.12.1_rc1 (17 Aug 2016)
+
+  17 Aug 2016; William Hubbs <williamh@gentoo.org> +docker-1.12.1_rc1.ebuild:
+  1.12.1_rc1 version bump
+
+  Package-Manager: portage-2.2.28
+
+*docker-1.12.1 (24 Aug 2016)
+
+  24 Aug 2016; William Hubbs <williamh@gentoo.org> +docker-1.12.1.ebuild:
+  1.12.1 version bump
+
+  Package-Manager: portage-2.2.28
+
+  24 Aug 2016; William Hubbs <williamh@gentoo.org> -docker-1.12.1_rc1.ebuild:
+  remove release candidate
+
+  Package-Manager: portage-2.2.28
+
+  28 Sep 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild with upstream overlay
+
+  Resync CONFIG_CHECK with "contrib/check-config.sh" from upstream
+
+*docker-1.12.2_rc1 (28 Sep 2016)
+
+  28 Sep 2016; William Hubbs <williamh@gentoo.org> +docker-1.12.2_rc1.ebuild:
+  1.12.2-rc1 version bump
+
+  Package-Manager: portage-2.3.0
+
+*docker-1.12.2 (13 Oct 2016)
+
+  13 Oct 2016; William Hubbs <williamh@gentoo.org> +docker-1.12.2.ebuild:
+  1.12.2 version bump for #596960
+
+  Package-Manager: portage-2.3.0
+
+  13 Oct 2016; William Hubbs <williamh@gentoo.org> -docker-1.12.2_rc1.ebuild:
+  remove 1.12.2 release candidate
+
+  Package-Manager: portage-2.3.0
+
+*docker-1.12.3 (31 Oct 2016)
+
+  31 Oct 2016; William Hubbs <williamh@gentoo.org> +docker-1.12.3.ebuild:
+  1.12.3 version bump
+
+  Package-Manager: portage-2.3.0
+
+  31 Oct 2016; William Hubbs <williamh@gentoo.org> docker-1.12.3.ebuild:
+  add checks for #595112
+
+  31 Oct 2016; William Hubbs <williamh@gentoo.org> docker-1.12.3.ebuild:
+  Add fix for #598026
+
+  Package-Manager: portage-2.3.0
+
+  31 Oct 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; William Hubbs <williamh@gentoo.org> -docker-1.12.0.ebuild,
+  -docker-1.12.1.ebuild, -docker-1.12.2.ebuild:
+  Remove old 1.12.x versions
+
+  Package-Manager: portage-2.3.0
+
+  09 Nov 2016; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Add myself as maintainer
+
+  Package-Manager: portage-2.3.0
+
+*docker-1.13.0_rc1 (14 Nov 2016)
+
+  14 Nov 2016; William Hubbs <williamh@gentoo.org> +docker-1.13.0_rc1.ebuild:
+  1.13.0_rc1 version bump
+
+  Package-Manager: portage-2.3.0
+
+  14 Nov 2016; William Hubbs <williamh@gentoo.org> docker-1.13.0_rc1.ebuild,
+  metadata.xml:
+  add changes for 1.13.0_rc1 from upstream
+
+  Package-Manager: portage-2.3.0
+
+  14 Nov 2016; William Hubbs <williamh@gentoo.org> docker-9999.ebuild:
+  sync live ebuild
+
+  Package-Manager: portage-2.3.0
+
+  15 Nov 2016; Manuel Rüger <mrueg@gentoo.org> docker-1.13.0_rc1.ebuild,
+  docker-9999.ebuild, metadata.xml:
+  Add support for container init system
+
+  Package-Manager: portage-2.3.2
+

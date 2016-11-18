@@ -188,3 +188,108 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
 
+*openafs-1.6.17 (22 Mar 2016)
+
+  22 Mar 2016; NP-Hardass <NP-Hardass@gentoo.org> +openafs-1.6.17.ebuild:
+  Version bump to 1.6.17. Security bugs and systemd bugs
+
+  Security Release 1.6.17.
+  Also fixes systemd units to make cache dir and sets env variables in
+  /etc/systemd/service.d/openafs-{client,server}.service.d/00gentoo.conf
+  to allow specifying daemon runtime args.  Additionally, new pkg_config
+  phase exists to enable systemd users to set cache args for client daemon
+  because QA policies disencourage having the unit set the args dynamically.
+
+  Gentoo-Bug: 570410,544168,570540,564388
+
+  Package-Manager: portage-2.2.26
+
+  26 Mar 2016; Agostino Sarubbo <ago@gentoo.org> openafs-1.6.17.ebuild:
+  amd64 stable wrt bug #564388
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Mar 2016; Agostino Sarubbo <ago@gentoo.org> openafs-1.6.17.ebuild:
+  x86 stable wrt bug #564388
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Mar 2016; Agostino Sarubbo <ago@gentoo.org> openafs-1.6.17.ebuild:
+  sparc stable wrt bug #564388
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Mar 2016; Andrew Savchenko <bircoph@gentoo.org>
+  -openafs-1.6.12-r1.ebuild, -openafs-1.6.14.ebuild, -openafs-1.6.16.ebuild:
+  remove old and vulnerable versions
+
+  Bug: 564388
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+  30 Apr 2016; Andrew Savchenko <bircoph@gentoo.org> openafs-1.6.17.ebuild:
+  http -> https
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+  30 Apr 2016; Andrew Savchenko <bircoph@gentoo.org> openafs-1.6.17.ebuild:
+  fix SRC_URI
+
+  Docs URI should also contain MY_PRE as suggested by NP-Hardass.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+*openafs-1.6.18 (30 Apr 2016)
+
+  30 Apr 2016; Andrew Savchenko <bircoph@gentoo.org> metadata.xml,
+  +openafs-1.6.18.ebuild:
+  version bump
+
+  - add missed deps
+  - new USE flags based on configure options previously ignored
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+*openafs-1.6.18.2 (20 Jul 2016)
+
+  20 Jul 2016; NP-Hardass <NP-Hardass@gentoo.org> +openafs-1.6.18.2.ebuild:
+  Vbump to 1.6.18.2, Support dyn cachedir from config file
+
+  Previously, config scripts ignored the setting in /etc/openafs/cacheinfo
+  and assumed the default /var/cache/openafs.  Now we pull the value
+  dynamically from the config file
+
+  Package-Manager: portage-2.2.28
+
+  01 Aug 2016; Andrew Savchenko <bircoph@gentoo.org> -openafs-1.6.18.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+  01 Aug 2016; Andrew Savchenko <bircoph@gentoo.org> openafs-1.6.17.ebuild,
+  openafs-1.6.18.2.ebuild:
+  update patchset
+
+  In init scripts runscript is replaced by openrc-run.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Andrew Savchenko <bircoph@gentoo.org>
+
+*openafs-1.6.18.3 (11 Aug 2016)
+
+  11 Aug 2016; NP-Hardass <NP-Hardass@gentoo.org> +openafs-1.6.18.3.ebuild:
+  vbump 1.6.18.3
+
+  Package-Manager: portage-2.3.0
+

@@ -80,3 +80,56 @@
 
   Package-Manager: portage-2.2.26
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*torrentzip-0.2-r3 (07 Mar 2016)
+
+  07 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  +torrentzip-0.2-r3.ebuild:
+  Fix invalid SRC_URI.
+
+  Gentoo-Bug: https://bugs.gentoo.org/575338
+  Reporter: Alexander Miller <alex.miller@gmx.de>
+  Acked-by: Patrice Clement <monsieurp@gentoo.org>
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+  Package-Manager: portage-2.2.26
+
+*torrentzip-0.9 (22 Mar 2016)
+*torrentzip-0.2-r4 (22 Mar 2016)
+
+  22 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  +files/torrentzip-0.2-fix-perms.patch, metadata.xml,
+  -torrentzip-0.2-r2.ebuild, -torrentzip-0.2-r3.ebuild,
+  +torrentzip-0.2-r4.ebuild, +torrentzip-0.9.ebuild:
+  Fix SRC_URI. Bump to EAPI 6. Bump to version 0.9
+
+  Also assign package to Alexander Miller <alex.miller@gmx.de>.
+
+  Gentoo-Bug: https://bugs.gentoo.org/575338
+
+  Package-Manager: portage-2.2.26
+
+  06 Apr 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  metadata.xml, update
+
+  Reset description attribute for user maintainer in metadata.xml
+
+  Package-Manager: portage-2.2.28
+
+  03 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/torrentzip-0.2-fix-function-declarations.patch,
+  torrentzip-0.9.ebuild:
+  Stable for amd64. Retroactively mark stable for the remaining arches using
+  the ALLARCHES policy.
+
+  Package-Manager: portage-2.2.28
+
+  03 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/torrentzip-0.2-fix-perms.patch, -torrentzip-0.2-r4.ebuild:
+  Clean up old.
+
+  Package-Manager: portage-2.2.28
+

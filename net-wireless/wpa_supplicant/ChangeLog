@@ -150,3 +150,141 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-2.4-r4.ebuild:
+  amd64 stable wrt bug #554860
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-2.4-r4.ebuild:
+  x86 stable wrt bug #554860
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  -wpa_supplicant-2.4-r4.ebuild:
+  Removing old version, since archs has starting stabilizing the wrong
+  version.
+
+  Package-Manager: portage-2.2.28
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-2.5-r1.ebuild:
+  ppc stable wrt bug #565224
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-2.5-r1.ebuild:
+  ppc64 stable wrt bug #565224
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Bjarke Istrup Pedersen <gurligebis@gentoo.org> -files/2015-1/00
+  01-P2P-Validate-SSID-element-length-before-copying-it-C.patch,
+  -files/2015-2/0001-WPS-Fix-HTTP-chunked-transfer-encoding-parser.patch, -fil
+  es/2015-3/0001-AP-WMM-Fix-integer-underflow-in-WMM-Action-frame-par.patch, -
+  files/2015-4/0001-EAP-pwd-peer-Fix-payload-length-validation-for-Commi.patch
+  , -files/2015-4/0002-EAP-pwd-server-Fix-payload-length-validation-for-Com.pa
+  tch, -files/2015-4/0003-EAP-pwd-peer-Fix-Total-Length-parsing-for-fragment-r
+  .patch, -files/2015-4/0004-EAP-pwd-server-Fix-Total-Length-parsing-for-fragm
+  ent.patch,
+  -files/2015-4/0005-EAP-pwd-peer-Fix-asymmetric-fragmentation-behavior.patch,
+  -files/2015-5/0001-NFC-Avoid-misaligned-read-of-an-NDEF-field.patch, -files/
+  2015-5/0002-NFC-Fix-payload-length-validation-in-NDEF-record-par.patch,
+  -files/wpa_supplicant-2.4-dbus-path-fix.patch,
+  -files/wpa_supplicant-2.4-do-not-call-dbus-functions-with-NULL-path.patch,
+  -files/wpa_supplicant-2.4-generate-libeap-peer.patch,
+  -wpa_supplicant-2.4-r3.ebuild:
+  Removing old, unsecure versions now that 2.5 is marked stable
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/wpa_supplicant-init.d:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*wpa_supplicant-2.5-r2 (28 Jun 2016)
+
+  28 Jun 2016; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  +files/2015-7/0001-EAP-pwd-peer-Fix-last-fragment-length-validation.patch,
+  +files/2015-7/0001-EAP-pwd-server-Fix-last-fragment-length-validation.patch,
+  +files/2015-8/0001-EAP-pwd-peer-Fix-error-path-for-unexpected-Confirm-m.patc
+  h, +files/2016-1/0001-WPS-Reject-a-Credential-with-invalid-passphrase.patch,
+  +files/2016-1/0002-Reject-psk-parameter-set-with-invalid-passphrase-cha.patc
+  h, +files/2016-1/0003-Remove-newlines-from-wpa_supplicant-config-network-o.p
+  atch, +files/2016-1/0004-Reject-SET_CRED-commands-with-newline-characters-in
+  -.patch, +files/2016-1/0005-Reject-SET-commands-with-newline-characters-in-t
+  he-s.patch, +wpa_supplicant-2.5-r2.ebuild:
+  Bumping to 2.5-r2, adding several security fixes.
+
+  Package-Manager: portage-2.3.0
+
+  14 Aug 2016; Markus Meier <maekke@gentoo.org> wpa_supplicant-2.5-r2.ebuild:
+  arm stable, bug #590050
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  19 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  wpa_supplicant-2.5-r1.ebuild, wpa_supplicant-2.5-r2.ebuild:
+  Added sub-slot dependencies
+
+  for sys-libs/readline and dev-libs/openssl.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-2.5-r2.ebuild:
+  amd64 stable wrt bug #590050
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*wpa_supplicant-2.6 (05 Oct 2016)
+
+  05 Oct 2016; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  +files/wpa_supplicant-2.6-do-not-call-dbus-functions-with-NULL-path.patch,
+  +wpa_supplicant-2.6.ebuild:
+  Bumping to 2.6
+
+  Package-Manager: portage-2.3.1
+
+  06 Oct 2016; Jeroen Roovers <jer@gentoo.org> wpa_supplicant-2.6.ebuild:
+  Stable for PPC64 (bug #596042).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  07 Oct 2016; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-2.6.ebuild:
+  amd64 stable wrt bug #596042
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  07 Oct 2016; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-2.6.ebuild:
+  x86 stable wrt bug #596042
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Oct 2016; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  +files/wpa_supplicant-2.6-libressl.patch, wpa_supplicant-2.6.ebuild:
+  Adding libressl fix, to fix bug #596332
+
+  Package-Manager: portage-2.3.1
+
+  18 Oct 2016; Markus Meier <maekke@gentoo.org> wpa_supplicant-2.6.ebuild:
+  arm stable, bug #596042
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --include-arches="arm"
+

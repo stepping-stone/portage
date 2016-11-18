@@ -72,3 +72,15 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; David Seifert <soap@gentoo.org> metadata.xml:
+  Remove multiple <use/> tags
+
+  Package-Manager: portage-2.2.27
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> gwyddion-2.44.ebuild:
+  amd64 stable wrt bug #584208
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

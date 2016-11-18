@@ -61,3 +61,26 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  28 Sep 2016; David Seifert <soap@gentoo.org> bact-0.13.ebuild,
+  +files/bact-0.13-cpp14.patch:
+  fix cpp14 compilation errors; bug #594312
+
+  Closes: https://github.com/gentoo/gentoo/pull/2409
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*bact-0.13-r1 (28 Sep 2016)
+
+  28 Sep 2016; David Seifert <soap@gentoo.org> -bact-0.13.ebuild,
+  +bact-0.13-r1.ebuild:
+  Upgrade to EAPI=6
+
+  Closes: https://github.com/gentoo/gentoo/pull/2409
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+

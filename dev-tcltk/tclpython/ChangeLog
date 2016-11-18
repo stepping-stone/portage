@@ -64,3 +64,39 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*tclpython-4.1-r5 (07 Mar 2016)
+
+  07 Mar 2016; Daniel Campbell <zlg@gentoo.org> +tclpython-4.1-r5.ebuild:
+  Revbump, correcting DEPEND
+
+  Gentoo-Bug: 575518
+  Gentoo-Bug-URL: https://bugs.gentoo.org/575518
+
+  Package-Manager: portage-2.2.27
+
+*tclpython-4.1-r6 (11 Mar 2016)
+
+  11 Mar 2016; Daniel Campbell <zlg@gentoo.org> +tclpython-4.1-r6.ebuild:
+  Correct DEPEND to binutils-libs
+
+  See comment 6 in the bug.
+
+  Gentoo-Bug: 575518
+  Gentoo-Bug-URL: https://bugs.gentoo.org/575518
+
+  Package-Manager: portage-2.2.27
+
+  12 Mar 2016; Patrice Clement <monsieurp@gentoo.org>
+  -tclpython-4.1-r5.ebuild:
+  Remove offending ebuild to get the tree back to a normal state.
+
+  See this QA report:
+  https://qa-reports.gentoo.org/output/gentoo-ci/7e6d83c/output.html#dev-
+  tcltk/tclpython
+
+  Package-Manager: portage-2.2.26
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> tclpython-4.1-r4.ebuild,
+  tclpython-4.1-r6.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

@@ -12,12 +12,12 @@ MY_URI_PV_1="${PV/rc/}"
 MY_URI_PV="${MY_URI_PV_1//_/%20}"
 
 DESCRIPTION="Java GUI for managing BibTeX and other bibliographies"
-HOMEPAGE="http://jabref.sourceforge.net/"
+HOMEPAGE="http://www.jabref.org/"
 SRC_URI="mirror://sourceforge/jabref/JabRef-${MY_PV}.jar"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND="|| ( >=virtual/jre-1.8 >=virtual/jdk-1.8 )"
 

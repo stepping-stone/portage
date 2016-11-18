@@ -94,3 +94,64 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> gnome-chess-3.18.0.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -gnome-chess-3.16.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gnome-chess-3.20.1 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +gnome-chess-3.20.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  02 Sep 2016; Patrice Clement <monsieurp@gentoo.org>
+  gnome-chess-3.20.1.ebuild:
+  keyword for ~arm64.
+
+  Ttested on a cortex-a53.
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2184
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-chess-3.20.1.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-chess-3.20.1.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*gnome-chess-3.22.0 (18 Oct 2016)
+
+  18 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-chess-3.22.0.ebuild:
+  version bump 3.20.1 → 3.22.0
+
+  Package-Manager: portage-2.3.1
+
+*gnome-chess-3.22.2 (11 Nov 2016)
+
+  11 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-chess-3.22.2.ebuild:
+  add gnome-chess-3.22.2.ebuild
+
+  Simple bump, no relevant changes
+
+  https://git.gnome.org/browse/gnome-chess/diff/?id=3.22.2&id2=3.22.0
+  Closes: https://github.com/gentoo/gentoo/pull/2792
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+

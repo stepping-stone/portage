@@ -75,3 +75,18 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  12 Apr 2016; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  drop myself as primary maintainer, add sound project
+
+*pianobar-2016.06.02 (02 Aug 2016)
+
+  02 Aug 2016; Tim Harder <radhermit@gentoo.org> +pianobar-2016.06.02.ebuild,
+  pianobar-9999.ebuild:
+  version bump to 2016.06.02
+
+  23 Sep 2016; Tim Harder <radhermit@gentoo.org> pianobar-2016.06.02.ebuild:
+  stabilize 2016.06.02
+
+  23 Sep 2016; Tim Harder <radhermit@gentoo.org> -pianobar-2015.11.22.ebuild:
+  remove old
+

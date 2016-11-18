@@ -160,3 +160,13 @@
 
   Package-Manager: portage-2.2.27
 
+  31 Mar 2016; Zac Medico <zmedico@gentoo.org> go-tools-0_pre20160220.ebuild:
+  fix tests for bug 577912
+
+  Package-Manager: portage-2.2.28
+
+  19 Aug 2016; Zac Medico <zmedico@gentoo.org> go-tools-0_pre20160220.ebuild:
+  fix godoc doexe failure, bug 591656
+
+  Package-Manager: portage-2.3.0
+

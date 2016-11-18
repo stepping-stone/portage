@@ -70,3 +70,26 @@
 
   Package-Manager: portage-2.2.27
 
+  02 Mar 2016; Markus Meier <maekke@gentoo.org> PEAR-Crypt_GPG-1.4.0.ebuild:
+  add ~arm, bug #574264
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --include-arches="arm"
+
+*PEAR-Crypt_GPG-1.4.2 (15 Jul 2016)
+
+  15 Jul 2016; Brian Evans <grknight@gentoo.org> +PEAR-Crypt_GPG-1.4.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+*PEAR-Crypt_GPG-1.6.0_beta1 (31 Oct 2016)
+
+  31 Oct 2016; Brian Evans <grknight@gentoo.org>
+  +PEAR-Crypt_GPG-1.6.0_beta1.ebuild:
+  Version bump;
+
+  Adds support for GnuPG 2.1
+
+  Package-Manager: portage-2.3.2
+

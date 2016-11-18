@@ -119,3 +119,83 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Mar 2016; Brian Evans <grknight@gentoo.org>
+  freshplayerplugin-0.3.1-r2.ebuild, freshplayerplugin-0.3.2.ebuild,
+  freshplayerplugin-0.3.3.ebuild, freshplayerplugin-0.3.3-r1.ebuild,
+  freshplayerplugin-0.3.3-r2.ebuild, freshplayerplugin-0.3.4.ebuild,
+  freshplayerplugin-0.3.4-r1.ebuild:
+  Drop x86 keyword
+
+  chrome-binary-plugins no longer supports x86, only amd64
+
+  Package-Manager: portage-2.2.27
+
+*freshplayerplugin-0.3.5 (29 Aug 2016)
+
+  29 Aug 2016; Brian Evans <grknight@gentoo.org> +files/0.3.5-cmake.patch,
+  +freshplayerplugin-0.3.5.ebuild:
+  Version bump wrt bug 581228
+
+  Package-Manager: portage-2.3.0
+
+*freshplayerplugin-0.3.5-r1 (27 Sep 2016)
+
+  27 Sep 2016; Brian Evans <grknight@gentoo.org>
+  +freshplayerplugin-0.3.5-r1.ebuild:
+  Revision bump to include new adobe-flash slot
+
+  Package-Manager: portage-2.3.1
+
+  27 Sep 2016; Brian Evans <grknight@gentoo.org> -files/0.3.4-cmake.patch,
+  -freshplayerplugin-0.3.1-r2.ebuild, -freshplayerplugin-0.3.3.ebuild,
+  -freshplayerplugin-0.3.3-r1.ebuild, -freshplayerplugin-0.3.3-r2.ebuild,
+  -freshplayerplugin-0.3.4.ebuild, -freshplayerplugin-0.3.4-r1.ebuild:
+  Drop old versions
+
+  Package-Manager: portage-2.3.1
+
+  13 Oct 2016; Brian Evans <grknight@gentoo.org>
+  freshplayerplugin-0.3.5-r1.ebuild:
+  Mark 0.3.5-r1 stable
+
+  Personally tested by me
+  Fixes only stable being masked for unresolvable deps
+
+  Package-Manager: portage-2.3.2
+
+  13 Oct 2016; Brian Evans <grknight@gentoo.org> -files/0.2.4-cmake.patch,
+  -freshplayerplugin-0.3.2.ebuild, -freshplayerplugin-0.3.5.ebuild:
+  Drop old versions with unresolvable deps
+
+  Package-Manager: portage-2.3.2
+
+*freshplayerplugin-0.3.5-r2 (13 Oct 2016)
+
+  13 Oct 2016; Brian Evans <grknight@gentoo.org>
+  +freshplayerplugin-0.3.5-r2.ebuild:
+  Version bump to remove bad dependencies
+
+  chrome-binary-plugins and google-chrome no longer provide flash
+
+  Package-Manager: portage-2.3.2
+
+  13 Oct 2016; Brian Evans <grknight@gentoo.org>
+  freshplayerplugin-0.3.5-r2.ebuild:
+  Fast stable corrected dependency revision
+
+  Package-Manager: portage-2.3.2
+
+  13 Oct 2016; Brian Evans <grknight@gentoo.org>
+  -freshplayerplugin-0.3.5-r1.ebuild:
+  Drop old revision
+
+  Package-Manager: portage-2.3.2
+
+*freshplayerplugin-0.3.5-r3 (10 Nov 2016)
+
+  10 Nov 2016; Brian Evans <grknight@gentoo.org>
+  +freshplayerplugin-0.3.5-r3.ebuild:
+  Revbump to update dependencies
+
+  Package-Manager: portage-2.3.2
+

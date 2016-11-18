@@ -13,7 +13,7 @@ MY_P=${PN}-${PV/_p/-patch}
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
-SRC_URI="http://www.hdfgroup.org/ftp/HDF5/releases/${MY_P}/src/${MY_P}.tar.bz2"
+SRC_URI="https://support.hdfgroup.org/ftp/HDF5/releases/${MY_P}/src/${MY_P}.tar.bz2"
 
 LICENSE="NCSA-HDF"
 SLOT="0/${PV%%_p*}"
@@ -27,7 +27,7 @@ REQUIRED_USE="
 
 RDEPEND="
 	mpi? ( virtual/mpi[romio] )
-	szip? ( >=sci-libs/szip-2.1:0= )
+	szip? ( virtual/szip )
 	zlib? ( sys-libs/zlib:0= )"
 
 DEPEND="${RDEPEND}

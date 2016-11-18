@@ -89,3 +89,19 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> trollius-2.0.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*trollius-2.1 (12 Mar 2016)
+
+  12 Mar 2016; Tim Harder <radhermit@gentoo.org> +trollius-2.1.ebuild:
+  version bump to 2.1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> trollius-1.0.4.ebuild,
+  trollius-2.0.ebuild, trollius-2.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

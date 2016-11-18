@@ -63,3 +63,16 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  10 Mar 2016; Manuel Rüger <mrueg@gentoo.org> dep_selector-0.1.1.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.27
+
+*dep_selector-0.1.1-r1 (02 Aug 2016)
+
+  02 Aug 2016; Hans de Graaff <graaff@gentoo.org> -dep_selector-0.1.1.ebuild,
+  +dep_selector-0.1.1-r1.ebuild:
+  limit gecode dependency to working versions, fixing bug 590206 590224
+
+  Package-Manager: portage-2.2.28
+

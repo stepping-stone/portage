@@ -102,3 +102,59 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> swell-foop-3.18.1.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -swell-foop-3.16.2.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*swell-foop-3.20.0 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +swell-foop-3.20.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> swell-foop-3.20.0.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> swell-foop-3.20.0.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*swell-foop-3.22.0 (19 Oct 2016)
+
+  19 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +swell-foop-3.22.0.ebuild:
+  version bump 3.20.0 → 3.22.0
+
+  Package-Manager: portage-2.3.1
+
+  19 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -swell-foop-3.18.1.ebuild:
+  cleanup old revision
+
+  Package-Manager: portage-2.3.1
+
+*swell-foop-3.22.2 (09 Nov 2016)
+
+  09 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +swell-foop-3.22.2.ebuild:
+  add swell-foop-3.22.2.ebuild
+
+  Simple bump, no relevant changes
+
+  https://git.gnome.org/browse/swell-foop/diff/?id=3.22.2&&id2=3.22.0
+  Closes: https://github.com/gentoo/gentoo/pull/2785
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+

@@ -83,3 +83,144 @@
   Package-Manager: portage-2.2.26
   Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
 
+  02 Mar 2016; Jason A. Donenfeld <zx2c4@gentoo.org> irssi-0.8.17.ebuild,
+  irssi-9999.ebuild:
+  Add libressl support to many packages
+
+  Package maintainers will likely want to cleanup various things for this
+  experimental USE flag.
+
+*irssi-0.8.18 (13 Mar 2016)
+
+  13 Mar 2016; Sven Wegener <swegener@gentoo.org> +irssi-0.8.18.ebuild:
+  Version bump, bug #577336
+
+  This also enables true color support for bug #552510.
+
+  Package-Manager: portage-2.2.26
+
+  13 Mar 2016; Sven Wegener <swegener@gentoo.org> irssi-9999.ebuild:
+  Update live ebuild
+
+  Package-Manager: portage-2.2.26
+
+  13 Mar 2016; Sven Wegener <swegener@gentoo.org> irssi-9999.ebuild:
+  Remove ipv6 USE flag from live ebuild
+
+  Package-Manager: portage-2.2.26
+
+  15 Mar 2016; Sven Wegener <swegener@gentoo.org> irssi-0.8.18.ebuild:
+  Add test restriction, bug #577404
+
+  Package-Manager: portage-2.2.26
+
+*irssi-0.8.19 (26 Mar 2016)
+
+  26 Mar 2016; Patrice Clement <monsieurp@gentoo.org> +irssi-0.8.19.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.2.26
+
+  07 Jun 2016; Andreas K. Hüttel <dilfridge@gentoo.org> irssi-0.8.17.ebuild,
+  irssi-0.8.18.ebuild, irssi-0.8.19.ebuild, irssi-9999.ebuild:
+  Add missing slot operator on dev-lang/perl
+
+  Package-Manager: portage-2.3.0_rc1
+
+*irssi-0.8.20 (21 Sep 2016)
+
+  21 Sep 2016; Matthew Thode <prometheanfire@gentoo.org> +irssi-0.8.20.ebuild:
+  bup for CVE-2016-7044 CVE-2016-7045
+
+  Package-Manager: portage-2.2.28
+
+  21 Sep 2016; Agostino Sarubbo <ago@gentoo.org> irssi-0.8.20.ebuild:
+  amd64 stable wrt bug #594724
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  21 Sep 2016; Agostino Sarubbo <ago@gentoo.org> irssi-0.8.20.ebuild:
+  x86 stable wrt bug #594724
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  22 Sep 2016; Tobias Klausmann <klausman@gentoo.org> irssi-0.8.20.ebuild:
+  0.8.20-r0: add alpha keyword
+
+  Gentoo-Bug: 594724
+
+  23 Sep 2016; Jeroen Roovers <jer@gentoo.org> irssi-0.8.20.ebuild:
+  Stable for HPPA PPC64 (bug #594724).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  26 Sep 2016; William Hubbs <williamh@gentoo.org>
+  +files/irssi-0.8.20-tinfo.patch, irssi-0.8.20.ebuild:
+  clean up 0.8.20 ebuild
+
+  - don't quote eapi
+  - munge the patch so the default src_prepare can be used
+
+  This change was approved by monsieurp.
+
+  Package-Manager: portage-2.2.28
+
+*irssi-0.8.20-r1 (26 Sep 2016)
+
+  26 Sep 2016; Sven Wegener <swegener@gentoo.org>
+  +files/irssi-0.8.20-buf.pl-2.20-CVE-2016-7553.patch,
+  +irssi-0.8.20-r1.ebuild:
+  Revision bump, security bug #595172
+
+  Package-Manager: portage-2.2.28
+
+  26 Sep 2016; Sven Wegener <swegener@gentoo.org> irssi-0.8.20-r1.ebuild:
+  Forward-port keywords
+
+  Package-Manager: portage-2.3.0
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> irssi-0.8.20.ebuild:
+  sparc stable wrt bug #594724
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> irssi-0.8.20.ebuild:
+  ppc stable wrt bug #594724
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> irssi-0.8.20.ebuild:
+  arm stable wrt bug #594724
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> irssi-0.8.20.ebuild:
+  ia64 stable wrt bug #594724
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  30 Sep 2016; Sven Wegener <swegener@gentoo.org> irssi-0.8.20-r1.ebuild:
+  Forward-port keywords
+
+  Package-Manager: portage-2.3.0
+
+  30 Sep 2016; Sven Wegener <swegener@gentoo.org>
+  -files/irssi-0.8.15-tinfo.patch, -irssi-0.8.17.ebuild, -irssi-0.8.18.ebuild,
+  -irssi-0.8.19.ebuild, -irssi-0.8.20.ebuild:
+  Cleanup
+
+  Package-Manager: portage-2.3.0
+

@@ -71,3 +71,28 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Module-Build-XSUtil-0.160.0 (27 Feb 2016)
+
+  27 Feb 2016; Kent Fredric <kentfredric@gmail.com>
+  +Module-Build-XSUtil-0.160.0.ebuild:
+  Bump to version 0.160.0
+
+  - use EAPI6
+  - Install examples with `USE=examples`
+
+  Package-Manager: portage-2.2.27
+
+  27 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  Module-Build-XSUtil-0.160.0.ebuild:
+  amd64 stable wrt bug #578372
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Module-Build-XSUtil-0.140.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+

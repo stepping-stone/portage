@@ -125,3 +125,105 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Alexis Ballier <aballier@gentoo.org>
+  freebsd-lib-10.2-r2.ebuild:
+  fix a bit more sed usage for building under linux.
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+  28 Feb 2016; Alexis Ballier <aballier@gentoo.org>
+  freebsd-lib-10.2-r2.ebuild:
+  add DESTDIR support to gen_libc_ldscript function so that we can make the
+  ldscript SYSROOT relative when building a cross compiler.
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+  01 Mar 2016; Alexis Ballier <aballier@gentoo.org>
+  freebsd-lib-10.2-r2.ebuild:
+  discriminate GNU userland based on CBUILD:-CHOST which helps when cross-
+  compiling.
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+  01 Mar 2016; Alexis Ballier <aballier@gentoo.org>
+  freebsd-lib-10.2-r2.ebuild:
+  make sys symlink SYSROOT relative
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+  01 Mar 2016; Alexis Ballier <aballier@gentoo.org>
+  freebsd-lib-10.2-r2.ebuild:
+  add :0= dep on openssl
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+  01 Mar 2016; Alexis Ballier <aballier@gentoo.org>
+  freebsd-lib-10.2-r2.ebuild:
+  move GNU install/sed fixes before USE=build check so that they are applied
+  also with USE=build.
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+  01 Mar 2016; Alexis Ballier <aballier@gentoo.org>
+  freebsd-lib-10.2-r2.ebuild:
+  set RPCDIR to include_proper when pre-installing headers
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+*freebsd-lib-10.3 (04 Apr 2016)
+
+  04 Apr 2016; Yuta Satoh <nigoro.dev@gmail.com>
+  +files/freebsd-lib-10.3-libusb.patch, +freebsd-lib-10.3.ebuild:
+  sys-freebsd: Bump to 10.3.
+
+*freebsd-lib-10.3-r1 (10 May 2016)
+
+  10 May 2016; Yuta Satoh <nigoro.dev@gmail.com> -freebsd-lib-10.3.ebuild,
+  +freebsd-lib-10.3-r1.ebuild:
+  Fix errata, FreeBSD-EN-16:06.libc
+
+  11 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -freebsd-lib-10.2-r2.ebuild:
+  sys-freebsd: Remove 10.2.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2059
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*freebsd-lib-10.3-r2 (07 Sep 2016)
+
+  07 Sep 2016; Patrice Clement <monsieurp@gentoo.org>
+  -freebsd-lib-10.3-r1.ebuild, +freebsd-lib-10.3-r2.ebuild:
+  sys-freebsd/freebsd-sources: Drop freebsd-sources-7.1-types.h-fix.patch.
+
+  Gentoo-Bug: https://bugs.gentoo.org/592776
+  Closes: https://github.com/gentoo/gentoo/pull/2270
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  12 Sep 2016; Patrice Clement <monsieurp@gentoo.org>
+  -freebsd-lib-9.1-r10.ebuild:
+  remove old.
+
+  Gentoo-Bug: https://bugs.gentoo.org/593386
+  Closes: https://github.com/gentoo/gentoo/pull/2299
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*freebsd-lib-11.0 (11 Oct 2016)
+
+  11 Oct 2016; Alexis Ballier <aballier@gentoo.org>
+  +files/freebsd-lib-11.0-bsdxml2expat.patch,
+  +files/freebsd-lib-11.0-liblink.patch,
+  +files/freebsd-lib-11.0-libproc-libcxx.patch,
+  +files/freebsd-lib-11.0-libsysdecode.patch,
+  +files/freebsd-lib-11.0-workaround.patch, +freebsd-lib-11.0.ebuild:
+  sys-freebsd: bump to 11.0
+

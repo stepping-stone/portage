@@ -121,3 +121,88 @@
   +files/4.0.0-gentoo-path.patch, pypy3-bin-2.4.0-r2.ebuild:
   Copy Gentoo path fixes from dev-python/pypy
 
+*pypy3-bin-2.4.0-r3 (02 Mar 2016)
+
+  02 Mar 2016; Michał Górny <mgorny@gentoo.org> +pypy3-bin-2.4.0-r3.ebuild:
+  Add nossl2 compatible with openssl-1.0.2g
+
+  Add a variant rebuilt using openssl-1.0.2g, that is without SSLv2
+  routines. This variant can be used both with new and old versions of
+  OpenSSL.
+
+  02 Mar 2016; Michał Górny <mgorny@gentoo.org> pypy3-bin-2.4.0-r3.ebuild:
+  Add missing QA_PREBUILT
+
+*pypy3-bin-2.4.0-r4 (03 Mar 2016)
+
+  03 Mar 2016; Michał Górny <mgorny@gentoo.org> -pypy3-bin-2.4.0-r3.ebuild,
+  +pypy3-bin-2.4.0-r4.ebuild:
+  Fix path subst in Gentoo install paths
+
+  03 Mar 2016; Michał Górny <mgorny@gentoo.org> pypy3-bin-2.4.0-r4.ebuild:
+  Add RDEPs to DEPEND, and subslots everywhere
+
+  Add RDEPENDs to DEPEND since we run the built PyPy in order to generate
+  CFFI caches and byte-compile modules.
+
+  Fixes: https://bugs.gentoo.org/576210
+
+  03 Mar 2016; Michał Górny <mgorny@gentoo.org>
+  +files/2.4.0-21_all_distutils_c++.patch, +files/pypy3-2.4.0-libressl.patch,
+  pypy3-bin-2.4.0-r4.ebuild:
+  Copy patches from dev-python/pypy3
+
+  03 Mar 2016; Michał Górny <mgorny@gentoo.org>
+  -files/1.9-scripts-location.patch, -pypy3-bin-2.4.0-r1.ebuild,
+  -pypy3-bin-2.4.0-r2.ebuild:
+  Drop old
+
+  05 May 2016; Patrice Clement <monsieurp@gentoo.org>
+  +files/pypy3-2.4.0-fix-tkinter-regression.patch, pypy3-bin-2.4.0-r4.ebuild:
+  fix regression in tkinter
+
+  Gentoo-bug: 533384
+  Fix binary package as well as per mgorny request
+  Closes: https://github.com/gentoo/gentoo/pull/1326
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  05 May 2016; Patrice Clement <monsieurp@gentoo.org>
+  pypy3-bin-2.4.0-r4.ebuild:
+  Remove trailing whitespace and clear QA warning.
+
+  Package-Manager: portage-2.2.26
+
+  14 May 2016; Michał Górny <mgorny@gentoo.org> pypy3-bin-2.4.0-r4.ebuild:
+  pax-mark libpypy-c.so as well
+
+  14 May 2016; Michał Górny <mgorny@gentoo.org> pypy3-bin-2.4.0-r4.ebuild:
+  INSDESTTREE -> custom var, #582982
+
+  09 Jun 2016; Michał Górny <mgorny@gentoo.org> pypy3-bin-2.4.0-r4.ebuild:
+  Update SRC_URI
+
+*pypy3-bin-5.2.0_alpha1 (09 Jun 2016)
+
+  09 Jun 2016; Michał Górny <mgorny@gentoo.org>
+  +files/5.2.0-distutils-c++.patch, +pypy3-bin-5.2.0_alpha1.ebuild:
+  Add 5.2.0-alpha1
+
+  12 Jun 2016; Michał Górny <mgorny@gentoo.org> pypy3-bin-5.2.0_alpha1.ebuild:
+  Stop installing numpy headers to match src build
+
+  Stop installing /usr/lib*/pypy3/include/numpy as that directory is not
+  installed by dev-python/pypy3 (where the install layout follows upstream
+  scripts rather than being coded in ebuild).
+
+*pypy3-bin-5.2.0_alpha1-r1 (29 Jul 2016)
+
+  29 Jul 2016; Michał Górny <mgorny@gentoo.org> pypy3-bin-2.4.0-r4.ebuild,
+  -pypy3-bin-5.2.0_alpha1.ebuild, +pypy3-bin-5.2.0_alpha1-r1.ebuild:
+  Remove unnecessary PDEP on python-updater
+
+*pypy3-bin-5.5.0_alpha (12 Oct 2016)
+
+  12 Oct 2016; Michał Górny <mgorny@gentoo.org> +pypy3-bin-5.5.0_alpha.ebuild:
+  Bump to 5.5.0 (alpha)
+

@@ -111,3 +111,27 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  07 Jun 2016; Tobias Klausmann <klausman@gentoo.org> pkg-config-1.1.7.ebuild:
+  1.1.7-r0: add alpha keyword
+
+  Gentoo-Bug: 585240
+
+  Package-Manager: portage-2.3.0_rc1
+
+  14 Jun 2016; Markus Meier <maekke@gentoo.org> pkg-config-1.1.7.ebuild:
+  add ~arm, bug #585240
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> pkg-config-1.1.7.ebuild:
+  Mark ~hppa (bug #585240).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  13 Nov 2016; Hans de Graaff <graaff@gentoo.org> pkg-config-1.1.6.ebuild:
+  drop ruby19
+
+  Package-Manager: portage-2.3.0
+

@@ -89,3 +89,62 @@
   04 Feb 2016; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   set myself as maintainer
 
+*protobuf-3.0.0_beta2 (21 Apr 2016)
+
+  21 Apr 2016; Ian Delaney <idella4@gentoo.org>
+  +files/protobuf-3.0.0_beta2-disable-local-gmock.patch, metadata.xml,
+  +protobuf-3.0.0_beta2.ebuild:
+  version bump, 3.0.0_beta2
+
+  - bump to EAPI6
+  - outsourced official implementations in java and python
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+  Closes: https://github.com/gentoo/gentoo/pull/1295
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  21 Apr 2016; Ian Delaney <idella4@gentoo.org> -protobuf-2.4.1.ebuild:
+  2.4.1: drop old
+
+  it's EAPI 3, uses deprecated distutils.eclass and its subslot 8 is provided
+  by 2.5.0 as well
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+  Closes: https://github.com/gentoo/gentoo/pull/1295
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+*protobuf-3.0.0_beta3 (23 Jun 2016)
+
+  23 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  -protobuf-3.0.0_beta2.ebuild, +protobuf-3.0.0_beta3.ebuild:
+  version bump 3.0.0_beta3
+
+  Package-Manager: portage-2.3.0_rc1
+  Closes: https://github.com/gentoo/gentoo/pull/1603
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*protobuf-3.0.0_beta3_p1 (04 Jul 2016)
+
+  04 Jul 2016; Yixun Lan <dlan@gentoo.org> -protobuf-3.0.0_beta3.ebuild,
+  +protobuf-3.0.0_beta3_p1.ebuild:
+  version bump 3.0.0_beta3_p1
+
+  - moved -DGOOGLE_PROTOBUF_NO_RTTI from append-cxxflags to append-cppflags
+  - changed subslot to 0/10b3 to trigger rebuilds of problematic consumer
+    protobuf-c
+
+  Package-Manager: portage-2.3.0
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=586972
+  Closes: https://github.com/gentoo/gentoo/pull/1816
+
+  Signed-off-by: Yixun Lan <dlan@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org>
+  protobuf-3.0.0_beta3_p1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

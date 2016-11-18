@@ -108,3 +108,40 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  gevent-1.1_beta6.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*gevent-1.1.0 (25 Mar 2016)
+
+  25 Mar 2016; Ultrabug <ultrabug@gentoo.org> -gevent-1.1_beta6.ebuild,
+  +gevent-1.1.0.ebuild:
+  version bump fix #569888
+
+  Package-Manager: portage-2.2.27
+
+*gevent-1.1.1 (05 Apr 2016)
+
+  05 Apr 2016; Ultrabug <ultrabug@gentoo.org> +gevent-1.1.1.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.27
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #390951
+
+  Package-Manager: portage-2.3.0_rc1
+
+*gevent-1.1.2 (21 Aug 2016)
+
+  21 Aug 2016; Tim Harder <radhermit@gentoo.org> +gevent-1.1.2.ebuild:
+  version bump to 1.1.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> gevent-1.1.0.ebuild,
+  gevent-1.1.1.ebuild, gevent-1.1.2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

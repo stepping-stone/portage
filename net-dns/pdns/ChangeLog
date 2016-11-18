@@ -121,3 +121,63 @@
 
   Package-Manager: portage-2.2.26
 
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/pdns:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  30 May 2016; Sven Wegener <swegener@gentoo.org> files/pdns:
+  Start database before pdns, bug #533162
+
+*pdns-3.4.9 (30 May 2016)
+
+  30 May 2016; Sven Wegener <swegener@gentoo.org> +pdns-3.4.9.ebuild:
+  Version bump, bug #583598
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Sven Wegener <swegener@gentoo.org>
+
+*pdns-4.0.0 (18 Jul 2016)
+
+  18 Jul 2016; Sven Wegener <swegener@gentoo.org> metadata.xml,
+  +pdns-4.0.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  30 Jul 2016; Sven Wegener <swegener@gentoo.org> pdns-3.4.7.ebuild,
+  pdns-3.4.8.ebuild, pdns-3.4.9.ebuild, pdns-4.0.0.ebuild:
+  Fix path in permission fix
+
+  Package-Manager: portage-2.2.28
+
+*pdns-4.0.1 (30 Jul 2016)
+
+  30 Jul 2016; Sven Wegener <swegener@gentoo.org> +pdns-4.0.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+*pdns-3.4.10 (02 Sep 2016)
+
+  02 Sep 2016; Sven Wegener <swegener@gentoo.org> +pdns-3.4.10.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  13 Sep 2016; Tobias Klausmann <klausman@gentoo.org> pdns-3.4.10.ebuild:
+  3.4.10-r0: add amd64 keyword
+
+  Gentoo-Bug: 588656
+
+  29 Sep 2016; Agostino Sarubbo <ago@gentoo.org> pdns-3.4.10.ebuild:
+  x86 stable wrt bug #588656
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Oct 2016; Sven Wegener <swegener@gentoo.org> -pdns-3.4.7.ebuild,
+  -pdns-3.4.8.ebuild, -pdns-3.4.9.ebuild:
+  Cleanup
+
+  Package-Manager: portage-2.3.0
+

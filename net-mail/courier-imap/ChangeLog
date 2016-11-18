@@ -107,3 +107,50 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*courier-imap-4.16.2-r1 (02 May 2016)
+*courier-imap-4.16.0-r1 (02 May 2016)
+*courier-imap-4.15-r2 (02 May 2016)
+
+  02 May 2016; Austin English <wizardedit@gentoo.org>
+  +courier-imap-4.15-r2.ebuild, +courier-imap-4.16.0-r1.ebuild,
+  +courier-imap-4.16.2-r1.ebuild,
+  files/courier-imap-4.0.6-r1-courier-imapd-ssl.rc6,
+  files/courier-imap-4.0.6-r1-courier-imapd.rc6,
+  files/courier-imap-4.0.6-r1-courier-pop3d-ssl.rc6,
+  files/courier-imap-4.0.6-r1-courier-pop3d.rc6:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/573846
+
+  Package-Manager: portage-2.2.26
+
+  02 May 2016; Austin English <wizardedit@gentoo.org>
+  -courier-imap-4.15-r1.ebuild, -courier-imap-4.16.0.ebuild,
+  -courier-imap-4.16.2.ebuild:
+  remove old ebuilds
+
+  Package-Manager: portage-2.2.26
+
+  04 Jun 2016; Anthony G. Basile <blueness@gentoo.org>
+  courier-imap-4.16.0-r1.ebuild, courier-imap-4.16.2-r1.ebuild:
+  add libressl support
+
+  Package-Manager: portage-2.2.28
+
+  24 Sep 2016; Jeroen Roovers <jer@gentoo.org> courier-imap-4.16.2-r1.ebuild:
+  Stable for HPPA (bug #590970).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  27 Sep 2016; Tobias Klausmann <klausman@gentoo.org>
+  courier-imap-4.16.2-r1.ebuild:
+  4.16.2-r1: stable on alpha
+
+  Gentoo-Bug: 590970
+

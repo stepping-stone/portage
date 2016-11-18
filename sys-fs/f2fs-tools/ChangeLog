@@ -141,3 +141,45 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  12 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  f2fs-tools-1.6.0.ebuild:
+  version 1.6.0 stable on ppc and ppc64, bug #577186
+
+  Package-Manager: portage-2.2.26
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> f2fs-tools-1.6.0.ebuild:
+  amd64 stable wrt bug #577186
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> f2fs-tools-1.6.0.ebuild:
+  x86 stable wrt bug #577186
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*f2fs-tools-1.6.1 (23 Mar 2016)
+
+  23 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +f2fs-tools-1.6.1.ebuild:
+  version bump to 1.6.1
+
+  Package-Manager: portage-2.2.26
+
+  29 Mar 2016; Markus Meier <maekke@gentoo.org> f2fs-tools-1.6.0.ebuild:
+  arm stable, bug #577186
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  18 Apr 2016; Mike Frysinger <vapier@gentoo.org> -f2fs-tools-1.4.1.ebuild,
+  -f2fs-tools-1.5.0.ebuild:
+  drop old <1.6.0 versions
+
+  18 Apr 2016; Mike Frysinger <vapier@gentoo.org> f2fs-tools-1.6.1.ebuild,
+  +files/f2fs-tools-1.6.1-sysmacros.patch:
+  fix build w/newer glibc #580338
+

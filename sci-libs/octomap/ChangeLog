@@ -64,3 +64,31 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*octomap-1.8.0 (28 Jun 2016)
+
+  28 Jun 2016; Alexis Ballier <aballier@gentoo.org> +octomap-1.8.0.ebuild:
+  bump to 1.8.0
+
+  Package-Manager: portage-2.3.0
+
+  29 Sep 2016; Alexis Ballier <aballier@gentoo.org> -octomap-1.6.8.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.1
+
+*octomap-1.8.0-r1 (29 Sep 2016)
+
+  29 Sep 2016; Alexis Ballier <aballier@gentoo.org> -octomap-1.8.0.ebuild,
+  +octomap-1.8.0-r1.ebuild, octomap-9999.ebuild:
+  add := dep on qglviewer
+
+  Package-Manager: portage-2.3.1
+
+*octomap-1.8.0-r2 (07 Oct 2016)
+
+  07 Oct 2016; Alexis Ballier <aballier@gentoo.org> +files/gentoo.patch,
+  -octomap-1.8.0-r1.ebuild, +octomap-1.8.0-r2.ebuild, octomap-9999.ebuild:
+  ci-libs/octomap: install package.xml in /usr/share/ros_packages/$PN
+
+  Package-Manager: portage-2.3.1
+

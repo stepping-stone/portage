@@ -68,3 +68,96 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*tinc-1.0.27 (10 Apr 2016)
+
+  10 Apr 2016; Anthony G. Basile <blueness@gentoo.org> +tinc-1.0.27.ebuild:
+  version bump to 1.0.27
+
+  Package-Manager: portage-2.2.26
+
+*tinc-1.0.28 (10 Apr 2016)
+
+  10 Apr 2016; Anthony G. Basile <blueness@gentoo.org> +tinc-1.0.28.ebuild:
+  version bump 1.0.28
+
+  Package-Manager: portage-2.2.26
+
+*tinc-1.1_pre12 (25 Apr 2016)
+
+  25 Apr 2016; Anthony G. Basile <blueness@gentoo.org> +tinc-1.1_pre12.ebuild:
+  version bump to 1.1pre12
+
+  Package-Manager: portage-2.2.26
+
+  25 Apr 2016; Anthony G. Basile <blueness@gentoo.org> metadata.xml,
+  -tinc-1.0.25.ebuild, -tinc-1.0.26.ebuild, -tinc-1.0.27.ebuild,
+  -tinc-1.1_pre11.ebuild:
+  remove older versions
+
+  Package-Manager: portage-2.2.26
+
+  25 Apr 2016; Anthony G. Basile <blueness@gentoo.org> tinc-1.0.28.ebuild:
+  add libressl support to 1.0.28
+
+  Package-Manager: portage-2.2.26
+
+*tinc-1.1_pre13 (30 Apr 2016)
+
+  30 Apr 2016; Anthony G. Basile <blueness@gentoo.org> -tinc-1.1_pre12.ebuild,
+  +tinc-1.1_pre13.ebuild:
+  version bump to 1.1_pre13, remove 1.1_pre12
+
+  Package-Manager: portage-2.2.26
+
+*tinc-1.1_pre14 (01 May 2016)
+
+  01 May 2016; Anthony G. Basile <blueness@gentoo.org> -tinc-1.1_pre13.ebuild,
+  +tinc-1.1_pre14.ebuild:
+  version bump to 1.1_pre14, remove 1.1_pre13
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/tincd-r1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  21 Jul 2016; Yixun Lan <dlan@gentoo.org> tinc-1.1_pre14.ebuild:
+  use use_enable() to correct USE=upnp
+
+  Gentoo-Bug: 589256
+
+  Package-Manager: portage-2.3.0
+
+*tinc-1.0.29 (09 Oct 2016)
+
+  09 Oct 2016; Anthony G. Basile <blueness@gentoo.org> +tinc-1.0.29.ebuild:
+  version bump to 1.0.29
+
+  Package-Manager: portage-2.2.28
+
+  12 Oct 2016; Yixun Lan <dlan@gentoo.org> +files/tinc-1.1_pre14-upnp.patch,
+  tinc-1.1_pre14.ebuild:
+  fix USE=upnp build err
+
+  Gentoo-Bug: 595372
+
+  Package-Manager: portage-2.3.2
+
+*tinc-1.1_pre14-r1 (13 Oct 2016)
+
+  13 Oct 2016; Yixun Lan <dlan@gentoo.org> +tinc-1.1_pre14-r1.ebuild:
+  pull upstream patches
+
+  tinc upstream commits
+  from: 0cf943753ab16704c818bebe74b4e7ea96399b05
+  to:   9cbd3c2b5b03c29c116a14f196db8a32c7135391
+
+  Package-Manager: portage-2.3.2
+
+*tinc-1.1_pre14-r2 (15 Oct 2016)
+
+  15 Oct 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/tinc-1.1-fix-paths.patch, +files/tincd-r2, +tinc-1.1_pre14-r2.ebuild:
+  fix logfile and pidfile paths, bug #560528
+
+  Package-Manager: portage-2.2.28
+

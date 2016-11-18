@@ -98,3 +98,71 @@
 
   Package-Manager: portage-2.2.27
 
+*zsh-completions-0.17.0 (08 Mar 2016)
+
+  08 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +zsh-completions-0.17.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.27
+
+  08 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -zsh-completions-0.15.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+*zsh-completions-0.18.0 (30 Apr 2016)
+
+  30 Apr 2016; Manuel Rüger <mrueg@gentoo.org> +zsh-completions-0.18.0.ebuild:
+  Version bump to 0.18.0
+
+  Package-Manager: portage-2.2.28
+
+  30 Apr 2016; Manuel Rüger <mrueg@gentoo.org> -zsh-completions-0.16.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  30 Apr 2016; Manuel Rüger <mrueg@gentoo.org> zsh-completions-0.18.0.ebuild:
+  Remove ninja completion
+
+  Package-Manager: portage-2.2.28
+
+*zsh-completions-0.19.0 (06 Aug 2016)
+
+  06 Aug 2016; Manuel Rüger <mrueg@gentoo.org> +zsh-completions-0.19.0.ebuild:
+  Version bump to 0.19.0
+
+  Package-Manager: portage-2.3.0
+
+  06 Aug 2016; Manuel Rüger <mrueg@gentoo.org> -zsh-completions-0.17.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.0
+
+*zsh-completions-0.20.0 (09 Sep 2016)
+
+  09 Sep 2016; Manuel Rüger <mrueg@gentoo.org> +zsh-completions-0.20.0.ebuild:
+  Version bump to 0.20.0
+
+  Package-Manager: portage-2.3.0
+
+*zsh-completions-0.21.0 (16 Oct 2016)
+
+  16 Oct 2016; Manuel Rüger <mrueg@gentoo.org> +zsh-completions-0.21.0.ebuild:
+  Version bump to 0.21.0
+
+  Package-Manager: portage-2.3.2
+
+*zsh-completions-0.22.0 (12 Nov 2016)
+
+  12 Nov 2016; Manuel Rüger <mrueg@gentoo.org> +zsh-completions-0.22.0.ebuild:
+  Version bump to 0.22.0
+
+  Package-Manager: portage-2.3.2
+
+  12 Nov 2016; Manuel Rüger <mrueg@gentoo.org> -zsh-completions-0.18.0.ebuild,
+  -zsh-completions-0.19.0.ebuild, -zsh-completions-0.20.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.2
+

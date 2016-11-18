@@ -158,3 +158,20 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  21 Jun 2016; Mike Frysinger <vapier@gentoo.org>
+  ndg-httpsclient-0.4.0.ebuild:
+  mark 0.4.0 arm64/m68k/s390/sh stable #560894
+
+*ndg-httpsclient-0.4.2 (24 Oct 2016)
+
+  24 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +ndg-httpsclient-0.4.2.ebuild:
+  Bump to version 0.4.2
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> ndg-httpsclient-0.4.0.ebuild,
+  ndg-httpsclient-0.4.2.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

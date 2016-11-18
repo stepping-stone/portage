@@ -113,3 +113,65 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  02 Apr 2016; Pacho Ramos <pacho@gentoo.org> geocode-glib-3.18.1.ebuild:
+  x86 stable, bug 566378
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> -geocode-glib-3.16.2.ebuild,
+  -geocode-glib-3.18.0.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+*geocode-glib-3.18.2 (03 Apr 2016)
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> +geocode-glib-3.18.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  09 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/geocode-glib-3.18.1-fix-GLIBC-features.patch,
+  geocode-glib-3.18.1.ebuild, geocode-glib-3.18.2.ebuild:
+  fix build on uclibc, bug #577290
+
+  Package-Manager: portage-2.2.26
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> geocode-glib-3.18.2.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> geocode-glib-3.18.2.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  28 Jun 2016; Pacho Ramos <pacho@gentoo.org> -geocode-glib-3.18.1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*geocode-glib-3.20.1 (28 Jun 2016)
+
+  28 Jun 2016; Pacho Ramos <pacho@gentoo.org> +geocode-glib-3.20.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> geocode-glib-3.20.1.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> geocode-glib-3.20.1.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+

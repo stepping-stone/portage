@@ -62,3 +62,30 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*newrelic-sysmond-1.1.2.124-r1 (29 Apr 2016)
+
+  29 Apr 2016; Austin English <wizardedit@gentoo.org>
+  files/newrelic-sysmond.rc, +newrelic-sysmond-1.1.2.124-r1.ebuild:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/573846
+
+  Package-Manager: portage-2.2.26
+
+  29 Apr 2016; Austin English <wizardedit@gentoo.org>
+  -newrelic-sysmond-1.1.2.124.ebuild:
+  remove newrelic-sysmond-1.1.2.124-r1
+
+  Package-Manager: portage-2.2.26
+
+  06 Jul 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  newrelic-sysmond-1.1.2.124-r1.ebuild:
+  Update SRC_URI, Thanks to Chris White, #588108
+
+  Package-Manager: portage-2.2.28
+

@@ -76,3 +76,12 @@
 
   Package-Manager: portage-2.2.27
 
+  03 Sep 2016; Mike Gilbert <floppym@gentoo.org> natsort-4.0.4.ebuild:
+  depend on virtual/python-pathlib
+
+  Package-Manager: portage-2.3.0_p24
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> natsort-3.4.0.ebuild,
+  natsort-4.0.3.ebuild, natsort-4.0.4.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

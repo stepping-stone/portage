@@ -94,3 +94,44 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> hitori-3.16.2.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -hitori-3.16.1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*hitori-3.20.0 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +hitori-3.20.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> hitori-3.20.0.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> hitori-3.20.0.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*hitori-3.22.0 (19 Oct 2016)
+
+  19 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> +hitori-3.22.0.ebuild:
+  version bump 3.20.0 → 3.22.0
+
+  Package-Manager: portage-2.3.1
+
+  19 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> -hitori-3.16.2.ebuild:
+  cleanup old revision
+
+  Package-Manager: portage-2.3.1
+

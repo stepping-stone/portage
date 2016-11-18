@@ -70,3 +70,30 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 Apr 2016; Patrice Clement <monsieurp@gentoo.org>
+  -netkit-ftpd-0.17-r8.ebuild:
+  Clean up old.
+
+  Package-Manager: portage-2.2.26
+
+*netkit-ftpd-0.17-r9 (18 Apr 2016)
+
+  18 Apr 2016; Patrice Clement <monsieurp@gentoo.org>
+  +netkit-ftpd-0.17-r9.ebuild:
+  EAPI 6 bump.
+
+  --straight-to-stable because r8 is way too old
+  and was removed (EAPI 0).
+
+  Package-Manager: portage-2.2.26
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> netkit-ftpd-0.17-r9.ebuild:
+  Support libressl (#565390)
+
+  Package-Manager: portage-2.3.1
+
+  16 Oct 2016; Patrick Lauer <patrick@gentoo.org> netkit-ftpd-0.17-r9.ebuild:
+  Whitespace
+
+  Package-Manager: portage-2.3.2
+

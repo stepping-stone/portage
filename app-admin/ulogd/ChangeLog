@@ -206,3 +206,169 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  04 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> metadata.xml:
+  add bugs-to link to metadata
+
+  Package-Manager: portage-2.2.27
+
+*ulogd-2.0.5_p20160205 (10 Mar 2016)
+
+  10 Mar 2016; Patrice Clement <monsieurp@gentoo.org> -ulogd-2.0.5-r4.ebuild,
+  +ulogd-2.0.5_p20160205.ebuild:
+  verbump to 2.0.5_p20160205
+
+  This commit closes #1014.
+
+  Snapshot verbump to get the fix [1] for the upstream bug #1030 [2]
+  (unsafe signal handling).
+  Quote from the commit message of the mentioned fix:
+
+  This patch will solve various symptoms like following.
+    - Deadlock
+    - Segmentation fault caused by libc management data corruption,
+    - Other unpredictable behavior.
+
+  End quote.
+
+  Also other minor fixes here and there.
+
+  [1]: https://git.netfilter.org/ulogd2/commit/?id=1f70d2ba45e2b067777d5386b8d
+  3f2e09be9118b
+  [2]: https://bugzilla.netfilter.org/show_bug.cgi?id=1030
+
+  Pull-Request: https://github.com/gentoo/gentoo/pull/1014
+  Acked-by: Patrice Clement <monsieurp@gentoo.org>
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+  Package-Manager: portage-2.2.27
+
+  04 Apr 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Add description attribute for user maintainer in metadata.xml
+
+  Package-Manager: portage-2.2.28
+
+  16 Apr 2016; Patrice Clement <monsieurp@gentoo.org>
+  ulogd-2.0.5_p20160205.ebuild:
+  fix doc build in 2.0.5_p20160205
+
+  Closes: https://github.com/gentoo/gentoo/pull/1270
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  09 May 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  remove description tag from metadata.xml
+
+  Closes: https://github.com/gentoo/gentoo/pull/1435
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> ulogd-2.0.5_p20160205.ebuild:
+  amd64 stable wrt bug #581258
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/ulogd.init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  31 May 2016; Patrice Clement <monsieurp@gentoo.org> files/ulogd.init:
+  bump initscript copyright years after shebang update
+
+  Package-Manager: portage-2.3.0_rc1
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> ulogd-2.0.5_p20160205.ebuild:
+  x86 stable wrt bug #581258
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Jun 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  remove unneeded USE descriptions
+
+  Package-Manager: portage-2.3.0
+
+  27 Jun 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  remove unneeded periods from USE descriptions
+
+  Package-Manager: portage-2.3.0
+
+  27 Jun 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  fix and sort USE descriptions
+
+  Package-Manager: portage-2.3.0
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> ulogd-2.0.5_p20160205.ebuild:
+  ppc stable wrt bug #581258
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  30 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/ulogd-2.0.5-remove-db-automagic.patch, -ulogd-2.0.5-r3.ebuild:
+  remove old.
+
+  Package-Manager: portage-2.3.0
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  ulogd-2.0.5_p20160205.ebuild:
+  use HTTP in SRC_URI due to untrusted certificate.
+
+  Recently upstream switched to a new HTTPS certificate by Let's Encrypt,
+  which has trust issues with currently stable app-misc/ca-certificates.
+
+  Package-Manager: portage-2.3.0
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*ulogd-2.0.5_p20160331 (30 Aug 2016)
+
+  30 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  +ulogd-2.0.5_p20160331.ebuild:
+  verbump to 2.0.5_p20160331.
+
+  Fixes cross-compilation problems with mysql/postgesql plugins.
+  Also convert ebuild to EAPI=6 and cleanup slightly.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2152
+  Package-Manager: portage-2.3.0
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*ulogd-2.0.5_p20161017 (18 Oct 2016)
+
+  18 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  +ulogd-2.0.5_p20161017.ebuild:
+  new snapshot release to fix crash with kernel 4.8
+
+  New release to pick upstream commit 62064f6 [1] that fixes crashes with
+  truncated IPv4 packets and kernel 4.8.
+  Problematic kernel commit: [2]. Related discussion: [3].
+
+  [1]: http://git.netfilter.org/ulogd2/commit/?id=62064f6a9e054739ecbdda010dbe
+  9c3fd69bbaa2
+  [2]: https://git.kernel.org/cgit/linux/kernel/git/stable/linux-
+  stable.git/commit/?id=7643507fe8b5bd8ab7522f6a81058cc1209d2585
+  [3]: https://www.mail-archive.com/linux-
+  kernel@vger.kernel.org/msg1246747.html
+
+  Package-Manager: portage-2.3.2
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  18 Oct 2016; Patrice Clement <monsieurp@gentoo.org>
+  -ulogd-2.0.5_p20160331.ebuild:
+  remove old.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2583
+  Package-Manager: portage-2.3.2
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

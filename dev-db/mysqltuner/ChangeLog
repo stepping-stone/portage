@@ -61,3 +61,17 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*mysqltuner-1.6.0 (26 Jul 2016)
+
+  26 Jul 2016; Michael Orlitzky <mjo@gentoo.org> +mysqltuner-1.6.0.ebuild:
+  new version 1.6.0 and upgrade to EAPI=6.
+
+  Gentoo-Bug: 510920
+
+  Package-Manager: portage-2.2.28
+

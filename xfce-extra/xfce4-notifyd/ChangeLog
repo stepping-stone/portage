@@ -57,3 +57,37 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  04 Mar 2016; Steev Klimaszewski <steev@gentoo.org>
+  xfce4-notifyd-0.2.4.ebuild:
+  Keyword 0.2.4 for ~arm64
+
+  Package-Manager: portage-2.2.27
+
+*xfce4-notifyd-0.3.0 (29 Jul 2016)
+
+  29 Jul 2016; Michał Górny <mgorny@gentoo.org> +xfce4-notifyd-0.3.0.ebuild:
+  Bump to 0.3.0, first GTK+3/gdbus release
+
+  31 Jul 2016; Michał Górny <mgorny@gentoo.org> xfce4-notifyd-0.3.0.ebuild:
+  Raise GTK+3 dep to fix build failure, #590112
+
+*xfce4-notifyd-0.3.1 (06 Sep 2016)
+
+  06 Sep 2016; Michał Górny <mgorny@gentoo.org> +xfce4-notifyd-0.3.1.ebuild:
+  Bump to 0.3.1 bugfix
+
+*xfce4-notifyd-0.3.2 (10 Sep 2016)
+
+  10 Sep 2016; Michał Górny <mgorny@gentoo.org> +xfce4-notifyd-0.3.2.ebuild:
+  Bump to 0.3.2 bugfix
+
+*xfce4-notifyd-0.3.3 (05 Nov 2016)
+
+  05 Nov 2016; Michał Górny <mgorny@gentoo.org> +xfce4-notifyd-0.3.3.ebuild:
+  Bump to 0.3.3
+
+*xfce4-notifyd-0.3.4 (10 Nov 2016)
+
+  10 Nov 2016; Michał Górny <mgorny@gentoo.org> +xfce4-notifyd-0.3.4.ebuild:
+  Bump to 0.3.4
+

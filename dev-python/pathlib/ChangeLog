@@ -79,3 +79,14 @@
 
   Package-Manager: portage-2.2.27
 
+  03 Sep 2016; Mike Gilbert <floppym@gentoo.org> -pathlib-1.0.1-r2.ebuild:
+  drop useless revbump
+
+  This added python 3.4 an 3.4 to a module that already exists in
+  the standard library.
+
+  Package-Manager: portage-2.3.0_p24
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pathlib-1.0.1-r1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

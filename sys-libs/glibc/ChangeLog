@@ -314,3 +314,145 @@
   glibc-9999.ebuild:
   version bump to 2.23
 
+  07 Mar 2016; Mike Frysinger <vapier@gentoo.org> glibc-2.22-r2.ebuild,
+  glibc-2.23.ebuild:
+  pull a few upstream fixes (mostly compile-time)
+
+  30 Mar 2016; Mike Frysinger <vapier@gentoo.org> -glibc-2.21-r1.ebuild,
+  -glibc-2.22-r1.ebuild:
+  drop unused versions
+
+*glibc-2.22-r3 (30 Mar 2016)
+
+  30 Mar 2016; Mike Frysinger <vapier@gentoo.org> -glibc-2.22-r2.ebuild,
+  +glibc-2.22-r3.ebuild, glibc-2.23.ebuild:
+  add few more upstream fixes #578602
+
+  30 Mar 2016; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_configure.eblit, glibc-2.23.ebuild, glibc-9999.ebuild,
+  metadata.xml:
+  add USE=rpc to control obsolete RPC/NIS APIs #381391 #576278
+
+  30 Mar 2016; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_configure.eblit, glibc-2.23.ebuild, glibc-9999.ebuild:
+  add USE=audit & USE=caps #401677
+
+*glibc-2.22-r4 (04 Apr 2016)
+
+  04 Apr 2016; Mike Frysinger <vapier@gentoo.org> -glibc-2.22-r3.ebuild,
+  +glibc-2.22-r4.ebuild, glibc-2.23.ebuild:
+  more upstream fixes #578602
+
+  08 Apr 2016; Agostino Sarubbo <ago@gentoo.org> glibc-2.22-r4.ebuild:
+  amd64 stable wrt bug #578602
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  10 Apr 2016; Jeroen Roovers <jer@gentoo.org> glibc-2.22-r4.ebuild:
+  Stable for HPPA (bug #578602).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org> glibc-2.22-r4.ebuild:
+  x86 stable wrt bug #578602
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Apr 2016; Mike Frysinger <vapier@gentoo.org> glibc-2.22-r4.ebuild:
+  mark 2.22-r4 arm/arm64/ia64/m68k/ppc/ppc64/s390/sh/sparc stable #578602
+
+*glibc-2.23-r1 (13 Apr 2016)
+
+  13 Apr 2016; Mike Frysinger <vapier@gentoo.org> -glibc-2.23.ebuild,
+  +glibc-2.23-r1.ebuild:
+  move 2.23-r1 into ~arch
+
+*glibc-2.23-r2 (16 Apr 2016)
+
+  16 Apr 2016; Patrick Lauer <patrick@gentoo.org> -glibc-2.23-r1.ebuild,
+  +glibc-2.23-r2.ebuild:
+  QA] Disable custom patch to sysmacros.h #575232
+
+  Since this is not an upstream patch and it causes lots of breakage
+  Acked by mgorny and zlogene in IRC
+
+  Package-Manager: portage-2.2.28
+
+*glibc-2.23-r1 (16 Apr 2016)
+
+  16 Apr 2016; Mike Gilbert <floppym@gentoo.org> +glibc-2.23-r1.ebuild:
+  restore 2.23-r1 with a mask
+
+  02 May 2016; Matt Turner <mattst88@gentoo.org> glibc-2.22-r4.ebuild:
+  alpha stable, bug 578602.
+
+  RepoMan-Options: --ignore-arches
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/nscd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  02 Jun 2016; Benda Xu <heroxbd@gentoo.org> files/eblits/common.eblit,
+  files/eblits/pkg_postinst.eblit, files/eblits/pkg_preinst.eblit,
+  files/eblits/src_configure.eblit, files/eblits/src_install.eblit:
+  files/eblits: Prefix support.
+
+  Bug: 473728
+
+  Package-Manager: portage-2.2.28
+
+  02 Jun 2016; Benda Xu <heroxbd@gentoo.org> files/eblits/src_configure.eblit:
+  add sysconfdir and localstatedir.
+
+    In Prefix, ${prefix} != /usr, sysconfdir defaults
+    to ${prefix}/etc and localstatedir to ${prefix}/var.
+    which results in EPREFIX/usr/{etc,var}.
+
+    This commit avoids that.
+
+  Package-Manager: portage-2.2.28
+
+  06 Jun 2016; Benda Xu <heroxbd@gentoo.org> files/eblits/src_install.eblit:
+  glibc_headers_install should use $(alt_prefix).
+
+    do not hardcode /usr/${CTARGET}.
+
+  19 Jun 2016; Benda Xu <heroxbd@gentoo.org> files/eblits/src_configure.eblit:
+  specify sbin in src_configure.
+
+    In configure when prefix=/usr, libc_cv_rootsbindir
+    is set to /sbin instead of /usr/sbin.  The same does
+    not apply if prefix=EPREFIX/usr.  We force it in Prefix
+    to be consistant.
+
+  Package-Manager: portage-2.2.28
+
+  23 Jun 2016; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/pkg_pretend.eblit, files/eblits/src_prepare.eblit:
+  sourceware: convert to https:// URIs
+
+  03 Sep 2016; Michał Górny <mgorny@gentoo.org> files/eblits/common.eblit:
+  Do not reset multilib vars unless cross-compiling, #588368
+
+  Do not call multilib_env_reset unless cross-compiling, in order to
+  prevent the function from redefining profile-defined variables such as
+  LIBDIR_*.
+
+*glibc-2.23-r3 (12 Nov 2016)
+
+  12 Nov 2016; Mike Frysinger <vapier@gentoo.org> +glibc-2.23-r3.ebuild:
+  add a lot of upstream patches for 2.23
+
+*glibc-2.24 (12 Nov 2016)
+
+  12 Nov 2016; Mike Frysinger <vapier@gentoo.org> +glibc-2.24.ebuild:
+  version bump to 2.24
+
+  15 Nov 2016; Mike Frysinger <vapier@gentoo.org> glibc-2.23-r3.ebuild,
+  glibc-2.24.ebuild:
+  add upstream fix for default ssp detection w/gcc-6.2 #582690
+

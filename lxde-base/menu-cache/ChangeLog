@@ -81,3 +81,22 @@
 
   Package-Manager: portage-2.2.27
 
+  01 Nov 2016; Markus Meier <maekke@gentoo.org> menu-cache-1.0.1.ebuild:
+  arm stable, bug #583578
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+
+*menu-cache-1.0.2 (08 Nov 2016)
+
+  08 Nov 2016; Manuel Rüger <mrueg@gentoo.org> +menu-cache-1.0.2.ebuild:
+  Version bump to 1.0.2
+
+  Package-Manager: portage-2.3.2
+
+  08 Nov 2016; Manuel Rüger <mrueg@gentoo.org> -menu-cache-0.4.1.ebuild,
+  -menu-cache-1.0.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.2
+

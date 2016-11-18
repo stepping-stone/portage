@@ -92,3 +92,106 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*icu-56.1-r1 (29 Feb 2016)
+
+  29 Feb 2016; Andreas K. Hüttel <dilfridge@gentoo.org> +icu-56.1-r1.ebuild:
+  Add experimental, untested revbump using C++11. No keywords. Bug 575198
+
+  Package-Manager: portage-2.2.27
+
+  29 Feb 2016; Andreas K. Hüttel <dilfridge@gentoo.org> icu-56.1-r1.ebuild:
+  Restore keywords after build testing
+
+  Package-Manager: portage-2.2.27
+
+  03 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +files/icu-flagparser.patch, icu-56.1-r1.ebuild:
+  Backport fix for bug 573294
+
+  Package-Manager: portage-2.2.27
+
+*icu-57.1 (25 Mar 2016)
+
+  25 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +files/icu-57.1-remove-bashisms.patch,
+  -files/icu-fix-tests-depending-on-date.patch, +icu-57.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  20 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org> -icu-56.1.ebuild,
+  -icu-56.1-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  07 May 2016; Pacho Ramos <pacho@gentoo.org> icu-57.1.ebuild:
+  amd64 stable, bug #580672
+
+  Package-Manager: portage-2.2.28
+
+  12 May 2016; Markus Meier <maekke@gentoo.org> icu-57.1.ebuild:
+  arm stable, bug #580674
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  25 May 2016; Matt Turner <mattst88@gentoo.org> icu-57.1.ebuild:
+  alpha stable, bug 580674.
+
+  18 Jul 2016; Jeroen Roovers <jer@gentoo.org> icu-57.1.ebuild:
+  Stable for HPPA PPC64 (bug #580674).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  28 Jul 2016; Agostino Sarubbo <ago@gentoo.org> icu-57.1.ebuild:
+  x86 stable wrt bug #589284
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  10 Sep 2016; Michael Palimaka <kensington@gentoo.org>
+  -files/icu-flagparser.patch:
+  remove unused patch
+
+*icu-58.1 (05 Nov 2016)
+
+  05 Nov 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +files/icu-58.1-remove-bashisms.patch, +icu-58.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.2
+
+  06 Nov 2016; Andreas K. Hüttel <dilfridge@gentoo.org> icu-58.1.ebuild:
+  Disable layoutex engine, provided by dev-libs/icu-layoutex
+
+  Package-Manager: portage-2.3.2
+
+  06 Nov 2016; Lars Wendler <polynomial-c@gentoo.org> icu-58.1.ebuild:
+  don't automagically link against dev-libs/icu-le-hb.
+
+  There's dev-libs/icu-layoutex for this.
+
+  Package-Manager: portage-2.3.2
+
+  08 Nov 2016; Lars Wendler <polynomial-c@gentoo.org> icu-58.1.ebuild:
+  Revert "dev-libs/icu: don't automagically link against dev-libs/icu-le-hb."
+
+  This reverts commit b2d27dda1fe063d1b303e6a9cc0327bf0edb0e65.
+  dilfridge beat me on this change and I didn't recognize it.
+
+*icu-58.1-r1 (08 Nov 2016)
+
+  08 Nov 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +files/icu-58.1-iterator.patch, +icu-58.1-r1.ebuild:
+  Revbump for bug 599142
+
+  Package-Manager: portage-2.3.2
+
+  09 Nov 2016; Lars Wendler <polynomial-c@gentoo.org> -icu-58.1.ebuild:
+  Removed broken version.
+
+  Package-Manager: portage-2.3.2
+

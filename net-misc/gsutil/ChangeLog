@@ -138,3 +138,48 @@
   18 Feb 2016; Mike Frysinger <vapier@gentoo.org> +gsutil-4.17.ebuild:
   version bump to 4.17
 
+  02 Mar 2016; Justin Lecher <jlec@gentoo.org> gsutil-3.42.ebuild,
+  gsutil-4.15.ebuild, gsutil-4.16.ebuild, gsutil-4.17.ebuild:
+  Drop residual SocksiPy-branch reference
+
+  Gentoo-Bugs: https://bugs.gentoo.org/show_bug.cgi?id=575720
+
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+  06 Mar 2016; Justin Lecher <jlec@gentoo.org> gsutil-3.42.ebuild,
+  gsutil-4.15.ebuild, gsutil-4.16.ebuild, gsutil-4.17.ebuild:
+  Patch before sed in sources
+
+  Gentoo-Bugs: https://bugs.gentoo.org/show_bug.cgi?id=576434
+
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*gsutil-4.18 (28 Mar 2016)
+
+  28 Mar 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/gsutil-4.18-use-friendy-version-checks.patch, +gsutil-4.18.ebuild:
+  version bump to 4.18
+
+  21 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  -files/gsutil-4.15-use-friendy-version-checks.patch,
+  -files/gsutil-4.16-use-friendy-version-checks.patch, -gsutil-4.15.ebuild,
+  -gsutil-4.16.ebuild, -gsutil-4.17.ebuild:
+  drop old 4.x versions
+
+  21 Apr 2016; Mike Frysinger <vapier@gentoo.org> gsutil-4.18.ebuild:
+  block >=oauth2client-2 for now #580690
+
+  The oauth2client-2.x release broke APIs and gsutil hasn't yet upgraded.
+
+*gsutil-4.19 (21 Apr 2016)
+
+  21 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/gsutil-4.19-use-friendy-version-checks.patch, +gsutil-4.19.ebuild:
+  version bump to 4.19
+
+*gsutil-4.20 (13 Aug 2016)
+
+  13 Aug 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/gsutil-4.20-use-friendy-version-checks.patch, +gsutil-4.20.ebuild:
+  version bump to 4.20
+

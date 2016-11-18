@@ -82,3 +82,44 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*widelands-0.18 (24 Mar 2016)
+
+  24 Mar 2016; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/widelands-0.18-cxxflags.patch, +widelands-0.18.ebuild:
+  version bump (bug #502286)
+
+  Package-Manager: portage-2.2.26
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> widelands-0.18.ebuild:
+  amd64 stable wrt bug #581218
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> widelands-0.18.ebuild:
+  x86 stable wrt bug #581218
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> widelands-0.18.ebuild:
+  ppc stable wrt bug #581218
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*widelands-0.18-r1 (05 Aug 2016)
+
+  05 Aug 2016; Austin English <wizardedit@gentoo.org>
+  +widelands-0.18-r1.ebuild:
+  remove deprecated games eclass
+
+  Also update to EAPI 6
+
+  Gentoo-Bug: https://bugs.gentoo.org/574082
+
+  Package-Manager: portage-2.3.0
+

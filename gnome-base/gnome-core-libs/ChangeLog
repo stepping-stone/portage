@@ -99,3 +99,55 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  gnome-core-libs-3.18.0.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+*gnome-core-libs-3.20.0 (05 Sep 2016)
+
+  05 Sep 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-core-libs-3.20.0.ebuild:
+  version bump to 3.20
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-core-libs-3.20.0.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-core-libs-3.20.0.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*gnome-core-libs-3.20.0-r1 (12 Oct 2016)
+
+  12 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-core-libs-3.20.0-r1.ebuild:
+  drop gstreamer:0.10 requirement
+
+  Gentoo-bug: 596696
+  Gentoo-bug: 550648
+
+  Package-Manager: portage-2.3.1
+
+*gnome-core-libs-3.22.0 (12 Nov 2016)
+
+  12 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-core-libs-3.22.0.ebuild:
+  version bump 3.20.0-r1 → 3.22.0
+
+  Package-Manager: portage-2.3.2
+
+  12 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-core-libs-3.14.0.ebuild, -gnome-core-libs-3.16.0.ebuild,
+  -gnome-core-libs-3.18.0.ebuild:
+  cleanup old revisions
+
+  Package-Manager: portage-2.3.2
+

@@ -64,3 +64,49 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Tree-Simple-1.270.0 (26 Apr 2016)
+
+  26 Apr 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +Tree-Simple-1.270.0.ebuild:
+  Bump to version 1.270.0
+
+  - EAPI6
+  - Add USE="minimal"
+
+  Upstream:
+  - Packaging Fixes.
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="alpha amd64 amd64-fbsd arm arm64 hppa
+  ia64 m68k mips nios2 ppc ppc64 riscv s390 sh sparc sparc-fbsd x86 x86-fbsd"
+
+  08 Jul 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Tree-Simple-1.250.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.0
+
+*Tree-Simple-1.290.0 (08 Jul 2016)
+
+  08 Jul 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +Tree-Simple-1.290.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0
+
+  08 Aug 2016; Kent Fredric <kentnl@gentoo.org> Tree-Simple-1.180.0-r1.ebuild:
+  Remove POD Author tests.
+
+  Not useful on gentoo.
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="alpha amd64 amd64-fbsd arm arm64 hppa
+  ia64 m68k mips nios2 ppc ppc64 riscv s390 sh sparc sparc-fbsd x86 x86-fbsd"
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> Tree-Simple-1.270.0.ebuild:
+  amd64 stable wrt bug #588348
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

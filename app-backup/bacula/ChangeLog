@@ -118,3 +118,106 @@
 
   Package-Manager: portage-2.2.27
 
+  22 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  bacula-5.2.13-r3.ebuild, bacula-7.2.0.ebuild, bacula-7.4.0.ebuild:
+  add libressl support
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/bacula-dir.initd,
+  files/bacula-fd.initd, files/bacula-sd.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*bacula-5.2.13-r4 (16 Jun 2016)
+
+  16 Jun 2016; Thomas Beierlein <tomjbe@gentoo.org> +bacula-5.2.13-r4.ebuild:
+  Backport fix for systemd temfile for bacula-clientonly
+
+  Backport from bacula-7.0.5-r1.
+  Fixes Bug 577486. Thanks for reporting alunduil@gentoo.org.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*bacula-7.4.0-r1 (23 Jun 2016)
+
+  23 Jun 2016; Thomas Beierlein <tomjbe@gentoo.org> +bacula-7.4.0-r1.ebuild:
+  Let bacula-dir start successful under systemd (Bug #584442)
+
+  Change systemd's bacula-dir.service so that bacula-dir is run as
+  root:bacula.
+  While not perfect from a security point it makes bacula under systemd
+  compatible with OpenRC environment.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*bacula-7.4.1 (25 Jun 2016)
+
+  25 Jun 2016; Thomas Beierlein <tomjbe@gentoo.org> +bacula-7.4.1.ebuild:
+  Maintenance release
+
+  Package-Manager: portage-2.3.0
+
+  05 Jul 2016; Thomas Beierlein <tomjbe@gentoo.org> -bacula-5.2.13-r3.ebuild,
+  -bacula-7.2.0.ebuild:
+  Cleanup old versions and revisions
+
+  Package-Manager: portage-2.3.0
+
+*bacula-7.0.5-r2 (06 Jul 2016)
+*bacula-5.2.13-r5 (06 Jul 2016)
+
+  06 Jul 2016; Thomas Beierlein <tomjbe@gentoo.org> +bacula-5.2.13-r5.ebuild,
+  +bacula-7.0.5-r2.ebuild:
+  Backport fixes from bug #584442 to let bacula-dir start under systemd
+
+  Package-Manager: portage-2.3.0
+
+*bacula-7.4.2 (11 Jul 2016)
+
+  11 Jul 2016; Thomas Beierlein <tomjbe@gentoo.org> +bacula-7.4.2.ebuild:
+  Maintenance release
+
+  Package-Manager: portage-2.3.0
+
+*bacula-7.4.3 (24 Jul 2016)
+
+  24 Jul 2016; Thomas Beierlein <tomjbe@gentoo.org> +bacula-7.4.3.ebuild:
+  bugfix release for coming gcc-6
+
+  Package-Manager: portage-2.3.0
+
+*bacula-7.4.4 (23 Sep 2016)
+
+  23 Sep 2016; Thomas Beierlein <tomjbe@gentoo.org> +bacula-7.4.4.ebuild:
+  Maintenance release
+
+  Package-Manager: portage-2.3.1
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> bacula-7.4.3.ebuild:
+  amd64 stable wrt bug #593018
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Nov 2016; Thomas Beierlein <tomjbe@gentoo.org> -bacula-5.2.13-r4.ebuild,
+  -bacula-7.4.0.ebuild, -bacula-7.4.0-r1.ebuild, -bacula-7.4.1.ebuild,
+  -bacula-7.4.2.ebuild, -files/5.0.3/bacula-5.0.3-Makefile.patch,
+  -files/5.0.3/bacula-5.0.3-as-needed.patch,
+  -files/5.0.3/bacula-5.0.3-cve.patch, -files/5.0.3/bacula-5.0.3-doc.patch,
+  -files/5.0.3/bacula-5.0.3-fix-static.patch,
+  -files/5.0.3/bacula-5.0.3-ldflags.patch,
+  -files/5.0.3/bacula-5.0.3-lib-search-path.patch,
+  -files/5.0.3/bacula-5.0.3-openssl-1.patch:
+  Drop old
+
+*bacula-7.4.4-r1 (10 Nov 2016)
+
+  10 Nov 2016; Thomas Beierlein <tomjbe@gentoo.org> +bacula-7.4.4-r1.ebuild,
+  +files/newscripts/bacula-dir.initd, +files/newscripts/bacula-fd.initd,
+  +files/newscripts/bacula-sd.initd:
+  Update init.d service scripts bug #595044
+  and fix slot operator for dev-db/postgresql bug #597666
+
+  Package-Manager: portage-2.3.2
+

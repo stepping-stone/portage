@@ -66,3 +66,58 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*runc-9999 (19 Apr 2016)
+*runc-0.1.0 (19 Apr 2016)
+
+  19 Apr 2016; Doug Goldstein <cardoe@gentoo.org> +runc-0.1.0.ebuild,
+  +runc-9999.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.26
+  Signed-off-by: Doug Goldstein <cardoe@gentoo.org>
+
+  27 Apr 2016; Agostino Sarubbo <ago@gentoo.org> runc-0.1.0.ebuild:
+  amd64 stable wrt bug #581236
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*runc-1.0.0_rc1 (20 Jun 2016)
+
+  20 Jun 2016; William Hubbs <williamh@gentoo.org> metadata.xml,
+  +runc-1.0.0_rc1.ebuild:
+  version bump to 1.0.0_rc1
+
+  Package-Manager: portage-2.2.28
+
+*runc-0.1.1 (23 Jun 2016)
+
+  23 Jun 2016; William Hubbs <williamh@gentoo.org> +runc-0.1.1.ebuild:
+  Add 0.1.1 to the tree for containerd-0.2.2
+
+  Package-Manager: portage-2.2.28
+
+  11 Jul 2016; Anthony G. Basile <blueness@gentoo.org> runc-1.0.0_rc1.ebuild,
+  runc-9999.ebuild:
+  keyword ~ppc64
+
+  Package-Manager: portage-2.2.28
+
+*runc-1.0.0_rc2 (04 Oct 2016)
+
+  04 Oct 2016; William Hubbs <williamh@gentoo.org> +runc-1.0.0_rc2.ebuild:
+  1.0.0_rc2 version bump
+
+  Package-Manager: portage-2.3.0
+
+  09 Nov 2016; William Hubbs <williamh@gentoo.org> -runc-1.0.0_rc1.ebuild:
+  remove old release candidate
+
+  Package-Manager: portage-2.3.0
+
+  09 Nov 2016; William Hubbs <williamh@gentoo.org> runc-1.0.0_rc2.ebuild:
+  1.0.0_rc2 Add hardened support
+
+  Package-Manager: portage-2.3.0
+

@@ -97,3 +97,17 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*efibootmgr-13 (19 Aug 2016)
+
+  19 Aug 2016; Mike Gilbert <floppym@gentoo.org> +efibootmgr-13.ebuild:
+  bump to 13
+
+  Package-Manager: portage-2.3.0_p16
+
+*efibootmgr-14 (01 Oct 2016)
+
+  01 Oct 2016; Mike Gilbert <floppym@gentoo.org> +efibootmgr-14.ebuild:
+  bump to 14
+
+  Package-Manager: portage-2.3.1_p4_p628028
+

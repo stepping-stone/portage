@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -14,12 +14,12 @@ HOMEPAGE="https://wiki.gnome.org/Projects/libgdata"
 LICENSE="LGPL-2.1+"
 SLOT="0/22" # subslot = libgdata soname version
 IUSE="+crypt gnome-online-accounts +introspection static-libs test vala"
-REQUIRED_IUSE="
+REQUIRED_USE="
 	gnome-online-accounts? ( crypt )
 	vala? ( introspection )
 "
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 sparc x86"
 
 # configure checks for gtk:3, but only uses it for demos which are not installed
 RDEPEND="

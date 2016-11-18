@@ -90,3 +90,77 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  29 Feb 2016; Amy Winston <amynka@gentoo.org> -josm-5608.ebuild,
+  -josm-6060.ebuild, -josm-7347.ebuild:
+  Drop old versions
+
+  Package-Manager: portage-2.2.26
+
+*josm-9900 (07 Mar 2016)
+
+  07 Mar 2016; Joe Sapp <nixphoeni@gentoo.org> +josm-9900.ebuild:
+  Version bump to 9900
+
+  Package-Manager: portage-2.2.27
+
+*josm-99999 (07 Mar 2016)
+
+  07 Mar 2016; Joe Sapp <nixphoeni@gentoo.org> josm-8800.ebuild,
+  josm-9060.ebuild, josm-9900.ebuild, -josm-9999.ebuild, +josm-99999.ebuild:
+  Move live ebuild to a larger version to avoid conflicts with anticipated
+  upcoming real versions
+
+  Package-Manager: portage-2.2.27
+
+  07 Mar 2016; Joe Sapp <nixphoeni@gentoo.org> josm-99999.ebuild:
+  Remove redundant S= line from live ebuild
+
+  Package-Manager: portage-2.2.27
+
+*josm-10327 (15 Jun 2016)
+
+  15 Jun 2016; Joe Sapp <nixphoeni@gentoo.org> +josm-10327.ebuild:
+  Version bump to 10327
+
+  Package-Manager: portage-2.3.0_rc1
+
+  18 Aug 2016; Amy Winston <amynka@gentoo.org> josm-99999.ebuild:
+  Require Java 8 for 99999
+
+  Gentoo-Bug: 589970
+  Closes: #2099
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> josm-10327.ebuild:
+  amd64 stable wrt bug #589406
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Oct 2016; Joe Sapp <nixphoeni@gentoo.org> metadata.xml:
+  Update maintainer
+
+  Package-Manager: portage-2.3.0
+
+*josm-10966 (21 Oct 2016)
+
+  21 Oct 2016; Joe Sapp <nixphoeni@gentoo.org> +josm-10966.ebuild:
+  Version bump to 10966
+
+  This also bumps the required java version since josm now appears to depend
+  on newer features.
+
+  Package-Manager: portage-2.3.0
+
+  21 Oct 2016; Joe Sapp <nixphoeni@gentoo.org> -josm-8800.ebuild,
+  -josm-9060.ebuild, -josm-9900.ebuild:
+  Remove old versions
+
+  Package-Manager: portage-2.3.0
+
+  21 Oct 2016; Joe Sapp <nixphoeni@gentoo.org>
+  -files/josm-7347-dist-optimized-fix.patch:
+  Remove patch for old version not in tree
+
+  Package-Manager: portage-2.3.0
+

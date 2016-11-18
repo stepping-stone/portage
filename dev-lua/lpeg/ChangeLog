@@ -75,3 +75,43 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*lpeg-1.0.0 (12 Mar 2016)
+
+  12 Mar 2016; Tim Harder <radhermit@gentoo.org> +lpeg-1.0.0.ebuild:
+  version bump to 1.0.0
+
+  21 Apr 2016; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  add vim as a maintainer
+
+  21 Apr 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  Set self as proxy-maint
+
+  Closes: https://github.com/gentoo/gentoo/pull/1317
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*lpeg-1.0.0-r1 (21 Apr 2016)
+
+  21 Apr 2016; Patrice Clement <monsieurp@gentoo.org> +lpeg-1.0.0-r1.ebuild,
+  metadata.xml:
+  revbump to 1.0.0-r1
+
+  Bring up to EAPI 6
+  Add LuaJIT Support
+  Install re.lua
+
+  Gentoo-Bug: https://bugs.gentoo.org/577250
+  Closes: https://github.com/gentoo/gentoo/pull/1317
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  19 Jun 2016; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  revert DOCTYPE to use http://, not https://
+
+  Package-Manager: portage-2.3.0_rc1
+

@@ -240,3 +240,237 @@
 
   Package-Manager: portage-2.2.27
 
+  03 Mar 2016; Ole Reifschneider <tranquility@gentoo.org>
+  libinput-1.2.0.ebuild:
+  Fix typo in libwacom dependency
+
+  Package-Manager: portage-2.2.27
+
+*libinput-1.2.1 (05 Mar 2016)
+
+  05 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +libinput-1.2.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.27
+
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> libinput-1.1.5.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+*libinput-1.2.2 (19 Mar 2016)
+
+  19 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +libinput-1.2.2.ebuild:
+  Version bump to 1.2.2
+
+  Package-Manager: portage-2.2.28
+
+  07 Apr 2016; Jeroen Roovers <jer@gentoo.org> libinput-1.1.5.ebuild:
+  Stable for HPPA PPC64 (bug #566378).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+*libinput-1.2.3 (19 Apr 2016)
+
+  19 Apr 2016; Manuel Rüger <mrueg@gentoo.org> +libinput-1.2.3.ebuild:
+  Version bump to 1.2.3
+
+  Package-Manager: portage-2.2.28
+
+  19 Apr 2016; Manuel Rüger <mrueg@gentoo.org> -libinput-1.0.1.ebuild,
+  -libinput-1.2.0.ebuild, -libinput-1.2.1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+
+  20 Apr 2016; Anthony Ryan <anthonyryan1@gmail.com> libinput-0.9.0.ebuild,
+  libinput-1.1.0.ebuild, libinput-1.1.5.ebuild, libinput-1.2.2.ebuild,
+  libinput-1.2.3.ebuild:
+  HTTPS for *.freedesktop.org
+
+  * Excluding xorg.freedesktop.org
+  * Excluding tango.freedesktop.org
+
+  The following modified ebuilds were found to have problems after
+  modification
+  but the problems were determined to not be a regression.
+
+  Upstream tarball has a new hash:
+  * app-misc/evtest-1.29
+  * app-misc/evtest-1.30
+  * dev-embedded/scratchbox2-2.0-r1
+  * dev-ml/cairo-ocaml-1.2.0
+  * net-libs/libqmi-1.0.0
+  * sys-auth/libfprint-0.4.0
+  * sys-auth/libfprint-0.5.0
+  * sys-auth/libfprint-0.5.1
+
+  Upstream tarball has been deleted:
+  * dev-libs/liblazy-0.2
+  * dev-util/pkgconfig-openbsd-20130507-r1
+  * x11-libs/xvba-video-0.8.0-r3
+  * x11-misc/driconf-0.9.1-r1
+  * x11-misc/xdg-utils-1.1.0_rc2-r1
+
+  03 May 2016; Markus Meier <maekke@gentoo.org> libinput-1.1.5.ebuild:
+  arm stable, bug #566378
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+*libinput-1.3.0 (13 May 2016)
+
+  13 May 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libinput-1.3.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+*libinput-1.3.1 (04 Jun 2016)
+
+  04 Jun 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libinput-1.3.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  07 Jun 2016; Tobias Klausmann <klausman@gentoo.org> libinput-1.3.0.ebuild:
+  1.3.0-r0: add alpha keyword
+
+  Gentoo-Bug: 584468
+
+  Package-Manager: portage-2.3.0_rc1
+
+  08 Jun 2016; Markus Meier <maekke@gentoo.org> libinput-1.3.0.ebuild:
+  arm stable, bug #584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> libinput-1.3.0.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> libinput-1.3.0.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+*libinput-1.3.3 (29 Jun 2016)
+
+  29 Jun 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libinput-1.3.3.ebuild:
+  bump to 1.3.3
+
+  Package-Manager: portage-2.2.28
+
+  29 Jun 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -libinput-0.9.0.ebuild, -libinput-1.2.2.ebuild, -libinput-1.2.3.ebuild:
+  remove old
+
+  Package-Manager: portage-2.2.28
+
+  09 Jul 2016; Pacho Ramos <pacho@gentoo.org> libinput-1.3.0.ebuild:
+  ppc stable, bug 584468
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+
+*libinput-1.4.0 (24 Jul 2016)
+
+  24 Jul 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libinput-1.4.0.ebuild:
+  bump to 1.4.0
+
+  Package-Manager: portage-2.2.28
+
+  30 Jul 2016; Jeroen Roovers <jer@gentoo.org> libinput-1.3.0.ebuild:
+  Stable for HPPA PPC64 (bug #584468).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  03 Aug 2016; Jeroen Roovers <jer@gentoo.org> libinput-1.3.3.ebuild:
+  Stable for HPPA (bug #579266).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  05 Aug 2016; Markus Meier <maekke@gentoo.org> libinput-1.3.3.ebuild:
+  arm stable, bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+*libinput-1.4.2 (31 Aug 2016)
+
+  31 Aug 2016; Manuel Rüger <mrueg@gentoo.org> +libinput-1.4.2.ebuild:
+  Version bump to 1.4.2
+
+  Package-Manager: portage-2.3.0
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libinput-1.3.3.ebuild:
+  x86 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> libinput-1.3.3.ebuild:
+  amd64 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+*libinput-1.5.0 (19 Sep 2016)
+
+  19 Sep 2016; Manuel Rüger <mrueg@gentoo.org> +libinput-1.5.0.ebuild:
+  Version bump to 1.5.0
+
+  Package-Manager: portage-2.3.0
+
+  22 Sep 2016; Tobias Klausmann <klausman@gentoo.org> libinput-1.3.3.ebuild:
+  1.3.3-r0: add alpha keyword
+
+  Gentoo-Bug: 579266
+
+  23 Sep 2016; Tobias Klausmann <klausman@gentoo.org> libinput-1.4.2.ebuild:
+  1.4.2-r0: add alpha keyword
+
+  Gentoo-Bug: 587010
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> libinput-1.4.2.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> libinput-1.4.2.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  03 Oct 2016; Jeroen Roovers <jer@gentoo.org> libinput-1.4.2.ebuild:
+  Stable for HPPA (bug #587010).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  16 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libinput-1.3.3.ebuild:
+  ia64 stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libinput-1.3.3.ebuild:
+  ppc stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

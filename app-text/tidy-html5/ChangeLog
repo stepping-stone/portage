@@ -14,3 +14,22 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*tidy-html5-5.2.0 (12 Apr 2016)
+
+  12 Apr 2016; Patrice Clement <monsieurp@gentoo.org>
+  +tidy-html5-5.2.0.ebuild:
+  Version bump.
+
+  Gentoo-Bug: https://bugs.gentoo.org/579764
+
+  Package-Manager: portage-2.2.26
+
+  06 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  -tidy-html5-5.1.9.ebuild:
+  Clean up vulnerable version.
+
+  Gentoo-Bug: https://bugs.gentoo.org/576870
+  Gentoo-Bug: https://bugs.gentoo.org/576138
+
+  Package-Manager: portage-2.2.28
+

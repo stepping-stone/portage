@@ -4,7 +4,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 python3_{3,4,5} pypy )
+PYTHON_COMPAT=( python2_7 python3_{4,5} pypy )
 PYTHON_REQ_USE="threads(+)"
 
 inherit bash-completion-r1 distutils-r1
@@ -54,6 +54,9 @@ RESTRICT="test"
 #
 #	distutils-r1_python_prepare_all
 #}
+
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND="${DEPEND}"
 
 python_install_all() {
 	local DOCS=( AUTHORS.txt docs/*.rst )

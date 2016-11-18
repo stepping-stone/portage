@@ -63,3 +63,22 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*showmarks-2.2-r1 (02 Sep 2016)
+
+  02 Sep 2016; Patrice Clement <monsieurp@gentoo.org>
+  +showmarks-2.2-r1.ebuild:
+  EAPI 6 bump.
+
+  Package-Manager: portage-2.2.28
+
+  15 Oct 2016; Patrice Clement <monsieurp@gentoo.org> showmarks-2.2-r1.ebuild:
+  Stable for amd64. Mark stable for the remaining arches via the ALLARCHES
+  policy.
+
+  Package-Manager: portage-2.3.0
+
+  15 Oct 2016; Patrice Clement <monsieurp@gentoo.org> -showmarks-2.2.ebuild:
+  clean up old.
+
+  Package-Manager: portage-2.3.0
+

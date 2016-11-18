@@ -264,3 +264,137 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --ignore-arches
 
+  24 Mar 2016; Steev Klimaszewski <steev@gentoo.org> bluez-5.37.ebuild:
+  Keyword 5.37 for ~arm64
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> -bluez-5.36.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+*bluez-5.38 (03 Apr 2016)
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> +bluez-5.38.ebuild,
+  metadata.xml:
+  Version bump, make experimental plugins optional and disabled by default as
+  wanted by upstream (#566004)
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> bluez-5.38.ebuild:
+  Tests were migrated to python3
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Pacho Ramos <pacho@gentoo.org> bluez-5.38.ebuild:
+  The incorrect ebuild was committed by error :S
+
+  Package-Manager: portage-2.2.28
+
+  09 Apr 2016; Pacho Ramos <pacho@gentoo.org> -bluez-5.38.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+*bluez-5.39 (09 Apr 2016)
+
+  09 Apr 2016; Pacho Ramos <pacho@gentoo.org> +bluez-5.39.ebuild,
+  files/bluez-udevadm-path.patch, metadata.xml:
+  Version bump (#579276 by Lars Wendler (Polynomial-C) and Aidan Thornton),
+  fix systemd macro bogus expansion (#527432 by Mike Gilbert)
+
+  Package-Manager: portage-2.2.28
+
+  09 Apr 2016; Pacho Ramos <pacho@gentoo.org> bluez-5.37.ebuild:
+  x86 stable, bug #573370
+
+  Package-Manager: portage-2.2.28
+
+  09 Apr 2016; Pacho Ramos <pacho@gentoo.org>
+  +files/bluez-5.39-systemd-quote.patch:
+  Commit forgotten patch (#579438)
+
+  Package-Manager: portage-2.2.28
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> bluez-5.39.ebuild:
+  amd64 stable wrt bug #582260
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/bluetooth-init.d-r2, files/bluetooth-init.d-r3, files/rfcomm-init.d,
+  files/rfcomm-init.d-r2:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  24 May 2016; Markus Meier <maekke@gentoo.org> bluez-5.39.ebuild:
+  arm stable, bug #582260
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> bluez-5.39.ebuild:
+  x86 stable wrt bug #582260
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> bluez-5.39.ebuild:
+  ppc stable wrt bug #582260
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*bluez-5.41 (07 Sep 2016)
+
+  07 Sep 2016; Manuel Rüger <mrueg@gentoo.org> +bluez-5.41.ebuild:
+  Version bump to 5.41
+
+  Gentoo-Bug: 587522
+
+  Package-Manager: portage-2.3.0
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> bluez-5.39.ebuild:
+  Stable for HPPA PPC64 (bug #582260).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*bluez-5.42 (09 Oct 2016)
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> +bluez-5.42.ebuild:
+  Version bump, force python2 as all tests but two are needing it (don't
+  install the two test apps needing python3 until we see how to pull in
+  python2 and 3 at the same time for RDEPEND with python eclasses)
+
+  Package-Manager: portage-2.3.1
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> -bluez-5.35.ebuild,
+  -bluez-5.37.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+
+  18 Oct 2016; Pacho Ramos <pacho@gentoo.org> -bluez-5.41.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+
+  29 Oct 2016; Pacho Ramos <pacho@gentoo.org> -bluez-5.42.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.2
+
+*bluez-5.43 (29 Oct 2016)
+
+  29 Oct 2016; Pacho Ramos <pacho@gentoo.org> +bluez-5.43.ebuild:
+  Version bump fixing pairing (#597820 by Christian Loosli), also we don't
+  need to manually install hex2hcd anymore (#597528 by BT).
+
+  Package-Manager: portage-2.3.2
+

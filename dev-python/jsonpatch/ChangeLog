@@ -71,3 +71,24 @@
 
   Package-Manager: portage-2.2.27
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  jsonpatch-1.13.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+  02 Mar 2016; Patrick Lauer <patrick@gentoo.org> jsonpatch-1.13.ebuild:
+  Add py35
+
+  Package-Manager: portage-2.2.27
+
+  12 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -jsonpatch-1.11.ebuild:
+  doing the test
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> jsonpatch-1.9.ebuild,
+  jsonpatch-1.13.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

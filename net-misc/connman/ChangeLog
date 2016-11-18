@@ -110,3 +110,134 @@
 
   Package-Manager: portage-2.2.26
 
+  27 Mar 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Update metadata.xml
+
+  Update metadata.xml to replace balint@szentedwg.ro with
+  nvinson234@gmail.com.
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1144
+
+  27 Mar 2016; Ian Delaney <idella4@gentoo.org> -connman-1.27.ebuild,
+  -connman-1.30.ebuild, -connman-1.31.ebuild:
+  Remove outdated versions
+
+  Remove outdated versions connman-1.27 and conmann-1.30.
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1144
+
+*connman-1.31-r1 (27 Mar 2016)
+
+  27 Mar 2016; Ian Delaney <idella4@gentoo.org> +connman-1.31-r1.ebuild,
+  +files/connman-1.31-iptables-1.6.0.patch, +files/connman-1.31-xtables.patch:
+  Fix iptables and xtables issues
+
+  Fixes issues with iptables, xtables, and glibc when building and running
+  connan.  Specifically, the patch, connman-1.31-iptables-1.6.0.patch,
+  fixes the icompatibilities between iptables and connman (due to an ABI
+  break in iptables-1.6.0).  The patch, connman-1.31-xtables.patch, uses
+  some preprocessor tricks to route around incompatibilies seen between
+  newer Linux kernels and glibc when both net/if.h and linu/if.h are
+  included in the same source.
+
+  Gentoo-bug: #573174, #577584
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1144
+
+  29 Mar 2016; Ian Delaney <idella4@gentoo.org>
+  files/connman-1.31-xtables.patch:
+  Disable compatibility logic to kernels < 4.5
+
+  The compatiblity logic is only needed for kernel headers 4.5 or newer.
+  The older headers don't need this fix.  Make sure the fix is not applied
+  for them.
+
+  Gentoo-bug: 578404
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1154
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+*connman-1.32 (29 Apr 2016)
+
+  29 Apr 2016; Sam Jorna <wraeth@gentoo.org> +connman-1.32.ebuild,
+  +files/connman-1.32-execinfo-assumptions.patch:
+  Version bump to 1.32
+
+  Gentoo-bug: 581368
+  Package-Manager: portage-2.2.28
+
+  29 Apr 2016; Sam Jorna <wraeth@gentoo.org> -connman-1.31-r1.ebuild,
+  -files/connman-1.31-iptables-1.6.0.patch:
+  remove outdated versions
+
+  Closes: https://github.com/gentoo/gentoo/pull/1373
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/connman.initd2:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  18 May 2016; Sam Jorna <wraeth@gentoo.org> files/connman-1.31-xtables.patch:
+  Update xtables patch for kernel versions >= 4.6.0
+
+  Gentoo-bug: 583402
+  Package-Manager: portage-2.3.0_rc1
+  Signed-off-by: Sam Jorna <wraeth@gentoo.org>
+
+  19 Jun 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  drop unnecessary <description/> from metadata
+
+  Package-Manager: portage-2.3.0_rc1
+
+*connman-1.33 (26 Jul 2016)
+
+  26 Jul 2016; Yixun Lan <dlan@gentoo.org> +connman-1.33.ebuild:
+  version bump 1.33
+
+  Package-Manager: portage-2.3.0
+
+*connman-1.33-r1 (11 Oct 2016)
+
+  11 Oct 2016; Yixun Lan <dlan@gentoo.org> +connman-1.33-r1.ebuild,
+  files/connman-1.32-execinfo-assumptions.patch,
+  +files/connman-1.33-polkit-configure-check-fix.patch,
+  +files/connman-1.33-resolv-conf-overwrite.patch:
+  Fix polkit check, resolv.conf overwrite issue
+
+  Fixes the broken pollkit detection error
+  Fixes the issue of /etc/resolv.conf being overwritten unconditionally
+  Removes the unneeded hunks from the connman-1.32-execinfo-assumptions.patch
+
+  Gentoo-bug: #591596
+  Gentoo-bug: #596270
+  Gentoo-bug: #596276
+
+  Closes: https://github.com/gentoo/gentoo/pull/2515
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Yixun Lan <dlan@gentoo.org>
+
+  11 Oct 2016; Yixun Lan <dlan@gentoo.org> -connman-1.32.ebuild,
+  -connman-1.33.ebuild, -files/connman-1.32-execinfo-assumptions.patch:
+  Remove outdated connman ebuilds.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Yixun Lan <dlan@gentoo.org>
+
+  16 Oct 2016; David Seifert <soap@gentoo.org> connman-1.33-r1.ebuild:
+  add keepdir call
+
+  Add a keepdir for /usr/lib/connman/scripts.  If none of connman's
+  scripts are installed, upstream's build system will create and install
+  an empty directory.
+
+  Gentoo-bug: 596874
+
+  Package-Manager: portage-2.3.2
+  Closes: https://github.com/gentoo/gentoo/pull/2568
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+

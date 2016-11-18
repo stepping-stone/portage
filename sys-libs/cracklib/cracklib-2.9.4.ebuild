@@ -10,7 +10,7 @@ inherit eutils distutils-r1 libtool multilib-minimal toolchain-funcs
 
 MY_P=${P/_}
 DESCRIPTION="Password Checking Library"
-HOMEPAGE="http://sourceforge.net/projects/cracklib"
+HOMEPAGE="https://sourceforge.net/projects/cracklib"
 SRC_URI="mirror://sourceforge/cracklib/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -82,7 +82,7 @@ python_test() {
 multilib_src_install() {
 	default
 	# move shared libs to /
-	multilib_is_native_abi && gen_usr_ldscript -a crack
+	gen_usr_ldscript -a crack
 
 	do_python
 }

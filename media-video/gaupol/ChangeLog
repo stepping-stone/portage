@@ -74,3 +74,52 @@
 
   Package-Manager: portage-2.2.27
 
+*gaupol-0.91 (05 Aug 2016)
+
+  05 Aug 2016; Mike Gilbert <floppym@gentoo.org> +gaupol-0.91.ebuild,
+  metadata.xml:
+  bump to 0.91, update LICENSE
+
+  Package-Manager: portage-2.3.0
+
+  05 Aug 2016; Mike Gilbert <floppym@gentoo.org> gaupol-0.19.2-r1.ebuild,
+  gaupol-0.28.2-r1.ebuild:
+  update HOMEPAGE
+
+  Closes: https://github.com/gentoo/gentoo/pull/2021
+  Package-Manager: portage-2.3.0
+
+*gaupol-0.92 (21 Aug 2016)
+
+  21 Aug 2016; Patrice Clement <monsieurp@gentoo.org> +gaupol-0.92.ebuild:
+  version bump to 0.92.
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2116
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  21 Aug 2016; Patrice Clement <monsieurp@gentoo.org> gaupol-0.91.ebuild:
+  Stable for amd64. Retroactively mark stable for the remaining arches using
+  the ALLARCHES policy.
+
+  Package-Manager: portage-2.2.28
+
+  21 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -gaupol-0.19.2-r1.ebuild, -gaupol-0.28.2-r1.ebuild:
+  Clean up old.
+
+  Package-Manager: portage-2.2.28
+
+*gaupol-1.0 (31 Oct 2016)
+
+  31 Oct 2016; Michał Górny <mgorny@gentoo.org> +gaupol-1.0.ebuild:
+  bump to 1.0
+
+  Closes: https://github.com/gentoo/gentoo/pull/2697
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> gaupol-0.91.ebuild,
+  gaupol-0.92.ebuild, gaupol-1.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

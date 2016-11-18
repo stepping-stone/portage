@@ -104,3 +104,11 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #390951
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pkginfo-1.2.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

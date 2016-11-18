@@ -1,10 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
 
-PYTHON_COMPAT=( python{3_3,3_4} )
+PYTHON_COMPAT=( python3_4 )
 inherit autotools eutils python-single-r1 user
 
 MY_PV=${PV/_/-}
@@ -16,14 +16,14 @@ SRC_URI=""
 KEYWORDS=""
 
 HOMEPAGE="http://znc.in"
-LICENSE="GPL-2"
+LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="daemon debug ipv6 libressl perl python ssl sasl tcl"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
-	dev-libs/icu
+	dev-libs/icu:=
 	sys-libs/zlib
 	perl? ( >=dev-lang/perl-5.10 )
 	python? ( ${PYTHON_DEPS} )

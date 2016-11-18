@@ -153,3 +153,120 @@
 
   The forced upgrade has been moved to @system now.
 
+  30 Mar 2016; Mike Frysinger <vapier@gentoo.org> libpcre-8.35.ebuild,
+  libpcre-8.36.ebuild, libpcre-8.37-r2.ebuild, libpcre-8.38.ebuild:
+  toolchain-funcs.eclass: gen_usr_ldscript: integrate multilib_is_native_abi
+  support #479448
+
+  Many ebuilds have started checking multilib_is_native_abi to see if they
+  should call gen_usr_ldscript.  Since that logic always makes sense, add
+  it directly to the gen_usr_ldscript function.
+
+  30 Mar 2016; Mike Frysinger <vapier@gentoo.org>
+  -files/libpcre-8.37-CVE-2015-3210.patch,
+  -files/libpcre-8.37-CVE-2015-5073.patch, -libpcre-8.35.ebuild,
+  -libpcre-8.36.ebuild, -libpcre-8.37-r2.ebuild:
+  drop old 8.3[567] versions
+
+*libpcre-8.38-r1 (02 Apr 2016)
+
+  02 Apr 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/libpcre-8.38-CVE-2016-1283.patch,
+  +files/libpcre-8.38-ZDI-CAN-3542.patch, +libpcre-8.38-r1.ebuild:
+  add upstream fixes #570694 #575546
+
+*libpcre-8.39 (14 Jun 2016)
+
+  14 Jun 2016; Lars Wendler <polynomial-c@gentoo.org> +libpcre-8.39.ebuild:
+  Bump to version 8.39
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  14 Jun 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -files/libpcre-7.9-pkg-config.patch, -libpcre-7.9-r1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  20 Jun 2016; Tobias Klausmann <klausman@gentoo.org> libpcre-8.38-r1.ebuild:
+  8.38-r1: add alpha keyword
+
+  Gentoo-Bug: 575546
+
+  Package-Manager: portage-2.3.0_rc1
+
+  21 Jun 2016; Jeroen Roovers <jer@gentoo.org> libpcre-8.38-r1.ebuild:
+  Stable for HPPA PPC64 (bug #575546).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  26 Jun 2016; Markus Meier <maekke@gentoo.org> libpcre-8.38-r1.ebuild:
+  arm stable, bug #575546
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="arm"
+
+  27 Jun 2016; Agostino Sarubbo <ago@gentoo.org> libpcre-8.38-r1.ebuild:
+  amd64 stable wrt bug #575546
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Jun 2016; Agostino Sarubbo <ago@gentoo.org> libpcre-8.38-r1.ebuild:
+  x86 stable wrt bug #575546
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> libpcre-8.38-r1.ebuild:
+  ppc stable wrt bug #575546
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> libpcre-8.38-r1.ebuild:
+  sparc stable wrt bug #575546
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> libpcre-8.38-r1.ebuild:
+  ia64 stable wrt bug #575546
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  10 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> -libpcre-8.38.ebuild:
+  Security cleanup (bug #575546).
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  16 Oct 2016; Jeroen Roovers <jer@gentoo.org> libpcre-8.39.ebuild:
+  Stable for HPPA PPC64 (bug #592034).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+  16 Oct 2016; Tobias Klausmann <klausman@gentoo.org> libpcre-8.39.ebuild:
+  8.39-r0: stable on alpha
+
+  Gentoo-Bug: 592034
+
+  24 Oct 2016; Markus Meier <maekke@gentoo.org> libpcre-8.39.ebuild:
+  arm stable, bug #592034
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+
+  10 Nov 2016; Mike Frysinger <vapier@gentoo.org> libpcre-8.38-r1.ebuild:
+  mark 8.38-r1 arm64/m68k/s390/sh stable
+

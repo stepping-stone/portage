@@ -89,3 +89,94 @@
 
   Package-Manager: portage-2.2.26
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  mate-screensaver-1.8.1-r1.ebuild:
+  amd64 stable wrt bug #573048
+
+  Package-Manager: portage-2.2.26
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  mate-screensaver-1.8.1-r1.ebuild:
+  x86 stable wrt bug #573048
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Mar 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  -mate-screensaver-1.8.0.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.26
+
+  19 Apr 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Fix typo in consolekit pkg ref
+
+  30 May 2016; Mikle Kolyada <zlogene@gentoo.org>
+  mate-screensaver-1.10.2-r1.ebuild:
+  Add ~arm keyword wrt bug #508072
+
+  Package-Manager: portage-2.2.28
+
+*mate-screensaver-1.10.2-r2 (20 Jul 2016)
+
+  20 Jul 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  +files/mate-screensaver-1.10-fix-systemd-configure.ac.patch,
+  +mate-screensaver-1.10.2-r2.ebuild:
+  Patch configure.ac systemd, #585446 #589258
+
+  Package-Manager: portage-2.2.28
+
+  20 Jul 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  -mate-screensaver-1.10.2-r1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.2.28
+
+  25 Jul 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  mate-screensaver-1.10.2-r2.ebuild:
+  amd64 x86 stable wrt bug #579644
+
+  Package-Manager: portage-2.2.28
+
+  06 Aug 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  -mate-screensaver-1.8.1-r1.ebuild:
+  Drop 1.8.x
+
+  Package-Manager: portage-2.2.26
+
+*mate-screensaver-1.12.0 (12 Aug 2016)
+
+  12 Aug 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  +mate-screensaver-1.12.0.ebuild, metadata.xml:
+  1.12.x vbump, add gtk3, import from project repo
+
+  Package-Manager: portage-2.3.0
+
+  12 Aug 2016; NP-Hardass <NP-Hardass@gentoo.org> metadata.xml:
+  Fix typo in metadata.xml
+
+  Package-Manager: portage-2.3.0
+
+*mate-screensaver-1.12.0-r1 (13 Aug 2016)
+
+  13 Aug 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  -mate-screensaver-1.12.0.ebuild, +mate-screensaver-1.12.0-r1.ebuild:
+  Drop gtk3 dep for mate-session-manager
+
+  Package-Manager: portage-2.3.0
+
+  15 Oct 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  mate-screensaver-1.12.0-r1.ebuild:
+  Stable on amd64 keyword wrt #596998
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: NP-Hardass <NP-Hardass@gentoo.org>
+
+  15 Oct 2016; NP-Hardass <NP-Hardass@gentoo.org>
+  mate-screensaver-1.12.0-r1.ebuild:
+  Stable on x86 keyword wrt #596998
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: NP-Hardass <NP-Hardass@gentoo.org>
+

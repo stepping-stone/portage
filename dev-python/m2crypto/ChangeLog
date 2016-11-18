@@ -81,3 +81,48 @@
 
   Package-Manager: portage-2.2.27
 
+*m2crypto-0.24.0 (03 Apr 2016)
+
+  03 Apr 2016; Manuel Rüger <mrueg@gentoo.org> +m2crypto-0.24.0.ebuild:
+  Version bump to 0.24.0
+
+  Package-Manager: portage-2.2.28
+
+  14 Jun 2016; Mike Frysinger <vapier@gentoo.org> m2crypto-0.22.3-r4.ebuild,
+  m2crypto-0.22.3-r5.ebuild, m2crypto-0.23.0.ebuild, m2crypto-0.24.0.ebuild,
+  metadata.xml:
+  update HOMEPAGE after github->gitlab move
+
+*m2crypto-0.25.1 (20 Oct 2016)
+
+  20 Oct 2016; Patrick Lauer <patrick@gentoo.org> +m2crypto-0.25.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.2
+
+*m2crypto-0.25.1-r1 (28 Oct 2016)
+
+  28 Oct 2016; David Seifert <soap@gentoo.org> -m2crypto-0.25.1.ebuild,
+  +m2crypto-0.25.1-r1.ebuild:
+  Add missing RDEPEND on dev-python/typing
+
+  Gentoo-bug: 597744
+  * EAPI=6
+  * Removing old ebuild as it doesn't have the
+    dependency, so m2crypto will not work right.
+
+  Signed off by: Jonathan Scruggs (j.scruggs@gmail.com)
+  Closes: https://github.com/gentoo/gentoo/pull/2686
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*m2crypto-0.25.1-r2 (03 Nov 2016)
+
+  03 Nov 2016; Dirkjan Ochtman <djc@gentoo.org> -m2crypto-0.25.1-r1.ebuild,
+  +m2crypto-0.25.1-r2.ebuild:
+  add missing python_usedep for typing
+
+  Thanks to Steffen Hau in bug 597744 comment 10 for reporting.
+
+  Signed-off by: Jonathan Scruggs (j.scruggs@gmail.com)
+

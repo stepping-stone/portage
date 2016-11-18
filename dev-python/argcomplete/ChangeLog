@@ -85,3 +85,47 @@
 
   Package-Manager: portage-2.2.27
 
+*argcomplete-1.1.1 (05 Apr 2016)
+
+  05 Apr 2016; Manuel Rüger <mrueg@gentoo.org> +argcomplete-1.1.1.ebuild:
+  Version bump to 1.1.1
+
+  Package-Manager: portage-2.2.28
+
+*argcomplete-1.4.1 (17 Jul 2016)
+
+  17 Jul 2016; Patrick Lauer <patrick@gentoo.org> +argcomplete-1.4.1.ebuild:
+  Bump
+
+  Package-Manager: portage-2.3.0
+
+  22 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  argcomplete-1.4.1.ebuild:
+  Stable for amd64. Retroactively mark stable for the remaining arches using
+  the ALLARCHES policy.
+
+  Package-Manager: portage-2.2.28
+
+  22 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -argcomplete-0.8.1.ebuild, -argcomplete-0.8.9.ebuild,
+  -argcomplete-0.9.0.ebuild, -argcomplete-1.0.0.ebuild,
+  -argcomplete-1.1.0.ebuild, -argcomplete-1.1.1.ebuild:
+  Clean up old.
+
+  Package-Manager: portage-2.2.28
+
+*argcomplete-1.6.0 (13 Nov 2016)
+
+  13 Nov 2016; David Seifert <soap@gentoo.org> +argcomplete-1.6.0.ebuild,
+  metadata.xml:
+  version bump 1.6.0
+
+  * EAPI=6
+  * Add pypy & pypy3 to PYTHON_COMPAT (tested upstream)
+  * Add ~arm to keywords (tested by me)
+  * Add new dependency on dev-python/pexpect for testing
+  * Add github to upstream metadata
+  Closes: https://github.com/gentoo/gentoo/pull/2812
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+

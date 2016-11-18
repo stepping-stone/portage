@@ -96,3 +96,56 @@
   01 Feb 2016; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.82.ebuild:
   version bump to 0.7.82
 
+*mediainfo-0.7.83 (06 Mar 2016)
+
+  06 Mar 2016; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.83.ebuild:
+  version bump to 0.7.83
+
+*mediainfo-0.7.84 (11 Apr 2016)
+
+  11 Apr 2016; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.84.ebuild:
+  version bump to 0.7.84
+
+*mediainfo-0.7.85 (01 May 2016)
+
+  01 May 2016; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.85.ebuild:
+  version bump to 0.7.85
+
+*mediainfo-0.7.86 (13 Jun 2016)
+
+  13 Jun 2016; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.86.ebuild:
+  version bump to 0.7.86
+
+  13 Jun 2016; Tim Harder <radhermit@gentoo.org> -mediainfo-0.7.80.ebuild,
+  -mediainfo-0.7.81.ebuild, -mediainfo-0.7.82.ebuild,
+  -mediainfo-0.7.83.ebuild, -mediainfo-0.7.84.ebuild:
+  remove old
+
+*mediainfo-0.7.87 (26 Jul 2016)
+
+  26 Jul 2016; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.87.ebuild:
+  version bump to 0.7.87
+
+*mediainfo-0.7.88 (01 Sep 2016)
+
+  01 Sep 2016; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.88.ebuild:
+  version bump to 0.7.88
+
+*mediainfo-0.7.89 (03 Oct 2016)
+
+  03 Oct 2016; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.89.ebuild:
+  version bump to 0.7.89
+
+*mediainfo-0.7.90 (03 Nov 2016)
+
+  03 Nov 2016; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.90.ebuild:
+  version bump to 0.7.90
+
+  03 Nov 2016; Tim Harder <radhermit@gentoo.org> mediainfo-0.7.89.ebuild:
+  stabilize 0.7.89
+
+  03 Nov 2016; Tim Harder <radhermit@gentoo.org> -mediainfo-0.7.73.ebuild,
+  -mediainfo-0.7.85.ebuild, -mediainfo-0.7.86.ebuild,
+  -mediainfo-0.7.87.ebuild, -mediainfo-0.7.88.ebuild:
+  remove old
+

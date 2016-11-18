@@ -122,3 +122,22 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  07 May 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Add missing upstream maintainer's name
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> pinta-1.6-r2.ebuild:
+  amd64/x86 stable, bug #594588
+
+  Package-Manager: portage-2.3.1
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> -pinta-1.4.ebuild,
+  -pinta-1.6.ebuild, -pinta-1.6-r1.ebuild:
+  drop old
+
+  Package-Manager: portage-2.3.1
+
+  16 Nov 2016; Pacho Ramos <pacho@gentoo.org> pinta-9999.ebuild:
+  Update live ebuild (#598854 by Alessandro Calorì)
+
+  Package-Manager: portage-2.3.2
+

@@ -76,3 +76,28 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*recoll-1.19.5-r1 (25 Jun 2016)
+
+  25 Jun 2016; Michał Górny <mgorny@gentoo.org> +recoll-1.19.5-r1.ebuild:
+  Convert to python-single-r1
+
+  17 Aug 2016; Pacho Ramos <pacho@gentoo.org> -recoll-1.19.5.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+  01 Nov 2016; Pacho Ramos <pacho@gentoo.org> recoll-1.19.5-r1.ebuild:
+  amd64/x86 stable, bug #597462
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Pacho Ramos <pacho@gentoo.org> -recoll-1.17.3-r1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.2
+

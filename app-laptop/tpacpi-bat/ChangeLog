@@ -73,3 +73,32 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/tpacpi-bat.initd.1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*tpacpi-bat-3.0-r1 (23 Aug 2016)
+
+  23 Aug 2016; Christoph Junghans <ottxor@gentoo.org>
+  +files/tpacpi-bat.confd.1, +files/tpacpi-bat.initd.2,
+  +tpacpi-bat-3.0-r1.ebuild, tpacpi-bat-9999.ebuild:
+  battery number in configuration instead of init script
+
+  close #1857 gh
+
+  23 Aug 2016; Christoph Junghans <ottxor@gentoo.org> tpacpi-bat-9999.ebuild:
+  fixed live ebuild
+
+  Package-Manager: portage-2.2.28
+
+  14 Nov 2016; Christoph Junghans <junghans@gentoo.org> metadata.xml:
+  update metadata
+
+  Package-Manager: portage-2.3.0
+
+  15 Nov 2016; Christoph Junghans <junghans@gentoo.org>
+  files/tpacpi-bat.initd.1, files/tpacpi-bat.initd.2:
+  update patch
+
+  Package-Manager: portage-2.3.0
+

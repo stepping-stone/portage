@@ -96,3 +96,15 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*sparql-wrapper-1.7.6 (02 Mar 2016)
+
+  02 Mar 2016; Patrick Lauer <patrick@gentoo.org>
+  +sparql-wrapper-1.7.6.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.27
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> sparql-wrapper-1.6.0.ebuild,
+  sparql-wrapper-1.6.4.ebuild, sparql-wrapper-1.7.6.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

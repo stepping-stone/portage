@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -12,20 +12,28 @@ MY_PV=${PV/_/}
 inherit toolchain-funcs
 
 BOOTSTRAP_DIST="https://dev.gentoo.org/~williamh/dist"
-SRC_URI="
+SRC_URI="!gccgo? (
 kernel_Darwin? (
 	x64-macos? ( ${BOOTSTRAP_DIST}/go-darwin-amd64-bootstrap.tbz )
 )
 kernel_FreeBSD? (
 amd64-fbsd? ( ${BOOTSTRAP_DIST}/go-freebsd-amd64-bootstrap.tbz )
-x86-fbsd? ( ${BOOTSTRAP_DIST}/go-freebsd-386-bootstrap.tbz )
+x86-fbsd? ( ${BOOTSTRAP_DIST}/go-freebsd-386-bootstrap-1.tbz )
 )
 kernel_linux? (
 	amd64? ( ${BOOTSTRAP_DIST}/go-linux-amd64-bootstrap.tbz )
 	arm? ( ${BOOTSTRAP_DIST}/go-linux-arm-bootstrap.tbz )
 	arm64? ( ${BOOTSTRAP_DIST}/go-linux-arm64-bootstrap.tbz )
-	ppc64? ( ${BOOTSTRAP_DIST}/go-linux-ppc64-bootstrap.tbz )
-	x86? ( ${BOOTSTRAP_DIST}/go-linux-386-bootstrap.tbz )
+	ppc64? (
+		${BOOTSTRAP_DIST}/go-linux-ppc64-bootstrap.tbz
+		${BOOTSTRAP_DIST}/go-linux-ppc64le-bootstrap.tbz
+	)
+	s390? ( ${BOOTSTRAP_DIST}/go-linux-s390x-bootstrap.tbz )
+	x86? ( ${BOOTSTRAP_DIST}/go-linux-386-bootstrap-1.tbz )
+)
+kernel_SunOS? (
+	x64-solaris? ( ${BOOTSTRAP_DIST}/go-solaris-amd64-bootstrap.tbz )
+)
 )
 "
 
@@ -34,12 +42,10 @@ if [[ ${PV} = 9999 ]]; then
 	inherit git-r3
 else
 	SRC_URI+="https://storage.googleapis.com/golang/go${MY_PV}.src.tar.gz"
-	# go-bootstrap-1.4 only supports go on amd64, arm and x86 architectures.
-	# Allowing other bootstrap options would enable arm64 and ppc64 builds.
 	case ${PV} in
 		*9999*|*_rc*) ;;
 		*)
-			KEYWORDS="-* ~amd64 ~arm ~x86 ~amd64-fbsd ~x86-fbsd ~x64-macos"
+			KEYWORDS="-* ~amd64 ~arm ~arm64 ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~x64-macos ~x64-solaris"
 			;;
 	esac
 fi
@@ -49,13 +55,16 @@ HOMEPAGE="http://www.golang.org"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-IUSE=""
+IUSE="gccgo"
 
-DEPEND=""
+DEPEND="gccgo? ( >=sys-devel/gcc-5[go] )"
 RDEPEND="!<dev-go/go-tools-0_pre20150902"
 
 # These test data objects have writable/executable stacks.
 QA_EXECSTACK="usr/lib/go/src/debug/elf/testdata/*.obj"
+
+# Do not complain about CFLAGS, etc, since Go doesn't use them.
+QA_FLAGS_IGNORED='.*'
 
 REQUIRES_EXCLUDE="/usr/lib/go/src/debug/elf/testdata/*"
 
@@ -80,6 +89,8 @@ go_arch()
 	case "${portage_arch}" in
 		x86)	echo 386;;
 		x64-*)	echo amd64;;
+		ppc64) [[ $(tc-endian $@) = big ]] && echo ppc64 || echo ppc64le ;;
+		s390) echo s390x ;;
 		*)		echo "${portage_arch}";;
 	esac
 }
@@ -143,6 +154,14 @@ src_unpack()
 src_compile()
 {
 	export GOROOT_BOOTSTRAP="${WORKDIR}"/go-$(go_os)-$(go_arch)-bootstrap
+	if use gccgo; then
+		mkdir -p "${GOROOT_BOOTSTRAP}/bin" || die
+		local go_binary=$(gcc-config --get-bin-path)/go-5
+		[[ -x ${go_binary} ]] || go_binary=$(
+			find "${EPREFIX}"/usr/${CHOST}/gcc-bin/*/go-5 | sort -V | tail -n1)
+		[[ -x ${go_binary} ]] || die "go-5: command not found"
+		ln -s "${go_binary}" "${GOROOT_BOOTSTRAP}/bin/go" || die
+	fi
 	export GOROOT_FINAL="${EPREFIX}"/usr/lib/go
 	export GOROOT="$(pwd)"
 	export GOBIN="${GOROOT}/bin"
@@ -159,6 +178,7 @@ src_compile()
 	if [[ ${ARCH} == arm ]]; then
 		export GOARM=$(go_arm)
 	fi
+	elog "GOROOT_BOOTSTRAP is ${GOROOT_BOOTSTRAP}"
 
 	cd src
 	./make.bash || die "build failed"
@@ -199,39 +219,4 @@ src_install()
 		dosym ../lib/go/${bin_path}/${f} /usr/bin/${f}
 	done
 	dodoc AUTHORS CONTRIBUTORS PATENTS README.md
-}
-
-pkg_preinst()
-{
-	has_version '<dev-lang/go-1.4' &&
-		export had_support_files=true ||
-		export had_support_files=false
-}
-
-pkg_postinst()
-{
-	# If the go tool sees a package file timestamped older than a dependancy it
-	# will rebuild that file.  So, in order to stop go from rebuilding lots of
-	# packages for every build we need to fix the timestamps.  The compiler and
-	# linker are also checked - so we need to fix them too.
-	ebegin "fixing timestamps to avoid unnecessary rebuilds"
-	tref="usr/lib/go/pkg/*/runtime.a"
-	find "${EROOT}"usr/lib/go -type f \
-		-exec touch -r "${EROOT}"${tref} {} \;
-	eend $?
-
-	if [[ ${PV} != 9999 && -n ${REPLACING_VERSIONS} &&
-		${REPLACING_VERSIONS} != ${PV} ]]; then
-		elog "Release notes are located at http://golang.org/doc/go${PV}"
-	fi
-
-	if $had_support_files; then
-		ewarn
-		ewarn "All editor support, IDE support, shell completion"
-		ewarn "support, etc has been removed from the go package"
-		ewarn "upstream."
-		ewarn "For more information on which support is available, see"
-		ewarn "the following URL:"
-		ewarn "https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins"
-	fi
 }

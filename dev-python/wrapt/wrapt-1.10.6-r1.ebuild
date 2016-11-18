@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_3 python3_4 python3_5 pypy )
+PYTHON_COMPAT=( python2_7 python3_4 python3_5 pypy )
 
 inherit distutils-r1 vcs-snapshot
 
@@ -15,7 +15,7 @@ S="${S}-r1"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc test"
 
 DEPEND="

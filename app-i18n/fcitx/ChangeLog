@@ -101,3 +101,87 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  23 Mar 2016; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  app-i18n/*fcitx*: Use tabs in metadata.xml.
+
+  23 Mar 2016; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  app-i18n/*fcitx*: Add Arfrever as maintainer.
+
+*fcitx-4.2.9.1 (24 Mar 2016)
+
+  24 Mar 2016; Mike Gilbert <floppym@gentoo.org> +fcitx-4.2.9.1.ebuild,
+  +files/fcitx-4.2.9.1-qt-4_ucs4.patch, +files/fcitx-4.2.9.1-tray_icon.patch,
+  metadata.xml:
+  Version bump (4.2.9.1).
+
+*fcitx-9999 (24 Mar 2016)
+
+  24 Mar 2016; Mike Gilbert <floppym@gentoo.org> +fcitx-9999.ebuild:
+  Add live ebuild.
+
+  08 Apr 2016; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  Remove local definitions for global USE=vala and USE=introspeciton
+
+  23 packages had local use definitions that matched up perfectly with
+  the global definitions. Remove them as they're not necessary. This
+  is a metadata only change.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1100
+
+  Acked-by: Justin Lecher <jlec@gentoo.org>
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  28 Apr 2016; Mike Gilbert <floppym@gentoo.org> -fcitx-4.2.7.ebuild,
+  -files/fcitx-4.2.7-gcc46-compatible.patch, metadata.xml:
+  Delete old version.
+
+  30 May 2016; Mike Gilbert <floppym@gentoo.org> fcitx-9999.ebuild:
+  Update LICENSE.
+
+  https://github.com/fcitx/fcitx/commit/abf02021cbfd9f8ec157c5e0d20de8f2f0b467
+  44
+
+  31 May 2016; Jeroen Roovers <jer@gentoo.org> fcitx-4.2.9.1.ebuild:
+  Mark ~hppa (bug #568972).
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --ignore-arches
+
+  01 Jul 2016; Jeroen Roovers <jer@gentoo.org> fcitx-4.2.9.1.ebuild:
+  Mark ~ppc64 (bug #568972).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  29 Jul 2016; Mike Gilbert <floppym@gentoo.org> fcitx-4.2.9.1.ebuild:
+  Restore ~ppc keyword.
+
+  17 Aug 2016; Jeroen Roovers <jer@gentoo.org> fcitx-4.2.9.1.ebuild:
+  Stable for HPPA PPC64 (bug #589960).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  15 Sep 2016; Mike Gilbert <floppym@gentoo.org> fcitx-4.2.9.1.ebuild,
+  fcitx-9999.ebuild, files/fcitx-4.2.9.1-qt-4_ucs4.patch,
+  files/fcitx-4.2.9.1-tray_icon.patch:
+  Use EAPI="6".
+
+  15 Sep 2016; Mike Gilbert <floppym@gentoo.org> fcitx-4.2.9.1.ebuild,
+  fcitx-9999.ebuild:
+  Fix sandbox violation (bug #586588).
+
+  05 Oct 2016; Mike Gilbert <floppym@gentoo.org> fcitx-4.2.9.1.ebuild:
+  Stabilize on amd64/x86 (bug #589960).
+
+  13 Oct 2016; Agostino Sarubbo <ago@gentoo.org> fcitx-4.2.9.1.ebuild:
+  ppc stable wrt bug #589960
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Oct 2016; Mike Gilbert <floppym@gentoo.org> -fcitx-4.2.8.5.ebuild,
+  -fcitx-4.2.8.6.ebuild, -fcitx-4.2.9.ebuild, metadata.xml:
+  Delete old versions.
+

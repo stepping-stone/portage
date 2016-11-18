@@ -138,3 +138,41 @@
 
   Package-Manager: portage-2.2.26
 
+  03 Apr 2016; Manuel Rüger <mrueg@gentoo.org> dbf-2.0.8.ebuild,
+  dbf-2.0.13.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+  21 Jul 2016; Hans de Graaff <graaff@gentoo.org> dbf-2.0.8.ebuild:
+  add ruby21 to stable version
+
+  Package-Manager: portage-2.2.28
+
+*dbf-3.0.6 (19 Aug 2016)
+
+  19 Aug 2016; Hans de Graaff <graaff@gentoo.org> +dbf-3.0.6.ebuild:
+  add 3.0.6
+
+  Package-Manager: portage-2.2.28
+
+*dbf-3.0.7 (30 Aug 2016)
+
+  30 Aug 2016; Hans de Graaff <graaff@gentoo.org> +dbf-3.0.7.ebuild:
+  add 3.0.7
+
+  Package-Manager: portage-2.2.28
+
+  13 Oct 2016; Hans de Graaff <graaff@gentoo.org> -dbf-3.0.3.ebuild,
+  -dbf-3.0.4.ebuild, -dbf-3.0.6.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+
+*dbf-3.0.8 (13 Oct 2016)
+
+  13 Oct 2016; Hans de Graaff <graaff@gentoo.org> +dbf-3.0.8.ebuild:
+  add 3.0.8
+
+  Package-Manager: portage-2.3.0
+

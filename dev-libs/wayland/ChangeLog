@@ -189,3 +189,161 @@
 
   Package-Manager: portage-2.2.27
 
+  01 Mar 2016; Mart Raudsepp <leio@gentoo.org>
+  +files/1.10.0-build-fix-configure-disable-dtd-validation.patch,
+  wayland-1.10.0.ebuild:
+  Fix multilib and add missing libxml2 dependency
+
+  Multilib support was broken in previous versions, as the configure
+  options were in src_configure, not multilib_src_configure, and so
+  it always built with configuration for "native" ABI, meaning that
+  USE=doc with multilib was probably broken. Now with 1.10 this
+  becomes more apparent with a new libxml2 dependency in wayland-scanner
+  for DTD validation.
+  As we do not currently install /usr/bin/wayland-scanner for other ABIs,
+  just disable the dtd validation support there. Ideally we wouldn't
+  build it at all then, but not a clean way to do so upstream right now.
+  For --{dis,en}able-dtd-validation to work, we need to patch the
+  build system to fix the support for the configure flag.
+  Thanks to this we are able to add the missing libxml2 dependency
+  without requiring multilib libxml2 for that (and commonly then also
+  multilib icu), which is nice, as many users haven't had a need for
+  a 32bit version of those as of yet and icu is a bit bigger compile.
+
+  Remove USE=static-libs handling, as autotools-utils takes care
+  of it for us when it's in IUSE. Also make use of the
+  multilib_native_use_enable helper to simplify the ebuild.
+
+  Gentoo-bug: 575212
+
+  02 Mar 2016; Mart Raudsepp <leio@gentoo.org>
+  files/1.10.0-build-fix-configure-disable-dtd-validation.patch:
+  Try to avoid maintenance mode autotools regen
+
+  while still trying to avoid full eautoreconf call and autotools build deps
+
+  Gentoo-bug: 576198
+
+*wayland-1.10.0-r1 (02 Mar 2016)
+
+  02 Mar 2016; Mart Raudsepp <leio@gentoo.org>
+  +files/1.10.0-scanner-avoid-executable-stack.patch, -wayland-1.10.0.ebuild,
+  +wayland-1.10.0-r1.ebuild:
+  Fix wayland-scanner executable stack in v1.10.0
+
+  20 Apr 2016; Anthony Ryan <anthonyryan1@gmail.com> wayland-1.6.1.ebuild,
+  wayland-1.7.0.ebuild, wayland-1.8.1.ebuild, wayland-1.9.0.ebuild,
+  wayland-1.10.0-r1.ebuild, wayland-9999.ebuild:
+  HTTPS for *.freedesktop.org
+
+  * Excluding xorg.freedesktop.org
+  * Excluding tango.freedesktop.org
+
+  The following modified ebuilds were found to have problems after
+  modification
+  but the problems were determined to not be a regression.
+
+  Upstream tarball has a new hash:
+  * app-misc/evtest-1.29
+  * app-misc/evtest-1.30
+  * dev-embedded/scratchbox2-2.0-r1
+  * dev-ml/cairo-ocaml-1.2.0
+  * net-libs/libqmi-1.0.0
+  * sys-auth/libfprint-0.4.0
+  * sys-auth/libfprint-0.5.0
+  * sys-auth/libfprint-0.5.1
+
+  Upstream tarball has been deleted:
+  * dev-libs/liblazy-0.2
+  * dev-util/pkgconfig-openbsd-20130507-r1
+  * x11-libs/xvba-video-0.8.0-r3
+  * x11-misc/driconf-0.9.1-r1
+  * x11-misc/xdg-utils-1.1.0_rc2-r1
+
+  02 Jun 2016; Tobias Klausmann <klausman@gentoo.org> wayland-1.9.0.ebuild:
+  1.9.0-r0: add alpha keyword
+
+  Gentoo-Bug: 559062
+
+  Package-Manager: portage-2.3.0_rc1
+
+*wayland-1.11.0 (04 Jun 2016)
+
+  04 Jun 2016; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +wayland-1.11.0.ebuild, wayland-9999.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Jeroen Roovers <jer@gentoo.org> wayland-1.11.0.ebuild:
+  Stable for HPPA (bug #579266).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  05 Aug 2016; Markus Meier <maekke@gentoo.org> wayland-1.11.0.ebuild:
+  arm stable, bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> wayland-1.11.0.ebuild:
+  x86 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> wayland-1.11.0.ebuild:
+  amd64 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  22 Sep 2016; Tobias Klausmann <klausman@gentoo.org> wayland-1.11.0.ebuild:
+  1.11.0-r0: add alpha keyword
+
+  Gentoo-Bug: 579266
+
+*wayland-1.12.0 (02 Oct 2016)
+
+  02 Oct 2016; Manuel Rüger <mrueg@gentoo.org> +wayland-1.12.0.ebuild:
+  Version bump to 1.12.0
+
+  Package-Manager: portage-2.3.1
+
+  02 Oct 2016; Manuel Rüger <mrueg@gentoo.org>
+  -files/1.10.0-build-fix-configure-disable-dtd-validation.patch,
+  -files/1.10.0-scanner-avoid-executable-stack.patch, -wayland-1.6.1.ebuild,
+  -wayland-1.8.1.ebuild, -wayland-1.10.0-r1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.1
+
+  12 Nov 2016; Agostino Sarubbo <ago@gentoo.org> wayland-1.9.0.ebuild:
+  sparc stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Nov 2016; Agostino Sarubbo <ago@gentoo.org> wayland-1.9.0.ebuild:
+  ia64 stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Nov 2016; Agostino Sarubbo <ago@gentoo.org> wayland-1.11.0.ebuild:
+  ia64 stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Nov 2016; Agostino Sarubbo <ago@gentoo.org> wayland-1.11.0.ebuild:
+  ppc stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

@@ -311,3 +311,67 @@
   Package-Manager: portage-2.2.24
   Signed-off-by: Richard Yao <ryao@gentoo.org>
 
+  15 Apr 2016; Matthew Thode <prometheanfire@gentoo.org> zfs-9999.ebuild:
+  fix git url to be https to get past firewalls
+
+  Package-Manager: portage-2.2.26
+
+*zfs-0.6.5.6 (16 Apr 2016)
+
+  16 Apr 2016; Richard Yao <ryao@gentoo.org> +zfs-0.6.5.6.ebuild:
+  and friends: bump to 0.6.5.6 (unkeyworded)
+
+  The updated patchset has been delayed due to some matters that I am in
+  the process of resolving. I am committing the 0.6.5.6 ebuilds without
+  keywords for the people who want it sooner.
+
+  Signed-off-by: Richard Yao <ryao@gentoo.org>
+
+  07 May 2016; Matthew Thode <prometheanfire@gentoo.org> zfs-9999.ebuild:
+  fix systemd units for kernel-builtin
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/zed:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*zfs-0.6.5.7 (22 Jun 2016)
+
+  22 Jun 2016; Yixun Lan <dlan@gentoo.org> +zfs-0.6.5.7.ebuild:
+  version bump 0.6.5.7
+
+  still unkeyworded, acked by maintainer
+
+  Gentoo-Bug: 586434
+
+  Package-Manager: portage-2.3.0_rc1
+
+*zfs-0.6.5.8 (10 Oct 2016)
+
+  10 Oct 2016; Yixun Lan <dlan@gentoo.org> +zfs-0.6.5.8.ebuild:
+  version bump 0.6.5.8
+
+  acked by maintainer
+
+  Gentoo-Bug: 594360
+
+  Package-Manager: portage-2.3.1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> zfs-0.6.2-r5.ebuild,
+  zfs-0.6.3-r2.ebuild, zfs-0.6.4.2.ebuild, zfs-0.6.5.2-r1.ebuild,
+  zfs-0.6.5.3.ebuild, zfs-0.6.5.3-r1.ebuild, zfs-0.6.5.3-r3.ebuild,
+  zfs-0.6.5.3-r4.ebuild, zfs-0.6.5.3-r5.ebuild, zfs-0.6.5.4.ebuild,
+  zfs-0.6.5.4-r1.ebuild, zfs-0.6.5.4-r2.ebuild, zfs-0.6.5.6.ebuild,
+  zfs-0.6.5.7.ebuild, zfs-0.6.5.8.ebuild, zfs-9999.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Richard Yao <ryao@gentoo.org> zfs-0.6.5.4.ebuild,
+  zfs-0.6.5.6.ebuild, zfs-0.6.5.7.ebuild, zfs-0.6.5.8.ebuild:
+  Keyword sys-fs/zfs and friends for ~amd64
+
+  We are abandoning the /dev/zfs API stabilization effort in Gentoo until
+  it is merged by upstream because stronger QA tests are causing it to
+  hold us back.
+
+  Signed-off-by: Richard Yao <ryao@gentoo.org>
+

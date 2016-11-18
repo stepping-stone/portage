@@ -71,3 +71,30 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*python-debian-0.1.28 (06 Aug 2016)
+
+  06 Aug 2016; Mike Gilbert <floppym@gentoo.org> +python-debian-0.1.28.ebuild:
+  bump to 0.1.28
+
+  Package-Manager: portage-2.3.0_p16
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> python-debian-0.1.26.ebuild,
+  python-debian-0.1.27.ebuild, python-debian-0.1.28.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  06 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  python-debian-0.1.28.ebuild:
+  amd64 stable
+
+  Gentoo-bug: 590680
+
+  Package-Manager: portage-2.3.2
+
+  06 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  python-debian-0.1.28.ebuild:
+  x86 stable
+
+  Gentoo-bug: 590680
+
+  Package-Manager: portage-2.3.2
+

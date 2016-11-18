@@ -66,3 +66,16 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  21 Mar 2016; Anthony G. Basile <blueness@gentoo.org> rear-1.15-r1.ebuild,
+  rear-1.17.0.ebuild, rear-1.17.1.ebuild:
+  add libressl support
+
+  Package-Manager: portage-2.2.26
+
+  06 Apr 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  metadata.xml, update
+
+  Add description attribute for user maintainer in metadata.xml
+
+  Package-Manager: portage-2.2.28
+

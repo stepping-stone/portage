@@ -162,3 +162,227 @@
 
   Package-Manager: portage-2.2.27
 
+*sqlite-3.11.0 (03 Mar 2016)
+
+  03 Mar 2016; Mike Gilbert <floppym@gentoo.org> +files/sqlite-3.11.0-full_tar
+  ball-SQLITE_DBCONFIG_ENABLE_FTS3_TOKENIZER.patch,
+  +files/sqlite-3.11.0-full_tarball-build.patch, +files/sqlite-3.11.0-nonfull_
+  tarball-SQLITE_DBCONFIG_ENABLE_FTS3_TOKENIZER.patch,
+  +files/sqlite-3.11.0-nonfull_tarball-build.patch, +sqlite-3.11.0.ebuild:
+  Version bump (3.11.0).
+
+  Link executables against libsqlite3.so instead of statically including code
+  from sqlite3.c.
+  Backport SQLITE_DBCONFIG_ENABLE_FTS3_TOKENIZER from 3.12.0.
+
+*sqlite-3.11.1 (04 Mar 2016)
+
+  04 Mar 2016; Mike Gilbert <floppym@gentoo.org> +sqlite-3.11.1.ebuild:
+  Version bump (3.11.1).
+
+  06 Mar 2016; Jeroen Roovers <jer@gentoo.org> sqlite-3.11.1.ebuild:
+  Stable for PPC64 (bug #574420).
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --ignore-arches
+
+  06 Mar 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.11.1.ebuild:
+  amd64 stable wrt bug #574420
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Mar 2016; Jeroen Roovers <jer@gentoo.org> sqlite-3.11.1.ebuild:
+  Stable for HPPA (bug #574420).
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --ignore-arches
+
+  12 Mar 2016; Markus Meier <maekke@gentoo.org> sqlite-3.11.1.ebuild:
+  arm stable, bug #574420
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --include-arches="arm"
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.11.1.ebuild:
+  x86 stable wrt bug #574420
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Tobias Klausmann <klausman@gentoo.org> sqlite-3.11.1.ebuild:
+  3.11.1-r0: add alpha keyword
+
+  Gentoo-Bug: 574420
+
+  Package-Manager: portage-2.2.28
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.11.1.ebuild:
+  ppc stable wrt bug #574420
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.11.1.ebuild:
+  sparc stable wrt bug #574420
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Mar 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.11.1.ebuild:
+  ia64 stable wrt bug #574420
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  31 Mar 2016; Steev Klimaszewski <steev@gentoo.org> sqlite-3.11.1.ebuild:
+  Stabilize arm64 wrt bug #574420
+
+  Package-Manager: portage-2.2.28
+
+*sqlite-3.12.0 (02 Apr 2016)
+
+  02 Apr 2016; Mike Gilbert <floppym@gentoo.org>
+  +files/sqlite-3.12.0-nonfull_tarball-build.patch, +sqlite-3.12.0.ebuild:
+  Version bump (3.12.0).
+
+  04 Apr 2016; Jeroen Roovers <jer@gentoo.org> sqlite-3.12.0.ebuild:
+  Stable for HPPA PPC64 (bug #578940).
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  08 Apr 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.12.0.ebuild:
+  amd64 stable wrt bug #578940
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*sqlite-3.12.1 (09 Apr 2016)
+
+  09 Apr 2016; Mike Gilbert <floppym@gentoo.org> +sqlite-3.12.1.ebuild:
+  Version bump (3.12.1).
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.12.0.ebuild:
+  x86 stable wrt bug #578940
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Apr 2016; Markus Meier <maekke@gentoo.org> sqlite-3.12.0.ebuild:
+  arm stable, bug #578940
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+*sqlite-3.12.2 (20 Apr 2016)
+
+  20 Apr 2016; Mike Gilbert <floppym@gentoo.org> +sqlite-3.12.2.ebuild:
+  Version bump (3.12.2).
+
+  28 Apr 2016; Mike Gilbert <floppym@gentoo.org> -files/maketcllib.sh,
+  -files/sqlite-3.8.1-autoconf-dlopen_check.patch,
+  -files/sqlite-3.8.1-src-dlopen_check.patch,
+  -files/sqlite-3.8.1-tests-icu-52.patch, -sqlite-3.8.10.1.ebuild,
+  -sqlite-3.8.10.2.ebuild, -sqlite-3.8.11.1.ebuild, -sqlite-3.9.1.ebuild,
+  -sqlite-3.9.2.ebuild, -sqlite-3.10.0.ebuild, -sqlite-3.10.2.ebuild,
+  -sqlite-3.11.0.ebuild:
+  Delete old versions.
+
+  20 May 2016; Tobias Klausmann <klausman@gentoo.org> sqlite-3.12.0.ebuild:
+  3.12.0-r0: add alpha keyword
+
+  Gentoo-Bug: 578940
+
+  Package-Manager: portage-2.3.0_rc1
+
+*sqlite-3.13.0 (30 May 2016)
+
+  30 May 2016; Mike Gilbert <floppym@gentoo.org>
+  +files/sqlite-3.13.0-full_tarball-build.patch, +sqlite-3.13.0.ebuild:
+  Version bump (3.13.0).
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.12.0.ebuild:
+  ppc stable wrt bug #578940
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.12.0.ebuild:
+  sparc stable wrt bug #578940
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.12.0.ebuild:
+  ia64 stable wrt bug #578940
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Jul 2016; Aaron Bauman <bman@gentoo.org> -sqlite-3.11.1.ebuild:
+  remove vulnerable versions wrt bug #578940
+
+  29 Jul 2016; Mike Gilbert <floppym@gentoo.org> -files/sqlite-3.11.0-full_tar
+  ball-SQLITE_DBCONFIG_ENABLE_FTS3_TOKENIZER.patch, -files/sqlite-3.11.0-nonfu
+  ll_tarball-SQLITE_DBCONFIG_ENABLE_FTS3_TOKENIZER.patch,
+  -files/sqlite-3.11.0-nonfull_tarball-build.patch:
+  Delete old patches.
+
+  03 Aug 2016; Jeroen Roovers <jer@gentoo.org> sqlite-3.13.0.ebuild:
+  Stable for HPPA (bug #590178).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  04 Aug 2016; Jeroen Roovers <jer@gentoo.org> sqlite-3.13.0.ebuild:
+  Stable for PPC64 (bug #590178).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+*sqlite-3.14.1 (16 Aug 2016)
+
+  16 Aug 2016; Mike Gilbert <floppym@gentoo.org>
+  +files/sqlite-3.14.0-full_tarball-build.patch, +sqlite-3.14.1.ebuild:
+  Version bump.
+
+  18 Aug 2016; Markus Meier <maekke@gentoo.org> sqlite-3.13.0.ebuild:
+  arm stable, bug #590178
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  03 Sep 2016; Tobias Klausmann <klausman@gentoo.org> sqlite-3.13.0.ebuild:
+  3.13.0-r0: add alpha keyword
+
+  Gentoo-Bug: 590178
+
+*sqlite-3.14.2 (15 Sep 2016)
+
+  15 Sep 2016; Mike Gilbert <floppym@gentoo.org> +sqlite-3.14.2.ebuild:
+  Version bump.
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> sqlite-3.13.0.ebuild:
+  amd64 stable wrt bug #590178
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*sqlite-3.15.1 (10 Nov 2016)
+
+  10 Nov 2016; Mike Gilbert <floppym@gentoo.org>
+  +files/sqlite-3.15.0-full_tarball-tests-icu.patch, +sqlite-3.15.1.ebuild:
+  Version bump (3.15.1).
+

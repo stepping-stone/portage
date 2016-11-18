@@ -132,3 +132,54 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> kombu-3.0.30.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*kombu-3.0.34 (19 Mar 2016)
+
+  19 Mar 2016; Manuel Rüger <mrueg@gentoo.org> +kombu-3.0.34.ebuild:
+  Version bump to 3.0.34
+
+  Package-Manager: portage-2.2.28
+
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org> kombu-3.0.34.ebuild:
+  adding py35
+
+  Package-Manager: portage-2.2.26
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org> kombu-3.0.34.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+  06 Aug 2016; Michał Górny <mgorny@gentoo.org> kombu-3.0.26.ebuild,
+  kombu-3.0.29.ebuild, kombu-3.0.30.ebuild, kombu-3.0.32.ebuild,
+  kombu-3.0.33.ebuild, kombu-3.0.34.ebuild:
+  whitespace
+
+*kombu-3.0.37 (12 Oct 2016)
+
+  12 Oct 2016; Zac Medico <zmedico@gentoo.org> +kombu-3.0.37.ebuild:
+  version bump to 3.0.37
+
+  Package-Manager: portage-2.3.2
+
+  29 Oct 2016; Mike Gilbert <floppym@gentoo.org> -kombu-3.0.24.ebuild,
+  -kombu-3.0.26.ebuild, -kombu-3.0.29.ebuild, -kombu-3.0.30.ebuild,
+  -kombu-3.0.32.ebuild, -kombu-3.0.33.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.2
+
+  29 Oct 2016; Mike Gilbert <floppym@gentoo.org> kombu-3.0.34.ebuild,
+  kombu-3.0.37.ebuild:
+  fix REQUIRED_USE
+
+  Package-Manager: portage-2.3.2
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> kombu-3.0.34.ebuild,
+  kombu-3.0.37.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

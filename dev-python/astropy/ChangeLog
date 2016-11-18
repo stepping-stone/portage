@@ -182,3 +182,33 @@
 
   Package-Manager: portage-2.2.27
 
+*astropy-1.1.2 (18 Mar 2016)
+
+  18 Mar 2016; Sébastien Fabbro <bicatali@gentoo.org> +astropy-1.1.2.ebuild,
+  +files/astropy-1.1.2-cfitsio-338.patch,
+  +files/astropy-1.1.2-fix-for-pytest-28.patch:
+  Version bump
+
+  Package-Manager: portage-2.2.28
+
+  09 Jun 2016; Sébastien Fabbro <bicatali@gentoo.org> -astropy-1.0.6.ebuild,
+  -astropy-1.1.1.ebuild, astropy-1.1.2.ebuild,
+  -files/astropy-1.0.4-disable_helper.patch,
+  -files/astropy-1.0.4-system-pytest.patch,
+  -files/astropy-1.1.1-fix-wcs.patch:
+  force numpy-1.10
+
+  Fixing (maybe):
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=585468
+
+  Package-Manager: portage-2.3.0_rc1
+
+*astropy-1.2.1 (31 Aug 2016)
+
+  31 Aug 2016; Sébastien Fabbro <bicatali@gentoo.org> +astropy-1.2.1.ebuild,
+  +files/astropy-1.2.1-cfitsio-338.patch:
+  version bump. fix also xdg sandboxing issue
+  Gentoo-Bug: 587700
+
+  Package-Manager: portage-2.3.0
+

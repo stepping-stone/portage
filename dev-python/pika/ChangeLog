@@ -70,3 +70,19 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  25 Mar 2016; Matthew Thode <prometheanfire@gentoo.org> pika-0.10.0.ebuild:
+  adding python3
+
+  Package-Manager: portage-2.2.26
+
+  05 Jun 2016; Matthew Thode <prometheanfire@gentoo.org> pika-0.10.0.ebuild:
+  openstack mass stable for mitaka, x86 and amd64 for bug 582170
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pika-0.10.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+
+  13 Nov 2016; Patrice Clement <monsieurp@gentoo.org> -pika-0.9.14.ebuild:
+  clean up old.
+
+  Package-Manager: portage-2.3.0
+

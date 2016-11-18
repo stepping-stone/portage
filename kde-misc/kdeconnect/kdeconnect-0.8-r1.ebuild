@@ -34,7 +34,7 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	$(add_kdebase_dep plasma-workspace)
-	app-crypt/qca:2[openssl]
+	app-crypt/qca:2[ssl]
 "
 DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
@@ -50,7 +50,7 @@ PATCHES=(
 pkg_postinst(){
 	elog
 	elog "Optional dependency:"
-	elog "sys-fs/sshfs-fuse (for 'remote filesystem browser' plugin)"
+	elog "net-fs/sshfs (for 'remote filesystem browser' plugin)"
 	elog
 	elog "The Android .apk file is available via"
 	elog "https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp"

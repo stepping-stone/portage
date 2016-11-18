@@ -61,3 +61,23 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*nca-0.9.0-r1 (29 Apr 2016)
+
+  29 Apr 2016; Austin English <wizardedit@gentoo.org> files/ncad.initd,
+  +nca-0.9.0-r1.ebuild:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/573846
+
+  Package-Manager: portage-2.2.26
+
+  29 Apr 2016; Austin English <wizardedit@gentoo.org> -nca-0.9.0.ebuild:
+  remove nca-0.9.0
+
+  Package-Manager: portage-2.2.26
+

@@ -61,3 +61,48 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  12 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  stardict-hnd-de-vi-20050917.ebuild:
+  app-dicts/stardict-hnd*: fix HOMEPAGE.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1817
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  12 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  stardict-hnd-de-vi-20050917.ebuild:
+  app-dicts/stardict-hnd*: fix SRC_URI.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1817
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  12 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  stardict-hnd-de-vi-20050917.ebuild:
+  app-dicts/stardict*: fix Copyright header.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1817
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  12 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  stardict-hnd-de-vi-20050917.ebuild:
+  app-dicts/stardict*: EAPI 6 bump.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1817
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  12 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  stardict-hnd-de-vi-20050917.ebuild:
+  app-dicts/stardict*: remove empty DEPEND/RDEPEND variables.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1817
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

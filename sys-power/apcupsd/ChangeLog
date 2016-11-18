@@ -102,3 +102,58 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/apcupsd.init.2a,
+  files/apcupsd.init.4, files/apcupsd.powerfail.init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  06 Jun 2016; Agostino Sarubbo <ago@gentoo.org> apcupsd-3.14.13.ebuild:
+  amd64 stable wrt bug #565608
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> apcupsd-3.14.13.ebuild:
+  x86 stable wrt bug #565608
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> apcupsd-3.14.13.ebuild:
+  ppc stable wrt bug #565608
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #66633
+
+  Package-Manager: portage-2.3.0
+
+  28 Sep 2016; Kristian Fiskerstrand <k_f@gentoo.org> metadata.xml:
+  Adding myself as maintainer
+
+  As agreed with Poly-C on IRC, adding myself as maintainer
+
+  Package-Manager: portage-2.3.1
+
+*apcupsd-3.14.14 (28 Sep 2016)
+
+  28 Sep 2016; Kristian Fiskerstrand <k_f@gentoo.org> +apcupsd-3.14.14.ebuild:
+  Version bump 3.14.14
+
+  Package-Manager: portage-2.3.1
+
+  28 Sep 2016; Kristian Fiskerstrand <k_f@gentoo.org>
+  -apcupsd-3.14.8-r2.ebuild, -apcupsd-3.14.12-r1.ebuild:
+  Cleanup old
+
+  Package-Manager: portage-2.3.1
+
+  28 Sep 2016; Kristian Fiskerstrand <k_f@gentoo.org> apcupsd-3.14.14.ebuild:
+  Fixup missing || die
+
+  Package-Manager: portage-2.3.1
+

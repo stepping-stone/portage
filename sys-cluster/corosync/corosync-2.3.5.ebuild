@@ -10,7 +10,7 @@ MY_TREE="56ae8fe"
 
 DESCRIPTION="OSI Certified implementation of a complete cluster engine"
 HOMEPAGE="http://www.corosync.org/"
-SRC_URI="https://github.com/corosync/corosync/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="http://build.clusterlabs.org/corosync/releases/${P}.tar.gz"
 
 LICENSE="BSD-2 public-domain"
 SLOT="0"
@@ -23,8 +23,8 @@ IUSE="doc infiniband static-libs systemd xml"
 # --enable-watchdog : Watchdog support
 RDEPEND="!sys-cluster/heartbeat
 	infiniband? (
-		sys-infiniband/libibverbs:*
-		sys-infiniband/librdmacm:*
+		sys-fabric/libibverbs:*
+		sys-fabric/librdmacm:*
 	)
 	dev-libs/nss
 	>=sys-cluster/libqb-0.14.4"

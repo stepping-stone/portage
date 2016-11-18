@@ -80,3 +80,32 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*teamspeak-server-bin-3.0.12.2 (04 Mar 2016)
+
+  04 Mar 2016; Amy Winston <amynka@gentoo.org>
+  +teamspeak-server-bin-3.0.12.2.ebuild:
+  version bump 3.0.12.2 bug #576022
+
+  Package-Manager: portage-2.2.26
+
+  15 Mar 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  fix typo in metadata.xml
+
+  Package-Manager: portage-2.2.26
+
+*teamspeak-server-bin-3.0.12.3 (16 Mar 2016)
+
+  16 Mar 2016; Ian Delaney <idella4@gentoo.org>
+  +teamspeak-server-bin-3.0.12.3.ebuild:
+  bump to vn. 3.0.12.3
+
+  ebuild submitted by proxy maintainer via the gentoo bug
+
+  Gentoo bug: #576784
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/teamspeak-server-bin-init-r1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+

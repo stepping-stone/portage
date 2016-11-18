@@ -61,3 +61,22 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  11 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/gnutu-2.0-event.patch:
+  remove unused patch
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*gnutu-2.5-r1 (09 Oct 2016)
+
+  09 Oct 2016; Pacho Ramos <pacho@gentoo.org> -gnutu-2.5.ebuild,
+  +gnutu-2.5-r1.ebuild:
+  Allow newer gtk-sharp usage
+
+  Package-Manager: portage-2.3.1
+

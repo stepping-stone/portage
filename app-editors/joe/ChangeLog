@@ -68,3 +68,103 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*joe-4.2 (07 Apr 2016)
+
+  07 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> +joe-4.2.ebuild:
+  Bump to version 4.2
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  07 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> -joe-4.0.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  21 May 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to bug #55572
+
+  Package-Manager: portage-2.3.0_rc1
+
+  21 May 2016; Amy Winston <amynka@gentoo.org> metadata.xml:
+  add myself and emacs to metadata
+
+  Package-Manager: portage-2.2.26
+
+  21 May 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  Fix maintainer, Emacs rather than GNU Emacs.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  22 May 2016; Ulrich Müller <ulm@gentoo.org> -files/joe-3.5-ftyperc.patch:
+  Remove stale patch file.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  22 May 2016; Ulrich Müller <ulm@gentoo.org> joe-3.7-r2.ebuild,
+  joe-4.1.ebuild, joe-4.2.ebuild:
+  Fix LICENSE.
+
+  License is GPL version 1 or later.
+  CC-BY-3.0 is for the go.jsf syntax file.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  28 May 2016; Mikle Kolyada <zlogene@gentoo.org> joe-4.2.ebuild:
+  Stable for all wrt bug #583778
+
+  Package-Manager: portage-2.2.28
+
+  28 May 2016; Amy Winston <amynka@gentoo.org> -joe-3.7-r2.ebuild,
+  -joe-4.1.ebuild:
+  remove old
+
+  Package-Manager: portage-2.2.26
+
+  07 Jul 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/joe-3.7-ftyperc.patch, -files/joe-3.7-sanitise-includes.patch,
+  -files/joe-3.7-segfault-fix.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/1826
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  27 Jul 2016; Mike Frysinger <vapier@gentoo.org> joe-4.2.ebuild:
+  sourceforge: switch to https:// URIs
+
+*joe-4.3 (05 Sep 2016)
+
+  05 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> +joe-4.3.ebuild:
+  Bump to version 4.3
+
+  with kind permission from Amynka.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  05 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> joe-4.3.ebuild:
+  Some QA fixes suggested by Soap__
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*joe-4.3-r1 (05 Sep 2016)
+
+  05 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +files/joe-4.3-tinfo.patch, -joe-4.3.ebuild, +joe-4.3-r1.ebuild:
+  Revbump to fix linking against sys-libs/ncurses[tinfo]
+
+  Also get rid of remaining QA issues as pointed out by Soap__ again.
+  This hopefully fixes bug #579172 as well.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  07 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> joe-4.3-r1.ebuild:
+  Fixed eautoreconf with USE="xterm".
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

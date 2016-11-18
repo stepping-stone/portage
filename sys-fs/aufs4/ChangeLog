@@ -191,3 +191,35 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+  02 Mar 2016; Justin Lecher <jlec@gentoo.org> aufs4-0_pre20160219.ebuild,
+  aufs4-0_pre20160223.ebuild:
+  Add missing to eapply_user in EAPI=6
+
+  Gentoo-Bugs: https://bugs.gentoo.org/show_bug.cgi?id=576172
+
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*aufs4-0_pre20160627 (02 Jul 2016)
+
+  02 Jul 2016; Justin Lecher <jlec@gentoo.org> +aufs4-0_pre20160627.ebuild:
+  Bump to latest aufs release
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*aufs4-0_pre20160815 (14 Aug 2016)
+
+  14 Aug 2016; Justin Lecher <jlec@gentoo.org> +aufs4-0_pre20160815.ebuild:
+  Bump to latest aufs release
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*aufs4-0_pre20161010 (17 Oct 2016)
+
+  17 Oct 2016; Justin Lecher <jlec@gentoo.org> +aufs4-0_pre20161010.ebuild:
+  Version Bump
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+

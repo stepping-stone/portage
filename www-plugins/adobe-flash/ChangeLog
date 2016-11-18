@@ -299,3 +299,353 @@
 
   Package-Manager: portage-2.2.27
 
+*adobe-flash-11.2.202.577 (10 Mar 2016)
+
+  10 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.577.ebuild:
+  Version bump (bug #576980).
+
+  Package-Manager: portage-2.2.27
+
+  11 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.577.ebuild:
+  amd64 stable wrt bug #576980
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  11 Mar 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.577.ebuild:
+  x86 stable wrt bug #576980
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  12 Mar 2016; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.569.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.27
+
+*adobe-flash-11.2.202.616 (08 Apr 2016)
+
+  08 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.616.ebuild:
+  Version bump (bug #579166).
+
+  Package-Manager: portage-2.2.28
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.616.ebuild:
+  amd64 stable wrt bug #579166
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  11 Apr 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.616.ebuild:
+  x86 stable wrt bug #579166
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  11 Apr 2016; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.577.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*adobe-flash-11.2.202.621 (12 May 2016)
+
+  12 May 2016; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.621.ebuild:
+  Version bump (bug #582670).
+
+  Package-Manager: portage-2.2.28
+
+  14 May 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.621.ebuild:
+  amd64 stable wrt bug #582670
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  14 May 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.621.ebuild:
+  x86 stable wrt bug #582670
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 May 2016; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.616.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+*adobe-flash-11.2.202.626 (16 Jun 2016)
+
+  16 Jun 2016; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.626.ebuild:
+  Version bump (bug #586044).
+
+  Package-Manager: portage-2.3.0_rc1
+
+  18 Jun 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.626.ebuild:
+  amd64 stable wrt bug #586044
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Jun 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.626.ebuild:
+  x86 stable wrt bug #586044
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Jun 2016; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.621.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0_rc1
+
+*adobe-flash-11.2.202.632 (13 Jul 2016)
+
+  13 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.632.ebuild:
+  Version bump (bug #588738).
+
+  Package-Manager: portage-2.3.0
+
+  13 Jul 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.632.ebuild:
+  amd64 stable wrt bug #588738
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Jul 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.632.ebuild:
+  x86 stable wrt bug #588738
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.626.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*adobe-flash-22.0.0.209 (08 Sep 2016)
+
+  08 Sep 2016; Jeroen Roovers <jer@gentoo.org> +adobe-flash-22.0.0.209.ebuild,
+  +files/pepper-flash:
+  Version bump (bug #593004).
+
+  Package-Manager: portage-2.3.0
+
+  08 Sep 2016; Jeroen Roovers <jer@gentoo.org> adobe-flash-22.0.0.209.ebuild:
+  Clean up ebuild.
+
+  Package-Manager: portage-2.3.0
+
+*adobe-flash-22.0.0.209-r1 (09 Sep 2016)
+
+  09 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-22.0.0.209-r1.ebuild:
+  Install manifest.json properly (bug #593260 by Ortwin Glueck).
+
+  Package-Manager: portage-2.3.0
+
+  09 Sep 2016; Jeroen Roovers <jer@gentoo.org> -adobe-flash-22.0.0.209.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*adobe-flash-23.0.0.162 (14 Sep 2016)
+*adobe-flash-11.2.202.635 (14 Sep 2016)
+
+  14 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.635.ebuild, +adobe-flash-23.0.0.162.ebuild:
+  Version bump (bug #593684).
+
+  Package-Manager: portage-2.3.0
+
+  14 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-22.0.0.209-r1.ebuild:
+  Old (bug #593684).
+
+  Package-Manager: portage-2.3.0
+
+  14 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  adobe-flash-11.2.202.635.ebuild:
+  Update HOMEPAGE.
+
+  Package-Manager: portage-2.3.0
+
+  15 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  adobe-flash-11.2.202.635.ebuild:
+  Stable for AMD64 x86 (bug #593684).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  15 Sep 2016; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.632.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.0
+
+*adobe-flash-23.0.0.185 (11 Oct 2016)
+*adobe-flash-11.2.202.637 (11 Oct 2016)
+
+  11 Oct 2016; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.637.ebuild, +adobe-flash-23.0.0.185.ebuild:
+  Version bump (bug #596896).
+
+  Package-Manager: portage-2.3.1
+
+  11 Oct 2016; Jeroen Roovers <jer@gentoo.org> -adobe-flash-23.0.0.162.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.1
+
+  11 Oct 2016; Jeroen Roovers <jer@gentoo.org> adobe-flash-23.0.0.185.ebuild:
+  Stable for AMD64 x86 too.
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  12 Oct 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.637.ebuild:
+  amd64 stable wrt bug #596896
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  12 Oct 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.637.ebuild:
+  x86 stable wrt bug #596896
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  12 Oct 2016; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.635.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+  13 Oct 2016; Mike Gilbert <floppym@gentoo.org>
+  adobe-flash-23.0.0.185.ebuild:
+  fix chrome-binary-plugins blocker
+
+  Package-Manager: portage-2.3.2
+
+*adobe-flash-23.0.0.205 (26 Oct 2016)
+*adobe-flash-11.2.202.643 (26 Oct 2016)
+
+  26 Oct 2016; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.643.ebuild, +adobe-flash-23.0.0.205.ebuild:
+  Version bump (bug #598152).
+
+  Package-Manager: portage-2.3.2
+
+  27 Oct 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.643.ebuild, adobe-flash-23.0.0.205.ebuild:
+  amd64 stable wrt bug #598152
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Oct 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.643.ebuild, adobe-flash-23.0.0.205.ebuild:
+  x86 stable wrt bug #598152
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  27 Oct 2016; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.637.ebuild, -adobe-flash-23.0.0.185.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*adobe-flash-24.0.0.145 (07 Nov 2016)
+
+  07 Nov 2016; Jeroen Roovers <jer@gentoo.org> +adobe-flash-24.0.0.145.ebuild,
+  metadata.xml:
+  Add NPAPI/PPAPI beta (bug #593650).
+
+  Package-Manager: portage-2.3.2
+
+  07 Nov 2016; Jeroen Roovers <jer@gentoo.org> adobe-flash-24.0.0.145.ebuild:
+  Replace one ugly hack with another.
+
+  Package-Manager: portage-2.3.2
+
+  07 Nov 2016; Jeroen Roovers <jer@gentoo.org> adobe-flash-24.0.0.145.ebuild:
+  SLOT=0 should be weakly blocked.
+
+  Package-Manager: portage-2.3.2
+
+*adobe-flash-23.0.0.207 (08 Nov 2016)
+*adobe-flash-11.2.202.644 (08 Nov 2016)
+
+  08 Nov 2016; Jeroen Roovers <jer@gentoo.org>
+  +adobe-flash-11.2.202.644.ebuild, +adobe-flash-23.0.0.207.ebuild:
+  Version bump (maybe bug #599204).
+
+  Package-Manager: portage-2.3.2
+
+  08 Nov 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.644.ebuild, adobe-flash-23.0.0.207.ebuild:
+  amd64 stable wrt bug #599204
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Nov 2016; Agostino Sarubbo <ago@gentoo.org>
+  adobe-flash-11.2.202.644.ebuild, adobe-flash-23.0.0.207.ebuild:
+  x86 stable wrt bug #599204
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Nov 2016; Jeroen Roovers <jer@gentoo.org>
+  -adobe-flash-11.2.202.643.ebuild, -adobe-flash-23.0.0.205.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+
+*adobe-flash-24.0.0.154 (12 Nov 2016)
+
+  12 Nov 2016; Jeroen Roovers <jer@gentoo.org> +adobe-flash-24.0.0.154.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  12 Nov 2016; Jeroen Roovers <jer@gentoo.org> -adobe-flash-24.0.0.145.ebuild:
+  Old.
+
+  Package-Manager: portage-2.3.2
+

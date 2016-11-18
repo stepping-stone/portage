@@ -82,3 +82,31 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  23 Mar 2016; Hans de Graaff <graaff@gentoo.org> net-scp-1.2.1.ebuild:
+  drop ruby19
+
+  Package-Manager: portage-2.2.26
+
+  25 Apr 2016; Hans de Graaff <graaff@gentoo.org> net-scp-1.2.1.ebuild:
+  fix 1.2.1 tests
+
+  The tests are not compatible with net-ssh 3.x so restrict them to net-ssh
+  2.x.
+
+  Package-Manager: portage-2.2.26
+
+  22 Jul 2016; Hans de Graaff <graaff@gentoo.org> net-scp-1.1.2-r1.ebuild:
+  add ruby21 to stable version
+
+  Package-Manager: portage-2.2.28
+
+  17 Sep 2016; Hans de Graaff <graaff@gentoo.org> net-scp-1.2.1.ebuild:
+  document ruby23 status
+
+  Package-Manager: portage-2.2.28
+
+  15 Nov 2016; Manuel Rüger <mrueg@gentoo.org> net-scp-1.1.2-r1.ebuild:
+  Add ruby22, ruby23
+
+  Package-Manager: portage-2.3.2
+

@@ -96,3 +96,44 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org>
+  rabbitmq-server-3.6.0.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*rabbitmq-server-3.6.1 (09 Mar 2016)
+
+  09 Mar 2016; Ultrabug <ultrabug@gentoo.org> +rabbitmq-server-3.6.1.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.27
+
+  18 May 2016; Austin English <wizardedit@gentoo.org>
+  files/rabbitmq-server.init-r3:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*rabbitmq-server-3.6.2 (20 May 2016)
+
+  20 May 2016; Ultrabug <ultrabug@gentoo.org> +rabbitmq-server-3.6.2.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.27
+
+*rabbitmq-server-3.6.5 (19 Aug 2016)
+
+  19 Aug 2016; Ultrabug <ultrabug@gentoo.org> -rabbitmq-server-3.6.0.ebuild,
+  -rabbitmq-server-3.6.1.ebuild, -rabbitmq-server-3.6.2.ebuild,
+  +rabbitmq-server-3.6.5.ebuild:
+  version bump fix #588164 #573394
+
+  Package-Manager: portage-2.2.27
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  rabbitmq-server-3.6.5.ebuild:
+  3.6.5 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+

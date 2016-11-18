@@ -1,10 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/robot_state_publisher"
 KEYWORDS="~amd64 ~arm"
+PYTHON_COMPAT=( python2_7 )
 
 inherit ros-catkin
 
@@ -24,5 +25,9 @@ RDEPEND="
 	dev-ros/tf2_kdl
 	dev-ros/kdl_conversions
 	dev-ros/sensor_msgs
+	dev-ros/tf
+	dev-ros/urdf
 "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-ros/rostest[${PYTHON_USEDEP}]
+"

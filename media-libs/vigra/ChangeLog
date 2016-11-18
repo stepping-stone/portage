@@ -94,3 +94,22 @@
 
   Package-Manager: portage-2.2.27
 
+  19 Aug 2016; Tim Harder <radhermit@gentoo.org> vigra-1.9.0.ebuild,
+  vigra-1.10.0.ebuild:
+  update HOMEPAGE
+
+*vigra-1.11.0 (07 Sep 2016)
+
+  07 Sep 2016; Austin English <wizardedit@gentoo.org> metadata.xml,
+  +vigra-1.11.0.ebuild:
+  version bump to 1.11.0
+
+  Also:
+  * update to EAPI 6
+  * respect USE=valgrind instead of always disabling
+  * minor naming fixes
+
+  Gentoo-Bug: https://bugs.gentoo.org/506902
+
+  Package-Manager: portage-2.2.28
+

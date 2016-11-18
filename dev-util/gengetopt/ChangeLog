@@ -69,3 +69,15 @@
   for packages lacking maintainers, in favor of assuming maintainer-needed
   whenever the package has no maintainers.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  23 Jul 2016; Jeroen Roovers <jer@gentoo.org>
+  files/gengetopt-2.22.6-docdirs.patch, files/gengetopt-2.22.6-makefile.patch,
+  files/gengetopt-2.22.6-no-docs.patch, gengetopt-2.22.6.ebuild:
+  Clean up patches.
+
+  Package-Manager: portage-2.3.0
+

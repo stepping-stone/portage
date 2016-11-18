@@ -87,3 +87,17 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*Math-BigInt-GMP-1.490.0 (27 Feb 2016)
+
+  27 Feb 2016; Kent Fredric <kentfredric@gmail.com>
+  +Math-BigInt-GMP-1.490.0.ebuild:
+  Bump to version 1.490.0
+
+  Package-Manager: portage-2.2.27
+
+  25 Mar 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -Math-BigInt-GMP-1.460.0.ebuild, -Math-BigInt-GMP-1.470.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.28
+

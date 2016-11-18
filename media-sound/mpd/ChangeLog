@@ -173,3 +173,80 @@
 
   Package-Manager: portage-2.2.27
 
+  31 Jan 2016; Lukáš Hrázký <lukkash@email.cz> mpd-0.19.12.ebuild:
+  fix the systemd user service
+
+  Under the user instance of systemd multi-user.target does not exist.
+  Replace it with default.target.
+
+*mpd-0.19.14 (22 Mar 2016)
+
+  22 Mar 2016; Christoph Mende <angelos@gentoo.org> +mpd-0.19.14.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/mpd2.init:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*mpd-0.19.15 (22 Jun 2016)
+
+  22 Jun 2016; Patrice Clement <monsieurp@gentoo.org> +mpd-0.19.15.ebuild:
+  Version bump to 0.9.15
+
+  Ebuild:
+  - EAPI 6, remove usage of readme.gentoo (uses elog instead)
+  Upstream:
+  - fixes build w/ GCC 5.4.0
+  - support FFmpeg 3.0
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1651
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  22 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  +files/mpd-0.9.15-systemd.patch, mpd-0.19.15.ebuild:
+  Fix configure with >=sys-apps/systemd-230
+
+  Gentoo-bug: 584742
+
+  Package-Manager: portage-2.2.28
+  Closes: https://github.com/gentoo/gentoo/pull/1651
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup per bug #177996
+
+  Package-Manager: portage-2.3.0
+
+*mpd-0.19.18 (11 Aug 2016)
+
+  11 Aug 2016; Jeroen Roovers <jer@gentoo.org> +mpd-0.19.18.ebuild:
+  Version bump (bug #590074 by Perfect Gentleman).
+
+  Package-Manager: portage-2.3.0
+
+  11 Aug 2016; Jeroen Roovers <jer@gentoo.org> mpd-0.19.18.ebuild:
+  Add support for media-libs/libsidplayfp as alternative to media-
+  libs/libsidplay:2.
+
+  Package-Manager: portage-2.3.0
+
+*mpd-0.19.19 (03 Oct 2016)
+
+  03 Oct 2016; Jeroen Roovers <jer@gentoo.org> +mpd-0.19.19.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.1
+
+  12 Nov 2016; Patrice Clement <monsieurp@gentoo.org> mpd-0.19.10.ebuild,
+  mpd-0.19.11.ebuild, mpd-0.19.12.ebuild, mpd-0.19.14.ebuild,
+  mpd-0.19.15.ebuild, mpd-0.19.18.ebuild, mpd-0.19.19.ebuild:
+  */*: musicpd.org http to https.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2787
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+

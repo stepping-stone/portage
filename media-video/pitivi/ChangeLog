@@ -87,3 +87,58 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> pitivi-0.95.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+*pitivi-0.96 (02 Jul 2016)
+
+  02 Jul 2016; Pacho Ramos <pacho@gentoo.org> +pitivi-0.96.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> -pitivi-0.96.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+
+*pitivi-0.96-r1 (06 Aug 2016)
+
+  06 Aug 2016; Pacho Ramos <pacho@gentoo.org> +pitivi-0.96-r1.ebuild:
+  Fix RDEPEND (#588394 by poncho)
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> pitivi-0.96-r1.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> pitivi-0.96-r1.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*pitivi-0.97.1 (15 Oct 2016)
+
+  15 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/pitivi-0.97.1-optional-tests.patch, +pitivi-0.97.1.ebuild:
+  version bump 0.96-r1 → 0.97
+
+  Gentoo-bug: 594096
+
+  Package-Manager: portage-2.3.1
+
+  15 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> pitivi-0.97.1.ebuild:
+  unrestrict tests, they were failing because of vaapi plugin
+
+  Package-Manager: portage-2.3.1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pitivi-0.95.ebuild,
+  pitivi-0.96-r1.ebuild, pitivi-0.97.1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

@@ -113,3 +113,21 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> libgda-5.2.4-r1.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+*libgda-5.2.4-r2 (08 Oct 2016)
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org>
+  +files/libgda-5.2.4-vala-check.patch, +libgda-5.2.4-r2.ebuild:
+  Upstream patches to fix vala detection and allow the usage of newer slots.
+
+  Package-Manager: portage-2.3.1
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> -libgda-5.2.4.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.1
+

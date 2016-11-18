@@ -159,3 +159,189 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*btrfs-progs-4.4.1 (11 Mar 2016)
+
+  11 Mar 2016; Mike Gilbert <floppym@gentoo.org> +btrfs-progs-4.4.1.ebuild:
+  Bump to 4.4.1
+
+  Package-Manager: portage-2.2.28_p57
+
+  14 Mar 2016; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-4.3.1.ebuild:
+  amd64 stable wrt bug #577016
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-4.3.1.ebuild:
+  x86 stable wrt bug #577016
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-4.3.1.ebuild:
+  ppc stable wrt bug #577016
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-4.3.1.ebuild:
+  ppc64 stable wrt bug #577016
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  29 Mar 2016; Markus Meier <maekke@gentoo.org> btrfs-progs-4.3.1.ebuild:
+  arm stable, bug #577016
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+*btrfs-progs-4.5.1 (01 Apr 2016)
+
+  01 Apr 2016; Mike Gilbert <floppym@gentoo.org> +btrfs-progs-4.5.1.ebuild,
+  btrfs-progs-9999.ebuild:
+  Bump to 4.5.1
+
+  Also convert to EAPI 6.
+
+  Package-Manager: portage-2.2.28_p64
+
+*btrfs-progs-4.5.2 (02 May 2016)
+
+  02 May 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +btrfs-progs-4.5.2.ebuild:
+  bump up to 4.5.2
+
+  Package-Manager: portage-2.2.28
+
+*btrfs-progs-4.5.3 (12 May 2016)
+
+  12 May 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +btrfs-progs-4.5.3.ebuild:
+  bump up to 4.5.3
+
+  Package-Manager: portage-2.2.28
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-4.4.1.ebuild:
+  amd64 stable wrt bug #581108
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 May 2016; Markus Meier <maekke@gentoo.org> btrfs-progs-4.4.1.ebuild:
+  arm stable, bug #581108
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="arm"
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-4.4.1.ebuild:
+  x86 stable wrt bug #581108
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*btrfs-progs-4.6.1 (29 Jun 2016)
+
+  29 Jun 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +btrfs-progs-4.6.1.ebuild:
+  bump up to 4.6.1
+
+  Package-Manager: portage-2.3.0
+
+  06 Jul 2016; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-4.4.1.ebuild:
+  ppc stable wrt bug #581108
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Jul 2016; Robin H. Johnson <robbat2@gentoo.org> btrfs-progs-4.0.ebuild,
+  btrfs-progs-4.0.1.ebuild, btrfs-progs-4.1.ebuild, btrfs-progs-4.1.2.ebuild,
+  btrfs-progs-4.2.ebuild, btrfs-progs-4.2.2.ebuild, btrfs-progs-4.3.1.ebuild,
+  btrfs-progs-4.4.1.ebuild, btrfs-progs-4.5.1.ebuild,
+  btrfs-progs-4.5.2.ebuild, btrfs-progs-4.5.3.ebuild,
+  btrfs-progs-4.6.1.ebuild:
+  older asciidoc fails to build docbookxml.
+
+  Package-Manager: portage-2.2.28
+
+*btrfs-progs-4.7 (22 Aug 2016)
+
+  22 Aug 2016; Sergei Trofimovich <slyfox@gentoo.org> +btrfs-progs-4.7.ebuild,
+  btrfs-progs-9999.ebuild:
+  bump up to 4.7
+
+  Package-Manager: portage-2.3.0_p23
+
+*btrfs-progs-4.7.1 (27 Aug 2016)
+
+  27 Aug 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +btrfs-progs-4.7.1.ebuild:
+  bump up to 4.7.1
+
+  Package-Manager: portage-2.3.0
+
+*btrfs-progs-4.7.2 (21 Sep 2016)
+
+  21 Sep 2016; Mike Gilbert <floppym@gentoo.org> +btrfs-progs-4.7.2.ebuild:
+  bump to 4.7.2
+
+  Bug: https://bugs.gentoo.org/594306
+
+  Package-Manager: portage-2.3.0_p43
+
+  21 Sep 2016; Mike Gilbert <floppym@gentoo.org> -btrfs-progs-4.0.ebuild,
+  -btrfs-progs-4.1.ebuild, -btrfs-progs-4.2.ebuild, -btrfs-progs-4.5.1.ebuild,
+  -btrfs-progs-4.5.2.ebuild, -btrfs-progs-4.7.ebuild,
+  -btrfs-progs-4.7.1.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.0_p43
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-4.6.1.ebuild:
+  amd64 stable wrt bug #592346
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  01 Oct 2016; Markus Meier <maekke@gentoo.org> btrfs-progs-4.6.1.ebuild:
+  arm stable, bug #592346
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --include-arches="arm"
+
+*btrfs-progs-4.8.1 (23 Oct 2016)
+*btrfs-progs-4.7.3 (23 Oct 2016)
+
+  23 Oct 2016; Mike Gilbert <floppym@gentoo.org> -btrfs-progs-4.7.2.ebuild,
+  +btrfs-progs-4.7.3.ebuild, +btrfs-progs-4.8.1.ebuild:
+  bump 4.7.3 and 4.8.1
+
+  Package-Manager: portage-2.3.2
+
+*btrfs-progs-4.8.1-r1 (24 Oct 2016)
+
+  24 Oct 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  -btrfs-progs-4.8.1.ebuild, +btrfs-progs-4.8.1-r1.ebuild,
+  +files/btrfs-progs-4.8.1-fix-ioctl.h:
+  fix missing depends of ioctl.h
+
+  Reported-by: Mikhail Pukhlikov <cynede@gentoo.org>
+
+  Package-Manager: portage-2.3.2
+
+*btrfs-progs-4.8.3 (12 Nov 2016)
+
+  12 Nov 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +btrfs-progs-4.8.3.ebuild, +files/btrfs-progs-4.8.3-fix-ioctl-again.patch:
+  bump up to 4.8.3
+
+  Package-Manager: portage-2.3.2
+

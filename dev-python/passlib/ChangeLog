@@ -88,3 +88,25 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  28 Feb 2016; Matthew Thode <prometheanfire@gentoo.org> passlib-1.6.5.ebuild:
+  keywording arm64
+
+  merged on X-C1
+
+  Package-Manager: portage-2.2.26
+
+*passlib-1.6.5-r1 (16 Mar 2016)
+
+  16 Mar 2016; Tiziano Müller <dev-zero@gentoo.org> +passlib-1.6.5-r1.ebuild:
+  rev-bump for py-3.5 compat and EAPI-6
+
+  Package-Manager: portage-2.2.28
+
+  12 Sep 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -passlib-1.6.1-r1.ebuild, -passlib-1.6.2.ebuild, -passlib-1.6.5.ebuild,
+  passlib-1.6.5-r1.ebuild:
+  doing the test
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> passlib-1.6.5-r1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

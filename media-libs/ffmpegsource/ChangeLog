@@ -149,3 +149,48 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  14 Feb 2016; Ilya Tumaykin <itumaykin@gmail.com> -ffmpegsource-2.20.ebuild:
+  remove old
+
+  Package-Manager: portage-2.2.27
+
+  04 Mar 2016; Ilya Tumaykin <itumaykin@gmail.com> metadata.xml:
+  add subslot description to metadata.xml
+
+  Package-Manager: portage-2.2.27
+
+  09 May 2016; Ian Delaney <idella4@gentoo.org> ffmpegsource-9999.ebuild:
+  update live ebuild
+
+  Bump EAPI to 6, drop unused static-libs USE.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1439
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  27 Jun 2016; Göktürk Yüksek <gokturk@gentoo.org> metadata.xml:
+  cleanup maintainer list
+
+  Acked-By: Maxim Koltsov <maksbotan@gentoo.org>
+
+  Package-Manager: portage-2.3.0
+
+  20 Oct 2016; David Seifert <soap@gentoo.org> ffmpegsource-9999.ebuild:
+  update live ebuild
+
+  Prefer HTTPS URI, drop unneeded '--modules' argument for
+  prune_libtool_files, do compiler checks in pkg_setup too.
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*ffmpegsource-2.23 (20 Oct 2016)
+
+  20 Oct 2016; David Seifert <soap@gentoo.org> +ffmpegsource-2.23.ebuild:
+  verbump to 2.23
+
+  Closes: https://github.com/gentoo/gentoo/pull/2602
+  Package-Manager: portage-2.3.2
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+

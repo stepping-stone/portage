@@ -156,3 +156,66 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*pytz-2016.3 (03 Apr 2016)
+
+  03 Apr 2016; Manuel Rüger <mrueg@gentoo.org> +pytz-2016.3.ebuild:
+  Version bump to 2016.3
+
+  Package-Manager: portage-2.2.28
+
+*pytz-2016.6.1 (14 Jul 2016)
+
+  14 Jul 2016; Dirkjan Ochtman <djc@gentoo.org>
+  +files/2016.6.1-zoneinfo.patch, +pytz-2016.6.1.ebuild:
+  version bump to 2016.6.1
+
+  Package-Manager: portage-2.2.28
+
+  17 Jul 2016; Tobias Klausmann <klausman@gentoo.org> pytz-2016.3.ebuild:
+  2016.3-r0: add alpha keyword
+
+  Gentoo-Bug: 588290
+
+  18 Jul 2016; Markus Meier <maekke@gentoo.org> pytz-2016.3.ebuild:
+  arm stable, bug #588290
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  19 Jul 2016; Mike Frysinger <vapier@gentoo.org> pytz-2016.3.ebuild,
+  pytz-2016.6.1.ebuild:
+  also allow glibc[vanilla] #588424
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> pytz-2016.3.ebuild:
+  amd64 stable wrt bug #588290
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> pytz-2016.3.ebuild:
+  Stable for HPPA PPC64 (bug #588290).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+*pytz-2016.7 (24 Oct 2016)
+
+  24 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  files/2016.6.1-zoneinfo.patch, +pytz-2016.7.ebuild:
+  Bump to version 2016.7
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  24 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> -pytz-2015.4.ebuild,
+  -pytz-2015.7.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> pytz-2015.6.ebuild,
+  pytz-2016.3.ebuild, pytz-2016.6.1.ebuild, pytz-2016.7.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

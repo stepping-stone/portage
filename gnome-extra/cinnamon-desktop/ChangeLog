@@ -99,3 +99,62 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  cinnamon-desktop-2.8.0.ebuild:
+  x86 stable wrt bug #566378
+
+  Package-Manager: portage-2.2.26
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> -cinnamon-desktop-2.6.5.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*cinnamon-desktop-2.8.1 (29 May 2016)
+
+  29 May 2016; Pacho Ramos <pacho@gentoo.org> +cinnamon-desktop-2.8.1.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> cinnamon-desktop-2.8.1.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> cinnamon-desktop-2.8.1.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -cinnamon-desktop-2.8.0.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*cinnamon-desktop-3.0.2 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +cinnamon-desktop-3.0.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  17 Sep 2016; Kristian Fiskerstrand <k_f@gentoo.org> metadata.xml:
+  Reassigning to new Cinnamon Project
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> cinnamon-desktop-3.0.2.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> cinnamon-desktop-3.0.2.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+

@@ -64,3 +64,24 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  06 Mar 2016; Agostino Sarubbo <ago@gentoo.org> dnstop-20140915.ebuild:
+  amd64 stable wrt bug #562574
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> dnstop-20140915.ebuild:
+  x86 stable wrt bug #562574
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*dnstop-20140915-r1 (26 Sep 2016)
+
+  26 Sep 2016; Michael Weber <xmw@gentoo.org> +dnstop-20140915-r1.ebuild:
+  Fix for ncurses[tinfo], thanks Fabio Scaccabarozzi, bug 595068.
+
+  Package-Manager: portage-2.2.28
+

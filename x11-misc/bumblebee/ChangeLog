@@ -64,3 +64,21 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  19 Apr 2016; Ian Stakenvicius <axs@gentoo.org> metadata.xml:
+  fix <pkg/> reference in metadata.xml
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/bumblebee.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  15 Oct 2016; Jason A. Donenfeld <zx2c4@gentoo.org> bumblebee-3.2.1.ebuild:
+  accept user patches
+
+  Package-Manager: portage-2.3.2
+
+  22 Oct 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Update metadata to point to new maintainer
+
+  Package-Manager: portage-2.3.1
+

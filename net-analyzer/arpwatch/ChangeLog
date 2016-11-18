@@ -83,3 +83,40 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --ignore-arches
 
+  02 Mar 2016; Agostino Sarubbo <ago@gentoo.org> arpwatch-2.1.15-r8.ebuild:
+  amd64 stable wrt bug #419375
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> arpwatch-2.1.15-r8.ebuild:
+  x86 stable wrt bug #419375
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> arpwatch-2.1.15-r8.ebuild:
+  ppc stable wrt bug #419375
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Mar 2016; Agostino Sarubbo <ago@gentoo.org> arpwatch-2.1.15-r8.ebuild:
+  sparc stable wrt bug #419375
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  24 Mar 2016; Jeroen Roovers <jer@gentoo.org> -arpwatch-2.1.15-r6.ebuild,
+  -arpwatch-2.1.15-r7.ebuild:
+  Old.
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/arpwatch.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+

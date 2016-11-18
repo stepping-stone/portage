@@ -96,3 +96,67 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*qjackctl-0.4.1-r2 (07 Mar 2016)
+
+  07 Mar 2016; Сухарик <suhr@i2pmail.org> -qjackctl-0.4.1-r1.ebuild,
+  +qjackctl-0.4.1-r2.ebuild:
+  use virtual/jack
+
+*qjackctl-0.4.2 (07 Apr 2016)
+
+  07 Apr 2016; Alexis Ballier <aballier@gentoo.org> +qjackctl-0.4.2.ebuild:
+  bump to 0.4.2
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Alexis Ballier <aballier@gentoo.org>
+
+  10 Apr 2016; Michael Palimaka <kensington@gentoo.org> qjackctl-0.4.2.ebuild:
+  add missing dependency
+
+  Gentoo-bug: 574748
+
+  Package-Manager: portage-2.2.28
+
+  10 Apr 2016; Michael Palimaka <kensington@gentoo.org> qjackctl-0.4.2.ebuild:
+  fix dependencies for dbus USE flag
+
+  Gentoo-bug: 566500
+
+  Package-Manager: portage-2.2.28
+
+*qjackctl-0.4.3 (19 Sep 2016)
+
+  19 Sep 2016; Alexis Ballier <aballier@gentoo.org> +qjackctl-0.4.3.ebuild:
+  bump to 0.4.3
+
+  Package-Manager: portage-2.3.1
+
+*qjackctl-0.4.3-r1 (22 Oct 2016)
+
+  22 Oct 2016; David Seifert <soap@gentoo.org> +qjackctl-0.4.3-r1.ebuild:
+  Fix configure w/ Qt 5.7, drop USE=qt5, EAPI 6
+
+  Fix DESCRIPTION length while at it to make repoman a bit happier.
+
+  Gentoo-bug: 595488
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2625
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  22 Oct 2016; David Seifert <soap@gentoo.org> -qjackctl-0.4.3.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2625
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*qjackctl-0.4.4 (15 Nov 2016)
+
+  15 Nov 2016; Alexis Ballier <aballier@gentoo.org> +qjackctl-0.4.4.ebuild:
+  bump to 0.4.4
+
+  Package-Manager: portage-2.3.2
+

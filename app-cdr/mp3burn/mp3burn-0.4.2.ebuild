@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -6,7 +6,7 @@ EAPI=5
 inherit eutils
 
 DESCRIPTION="Burn mp3s without filling up your disk with .wav files"
-HOMEPAGE="http://sourceforge.net/projects/mp3burn"
+HOMEPAGE="https://sourceforge.net/projects/mp3burn"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 	media-sound/vorbis-tools
 	virtual/cdrtools
 	dev-perl/MP3-Info
-	dev-perl/ogg-vorbis-header
+	dev-perl/Ogg-Vorbis-Header
 	dev-perl/String-ShellQuote
 "
 

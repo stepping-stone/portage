@@ -72,3 +72,101 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*freeradius-3.0.11 (20 Apr 2016)
+*freeradius-2.2.9 (20 Apr 2016)
+
+  20 Apr 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +freeradius-2.2.9.ebuild, +freeradius-3.0.11.ebuild:
+  Security bump to versions 2.2.9 and 3.0.11
+
+  See security bugs #553308 and #560994.
+  Also fixing version bump request #551246, init script bug #551246 and
+  missing dependency on sys-libs/talloc (#543302).
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  20 Apr 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -freeradius-3.0.3.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  26 Apr 2016; Agostino Sarubbo <ago@gentoo.org> freeradius-2.2.9.ebuild:
+  amd64 stable wrt bug #553308
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*freeradius-3.0.11-r1 (28 Apr 2016)
+*freeradius-2.2.9-r1 (28 Apr 2016)
+*freeradius-2.2.5-r1 (28 Apr 2016)
+
+  28 Apr 2016; Austin English <wizardedit@gentoo.org> files/radius.init-r3,
+  +freeradius-2.2.5-r1.ebuild, +freeradius-2.2.9-r1.ebuild,
+  +freeradius-3.0.11-r1.ebuild:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  Gentoo-Bug: https://bugs.gentoo.org/573846
+
+  Package-Manager: portage-2.2.26
+
+  28 Apr 2016; Austin English <wizardedit@gentoo.org>
+  -freeradius-2.2.5.ebuild, -freeradius-2.2.9.ebuild,
+  -freeradius-3.0.11.ebuild:
+  remove old ebuilds
+
+  Package-Manager: portage-2.2.26
+
+  27 Jun 2016; Agostino Sarubbo <ago@gentoo.org> freeradius-2.2.9-r1.ebuild:
+  x86 stable wrt bug #553308
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  30 Jun 2016; Aaron Bauman <bman@gentoo.org> -freeradius-2.2.5-r1.ebuild:
+  cleanup vulnerable versions per security bug #553308.
+
+  20 Sep 2016; Kent Fredric <kentnl@gentoo.org> freeradius-2.2.9-r1.ebuild,
+  freeradius-3.0.11-r1.ebuild:
+  Needs rebuild on Perl Subslot change.
+
+  Has .so's that link against libperl and need subsequent rebuilding
+  by perl-cleaner without subslot deps.
+
+  Bug: https://bugs.gentoo.org/594198
+
+  Package-Manager: portage-2.3.0
+
+*freeradius-3.0.11-r2 (20 Sep 2016)
+*freeradius-2.2.9-r2 (20 Sep 2016)
+
+  20 Sep 2016; Kent Fredric <kentnl@gentoo.org> -freeradius-2.2.9-r1.ebuild,
+  +freeradius-2.2.9-r2.ebuild, -freeradius-3.0.11-r1.ebuild,
+  +freeradius-3.0.11-r2.ebuild:
+  Revbump for bug #594198
+
+  This is to forcefully propagate the RDEPEND change
+  to ensure this will work on future perl upgrades.
+
+  Bug: https://bugs.gentoo.org/594198
+
+  Package-Manager: portage-2.3.0
+
+*freeradius-3.0.12 (30 Sep 2016)
+
+  30 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +freeradius-3.0.12.ebuild:
+  Bump to version 3.0.12
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+

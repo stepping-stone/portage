@@ -116,3 +116,38 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Justin Lecher <jlec@gentoo.org>
 
+*sympy-1.0 (18 Mar 2016)
+
+  18 Mar 2016; Andrey Grozin <grozin@gentoo.org>
+  +files/sympy-1.0-doc-makefile.patch, +sympy-1.0.ebuild:
+  bump to 1.0
+
+  Bug: 577668
+
+  Package-Manager: portage-2.2.28
+
+*sympy-1.0-r1 (28 Mar 2016)
+
+  28 Mar 2016; Andrey Grozin <grozin@gentoo.org> +sympy-1.0-r1.ebuild:
+  with USE=doc now depends on app-text/docbook2X
+
+  Bug: 577966
+
+  Package-Manager: portage-2.2.28
+
+  28 Mar 2016; Andrey Grozin <grozin@gentoo.org> -sympy-0.7.6.1.ebuild,
+  -sympy-1.0.ebuild:
+  gentoo/dev-python/sympy: cleaning old
+
+  Package-Manager: portage-2.2.28
+
+  28 Mar 2016; Sean Vig <sean.v.775@gmail.com> sympy-1.0-r1.ebuild:
+  Add Python 3.5
+
+  20 Apr 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  imaging -> pillow
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> sympy-0.7.6.1-r1.ebuild,
+  sympy-1.0-r1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

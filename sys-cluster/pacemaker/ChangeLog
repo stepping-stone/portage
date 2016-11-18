@@ -77,3 +77,11 @@
 
   Package-Manager: portage-2.2.27
 
+  19 Apr 2016; Ian Stakenvicius <axs@gentoo.org> metadata.xml:
+  fix <pkg/> reference in metadata.xml
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/pacemaker.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+

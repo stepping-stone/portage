@@ -62,3 +62,18 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+  03 Oct 2016; Tobias Klausmann <klausman@gentoo.org> jpilot-1.8.1.ebuild:
+  1.8.1-r0: stable on alpha
+
+  Gentoo-Bug: 595678
+
+  08 Oct 2016; Pacho Ramos <pacho@gentoo.org> jpilot-1.8.1.ebuild:
+  amd64/x86 stable, bug #595678
+
+  Package-Manager: portage-2.3.1
+

@@ -92,3 +92,18 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  07 Mar 2016; Daniel Campbell <zlg@gentoo.org>
+  -files/udevil-0.4.1-automake-1.13.patch, -files/udevil-0.4.1-flags.patch,
+  -udevil-0.4.1.ebuild, -udevil-0.4.3.ebuild, -udevil-0.4.4.ebuild:
+  Cleanup old versions
+
+  Package-Manager: portage-2.2.27
+
+  27 Apr 2016; Daniel Campbell <zlg@gentoo.org> metadata.xml:
+  Remove proxy-maint from metadata
+
+  Package-Manager: portage-2.2.28
+
+  25 Aug 2016; Tim Harder <radhermit@gentoo.org> udevil-0.4.4-r1.ebuild:
+  net-fs/sshfs: moved from sys-fs/sshfs
+

@@ -120,3 +120,98 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org>
+  gnome-terminal-3.18.2.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+*gnome-terminal-3.18.3 (07 Mar 2016)
+
+  07 Mar 2016; Rémi Cardona <remi@gentoo.org> +gnome-terminal-3.18.3.ebuild:
+  bump to 3.18.3
+
+  Package-Manager: portage-2.2.27
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.18.3.ebuild:
+  amd64 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="amd64"
+
+  11 Jun 2016; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.18.3.ebuild:
+  x86 stable, bug 584468
+
+  Package-Manager: portage-2.3.0_rc1
+  RepoMan-Options: --include-arches="x86"
+
+*gnome-terminal-3.20.2 (28 Jun 2016)
+
+  28 Jun 2016; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/gnome-terminal-3.20.2-transparency.patch,
+  +gnome-terminal-3.20.2.ebuild:
+  bump to 3.20.2 for gnome-3.20
+
+  Support for dark themes has been restored upstream!
+
+  Edit → Preferences → General → Theme variant = Dark
+
+  Package-Manager: portage-2.3.0
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.20.2.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.20.2.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*gnome-terminal-3.22.0 (26 Oct 2016)
+
+  26 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnome-terminal-3.22.0-transparency.patch,
+  +gnome-terminal-3.22.0.ebuild:
+  version bump 3.20.2 → 3.22.0
+
+  Package-Manager: portage-2.3.2
+
+  26 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnome-terminal-3.16.2-restore-dark.patch,
+  -files/gnome-terminal-3.16.2-restore-transparency.patch,
+  -files/gnome-terminal-3.18.2-dark-theme.patch,
+  -files/gnome-terminal-3.18.2-transparency-fix-for-broken-themes.patch,
+  -files/gnome-terminal-3.18.2-transparency.patch,
+  -gnome-terminal-3.16.2-r2.ebuild, -gnome-terminal-3.18.2.ebuild,
+  -gnome-terminal-3.18.3.ebuild:
+  cleanup old revisions
+
+  Package-Manager: portage-2.3.2
+
+*gnome-terminal-3.22.1 (08 Nov 2016)
+
+  08 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-terminal-3.22.1.ebuild:
+  add gnome-terminal-3.22.1.ebuild
+
+  From the 3.22.0 ebuild, updated the vte dependency as per
+
+  https://git.gnome.org/browse/gnome-terminal/diff/?id=3.22.1&id2=3.22.0
+  Closes: https://github.com/gentoo/gentoo/pull/2779
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+
+*gnome-terminal-3.20.3 (13 Nov 2016)
+
+  13 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-terminal-3.20.3.ebuild:
+  bump 3.20.2 -> 3.20.3
+
+  bump vte dependency to 0.44.3
+  Closes: https://github.com/gentoo/gentoo/pull/2810
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+

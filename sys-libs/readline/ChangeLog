@@ -126,3 +126,76 @@
   +readline-7.0_rc1.ebuild:
   version bump to 7.0_rc1
 
+  21 May 2016; Benda Xu <heroxbd@gentoo.org> readline-6.3_p8-r2.ebuild,
+  readline-7.0_rc1.ebuild:
+  rework --docdir flag for automatic prefix support.
+
+    cf. commit b9188242904 for sys-devel/automake
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --force
+
+*readline-7.0_beta2 (11 Aug 2016)
+
+  11 Aug 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/readline-7.0-headers.patch, +readline-7.0_beta2.ebuild,
+  -readline-7.0_rc1.ebuild:
+  version bump to 7.0_beta2
+
+*readline-7.0_rc2 (23 Aug 2016)
+
+  23 Aug 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +readline-7.0_rc2.ebuild:
+  Bump to version 7.0_rc2
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  23 Aug 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -readline-6.3_p8-r1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*readline-7.0 (15 Sep 2016)
+
+  15 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> +readline-7.0.ebuild:
+  Bump to version 7.0
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  15 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -readline-7.0_beta2.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  16 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> readline-7.0.ebuild:
+  Re-enabled KEYWORDS.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  28 Sep 2016; Lars Wendler <polynomial-c@gentoo.org> readline-7.0.ebuild:
+  Re-added preserve_old_lib for bug #595324.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  07 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -readline-7.0_rc2.ebuild:
+  Removed rc version.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*readline-7.0-r1 (10 Nov 2016)
+
+  10 Nov 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/readline-7.0-history-alloclist.patch, -readline-7.0.ebuild,
+  +readline-7.0-r1.ebuild:
+  add upstream patch for excessive history memory allocs #597006
+

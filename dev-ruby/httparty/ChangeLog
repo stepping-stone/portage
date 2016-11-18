@@ -93,3 +93,26 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  02 Mar 2016; Manuel Rüger <mrueg@gentoo.org> -httparty-0.13.4.ebuild,
+  -httparty-0.13.5.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.2.27
+
+  17 Mar 2016; Manuel Rüger <mrueg@gentoo.org> httparty-0.13.7.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+*httparty-0.14.0 (27 Jul 2016)
+
+  27 Jul 2016; Hans de Graaff <graaff@gentoo.org> +httparty-0.14.0.ebuild:
+  add 0.14.0
+
+  Package-Manager: portage-2.2.28
+
+  03 Nov 2016; Hans de Graaff <graaff@gentoo.org> httparty-0.14.0.ebuild:
+  add ruby22
+
+  Package-Manager: portage-2.3.0
+

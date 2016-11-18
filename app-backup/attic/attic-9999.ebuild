@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-PYTHON_COMPAT=( python3_4 )
+PYTHON_COMPAT=( python3_{4,5} )
 
 inherit distutils-r1
 
@@ -25,8 +25,8 @@ IUSE="libressl"
 
 RDEPEND="
 	dev-python/msgpack[${PYTHON_USEDEP}]
-	!libressl? ( dev-libs/openssl:0 )
-	libressl? ( dev-libs/libressl )
+	!libressl? ( dev-libs/openssl:0= )
+	libressl? ( dev-libs/libressl:0= )
 	dev-python/llfuse[${PYTHON_USEDEP}]"
 
 DEPEND="

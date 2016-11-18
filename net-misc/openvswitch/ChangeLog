@@ -95,3 +95,97 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*openvswitch-2.5.0 (16 Mar 2016)
+
+  16 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +openvswitch-2.5.0.ebuild:
+  bup
+
+  Package-Manager: portage-2.2.26
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> openvswitch-2.5.0.ebuild:
+  amd64 stable wrt bug #577568
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> openvswitch-2.5.0.ebuild:
+  x86 stable wrt bug #577568
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -openvswitch-2.3.0.ebuild, -openvswitch-2.3.1.ebuild,
+  -openvswitch-2.3.2.ebuild, -openvswitch-2.4.0.ebuild:
+  remove old badness bug 577568
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/ovs-controller-r1,
+  files/ovs-vswitchd-r1, files/ovsdb-server-r1:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  03 Jun 2016; Matthew Thode <prometheanfire@gentoo.org>
+  openvswitch-2.5.0.ebuild:
+  fixing kernel dep for bug 584396
+
+  Package-Manager: portage-2.2.28
+
+  09 Aug 2016; Matthew Thode <prometheanfire@gentoo.org>
+  openvswitch-2.5.0.ebuild:
+  Fix deps for pure systemd env.
+
+  Signed-off-by: Matthew Thode <prometheanfire@gentoo.org>
+
+*openvswitch-2.6.0 (01 Oct 2016)
+
+  01 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +openvswitch-2.6.0.ebuild:
+  openstack p2, newton is done, will add heat later
+
+  04 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  openvswitch-2.6.0.ebuild:
+  fixing install when using monitor
+
+  Package-Manager: portage-2.3.0
+
+  05 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  openvswitch-2.6.0.ebuild:
+  fixing bunch of small things
+
+  Package-Manager: portage-2.3.0
+
+  05 Oct 2016; Matthew Thode <prometheanfire@gentoo.org>
+  openvswitch-2.6.0.ebuild:
+  fixing it for the last time I hope
+
+  Package-Manager: portage-2.3.0
+
+  05 Oct 2016; David Seifert <soap@gentoo.org> openvswitch-2.6.0.ebuild:
+  Fix minor QA issues
+
+  Package-Manager: portage-2.3.1
+
+  06 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  openvswitch-2.6.0.ebuild:
+  stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+
+*openvswitch-2.6.0-r1 (09 Nov 2016)
+
+  09 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +openvswitch-2.6.0-r1.ebuild:
+  workaround for bug 596206
+
+  Package-Manager: portage-2.3.0
+
+  10 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  openvswitch-2.6.0-r1.ebuild:
+  fix build errors
+
+  Package-Manager: portage-2.3.0
+

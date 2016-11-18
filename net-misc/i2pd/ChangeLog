@@ -115,3 +115,240 @@
   Package-Manager: portage-2.2.26
   RepoMan-Options: --ignore-arches
 
+*i2pd-2.5.0 (05 Mar 2016)
+
+  05 Mar 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.5.0.ebuild:
+  version bump to 2.5.0, bug #576520
+
+  Package-Manager: portage-2.2.26
+
+*i2pd-2.5.0-r1 (14 Mar 2016)
+
+  14 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/i2pd-2.5.0.confd, +files/i2pd-2.5.0.initd,
+  +files/i2pd-2.5.0.logrotate, +files/i2pd-2.5.0.service,
+  +i2pd-2.5.0-r1.ebuild:
+  fix bug #564596
+
+*i2pd-2.5.0-r2 (14 Mar 2016)
+
+  14 Mar 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.5.0-r2.ebuild:
+  use provided subscriptions.txt
+
+*i2pd-2.5.1 (14 Mar 2016)
+
+  14 Mar 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.5.1.ebuild:
+  version bump to 2.5.1
+
+*i2pd-2.5.1-r1 (14 Mar 2016)
+*i2pd-2.5.0-r3 (14 Mar 2016)
+
+  14 Mar 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.5.0-r3.ebuild,
+  +i2pd-2.5.1-r1.ebuild:
+  use correct logrotate file
+
+  14 Mar 2016; Anthony G. Basile <blueness@gentoo.org> i2pd-2.5.0-r3.ebuild,
+  i2pd-2.5.1-r1.ebuild:
+  use provided i2pd.conf
+
+  14 Mar 2016; Anthony G. Basile <blueness@gentoo.org> -i2pd-2.5.0-r1.ebuild,
+  -i2pd-2.5.0-r2.ebuild, -i2pd-2.5.1.ebuild:
+  remove older unstable versions
+
+  Package-Manager: portage-2.2.26
+
+  19 Mar 2016; Anthony G. Basile <blueness@gentoo.org> -files/i2pd.confd,
+  -files/i2pd.initd, -files/i2pd.logrotate, -files/i2pd.service,
+  -i2pd-0.10.0.ebuild, -i2pd-2.4.0-r1.ebuild, -i2pd-2.5.0.ebuild:
+  remove older version
+
+  Package-Manager: portage-2.2.26
+
+*i2pd-2.5.1-r2 (24 Mar 2016)
+
+  24 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/i2pd-2.5.1-disable_ipv6_in_i2pd_conf.patch,
+  +files/i2pd-2.5.1-fix_installed_components.patch, +files/i2pd-2.5.1.confd,
+  +files/i2pd-2.5.1.initd, +files/i2pd-2.5.1.service, i2pd-2.5.1-r1.ebuild,
+  +i2pd-2.5.1-r2.ebuild:
+  revbump
+
+  - fixes to config files so the i2pd service actually starts
+  - conversion to EAPI6
+  - minor beautifications
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  25 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  -files/i2pd-2.4.0-fix_installed_components.patch, -files/i2pd-2.4.0.service,
+  +files/i2pd-2.5.0-fix_installed_components.patch, -files/i2pd.conf,
+  i2pd-2.5.0-r3.ebuild, -i2pd-2.5.1-r1.ebuild:
+  rm 2.5.1-r1 and misc old files
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+*i2pd-2.5.1-r3 (25 Mar 2016)
+*i2pd-2.5.0-r4 (25 Mar 2016)
+
+  25 Mar 2016; Anthony G. Basile <blueness@gentoo.org> -i2pd-2.5.0-r3.ebuild,
+  +i2pd-2.5.0-r4.ebuild, -i2pd-2.5.1-r2.ebuild, +i2pd-2.5.1-r3.ebuild:
+  revbumps for small fixes
+
+  - 2.5.0-r3 -> r4: bug 574340
+  - 2.5.1-r2 -> r3: bug 578232
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+  28 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  files/i2pd-2.5.1.service:
+  typo in systemd service
+
+  28 Mar 2016; Anthony G. Basile <blueness@gentoo.org>
+  files/i2pd-2.5.0.service:
+  typo in systemd service, 2.5.0
+
+*i2pd-2.6.0 (01 Apr 2016)
+
+  01 Apr 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.6.0.ebuild:
+  version bump to 2.6.0
+
+  Package-Manager: portage-2.2.26
+
+*i2pd-2.6.0-r1 (03 Apr 2016)
+
+  03 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/i2pd-2.6.0.confd, +files/i2pd-2.6.0.service, -i2pd-2.6.0.ebuild,
+  +i2pd-2.6.0-r1.ebuild:
+  revbump 2.6.0: housecleaning
+
+  - rename tunnels.cfg to tunnels.conf, and switch to upstream version
+  - use docs/i2pd.conf instead of debian/i2pd.conf, patch disabling ipv6 is no
+  longer needed
+  - remove the man page as obsolete; no replacement found
+  - update required boost version
+
+  Author: Alexey Korepanov <kaikaikai@yandex.ru>
+  Reviewer: M.B. <tomboy64@sina.cn>
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --ignore-arches
+
+*i2pd-2.6.0-r2 (08 Apr 2016)
+
+  08 Apr 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/i2pd-2.6.0-r2.confd, +files/i2pd-2.6.0-r2.initd,
+  +files/i2pd-2.6.0-r2.service, +i2pd-2.6.0-r2.ebuild:
+  add graceful shutdown and fix pid file problem
+
+*i2pd-2.6.0-r3 (09 May 2016)
+
+  09 May 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.6.0-r3.ebuild:
+  change access permissions for config files
+
+  09 May 2016; Anthony G. Basile <blueness@gentoo.org> i2pd-2.6.0-r3.ebuild:
+  remove unused /usr/share/i2pd
+
+  09 May 2016; Anthony G. Basile <blueness@gentoo.org> i2pd-2.6.0-r3.ebuild:
+  ebuild cleanup
+
+  09 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/i2pd-2.6.0-r3.logrotate, i2pd-2.6.0-r3.ebuild:
+  correct pid file for logrotate
+
+  09 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/i2pd-2.6.0-r3.confd, i2pd-2.6.0-r3.ebuild:
+  use static user and group
+
+  09 May 2016; Anthony G. Basile <blueness@gentoo.org> i2pd-2.6.0-r3.ebuild:
+  add more docs
+
+  09 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/i2pd-2.6.0-r3.initd, i2pd-2.6.0-r3.ebuild:
+  start-stop-daemon: remove spaces in --retry
+
+  09 May 2016; Anthony G. Basile <blueness@gentoo.org>
+  files/i2pd-2.6.0-r3.confd, +files/i2pd-2.6.0-r3.service,
+  i2pd-2.6.0-r3.ebuild:
+  for floodfill: increase number of open files
+
+  09 May 2016; Anthony G. Basile <blueness@gentoo.org> i2pd-2.6.0-r3.ebuild:
+  fix some whitespace damage
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/i2pd-2.5.0.initd,
+  files/i2pd-2.5.1.initd:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*i2pd-2.7.0 (19 May 2016)
+
+  19 May 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.7.0.ebuild:
+  version bump 2.7.0
+
+  03 Jun 2016; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  add Alexey Korepanov as maintainer
+
+  Package-Manager: portage-2.2.28
+
+*i2pd-2.8.0 (21 Jun 2016)
+
+  21 Jun 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.8.0.ebuild:
+  2.8.0 version bump
+
+  Signed-off-by: Anthony G. Basile <blueness@gentoo.org>
+
+  23 Jun 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/i2pd-2.5.0-fix_installed_components.patch, -files/i2pd-2.5.0.confd,
+  -files/i2pd-2.5.0.initd, -files/i2pd-2.5.0.logrotate,
+  -files/i2pd-2.5.0.service,
+  -files/i2pd-2.5.1-disable_ipv6_in_i2pd_conf.patch, -files/i2pd-2.5.1.confd,
+  -files/i2pd-2.5.1.initd, -files/i2pd-2.5.1.service,
+  -files/i2pd-2.6.0-r2.confd, -files/i2pd-2.6.0-r2.initd,
+  -files/i2pd-2.6.0-r2.service, -files/i2pd-2.6.0.confd,
+  -files/i2pd-2.6.0.service, -files/i2pd.1, -files/tunnels.cfg,
+  -i2pd-2.5.0-r4.ebuild, -i2pd-2.5.1-r3.ebuild, -i2pd-2.6.0-r1.ebuild,
+  -i2pd-2.6.0-r2.ebuild:
+  remove old
+
+  Closes: https://github.com/gentoo/gentoo/pull/1719
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*i2pd-2.9.0 (15 Aug 2016)
+
+  15 Aug 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.9.0.ebuild:
+  2.9.0 version bump
+
+  15 Aug 2016; Anthony G. Basile <blueness@gentoo.org> i2pd-2.9.0.ebuild:
+  use PATCHES (cosmetic)
+
+*i2pd-2.9.0-r1 (16 Aug 2016)
+
+  16 Aug 2016; Anthony G. Basile <blueness@gentoo.org>
+  +files/i2pd-2.9.0-static.patch, -i2pd-2.9.0.ebuild, +i2pd-2.9.0-r1.ebuild:
+  fix static build #591334
+
+*i2pd-2.10.0 (17 Oct 2016)
+
+  17 Oct 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.10.0.ebuild:
+  version bump 2.10.0
+
+  17 Oct 2016; Anthony G. Basile <blueness@gentoo.org> i2pd-2.10.0.ebuild:
+  update license
+
+*i2pd-2.10.1 (09 Nov 2016)
+
+  09 Nov 2016; Anthony G. Basile <blueness@gentoo.org> +i2pd-2.10.1.ebuild:
+  version bump 2.10.1
+
+  09 Nov 2016; Anthony G. Basile <blueness@gentoo.org> -i2pd-2.6.0-r3.ebuild,
+  -i2pd-2.7.0.ebuild:
+  remove old
+
+  09 Nov 2016; Anthony G. Basile <blueness@gentoo.org> i2pd-2.10.0.ebuild,
+  i2pd-2.10.1.ebuild:
+  ROOT -> EROOT
+

@@ -71,3 +71,61 @@
 
   Package-Manager: portage-2.2.27
 
+  07 Mar 2016; Hans de Graaff <graaff@gentoo.org> coderay-1.1.1.ebuild:
+  add ruby23, drop redcloth test dependency
+
+  Package-Manager: portage-2.2.26
+
+  13 Mar 2016; Markus Meier <maekke@gentoo.org> coderay-1.1.0-r2.ebuild:
+  arm stable, bug #576630
+
+  Package-Manager: portage-2.2.27
+  RepoMan-Options: --include-arches="arm"
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> coderay-1.1.0-r2.ebuild:
+  amd64 stable wrt bug #576630
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  15 Mar 2016; Agostino Sarubbo <ago@gentoo.org> coderay-1.1.0-r2.ebuild:
+  x86 stable wrt bug #576630
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  16 Mar 2016; Agostino Sarubbo <ago@gentoo.org> coderay-1.1.0-r2.ebuild:
+  ppc stable wrt bug #576630
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Mar 2016; Agostino Sarubbo <ago@gentoo.org> coderay-1.1.0-r2.ebuild:
+  ppc64 stable wrt bug #576630
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Apr 2016; Manuel Rüger <mrueg@gentoo.org> coderay-1.1.0-r1.ebuild,
+  coderay-1.1.0-r2.ebuild:
+  Remove ruby19
+
+  Package-Manager: portage-2.2.28
+
+  26 May 2016; Tobias Klausmann <klausman@gentoo.org> coderay-1.1.0-r2.ebuild:
+  1.1.0-r2: add alpha keyword
+
+  Gentoo-Bug: 576630
+
+  Package-Manager: portage-2.3.0_rc1
+
+  02 Oct 2016; Jeroen Roovers <jer@gentoo.org> coderay-1.1.0-r2.ebuild:
+  Stable for HPPA (bug #576630).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+

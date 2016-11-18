@@ -69,3 +69,180 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*guessit-1.0.3 (05 Apr 2016)
+
+  05 Apr 2016; Mike Frysinger <vapier@gentoo.org> +guessit-1.0.3.ebuild,
+  guessit-9999.ebuild:
+  version bump to 1.0.3
+
+  12 May 2016; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  substitute AWOL maintainer
+
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  12 May 2016; Ian Delaney <idella4@gentoo.org>
+  -files/guessit-0.5.4-python3.patch, -files/guessit-0.5.4-tests.patch,
+  -guessit-0.5.4.ebuild, -guessit-0.6.2.ebuild, -guessit-0.7.1.ebuild,
+  -guessit-0.9.3.ebuild:
+  remove old
+
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+*guessit-1.0.3-r1 (12 May 2016)
+
+  12 May 2016; Ian Delaney <idella4@gentoo.org> +guessit-1.0.3-r1.ebuild:
+  revbump to 1.0.3-r1
+
+  Bump EAPI to 6, add missing deps, update HOMEPAGE,
+  fetch tarball from PyPI, make testsuite functional.
+
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  12 May 2016; Ian Delaney <idella4@gentoo.org> -guessit-1.0.3.ebuild:
+  remove old
+
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+*guessit-2.0.5 (12 May 2016)
+
+  12 May 2016; Ian Delaney <idella4@gentoo.org>
+  +files/guessit-2.0.5-support-noninteractive-shells.patch,
+  +guessit-2.0.5.ebuild, guessit-9999.ebuild:
+  verbump to 2.0.5
+
+  It's a complete rewrite since 1.x thus drop untested implementations
+  from PYTHON_COMPAT.
+
+  Sync 9999 ebuild with 2.0.5.
+
+  Package-Manager: portage-2.2.28
+
+  Signed-off-by: Ian Delaney <idella4@gentoo.org>
+
+  31 May 2016; Patrice Clement <monsieurp@gentoo.org> guessit-1.0.3-r1.ebuild:
+  fix LICENSE in 1.0.3-r1
+
+  guessit-1.0.3 is licensed under LGPL-3+. Later versions are LGPL-3 only.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*guessit-2.0.5-r1 (31 May 2016)
+
+  31 May 2016; Patrice Clement <monsieurp@gentoo.org> -guessit-2.0.5.ebuild,
+  +guessit-2.0.5-r1.ebuild:
+  revbump to 2.0.5-r1 to remove unneeded deps
+
+  stevedore is only needed for guessit-1.0.3.
+  It was accidentally copied to 2.0.5 ebuild.
+
+  Package-Manager: portage-2.3.0_rc1
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  31 May 2016; Patrice Clement <monsieurp@gentoo.org> guessit-9999.ebuild:
+  remove unneeded deps in 9999
+
+  See the previous commit.
+
+  Closes: https://github.com/gentoo/gentoo/pull/1563
+  Package-Manager: portage-2.3.0_rc1
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  08 Jul 2016; Patrice Clement <monsieurp@gentoo.org> guessit-9999.ebuild:
+  omit no longer needed patch in 9999
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/1840
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Jul 2016; Patrice Clement <monsieurp@gentoo.org> guessit-1.0.3-r1.ebuild:
+  add missing dev-python/pygments test dep for 1.0.3
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/1964
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  30 Jul 2016; Patrice Clement <monsieurp@gentoo.org> guessit-1.0.3-r1.ebuild,
+  guessit-2.0.5-r1.ebuild:
+  add python-3.5 support
+
+  Tested by me against dev-lang/python-3.5.2:3.5/3.5m
+
+  guessit-9999 is omitted as upstream repo is in borked state.
+  Can't build it properly even with Python-3.4 atm.
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/1964
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+  22 Aug 2016; Göktürk Yüksek <gokturk@gentoo.org> guessit-9999.ebuild:
+  bump the required rebulk version in 9999
+
+  Upstream-commit: 5aabd3ee76396d0fef7904d375e1817ad3b8e77c
+
+  Package-Manager: portage-2.3.0
+
+  22 Aug 2016; Göktürk Yüksek <gokturk@gentoo.org> guessit-9999.ebuild:
+  add python-3.5 support to 9999
+
+  Tested by me against dev-lang/python-3.5.2:3.5/3.5m
+
+  Package-Manager: portage-2.3.0
+
+  11 Sep 2016; David Seifert <soap@gentoo.org> guessit-9999.ebuild:
+  remove <python-dateutil-2.5.2 constraint from 9999
+
+  Upstream-commit: 484f308a8e2d7e6f23740d5052b7f6f26cc1d4f7
+
+  Package-Manager: portage-2.3.0
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  11 Sep 2016; David Seifert <soap@gentoo.org> guessit-9999.ebuild:
+  remove >=python-dateutil-2.1 constraint from 9999
+
+  Introduced in upstream commit f2d9d6015fcf87df83aea3011486b9fe5a7fe5f9.
+  For a while now all python-dateutil versions in tree satisfy >=2.1
+  constraint.
+
+  Package-Manager: portage-2.3.0
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+*guessit-2.1.0 (11 Sep 2016)
+
+  11 Sep 2016; David Seifert <soap@gentoo.org> +guessit-2.1.0.ebuild:
+  verbump to 2.1.0
+
+  Closes: https://github.com/gentoo/gentoo/pull/2294
+  Package-Manager: portage-2.3.0
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  11 Sep 2016; David Seifert <soap@gentoo.org> guessit-9999.ebuild:
+  bump required rebulk version to 0.7.4 in 9999
+
+  Upstream-commit: eae627b1bdd8a5d1c485be73b38052ada312bf51
+
+  Closes: https://github.com/gentoo/gentoo/pull/2298
+  Package-Manager: portage-2.3.0
+
+  Signed-off-by: David Seifert <soap@gentoo.org>
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> guessit-1.0.3-r1.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

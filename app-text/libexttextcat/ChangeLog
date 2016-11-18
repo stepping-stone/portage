@@ -94,3 +94,21 @@
 
   Package-Manager: portage-2.2.27
 
+  21 Oct 2016; Tobias Klausmann <klausman@gentoo.org>
+  libexttextcat-3.4.4.ebuild:
+  3.4.4-r0: stable on alpha
+
+  Gentoo-Bug: 596820
+
+  05 Nov 2016; Jeroen Roovers <jer@gentoo.org> libexttextcat-3.4.4.ebuild:
+  Stable for HPPA PPC64 (bug #596820).
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --ignore-arches
+
+  16 Nov 2016; Markus Meier <maekke@gentoo.org> libexttextcat-3.4.4.ebuild:
+  arm stable, bug #596820
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

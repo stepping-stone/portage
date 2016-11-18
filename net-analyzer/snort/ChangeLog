@@ -89,3 +89,44 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*snort-2.9.8.2 (31 Mar 2016)
+
+  31 Mar 2016; Patrick Lauer <patrick@gentoo.org> -snort-2.9.5.6.ebuild,
+  -snort-2.9.6.0.ebuild, -snort-2.9.6.1.ebuild, -snort-2.9.6.2.ebuild,
+  +snort-2.9.8.2.ebuild:
+  Bump
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/snort.rc12:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+*snort-2.9.8.3 (28 Jun 2016)
+
+  28 Jun 2016; Patrick Lauer <patrick@gentoo.org> +snort-2.9.8.3.ebuild:
+  Bump #587194
+
+  Package-Manager: portage-2.3.0
+
+*snort-2.9.8.3-r1 (12 Oct 2016)
+
+  12 Oct 2016; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/snort-2.9.8.3-no-implicit.patch, +snort-2.9.8.3-r1.ebuild:
+  fix USE="-*" build failures, bug #595512
+
+  Minimum buildable configurations is:
+      USE="-* targetbased normalizer mpls"
+
+  Surrounding code assumes availability enums and defines
+  guarded by these flags. Enable them unconditionally.
+
+  Bug: https://bugs.gentoo.org/595512
+
+  Package-Manager: portage-2.3.2
+
+  14 Oct 2016; Zero_Chaos <zerochaos@gentoo.org> snort-2.9.8.3-r1.ebuild:
+  remove errant code block which should have been removed as part of USE=-*
+  cleanup
+
+  Package-Manager: portage-2.3.1
+

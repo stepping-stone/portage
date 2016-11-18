@@ -79,3 +79,29 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  03 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org> -network-2.4.0.1.ebuild,
+  -network-2.4.1.0.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.28
+
+  03 Apr 2016; Sergei Trofimovich <slyfox@gentoo.org> -network-2.6.0.2.ebuild:
+  drop old
+
+  Package-Manager: portage-2.2.28
+
+  03 Aug 2016; Patrice Clement <monsieurp@gentoo.org>
+  -files/network-2.2.0.0-eat-configure-opts.patch,
+  -files/network-2.3.0.14-ghc-7.5.patch,
+  -files/network-2.4.0.1-fix-ppc64.patch:
+  remove unused patches
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*network-2.6.3.1 (05 Nov 2016)
+
+  05 Nov 2016; Sergei Trofimovich <slyfox@gentoo.org> +network-2.6.3.1.ebuild:
+  bump up to 2.6.3.1
+
+  Package-Manager: portage-2.3.2
+

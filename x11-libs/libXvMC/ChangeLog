@@ -94,3 +94,74 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  23 Mar 2016; Steev Klimaszewski <steev@gentoo.org> libXvMC-1.0.9.ebuild:
+  Keyword 1.0.9 for ~arm64
+
+  Package-Manager: portage-2.2.28
+
+  02 Jun 2016; Tobias Klausmann <klausman@gentoo.org> libXvMC-1.0.9.ebuild:
+  1.0.9-r0: add alpha keyword
+
+  Gentoo-Bug: 559062
+
+  Package-Manager: portage-2.3.0_rc1
+
+*libXvMC-1.0.10 (04 Oct 2016)
+
+  04 Oct 2016; Manuel Rüger <mrueg@gentoo.org> +libXvMC-1.0.10.ebuild:
+  Security bump to 1.0.10
+
+  Package-Manager: portage-2.3.1
+
+  06 Oct 2016; Jeroen Roovers <jer@gentoo.org> libXvMC-1.0.10.ebuild:
+  Stable for HPPA PPC64 (bug #596182).
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --ignore-arches
+
+  07 Oct 2016; Agostino Sarubbo <ago@gentoo.org> libXvMC-1.0.10.ebuild:
+  amd64 stable wrt bug #596182
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  07 Oct 2016; Agostino Sarubbo <ago@gentoo.org> libXvMC-1.0.10.ebuild:
+  x86 stable wrt bug #596182
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  09 Oct 2016; Michael Palimaka <kensington@gentoo.org> libXvMC-1.0.10.ebuild:
+  x11-libs: add comment to various packages to force manifest regeneration
+
+  Gentoo-bug: 596462
+
+  Package-Manager: portage-2.3.1
+
+  11 Oct 2016; Tobias Klausmann <klausman@gentoo.org> libXvMC-1.0.10.ebuild:
+  1.0.10-r0: stable on alpha
+
+  Gentoo-Bug: 596182
+
+  18 Oct 2016; Markus Meier <maekke@gentoo.org> libXvMC-1.0.10.ebuild:
+  arm stable, bug #596182
+
+  Package-Manager: portage-2.3.1
+  RepoMan-Options: --include-arches="arm"
+
+  12 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libXvMC-1.0.9.ebuild:
+  sparc stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Nov 2016; Agostino Sarubbo <ago@gentoo.org> libXvMC-1.0.9.ebuild:
+  ia64 stable wrt bug #559062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

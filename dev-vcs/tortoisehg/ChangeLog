@@ -178,3 +178,143 @@
   Package-Manager: portage-2.2.27
   Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
 
+*tortoisehg-3.7.2 (09 Mar 2016)
+
+  09 Mar 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +tortoisehg-3.7.2.ebuild:
+  Bump to version 3.7.2
+
+  Package-Manager: portage-2.2.27
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*tortoisehg-3.7.3 (07 Apr 2016)
+
+  07 Apr 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +tortoisehg-3.7.3.ebuild:
+  Bump to version 3.7.3
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  07 Apr 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -tortoisehg-3.7.1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  07 Apr 2016; Lars Wendler <polynomial-c@gentoo.org> tortoisehg-9999.ebuild:
+  Bumped live ebuild to EAPI-6.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  02 May 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -tortoisehg-3.3.3.ebuild, -tortoisehg-3.4.2.ebuild,
+  -tortoisehg-3.5.2.ebuild, -tortoisehg-3.6.3.ebuild,
+  -tortoisehg-3.7.2.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*tortoisehg-3.8.1 (04 May 2016)
+
+  04 May 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +tortoisehg-3.8.1.ebuild:
+  Bump to version 3.8.1
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  13 May 2016; Agostino Sarubbo <ago@gentoo.org> tortoisehg-3.7.3.ebuild:
+  amd64 stable wrt bug #581830
+
+  Package-Manager: portage-2.2.26
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*tortoisehg-3.8.3 (02 Jun 2016)
+
+  02 Jun 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +tortoisehg-3.8.3.ebuild:
+  Bump to version 3.8.3
+
+  Package-Manager: portage-2.2.28
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> tortoisehg-3.7.3.ebuild:
+  x86 stable wrt bug #581830
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*tortoisehg-3.8.4 (21 Jul 2016)
+
+  21 Jul 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +tortoisehg-3.8.4.ebuild:
+  Bump to version 3.8.4
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  21 Jul 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -tortoisehg-3.3.2.ebuild, -tortoisehg-3.8.1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*tortoisehg-3.9 (04 Aug 2016)
+
+  04 Aug 2016; Lars Wendler <polynomial-c@gentoo.org> +tortoisehg-3.9.ebuild:
+  Bump to version 3.9
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  04 Aug 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -tortoisehg-3.8.3.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.0
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*tortoisehg-3.9.1 (19 Sep 2016)
+
+  19 Sep 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +tortoisehg-3.9.1.ebuild:
+  Bump to version 3.9.1
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*tortoisehg-3.9.2 (04 Oct 2016)
+
+  04 Oct 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +tortoisehg-3.9.2.ebuild:
+  Bump to version 3.9.2
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+  04 Oct 2016; Lars Wendler <polynomial-c@gentoo.org> -tortoisehg-3.9.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.1
+  Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+
+*tortoisehg-4.0 (07 Nov 2016)
+
+  07 Nov 2016; Lars Wendler <polynomial-c@gentoo.org> +tortoisehg-4.0.ebuild:
+  Bump to version 4.0
+
+  Package-Manager: portage-2.3.2
+
+  07 Nov 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -tortoisehg-3.9.1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+

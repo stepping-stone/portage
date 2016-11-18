@@ -60,3 +60,21 @@
   Replace all uses of herd with appropriate project maintainers, or no
   maintainers in case of herds requested to be disbanded.
 
+  28 Feb 2016; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  metadata.xml: Add maintainer-needed comment to packages without maintainer.
+
+  Bug: 575810
+
+*dccserver-0.5-r1 (24 Aug 2016)
+
+  24 Aug 2016; Michael Orlitzky <mjo@gentoo.org> +dccserver-0.5-r1.ebuild:
+  new revision with EAPI=6.
+
+  This new revision updates the EAPI, and drops src_install. Everything
+  seems to work identically to the previous revision, so the einstall
+  from that revision (and bug 521588) was superfluous.
+
+  Gentoo-Bug: 521588
+
+  Package-Manager: portage-2.2.28
+

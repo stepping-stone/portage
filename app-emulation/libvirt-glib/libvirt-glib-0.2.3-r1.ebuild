@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -7,7 +7,7 @@ GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_7 )
 
-inherit gnome2 python-single-r1 vala xdg-utils
+inherit gnome2 python-single-r1 vala
 
 DESCRIPTION="GLib and GObject mappings for libvirt"
 HOMEPAGE="http://libvirt.org/git/?p=libvirt-glib.git"
@@ -16,7 +16,7 @@ SRC_URI="ftp://libvirt.org/libvirt/glib/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+introspection python +vala"
+IUSE="+introspection nls python +vala"
 REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )
 	vala? ( introspection )
@@ -43,12 +43,17 @@ pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
 
+src_prepare() {
+	gnome2_src_prepare
+	use vala && vala_src_prepare
+}
+
 src_configure() {
-	xdg_environment_reset
 	gnome2_src_configure \
 		--disable-test-coverage \
 		--disable-static \
 		$(use_enable introspection) \
+		$(use_enable nls) \
 		$(use_enable vala) \
 		$(use_with python)
 }

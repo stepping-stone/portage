@@ -100,3 +100,24 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*libwebp-0.5.1 (16 Aug 2016)
+
+  16 Aug 2016; Mike Gilbert <floppym@gentoo.org> +libwebp-0.5.1.ebuild:
+  bump to 0.5.1
+
+  03 Nov 2016; Pacho Ramos <pacho@gentoo.org> libwebp-0.4.2.ebuild:
+  amd64/x86 stable, bug #597756
+
+  Package-Manager: portage-2.3.2
+
+  15 Nov 2016; Tobias Klausmann <klausman@gentoo.org> libwebp-0.4.2.ebuild:
+  0.4.2-r0: stable on alpha
+
+  Gentoo-Bug: 597756
+
+  16 Nov 2016; Markus Meier <maekke@gentoo.org> libwebp-0.4.2.ebuild:
+  arm stable, bug #597756
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+

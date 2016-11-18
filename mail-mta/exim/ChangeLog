@@ -179,3 +179,212 @@
 
   Package-Manager: portage-2.2.26
 
+*exim-4.87_rc5 (03 Mar 2016)
+*exim-4.86.2 (03 Mar 2016)
+*exim-4.85.2 (03 Mar 2016)
+*exim-4.84.2 (03 Mar 2016)
+
+  03 Mar 2016; Fabian Groffen <grobian@gentoo.org> +exim-4.84.2.ebuild,
+  +exim-4.85.2.ebuild, -exim-4.86.ebuild, -exim-4.86-r2.ebuild,
+  +exim-4.86.2.ebuild, -exim-4.87_rc2.ebuild, -exim-4.87_rc3.ebuild,
+  +exim-4.87_rc5.ebuild:
+  version bumps for CVE-2016-1531
+
+  Package-Manager: portage-2.2.26
+
+  04 Mar 2016; Fabian Groffen <grobian@gentoo.org> exim-4.86.2.ebuild,
+  exim-4.87_rc5.ebuild, +files/exim-4.86.2-TMPDIR.patch:
+  fix TMPDIR patch for 4.86.2, drop for 4.87_rc5 as it's upstream, bug #576332
+
+  Package-Manager: portage-2.2.26
+
+  04 Mar 2016; Fabian Groffen <grobian@gentoo.org> exim-4.86.2.ebuild:
+  add notice about new options for CVE-2016-1531
+
+  Package-Manager: portage-2.2.26
+
+  08 Mar 2016; Fabian Groffen <grobian@gentoo.org> exim-4.86.2.ebuild,
+  exim-4.87_rc5.ebuild:
+  always give environment because it is non-conditional
+
+  Package-Manager: portage-2.2.26
+
+*exim-4.87_rc6 (08 Mar 2016)
+
+  08 Mar 2016; Fabian Groffen <grobian@gentoo.org> -exim-4.87_rc5.ebuild,
+  +exim-4.87_rc6.ebuild:
+  version bump to 4.87 RC6
+
+  Package-Manager: portage-2.2.26
+
+  09 Mar 2016; Sergey Popov <pinkbyte@gentoo.org> exim-4.86.2.ebuild,
+  exim-4.87_rc6.ebuild:
+  add ~ppc keyword back
+
+  Gentoo-Bug: 563478
+
+  Package-Manager: portage-2.2.26
+
+*exim-4.87_rc7 (03 Apr 2016)
+
+  03 Apr 2016; Fabian Groffen <grobian@gentoo.org> -exim-4.87_rc6.ebuild,
+  +exim-4.87_rc7.ebuild:
+  version bump to Exim 4.87 RC 7
+
+  Package-Manager: portage-2.2.26
+
+*exim-4.87 (07 Apr 2016)
+
+  07 Apr 2016; Fabian Groffen <grobian@gentoo.org> -exim-4.87_rc7.ebuild,
+  +exim-4.87.ebuild:
+  version bump to 4.87 release
+
+  Package-Manager: portage-2.2.26
+
+  07 Apr 2016; Fabian Groffen <grobian@gentoo.org> exim-4.87.ebuild:
+  fix copyright, remove -j1 restriction on make
+
+  Package-Manager: portage-2.2.26
+
+  28 Apr 2016; Fabian Groffen <grobian@gentoo.org> exim-4.87.ebuild:
+  require glibc[rpc] for USE=nis, bug #581260
+
+  Package-Manager: portage-2.2.26
+
+  28 Apr 2016; Fabian Groffen <grobian@gentoo.org> exim-4.84.ebuild,
+  exim-4.84.2.ebuild, exim-4.85.ebuild, exim-4.85.2.ebuild,
+  exim-4.86-r1.ebuild, exim-4.86.2.ebuild, exim-4.87.ebuild:
+  fix slot conditionals
+
+  Package-Manager: portage-2.2.26
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/exim.rc8,
+  files/exim.rc9:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  31 May 2016; Fabian Groffen <grobian@gentoo.org> exim-4.87.ebuild:
+  fix redis support, thanks hizel in bug #584150
+
+  Package-Manager: portage-2.2.28
+
+  06 Jun 2016; Tobias Klausmann <klausman@gentoo.org> exim-4.86.2.ebuild:
+  4.86.2-r0: add ~alpha keyword
+
+  Gentoo-Bug: 563478
+
+  Package-Manager: portage-2.3.0_rc1
+
+  06 Jun 2016; Fabian Groffen <grobian@gentoo.org> exim-4.87.ebuild:
+  forward keywords from 4.86.2 to 4.87
+
+  Package-Manager: portage-2.2.28
+
+  07 Jun 2016; Tobias Klausmann <klausman@gentoo.org> exim-4.87.ebuild:
+  4.87-r0: add alpha keyword
+
+  Gentoo-Bug: 585212
+
+  Package-Manager: portage-2.3.0_rc1
+
+  11 Jun 2016; Agostino Sarubbo <ago@gentoo.org> exim-4.87.ebuild:
+  amd64 stable wrt bug #585212
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  21 Jun 2016; Fabian Groffen <grobian@gentoo.org> exim-4.87.ebuild:
+  4.87 has proper fix for missing ECDH in OpenSSL, no need for bindist
+  requirement, bug #585938
+
+  Package-Manager: portage-2.2.28
+
+  25 Jun 2016; Agostino Sarubbo <ago@gentoo.org> exim-4.87.ebuild:
+  x86 stable wrt bug #585212
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  04 Jul 2016; Fabian Groffen <grobian@gentoo.org> exim-4.87.ebuild:
+  USE=gnutls doesn't go with USE=dane, bug #587780
+
+  Package-Manager: portage-2.2.28
+
+  05 Jul 2016; Jeroen Roovers <jer@gentoo.org> exim-4.87.ebuild:
+  Stable for HPPA (bug #585212).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> exim-4.87.ebuild:
+  ppc stable wrt bug #585212
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> exim-4.87.ebuild:
+  ppc64 stable wrt bug #585212
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ppc64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  08 Jul 2016; Fabian Groffen <grobian@gentoo.org> -exim-4.84.ebuild,
+  -exim-4.84.2.ebuild, -exim-4.85.2.ebuild, -exim-4.86.2.ebuild,
+  -files/exim-4.86-TMPDIR.patch, -files/exim-4.86-radius-include.patch,
+  -files/exim-4.86-radius-type-fix.patch, -files/exim-4.86.2-TMPDIR.patch,
+  -files/exim.rc8:
+  cleanup
+
+  Package-Manager: portage-2.2.28
+
+  08 Jul 2016; Agostino Sarubbo <ago@gentoo.org> exim-4.87.ebuild:
+  ia64 stable wrt bug #585212
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Jul 2016; Agostino Sarubbo <ago@gentoo.org> exim-4.87.ebuild:
+  sparc stable wrt bug #585212
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Jul 2016; Fabian Groffen <grobian@gentoo.org> -exim-4.85.ebuild,
+  -exim-4.86-r1.ebuild, exim-4.87.ebuild,
+  -files/exim-4.77-as-needed-ldflags.patch:
+  cleanup vulnerable versions, bug #585212
+
+  Package-Manager: portage-2.2.28
+
+*exim-4.87-r1 (19 Sep 2016)
+
+  19 Sep 2016; Anthony G. Basile <blueness@gentoo.org> +exim-4.87-r1.ebuild:
+  add musl support, bug #533660
+
+  Package-Manager: portage-2.2.28
+
+*exim-4.88_rc1 (25 Sep 2016)
+
+  25 Sep 2016; Fabian Groffen <grobian@gentoo.org> +exim-4.88_rc1.ebuild,
+  +files/exim-4.88-as-needed-ldflags.patch:
+  version bump to 4.88_rc1 (masked)
+
+  Package-Manager: portage-2.2.28
+
+*exim-4.88_rc2 (09 Oct 2016)
+
+  09 Oct 2016; Fabian Groffen <grobian@gentoo.org> -exim-4.88_rc1.ebuild,
+  +exim-4.88_rc2.ebuild:
+  versionbump to 4.88 RC2
+
+  Package-Manager: portage-2.3.0
+
+  10 Oct 2016; Fabian Groffen <grobian@gentoo.org> exim-4.87.ebuild,
+  exim-4.87-r1.ebuild, exim-4.88_rc2.ebuild:
+  depend on libmysqlclient, no need for the server, bug #579010
+

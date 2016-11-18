@@ -100,3 +100,48 @@
   Package-Manager: portage-2.2.27
   RepoMan-Options: --include-arches="amd64"
 
+  06 Mar 2016; Mikle Kolyada <zlogene@gentoo.org> devhelp-3.18.1.ebuild:
+  x86 stable wrt bug #427546
+
+  Package-Manager: portage-2.2.26
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> -devhelp-3.16.1.ebuild:
+  Drop old
+
+  Package-Manager: portage-2.3.0_rc1
+
+*devhelp-3.20.0 (25 Jun 2016)
+
+  25 Jun 2016; Pacho Ramos <pacho@gentoo.org> +devhelp-3.20.0.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.0_rc1
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> devhelp-3.20.0.ebuild:
+  amd64 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  01 Oct 2016; Pacho Ramos <pacho@gentoo.org> devhelp-3.20.0.ebuild:
+  x86 stable, bug 587010
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+*devhelp-3.22.0 (20 Oct 2016)
+
+  20 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> +devhelp-3.22.0.ebuild:
+  version bump 3.20.0 → 3.22.0
+
+  Package-Manager: portage-2.3.1
+
+  20 Oct 2016; Gilles Dartiguelongue <eva@gentoo.org> -devhelp-3.18.1.ebuild:
+  cleanup old revision
+
+  Package-Manager: portage-2.3.1
+
+  01 Nov 2016; Michał Górny <mgorny@gentoo.org> devhelp-3.20.0.ebuild,
+  devhelp-3.22.0.ebuild:
+  global: Drop dead implementations from PYTHON_COMPAT
+

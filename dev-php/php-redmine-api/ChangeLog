@@ -71,3 +71,18 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*php-redmine-api-1.5.9 (15 Jul 2016)
+
+  15 Jul 2016; Michael Orlitzky <mjo@gentoo.org>
+  -php-redmine-api-1.5.6.ebuild, +php-redmine-api-1.5.9.ebuild:
+  version bump 1.5.6 -> 1.5.9.
+
+  Package-Manager: portage-2.2.28
+
+  26 Sep 2016; Agostino Sarubbo <ago@gentoo.org> php-redmine-api-1.5.9.ebuild:
+  amd64 stable wrt bug #592262
+
+  Package-Manager: portage-2.2.28
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

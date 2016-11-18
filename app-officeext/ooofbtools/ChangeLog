@@ -135,3 +135,33 @@
 
   Package-Manager: portage-2.2.26
 
+  13 Mar 2016; Amy Winston <amynka@gentoo.org> ooofbtools-2.38.ebuild,
+  ooofbtools-2.39.ebuild, ooofbtools-2.42.ebuild:
+  shorter description
+
+  Package-Manager: portage-2.2.26
+
+*ooofbtools-2.43 (28 Jun 2016)
+
+  28 Jun 2016; Amy Winston <amynka@gentoo.org> +ooofbtools-2.43.ebuild:
+  verbump 2.43 bug #587402. By Sergey S. Starikoff
+
+  Package-Manager: portage-2.2.28
+
+*ooofbtools-2.44 (01 Jul 2016)
+
+  01 Jul 2016; Amy Winston <amynka@gentoo.org> -ooofbtools-2.43.ebuild,
+  +ooofbtools-2.44.ebuild:
+  version bump 2.44 bug #587650
+
+  Package-Manager: portage-2.2.28
+
+*ooofbtools-2.47 (04 Nov 2016)
+
+  04 Nov 2016; Yixun Lan <dlan@gentoo.org> +ooofbtools-2.47.ebuild:
+  version bump
+
+  Gentoo-Bug: 593864
+
+  Package-Manager: portage-2.3.2
+

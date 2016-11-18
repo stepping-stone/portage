@@ -76,3 +76,51 @@
 
   Package-Manager: portage-2.2.27
 
+  03 Aug 2016; Jeroen Roovers <jer@gentoo.org> xrandr-1.5.0.ebuild:
+  Stable for HPPA (bug #579266).
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --ignore-arches
+
+  05 Aug 2016; Markus Meier <maekke@gentoo.org> xrandr-1.5.0.ebuild:
+  arm stable, bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="arm"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> xrandr-1.5.0.ebuild:
+  xrandr-1.5 needs libxrandr-1.5 to build
+
+  Package-Manager: portage-2.3.0
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> xrandr-1.5.0.ebuild:
+  x86 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+
+  17 Sep 2016; Pacho Ramos <pacho@gentoo.org> xrandr-1.5.0.ebuild:
+  amd64 stable, bug 579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+
+  22 Sep 2016; Tobias Klausmann <klausman@gentoo.org> xrandr-1.5.0.ebuild:
+  1.5.0-r0: add alpha keyword
+
+  Gentoo-Bug: 579266
+
+  16 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xrandr-1.5.0.ebuild:
+  ia64 stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xrandr-1.5.0.ebuild:
+  ppc stable wrt bug #579266
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

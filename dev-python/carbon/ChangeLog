@@ -81,3 +81,39 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*carbon-0.9.15 (11 Mar 2016)
+
+  11 Mar 2016; Ultrabug <ultrabug@gentoo.org> +carbon-0.9.15.ebuild:
+  version bump
+
+  Package-Manager: portage-2.2.28
+
+*carbon-0.9.15-r1 (03 May 2016)
+*carbon-0.9.14-r1 (03 May 2016)
+*carbon-0.9.13-r1 (03 May 2016)
+
+  03 May 2016; Patrick Lauer <patrick@gentoo.org> +carbon-0.9.13-r1.ebuild,
+  +carbon-0.9.14-r1.ebuild, +carbon-0.9.15-r1.ebuild, +files/carbon.initd2:
+  Fix relay-rules check in init script
+
+  Package-Manager: portage-2.2.28
+
+  18 May 2016; Austin English <wizardedit@gentoo.org> files/carbon.initd,
+  files/carbon.initd2:
+  use #!/sbin/openrc-run instead of #!/sbin/runscript
+
+  10 Oct 2016; Matthew Thode <prometheanfire@gentoo.org> files/carbon.initd2:
+  remove bashisms in init for bug 589084
+
+  Package-Manager: portage-2.3.0
+
+  27 Oct 2016; Brian Dolbec <dolsen@gentoo.org> -carbon-0.9.12-r1.ebuild,
+  -carbon-0.9.14.ebuild, -carbon-0.9.15.ebuild:
+  Clean up old versions
+
+  0.9.12 release nneded removal due to the twisted-core-12.3 dep being
+  removed.
+  Remove the .14 and .15 ebuilds, both have -r1's with a bugfix.
+
+  Package-Manager: portage-2.3.2
+
