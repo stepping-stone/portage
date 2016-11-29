@@ -107,3 +107,14 @@
   Package-Manager: portage-2.3.0
   Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
 
+  27 Nov 2016; Pacho Ramos <pacho@gentoo.org> metadata.xml,
+  xine-lib-1.2.6-r1.ebuild, xine-lib-1.2.9999.ebuild:
+  Allow usage of directfb fusionsound and use the same name for the USE as the
+  other consumer in the tree and the one upstream uses too.
+
+  Package-Manager: portage-2.3.2
+
+  27 Nov 2016; Mike Frysinger <vapier@gentoo.org>
+  +files/xine-lib-1.2.6-sysmacros.patch, xine-lib-1.2.6-r1.ebuild:
+  fix build w/newer glibc #580012
+

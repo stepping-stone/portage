@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -13,8 +13,8 @@ KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
-	$(add_kdebase_dep kcminit)
-	$(add_kdebase_dep libkworkspace)
+	kde-plasma/kcminit:4
+	kde-plasma/libkworkspace:4
 	media-libs/qimageblitz
 	x11-libs/libICE
 	x11-libs/libSM
@@ -22,7 +22,7 @@ DEPEND="
 	x11-libs/libXrender
 "
 RDEPEND="${DEPEND}
-	$(add_kdebase_dep libkgreeter)
+	kde-plasma/libkgreeter:4
 "
 
 KMEXTRACTONLY="

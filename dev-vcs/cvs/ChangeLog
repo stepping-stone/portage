@@ -125,3 +125,42 @@
 
   Package-Manager: portage-2.2.28
 
+*cvs-1.12.12-r11 (23 Oct 2016)
+
+  23 Oct 2016; Felix Janda <felix.janda@posteo.de> +cvs-1.12.12-r11.ebuild,
+  +files/cvs-1.12.12-CVE-2012-0804.patch,
+  +files/cvs-1.12.12-format-security.patch, files/cvs-1.12.12-getdelim.patch,
+  files/cvs-1.12.12-hash-nameclash.patch,
+  files/cvs-1.12.12-mktime-configure.patch, +files/cvs-1.12.12-musl.patch,
+  files/cvs-1.12.12-rcs2log-coreutils.patch:
+  security fix, QA fix and musl compilation fix
+
+  * add patch for CVE-2012-0804 (#402593)
+  * respect AR (#440270)
+  * fix format-security (#520508)
+  * fix compilation with musl libc
+  * modernize ebuild
+
+  Gentoo-Bug: https://bugs.gentoo.org/402593
+  Gentoo-Bug: https://bugs.gentoo.org/440270
+  Gentoo-Bug: https://bugs.gentoo.org/520508
+
+  20 Nov 2016; Agostino Sarubbo <ago@gentoo.org> cvs-1.12.12-r11.ebuild:
+  amd64 stable wrt bug #402593
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  20 Nov 2016; Agostino Sarubbo <ago@gentoo.org> cvs-1.12.12-r11.ebuild:
+  x86 stable wrt bug #402593
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  23 Nov 2016; Tobias Klausmann <klausman@gentoo.org> cvs-1.12.12-r11.ebuild:
+  1.12.12-r11: stable on alpha
+
+  Gentoo-Bug: 402593
+

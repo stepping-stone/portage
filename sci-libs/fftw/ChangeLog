@@ -144,3 +144,14 @@
 
   Package-Manager: portage-2.3.0
 
+  22 Nov 2016; David Seifert <soap@gentoo.org> fftw-2.1.5-r9.ebuild,
+  fftw-3.3.5-r2.ebuild:
+  Use 'tc-check-openmp' for checking OpenMP support
+
+  Package-Manager: portage-2.3.2
+
+  24 Nov 2016; Tobias Klausmann <klausman@gentoo.org> fftw-2.1.5-r9.ebuild:
+  2.1.5-r9: stable on alpha
+
+  Gentoo-Bug: 600616
+

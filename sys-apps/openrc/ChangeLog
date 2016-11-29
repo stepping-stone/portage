@@ -578,3 +578,13 @@
 
   Package-Manager: portage-2.3.0
 
+  18 Nov 2016; William Hubbs <williamh@gentoo.org> openrc-0.22.4.ebuild:
+  stable 0.22.4 on amd64 for #597582
+
+  Package-Manager: portage-2.3.0
+
+  27 Nov 2016; Thomas Deutschmann <whissi@gentoo.org> openrc-0.22.4.ebuild:
+  x86 stable, bug #597582
+
+  Package-Manager: portage-2.3.2
+

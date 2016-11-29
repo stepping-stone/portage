@@ -233,3 +233,44 @@
 
   Package-Manager: portage-2.3.0
 
+*puppetserver-2.7.0-r1 (19 Nov 2016)
+
+  19 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -puppetserver-2.7.0.ebuild, +puppetserver-2.7.0-r1.ebuild:
+  fix 2.7.0 missing cli commands
+
+  The way the puppetserver systemd service unit starts and stops the server
+  has changed, and the additional cli commands are not installed by the 2.7.0
+  ebuild. This commit adds the missing files.
+
+  Fixes #600136
+  Related to #600130
+
+  Signed-off-by: Matthew Thode <prometheanfire@gentoo.org>
+
+*puppetserver-2.7.1 (23 Nov 2016)
+
+  23 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  +puppetserver-2.7.1.ebuild:
+  bup
+
+  Package-Manager: portage-2.3.0
+
+  23 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  -puppetserver-2.5.0.ebuild, -puppetserver-2.6.0.ebuild,
+  -puppetserver-2.7.0-r1.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+
+  25 Nov 2016; Hans de Graaff <graaff@gentoo.org> puppetserver-2.3.2.ebuild:
+  drop stable x86 keyword, bug 575610
+
+  Package-Manager: portage-2.3.0
+
+  25 Nov 2016; Matthew Thode <prometheanfire@gentoo.org>
+  puppetserver-2.3.2.ebuild:
+  Revert "app-admin/puppetserver: drop stable x86 keyword, bug 575610"
+
+  This reverts commit 7970b3025cd6d448679649fac3778a746078ec81.
+

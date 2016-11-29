@@ -471,10 +471,6 @@ dev-qt/qtdeclarative -jit
 dev-qt/qtscript -jit
 dev-qt/qtwebkit -jit
 
-# Patrick McLean <chutzpah@gentoo.org> (08 Nov 2011)
-# mask conntrack USE flag for dnsmasq as dep is not keyworded
-net-dns/dnsmasq conntrack
-
 # Alexandre Rostovtsev <tetromino@gentoo.org> (03 Nov 2011)
 # Missing keywords in gst-plugins-{faac,lame,speex,twolame}, bug #389433
 gnome-extra/gnome-media aac mp3 speex twolame
@@ -539,9 +535,6 @@ app-admin/gkrellm ntlm
 
 # Masking this so repoman shuts up about paludis
 sys-apps/paludis ruby-bindings
-
-# missing keyword for sys-cluster/openmpi sys-cluster/mpich2
-dev-libs/boost mpi
 
 # missing keywords
 media-sound/sox ladspa

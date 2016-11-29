@@ -12,7 +12,7 @@ DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 HOMEPAGE="http://www.fftw.org"
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 LICENSE="GPL-2+"
 SLOT="2.1"
@@ -29,18 +29,13 @@ PATCHES=(
 	"${FILESDIR}"/${P}-texinfo5.1.patch
 )
 
+pkg_pretend() {
+	[[ ${MERGE_TYPE} != binary ]] && use openmp && tc-check-openmp
+}
+
 pkg_setup() {
 	if [[ ${MERGE_TYPE} != binary ]] && use openmp; then
-		if ! tc-has-openmp; then
-			ewarn "OpenMP is not available in your current selected compiler"
-
-			if tc-is-clang; then
-				ewarn "OpenMP support in sys-devel/clang is provided by sys-libs/libomp,"
-				ewarn "which you will need to build ${CATEGORY}/${PN} with USE=\"openmp\""
-			fi
-
-			die "need openmp capable compiler"
-		fi
+		tc-check-openmp
 		FORTRAN_NEED_OPENMP=1
 	fi
 

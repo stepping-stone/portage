@@ -180,3 +180,20 @@
   Package-Manager: portage-2.3.1
   Signed-off-by: NP-Hardass <NP-Hardass@gentoo.org>
 
+*mate-screensaver-1.14.1 (21 Nov 2016)
+
+  21 Nov 2016; Ettore Di Giacinto <mudler@gentoo.org>
+  +mate-screensaver-1.14.1.ebuild:
+  Version bump to 1.14.1
+
+  Package-Manager: portage-2.3.0
+
+  24 Nov 2016; Ettore Di Giacinto <mudler@gentoo.org>
+  -files/mate-screensaver-1.10-fix-systemd-configure.ac.patch,
+  -files/mate-screensaver-1.2.0-fix-popsquares-includes.patch,
+  -files/mate-screensaver-1.2.0-fix-with-libgl.patch,
+  -mate-screensaver-1.10.2-r2.ebuild:
+  Drop 1.10.x
+
+  Package-Manager: portage-2.3.1
+

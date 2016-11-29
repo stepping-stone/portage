@@ -1079,3 +1079,17 @@
 
   Closes: https://github.com/gentoo/gentoo/pull/2828
 
+  18 Nov 2016; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Switch to newly-added LLVM_ENABLE_LIBEDIT
+
+  20 Nov 2016; Patrick Lauer <patrick@gentoo.org> llvm-9999.ebuild:
+  Whitespace
+
+  Package-Manager: portage-2.3.2
+
+  27 Nov 2016; Michał Górny <mgorny@gentoo.org> llvm-3.4.2-r100.ebuild,
+  llvm-3.5.2.ebuild, llvm-3.6.2.ebuild, llvm-3.7.1-r3.ebuild,
+  llvm-3.8.1.ebuild, llvm-3.8.1-r2.ebuild, llvm-3.9.0-r1.ebuild,
+  llvm-9999.ebuild:
+  Respect toolchain-funcs pkg-config override, #600622
+

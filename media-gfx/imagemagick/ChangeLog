@@ -592,3 +592,47 @@
 
   Package-Manager: portage-2.3.2
 
+  20 Nov 2016; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.9.6.2.ebuild:
+  x86 stable wrt bug #596004
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*imagemagick-7.0.3.8 (26 Nov 2016)
+*imagemagick-6.9.6.6 (26 Nov 2016)
+
+  26 Nov 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +imagemagick-6.9.6.6.ebuild, -imagemagick-7.0.3.7.ebuild,
+  +imagemagick-7.0.3.8.ebuild:
+  Bump to versions 6.9.6.6 and 7.0.3.8. Removed old.
+
+  Package-Manager: portage-2.3.2
+
+  26 Nov 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -imagemagick-6.9.6.4.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+
+  27 Nov 2016; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.9.6.2.ebuild:
+  ppc stable wrt bug #596004
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ppc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  28 Nov 2016; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.9.6.2.ebuild:
+  sparc stable wrt bug #596004
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="sparc"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  28 Nov 2016; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.9.6.2.ebuild:
+  ia64 stable wrt bug #596004
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="ia64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

@@ -391,3 +391,40 @@
 
   Package-Manager: portage-2.3.2
 
+*lightdm-1.21.0-r1 (18 Nov 2016)
+
+  18 Nov 2016; Lars Wendler <polynomial-c@gentoo.org> -lightdm-1.21.0.ebuild,
+  +lightdm-1.21.0-r1.ebuild:
+  Revbump to fix session-wrapper sed magic for lightdm.conf.
+
+  Package-Manager: portage-2.3.2
+
+  20 Nov 2016; Michał Górny <mgorny@gentoo.org> lightdm-1.21.0-r1.ebuild:
+  Fix gtk-doc install directory
+
+  Remove the gtk-doc install directory, to make it possible for gtk-doc
+  tools to find the installed documentation. Also fixes the QA warning
+  issued by Portage.
+
+  22 Nov 2016; Aaron Bauman <bman@gentoo.org> -lightdm-1.10.5.ebuild:
+  remove vulnerable versions wrt security bug #566640
+
+  23 Nov 2016; Markos Chandras <hwoarang@gentoo.org> -lightdm-1.17.6.ebuild,
+  -lightdm-1.19.4.ebuild:
+  Remove old ebuilds
+
+  Package-Manager: portage-2.2.27
+
+*lightdm-1.21.1 (25 Nov 2016)
+
+  25 Nov 2016; Lars Wendler <polynomial-c@gentoo.org> +lightdm-1.21.1.ebuild:
+  Bump to version 1.21.1
+
+  Package-Manager: portage-2.3.2
+
+  25 Nov 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -lightdm-1.21.0-r1.ebuild:
+  Removed old.
+
+  Package-Manager: portage-2.3.2
+

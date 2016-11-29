@@ -301,11 +301,6 @@
       <role>LILO</role>
     </member>
     <member>
-      <email>chutzpah@gentoo.org</email>
-      <name>Patrick McLean</name>
-      <role>Misc stuff that needs to get done</role>
-    </member>
-    <member>
       <email>hwoarang@gentoo.org</email>
       <name>Markos Chandras</name>
     </member>
@@ -464,11 +459,6 @@
     <member>
       <email>jlec@gentoo.org</email>
       <name>Justin Lecher</name>
-      <role>Chemistry</role>
-    </member>
-    <member>
-      <email>junghans@gentoo.org</email>
-      <name>Christoph Junghans</name>
       <role>Chemistry</role>
     </member>
     <member>
@@ -1606,6 +1596,11 @@
       <role>General System Administration, Release Engineering liaison</role>
     </member>
     <member>
+      <email>mgorny@gentoo.org</email>
+      <name>Michał Górny</name>
+      <role>Janitor</role>
+    </member>
+    <member>
       <email>prometheanfire@gentoo.org</email>
       <name>Matthew Thode</name>
       <role>General System Administration, Automation, Virtualization</role>
@@ -1776,6 +1771,11 @@
       <name>Tony Vroon</name>
       <role>Member (Kernel, mm-sources, vanilla-sources)</role>
     </member>
+    <member>
+      <email>gregkh@gentoo.org</email>
+      <name>Greg Kroah-Hartman</name>
+      <role>Member (Kernel, gentoo-sources, genpatches)</role>
+    </member>
     <member is-lead="1">
       <email>mpagano@gentoo.org</email>
       <name>Mike Pagano</name>
@@ -1802,6 +1802,14 @@
     <name>Gentoo Linux Kernel Security Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Kernel_Security</url>
     <description>Gentoo Linux Kernel Security Project handles patching our many kernel sources and informing our users about global kernel security status.</description>
+    <member>
+      <email>bman@gentoo.org</email>
+      <name>Aaron Bauman</name>
+    </member>
+    <member>
+      <email>whissi@gentoo.org</email>
+      <name>Thomas Deutschmann</name>
+    </member>
   </project>
   <project>
     <email>ldap-bugs@gentoo.org</email>
@@ -1920,7 +1928,7 @@
     </member>
   </project>
   <project>
-    <email>blueness@gentoo.org</email>
+    <email>libressl@gentoo.org</email>
     <name>LibreSSL</name>
     <url>https://wiki.gentoo.org/wiki/Project:LibreSSL</url>
     <description>LibreSSL is a fork of, and drop in replacement for OpenSSL.  Primary development is done in OpenBSD, but it is ported to Linux as well.  The LibreSSL project aims to bring support for this alternative SSL provider to Gentoo Linux.</description>
@@ -2581,11 +2589,6 @@ developers and volunteer mentors.</description>
       <email>bircoph@gentoo.org</email>
       <name>Andrew Savchenko</name>
       <role>High Energy Physics, General Physics</role>
-    </member>
-    <member>
-      <email>junghans@gentoo.org</email>
-      <name>Christoph Junghans</name>
-      <role>Physics</role>
     </member>
     <member>
       <email>marecki@gentoo.org</email>

@@ -605,3 +605,59 @@
 
   Package-Manager: portage-2.3.2
 
+*xen-tools-4.7.1-r1 (22 Nov 2016)
+*xen-tools-4.6.4-r1 (22 Nov 2016)
+
+  22 Nov 2016; Yixun Lan <dlan@gentoo.org> +xen-tools-4.6.4-r1.ebuild,
+  +xen-tools-4.7.1-r1.ebuild:
+  security bump, fix various XSA
+
+  fix XSA-191,192,193,194,195,196,197,198
+
+  Package-Manager: portage-2.3.2
+
+  22 Nov 2016; Yixun Lan <dlan@gentoo.org> files/gentoo-patches.conf,
+  xen-tools-4.6.4-r1.ebuild, xen-tools-4.7.1-r1.ebuild:
+  increase xenstore stack size
+
+  this patch is needed if rbd(ceph) enabled, otherwise
+  /etc/init.d/xenqemu will fail to start
+
+  https://lists.gnu.org/archive/html/qemu-devel/2016-09/msg03961.html
+
+  Package-Manager: portage-2.3.2
+
+*xen-tools-4.7.1-r2 (22 Nov 2016)
+*xen-tools-4.6.4-r2 (22 Nov 2016)
+
+  22 Nov 2016; Yixun Lan <dlan@gentoo.org> +xen-tools-4.6.4-r2.ebuild,
+  +xen-tools-4.7.1-r2.ebuild:
+  USE=ovmf require dev-lang/nasm
+
+  Gentoo-Bug: 599594
+
+  Package-Manager: portage-2.3.2
+
+  26 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xen-tools-4.6.4-r1.ebuild:
+  amd64 stable wrt bug #600382
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  26 Nov 2016; Agostino Sarubbo <ago@gentoo.org> xen-tools-4.6.4-r1.ebuild:
+  x86 stable wrt bug #600382
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  28 Nov 2016; Yixun Lan <dlan@gentoo.org> -xen-tools-4.6.3-r2.ebuild,
+  -xen-tools-4.6.4.ebuild, -xen-tools-4.7.0-r2.ebuild,
+  -xen-tools-4.7.1.ebuild, -xen-tools-4.7.1-r1.ebuild:
+  drop old vulnerable versions
+
+  Gentoo-Bug: 600382
+
+  Package-Manager: portage-2.3.2
+

@@ -695,3 +695,56 @@
 
   Package-Manager: portage-2.3.0
 
+*plasma-workspace-5.8.3-r4 (19 Nov 2016)
+
+  19 Nov 2016; Michael Palimaka <kensington@gentoo.org>
+  -plasma-workspace-5.8.3-r3.ebuild, +plasma-workspace-5.8.3-r4.ebuild:
+  revision bump to ensure rebuild against non-broken kde-frameworks/kpackage
+
+  KDE-bug: 372594
+
+  Package-Manager: portage-2.3.2
+
+  20 Nov 2016; Johannes Huber <johu@gentoo.org> plasma-workspace-5.7.5.ebuild,
+  plasma-workspace-5.8.3.ebuild, plasma-workspace-5.8.3-r1.ebuild,
+  plasma-workspace-5.8.3-r4.ebuild:
+  kde-base/freespacenotifier -> kde-plasma/freespacenotifier
+
+  20 Nov 2016; Johannes Huber <johu@gentoo.org> plasma-workspace-5.7.5.ebuild,
+  plasma-workspace-5.8.3.ebuild, plasma-workspace-5.8.3-r1.ebuild,
+  plasma-workspace-5.8.3-r4.ebuild:
+  kde-base/kcminit -> kde-plasma/kcminit
+
+*plasma-workspace-5.8.4 (22 Nov 2016)
+
+  22 Nov 2016; Johannes Huber <johu@gentoo.org>
+  +plasma-workspace-5.8.4.ebuild:
+  kde-plasma: Version bump KDE Plasma 5.8.4
+
+  Package-Manager: portage-2.3.2
+
+  27 Nov 2016; Michael Palimaka <kensington@gentoo.org> -files/kde-np.pam,
+  -files/kde.pam:
+  remove unused pam files
+
+  28 Nov 2016; Johannes Huber <johu@gentoo.org> plasma-workspace-5.7.5.ebuild,
+  plasma-workspace-5.8.3.ebuild, plasma-workspace-5.8.3-r1.ebuild,
+  plasma-workspace-5.8.3-r4.ebuild, plasma-workspace-5.8.4.ebuild:
+  kde-base/ksplash -> kde-plasma/ksplash
+
+  28 Nov 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.8.3.ebuild:
+  Remove 5.8.3 (r0)
+
+  Package-Manager: portage-2.3.2
+
+  28 Nov 2016; Johannes Huber <johu@gentoo.org>
+  -plasma-workspace-5.8.3-r1.ebuild:
+  Remove 5.8.3 (r1)
+
+  Package-Manager: portage-2.3.2
+
+  28 Nov 2016; Johannes Huber <johu@gentoo.org> plasma-workspace-5.7.5.ebuild,
+  plasma-workspace-5.8.3-r4.ebuild, plasma-workspace-5.8.4.ebuild:
+  kde-base/libtaskmanager -> kde-plasma/libtaskmanager
+

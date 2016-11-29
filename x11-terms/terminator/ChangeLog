@@ -123,3 +123,16 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+*terminator-1.0 (24 Nov 2016)
+
+  24 Nov 2016; Jeroen Roovers <jer@gentoo.org> -files/0.93-session.patch,
+  +files/terminator-1.0-desktop.patch, +terminator-1.0.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.2
+
+  28 Nov 2016; Jeroen Roovers <jer@gentoo.org> terminator-1.0.ebuild:
+  RDEPEND on dev-python/psutil by Pavel Hrdina (bug #601050).
+
+  Package-Manager: portage-2.3.2
+

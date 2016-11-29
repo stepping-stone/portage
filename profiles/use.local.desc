@@ -287,10 +287,10 @@ app-crypt/ekeyd:munin - Install a plugin for net-analyzer/munin to graph statist
 app-crypt/ekeyd:usb - Build the libusb-based userland daemon for accessing the EntropyKey (alternative to the CDC USB driver). It is suggested to use this option by default, as the CDC driver in the kernel often seems to be fragile (or the gadget implementation on the EntropyKey is too buggy), and can cause various problems.
 app-crypt/gnupg:mta - Build mta support using virtual/mta.
 app-crypt/gnupg:smartcard - Build scdaemon software. Enables usage of OpenPGP cards. For other type of smartcards, try app-crypt/gnupg-pkcs11-scd. Bring in dev-libs/libusb as a dependency; enable scdaemon.
-app-crypt/gnupg:system-cert-store - Use gnutls system TLS cert store for hkps access
 app-crypt/gnupg:tofu - Enable support for Trust of First use trust model; requires dev-db/sqlite.
-app-crypt/gnupg:tools - Install extra tools.
+app-crypt/gnupg:tools - Install extra tools (including gpgsplit and gpg-zip).
 app-crypt/gnupg:usb - Build direct CCID access for scdaemon; requires dev-libs/libusb.
+app-crypt/gnupg:wks-server - Install the wks-server
 app-crypt/gpgme:common-lisp - Install common-lisp files
 app-crypt/heimdal:hdb-ldap - Adds support for LDAP as a database backend
 app-crypt/heimdal:otp - Adds support for one-time passwords
@@ -504,7 +504,6 @@ app-emulation/libvirt:xen - Support management of Xen virtualisation (app-emulat
 app-emulation/lxc:cgmanager - Enable support for cgroup management using app-admin/cgmanager
 app-emulation/lxd:daemon - Build the system daemon, not just the client tool
 app-emulation/open-vm-tools:doc - Generate API documentation
-app-emulation/open-vm-tools:fuse - Build vmblock-fuse in favor of FUSE based blocking mechanism for DnD
 app-emulation/open-vm-tools:grabbitmqproxy - Enable grabbitmqproxy
 app-emulation/open-vm-tools:pic - Force shared libraries to be built as PIC
 app-emulation/open-vm-tools:vgauth - Enable vgauth
@@ -959,7 +958,9 @@ app-office/kexi:marble - Enable displaying of maps using kde-apps/marble
 app-office/kexi:mdb - Enable support for Microsoft Access database
 app-office/kexi:webkit - Enable web form designer widget using dev-qt/qtwebkit
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
+app-office/kmymoney:pim - Enable KDE PIM integration via kde-apps/kdepimlibs
 app-office/kmymoney:quotes - Enable Online Stock Quote retrieval
+app-office/kmymoney:weboob - Enable import of online banking transactions extracted by www-client/weboob
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
 app-office/libreoffice:collada - Enable Collada for rendering 3D models stored in *.dae and *.kmz format
 app-office/libreoffice:gltf - Use media-libs/libgltf for inserting 3D models in the glTF format into presentations
@@ -1311,6 +1312,7 @@ dev-db/recutils:curl - Enable support for remote descriptors using libcurl
 dev-db/recutils:mdb - Build the mdb2rec utility
 dev-db/recutils:uuid - Enable support for uuid types
 dev-db/redis:jemalloc - Use dev-libs/jemalloc for allocations.
+dev-db/redis:luajit - Use dev-lang/luajit instead of dev-lang/lua
 dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
 dev-db/rethinkdb:jemalloc - Use dev-libs/jemalloc for allocations (default).
 dev-db/rethinkdb:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
@@ -1831,6 +1833,7 @@ dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/apr-util:libressl - Use dev-libs/libressl instead of dev-libs/openssl for 'openssl' USE flag
 dev-libs/apr-util:nss - Install apr_crypto_nss module
 dev-libs/apr-util:openssl - Install apr_crypto_openssl module
+dev-libs/beignet:ocl-icd - Enable compatibility with the dev-libs/ocl-icd OpenCL ICD loader
 dev-libs/bitset:jemalloc - Use dev-libs/jemalloc for allocations
 dev-libs/bitset:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations
 dev-libs/blitz:boost - Enable usage of boost::serialization
@@ -1900,6 +1903,8 @@ dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating do
 dev-libs/hidapi:fox - Build a x11-libs/fox GUI
 dev-libs/intel-common:compiler - Install the libraries needed for the icc and ifort compilers
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
+dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
+dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
 dev-libs/leveldb:snappy - support the snappy compression library
 dev-libs/libRocket:samples - Build samples
 dev-libs/libbase58:tools - Build command line base58 tool
@@ -2423,6 +2428,8 @@ dev-qt/qt-creator:cmake - Enable cmake project manager plugin
 dev-qt/qt-creator:glsl - Enable GLSL source code editor
 dev-qt/qt-creator:ios - Build plugin for Apple iOS devices
 dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
+dev-qt/qt-creator:modeling - Enable graphical model editor plugin
+dev-qt/qt-creator:nim - Enable Nim source code editor
 dev-qt/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
 dev-qt/qt-creator:python - Enable Python source code editor
 dev-qt/qt-creator:qbs - Enable QBS project manager plugin
@@ -3282,7 +3289,6 @@ kde-apps/marble:positioning - Enable position information via dev-qt/qtpositioni
 kde-apps/marble:shapefile - Enable support for ESRI shapefiles
 kde-apps/marble:zip - Enable support for reading and displaying .kmz files
 kde-apps/okular:chm - Enable support for Microsoft Compiled HTML Help files
-kde-apps/okular:dpi - DPI detection support for PDF rendering via kde-plasma/libkscreen
 kde-apps/okular:ebook - Add E-Book support
 kde-apps/okular:mobi - Add mobipocket support
 kde-apps/pimcommon:designer - Build plugins for dev-qt/designer
@@ -3294,7 +3300,6 @@ kde-base/kdebase-startkde:wallpapers - Install the KDE Plasma wallpapers
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
 kde-base/klipper:prison - Enable support for barcodes/QRcodes
-kde-base/libplasmaclock:kdepim - KDE PIM integration via kde-apps/kdepimlibs
 kde-base/plasma-workspace:json - Enable JSON support via dev-libs/qjson
 kde-base/plasma-workspace:kdepim - KDE PIM integration via kde-apps/kdepimlibs
 kde-base/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
@@ -3358,6 +3363,7 @@ kde-plasma/kwin:gles - Enable support for GLES
 kde-plasma/kwin:gles2 - Use OpenGL ES 2 instead of full GL
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
 kde-plasma/libksysguard:detailedmemory - Enable display of detailed memory information using dev-qt/qtwebkit.
+kde-plasma/libplasmaclock:kdepim - KDE PIM integration via kde-apps/kdepimlibs
 kde-plasma/plasma-desktop:gtk2 - Add support for gtk+2-based applications using legacy xembed systray icons via libappindicator.
 kde-plasma/plasma-desktop:gtk3 - Add support for gtk+3-based applications using legacy xembed systray icons via libappindicator.
 kde-plasma/plasma-desktop:ibus - Use ibus input method via app-i18n/ibus
@@ -3623,7 +3629,6 @@ mate-base/mate-applets-meta:sensors - Pull in mate-extra/mate-sensors-applet for
 mate-base/mate-control-center:appindicator - Add support for AppIndicator
 mate-base/mate-control-center:gtk3 - Build with GTK+3 instead of GTK+2
 mate-base/mate-desktop:gtk3 - Build with GTK+3 instead of GTK+2
-mate-base/mate-desktop:user-guide - Install MATE user guide
 mate-base/mate-panel:gtk3 - Build with GTK+3 instead of GTK+2
 mate-base/mate-session-manager:gtk3 - Build with GTK+3 instead of GTK+2
 mate-base/mate-settings-daemon:gtk3 - Build with GTK+3 instead of GTK+2
@@ -3647,7 +3652,6 @@ mate-extra/mate-power-manager:applet - Enable building of the MATE applet.
 mate-extra/mate-power-manager:gtk3 - Build with GTK+3 instead of GTK+2
 mate-extra/mate-power-manager:man - Build power manager's man page.
 mate-extra/mate-power-manager:pm-utils - Adds support for suspend/resume using sys-power/upower-pm-utils instead of sys-power/upower
-mate-extra/mate-power-manager:unique - Enable single instance support using dev-libs/libunique.
 mate-extra/mate-screensaver:consolekit - Enable support for sys-auth/consolekit
 mate-extra/mate-screensaver:gtk3 - Build with GTK+3 instead of GTK+2
 mate-extra/mate-sensors-applet:gtk3 - Build with GTK+3 instead of GTK+2
@@ -4117,7 +4121,7 @@ media-libs/x265:pic - Disable optimized assembly code that is not PIC friendly
 media-libs/xine-lib:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 media-libs/xine-lib:dxr3 - Enable support for DXR3 mpeg acceleration cards.
 media-libs/xine-lib:flac - Build the media-libs/flac based FLAC demuxer and decoder. This flag is not needed for playing FLAC content, neither standalone nor in Ogg container (OggFLAC), but might have better support for exotic features like 24-bit samples or 96kHz sample rates.
-media-libs/xine-lib:fusion - Enable support for the Fusion audio sub system
+media-libs/xine-lib:fusionsound - Enable support for the Fusion audio sub system
 media-libs/xine-lib:gtk - Build the gdkpixbuf-based image decoder plugin.
 media-libs/xine-lib:imagemagick - Build the ImageMagick-based image decoder plugin.
 media-libs/xine-lib:mad - Build the media-libs/libmad based mp3 decoder. This mp3 decoder has superior support compared to the one coming from FFmpeg that is used as a fallback. If you experience any bad behaviour with mp3 files (skipping, distorted sound) make sure you enabled this USE flag.
@@ -4383,7 +4387,6 @@ media-sound/moc:sid - Build with SID (Commodore 64 Audio) support
 media-sound/moc:tremor - Build vorbis support using an integer implementation of the vorbis library (media-libs/tremor)
 media-sound/mp3blaster:sid - Build with SID (Commodore 64 Audio) support
 media-sound/mp3splt-gtk:audacious - Include media-sound/audacious support
-media-sound/mp3splt-gtk:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 media-sound/mpd:adplug - Enable the AdPlug decoder plugin
 media-sound/mpd:cdio - Use libcdio for ISO9660 parsing support
 media-sound/mpd:curl - Support for web stream listening
@@ -4905,7 +4908,6 @@ media-video/vlc:macosx-notifications - Enables Mac OS X notifications module (fo
 media-video/vlc:macosx-qtkit - Enables Mac OS X qtkit module: qtcapture (video) and qtsound (audio) module.
 media-video/vlc:macosx-quartztext - Enables Mac OS X quartz text module.
 media-video/vlc:matroska - Enables matroska support using reference libraries (fallback on other existing matroska support if disabled, i.e., matroska enabled FFmpeg)
-media-video/vlc:media-library - Build the (sqlite based) media library.
 media-video/vlc:mpeg - Add libmpeg2 support for mpeg-1 and mpeg-2 video streams
 media-video/vlc:omxil - Enables OpenMAX Integration Layer codec module.
 media-video/vlc:opencv - Enabled OpenCV (computer vision) filter module.
@@ -4914,7 +4916,7 @@ media-video/vlc:opus - Support opus decoding via libopus.
 media-video/vlc:postproc - Enables image post-processing via libpostproc (part of FFmpeg).
 media-video/vlc:projectm - Enables the projectM visualization plugin.
 media-video/vlc:qt4 - Builds a Qt4 based frontend, a graphical interface.
-media-video/vlc:qt5 - Builds a Qt5 based frontend, a graphical interface.
+media-video/vlc:qt5 - Builds a Qt5 based frontend, a graphical interface (overrides qt4).
 media-video/vlc:rdp - Enables freerdp for RDP/Remote Desktop client support
 media-video/vlc:rtsp - Enables real audio and RTSP modules.
 media-video/vlc:run-as-root - Allows vlc to start for root. Don't enable this unless you have a very specific (e.g. embedded) need for it!
@@ -6735,8 +6737,6 @@ sci-biology/clustalw-mpi:mpi_njtree - Use MPI (as opposed to serial) code for co
 sci-biology/clustalw-mpi:static_pairalign - Use static (as opposed to dynamic) scheduling for pair alignments
 sci-biology/exonerate:utils - Install all utilities
 sci-biology/fasttree:double-precision - use double precision instead of single-precision floating point (2x memroy required)
-sci-biology/gmap:goby - Enable support for goby
-sci-biology/gmap:samtools - Enable support for samtools
 sci-biology/goby:cpp - Compile C/C++ API
 sci-biology/mcl:blast - add support for NCBI BLAST data
 sci-biology/plink:R - add support R language
@@ -6881,7 +6881,7 @@ sci-libs/ceres-solver:schur - Enable fixed-size schur specializations (disable i
 sci-libs/ceres-solver:sparse - Enable support for sparse matrix algebra with various packages from SuiteSparse
 sci-libs/cfitsio:tools - Build execs fpack, funpack, imcopy, fitscopy, listhead
 sci-libs/cgnslib:legacy - Enable or disable building legacy code (3.0 compatible)
-sci-libs/cgnslib:tools - Build tools for
+sci-libs/cgnslib:tools - A number of utility programs: cgnscheck, cgnscompress, cgnsdiff, cgnslist, cgnsnames, cgnsupdate, cgnsconvert, adf2hdf, hdf2adf.
 sci-libs/chemkit:applications - Build also applications not only the libraries
 sci-libs/cholmod:cuda - Use nvidia cuda toolkit for speeding up computations
 sci-libs/cholmod:metis - Enable the Partition module to cholmod using sci-libs/metis
@@ -7057,6 +7057,7 @@ sci-mathematics/nusmv:zchaff - Enable support for zChaff
 sci-mathematics/octave:glpk - Add support for sci-mathematics/glpk for linear programming
 sci-mathematics/octave:graphicsmagick - Add support for media-gfx/graphicsmagick
 sci-mathematics/octave:gui - Enable the graphical user interface
+sci-mathematics/octave:openssl - Use dev-libs/openssl for low level hash functions
 sci-mathematics/octave:qhull - Add support for media-libs/qhull, to allow `delaunay', `convhull', and related functions
 sci-mathematics/octave:qrupdate - Add support for sci-libs/qrupdatefor QR and Cholesky update functions
 sci-mathematics/octave:sparse - Add enhanced support for sparse matrix algebra with SuiteSparse
@@ -7297,7 +7298,11 @@ sys-apps/razercfg:pm-utils - Installs the pm-utils hooks for suspend/resume and 
 sys-apps/razercfg:qt4 - Installs a qt UI. Requires dev-python/pyside
 sys-apps/roccat-tools:lua - Build support for Lua scripting for RyosMKPro ripple effects
 sys-apps/s390-tools:fuse - build cmsfs-fuse to read files stored on a z/VM CMS disk
+sys-apps/s390-tools:ncurses - build hyptop monitoring program
+sys-apps/s390-tools:pfm - build the cpacfstats tool
 sys-apps/s390-tools:zfcpdump - build the kernel disk dumping utility
+sys-apps/s390-tools:zlib - build the zgetdump utility
+sys-apps/selinux-python:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
 sys-apps/smartmontools:minimal - Do not install the monitoring daemon and associated scripts.
 sys-apps/smartmontools:update_drivedb - Install a script to update the drivedb file.
 sys-apps/superiotool:pci - Support for PCI-attached "Super I/Os" (e.g. in VIA VT82686A/B).
@@ -7788,8 +7793,6 @@ sys-kernel/mips-sources:cobalt - Enables support for Cobalt Microserver hardware
 sys-kernel/mips-sources:ip27 - Enables support for SGI Origin (IP27)
 sys-kernel/mips-sources:ip28 - Enables support for SGI Indigo2 Impact R10000 (IP28)
 sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
-sys-kernel/pf-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
-sys-kernel/pf-sources:experimental - Apply patches that are considered experimental. For more information, check out the ChangeLog or the ebuild that interests you.
 sys-kernel/rt-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/spl:debug-log - Enable additional diagnostics
 sys-kernel/tuxonice-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
@@ -7834,6 +7837,7 @@ sys-libs/uclibc:wordexp - Add support for word expansion (wordexp.h)
 sys-libs/uclibc-ng:rpc - Enable sun nis/rpc support (you should use libtirpc though)
 sys-libs/uclibc-ng:symlink-compat - Explicitly add sym links for libdl.so.0, libm.so.0, and friends for backward compatibility with sys-libs/uclibc-ng-1.0.17 and earlier
 sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extraction
+sys-power/apcupsd:modbus - enable MODBUS support over USB
 sys-power/cpupower:cpufreq_bench - Build and install the cpufreq_bench binary
 sys-power/nut:ipmi - Support IPMI-based UPSes.
 sys-power/nut:ups_drivers_al175 - Driver for Eltek UPS models with AL175 alarm module
@@ -8048,9 +8052,12 @@ www-client/seamonkey:chatzilla - Build Mozilla's IRC client (default on)
 www-client/seamonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 www-client/seamonkey:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/seamonkey:gstreamer-0 - Use gstreamer:0.10 instead of gstreamer:1 for media support
+www-client/seamonkey:gtk3 - Use the cairo-gtk3 rendering engine
 www-client/seamonkey:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes
+www-client/seamonkey:jemalloc - Enable or disable jemalloc
 www-client/seamonkey:jemalloc3 - Enable or disable jemalloc3 (forced-on when supported prior to 38.0)
 www-client/seamonkey:roaming - Build roaming extension support (default on)
+www-client/seamonkey:skia - Enable the SKIA engine for 2D rendering as an alternative to cairo
 www-client/seamonkey:system-cairo - Use the system-wide x11-libs/cairo instead of bundled.
 www-client/seamonkey:system-harfbuzz - Use the system-wide media-libs/harfbuzz instead of bundled.
 www-client/seamonkey:system-icu - Use the sytem-wide dev-libs/icu instead of bundled.
@@ -8211,7 +8218,6 @@ x11-drivers/xf86-video-amdgpu:glamor - Enable Glamor OpenGL 2D acceleration
 x11-drivers/xf86-video-ati:glamor - Enable Glamor OpenGL 2D acceleration
 x11-drivers/xf86-video-geode:ztv - Enable building the V4L2 ZTV driver
 x11-drivers/xf86-video-intel:dri3 - Use DRI3 by default
-x11-drivers/xf86-video-intel:glamor - Enable Glamor OpenGL 2D acceleration
 x11-drivers/xf86-video-intel:sna - Enable SandyBridge's New Acceleration (useful on all chipsets, not just SandyBridge)
 x11-drivers/xf86-video-intel:uxa - Enable UMA Acceleration Architecture
 x11-drivers/xf86-video-intel:xvmc - Enables X-Video Motion Compensation support

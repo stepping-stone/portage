@@ -176,3 +176,29 @@
   openldap-2.4.43-r1.ebuild, openldap-2.4.44.ebuild:
   fix cross-compiling due to pthread tests #463966
 
+  19 Nov 2016; Agostino Sarubbo <ago@gentoo.org> openldap-2.4.43.ebuild:
+  amd64 stable wrt bug #560424
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  19 Nov 2016; Agostino Sarubbo <ago@gentoo.org> openldap-2.4.43.ebuild:
+  x86 stable wrt bug #560424
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  23 Nov 2016; Tobias Klausmann <klausman@gentoo.org> openldap-2.4.44.ebuild:
+  2.4.44-r0: stable on alpha
+
+  Gentoo-Bug: 560424
+
+  28 Nov 2016; Robin H. Johnson <robbat2@gentoo.org> openldap-2.4.42.ebuild,
+  openldap-2.4.42-r1.ebuild, openldap-2.4.43.ebuild,
+  openldap-2.4.43-r1.ebuild, openldap-2.4.44.ebuild:
+  bug #588792, ensure dev-db/lmdb matches or exceeds bundled lmdb.
+
+  Package-Manager: portage-2.3.2
+

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-EGIT_REPO_URI="git://anongit.freedesktop.org/mesa/mesa"
+EGIT_REPO_URI="https://anongit.freedesktop.org/git/mesa/mesa.git"
 
 if [[ ${PV} = 9999 ]]; then
 	GIT_ECLASS="git-r3"
@@ -392,7 +392,9 @@ multilib_src_install_all() {
 	newins "${FILESDIR}/eselect-mesa.conf.9.2" eselect-mesa.conf
 
 	# Mesa should not install these
-	rm "${ED}"/usr/include/vulkan/{vulkan.h,vk_platform.h}
+	if use vulkan; then
+		rm "${ED}"/usr/include/vulkan/{vulkan.h,vk_platform.h} || die
+	fi
 }
 
 multilib_src_test() {

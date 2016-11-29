@@ -524,3 +524,63 @@
 
   Package-Manager: portage-2.3.0
 
+*gnupg-2.1.16 (18 Nov 2016)
+
+  18 Nov 2016; Kristian Fiskerstrand <k_f@gentoo.org> -gnupg-2.1.15-r1.ebuild,
+  +gnupg-2.1.16.ebuild, metadata.xml:
+  New upstream version 2.1.16
+
+  Remove 2.1.15-r1 in bump
+
+  Package-Manager: portage-2.3.2
+
+  18 Nov 2016; Kristian Fiskerstrand <k_f@gentoo.org> -gnupg-2.0.29-r1.ebuild:
+  Cleanup 2.0.29-r1
+
+  Package-Manager: portage-2.3.2
+
+  19 Nov 2016; Kristian Fiskerstrand <k_f@gentoo.org> gnupg-2.1.16.ebuild:
+  Enable tools IUSE by default
+
+  At least until bug 600208 is resolved
+
+  Package-Manager: portage-2.3.2
+
+  22 Nov 2016; Kristian Fiskerstrand <k_f@gentoo.org> +files/gnupg-2.1.16-gpgs
+  cm-Use-shorter-socket-path-lengts-to-improve-tes.patch, gnupg-2.1.16.ebuild:
+  Minor changes to 2.1.16
+
+  For now tools subdir always needs to be built, even though the use flag
+  controls
+  whether some of the resulting binaries are installed or not, as e.g
+  gpg-connect-agent and gpg-wks-client is expected to be installed
+  unconditionally.
+
+  Given that tools subdir is a cheap build, this doesn't constitute much of an
+  actual issue, but upstream is notified.
+
+  Gentoo-Bug: 600208
+
+  Add patch to mitigate test failure due to overlong socket path.
+
+  Package-Manager: portage-2.3.2
+
+  23 Nov 2016; Kristian Fiskerstrand <k_f@gentoo.org>
+  -files/gnupg-2.0.26-Need-to-init-the-trustdb-for-import.patch,
+  -files/gnupg-2.0.26-misc-cve.patch,
+  -files/gnupg-2.1-fix-gentoo-dash-issue.patch,
+  -files/gnupg-2.1.12-fix-signature-checking.patch:
+  Clean up unused files
+
+  Package-Manager: portage-2.3.2
+
+  27 Nov 2016; Kristian Fiskerstrand <k_f@gentoo.org> metadata.xml:
+  More verbose description of tools
+
+  Package-Manager: portage-2.3.2
+
+  27 Nov 2016; Kristian Fiskerstrand <k_f@gentoo.org> metadata.xml:
+  Fix typo in previous commit
+
+  Package-Manager: portage-2.3.2
+

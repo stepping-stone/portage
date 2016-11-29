@@ -593,3 +593,22 @@
 
   Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
 
+*gtk+-3.22.4 (23 Nov 2016)
+
+  23 Nov 2016; Gilles Dartiguelongue <eva@gentoo.org> +gtk+-3.22.4.ebuild:
+  bump to 3.22.4
+
+  Copy-bump, no relevant changes:
+  https://git.gnome.org/browse/gtk+/diff/?id=3.22.4&&id2=3.22.3
+
+  Package-Manager: portage-2.3.2
+  Closes: https://github.com/gentoo/gentoo/pull/2860
+
+  Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
+
+  27 Nov 2016; Pacho Ramos <pacho@gentoo.org> gtk+-2.24.31-r1.ebuild:
+  We are pulling adwaita-icon-theme already and we would like to deprecate the
+  obsolete gnome-icon-theme, use it then as first option by default then.
+
+  Package-Manager: portage-2.3.2
+

@@ -691,3 +691,19 @@
   RepoMan-Options: --include-arches="ppc"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  20 Nov 2016; Matt Turner <mattst88@gentoo.org> mesa-13.0.1.ebuild,
+  mesa-9999.ebuild:
+  Wrap vulkan header removal with check
+
+  25 Nov 2016; Patrice Clement <monsieurp@gentoo.org> mesa-9999.ebuild:
+  use https for git access.
+
+  Closes: https://github.com/gentoo/gentoo/pull/2546
+
+  Signed-off-by: Patrice Clement <monsieurp@gentoo.org>
+
+*mesa-13.0.2 (28 Nov 2016)
+
+  28 Nov 2016; Matt Turner <mattst88@gentoo.org> +mesa-13.0.2.ebuild:
+  Version bump to 13.0.2.
+

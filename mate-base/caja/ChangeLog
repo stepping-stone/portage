@@ -124,3 +124,15 @@
   Package-Manager: portage-2.3.1
   Signed-off-by: NP-Hardass <NP-Hardass@gentoo.org>
 
+*caja-1.14.2 (21 Nov 2016)
+
+  21 Nov 2016; Ettore Di Giacinto <mudler@gentoo.org> +caja-1.14.2.ebuild:
+  Version bump to 1.14.2
+
+  Package-Manager: portage-2.2.26
+
+  24 Nov 2016; Ettore Di Giacinto <mudler@gentoo.org> -caja-1.10.4.ebuild:
+  Drop 1.10.x
+
+  Package-Manager: portage-2.3.1
+
