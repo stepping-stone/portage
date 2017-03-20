@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -29,6 +28,7 @@ DEPEND="${COMMON_DEPEND}
 	amd64-linux? ( ${ASM_DEPEND} )
 	x86-linux? ( ${ASM_DEPEND} )
 	x64-macos? ( ${ASM_DEPEND} )
+	x64-cygwin? ( ${ASM_DEPEND} )
 	java? ( >=virtual/jdk-1.5 )"
 
 MULTILIB_WRAPPED_HEADERS=( /usr/include/jconfig.h )
@@ -59,7 +59,7 @@ multilib_src_configure() {
 	[[ ${ABI} == "x32" ]] && myconf+=( --without-simd ) #420239
 
 	# Force /bin/bash until upstream generates a new version. #533902
-	CONFIG_SHELL=/bin/bash \
+	CONFIG_SHELL="${EPREFIX}"/bin/bash \
 	ECONF_SOURCE=${S} \
 	econf \
 		$(use_enable static-libs static) \

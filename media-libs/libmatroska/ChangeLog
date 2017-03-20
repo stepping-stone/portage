@@ -136,3 +136,19 @@
   19 Aug 2016; Tim Harder <radhermit@gentoo.org> +libmatroska-1.4.5.ebuild:
   version bump to 1.4.5
 
+  14 Dec 2016; Tobias Klausmann <klausman@gentoo.org>
+  libmatroska-1.4.5.ebuild:
+  1.4.5-r0: stable on alpha
+
+  Gentoo-Bug: 602074
+
+  17 Dec 2016; Aaron Bauman <bman@gentoo.org> libmatroska-1.4.5.ebuild:
+  amd64 stable wrt bug #602074
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> libmatroska-1.4.5.ebuild:
+  x86 stable wrt bug #602074
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

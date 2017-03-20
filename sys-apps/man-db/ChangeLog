@@ -251,3 +251,40 @@
 
   Package-Manager: portage-2.2.26
 
+*man-db-2.7.6.1 (12 Dec 2016)
+
+  12 Dec 2016; Lars Wendler <polynomial-c@gentoo.org> +man-db-2.7.6.1.ebuild:
+  Bump to version 2.7.6.1
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+
+  12 Dec 2016; Lars Wendler <polynomial-c@gentoo.org> -man-db-2.7.2.ebuild,
+  -man-db-2.7.4.ebuild:
+  Removed old.
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+
+  12 Dec 2016; Lars Wendler <polynomial-c@gentoo.org> man-db-2.7.6.1.ebuild:
+  Adjust cache dir permissions as preferred by upstream.
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+
+  12 Dec 2016; Lars Wendler <polynomial-c@gentoo.org> man-db-2.7.6.1.ebuild:
+  Another permissions tweak.
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+
+*man-db-2.7.6.1-r1 (12 Dec 2016)
+
+  12 Dec 2016; Lars Wendler <polynomial-c@gentoo.org> -man-db-2.7.6.1.ebuild,
+  +man-db-2.7.6.1-r1.ebuild:
+  Revbump so everbody gets the permission changes.
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+
+  15 Dec 2016; Mike Frysinger <vapier@gentoo.org> man-db-2.7.6.1-r1.ebuild:
+  move /var cache dir creation to runtime #520464
+
+  The rework in pkg_preinst is just about moving the path into a var.
+  Otherwise, we just add some -d/mkdir testing logic to the end.
+

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -129,8 +128,8 @@ python_test() {
 		-e test_import --process-restartworker --process-timeout=60 || die "testsuite failed under python2.7"
 }
 
-python_install() {
-	distutils-r1_python_install
+python_install_all() {
+	distutils-r1_python_install_all
 
 	diropts -m 0750
 	keepdir /etc/keystone /var/log/keystone

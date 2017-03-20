@@ -124,3 +124,16 @@
 
   Package-Manager: portage-2.3.0
 
+*containerd-0.2.5 (16 Dec 2016)
+
+  16 Dec 2016; Manuel Rüger <mrueg@gentoo.org> +containerd-0.2.5.ebuild:
+  Version bump to 0.2.5
+
+  Package-Manager: portage-2.3.3
+
+  18 Dec 2016; Manuel Rüger <mrueg@gentoo.org> -containerd-0.2.2.ebuild,
+  -containerd-0.2.3.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.3
+

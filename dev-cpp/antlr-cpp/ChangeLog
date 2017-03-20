@@ -65,3 +65,17 @@
 
   Package-Manager: portage-2.2.27
 
+*antlr-cpp-2.7.7-r1 (05 Dec 2016)
+
+  05 Dec 2016; James Le Cuirot <chewi@gentoo.org> +antlr-cpp-2.7.7-r1.ebuild:
+  EAPI bump, migration away from autotools-multilib
+
+  Package-Manager: portage-2.3.2
+
+*antlr-cpp-3.5.2 (12 Dec 2016)
+
+  12 Dec 2016; Patrice Clement <monsieurp@gentoo.org> +antlr-cpp-3.5.2.ebuild:
+  version bump.
+
+  Package-Manager: portage-2.3.0
+

@@ -171,3 +171,18 @@
   Package-Manager: portage-2.3.1
   Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
 
+  03 Dec 2016; James Le Cuirot <chewi@gentoo.org>
+  -files/warzone2100-3.1.2-openGL.patch,
+  -files/warzone2100-3.1.2-pkgconf.patch:
+  remove unused patches
+
+  Closes: https://github.com/gentoo/gentoo/pull/2920
+
+*warzone2100-3.2.2 (12 Dec 2016)
+
+  12 Dec 2016; Lars Wendler <polynomial-c@gentoo.org>
+  +warzone2100-3.2.2.ebuild:
+  Bump to version 3.2.2
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+

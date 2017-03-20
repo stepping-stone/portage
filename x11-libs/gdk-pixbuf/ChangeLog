@@ -396,3 +396,16 @@
 
   Package-Manager: portage-2.3.2
 
+  06 Dec 2016; Markus Meier <maekke@gentoo.org> gdk-pixbuf-2.34.0.ebuild:
+  arm stable, bug #587010
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+
+*gdk-pixbuf-2.36.1 (14 Dec 2016)
+
+  14 Dec 2016; Rémi Cardona <remi@gentoo.org> +gdk-pixbuf-2.36.1.ebuild:
+  bump to 2.36.1
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+

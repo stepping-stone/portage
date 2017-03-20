@@ -120,3 +120,23 @@
 
   Package-Manager: portage-2.3.0
 
+  01 Dec 2016; Matthias Maier <tamiko@gentoo.org> virt-viewer-4.0.ebuild:
+  stabilize 4.0 for amd64 and x86
+
+  Package-Manager: portage-2.3.0
+
+*virt-viewer-5.0 (01 Dec 2016)
+
+  01 Dec 2016; Matthias Maier <tamiko@gentoo.org> +virt-viewer-5.0.ebuild:
+  version bump to 5.0
+
+  Package-Manager: portage-2.3.0
+
+  03 Dec 2016; Yixun Lan <dlan@gentoo.org> virt-viewer-5.0.ebuild:
+  fix 5.0 minimum spice-gtk dependency
+
+  Package-Manager: portage-2.3.0
+  Closes: https://github.com/gentoo/gentoo/pull/2989
+
+  Signed-off-by: Yixun Lan <dlan@gentoo.org>
+

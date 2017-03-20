@@ -175,3 +175,29 @@
 
   Package-Manager: portage-2.3.0
 
+  05 Dec 2016; Tobias Klausmann <klausman@gentoo.org>
+  ntfs3g-2016.2.22-r1.ebuild:
+  2016.2.22-r1: stable on alpha
+
+  Gentoo-Bug: 550970
+
+  06 Dec 2016; Agostino Sarubbo <ago@gentoo.org> ntfs3g-2016.2.22-r1.ebuild:
+  amd64 stable wrt bug #550970
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Dec 2016; Agostino Sarubbo <ago@gentoo.org> ntfs3g-2016.2.22-r1.ebuild:
+  x86 stable wrt bug #550970
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  17 Dec 2016; Markus Meier <maekke@gentoo.org> ntfs3g-2016.2.22-r1.ebuild:
+  arm stable, bug #550970
+
+  Package-Manager: portage-2.3.3
+  RepoMan-Options: --include-arches="arm"
+

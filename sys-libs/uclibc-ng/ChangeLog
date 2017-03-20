@@ -129,3 +129,17 @@
 
   Package-Manager: portage-2.3.0
 
+  02 Dec 2016; Anthony G. Basile <blueness@gentoo.org>
+  uclibc-ng-1.0.19.ebuild:
+  stable on amd64, arm, ppc and x86
+
+  Package-Manager: portage-2.3.0
+
+*uclibc-ng-1.0.20 (05 Dec 2016)
+
+  05 Dec 2016; Anthony G. Basile <blueness@gentoo.org>
+  +uclibc-ng-1.0.20.ebuild:
+  version bump to 1.0.20
+
+  Package-Manager: portage-2.3.0
+

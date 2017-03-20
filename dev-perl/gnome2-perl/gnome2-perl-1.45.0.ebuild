@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -18,7 +17,7 @@ KEYWORDS="alpha amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
-	dev-perl/gtk2-perl
+	dev-perl/Gtk2
 	gnome-base/libgnomeui
 	gnome-base/libbonoboui
 	dev-perl/gnome2-canvas
@@ -26,6 +25,6 @@ RDEPEND="x11-libs/gtk+:2
 	dev-perl/gnome2-vfs-perl"
 DEPEND="${RDEPEND}
 	dev-perl/ExtUtils-Depends
-	dev-perl/extutils-pkgconfig"
+	dev-perl/ExtUtils-PkgConfig"
 
 SRC_TEST=do

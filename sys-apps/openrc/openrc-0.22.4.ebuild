@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -14,7 +13,7 @@ if [[ ${PV} == "9999" ]]; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 
 LICENSE="BSD-2"
@@ -314,7 +313,7 @@ pkg_postinst() {
 		ewarn "You have emerged OpenRc without network support. This"
 		ewarn "means you need to SET UP a network manager such as"
 		ewarn "	net-misc/netifrc, net-misc/dhcpcd, net-misc/wicd,"
-		ewarn "net-misc/NetworkManager, or net-misc/badvpn."
+		ewarn "net-misc/NetworkManager, or net-vpn/badvpn."
 		ewarn "Or, you have the option of emerging openrc with the newnet"
 		ewarn "use flag and configuring /etc/conf.d/network and"
 		ewarn "/etc/conf.d/staticroute if you only use static interfaces."

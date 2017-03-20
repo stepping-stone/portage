@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -31,6 +30,7 @@ DEPEND="${RDEPEND}"
 PATCHES=(
 	"${FILESDIR}"/i7z-0.27.2-ncurses.patch
 	"${FILESDIR}"/qt5.patch
+	"${FILESDIR}"/gcc5.patch
 )
 
 S="${WORKDIR}/${PN}-${COMMIT}"

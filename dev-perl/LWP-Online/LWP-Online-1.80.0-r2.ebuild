@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 DIST_AUTHOR=ADAMK
@@ -10,7 +9,7 @@ inherit perl-module
 DESCRIPTION="Does your process have access to the web"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="test"
 # https://rt.cpan.org/Public/Bug/Display.html?id=112728
 PATCHES=("${FILESDIR}/${DIST_VERSION}-no-network.patch")

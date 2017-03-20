@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -16,12 +15,12 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="dev-perl/gtk2-perl
+RDEPEND="dev-perl/Gtk2
 	>=media-gfx/gtkimageview-1.6.3"
 DEPEND="${RDEPEND}
 	dev-perl/glib-perl
 	>=dev-perl/ExtUtils-Depends-0.300
-	>=dev-perl/extutils-pkgconfig-1.030"
+	>=dev-perl/ExtUtils-PkgConfig-1.030"
 
 #SRC_TEST=do
 #src_test(){

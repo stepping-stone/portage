@@ -1,6 +1,5 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -15,7 +14,7 @@ KEYWORDS="amd64 x86"
 IUSE="cups"
 
 RDEPEND="cups? ( dev-perl/Net-CUPS )
-	dev-perl/gtk2-perl
+	dev-perl/Gtk2
 	>=dev-perl/Locale-gettext-1.04"
 DEPEND="${RDEPEND}"
 

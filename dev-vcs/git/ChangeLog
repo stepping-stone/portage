@@ -871,3 +871,27 @@
 
   Package-Manager: portage-2.3.2
 
+*git-2.11.0 (30 Nov 2016)
+
+  30 Nov 2016; Robin H. Johnson <robbat2@gentoo.org> +git-2.11.0.ebuild:
+  bump.
+
+  Package-Manager: portage-2.3.2
+
+  09 Dec 2016; Tobias Klausmann <klausman@gentoo.org> git-2.10.2.ebuild:
+  2.10.2-r0: stable on alpha
+
+  Gentoo-Bug: 601984
+
+  12 Dec 2016; Lars Wendler <polynomial-c@gentoo.org> git-2.10.2.ebuild:
+  Stable for amd64 and x86 (bug #601984).
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+  RepoMan-Options: --include-arches="amd64,x86"
+
+  17 Dec 2016; Markus Meier <maekke@gentoo.org> git-2.10.2.ebuild:
+  arm stable, bug #601984
+
+  Package-Manager: portage-2.3.3
+  RepoMan-Options: --include-arches="arm"
+

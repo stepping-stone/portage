@@ -593,3 +593,18 @@
   RepoMan-Options: --include-arches="x86"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+*phpmyadmin-4.6.5.2 (07 Dec 2016)
+
+  07 Dec 2016; Jorge Manuel B. S. Vicetto (jmbsvicetto)
+  <jmbsvicetto@gentoo.org> +phpmyadmin-4.6.5.2.ebuild:
+  Add 4.6.5.2 release.
+
+  Package-Manager: portage-2.3.2
+
+  13 Dec 2016; Agostino Sarubbo <ago@gentoo.org> phpmyadmin-4.4.15.8.ebuild:
+  x86 stable wrt bug #593582
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

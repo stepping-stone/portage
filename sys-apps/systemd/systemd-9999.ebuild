@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -13,7 +12,7 @@ else
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 fi
 
-PYTHON_COMPAT=( python{2_7,3_4,3_5} )
+PYTHON_COMPAT=( python{3_4,3_5,3_6} )
 
 inherit autotools bash-completion-r1 linux-info multilib-minimal pam python-any-r1 systemd toolchain-funcs udev user
 
@@ -22,7 +21,7 @@ HOMEPAGE="https://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
-IUSE="acl apparmor audit cryptsetup curl doc elfutils +gcrypt gnuefi http
+IUSE="acl apparmor audit build cryptsetup curl doc elfutils +gcrypt gnuefi http
 	idn importd +kmod +lz4 lzma nat pam policykit
 	qrcode +seccomp selinux ssl sysv-utils test vanilla xkb"
 
@@ -68,18 +67,18 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.27.1:0=[${MULTILIB_USEDEP}]
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/baselayout-2.2
 	selinux? ( sec-policy/selinux-base-policy[systemd] )
-	|| (
+	!build? ( || (
 		sys-apps/util-linux[kill(-)]
 		sys-process/procps[kill(+)]
 		sys-apps/coreutils[kill(-)]
-	)
+	) )
 	!sys-auth/nss-myhostname
 	!<sys-kernel/dracut-044
 	!sys-fs/eudev
 	!sys-fs/udev"
 
 # sys-apps/dbus: the daemon only (+ build-time lib dep for tests)
-PDEPEND=">=sys-apps/dbus-1.8.8:0[systemd]
+PDEPEND=">=sys-apps/dbus-1.9.8[systemd]
 	>=sys-apps/hwids-20150417[udev]
 	>=sys-fs/udev-init-scripts-25
 	policykit? ( sys-auth/polkit )
@@ -94,7 +93,7 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-kernel/linux-headers-${MINKV}
 	virtual/pkgconfig
 	gnuefi? ( >=sys-boot/gnu-efi-3.0.2 )
-	test? ( >=sys-apps/dbus-1.6.8-r1:0 )
+	test? ( sys-apps/dbus )
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xml-dtd:4.5
 	app-text/docbook-xsl-stylesheets
@@ -111,6 +110,7 @@ pkg_pretend() {
 		~CHECKPOINT_RESTORE ~DEVTMPFS ~DMIID ~EPOLL ~FANOTIFY ~FHANDLE
 		~INOTIFY_USER ~IPV6 ~NET ~NET_NS ~PROC_FS ~SIGNALFD ~SYSFS
 		~TIMERFD ~TMPFS_XATTR ~UNIX
+		~CRYPTO_HMAC ~CRYPTO_SHA256 ~CRYPTO_USER_API_HASH
 		~!FW_LOADER_USER_HELPER ~!GRKERNSEC_PROC ~!IDE ~!SYSFS_DEPRECATED
 		~!SYSFS_DEPRECATED_V2"
 
@@ -156,7 +156,7 @@ src_prepare() {
 		PATCHES+=(
 			"${FILESDIR}/218-Dont-enable-audit-by-default.patch"
 			"${FILESDIR}/228-noclean-tmp.patch"
-			"${FILESDIR}/232-systemd-user-pam.patch"
+			"${FILESDIR}/233-systemd-user-pam.patch"
 		)
 	fi
 

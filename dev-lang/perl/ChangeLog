@@ -368,3 +368,27 @@
 
   Package-Manager: portage-2.3.0
 
+*perl-5.22.3_rc4 (06 Dec 2016)
+
+  06 Dec 2016; Kent Fredric <kentnl@gentoo.org> +perl-5.22.3_rc4.ebuild:
+  Bump to version 5.22.3_rc4
+
+  The source to this ebuild is based on the 5.24 line, debriding
+  itself of eblits.
+
+  Package-Manager: portage-2.3.0
+
+  12 Dec 2016; Tobias Klausmann <klausman@gentoo.org> perl-5.22.3_rc4.ebuild:
+  5.22.3_rc4-r0: stable on alpha
+
+  Gentoo-Bug: 589680
+
+  17 Dec 2016; Markus Meier <maekke@gentoo.org> perl-5.22.3_rc4.ebuild:
+  arm stable, bug #589680
+
+  Package-Manager: portage-2.3.3
+  RepoMan-Options: --include-arches="arm"
+
+  17 Dec 2016; Aaron Bauman <bman@gentoo.org> perl-5.22.3_rc4.ebuild:
+  amd64 stable, wrt bug #589680
+

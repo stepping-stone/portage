@@ -636,3 +636,29 @@
   RepoMan-Options: --include-arches="ia64"
   Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
 
+  30 Nov 2016; Markus Meier <maekke@gentoo.org> imagemagick-6.9.6.6.ebuild:
+  arm stable, bug #599744
+
+  Package-Manager: portage-2.3.2
+  RepoMan-Options: --include-arches="arm"
+
+  01 Dec 2016; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.9.6.6.ebuild:
+  amd64 stable wrt bug #599744
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  01 Dec 2016; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.9.6.6.ebuild:
+  x86 stable wrt bug #599744
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  02 Dec 2016; Tobias Klausmann <klausman@gentoo.org>
+  imagemagick-6.9.6.6.ebuild:
+  6.9.6.6-r0: stable on alpha
+
+  Gentoo-Bug: 599744
+

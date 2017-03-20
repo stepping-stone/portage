@@ -144,3 +144,13 @@
 
   Package-Manager: portage-2.3.0
 
+  07 Dec 2016; Matthew Thode <prometheanfire@gentoo.org> augeas-1.7.0.ebuild:
+  1.7.0 stable amd64 and x86
+
+  Package-Manager: portage-2.3.0
+
+  14 Dec 2016; Tobias Klausmann <klausman@gentoo.org> augeas-1.7.0.ebuild:
+  1.7.0-r0: stable on alpha
+
+  Gentoo-Bug: 601908
+

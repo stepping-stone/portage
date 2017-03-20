@@ -135,3 +135,23 @@
 
   Package-Manager: portage-2.3.0
 
+*pecl-memcached-3.0.0_alpha1_pre20161206 (12 Dec 2016)
+*pecl-memcached-2.2.0-r2 (12 Dec 2016)
+
+  12 Dec 2016; Brian Evans <grknight@gentoo.org>
+  +pecl-memcached-2.2.0-r2.ebuild,
+  +pecl-memcached-3.0.0_alpha1_pre20161206.ebuild:
+  Version bump with php 7.0 and 7.1
+
+  Taken from github snapshot commit, not yet released
+
+  Package-Manager: portage-2.3.3
+
+  12 Dec 2016; Michael Orlitzky <mjo@gentoo.org>
+  pecl-memcached-3.0.0_alpha1_pre20161206.ebuild:
+  fix typo "targest" -> "targets".
+
+  Gentoo-Bug: 602472
+
+  Package-Manager: portage-2.3.0
+

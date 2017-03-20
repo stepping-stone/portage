@@ -132,3 +132,22 @@
   pyserial-3.1.1.ebuild, pyserial-3.2.1.ebuild:
   global: Drop dead implementations from PYTHON_COMPAT
 
+  14 Dec 2016; Tobias Klausmann <klausman@gentoo.org> pyserial-3.2.1.ebuild:
+  3.2.1-r0: stable on alpha
+
+  Gentoo-Bug: 602056
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> pyserial-3.2.1.ebuild:
+  amd64 stable wrt bug #602056
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> pyserial-3.2.1.ebuild:
+  x86 stable wrt bug #602056
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

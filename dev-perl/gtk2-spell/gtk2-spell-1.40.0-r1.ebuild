@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -21,10 +20,10 @@ RDEPEND="
 	x11-libs/gtk+:2
 	>=app-text/gtkspell-2:2
 	>=dev-perl/glib-perl-1.240.0
-	>=dev-perl/gtk2-perl-1.012
+	>=dev-perl/Gtk2-1.012
 "
 DEPEND="${RDEPEND}
 	dev-perl/ExtUtils-Depends
-	dev-perl/extutils-pkgconfig
+	dev-perl/ExtUtils-PkgConfig
 	virtual/pkgconfig
 "

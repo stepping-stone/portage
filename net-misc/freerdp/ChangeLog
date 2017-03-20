@@ -157,3 +157,46 @@
 
   Package-Manager: portage-2.3.0_p16
 
+  04 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  freerdp-1.1.0_beta1_p20130710-r2.ebuild,
+  freerdp-1.2.1_pre20150326-r1.ebuild, freerdp-2.0.0_pre20160722.ebuild,
+  freerdp-9999.ebuild:
+  fix ffmpeg dependency
+
+  virtual/ffmpeg is only for tools usage.
+
+  Package-Manager: portage-2.3.2_p13
+
+  06 Dec 2016; Tobias Klausmann <klausman@gentoo.org>
+  freerdp-2.0.0_pre20160722.ebuild:
+  2.0.0_pre20160722-r0: stable on alpha
+
+  Gentoo-Bug: 601720
+
+  15 Dec 2016; Lars Wendler <polynomial-c@gentoo.org>
+  -files/freerdp-1.1-CVE-2014-0250.patch, -files/freerdp-1.1-cmake-3.1.patch,
+  -files/freerdp-1.1.0_beta1-avx.patch,
+  -files/freerdp-1.1.0_beta1_p20130710-cmake.patch,
+  -files/freerdp-1.1.0_beta1_p20130710-ffmpeg.patch,
+  -files/freerdp-1.1.0_beta1_p20130710-uclibc.patch,
+  -files/freerdp-cmake-3.1.patch, -freerdp-1.1.0_beta1_p20130710-r2.ebuild:
+  Removed old.
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org>
+  freerdp-2.0.0_pre20160722.ebuild:
+  amd64 stable wrt bug #601720
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org>
+  freerdp-2.0.0_pre20160722.ebuild:
+  x86 stable wrt bug #601720
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

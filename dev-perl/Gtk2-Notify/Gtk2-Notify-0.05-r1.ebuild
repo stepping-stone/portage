@@ -1,6 +1,5 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -16,11 +15,11 @@ KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="dev-perl/glib-perl
-	dev-perl/gtk2-perl
+	dev-perl/Gtk2
 	>=x11-libs/libnotify-0.7"
 DEPEND="${RDEPEND}
 	dev-perl/ExtUtils-Depends
-	dev-perl/extutils-pkgconfig
+	dev-perl/ExtUtils-PkgConfig
 	test? ( dev-perl/Test-Exception )"
 
 SRC_TEST="do"

@@ -126,3 +126,46 @@
   24 Jan 2016; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Set appropriate maintainer types in metadata.xml (GLEP 67)
 
+  13 Dec 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  armadillo-3.4.4.ebuild, armadillo-3.6.2.ebuild:
+  Drop ppc keywords, bug 555896
+
+  Package-Manager: portage-2.3.3
+
+  13 Dec 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -armadillo-4.650.4.ebuild, -armadillo-5.600.2.ebuild,
+  -armadillo-6.100.1.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.3
+
+*armadillo-7.500.2 (13 Dec 2016)
+
+  13 Dec 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  +armadillo-7.500.2.ebuild:
+  Version bump
+
+  Package-Manager: portage-2.3.3
+
+*armadillo-7.500.2-r1 (17 Dec 2016)
+
+  17 Dec 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -armadillo-7.500.2.ebuild, +armadillo-7.500.2-r1.ebuild:
+  Revision bump with corrected subslot
+
+  Package-Manager: portage-2.3.3
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> armadillo-6.200.3.ebuild:
+  amd64 stable wrt bug #602564
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> armadillo-6.200.3.ebuild:
+  x86 stable wrt bug #602564
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

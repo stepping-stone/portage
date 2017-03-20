@@ -170,3 +170,14 @@
 
   Package-Manager: portage-2.3.2
 
+  03 Dec 2016; Andreas K. Hüttel <dilfridge@gentoo.org> -libwps-0.2.9.ebuild:
+  Drop old and thereby several arches
+
+  Package-Manager: portage-2.3.2
+
+  17 Dec 2016; Andreas K. Hüttel <dilfridge@gentoo.org>
+  libwps-0.4.4-r1.ebuild, metadata.xml:
+  Add USE=tools, drop eutils.eclass, update HOMEPAGE
+
+  Package-Manager: portage-2.3.0
+

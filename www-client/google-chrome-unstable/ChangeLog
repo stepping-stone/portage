@@ -854,3 +854,48 @@
 
   Package-Manager: portage-2.3.2_p8
 
+*google-chrome-unstable-56.0.2924.10 (29 Nov 2016)
+
+  29 Nov 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-unstable-56.0.2924.3.ebuild,
+  +google-chrome-unstable-56.0.2924.10.ebuild:
+  automated update (56.0.2924.10)
+
+  Package-Manager: portage-2.3.2_p11
+
+*google-chrome-unstable-56.0.2924.14 (02 Dec 2016)
+
+  02 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-unstable-56.0.2924.10.ebuild,
+  +google-chrome-unstable-56.0.2924.14.ebuild:
+  automated update (56.0.2924.14)
+
+  Package-Manager: portage-2.3.2_p12_p250379
+
+*google-chrome-unstable-56.0.2924.18 (08 Dec 2016)
+
+  08 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-unstable-56.0.2924.14.ebuild,
+  +google-chrome-unstable-56.0.2924.18.ebuild:
+  automated update (56.0.2924.18)
+
+  Package-Manager: portage-2.3.2_p13
+
+*google-chrome-unstable-57.0.2946.0 (10 Dec 2016)
+
+  10 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-unstable-56.0.2924.18.ebuild,
+  +google-chrome-unstable-57.0.2946.0.ebuild:
+  automated update (57.0.2946.0)
+
+  Package-Manager: portage-2.3.2_p13
+
+*google-chrome-unstable-57.0.2950.4 (16 Dec 2016)
+
+  16 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-unstable-57.0.2946.0.ebuild,
+  +google-chrome-unstable-57.0.2950.4.ebuild:
+  automated update (57.0.2950.4)
+
+  Package-Manager: Portage-2.3.3_p7, Repoman-2.3.1
+

@@ -195,3 +195,35 @@
 
   Gentoo-Bug: 592756
 
+  09 Dec 2016; Hans de Graaff <graaff@gentoo.org> -httpclient-2.6.0.1.ebuild:
+  cleanup; drop stable ppc64 keyword, bug 580892
+
+  Package-Manager: portage-2.3.0
+
+  13 Dec 2016; Hans de Graaff <graaff@gentoo.org> -httpclient-2.8.1.ebuild,
+  -httpclient-2.8.2.2.ebuild:
+  cleanup
+
+  Package-Manager: portage-2.3.0
+
+*httpclient-2.8.3 (13 Dec 2016)
+
+  13 Dec 2016; Hans de Graaff <graaff@gentoo.org> +httpclient-2.8.3.ebuild:
+  add 2.8.3
+
+  Package-Manager: portage-2.3.0
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> httpclient-2.8.2.4.ebuild:
+  amd64 stable wrt bug #602504
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> httpclient-2.8.2.4.ebuild:
+  x86 stable wrt bug #602504
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

@@ -1,13 +1,12 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
 inherit eutils gnome2-utils perl-module
 
 DESCRIPTION="A command line utility for viewing youtube-videos in Mplayer"
-HOMEPAGE="https://trizen.googlecode.com"
+HOMEPAGE="https://trizenx.blogspot.com/2012/03/gtk-youtube-viewer.html"
 SRC_URI="https://github.com/trizen/youtube-viewer/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
@@ -30,7 +29,7 @@ RDEPEND="
 	virtual/perl-Text-Tabs+Wrap
 	gtk? (
 		dev-perl/File-ShareDir
-		>=dev-perl/gtk2-perl-1.244.0
+		>=dev-perl/Gtk2-1.244.0
 		virtual/freedesktop-icon-theme
 		x11-libs/gdk-pixbuf:2[X,jpeg]
 	)"

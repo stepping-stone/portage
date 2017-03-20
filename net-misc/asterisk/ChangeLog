@@ -236,3 +236,41 @@
 
   Package-Manager: portage-2.3.2
 
+*asterisk-13.13.0 (01 Dec 2016)
+*asterisk-11.25.0 (01 Dec 2016)
+
+  01 Dec 2016; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.25.0.ebuild,
+  +asterisk-13.13.0.ebuild:
+  Bugfix releases on both the 11 & 13 branches.
+
+  Package-Manager: portage-2.3.2
+
+*asterisk-13.13.1 (09 Dec 2016)
+*asterisk-11.25.1 (09 Dec 2016)
+
+  09 Dec 2016; Tony Vroon <chainsaw@gentoo.org> -asterisk-11.23.1.ebuild,
+  -asterisk-11.24.1.ebuild, -asterisk-11.25.0.ebuild,
+  +asterisk-11.25.1.ebuild, -asterisk-13.11.2-r1.ebuild,
+  -asterisk-13.12.1.ebuild, -asterisk-13.13.0.ebuild,
+  +asterisk-13.13.1.ebuild:
+  AST-2016-{008,009} remote crash on crafted Opus parameters in SDP offer.
+
+  Package-Manager: portage-2.3.2
+
+  13 Dec 2016; Agostino Sarubbo <ago@gentoo.org> asterisk-11.25.1.ebuild:
+  amd64 stable wrt bug #602132
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Dec 2016; Agostino Sarubbo <ago@gentoo.org> asterisk-11.25.1.ebuild:
+  x86 stable wrt bug #602132
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  14 Dec 2016; Aaron Bauman <bman@gentoo.org> -asterisk-11.21.1-r1.ebuild:
+  cleanup vulnerable version wrt bug #602132
+

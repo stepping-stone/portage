@@ -105,3 +105,76 @@
 
   Package-Manager: portage-2.3.0
 
+*nagios-4.2.3 (04 Dec 2016)
+
+  04 Dec 2016; Michael Orlitzky <mjo@gentoo.org> -nagios-4.2.2.ebuild,
+  +nagios-4.2.3.ebuild:
+  core}: new version 4.2.3 to fix CVE-2016-8641.
+
+  Gentoo-Bug: 600864
+
+  Package-Manager: portage-2.3.0
+
+  05 Dec 2016; Tobias Klausmann <klausman@gentoo.org> nagios-4.2.3.ebuild:
+  4.2.3-r0: stable on alpha
+
+  Gentoo-Bug: 600864
+
+  06 Dec 2016; Agostino Sarubbo <ago@gentoo.org> nagios-4.2.3.ebuild:
+  amd64 stable wrt bug #600864
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  06 Dec 2016; Agostino Sarubbo <ago@gentoo.org> nagios-4.2.3.ebuild:
+  x86 stable wrt bug #600864
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+*nagios-4.2.4 (11 Dec 2016)
+
+  11 Dec 2016; Michael Orlitzky <mjo@gentoo.org> +nagios-4.2.4.ebuild:
+  new version 4.2.4 to fix CVE-2016-9566.
+
+  As part of this (otherwise routine) new version, I've also removed the
+  pkg_postrm() message telling users that this package's dependencies
+  won't be removed. That's nothing unusual, and doesn't warrant
+  notification in my opinion.
+
+  Gentoo-Bug: 602216
+
+  Package-Manager: portage-2.3.0
+
+  11 Dec 2016; Michael Orlitzky <mjo@gentoo.org> metadata.xml:
+  remove proxy maintainers from the metadata.
+
+  We haven't heard from this package's proxy maintainer in a while, but
+  new bugs are still being assigned to him. As long as I'm the de-facto
+  maintainer, I would prefer that they be assigned to me. This commit
+  removes both the proxied and proxy maintainers, as well as the
+  proxy-maint project (who gave the OK for this removal).
+
+  Package-Manager: portage-2.3.0
+
+  12 Dec 2016; Tobias Klausmann <klausman@gentoo.org> nagios-4.2.4.ebuild:
+  4.2.4-r0: stable on alpha
+
+  Gentoo-Bug: 602216
+
+  13 Dec 2016; Agostino Sarubbo <ago@gentoo.org> nagios-4.2.4.ebuild:
+  amd64 stable wrt bug #602216
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  13 Dec 2016; Agostino Sarubbo <ago@gentoo.org> nagios-4.2.4.ebuild:
+  x86 stable wrt bug #602216
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

@@ -1516,3 +1516,81 @@
 
   Package-Manager: portage-2.3.2_p8
 
+*chrome-binary-plugins-56.0.2924.10_alpha (29 Nov 2016)
+
+  29 Nov 2016; Mike Gilbert <floppym@gentoo.org>
+  -chrome-binary-plugins-56.0.2924.3_alpha.ebuild,
+  +chrome-binary-plugins-56.0.2924.10_alpha.ebuild:
+  automated update (56.0.2924.10)
+
+  Package-Manager: portage-2.3.2_p11
+
+*chrome-binary-plugins-55.0.2883.75_beta (02 Dec 2016)
+
+  02 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -chrome-binary-plugins-55.0.2883.59_beta.ebuild,
+  +chrome-binary-plugins-55.0.2883.75_beta.ebuild:
+  automated update (55.0.2883.75)
+
+  Package-Manager: portage-2.3.2_p11
+
+*chrome-binary-plugins-56.0.2924.14_alpha (02 Dec 2016)
+*chrome-binary-plugins-55.0.2883.75 (02 Dec 2016)
+
+  02 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -chrome-binary-plugins-54.0.2840.100.ebuild,
+  +chrome-binary-plugins-55.0.2883.75.ebuild,
+  -chrome-binary-plugins-56.0.2924.10_alpha.ebuild,
+  +chrome-binary-plugins-56.0.2924.14_alpha.ebuild:
+  automated update (55.0.2883.75, 56.0.2924.14)
+
+  Package-Manager: portage-2.3.2_p12_p250388
+
+*chrome-binary-plugins-56.0.2924.18_alpha (08 Dec 2016)
+
+  08 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -chrome-binary-plugins-56.0.2924.14_alpha.ebuild,
+  +chrome-binary-plugins-56.0.2924.18_alpha.ebuild:
+  automated update (56.0.2924.18)
+
+  Package-Manager: portage-2.3.2_p13
+
+*chrome-binary-plugins-56.0.2924.21_beta (09 Dec 2016)
+
+  09 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -chrome-binary-plugins-55.0.2883.75_beta.ebuild,
+  +chrome-binary-plugins-56.0.2924.21_beta.ebuild:
+  automated update (56.0.2924.21)
+
+  Package-Manager: portage-2.3.2_p13
+
+*chrome-binary-plugins-57.0.2946.0_alpha (10 Dec 2016)
+
+  10 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -chrome-binary-plugins-56.0.2924.18_alpha.ebuild,
+  +chrome-binary-plugins-57.0.2946.0_alpha.ebuild:
+  automated update (57.0.2946.0)
+
+  Package-Manager: portage-2.3.2_p13
+
+*chrome-binary-plugins-55.0.2883.87 (13 Dec 2016)
+
+  13 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -chrome-binary-plugins-55.0.2883.75.ebuild,
+  +chrome-binary-plugins-55.0.2883.87.ebuild:
+  automated update (55.0.2883.87)
+
+  Package-Manager: Portage-2.3.3_p7, Repoman-2.3.1
+
+*chrome-binary-plugins-57.0.2950.4_alpha (16 Dec 2016)
+*chrome-binary-plugins-56.0.2924.28_beta (16 Dec 2016)
+
+  16 Dec 2016; Mike Gilbert <floppym@gentoo.org>
+  -chrome-binary-plugins-56.0.2924.21_beta.ebuild,
+  +chrome-binary-plugins-56.0.2924.28_beta.ebuild,
+  -chrome-binary-plugins-57.0.2946.0_alpha.ebuild,
+  +chrome-binary-plugins-57.0.2950.4_alpha.ebuild:
+  automated update (57.0.2950.4, 56.0.2924.28)
+
+  Package-Manager: Portage-2.3.3_p7, Repoman-2.3.1
+

@@ -634,3 +634,21 @@
 
   Package-Manager: portage-2.3.2_p8
 
+  05 Dec 2016; Mike Gilbert <floppym@gentoo.org> -systemd-228-r1.ebuild,
+  -systemd-229.ebuild, -systemd-230-r2.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.2_p13
+
+  05 Dec 2016; Mike Gilbert <floppym@gentoo.org> systemd-226-r2.ebuild,
+  systemd-231.ebuild, systemd-232.ebuild, systemd-9999.ebuild:
+  add build USE flag to fix stage1 builds
+
+  Package-Manager: portage-2.3.2_p13
+
+  18 Dec 2016; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  depend on >=sys-apps/dbus-1.9.8
+
+  Ref: https://github.com/systemd/systemd/pull/4892
+  Package-Manager: Portage-2.3.3_p7, Repoman-2.3.1
+

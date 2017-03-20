@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -28,7 +27,7 @@ REQUIRED_USE="
 
 RDEPEND="
 	dev-libs/boost:=
-	>=net-libs/rb_libtorrent-1.0.6
+	>=net-libs/libtorrent-rasterbar-1.0.6
 	sys-libs/zlib
 	!qt5? (
 		>=dev-libs/qjson-0.8.1[qt4(+)]

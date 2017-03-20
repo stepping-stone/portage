@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -11,7 +10,7 @@ inherit perl-module
 DESCRIPTION="help when paging through sets of results"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc-aix ~x86-solaris"
+KEYWORDS="amd64 ~x86 ~ppc-aix ~x86-solaris"
 IUSE="test"
 
 RDEPEND="dev-perl/Class-Accessor-Chained"

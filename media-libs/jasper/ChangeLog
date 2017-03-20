@@ -251,3 +251,63 @@
 
   Package-Manager: portage-2.3.2
 
+  03 Dec 2016; Justin Lecher <jlec@gentoo.org>
+  +files/jasper-2.0.0-add_libm.patch, jasper-2.0.0.ebuild:
+  Fix underlinking detected using ld.gold
+
+  Gentoo-Bug: https://bugs.gentoo.org/show_bug.cgi?id=601070
+
+  Package-Manager: portage-2.3.2
+  Signed-off-by: Justin Lecher <jlec@gentoo.org>
+
+*jasper-2.0.5 (07 Dec 2016)
+
+  07 Dec 2016; David Seifert <soap@gentoo.org> +jasper-2.0.5.ebuild:
+  Version bump to 2.0.5
+
+  * Added USE="doc" for HTML documentation generation
+
+  Package-Manager: portage-2.3.3
+
+  07 Dec 2016; David Seifert <soap@gentoo.org> jasper-9999.ebuild:
+  Update live ebuild
+
+  Package-Manager: portage-2.3.3
+
+  07 Dec 2016; David Seifert <soap@gentoo.org>
+  -files/jasper-2.0.0-add_libm.patch,
+  -files/jasper-2.0.0-fix-build-system.patch, -jasper-1.900.26.ebuild,
+  -jasper-2.0.0.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.3
+
+  10 Dec 2016; David Seifert <soap@gentoo.org> jasper-2.0.5.ebuild:
+  Fix automagic logic
+
+  Gentoo-bug: 602186
+
+  Package-Manager: portage-2.3.3
+
+  10 Dec 2016; David Seifert <soap@gentoo.org> jasper-2.0.5.ebuild:
+  Install docs using relative path
+
+  Package-Manager: portage-2.3.3
+
+*jasper-2.0.7 (10 Dec 2016)
+
+  10 Dec 2016; David Seifert <soap@gentoo.org> +jasper-2.0.7.ebuild:
+  Version bump to 2.0.7
+
+  Package-Manager: portage-2.3.3
+
+  10 Dec 2016; David Seifert <soap@gentoo.org> -jasper-2.0.5.ebuild:
+  Remove old
+
+  Package-Manager: portage-2.3.3
+
+  10 Dec 2016; David Seifert <soap@gentoo.org> jasper-9999.ebuild:
+  Update live ebuild
+
+  Package-Manager: portage-2.3.3
+

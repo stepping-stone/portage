@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -11,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Prevent leakage of lexical hints"
 
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="test"
 
 # Note: This module is a no-op at runtime since Perl 5.12

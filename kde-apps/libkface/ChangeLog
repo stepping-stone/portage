@@ -191,3 +191,28 @@
 
   Package-Manager: portage-2.3.0
 
+  11 Dec 2016; Johannes Huber <johu@gentoo.org>
+  -files/libkface-15.08.2-opencv3.patch,
+  -files/libkface-15.08.3-opencv3.1.patch, -libkface-4.4.0.ebuild,
+  -libkface-4.12.0.ebuild, -libkface-15.08.3.ebuild:
+  Drop slot 4
+
+  Package-Manager: portage-2.3.3
+
+*libkface-16.12.0 (16 Dec 2016)
+
+  16 Dec 2016; Johannes Huber <johu@gentoo.org>
+  +files/libkface-16.11.80-opencv3.2-gentoo-3.1.patch,
+  +libkface-16.12.0.ebuild:
+  kde-apps: Version bump KDE Applications 16.12.0
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+
+  18 Dec 2016; Michael Palimaka <kensington@gentoo.org>
+  libkface-16.08.3.ebuild:
+  kde-apps: stabilise 16.08.3 on amd64/x86
+
+  Gentoo-bug: 601852
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+

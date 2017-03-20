@@ -203,3 +203,27 @@
   cython-0.24.1.ebuild:
   global: Drop dead implementations from PYTHON_COMPAT
 
+*cython-0.25.2 (09 Dec 2016)
+
+  09 Dec 2016; Tim Harder <radhermit@gentoo.org> +cython-0.25.2.ebuild:
+  version bump to 0.25.2
+
+  14 Dec 2016; Tobias Klausmann <klausman@gentoo.org> cython-0.24.1.ebuild:
+  0.24.1-r0: stable on alpha
+
+  Gentoo-Bug: 602062
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> cython-0.24.1.ebuild:
+  amd64 stable wrt bug #602062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> cython-0.24.1.ebuild:
+  x86 stable wrt bug #602062
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+

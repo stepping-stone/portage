@@ -257,3 +257,29 @@
   01 Nov 2016; Michał Górny <mgorny@gentoo.org> libnl-3.2.27.ebuild:
   global: Drop dead implementations from PYTHON_COMPAT
 
+*libnl-3.2.29_rc1 (15 Dec 2016)
+
+  15 Dec 2016; Jeroen Roovers <jer@gentoo.org> +libnl-3.2.29_rc1.ebuild:
+  Version bump.
+
+  Package-Manager: Portage-2.3.3, Repoman-2.3.1
+
+  16 Dec 2016; Tobias Klausmann <klausman@gentoo.org> libnl-3.2.28.ebuild:
+  3.2.28-r0: stable on alpha
+
+  Gentoo-Bug: 602776
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> libnl-3.2.28.ebuild:
+  amd64 stable wrt bug #602776
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="amd64"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
+  18 Dec 2016; Agostino Sarubbo <ago@gentoo.org> libnl-3.2.28.ebuild:
+  x86 stable wrt bug #602776
+
+  Package-Manager: portage-2.3.0
+  RepoMan-Options: --include-arches="x86"
+  Signed-off-by: Agostino Sarubbo <ago@gentoo.org>
+
